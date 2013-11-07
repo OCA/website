@@ -27,7 +27,7 @@
     'description': """
         """,
     'author': 'OpenERP SA',
-    'depends': ['website', 'payment_acquirer'],
+    'depends': ['website', 'payment_acquirer', 'payment_acquirer_ogone', 'payment_acquirer_paypal'],
     'data': [
         'views/website_payment_templates.xml',
     ],
