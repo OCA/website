@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-    
-<!-- todo: add addressblock in snippets to take it easily everywhere you want --> 
-    
-<!-- Add needed CSS in template -->
-<template id="assets_frontend" inherit_id="website.assets_frontend" name="WSGA">
-  <xpath expr="." position="inside">
-		<link rel='stylesheet' href='/website_sale_german_additions/static/src/css/website_sale_german_additions.css'/>
-  </xpath>
-</template>
   
 <!-- Add needed websites for necsessary informations -->
 <!-- Template for terms-page -->  

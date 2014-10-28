@@ -1,13 +1,15 @@
-$(document).ready(function () {
+jQuery("document").ready(function($) {
 
-	//check if revocation checkbox is checked and stop submit
-	$("form").submit(function(e) {
-		if(!$('#revbox').attr('checked')) {
-			e.preventDefault();
-			$('#revlabel').addClass('has-error');
-			$('#rev').addClass('has-error');
-		}
-	});
+	if($("#revbox").length != 0) {
+		//check if revocation checkbox is checked and stop submit
+		$("form").submit(function(e) {
+			if(!$('#revbox').attr('checked')) {
+				e.preventDefault();
+				$('#revlabel').addClass('has-error');
+				$('#rev').addClass('has-error');
+			}
+		});
+	};
     
     //show and hide functions for the terms and revocation popup
     $("#close-terms").click(function() {
