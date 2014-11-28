@@ -17,8 +17,14 @@ class WebsiteMenu(orm.Model):
     }
 
     def _default_lang_ids(self, cr, uid, context=None):
-        website = self.pool.get('website').get_current_website(cr, uid, context)
-        return website.default_lang_id and [(4, website.default_lang_id.id)] or []
+        to_ret = []
+
+        website = self.pool.get('website').get_current_website(
+            cr, uid, context)
+        if website and website.default_lang_id:
+            to_ret = [(4, website.default_lang_id.id)]
+
+        return to_ret
 
     _defaults = {
         'lang_ids': _default_lang_ids,
