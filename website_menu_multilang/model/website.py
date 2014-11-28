@@ -12,7 +12,8 @@ class WebsiteMenu(orm.Model):
     _columns = {
         'lang_ids': fields.many2many(
             'res.lang', 'website_menu_lang_rel', 'menu_id', 'lang_id',
-            'Languages',
+            'Allowed Languages',
+            help="Website languages when this menu should be available"
         ),
     }
 
