@@ -13,7 +13,8 @@ class WebsiteMenu(orm.Model):
         'lang_ids': fields.many2many(
             'res.lang', 'website_menu_lang_rel', 'menu_id', 'lang_id',
             'Allowed Languages',
-            help="Website languages when this menu should be available"
+            help="Website languages this menu should be available for. "
+            "If kept empty, it will be available for all languages"
         ),
     }
 

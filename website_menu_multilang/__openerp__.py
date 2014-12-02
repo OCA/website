@@ -1,7 +1,7 @@
 ##############################################################################
 #
-# OpenERP, Open Source Management Solution 
-# Copyright (C) 2014 by UAB Versada (Ltd.) <http://www.versada.lt> 
+# OpenERP, Open Source Management Solution
+# Copyright (C) 2014 by UAB Versada (Ltd.) <http://www.versada.lt>
 # and contributors. See AUTHORS for more details.
 #
 # All Rights Reserved.
@@ -37,7 +37,6 @@ be displayed.
 TODO:
 * Restrict direct URL access for pages of unspecified language
 * Proper sitemap.xml generation
-* Solve exceptional Use Cases (no language defined; only one language available etc.)
 * Theme compatibility
 * Tests
     """,
