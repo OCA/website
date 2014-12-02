@@ -38,7 +38,7 @@ class WebsiteMenu(orm.Model):
          :param string request_lang: language code to check against
         """
         # if language code is not resolved show menu by default
-        if not request_lang:
+        if not request_lang or not self.lang_ids:
             return True
 
         for lang in self.lang_ids:
