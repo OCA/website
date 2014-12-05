@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="copy_into_description_button" model="ir.ui.view">
+            <field name="name">copy.into.description.button</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product_template_header.product_template_header"/>
+            <field name="arch" type="xml">
+                <header position="inside">
+                    <button name="action_update_description_sale"
+                            string="Copy Fields into Description Sale"
+                            type="object"
+                            />
+                </header>
+            </field>
+        </record>
+    </data>
+</openerp>
