@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_redirection_to_front_office
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-04 17:05+0000\n"
+"PO-Revision-Date: 2014-11-04 17:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_redirection_to_front_office
+#: model:ir.model,name:product_redirection_to_front_office.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: product_redirection_to_front_office
+#: view:product.template:product_redirection_to_front_office.redirection_to_front_office
+msgid "See product in the shop"
+msgstr ""
+
