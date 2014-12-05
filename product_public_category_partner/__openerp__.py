@@ -22,7 +22,7 @@
 
 {
     'name': 'Product Public Category Partner',
-    'version': '0.1',
+    'version': '1.0',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
@@ -41,8 +41,8 @@ Contributors
 * William Beverly <william.beverly@savoirfairelinux.com>
 * Bruno Joliveau <bruno.joliveau@savoirfairelinux.com>
 
-More informations
------------------
+More information
+----------------
 Module developed and tested with Odoo version 8.0
 For questions, please contact our support services \
 (support@savoirfairelinux.com)
