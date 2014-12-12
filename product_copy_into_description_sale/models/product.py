@@ -76,6 +76,9 @@ class product_template(models.Model):
         """
         # we don't want anymore the technical names of the field
         # but the translated name of the field.
+        # For obscur reasons, it seems field.string doesn't return the
+        # translation but the en value. We have then to use ask
+        # ir.translation to get it.
         translation_model = self.env['ir.translation']
         assert isinstance(fields_to_copy, (list, tuple)), \
             'Wrong argument type. Should be list or tuple got {}.'.format(
@@ -92,7 +95,7 @@ class product_template(models.Model):
                     # It allows us to not take the translation of a field
                     # with the same name but from another model.
                     # ie: res.partner,name vs res.company,name
-                    ('name', '=', ','.join([self._inherit, field_name])),
+                    ('name', 'ilike', ','.join([self._inherit, field_name])),
                     # But we might have several translation for the
                     # field (ie: fr, fr_CA, es, etc.), so we need to filter
                     # languages too.
@@ -105,7 +108,7 @@ class product_template(models.Model):
             )
             # The field might not be translated in fact.
             # We just take the default name of the field then
-            value = translation or self._columns.get(field_name).string
+            value = translation.value or self._columns.get(field_name).string
 
             attribute = getattr(self, field_name)
             # Checking if the attribute is a field or not
