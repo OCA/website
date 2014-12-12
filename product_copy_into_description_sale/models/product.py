@@ -103,7 +103,6 @@ class product_template(models.Model):
                 # of the list
                 limit=1
             )
-            print translation
             # The field might not be translated in fact.
             # We just take the default name of the field then
             value = translation or self._columns.get(field_name).string
