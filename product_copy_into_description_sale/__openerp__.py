@@ -20,17 +20,21 @@
 
 {
     'name': 'Product Copy Into Description Sale',
-    'version': '0.1',
+    'version': '1.1',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
     'category': 'Sales',
-    'summary': 'In product.template, copy a set of value of fields and their titles into the description',
+    'summary': 'Copy a set of value of fields and their titles into the description_sale',
     'description': """
 Sale Copy Into Description Sale
 ===============================
-In Sales Module, this module allows to copy fields and their title of the product.template
-into the description_sale
+In Sales Module, this module allows to copy fields and their title of
+the product.template into the description_sale.
+
+The description_sale is fed by the translated name of the field to help the
+reading
+
 
 Contributors
 ------------
