@@ -38,6 +38,7 @@ class product_template(models.Model):
         for rec in self.browse(ids):
             rec.copy_into_description_sale(self.fields_to_copy)
 
+    @api.model
     def copy_into_description_sale(self, fields_to_copy):
         """ Update the description with the title and the value of
         the given fields.
@@ -65,28 +66,56 @@ class product_template(models.Model):
 
         self.description_sale = self.build_description_sale(fields_to_copy)
 
+    @api.model
     def build_description_sale(self, fields_to_copy):
         """ Build the new description with the current description and the new
-         values
+         values.
 
-        :param fields_to_copy: names of the field to copy
+        :param fields_to_copy: technical names of the field to copy
         :return: text
         """
+        # we don't want anymore the technical names of the field
+        # but the translated name of the field.
+        translation_model = self.env['ir.translation']
         assert isinstance(fields_to_copy, (list, tuple)), \
             'Wrong argument type. Should be list or tuple got {}.'.format(
                 type(fields_to_copy)
             )
+
         fields = {}
         for field_name in fields_to_copy:
-            attribute = getattr(self, field_name)
+            translation = translation_model.search(
+                [
+                    ('type', 'like', 'field'),
+                    # The name of the translation is composed by the type of
+                    # the model "," and the technical name of the field.
+                    # It allows us to not take the translation of a field
+                    # with the same name but from another model.
+                    # ie: res.partner,name vs res.company,name
+                    ('name', '=', ','.join([self._inherit, field_name])),
+                    # But we might have several translation for the
+                    # field (ie: fr, fr_CA, es, etc.), so we need to filter
+                    # languages too.
+                    ('lang', '=', self._context.get('lang'))
+                ],
+                # if this search returns more than one results, we assume the
+                # term was translated twice for it, so we just take the first
+                # of the list
+                limit=1
+            )
+            print translation
+            # The field might not be translated in fact.
+            # We just take the default name of the field then
+            value = translation or self._columns.get(field_name).string
 
+            attribute = getattr(self, field_name)
             # Checking if the attribute is a field or not
             try:
                 attribute = attribute.name
             except AttributeError:
                 pass
 
-            fields[field_name] = attribute
+            fields[value] = attribute
 
         return '\n'.join(
             [
