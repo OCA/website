@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_website_config_settings" model="ir.ui.view">
+            <field name="name">Website settings</field>
+            <field name="model">website.config.settings</field>
+            <field name="inherit_id" ref="website.view_website_config_settings" />
+            <field name="arch" type="xml">
+                <group string="Social Media" position="after">
+                    <group string="Google reCAPTCHA">
+                        <label for="recaptcha_public_key"/>
+                        <div name="recaptcha_public_key">
+                            <div class="oe_inline">
+                                <field name="recaptcha_public_key" placeholder="Your reCAPTCHA public key"/>
+                            </div>
+                        </div>
+                        <label for="recaptcha_private_key"/>
+                        <div name="recaptcha_private_key">
+                            <div class="oe_inline">
+                                <field name="recaptcha_private_key" placeholder="Your reCAPTCHA private key"/>
+                            </div>
+                        </div>
+                        <label for="recaptcha_theme"/>
+                        <div name="recaptcha_theme">
+                            <div class="oe_inline">
+                                <field name="recaptcha_theme" />
+                            </div>
+                        </div>
+                    </group>
+                </group>
+            </field>
+        </record>
+    </data>
+</openerp>
