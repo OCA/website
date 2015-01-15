@@ -20,7 +20,7 @@
 
 {
     'name': 'Product Copy Into Description Sale',
-    'version': '1.1',
+    'version': '1.2',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
