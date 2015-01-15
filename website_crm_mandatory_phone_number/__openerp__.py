@@ -32,16 +32,17 @@
     'description': """
 Website CRM Contact Mandatory Phone Number
 ==========================================
-This module set as required the phone number in the form of the "Contact Us" page.
+This module set as required the phone number in the form of the
+"Contact Us" page.
 
-8th September 2014: As the way website_crm controller is build, there is no easy way to
-set a field as required in the controller. Because of that, the method had to be copied, breaking
-the link with any update that would be done on this part of code.
-A post has been created on help.odoo.ca to follow up the case:
-https://www.odoo.com/forum/help-1/question/8-0-website-crm-required-field-in-contact-form-62184
+8th September 2014: As the way website_crm controller is build, there is no
+easy way to set a field as required in the controller. Because of that,
+the method had to be copied, breaking the link with any update that would be
+done on this part of code.
 
-For now, instead of overcharging the field in the controller, the field is set as required in the
- view. It is weak as the behaviour won't be the same if the field is called from another view.
+For now, instead of overcharging the field in the controller, the field is set
+as required in the view. It is weak as the behaviour won't be the same if the
+field is called from another view.
 
 Contributors
 ------------
