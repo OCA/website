@@ -41,7 +41,6 @@ Contributors
 """,
     'depends': [
         'product',
-        'product_template_header',
     ],
     'external_dependencies': {},
     'data': [
