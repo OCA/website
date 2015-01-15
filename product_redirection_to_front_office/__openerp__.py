@@ -25,17 +25,18 @@
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
     'category': 'Sales',
-    'summary': 'In product.template, add a button to see the product into the shop.',
+    'summary': ('In product.template, add a button to see the product '
+                'into the shop.'),
     'description': """
-Sale Copy Into Description Sale
-===============================
- This custom module allows the user to click a link which brings him from the back-office
- into the front-office (website.sale)
+Product Redirection to Front Office
+===================================
+ This custom module allows the user to click a link which brings him from the
+ back-office into the front-office (website.sale)
 
 Contributors
 ------------
-* Jordi Riera (jordi.riera@savoirfairelinux.com)
-* William BEVERLLY (william.beverlly@savoirfairelinux.com)
+* Jordi Riera <jordi.riera@savoirfairelinux.com>
+* William BEVERLLY <william.beverlly@savoirfairelinux.com>
 
 """,
     'depends': [
