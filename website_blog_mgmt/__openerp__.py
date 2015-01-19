@@ -28,18 +28,6 @@
     'depends': [
         'website_blog',
     ],
-    'description': """
-Website blog management
-=======================
-The module adds a new field to 'blog.post': website_publication_date.
-The publication date is used to preserve the order in which posts are listed in
-the web site when clicking on the menu 'News'. The same order is used in
-the navigation between posts.
-The publication date is filled when a post is published. It's also possible to
-specify a specific value in the back-end. If the specified date is in the past,
-the post is set to published, if the date is in the future the post will be
-automatically published at the given date by a scheduled task.
-   """,
     'data': [
         'data/website_blog_mgmt_data.xml',
         'views/website_blog_views.xml'
