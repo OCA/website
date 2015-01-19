@@ -30,7 +30,8 @@
     ],
     'data': [
         'data/website_blog_mgmt_data.xml',
-        'views/website_blog_views.xml'
+        'views/website_blog_views.xml',
+        'views/website_blog_templates.xml',
     ],
     'installable': True,
     'auto_install': False,
