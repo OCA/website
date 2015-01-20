@@ -20,7 +20,7 @@
 ##############################################################################
 import simplejson
 from lxml import etree
-from openerp import models, fields, api, exceptions
+from openerp import models
 
 
 class IrQweb(models.Model):

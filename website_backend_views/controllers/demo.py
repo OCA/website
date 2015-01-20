@@ -20,6 +20,7 @@
 ##############################################################################
 from openerp import http, _
 
+
 class Demo(http.Controller):
     @http.route('/website_backend_views/demo/', auth='user', website=True)
     def index(self, debug=False):
