@@ -36,8 +36,19 @@ class IrQweb(models.Model):
             raise NameError(
                 'Unknown model "%s" or no model defined' %
                 options.get('res_model'))
+        # we do the nested divs only in for the backend's css rules to work
         etree.SubElement(
-            element,
+            etree.SubElement(
+                etree.SubElement(
+                    element,
+                    'div',
+                    attrib={
+                        'class': 'openerp',
+                    }),
+                'div',
+                attrib={
+                    'class': 'oe_application oe_webclient',
+                }),
             'div',
             attrib={
                 'data-website-backend-view-model': model._name,

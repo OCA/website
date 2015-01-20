@@ -8,6 +8,11 @@
             </xpath>
         </template>
         <template id="layout" inherit_id="website.layout">
+            <xpath expr="//t[@t-call-assets='website.assets_frontend' and @t-js='false']" position="after">
+                <t t-if="website_backend_views_active">
+                    <t t-call-assets="web.assets_backend" t-js="false" />
+                </t>
+            </xpath>
             <xpath expr="//t[@t-call-assets='web.assets_common' and @t-css='false']" position="after">
                 <t t-if="website_backend_views_active">
                     <t t-call-assets="web.assets_backend" t-css="false" />
