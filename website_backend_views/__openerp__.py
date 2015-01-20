@@ -26,6 +26,8 @@
     "category": "Dependency",
     "summary": "Hook backend views into your website frontend",
     "depends": [
+        'web',
+        'website',
     ],
     "data": [
         'view/templates.xml',
