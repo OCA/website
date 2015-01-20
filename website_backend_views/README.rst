@@ -1,37 +1,22 @@
 Backend views for website
 =========================
 
-This module was written to extend the functionality of ... to support ... and allow you to ...
+This module allows to embed old style (backend) views into the website frontend. This way, complex forms don't need to be redeveloped but still there's no break in user experience. Ceveat is that this does not work for anonymous users.
 
-Installation
-============
-
-To install this module, you need to:
-
-* do this ...
-
-Configuration
-=============
-
-To configure this module, you need to:
-
-* go to ...
+This is specifically convenient if you need to use on_change functions, user input dependent domains or got used to be able to create linked objects inline.
 
 Usage
 =====
 
-To use this module, you need to:
-
-* go to ...
-
-For further information, please visit:
-
-* https://www.odoo.com/forum/help-1
+Install this module with demo data enabled and visit `/website_backend_views/demo`. Then read `view/demo.xml`.
 
 Known issues / Roadmap
 ======================
 
-* ...
+* more testing needed
+* not all css styles from the backend apply (should be just a matter ob having the right html structure/classes attached to the container
+* maybe we can do something for anonymous users?
+* view switching?
 
 Credits
 =======
@@ -39,7 +24,7 @@ Credits
 Contributors
 ------------
 
-* Firsname Lastname <email.address@example.org>
+* Holger Brunn <hbrunn@therp.nl>
 
 Maintainer
 ----------

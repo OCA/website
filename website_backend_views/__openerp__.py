@@ -23,7 +23,7 @@
     "version": "1.0",
     "author": "Therp BV",
     "license": "AGPL-3",
-    "category": "Website",
+    "category": "Dependency",
     "summary": "Hook backend views into your website frontend",
     "depends": [
     ],
