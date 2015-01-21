@@ -30,8 +30,8 @@ Maintainer
 ----------
 
 .. image:: http://odoo-community.org/logo.png
-:alt: Odoo Community Association
-:target: http://odoo-community.org
+    :alt: Odoo Community Association
+    :target: http://odoo-community.org
 
 This module is maintained by the OCA.
 
