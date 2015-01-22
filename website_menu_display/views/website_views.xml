@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <menuitem  id="menuitem_website"
+                name="Website"
+                parent="base.menu_custom"
+                sequence="80"
+                groups="base.group_no_one"
+                />
+        <menuitem
+                action="website.action_website_menu"
+                id="menu_action_website_menu_list"
+                parent="menuitem_website"
+                sequence="10"
+                groups="base.group_no_one"
+                />
+
+        <record id="website_menu_display" model="ir.ui.view">
+            <field name="name">Website.menu: Display to user booleans</field>
+            <field name="model">website.menu</field>
+            <field name="inherit_id" ref="website.menu_tree"/>
+            <field name="arch" type="xml">
+                <field name="new_window" position="after">
+                    <field name="user_logged"/>
+                    <field name="user_not_logged"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
