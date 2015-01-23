@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="website_display_menu" name="Conditional display menu"
+                  inherit_id="website.layout"
+                  active="True" customize_show="True">
+            <xpath expr="//ul[@id='top_menu']/t/t" position="replace">
+                <t t-if="(submenu.user_logged and request.uid !=  %(base.public_user)d) or (submenu.user_not_logged and request.uid == %(base.public_user)d)">
+                    <t t-call="website.submenu"/>
+                </t>
+            </xpath>
+
+        </template>
+    </data>
+</openerp>
