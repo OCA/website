@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2014 Savoir-faire Linux
+#    This module copyright (C) 2015 Savoir-faire Linux
 #    (<http://www.savoirfairelinux.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -37,7 +37,6 @@
     },
     'data': [
         'views/website_templates.xml',
-        'views/website_views.xml',
     ],
     'demo': [],
     'test': [],
