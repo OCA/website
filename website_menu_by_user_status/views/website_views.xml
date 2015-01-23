@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="website_menu_display" model="ir.ui.view">
+            <field name="name">Website.menu: Display to user booleans</field>
+            <field name="model">website.menu</field>
+            <field name="inherit_id" ref="website.menu_tree"/>
+            <field name="arch" type="xml">
+                <field name="new_window" position="after">
+                    <field name="user_logged"/>
+                    <field name="user_not_logged"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
