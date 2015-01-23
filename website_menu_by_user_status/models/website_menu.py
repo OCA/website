@@ -42,4 +42,3 @@ class WebsiteMenu(models.Model):
         help=_("If checked, "
                "the menu will be display when the user is not logged.")
     )
-

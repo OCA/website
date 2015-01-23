@@ -1,5 +1,5 @@
-Website Menu Display
-====================
+Website Menu By User Status
+===========================
 
 The module manages display website menu entries, depending if the user is
 logged or not.

@@ -21,7 +21,7 @@
 ##############################################################################
 
 {
-    'name': 'Website Menu Display',
+    'name': 'Website Menu By User Display',
     'version': '1.0',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
