@@ -37,6 +37,7 @@
     },
     'data': [
         'views/website_templates.xml',
+        'views/website_views.xml',
     ],
     'demo': [],
     'test': [],
