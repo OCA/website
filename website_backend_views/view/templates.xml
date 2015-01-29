@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="assets_frontend" name="website_backend_views assets" inherit_id="website.assets_frontend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/website_backend_views/static/src/js/website_backend_views.js"></script>
+                <link rel="stylesheet" href="/website_backend_views/static/src/css/website_backend_views.css"/>
+            </xpath>
+        </template>
+        <template id="layout" inherit_id="website.layout">
+            <xpath expr="//t[@t-call-assets='website.assets_frontend' and @t-js='false']" position="after">
+                <t t-if="website_backend_views_active">
+                    <t t-call-assets="web.assets_backend" t-js="false" />
+                </t>
+            </xpath>
+            <xpath expr="//t[@t-call-assets='web.assets_common' and @t-css='false']" position="after">
+                <t t-if="website_backend_views_active">
+                    <t t-call-assets="web.assets_backend" t-css="false" />
+                </t>
+            </xpath>
+        </template>
+    </data>
+</openerp>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="demo_index">
+            <t t-call="website.layout">
+                <h1>Beneath you'll see an edit form for your main partner. Should work</h1>
+                <!-- this wil end up in a window action with the appropriate fields set /-->
+                <t t-website-backend-view='{"res_model": "res.partner", "view_type": "form", "res_id": %(base.main_partner)s, "domain": [["id", "=", %(base.main_partner)s]]}' />
+                <div>And of course, you can do whatever you want with the rest of the page. Maybe hide the manager's buttons and provide a nicer UI for saving?</div>
+            </t>
+        </template>
+    </data>
+</openerp>
