@@ -27,7 +27,7 @@ class IrUiView(models.Model):
     @api.cr_uid_ids_context
     def render(self, cr, uid, id_or_xml_id, values=None, engine='ir.qweb',
                context=None):
-        '''inject functions we need in out template'''
+        """inject functions we need in our template"""
         if id_or_xml_id == "website_event.event_description_full":
             values['hasattr'] = hasattr
         return super(IrUiView, self).render(
