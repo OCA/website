@@ -33,12 +33,13 @@ class WebsiteMenu(models.Model):
     user_logged = fields.Boolean(
         string="User Logged",
         default=True,
-        help=_("If checked, the menu will be display when the user is logged.")
+        help=_("If checked, "
+               "the menu will be displayed when the user is logged.")
     )
 
     user_not_logged = fields.Boolean(
         string="User Not Logged",
         default=True,
         help=_("If checked, "
-               "the menu will be display when the user is not logged.")
+               "the menu will be displayed when the user is not logged.")
     )

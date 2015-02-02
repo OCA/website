@@ -22,7 +22,7 @@
 
 {
     'name': 'Website Menu By User Display',
-    'version': '1.0',
+    'version': '1.1',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
