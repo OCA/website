@@ -44,116 +44,126 @@
 
         <t t-call="website_sale_customer.orders_followup_navbar"/>
 
-        <t t-foreach="orders" t-as="o">
-          <div class='row'>
+        <div id="accordion" class="panel-group" role="tablist" aria-multiselectable="true">
+          <t t-foreach="orders" t-as="o">
             <div class="panel panel-default">
-              <div class="panel-heading">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h4>
-                      <t t-if="o.state == 'sent'">
-                        Quotation N°
-                      </t>
-                      <t t-if="o.state != 'sent'">
-                        Order N°
-                      </t>
-                      <span t-field="o.name"/>
-                    </h4>
-                  </div>
-                </div>
+              <div class="panel-heading" role="tab" t-attf-id="heading-order-#{o.id}">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion"
+                     t-attf-href="#content-order-#{o.id}" aria-expanded="true" aria-controls="collapseOne">
+                    <t t-if="o.state == 'sent'">
+                      <strong>Quotation</strong> N°
+                    </t>
+                    <t t-if="o.state != 'sent'">
+                      <strong>Order</strong> N°
+                    </t>
+                    <span class="order-name" t-field="o.name"/>
+                    -
+                    <span class="order-date">
+                      <strong>Date:</strong>
+                      <span t-field="o.create_date" t-field-options='{"widget": "date"}'/>
+                    </span>
+                  </a>
+                </h4>
               </div>
-              <div class="panel-body">
-                <!-- <hr/> -->
-                <div class="mb8">
-                    <strong>Date:</strong> <span t-field="o.create_date" t-field-options='{"widget": "date"}'/>
-                </div>
-                <div class='row'>
-                  <div class="col-md-6">
-                    <div>
-                      <strong>Invoicing Address</strong>
-                    </div>
-                    <div>
-                      <address t-field="o.partner_invoice_id" t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
-                    </div>
-                    <t t-set="invoices" t-value="[i for i in o.invoice_ids if i.state not in ['draft', 'cancel']]"/>
-                    <t t-if="invoices">
+              <div class="panel-collapse collapse" role="tabpanel"
+                   t-attf-id="content-order-#{o.id}">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-4 invoice-address">
+                      <h5><strong>Invoicing Address</strong></h5>
                       <div>
-                        <strong>Invoices</strong>
+                        <address t-field="o.partner_invoice_id" t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
                       </div>
-                      <div>
-                        <t t-foreach="invoices" t-as="i">
-                          <t t-set="report_url" t-value="'/report/pdf/account.report_invoice/%s' % i.id"/>
-                          <div>
-                            <a t-att-href="report_url"><span class="fa fa-download"/></a>
-                            <a t-att-href="report_url"><span t-field="i.number"/></a>
-                            <span class="text-muted" t-field="i.date_invoice"/>
-                            <t t-if="i.state == 'paid'">
-                              <span class="label label-success orders_label_text_align"><i class="fa fa-fw fa-check"/> Paid</span>
-                            </t>
-                            <t t-if="i.state != 'paid'">
-                              <span class="label label-info orders_label_text_align"><i class="fa fa-fw fa-clock-o"/> Waiting</span>
-                            </t>
-                          </div>
-                        </t>
+                    </div>
+                    <t t-set="invoices"
+                       t-value="[i for i in o.invoice_ids if i.state not in ['draft', 'cancel']]" />
+                    <t t-if="invoices">
+                      <div class="col-md-4 invoices">
+                        <h5><strong>Invoices</strong></h5>
+                        <div>
+                          <t t-foreach="invoices" t-as="i">
+                            <t t-set="report_url" t-value="'/report/pdf/account.report_invoice/%s' % i.id"/>
+                            <div>
+                              <a t-att-href="report_url"><span class="fa fa-download"/></a>
+                              <a t-att-href="report_url"><span t-field="i.number"/></a>
+                              <span class="text-muted" t-field="i.date_invoice"/>
+                              <t t-if="i.state == 'paid'">
+                                <span class="label label-success orders_label_text_align">
+                                  <i class="fa fa-fw fa-check"/> Paid
+                                </span>
+                              </t>
+                              <t t-if="i.state != 'paid'">
+                                <span class="label label-info orders_label_text_align">
+                                  <i class="fa fa-fw fa-clock-o"/> Waiting
+                                </span>
+                              </t>
+                            </div>
+                          </t>
+                        </div>
                       </div>
                     </t>
-                  </div>
-                  <div id="shipping_address" class="col-md-6">
-                    <div>
-                      <strong>Shipping Address</strong>
-                    </div>
-                    <div>
-                      <address t-field="o.partner_shipping_id" t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                    <div class="col-md-4 shipping-address">
+                      <h5><strong>Shipping Address</strong></h5>
+                      <div>
+                        <address t-field="o.partner_shipping_id" t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <hr/>
+                  <hr/>
 
-                <div id="order_lines">
-                  <t t-call="website_sale_customer.orders_followup_lines" />
-                </div>
-
-                <hr/>
-
-                <div class="row">
-                  <div class="col-md-6">
-                    <div>
-                      <strong>Contact</strong>
-                    </div>
-                    <div t-field="o.user_id.partner_id" t-field-options='{"widget": "contact", "fields": ["email", "phone"]}'/>
+                  <div id="order_lines">
+                    <t t-call="website_sale_customer.orders_followup_lines" />
                   </div>
-                  <div class="col-md-6">
-                    <div class="row">
-                      <div class="col-md-10 text-right">
-                        Untaxed Amount:
+
+                  <hr/>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div>
+                        <strong>Contact</strong>
                       </div>
-                      <div class="col-md-2 text-right">
-                        <span t-field="o.amount_untaxed" t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
-                      </div>
+                      <div t-field="o.user_id.partner_id"
+                           t-field-options='{"widget": "contact", "fields": ["email", "phone"]}'/>
                     </div>
-                    <div class="row">
-                      <div class="col-md-10 text-right">
-                        Taxes:
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-10 text-right">
+                          Untaxed Amount:
+                        </div>
+                        <div class="col-md-2 text-right">
+                          <span t-field="o.amount_untaxed"
+                                t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
+                        </div>
                       </div>
-                      <div class="col-md-2 text-right">
-                        <span t-field="o.amount_tax" t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
+                      <div class="row">
+                        <div class="col-md-10 text-right">
+                          Taxes:
+                        </div>
+                        <div class="col-md-2 text-right">
+                          <span t-field="o.amount_tax"
+                                t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
+                        </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-10 text-right">
-                        <strong>Total:</strong>
-                      </div>
-                      <div class="col-md-2 text-right">
-                        <strong><span t-field="o.amount_total" t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/></strong>
+                      <div class="row">
+                        <div class="col-md-10 text-right">
+                          <strong>Total:</strong>
+                        </div>
+                        <div class="col-md-2 text-right">
+                          <strong>
+                            <span t-field="o.amount_total"
+                                  t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
+                          </strong>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </t>
+          </t>
+        </div>
 
         <t t-if="len(orders) >= 2">
           <t t-call="website_sale_customer.orders_followup_navbar"/>
