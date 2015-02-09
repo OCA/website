@@ -117,7 +117,8 @@ class product_template(models.Model):
             except AttributeError:
                 pass
 
-            fields[value] = attribute
+            if attribute:
+                fields[value] = attribute
 
         return '\n'.join(
             [

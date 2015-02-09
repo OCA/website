@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 #
 # OpenERP, Open Source Management Solution
-#    This module copyright (C) 2014 Savoir-faire Linux
-#    (<http://www.savoirfairelinux.com>).
+# This module copyright (C) 2014 Savoir-faire Linux
+# (<http://www.savoirfairelinux.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,36 +20,15 @@
 
 {
     'name': 'Product Copy Into Description Sale',
-    'version': '1.2',
+    'version': '1.3',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
     'category': 'Sales',
-    'summary': 'Copy a set of value of fields and their titles into the description_sale',
-    'description': """
-Sale Copy Into Description Sale
-===============================
-In Sales Module, this module allows to copy fields and their title of
-the product.template into the description_sale.
-
-The description_sale is fed by the translated name of the field to help the
-reading
-
-
-Contributors
-------------
-* Jordi Riera (jordi.riera@savoirfairelinux.com)
-* William BEVERLLY (william.beverlly@savoirfairelinux.com)
-
-""",
-    'depends': [
-        'product',
-        'website_sale',
-    ],
+    'summary': ('Copy a set of value of fields and their titles '
+                'into the description_sale'),
+    'depends': ['product', 'website_sale', ],
     'external_dependencies': {},
-    'data': [
-        'views/product_template.xml'
-
-    ],
+    'data': ['views/product_template.xml'],
     'installable': True,
 }
