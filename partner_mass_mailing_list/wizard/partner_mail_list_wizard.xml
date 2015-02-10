@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="partner_mail_list_wizard_form">
+            <field name="name">partner.mail.list.form</field>
+            <field name="model">partner.mail.list.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Create contact mailing list">
+                    <group>
+                        <field name="mail_list"/>
+                    </group>
+                    <footer>
+                        <button string="Create contacts" name="add_to_mail_list" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

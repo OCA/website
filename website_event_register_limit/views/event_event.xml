@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="view_event_event_form" model="ir.ui.view">
+            <field name="name">view_event_event_form</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event_sale.view_event_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='Ticket Types']//field[@name='seats_max']" position="after">
+                    <field name="max_tickets"/>
+                </xpath>
+            </field>
+        </record>
+
+        <template id="event_description_full" inherit_id="website_event_sale.event_description_full">
+            <xpath expr="//select[@t-if='ticket.seats_available']/t" position="replace">
+                <t t-foreach="range(0, ticket.seats_available > ticket.max_tickets and ticket.max_tickets+1 or ticket.seats_available+1 )" t-as="nb"><option t-esc="nb"/></t>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

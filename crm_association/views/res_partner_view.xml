@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_partner_form_association">
+            <field name="name">Partner form with association</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="association"
+                           placeholder="Association"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_partner_tree_association">
+            <field name="name">Partner tree with association</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="email" position="after">
+                    <field name="association"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_res_partner_filter_association">
+            <field name="name">Partner search with association</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="association"/>
+                </field>
+                <filter string="Salesperson" position="after">
+                    <filter string="Association"
+                            domain="[]"
+                            context="{'group_by': 'association'}"/>
+                </filter>
+            </field>
+        </record>
+
+    </data>
+</openerp>

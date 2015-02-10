@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <record id="email_template_event_registration" model="email.template">
+            <field name="name">Event Registration Mass Mail</field>
+            <field name="model_id" ref="event.model_event_registration"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="email_to">${object.email}</field>
+        </record>
+
+        <act_window name="Mass mailing to partners"
+            res_model="mail.compose.message"
+            src_model="event.registration"
+            view_mode="form"
+            multi="True"
+            target="new"
+            key2="client_action_multi"
+            id="action_event_registration_mass_mail"
+            context="{
+                'default_composition_mode': 'mass_mail',
+                'default_partner_to': '${object.partner_id.id or \'\'}',
+                'default_use_template': True,
+                'default_template_id': ref('email_template_event_registration')
+            }"/>
+
+        <act_window name="Add to mailing list"
+            res_model="event.registration.mail.list.wizard"
+            src_model="event.registration"
+            view_mode="form"
+            multi="True"
+            target="new"
+            key2="client_action_multi"
+            id="action_event_registration_mail_list"/>
+
+    </data>
+</openerp>

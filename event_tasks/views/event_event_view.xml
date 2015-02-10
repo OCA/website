@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="act_event_task_list" model="ir.actions.act_window">
+            <field name="res_model">project.task</field>
+            <field name="view_type">form</field>
+            <field name="name">Tareas</field>
+            <field name="view_mode">gantt,kanban,tree,form,calendar,graph</field>
+            <field name="context">{'search_default_event': active_id, 'default_event': active_id}</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_event_form_task">
+            <field name="name">Events (with tasks)</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Tareas">
+                        <field name="tasks" nolabel="1"/>
+                    </page>
+                </notebook>
+                <div class="oe_right oe_button_box" position="inside">
+                    <button name="%(event_tasks.act_event_task_list)d"
+                        type="action"
+                        class="oe_stat_button oe_inline"
+                        icon="fa-tasks">
+                        <field name="count_tasks" widget="statinfo" string="Tareas"/>
+                    </button>
+                </div>
+            </field>
+        </record>
+
+    </data>
+</openerp>

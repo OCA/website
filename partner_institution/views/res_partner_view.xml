@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_partner_form_institution">
+            <field name="name">Partner form with institution</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="institution"
+                           placeholder="Institution"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_partner_tree_institution">
+            <field name="name">Partner tree with institution</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="email" position="after">
+                    <field name="institution"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_res_partner_filter_institution">
+            <field name="name">Partner search with institution</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="institution"/>
+                </field>
+                <filter string="Salesperson" position="after">
+                    <filter string="Institution"
+                            domain="[]"
+                            context="{'group_by': 'institution'}"/>
+                </filter>
+            </field>
+        </record>
+
+    </data>
+</openerp>

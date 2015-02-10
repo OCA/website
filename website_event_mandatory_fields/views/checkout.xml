@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="checkout" inherit_id="website_sale.checkout">
+            <xpath expr="//label[@for='phone']" position="attributes">
+                <attribute name="style">font-weight: normal</attribute>
+            </xpath>
+            <xpath expr="//label[@for='street2']" position="attributes">
+                <attribute name="style">font-weight: normal</attribute>
+            </xpath>
+            <xpath expr="//label[@for='country_id']" position="attributes">
+                <attribute name="style">font-weight: normal</attribute>
+            </xpath>
+            <xpath expr="//label[@for='city']" position="attributes">
+                <attribute name="style">font-weight: normal</attribute>
+            </xpath>
+            <xpath expr="//label[@for='zip']" position="attributes">
+                <attribute name="style"></attribute>
+            </xpath>
+            <xpath expr="//label[@for='zip']" position="after">
+                <label>*</label>
+            </xpath>
+            <xpath expr="//input[@name='email']/../label" position="after">
+                <label>*</label>
+            </xpath>
+            <xpath expr="//label[@for='contact_name']" position="after">
+                <label>*</label>
+            </xpath>
+        </template>
+
+        <template id="payment" inherit_id="website_sale.payment">
+            <xpath expr="//a[@class='btn btn-primary a-submit']/span" position="replace">
+                <span>Confirmar <span class="fa fa-long-arrow-right"></span></span>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

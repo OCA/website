@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <act_window name="Add to mailing list"
+            res_model="partner.mail.list.wizard"
+            src_model="res.partner"
+            view_mode="form"
+            multi="True"
+            target="new"
+            key2="client_action_multi"
+            id="action_partner_mail_list"/>
+
+    </data>
+</openerp>
