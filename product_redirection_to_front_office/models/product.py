@@ -20,7 +20,6 @@
 
 import logging
 _logger = logging.getLogger(__name__)
-_logger.setLevel(logging.DEBUG)
 from openerp import models, api
 from openerp.addons.website.models import website
 
