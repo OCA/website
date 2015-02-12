@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="layout" inherit_id="website.layout">
+            <xpath expr="html/body" position="inside">
+                <t t-if="website and website.piwik_analytics_id and website.piwik_analytics_host">
+                    <script type="text/javascript">
+                        var _paq = _paq || [];
+                        _paq.push(['trackPageView']);
+                        _paq.push(['enableLinkTracking']);
+                        (function() {
+                        var u="//<t t-raw="website.piwik_analytics_host" />/";
+                        _paq.push(['setTrackerUrl', u+'piwik.php']);
+                        _paq.push(['setSiteId', <t t-raw="website.piwik_analytics_id" />]);
+                        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+                        })();
+                    </script>
+                    <noscript><p><img t-attf-src="//#{website.piwik_analytics_host}/piwik.php?idsite=#{website.piwik_analytics_id}" style="border:0;" alt="" /></p></noscript>
+               </t>
+            </xpath>
+        </template>
+    </data>
+</openerp>
