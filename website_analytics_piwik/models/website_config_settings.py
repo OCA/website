@@ -18,13 +18,13 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp import models, fields, api
+from openerp import models, fields
 
 
 class WebsiteConfigSettings(models.Model):
     _inherit = 'website.config.settings'
 
     piwik_analytics_id = fields.Integer(
-        related = ['website_id', 'piwik_analytics_id'])
+        related=['website_id', 'piwik_analytics_id'])
     piwik_analytics_host = fields.Char(
-        related = ['website_id', 'piwik_analytics_host'])
+        related=['website_id', 'piwik_analytics_host'])
