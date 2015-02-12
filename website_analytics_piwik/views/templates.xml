@@ -8,9 +8,9 @@
                     _paq.push(['trackPageView']);
                     _paq.push(['enableLinkTracking']);
                     (function() {
-                    var u="//<t t-esc="website.piwik_analytics_host" />/";
+                    var u="//<t t-raw="website.piwik_analytics_host" />/";
                     _paq.push(['setTrackerUrl', u+'piwik.php']);
-                    _paq.push(['setSiteId', <t t-esc="website.piwik_analytics_id" />]);
+                    _paq.push(['setSiteId', <t t-raw="website.piwik_analytics_id" />]);
                     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
                     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
                     })();
