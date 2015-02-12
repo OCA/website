@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_website_config_settings" model="ir.ui.view">
+            <field name="model">website.config.settings</field>
+            <field name="inherit_id" ref="website.view_website_config_settings" />
+            <field name="arch" type="xml">
+                <div name="google_analytics_key" position="after">
+                    <field name="piwik_analytics_id" />
+                    <field name="piwik_analytics_host" placeholder="host.name/piwik" />
+                </div>
+            </field>
+        </record>
+    </data>
+</openerp>
