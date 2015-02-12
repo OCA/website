@@ -1,7 +1,7 @@
 Piwik analytics
 ===============
 
-This module allows to simply configure you odoo website for using Piwik_.
+This module allows to simply configure your odoo website for using Piwik_.
 
 .. _Piwik: http://piwik.org
 
