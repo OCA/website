@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="crm_case_form_view_leads_department">
+            <field name="name">CRM - Leads Form with department</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                <field name="phone" position="before">
+                    <field name="department"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- Uncomment this to add a new column to tree view
+        <record model="ir.ui.view" id="crm_case_tree_view_leads_department">
+            <field name="name">Leads with department</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+            <field name="arch" type="xml">
+                <field name="section_id" position="after">
+                    <field name="department"/>
+                </field>
+            </field>
+        </record>
+        -->
+
+        <record model="ir.ui.view" id="view_crm_case_leads_filter_department">
+            <field name="name">CRM - Leads Search with departments</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+            <field name="arch" type="xml">
+                <field name="section_id" position="after">
+                    <field name="department"/>
+                </field>
+                <filter string="Sales Team" position="after">
+                    <filter string="Department"
+                            domain="[]"
+                            context="{'group_by': 'department'}"/>
+                </filter>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="crm_case_form_view_oppor_department">
+            <field name="name">CRM - Leads Form with department</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <field name="phone" position="before">
+                    <field name="department"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- Uncomment this to add a new column to tree view
+        <record model="ir.ui.view" id="crm_case_tree_view_oppor_department">
+            <field name="name">Leads with department</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+            <field name="arch" type="xml">
+                <field name="section_id" position="after">
+                    <field name="department"/>
+                </field>
+            </field>
+        </record>
+        -->
+
+        <record model="ir.ui.view" id="view_crm_case_opportunities_filter_department">
+            <field name="name">CRM - Leads Search with departments</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+            <field name="arch" type="xml">
+                <field name="section_id" position="after">
+                    <field name="department"/>
+                </field>
+                <filter string="Sales Team" position="after">
+                    <filter string="Department"
+                            domain="[]"
+                            context="{'group_by': 'department'}"/>
+                </filter>
+            </field>
+        </record>
+
+    </data>
+</openerp>
