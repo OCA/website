@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="crm_case_form_view_leads_job_position">
+            <field name="name">CRM - Leads Form with job positions</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                <field name="function" position="before">
+                    <field name="job_position"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- Uncomment this to add a new column to tree view
+        <record model="ir.ui.view" id="crm_case_tree_view_leads_job_position">
+            <field name="name">Leads with job_position</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+            <field name="arch" type="xml">
+                <field name="function" position="before">
+                    <field name="job_position"/>
+                </field>
+            </field>
+        </record>
+        -->
+
+        <record model="ir.ui.view" id="view_crm_case_leads_filter_job_position">
+            <field name="name">CRM - Leads Search with job positions</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+            <field name="arch" type="xml">
+                <field name="section_id" position="after">
+                    <field name="job_position"/>
+                </field>
+                <filter string="Sales Team" position="after">
+                    <filter string="job_position"
+                            domain="[]"
+                            context="{'group_by': 'job_position'}"/>
+                </filter>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="crm_case_form_view_oppor_job_position">
+            <field name="name">CRM - Leads Form with job position</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <field name="function" position="before">
+                    <field name="job_position"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- Uncomment this to add a new column to tree view
+        <record model="ir.ui.view" id="crm_case_tree_view_oppor_job_position">
+            <field name="name">Leads with job position</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+            <field name="arch" type="xml">
+                <field name="section_id" position="after">
+                    <field name="job_position"/>
+                </field>
+            </field>
+        </record>
+        -->
+
+        <record model="ir.ui.view" id="view_crm_case_opportunities_filter_job_position">
+            <field name="name">CRM - Leads Search with job positions</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+            <field name="arch" type="xml">
+                <field name="section_id" position="after">
+                    <field name="job_position"/>
+                </field>
+                <filter string="Sales Team" position="after">
+                    <filter string="Job position"
+                            domain="[]"
+                            context="{'group_by': 'job_position'}"/>
+                </filter>
+            </field>
+        </record>
+
+    </data>
+</openerp>
