@@ -37,10 +37,9 @@ Add buttons to send mass mailings and add to mailing lists.
 
     # Dependencies
     'depends': [
-        'website_event_sale',
+        'event',
         'crm_mass_mailing',
-        'email_template',
-        'sale',
+        'email_template'
     ],
     'external_dependencies': {},
 
