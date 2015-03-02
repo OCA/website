@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Shop">
+      <xpath expr="." position="inside">
+        <link rel="stylesheet" href="/website_hr_department/static/src/css/website_hr_department.css"/>
+      </xpath>
+    </template>
+
+    <template id="departments" name="Departments" page="True">
+      <t t-call="website.layout">
+        <div id="wrap">
+          <div class="oe_structure"/>
+          <div class="container">
+            <div class="row mt8">
+              <div class="col-sm-7" id="departments_menu">
+                </div>
+              <div class="col-sm-5" t-if="department">
+                <t t-call="website.publish_management">
+                  <t t-set="object" t-value="department"/>
+                </t>
+              </div>
+            </div>
+            <div class="row mt32 mb32">
+              <div class="col-md-12" id="middle_column">
+                <div class="text-center text-muted row" t-if="not department">
+                  <section data-snippet-id="title">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h1 class="text-center">Our departments</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section data-snippet-id="text-image">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-6 mt32">
+                          <p>
+                                        We are a team of passionate people whose goal is to improve everyone's
+                                        life through disruptive products. We build great products to solve your
+                                        business problems.
+                                  </p>
+                          <p>
+                                        Our products are designed for small to medium size companies willing to optimize
+                                        their performance.
+                                  </p>
+                        </div>
+                        <div class="col-md-4 col-md-offset-2 mt16 mb16">
+                          <img src="/website/static/src/img/library/business_conference.jpg" class="img img-responsive shadow" alt="Our Team"/>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <div t-if="department" class="row">
+                  <t t-call="website_hr_department.department_info"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="oe_structure"/>
+        </div>
+      </t>
+    </template>
+
+    <template id="department_info" name="Department information">
+      <h1 class="text-center" t-field="department.name"/>
+      <div class="row" id="department_info">
+        <div t-field="department.public_info" class="text-muted mt16"/>
+      </div>
+    </template>
+
+    <template id="employees_item" name="Employees item">
+      <div itemscope="itemscope" itemtype="http://schema.org/Emplyee">
+        <t t-call="website.publish_management">
+          <t t-set="object" t-value="employee"/>
+        </t>
+        <div class="employee_image">
+          <img class="img img-responsive" t-att-src="website.image_url(employee, 'image_medium')"/>
+        </div>
+        <section>
+          <h5>
+            <strong t-field="employee.name"/>
+          </h5>
+          <div t-field="employee.job_id"/>
+          <div t-field="employee.public_info" class="text-info oe_subdescription"/>
+        </section>
+      </div>
+    </template>
+
+    <template id="employees_grid_view" name="Employees Grid View" inherit_id="website_hr_department.department_info" active="True" customize_show="True">
+      <xpath expr="//div[@id='department_info']" position="after">
+        <div class="employees">
+          <t t-if="employees">
+            <h2>Our Team</h2>
+          </t>
+          <t t-set="rows" t-value="[employees[i:i+4] for i in range(0, len(employees), 4)]"/>
+          <t t-foreach="rows" t-as="cols">
+            <div class="row">
+              <t t-foreach="cols" t-as="employee">
+                <div class="employee oe_grid col-sm-3 col-xs-6 col-md2 mt16">
+                  <t t-call="website_hr_department.employees_item"/>
+                </div>
+              </t>
+            </div>
+          </t>
+        </div>
+      </xpath>
+    </template>
+
+    <template id="employee_list_view" name="Employees List View" inherit_id="website_hr_department.department_info" active="False" customize_show="True">
+      <xpath expr="//div[@id='department_info']" position="after">
+        <div class="employees">
+          <t t-if="employees">
+            <h2>Our Team</h2>
+          </t>
+          <t t-foreach="employees" t-as="employee">
+            <div class="employee oe_list">
+              <t t-call="website_hr_department.employees_item"/>
+            </div>
+          </t>
+        </div>
+      </xpath>
+    </template>
+
+    <template id="breadcrumb" name="Departments Breadcrumb" inherit_id="website_hr_department.departments" active="True" customize_show="True">
+      <xpath expr="//div[@id='departments_menu']" position="inside">
+        <ol class="breadcrumb mb0">
+          <li>
+            <a href="/page/departments">Departments</a>
+          </li>
+          <t t-foreach="breadcrumb" t-as="b">
+            <li>
+              <a t-att-href="'/page/departments/' + slug(b)" t-field="b.name"/>
+            </li>
+          </t>
+        </ol>
+      </xpath>
+    </template>
+
+    <template id="departments_recursive" name="Departments list">
+      <li t-att-class="'active' if department and d.id == int(department.id or 0) else ''">
+        <a t-att-href="'/page/departments/' + slug(d)" t-field="d.name"/>
+        <ul t-if="d.child_ids" class="nav nav-pills nav-stacked nav-hierarchy">
+          <t t-foreach="d.child_ids" t-as="d">
+            <t t-call="website_hr_department.departments_recursive"/>
+          </t>
+        </ul>
+      </li>
+    </template>
+
+    <template id="hr_departments" name="Departments tree" inherit_id="website_hr_department.departments" active="True" customize_show="True">
+      <xpath expr="//div[@id='middle_column']" position="attributes">
+        <attribute name="class">col-md-9</attribute>
+      </xpath>
+      <xpath expr="//div[@id='middle_column']" position="before">
+        <div class="col-md-3 css_noprint" id="left_column">
+          <ul class="nav nav-pills nav-stacked mt16">
+            <t t-foreach="departments" t-as="d">
+              <t t-call="website_hr_department.departments_recursive"/>
+            </t>
+          </ul>
+        </div>
+      </xpath>
+    </template>
+  </data>
+
+</openerp>
