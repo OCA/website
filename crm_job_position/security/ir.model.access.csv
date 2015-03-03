@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_crm_job_position_public","crm_job_position group_public","model_crm_job_position","base.group_public",1,0,0,0
+"access_crm_job_position_portal","crm_job_position group_portal","model_crm_job_position","base.group_portal",1,0,0,0
+"access_crm_job_position_group_partner_manager","crm_job_position group_partner_manager","model_crm_job_position","base.group_partner_manager",1,1,1,1
+"access_crm_job_position_group_user","crm_job_position group_user","model_crm_job_position","base.group_user",1,0,0,0
