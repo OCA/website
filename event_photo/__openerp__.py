@@ -25,28 +25,25 @@
 
 {
     # Addon information
-    'name': "Mass mailing from events",
+    'name': "Event Photo",
     'description': """
-Mass mailing from events
-========================
-
-Add buttons to send mass mailings and add to mailing lists.
+Event photo
+===========
+Add an image and a short description to events.
     """,
-    'category': 'CRM',
+    'category': 'Tools',
     'version': '1.0',
 
     # Dependencies
     'depends': [
         'event',
-        'crm_mass_mailing',
-        'email_template'
+        'website_event'
     ],
     'external_dependencies': {},
 
     # Views templates, pages, menus, options and snippets
     'data': [
-        'views/event_registration.xml',
-        'wizard/event_registration_mail_list_wizard.xml',
+        'views/event_event.xml'
     ],
 
     # Qweb templates
@@ -54,8 +51,8 @@ Add buttons to send mass mailings and add to mailing lists.
     ],
 
     # Your information
-    'author': 'Antiun Ingeniería S.L.',
-    'maintainer': 'Antiun Ingeniería S.L.',
+    'author': 'Antiun Ingenieria S.L.',
+    'maintainer': 'Antiun Ingenieria S.L.',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
 

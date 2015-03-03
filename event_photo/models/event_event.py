@@ -23,46 +23,11 @@
 #
 ##############################################################################
 
-{
-    # Addon information
-    'name': "Mass mailing from events",
-    'description': """
-Mass mailing from events
-========================
+from openerp import models, fields
 
-Add buttons to send mass mailings and add to mailing lists.
-    """,
-    'category': 'CRM',
-    'version': '1.0',
 
-    # Dependencies
-    'depends': [
-        'event',
-        'crm_mass_mailing',
-        'email_template'
-    ],
-    'external_dependencies': {},
+class EventEvent(models.Model):
+    _inherit = "event.event"
 
-    # Views templates, pages, menus, options and snippets
-    'data': [
-        'views/event_registration.xml',
-        'wizard/event_registration_mail_list_wizard.xml',
-    ],
-
-    # Qweb templates
-    'qweb': [
-    ],
-
-    # Your information
-    'author': 'Antiun Ingeniería S.L.',
-    'maintainer': 'Antiun Ingeniería S.L.',
-    'website': 'http://www.antiun.com',
-    'license': 'AGPL-3',
-
-    # Technical options
-    'demo': [],
-    'test': [],
-    'installable': True,
-    # 'auto_install':False,
-    # 'active':True,
-}
+    short_description = fields.Html(string="Short description", translate=True)
+    image = fields.Binary(string="Image")
