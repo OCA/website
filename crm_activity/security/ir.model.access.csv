@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_crm_activity_public","crm_activity group_public","model_crm_activity","base.group_public",1,0,0,0
+"access_crm_activity_portal","crm_activity group_portal","model_crm_activity","base.group_portal",1,0,0,0
+"access_crm_activity_group_partner_manager","crm_activity group_partner_manager","model_crm_activity","base.group_partner_manager",1,1,1,1
+"access_crm_activity_group_user","crm_activity group_user","model_crm_activity","base.group_user",1,0,0,0
