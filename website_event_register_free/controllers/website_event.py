@@ -35,44 +35,28 @@ class WebsiteEvent(website_event):
                 return False
         return True
 
-    def _prepare_registration(self, event, post, partner_id=False,
-                              user_id=False):
-        registration = {
-            'origin': 'Website',
-            'nb_register': int(post['tickets']),
-            'event_id': event.id,
-            'date_open': fields.Datetime.now(),
-            'user_id': user_id,
-            'partner_id': partner_id,
-        }
-        if not user_id:
-            registration['user_id'] = http.request.env.user.id
-        if not partner_id:
-            registration['email'] = post['email']
-            registration['phone'] = post['phone']
-            registration['name'] = post['name']
-        return registration
-
     @http.route(['/event/<model("event.event"):event>/register/register_free'],
                 type='http', auth="public", website=True)
     def event_register_free(self, event, **post):
         def validate(name, force_check=False):
             return self._validate(name, post, force_check=force_check)
 
+        reg_obj = http.request.env['event.registration']
         registration_vals = {}
         if (http.request.env.ref('base.public_user') !=
                 http.request.env.user and
                 validate('tickets', force_check=True)):
             # if logged in, use that info
-            registration_vals = self._prepare_registration(
-                event, post, partner_id=http.request.env.user.partner_id.id)
+            registration_vals = reg_obj._prepare_registration(
+                event, post, http.request.env.user.id,
+                partner_id=http.request.env.user.partner_id.id)
         if all(map(lambda f: validate(f, force_check=True),
                    ['name', 'email', 'tickets'])):
             # otherwise, create a simple registration
-            registration_vals = self._prepare_registration(event, post)
+            registration_vals = reg_obj._prepare_registration(
+                event, post, http.request.env.user.id)
         if registration_vals:
-            registration = http.request.env['event.registration']\
-                .sudo().create(registration_vals)
+            registration = reg_obj.sudo().create(registration_vals)
             if registration.partner_id:
                 registration._onchange_partner()
             registration.registration_open()
