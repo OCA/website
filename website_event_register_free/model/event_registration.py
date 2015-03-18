@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2015 Therp BV <http://therp.nl>.
+#    Copyright (c) 2015 Serv. Tecnol. Avanzados (http://www.serviciosbaeza.com)
+#                       Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,5 +18,21 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import ir_ui_view
-from . import event_registration
+from openerp import models, fields
+
+
+class EventRegistration(models.Model):
+    _inherit = 'event.registration'
+
+    def _prepare_registration(self, event, post, user_id, partner_id=False):
+        return {
+            'origin': 'Website',
+            'nb_register': int(post['tickets']),
+            'event_id': event.id,
+            'date_open': fields.Datetime.now(),
+            'email': post['email'],
+            'phone': post['phone'],
+            'name': post['name'],
+            'user_id': user_id,
+            'partner_id': partner_id,
+        }
