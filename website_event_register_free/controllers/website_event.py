@@ -18,7 +18,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp import http, fields
+from openerp import http
 from openerp.addons.website_event.controllers.main import website_event
 
 

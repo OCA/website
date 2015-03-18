@@ -36,4 +36,3 @@ class EventRegistration(models.Model):
             'user_id': user_id,
             'partner_id': partner_id,
         }
-
