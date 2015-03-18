@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="view_event_event_form" model="ir.ui.view">
+            <field name="name">view_event_event_form</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="image" widget='image' class='oe_avatar oe_left'/>
+                </field>
+            </field>
+        </record>
+
+        <template id="event_image" inherit_id="website_event.event_description_full" name="Imagen del evento">
+            <xpath expr="//div[@t-field='event.description']" position="before">
+                <div itemprop="image" t-field="event.image"
+                    t-field-options="{&quot;widget&quot;: &quot;image&quot;}"></div>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>
