@@ -4,6 +4,10 @@ from openerp import SUPERUSER_ID
 from openerp import http
 from openerp.http import request
 
+from ..utils import validate_email
+from ..utils import HAS_PyDNS
+from ..utils import validate_phonenumber
+
 
 class ShopUserAccountController(http.Controller):
     """ This is mainly a refactoring of `website_sale` checkout controller.
@@ -11,20 +15,20 @@ class ShopUserAccountController(http.Controller):
     my_account_template = "website_sale_customer.my_account"
     mandatory_billing_fields = [
         "name", "phone", "email",
-        "street2", "city", "country_id"
+        "street2", "city", "country_id", "zip",
     ]
     optional_billing_fields = [
         "street", "state_id", "vat",
-        "vat_subjected", "zip"
+        "vat_subjected",
     ]
     mandatory_shipping_fields = [
         "name", "phone", "street",
-        "city", "country_id"
+        "city", "country_id", "zip",
     ]
-    optional_shipping_fields = ["state_id", "zip"]
+    optional_shipping_fields = ["state_id", ]
     mandatory_fields = {}.fromkeys(
         mandatory_billing_fields +
-        ['billing_%s' % x for x in mandatory_shipping_fields],
+        ['shipping_%s' % x for x in mandatory_shipping_fields],
         True
     )
     # use this to inject your form fields helpers
@@ -175,35 +179,59 @@ class ShopUserAccountController(http.Controller):
         )
 
     def validate_user_form(self, data):
-        cr, uid, registry = \
-            request.cr, request.uid, request.registry
-
-        partner_model = registry["res.partner"]
         # Validation
         error = {}
         for field_name in self.mandatory_billing_fields:
             if not data.get(field_name):
                 error[field_name] = 'missing'
+        for k, v in data.iteritems():
+            validator_key = k
+            # handle prefix
+            if k != 'shipping_id' and validator_key.startswith('shipping_'):
+                validator_key = k[len('shipping_'):]
+            validator_name = '_validate_%s' % validator_key
+            if hasattr(self, validator_name):
+                validator = getattr(self, validator_name)
+                validator(k, v, data, error=error)
+        error_messages = self.get_error_messages(error)
+        return error, error_messages
 
-        if data.get("vat") and hasattr(partner_model, "check_vat"):
+    def _validate_vat(self, key, value, data, error={}):
+        cr, uid, registry = \
+            request.cr, request.uid, request.registry
+
+        partner_model = registry["res.partner"]
+
+        if value and hasattr(partner_model, "check_vat"):
             if request.website.company_id.vat_check_vies:
                 # force full VIES online check
                 check_func = partner_model.vies_vat_check
             else:
                 # quick and partial off-line checksum validation
                 check_func = partner_model.simple_vat_check
-            vat_country, vat_number = partner_model._split_vat(data.get("vat"))
+            vat_country, vat_number = partner_model._split_vat(value)
             # simple_vat_check
             if not check_func(cr, uid, vat_country, vat_number, context=None):
-                error["vat"] = 'error'
+                error[key] = 'error'
+        return error
 
-        if data.get("shipping_id") == -1:
+    def _validate_shipping_id(self, key, value, data, error={}):
+        if value == -1:
             for field_name in self.mandatory_shipping_fields:
                 field_name = 'shipping_' + field_name
                 if not data.get(field_name):
                     error[field_name] = 'missing'
-        error_messages = self.get_error_messages(error)
-        return error, error_messages
+        return error
+
+    def _validate_email(self, key, value, data, error={}):
+        if not validate_email(value, verify=HAS_PyDNS):
+            error[key] = 'wrong'
+        return error
+
+    def _validate_phone(self, key, value, data, error={}):
+        if not validate_phonenumber(value):
+            error[key] = 'wrong'
+        return error
 
     def get_error_messages(self, errors):
         """ override this to inject your error messages

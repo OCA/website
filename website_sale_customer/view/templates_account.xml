@@ -32,6 +32,25 @@
 </template>
 
 
+<template id="account_base_text_field" name="My Account base field">
+  <div t-attf-class="form-group #{mandatory_fields.get(f_name) and 'required' or ''} #{error.get(f_name) and 'has-error' or ''} #{extra_css_class or 'col-lg-6'}">
+      <label class="control-label"
+             t-att-for="f_name"
+             t-esc="f_label">Field Name</label>
+      <input type="text"
+             class="form-control"
+             t-att-name="f_name"
+             t-att-readonly="f_readonly or ''"
+             t-att-value="user_info.get(f_name)"
+             />
+      <t t-if="form_fields_helpers.get(f_name)">
+        <p class="help-block"
+           t-raw="form_fields_helpers.get(f_name)">Help text here.</p>
+      </t>
+  </div>
+</template>
+
+
 <template id="my_account">
   <t t-call="website.layout">
     <t t-set="additional_title">Shop - My account</t>
@@ -53,51 +72,47 @@
             <div class="col-md-8 oe_customer_account">
                 <h3 class="page-header mt16">Billing Information</h3>
                 <div class="row">
-                    <div t-attf-class="form-group #{mandatory_fields.get('name') and 'required' or ''} #{error.get('name') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="contact_name">Your Name</label>
-                        <input type="text" name="name"
-                          class="form-control" t-att-value="user_info.get('name')"/>
-                        <t t-if="form_fields_helpers.get('name')">
-                          <p class="help-block"
-                             t-raw="form_fields_helpers.get('name')">Help text here.</p>
-                        </t>
-                    </div>
-                    <div t-if="has_check_vat" class="clearfix"/>
-                    <div t-attf-class="form-group #{mandatory_fields.get('street') and 'required' or ''} #{error.get('street') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="street">Company Name</label>
-                        <input type="text" name="street" class="form-control" t-att-value="user_info.get('street')"/>
-                    </div>
-                    <div t-if="has_check_vat" t-attf-class="form-group #{mandatory_fields.get('vat') and 'required' or ''} #{error.get('vat') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="vat">VAT Number</label>
-                        <input type="text" name="vat" class="form-control" t-att-value="user_info.get('vat')"/>
-                        <t t-if="form_fields_helpers.get('vat')">
-                          <p class="help-block"
-                             t-raw="form_fields_helpers.get('vat')">Help text here.</p>
-                        </t>
-                    </div>
-                    <div t-attf-class="form-group #{mandatory_fields.get('email') and 'required' or ''} #{error.get('email') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="contact_name">Email</label>
-                        <input type="email" name="email" class="form-control" t-att-value="user_info.get('email')"/>
-                    </div>
-                    <div t-attf-class="form-group #{mandatory_fields.get('phone') and 'required' or ''} #{error.get('phone') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="phone">Phone</label>
-                        <input type="tel" name="phone" class="form-control" t-att-value="user_info.get('phone')"/>
-                    </div>
 
-                    <div t-attf-class="form-group #{mandatory_fields.get('street2') and 'required' or ''} #{error.get('street2') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="street2">Street</label>
-                        <input type="text" name="street2" class="form-control" t-att-value="user_info.get('street2')"/>
-                    </div>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'name'" />
+                      <t t-set="f_label" t-value="'Name'" />
+                    </t>
+
+                    <div t-if="has_check_vat" class="clearfix"/>
+
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'street'" />
+                      <t t-set="f_label" t-value="'Company Name'" />
+                    </t>
+
+                    <t t-if="has_check_vat">
+                      <t t-call="website_sale_customer.account_base_text_field">
+                        <t t-set="f_name" t-value="'vat'" />
+                        <t t-set="f_label" t-value="'VAT Number'" />
+                      </t>
+                    </t>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'email'" />
+                      <t t-set="f_label" t-value="'Email'" />
+                    </t>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'phone'" />
+                      <t t-set="f_label" t-value="'Phone'" />
+                    </t>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'street2'" />
+                      <t t-set="f_label" t-value="'Street'" />
+                    </t>
                     <div class="clearfix"/>
 
-                    <div t-attf-class="form-group #{mandatory_fields.get('city') and 'required' or ''} #{error.get('city') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="city">City</label>
-                        <input type="text" name="city" class="form-control" t-att-value="user_info.get('city')"/>
-                    </div>
-                    <div t-attf-class="form-group #{mandatory_fields.get('zip') and 'required' or ''} #{error.get('zip') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="zip">Zip / Postal Code</label>
-                        <input type="text" name="zip" class="form-control" t-att-value="user_info.get('zip')"/>
-                    </div>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'city'" />
+                      <t t-set="f_label" t-value="'City'" />
+                    </t>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'zip'" />
+                      <t t-set="f_label" t-value="'Zip / Postal code'" />
+                    </t>
                     <div t-attf-class="form-group #{mandatory_fields.get('country_id') and 'required' or ''} #{error.get('country_id') and 'has-error' or ''} col-lg-6">
                         <label class="control-label" for="country_id">Country</label>
                         <select name="country_id" class="form-control">
@@ -141,27 +156,31 @@
                 <div class="js_shipping row mb16" t-att-style="not shipping_id and 'display:none' or ''">
                     <h3 class="oe_shipping col-lg-12 mt16">Shipping Information</h3>
 
-                    <div t-attf-class="form-group #{mandatory_fields.get('shipping_name') and 'required' or ''} #{error.get('shipping_name') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="shipping_name">Name (Shipping)</label>
-                        <input type="text" name="shipping_name" class="form-control" t-att-value="user_info.get('shipping_name', '')" t-att-readonly="'readonly' if shipping_id &gt;= 0 else ''"/>
-                    </div>
-                    <div t-attf-class="form-group #{mandatory_fields.get('shipping_phone') and 'required' or ''} #{error.get('shipping_phone') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="shipping_phone">Phone</label>
-                        <input type="tel" name="shipping_phone" class="form-control" t-att-value="user_info.get('shipping_phone', '')" t-att-readonly="  'readonly' if shipping_id &gt;= 0 else ''"/>
-                    </div>
-                    <div t-attf-class="form-group #{mandatory_fields.get('shipping_street') and 'required' or ''} #{error.get('shipping_street') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="shipping_street">Street</label>
-                        <input type="text" name="shipping_street" class="form-control" t-att-value="user_info.get('shipping_street', '')" t-att-readonly=" 'readonly' if shipping_id &gt;= 0 else ''"/>
-                    </div>
-                    <div class="clearfix"/>
-                    <div t-attf-class="form-group #{mandatory_fields.get('shipping_city') and 'required' or ''} #{error.get('shipping_city') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="shipping_city">City</label>
-                        <input type="text" name="shipping_city" class="form-control" t-att-value="user_info.get('shipping_city', '')" t-att-readonly=" 'readonly' if shipping_id &gt;= 0 else ''"/>
-                    </div>
-                    <div t-attf-class="form-group #{mandatory_fields.get('shipping_zip') and 'required' or ''} #{error.get('shipping_zip') and 'has-error' or ''} col-lg-6">
-                        <label class="control-label" for="shipping_zip">Zip / Postal Code</label>
-                        <input type="text" name="shipping_zip" class="form-control" t-att-value="user_info.get('shipping_zip', '')" t-att-readonly=" 'readonly' if shipping_id &gt;= 0 else ''"/>
-                    </div>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'shipping_name'" />
+                      <t t-set="f_label" t-value="'Name (Shipping)'" />
+                      <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
+                    </t>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'shipping_phone'" />
+                      <t t-set="f_label" t-value="'Phone'" />
+                      <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
+                    </t>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'shipping_street'" />
+                      <t t-set="f_label" t-value="'Street'" />
+                      <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
+                    </t>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'shipping_city'" />
+                      <t t-set="f_label" t-value="'City'" />
+                      <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
+                    </t>
+                    <t t-call="website_sale_customer.account_base_text_field">
+                      <t t-set="f_name" t-value="'shipping_zip'" />
+                      <t t-set="f_label" t-value="'Zip / Postal Code'" />
+                      <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
+                    </t>
                     <div t-attf-class="form-group #{mandatory_fields.get('shipping_country_id') and 'required' or ''} #{error.get('shipping_country_id') and 'has-error' or ''} col-lg-6">
                         <label class="control-label" for="shipping_country_id">Country</label>
                         <select name="shipping_country_id" class="form-control" t-att-disabled="  'disabled' if shipping_id &gt;= 0 else ''">
