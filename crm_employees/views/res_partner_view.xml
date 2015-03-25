@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_partner_form_employees">
+            <field name="name">Partner form with employees</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="phone" position="before">
+                    <field name="employees_range"
+                           attrs="{'invisible': [('is_company', '=', False)]}"/>
+                    <field name="employees_number"
+                           attrs="{'invisible': [('is_company', '=', False)]}"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
