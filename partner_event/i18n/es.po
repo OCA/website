@@ -24,5 +24,20 @@ msgstr "Eventos"
 #: model:ir.actions.act_window,name:partner_event.act_partner_registration
 #: field:res.partner,registrations:0
 msgid "Registrations"
-msgstr "Registros"
+msgstr "Eventos"
 
+#. module: partner_event
+#: field:res.partner,attended_registrations:0
+msgid "Attended registrations"
+msgstr "Eventos asistidos"
+
+
+#. module: partner_event
+#: field:res.partner,registration_count:0
+msgid "Registration number"
+msgstr "Nº eventos"
+
+#. module: partner_event
+#: field:res.partner,attended_registration_count:0
+msgid "Attended registration number"
+msgstr "Nº eventos asistidos"
