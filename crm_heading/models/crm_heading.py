@@ -12,7 +12,7 @@ class CrmHeading(models.Model):
     _parent_store = True
     _description = "Heading"
 
-    name = fields.Char(required=True)
+    name = fields.Char(required=True, translate=True)
     parent_id = fields.Many2one(comodel_name='crm.heading')
     children = fields.One2many(comodel_name='crm.heading',
                                inverse_name='parent_id')

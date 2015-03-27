@@ -12,7 +12,7 @@ class CrmDepartment(models.Model):
     _parent_store = True
     _description = "Department"
 
-    name = fields.Char(required=True)
+    name = fields.Char(required=True, translate=True)
     parent_id = fields.Many2one(comodel_name='crm.department')
     children = fields.One2many(comodel_name='crm.department',
                                inverse_name='parent_id')
