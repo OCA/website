@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="action_event_registration_attend" model="ir.actions.server">
+            <field name="name">Mark as attended</field>
+            <field name="model_id" ref="event.model_event_registration"/>
+            <field name="state">code</field>
+            <field name="code">self.pool['event.registration'].button_reg_close(cr, uid, context.get('active_ids'), context=context)</field>
+        </record>
+
+        <record id="ir_value_event_registration_attend" model="ir.values">
+            <field eval="'client_action_multi'" name="key2"/>
+            <field eval="'event.registration'" name="model"/>
+            <field name="name">Mark as attended</field>
+            <field eval="'ir.actions.server,%d'%action_event_registration_attend" name="value"/>
+        </record>
+
+    </data>
+</openerp>
