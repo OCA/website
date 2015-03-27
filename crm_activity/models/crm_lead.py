@@ -5,11 +5,6 @@
 
 from openerp import models, fields
 
-import logging
-from pprint import pprint, pformat
-import traceback
-_logger = logging.getLogger(__name__)
-
 
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
@@ -28,7 +23,6 @@ class CrmLead(models.Model):
         data = {
             'activity': lead.activity.id,
             'activity_others': [(4, x.id) for x in lead.activity_others]}
-        _logger.info('data = ' + pformat(data))
         self.pool['res.partner'].write(cr, uid, partner_id, data,
                                        context=context)
         return partner_id

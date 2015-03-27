@@ -1,12 +1,9 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    This module copyright :
-#        (c) 2014 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
-#                 Endika Iglesias <endikaig@antiun.com>
-#                 Antonio Espinosa <antonioea@antiun.com>
-#                 Javier Iniesta <javieria@antiun.com>
+#    Copyright (c) 2015 Serv. Tecnol. Avanzados (http://www.serviciosbaeza.com)
+#                       Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+#    Copyright (c) 2015 Antiun Ingeniería S.L.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,5 +19,3 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-from . import res_partner

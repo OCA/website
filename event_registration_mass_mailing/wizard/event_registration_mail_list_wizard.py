@@ -42,7 +42,6 @@ class EventRegistrationMailListWizard(models.TransientModel):
         registration_obj = self.env['event.registration']
         for registration_id in self.env.context.get('active_ids', []):
             registration = registration_obj.browse(registration_id)
-            partner = registration.partner_id
             criteria = [('email', '=', registration.email),
                         ('list_id', '=', self.mail_list.id)]
             contact_test = contact_obj.search(criteria)
