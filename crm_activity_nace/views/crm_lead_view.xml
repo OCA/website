@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record model="ir.ui.view" id="crm_case_form_view_leads_nace">
+    <field name="name">CRM - Leads Form with NACE activity</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+    <field name="arch" type="xml">
+        <field name="partner_name" position="after">
+            <field name="main_nace"/>
+            <field name="secondary_naces" widget="many2many_tags"/>
+        </field>
+    </field>
+</record>
+
+<record model="ir.ui.view" id="view_crm_case_leads_filter_nace">
+    <field name="name">CRM - Leads Search with NACE activities</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
+    <field name="arch" type="xml">
+        <field name="section_id" position="after">
+            <field name="main_nace"/>
+        </field>
+        <filter string="Sales Team" position="after">
+            <filter string="Activity"
+                    domain="[]"
+                    context="{'group_by': 'main_nace'}"/>
+        </filter>
+    </field>
+</record>
+
+<record model="ir.ui.view" id="crm_case_form_view_oppor_nace">
+    <field name="name">CRM - Leads Form with NACE activity</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+    <field name="arch" type="xml">
+        <field name="partner_id" position="after">
+            <field name="main_nace"/>
+            <field name="secondary_naces" widget="many2many_tags"/>
+        </field>
+    </field>
+</record>
+
+<record model="ir.ui.view" id="view_crm_case_opportunities_filter_nace">
+    <field name="name">CRM - Leads Search with NACE activities</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+    <field name="arch" type="xml">
+        <field name="section_id" position="after">
+            <field name="main_nace"/>
+        </field>
+        <filter string="Sales Team" position="after">
+            <filter string="Activity"
+                    domain="[]"
+                    context="{'group_by': 'main_nace'}"/>
+        </filter>
+    </field>
+</record>
+
+</data>
+</openerp>
