@@ -15,7 +15,6 @@
             <field name="arch" type="xml">
                 <tree string="Headings" editable="bottom">
                     <field name="name"/>
-                    <field name="parent_id"/>
                 </tree>
             </field>
         </record>
