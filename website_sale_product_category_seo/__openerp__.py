@@ -30,12 +30,8 @@
         'website_sale',
     ],
     'installable': True,
-    'css': [
-        ],
     'data': [
         'views/templates.xml',
-    ],
-    'js': [
     ],
     # only loaded in demonstration mode
     'demo': [
