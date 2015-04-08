@@ -1,0 +1,77 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* partner_event_registration_action
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-04 10:07+0000\n"
+"PO-Revision-Date: 2015-04-04 10:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_event_registration_action
+#: view:res.partner.register.event:partner_event_registration_action.res_partner_register_event_view
+msgid "Cancel"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: view:res.partner.register.event:partner_event_registration_action.res_partner_register_event_view
+msgid "Create registrations"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: field:res.partner.register.event,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: field:res.partner.register.event,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: field:res.partner.register.event,event:0
+msgid "Event"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: field:res.partner.register.event,id:0
+msgid "ID"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: field:res.partner.register.event,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: field:res.partner.register.event,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: model:ir.actions.act_window,name:partner_event_registration_action.action_partner_register_event
+msgid "Register in an event"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: view:res.partner.register.event:partner_event_registration_action.res_partner_register_event_view
+msgid "Select event to register"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: field:res.partner.register.event,ticket:0
+msgid "Ticket"
+msgstr ""
+
+#. module: partner_event_registration_action
+#: view:res.partner.register.event:partner_event_registration_action.res_partner_register_event_view
+msgid "or"
+msgstr ""
+
