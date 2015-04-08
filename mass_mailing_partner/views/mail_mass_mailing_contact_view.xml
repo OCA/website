@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_mail_mass_mailing_contact_tree_partner">
+            <field name="name">mail.mass_mailing.contact.tree.partner</field>
+            <field name="model">mail.mass_mailing.contact</field>
+            <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_contact_tree"/>
+            <field name="arch" type="xml">
+                <field name="email" position="after">
+                    <field name="partner_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_mail_mass_mailing_contact_search_partner">
+            <field name="name">mail.mass_mailing.contact.search.partner</field>
+            <field name="model">mail.mass_mailing.contact</field>
+            <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_contact_search"/>
+            <field name="arch" type="xml">
+                <filter name="group_create_date" position="after">
+                    <filter string="Partner"
+                            name="group_partner"
+                            context="{'group_by': 'partner_id'}"/>
+                </filter>
+            </field>
+        </record>
+
+    </data>
+</openerp>
