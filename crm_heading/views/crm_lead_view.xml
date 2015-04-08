@@ -1,28 +1,28 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+<data>
 
-        <record model="ir.ui.view" id="crm_case_form_view_leads_heading">
-            <field name="name">CRM - Leads Form with heading</field>
-            <field name="model">crm.lead</field>
-            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
-            <field name="arch" type="xml">
-                <field name="title" position="before">
-                    <field name="heading"/>
-                </field>
-            </field>
-        </record>
+<record model="ir.ui.view" id="crm_case_form_view_leads_heading">
+    <field name="name">CRM - Leads Form with heading</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+    <field name="arch" type="xml">
+        <field name="title" position="before">
+            <field name="heading"/>
+        </field>
+    </field>
+</record>
 
-        <record model="ir.ui.view" id="crm_case_form_view_oppor_heading">
-            <field name="name">CRM - Leads Form with heading</field>
-            <field name="model">crm.lead</field>
-            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
-            <field name="arch" type="xml">
-                <field name="title" position="before">
-                    <field name="heading"/>
-                </field>
-            </field>
-        </record>
+<record model="ir.ui.view" id="crm_case_form_view_oppor_heading">
+    <field name="name">CRM - Leads Form with heading</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+    <field name="arch" type="xml">
+        <field name="title" position="before">
+            <field name="heading"/>
+        </field>
+    </field>
+</record>
 
-    </data>
+</data>
 </openerp>

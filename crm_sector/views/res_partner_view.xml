@@ -1,45 +1,45 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+<data>
 
-        <record model="ir.ui.view" id="view_partner_form_sector">
-            <field name="name">Partner form with sector</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_form"/>
-            <field name="arch" type="xml">
-                <field name="category_id" position="after">
-                    <field name="sector"
-                           placeholder="Sector"/>
-                </field>
-            </field>
-        </record>
+<record model="ir.ui.view" id="view_partner_form_sector">
+    <field name="name">Partner form with sector</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <field name="category_id" position="after">
+            <field name="sector"
+                   placeholder="Sector"/>
+        </field>
+    </field>
+</record>
 
-        <record model="ir.ui.view" id="view_partner_tree_sector">
-            <field name="name">Partner tree with sector</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_tree"/>
-            <field name="arch" type="xml">
-                <field name="email" position="after">
-                    <field name="sector"/>
-                </field>
-            </field>
-        </record>
+<record model="ir.ui.view" id="view_partner_tree_sector">
+    <field name="name">Partner tree with sector</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_tree"/>
+    <field name="arch" type="xml">
+        <field name="email" position="after">
+            <field name="sector"/>
+        </field>
+    </field>
+</record>
 
-        <record model="ir.ui.view" id="view_res_partner_filter_sector">
-            <field name="name">Partner search with sector</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_res_partner_filter"/>
-            <field name="arch" type="xml">
-                <field name="category_id" position="after">
-                    <field name="sector"/>
-                </field>
-                <filter string="Salesperson" position="after">
-                    <filter string="Sector"
-                            domain="[]"
-                            context="{'group_by': 'sector'}"/>
-                </filter>
-            </field>
-        </record>
+<record model="ir.ui.view" id="view_res_partner_filter_sector">
+    <field name="name">Partner search with sector</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_res_partner_filter"/>
+    <field name="arch" type="xml">
+        <field name="category_id" position="after">
+            <field name="sector"/>
+        </field>
+        <filter string="Salesperson" position="after">
+            <filter string="Sector"
+                    domain="[('is_company','=', True)]"
+                    context="{'group_by': 'sector'}"/>
+        </filter>
+    </field>
+</record>
 
-    </data>
+</data>
 </openerp>

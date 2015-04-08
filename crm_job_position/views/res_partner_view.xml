@@ -1,48 +1,48 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+<data>
 
-        <record model="ir.ui.view" id="view_partner_form_job_position">
-            <field name="name">Partner form with job position</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_form"/>
-            <field name="arch" type="xml">
-                <field name="function" position="before">
-                    <field name="job_position"
-                           placeholder="Job position"
-                           attrs="{'invisible': [('is_company','=', True)]}"/>
-                </field>
-            </field>
-        </record>
+<record model="ir.ui.view" id="view_partner_form_job_position">
+    <field name="name">Partner form with job position</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <field name="function" position="before">
+            <field name="job_position"
+                   placeholder="Job position"
+                   attrs="{'invisible': [('is_company','=', True)]}"/>
+        </field>
+    </field>
+</record>
 
-        <!-- Uncomment this to add a new column to tree view
-        <record model="ir.ui.view" id="view_partner_tree_job_position">
-            <field name="name">Partner tree with job position</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_partner_tree"/>
-            <field name="arch" type="xml">
-                <field name="email" position="after">
-                    <field name="job_position"/>
-                </field>
-            </field>
-        </record>
-        -->
+<!-- Uncomment this to add a new column to tree view
+<record model="ir.ui.view" id="view_partner_tree_job_position">
+    <field name="name">Partner tree with job position</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_tree"/>
+    <field name="arch" type="xml">
+        <field name="email" position="after">
+            <field name="job_position"/>
+        </field>
+    </field>
+</record>
+-->
 
-        <record model="ir.ui.view" id="view_res_partner_filter_job_position">
-            <field name="name">Partner search with job position</field>
-            <field name="model">res.partner</field>
-            <field name="inherit_id" ref="base.view_res_partner_filter"/>
-            <field name="arch" type="xml">
-                <field name="category_id" position="after">
-                    <field name="job_position"/>
-                </field>
-                <filter string="Salesperson" position="after">
-                    <filter string="Job position"
-                            domain="[]"
-                            context="{'group_by': 'job_position'}"/>
-                </filter>
-            </field>
-        </record>
+<record model="ir.ui.view" id="view_res_partner_filter_job_position">
+    <field name="name">Partner search with job position</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_res_partner_filter"/>
+    <field name="arch" type="xml">
+        <field name="category_id" position="after">
+            <field name="job_position"/>
+        </field>
+        <filter string="Salesperson" position="after">
+            <filter string="Job position"
+                    domain="[('is_company','=', True)]"
+                    context="{'group_by': 'job_position'}"/>
+        </filter>
+    </field>
+</record>
 
-    </data>
+</data>
 </openerp>
