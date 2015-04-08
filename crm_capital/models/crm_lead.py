@@ -12,6 +12,8 @@ class CrmLead(models.Model):
         'res.country', string="Capital country",
         help="Country of origin of the capital of this company")
     capital_registered = fields.Integer(string="Capital registered")
+    turnover_range = fields.Many2one(comodel_name='crm.turnover_range')
+    turnover_number = fields.Integer()
 
     def _lead_create_contact(self, cr, uid, lead, name, is_company,
                              parent_id=False, context=None):
@@ -23,6 +25,8 @@ class CrmLead(models.Model):
         self.pool['res.partner'].write(
             cr, uid, partner_id, {
                 'capital_country': lead.capital_country.id,
-                'capital_registered': lead.capital_registered
+                'capital_registered': lead.capital_registered,
+                'turnover_range': lead.turnover_range.id,
+                'turnover_number': lead.turnover_number,
             }, context=context)
         return partner_id

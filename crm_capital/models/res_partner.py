@@ -12,3 +12,5 @@ class ResPartner(models.Model):
         'res.country', string="Capital country",
         help="Country of origin of the capital of this company")
     capital_registered = fields.Integer(string="Capital registered")
+    turnover_range = fields.Many2one(comodel_name='crm.turnover_range')
+    turnover_number = fields.Integer()
