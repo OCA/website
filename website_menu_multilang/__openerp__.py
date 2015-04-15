@@ -25,7 +25,7 @@
 {
     'name': 'Website Menu Multilanguage',
     'version': '0.1',
-    'author': 'Versada UAB',
+    'author': 'Versada UAB,Odoo Community Association (OCA)',
     'category': 'Website',
     'website': 'http://www.versada.lt',
     'description': """
