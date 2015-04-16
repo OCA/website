@@ -21,7 +21,10 @@
 {
     "name": "Register for free events",
     "version": "1.0",
-    "author": "Therp BV",
+    "author": "Therp BV,"
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza,"
+              "Antiun Ingeniería S.L.,"
+              "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
     "summary": "Avoid shopping chart when registering for free events",
