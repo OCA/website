@@ -8,8 +8,8 @@
     <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
         <field name="category_id" position="after">
-            <field name="sector"
-                   placeholder="Sector"/>
+            <field name="sector" placeholder="Sector"
+                   options='{"no_open": True}'/>
         </field>
     </field>
 </record>

@@ -8,10 +8,12 @@
     <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
         <field name="title" position="before">
-            <field name="heading"/>
+            <field name="heading" placeholder="Heading"
+                   options='{"no_open": True}'/>
         </field>
         <xpath expr="//field[@name='child_ids']/form//field[@name='function']" position="before">
-            <field name="heading"/>
+            <field name="heading" placeholder="Heading"
+                   options='{"no_open": True}'/>
         </xpath>
     </field>
 </record>

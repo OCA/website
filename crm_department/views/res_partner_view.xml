@@ -9,8 +9,16 @@
     <field name="arch" type="xml">
         <field name="phone" position="before">
             <field name="department"
-                   placeholder="Department"/>
+                   placeholder="Department"
+                   attrs="{'invisible': [('is_company','=', True)]}"
+                   options='{"no_open": True}'/>
         </field>
+        <xpath expr="//field[@name='child_ids']/form//field[@name='phone']" position="before">
+            <field name="department"
+                   placeholder="Department"
+                   attrs="{'invisible': [('is_company','=', True)]}"
+                   options='{"no_open": True}'/>
+        </xpath>
     </field>
 </record>
 

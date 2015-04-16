@@ -8,8 +8,9 @@
     <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
         <field name="phone" position="before">
-            <field name="employees_range"
-                   attrs="{'invisible': [('is_company', '=', False)]}"/>
+            <field name="employees_range" placeholder="Employees range"
+                   attrs="{'invisible': [('is_company', '=', False)]}"
+                   options='{"no_open": True}'/>
             <field name="employees_number"
                    attrs="{'invisible': [('is_company', '=', False)]}"/>
         </field>

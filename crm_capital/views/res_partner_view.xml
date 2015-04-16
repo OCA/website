@@ -8,12 +8,14 @@
     <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
         <field name="phone" position="before">
-            <field name="capital_country"
-                   attrs="{'invisible': [('is_company', '=', False)]}"/>
+            <field name="capital_country" placeholder="Capital country"
+                   attrs="{'invisible': [('is_company', '=', False)]}"
+                   options='{"no_open": True}'/>
             <field name="capital_registered"
                    attrs="{'invisible': [('is_company', '=', False)]}"/>
-            <field name="turnover_range"
-                   attrs="{'invisible': [('is_company', '=', False)]}"/>
+            <field name="turnover_range" placeholder="Turnover range"
+                   attrs="{'invisible': [('is_company', '=', False)]}"
+                   options='{"no_open": True}'/>
             <field name="turnover_number"
                    attrs="{'invisible': [('is_company', '=', False)]}"/>
         </field>

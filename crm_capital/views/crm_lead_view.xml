@@ -8,9 +8,11 @@
     <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
     <field name="arch" type="xml">
         <field name="partner_id" position="before">
-            <field name="capital_country"/>
+            <field name="capital_country" placeholder="Capital country"
+                   options='{"no_open": True}'/>
             <field name="capital_registered"/>
-            <field name="turnover_range"/>
+            <field name="turnover_range" placeholder="Turnover range"
+                   options='{"no_open": True}'/>
             <field name="turnover_number"/>
         </field>
     </field>
@@ -38,9 +40,11 @@
     <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
     <field name="arch" type="xml">
         <field name="partner_id" position="before">
-            <field name="capital_country"/>
+            <field name="capital_country" placeholder="Capital country"
+                   options='{"no_open": True}'/>
             <field name="capital_registered"/>
-            <field name="turnover_range"/>
+            <field name="turnover_range" placeholder="Turnover range"
+                   options='{"no_open": True}'/>
             <field name="turnover_number"/>
         </field>
     </field>

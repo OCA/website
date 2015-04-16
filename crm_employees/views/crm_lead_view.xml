@@ -8,7 +8,8 @@
     <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
     <field name="arch" type="xml">
         <field name="partner_id" position="before">
-            <field name="employees_range"/>
+            <field name="employees_range" placeholder="Employees range"
+                   options='{"no_open": True}'/>
             <field name="employees_number"/>
         </field>
     </field>
@@ -20,7 +21,8 @@
     <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
     <field name="arch" type="xml">
         <field name="partner_id" position="before">
-            <field name="employees_range"/>
+            <field name="employees_range" placeholder="Employees range"
+                   options='{"no_open": True}'/>
             <field name="employees_number"/>
         </field>
     </field>

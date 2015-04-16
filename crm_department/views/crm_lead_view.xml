@@ -8,7 +8,9 @@
     <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
     <field name="arch" type="xml">
         <field name="phone" position="before">
-            <field name="department"/>
+            <field name="department"
+                   placeholder="Department"
+                   options='{"no_open": True}'/>
         </field>
     </field>
 </record>
@@ -48,7 +50,9 @@
     <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
     <field name="arch" type="xml">
         <field name="phone" position="before">
-            <field name="department"/>
+            <field name="department"
+                   placeholder="Department"
+                   options='{"no_open": True}'/>
         </field>
     </field>
 </record>

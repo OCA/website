@@ -9,9 +9,9 @@
     <field name="arch" type="xml">
         <field name="country_id" position="before">
             <field name="substate" placeholder="Substate"
-                   options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                   options='{"no_open": True, "no_create": True}'/>
             <field name="region" placeholder="Region"
-                   options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                   options='{"no_open": True, "no_create": True}'/>
         </field>
     </field>
 </record>
@@ -43,9 +43,9 @@
     <field name="arch" type="xml">
         <field name="country_id" position="before">
             <field name="substate" placeholder="Substate"
-                   options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                   options='{"no_open": True, "no_create": True}'/>
             <field name="region" placeholder="Region"
-                   options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                   options='{"no_open": True, "no_create": True}'/>
         </field>
     </field>
 </record>

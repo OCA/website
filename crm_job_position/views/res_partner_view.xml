@@ -10,8 +10,15 @@
         <field name="function" position="before">
             <field name="job_position"
                    placeholder="Job position"
-                   attrs="{'invisible': [('is_company','=', True)]}"/>
+                   attrs="{'invisible': [('is_company','=', True)]}"
+                   options='{"no_open": True}'/>
         </field>
+        <xpath expr="//field[@name='child_ids']/form//field[@name='function']" position="before">
+            <field name="job_position"
+                   placeholder="Job position"
+                   attrs="{'invisible': [('is_company','=', True)]}"
+                   options='{"no_open": True}'/>
+        </xpath>
     </field>
 </record>
 
