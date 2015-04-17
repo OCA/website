@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_event_legal_template_manager,access_event_legal_template_manager,model_event_legal_template,event.group_event_manager,1,1,1,1
+access_event_legal_template_user,access_event_legal_template_user,model_event_legal_template,event.group_event_user,1,0,0,0
+access_event_legal_template_public,access_event_legal_template_public,model_event_legal_template,base.group_public,1,0,0,0

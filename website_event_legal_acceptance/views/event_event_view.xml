@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="website_event_legal_acceptance_form" model="ir.ui.view">
+        <field name="name">Bases legales: form</field>
+        <field name="model">event.legal.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <label for="name"/> <field name="name"/>
+                    <hr/>
+                    <label for="description"/>
+                    <field name="description"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_website_event_legal_acceptance" model="ir.actions.act_window">
+        <field name="name">Bases legales</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">event.legal.template</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help">Create and manage legal acceptance texts.</field>
+    </record>
+
+
+    <menuitem name="Bases legales"
+              id="menu_legal_acceptance"
+              action="action_website_event_legal_acceptance"
+              parent="event.event_main_menu" />
+
+    <record id="view_event_event_form" model="ir.ui.view">
+        <field name="name">view_event_event_form</field>
+        <field name="model">event.event</field>
+        <field name="inherit_id" ref="event.view_event_form"/>
+        <field name="arch" type="xml">
+            <field name="type" position="after">
+                <field name="legal_acceptance"/>
+            </field>
+        </field>
+    </record>
+
+</data>
+</openerp>
