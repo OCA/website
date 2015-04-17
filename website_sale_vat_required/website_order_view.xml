@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <template id="saas_users" inherit_id="website_sale.checkout">
+        <label class="control-label" for="vat" position="attributes">
+            <attribute name="style"></attribute>
+        </label>
+    </template>
+</data>
+</openerp>
