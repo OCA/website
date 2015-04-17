@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="view_event_form_field" model="ir.ui.view">
+            <field name="name">view.event.event.form.field</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Form" col="4" name="form">
+                        <group>
+                            <div>
+                                
+                                    <h1><label for="available_fields"/></h1>
+                                    <field name="available_fields" nolabel="1" widget="one2many_list">
+                                        <tree string="Invoice Lines" editable="bottom">
+                                            <!--<field name="used_keys"/>-->
+                                            <!--<field name="field_id" domain="[('key', 'not ilike', '%' + str(used_keys) + '%')]" />-->
+                                            <field name="field_id"/>
+                                            <field name="is_required"/>
+                                            <field name="options_model" attrs="{'required':[('field_id','==',%(website_event_register_free_form_fields.promo_source)d)]}"/>
+                                            <field name="options_available" attrs="{'required':[('field_id','==',%(website_event_register_free_form_fields.promo_source)d)]}"/>
+                                        </tree>
+                                    </field>
+
+                            </div>
+                        </group>
+                    </page>
+
+                </notebook>
+
+                <!-- TODO : Add more fields -->
+            </field>
+        </record>
+
+    </data>
+</openerp>

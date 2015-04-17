@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="nace_import_form" model="ir.ui.view">
+    <field name="name">NACE import</field>
+    <field name="model">nace.import</field>
+    <field name="arch"  type="xml">
+        <form string="Import NACE Rev.2 from RAMON">
+            <div>
+                This wizard will download the lastest version of
+                NACE Rev.2 from Europe RAMON metadata service.
+                Updating or creating new NACE code entries if not
+                found already in the system, and DELETE MISSING
+                ENTRIES from new downloaded file.
+            </div>
+            <footer>
+                <button name="run_import" type="object"
+                    class="oe_highlight" string="Import"/>
+                <button special="cancel" string="Cancel" class="oe_link"/>
+            </footer>
+        </form>
+    </field>
+</record>
+
+<record id="nace_import_action" model="ir.actions.act_window">
+    <field name="name">Import NACE Rev.2 from RAMON</field>
+    <field name="res_model">nace.import</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">form</field>
+    <field name="target">new</field>
+</record>
+
+<menuitem action="nace_import_action"
+          id="nace_import_menu"
+          name="Import NACE Rev.2"
+          parent="base.menu_config_address_book"
+          sequence="45"/>
+
+</data>
+</openerp>

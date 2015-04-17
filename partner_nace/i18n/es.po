@@ -1,0 +1,217 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* partner_nace
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-30 13:30+0000\n"
+"PO-Revision-Date: 2015-03-30 13:30+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_nace
+#: view:res.partner:partner_nace.view_res_partner_filter_nace
+msgid "Activity"
+msgstr "Actividad"
+
+#. module: partner_nace
+#: field:res.partner.nace,limit_content:0
+msgid "Also contents"
+msgstr "También contiene"
+
+#. module: partner_nace
+#: view:nace.import:partner_nace.nace_import_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: partner_nace
+#: field:res.partner.nace,children:0
+msgid "Children"
+msgstr "Hijos"
+
+#. module: partner_nace
+#: field:res.partner.nace,code:0
+msgid "Code"
+msgstr "Código"
+
+#. module: partner_nace
+#: field:res.partner.nace,central_content:0
+msgid "Contents"
+msgstr "Contiene"
+
+#. module: partner_nace
+#: field:nace.import,create_uid:0
+#: field:res.partner.nace,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: partner_nace
+#: field:nace.import,create_date:0
+#: field:res.partner.nace,create_date:0
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: partner_nace
+#: code:addons/partner_nace/wizard/nace_import.py:204
+#, python-format
+msgid "Downloaded file is not a valid XML file"
+msgstr "El fichero descargado no es un fichero XML válido"
+
+#. module: partner_nace
+#: field:res.partner.nace,exclusions:0
+msgid "Excludes"
+msgstr "Excluye"
+
+#. module: partner_nace
+#: code:addons/partner_nace/wizard/nace_import.py:196
+#, python-format
+msgid "Got an error %d when trying to download the file %s."
+msgstr "Error %d al intentar descargar el fichero %s."
+
+#. module: partner_nace
+#: code:addons/partner_nace/wizard/nace_import.py:192
+#, python-format
+msgid "Got an error when trying to download the file: %s."
+msgstr "Error al intentar descargar el fichero: %s."
+
+#. module: partner_nace
+#: field:nace.import,id:0
+#: field:res.partner.nace,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_nace
+#: field:res.partner.nace,generic:0
+msgid "ISIC Rev.4"
+msgstr "ISIC Rev.4"
+
+#. module: partner_nace
+#: view:nace.import:partner_nace.nace_import_form
+msgid "Import"
+msgstr "Importar"
+
+#. module: partner_nace
+#: model:ir.ui.menu,name:partner_nace.nace_import_menu
+msgid "Import NACE Rev.2"
+msgstr "Importar NACE Rev.2"
+
+#. module: partner_nace
+#: model:ir.actions.act_window,name:partner_nace.nace_import_action
+#: view:nace.import:partner_nace.nace_import_form
+msgid "Import NACE Rev.2 from RAMON"
+msgstr "Importar NACE Rev.2 desde RAMON"
+
+#. module: partner_nace
+#: model:ir.model,name:partner_nace.model_nace_import
+msgid "Import NACE activities from European RAMON service"
+msgstr "Importar actividades NACE desde el servicio europeo RAMON"
+
+#. module: partner_nace
+#: field:nace.import,write_uid:0
+#: field:res.partner.nace,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: partner_nace
+#: field:nace.import,write_date:0
+#: field:res.partner.nace,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: partner_nace
+#: field:res.partner.nace,level:0
+msgid "Level"
+msgstr "Nivel"
+
+#. module: partner_nace
+#: field:res.partner,main_nace:0
+msgid "Main activity"
+msgstr "Actividad principal"
+
+#. module: partner_nace
+#: model:ir.actions.act_window,name:partner_nace.res_partner_nace_action
+#: model:ir.ui.menu,name:partner_nace.res_partner_nace_menu
+#: view:res.partner.nace:partner_nace.res_partner_nace_tree
+msgid "NACE Activities"
+msgstr "Actividades NACE"
+
+#. module: partner_nace
+#: model:ir.model,name:partner_nace.model_res_partner_nace
+#: view:res.partner.nace:partner_nace.res_partner_nace_form
+msgid "NACE Activity"
+msgstr "Actividad NACE"
+
+#. module: partner_nace
+#: field:res.partner.nace,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: partner_nace
+#: field:res.partner,secondary_naces:0
+msgid "Other activities"
+msgstr "Otras actividades"
+
+#. module: partner_nace
+#: field:res.partner.nace,parent_left:0
+msgid "Parent Left"
+msgstr "Padre izquierda"
+
+#. module: partner_nace
+#: field:res.partner.nace,parent_right:0
+msgid "Parent Right"
+msgstr "Padre derecha"
+
+#. module: partner_nace
+#: field:res.partner.nace,parent_id:0
+msgid "Parent id"
+msgstr "ID del padre"
+
+#. module: partner_nace
+#: model:ir.model,name:partner_nace.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: partner_nace
+#: field:res.partner.nace,rules:0
+msgid "Rules"
+msgstr "Reglas"
+
+#. module: partner_nace
+#: view:res.partner:partner_nace.view_res_partner_filter_nace
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: partner_nace
+#: view:nace.import:partner_nace.nace_import_form
+msgid "This wizard will download the lastest version of\n"
+"                NACE Rev.2 from Europe RAMON metadata service.\n"
+"                Updating or creating new NACE code entries if not\n"
+"                found already in the system, and DELETE MISSING\n"
+"                ENTRIES from new downloaded file."
+msgstr "Este asistente descargará la última version de\n"
+"                NACE Rev.2 desde el servicio de matadatos europeo RAMON.\n"
+"                Actualizará o creará nuevas actividades NACE si no\n"
+"                las encuentra en el sistemma, y BORRARÁ LAS QUE NO ENCUENTRE\n"
+"                en el nuevo fichero descargado."
+
+#. module: partner_nace
+#: code:addons/partner_nace/wizard/nace_import.py:168
+#, python-format
+msgid "Value not found for mandatory field %s"
+msgstr "El valor no se ha encontrado para el campo obligatorio %s"
+
+#. module: partner_nace
+#: model:ir.actions.act_window,help:partner_nace.res_partner_nace_action
+msgid "You must click at import wizard to populate NACE items\n"
+"        in Odoo database in:\n"
+"        Sales > Configuration > Address Book > Import NACE Rev.2"
+msgstr "Debes clicar en el asistente de importación para crear las\n"
+"        las actividades NACE en la base de datos de Odoo, en el menú:\n"
+"        Ventas > Configuración > Libreta de direcciones > Importar NACE Rev.2"
+

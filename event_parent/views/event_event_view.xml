@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="view_partner_form_eym" model="ir.ui.view">
+            <field name="name">view.event.event.form.parent_event</field>
+            <field name="model">event.event</field>
+            <field name="inherit_id" ref="event.view_event_form"/>
+            <field name="arch" type="xml">
+                <field name="date_begin" position="replace">
+                    <field name="date_begin" attrs="{'required':[('parent_id','!=',False)]}"/>
+                </field>
+                <field name="date_end" position="replace">
+                    <field name="date_end" attrs="{'required':[('parent_id','!=',False)]}"/>
+                </field>
+                <field name="date_tz" position="after">
+                    <field name="parent_id"/>
+                </field>
+
+                <notebook position="inside">
+                    <page string="Sesiones" col="4" name="sesiones" attrs="{'invisible':[('parent_id','!=',False)]}">
+                            <field name="sessions_event"/>
+                    </page>
+
+                </notebook>
+
+                <!-- TODO : Add more fields -->
+            </field>
+        </record>
+
+    </data>
+</openerp>
