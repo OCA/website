@@ -22,6 +22,7 @@ from openerp.addons.website_sale_options.controllers.main import (
     website_sale_options)
 from openerp.addons.web import http
 from openerp.addons.web.http import request
+from openerp.tools.translate import _
 
 
 class website_unsaleable_options(website_sale_options):
@@ -31,19 +32,17 @@ class website_unsaleable_options(website_sale_options):
         cr, uid, context, pool = (
             request.cr, request.uid, request.context, request.registry)
         template = pool['product.template']
-        cr.execute(
-            "select src_id from product_optional_rel where dest_id"
-            " = %s"
-            % product_id)
-        res = cr.fetchall()
-        if res:
+        prod_ids = template.search(
+            cr, uid, [('optional_product_ids', 'in', [product_id])],
+            context=context)
+        if prod_ids:
             products = template.browse(
-                cr, uid, [item[0] for item in res], context)
+                cr, uid, prod_ids, context)
             prod_list = [p.name for p in products]
-            message = ("You can't direcly add to cart an optional "
-                       "product. You should first add one of the "
-                       "following products:\n"
-                       "%s" % '\n'.join(prod_list))
+            message = _("You can't direcly add to cart an optional "
+                        "product. You should first add one of the "
+                        "following products:\n"
+                        "%s") % '\n'.join(prod_list)
             return request.website._render(
                 "website_unsaleable_options.modal_warning", {
                     'message': message,
