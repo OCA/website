@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record model="ir.ui.view" id="view_partner_form_nace">
+    <field name="name">Partner form with NACE activity</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <div name="buttons" position="after">
+            <group>
+                <field name="main_nace"
+                       attrs="{'invisible': [('is_company', '=', False)]}"/>
+                <field name="secondary_naces" widget="many2many_tags"
+                       attrs="{'invisible': [('is_company', '=', False)]}"/>
+            </group>
+        </div>
+    </field>
+</record>
+
+<record model="ir.ui.view" id="view_res_partner_filter_nace">
+    <field name="name">Partner search with activity</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_res_partner_filter"/>
+    <field name="arch" type="xml">
+        <field name="category_id" position="after">
+            <field name="main_nace"/>
+        </field>
+        <filter string="Salesperson" position="after">
+            <filter string="Activity"
+                    domain="[]"
+                    context="{'group_by': 'main_nace'}"/>
+        </filter>
+    </field>
+</record>
+
+</data>
+</openerp>
