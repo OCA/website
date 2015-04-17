@@ -1,9 +1,12 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (c) 2015 Serv. Tecnol. Avanzados (http://www.serviciosbaeza.com)
-#                       Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
-#    Copyright (c) 2015 Antiun Ingeniería S.L.
+#    OpenERP, Open Source Management Solution
+#    This module copyright :
+#        (c) 2014 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
+#                 Endika Iglesias <endikaig@antiun.com>
+#                 Antonio Espinosa <antonioea@antiun.com>
+#                 Javier Iniesta <javieria@antiun.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,18 +22,5 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{
-    "name": "Action for registering partners on events",
-    "version": "1.0",
-    "author": "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
-              "Antiun Ingeniería S.L.",
-    "license": "AGPL-3",
-    "category": "Event Management",
-    "depends": [
-        'event',
-    ],
-    'data': [
-        'wizard/res_partner_register_event_view.xml',
-    ],
-    "installable": True,
-}
+
+from . import event_event

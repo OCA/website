@@ -1,9 +1,11 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (c) 2015 Serv. Tecnol. Avanzados (http://www.serviciosbaeza.com)
-#                       Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
-#    Copyright (c) 2015 Antiun Ingeniería S.L.
+#    OpenERP, Open Source Management Solution
+#    This module copyright :
+#        (c) 2014 Antiun Ingenieria S.L. (Madrid, Spain, http://www.antiun.com)
+#                 Endika Iglesias <endikaig@antiun.com>
+#                 Antonio Espinosa <antonioea@antiun.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,4 +21,24 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import res_partner_register_event
+
+{
+    "name": "Event Parent",
+    "version": "1.0",
+    'author': 'Antiun Ingenieria S.L.',
+    'maintainer': 'Antiun Ingenieria S.L.',
+    'website': 'http://www.antiun.com',
+    'license': 'AGPL-3',
+    "category": "Connector",
+    "description": """
+Event Parent
+=====================
+
+Add fields to relation event with Parent
+    """,
+    "depends": ['event'],
+    "data": [
+        'views/event_event_view.xml',
+    ],
+    "installable": True,
+}
