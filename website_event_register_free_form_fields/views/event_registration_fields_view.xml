@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Tree view -->
+        <record id="view_event_registration_fields_tree" model="ir.ui.view">
+            <field name="name">view_event_registration_fields_tree</field>
+            <field name="model">event.registration.fields</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="key"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view -->
+        <record id="view_event_registration_fields_form" model="ir.ui.view">
+            <field name="name">view_event_registration_fields_form</field>
+            <field name="model">event.registration.fields</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <h1>Unable to create new field</h1>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

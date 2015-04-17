@@ -1,0 +1,16 @@
+<openerp>
+    <data>
+        <record id="phone" model="event.registration.fields">
+            <field name="name">Phone</field>
+            <field name="key">phone</field>
+        </record>
+        <record id="postal_code" model="event.registration.fields">
+            <field name="name">Postal Code</field>
+            <field name="key">postal_code</field>
+        </record>
+        <record id="promo_source" model="event.registration.fields">
+            <field name="name">Promo Source</field>
+            <field name="key">promo_source</field>
+        </record>
+    </data>
+</openerp>

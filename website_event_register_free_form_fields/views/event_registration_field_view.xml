@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Tree view -->
+        <record id="view_event_registration_field_tree" model="ir.ui.view">
+            <field name="name">view_event_registration_field_tree</field>
+            <field name="model">event.registration.field</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="field_id"/>
+                    <field name="is_required"/>
+                    <field name="options_available"/>
+                    <field name="options_model"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view -->
+        <record id="view_event_registration_field_from" model="ir.ui.view">
+            <field name="name">view_event_registration_field_form</field>
+            <field name="model">event.registration.field</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group string="Configuración nuevo campo">
+                        <group string="Datos Básicos">
+                            <field name="field_id"/>
+                            <field name="is_required"/>
+                        </group>
+                        <group string="Datos Selector" attrs="{'invisible':[('field_id','!=',%(website_event_register_free_form_fields.promo_source)d)]}">
+                            <field name="options_model" attrs="{'invisible':[('field_id','!=',%(website_event_register_free_form_fields.promo_source)d)],'required':[('field_id','==',%(website_event_register_free_form_fields.promo_source)d)]}"/>
+                            <field name="options_available" attrs="{'invisible':[('field_id','!=',%(website_event_register_free_form_fields.promo_source)d)],'required':[('field_id','==',%(website_event_register_free_form_fields.promo_source)d)]}"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
