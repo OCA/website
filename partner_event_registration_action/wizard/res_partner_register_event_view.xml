@@ -1,0 +1,44 @@
+<openerp>
+    <data>
+
+        <record id="res_partner_register_event_view" model="ir.ui.view">
+            <field name="name">Register in an event</field>
+            <field name="model">res.partner.register.event</field>
+            <field name="arch" type="xml">
+                <form string="Select event to register">
+                    <group>
+                        <field name="event"/>
+                        <field name="ticket"/>
+                    </group>
+                    <footer>
+                        <button name="button_register"
+                                type="object"
+                                string="Create registrations"
+                                class="oe_highlight"
+                                />
+                        or
+                        <button special="cancel"
+                                string="Cancel"
+                                />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_partner_register_event" model="ir.actions.act_window">
+            <field name="name">Register in an event</field>
+            <field name="res_model">res.partner.register.event</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="ir_value_event_registration_attend" model="ir.values">
+            <field eval="'client_action_multi'" name="key2"/>
+            <field name="model">res.partner</field>
+            <field name="name">Register in an event</field>
+            <field name="value" eval="'ir.actions.act_window,' + str(ref('action_partner_register_event'))" />
+        </record>
+
+    </data>
+</openerp>
