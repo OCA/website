@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+<data>
+
+<!-- Not needed yet
+<template id="assets_backend"
+          name="website_disable_odoo assets"
+          inherit_id="website.assets_backend">
+    <xpath expr="." position="inside">
+        <script type="text/javascript" src="/website_disable_odoo/static/src/js/disable_odoo.js"></script>
+    </xpath>
+</template>
+-->
+
+<!-- Remove "Create a free website with Odoo" -->
+<template id="layout_footer_copyright"
+          inherit_id="website.layout_footer_copyright"
+          name="Remove footer Odoo link" priority="20">
+    <xpath expr="//div[@class='pull-right']" position="replace">
+        <div></div>
+    </xpath>
+</template>
+
+</data>
+</openerp>
