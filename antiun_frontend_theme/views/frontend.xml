@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<template id="assets_frontend"
+          inherit_id="website.assets_frontend"
+          name="Custom CSS and JS" priority="20">
+    <xpath expr="." position="inside">
+        <link rel="stylesheet" href="/antiun_frontend_theme/static/src/css/frontend.css"/>
+        <script type="text/javascript" src="/antiun_frontend_theme/static/src/js/frontend.js"></script>
+    </xpath>
+</template>
+
+<!-- Setting theme favicon -->
+<template id="layout" inherit_id="website.layout"
+          name="Setting favicon" priority="20">
+    <xpath expr="//head" position="inside">
+        <link rel="shortcut icon"
+              href="/antiun_frontend_theme/static/src/img/favicon.ico"
+              type="image/x-icon"/>
+    </xpath>
+</template>
+
+</data>
+</openerp>
