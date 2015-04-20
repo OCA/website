@@ -1,0 +1,113 @@
+/**
+ * # -*- encoding: utf-8 -*-
+ * ##############################################################################
+ * #
+ * #    OpenERP, Open Source Management Solution
+ * #    This module copyright :
+ * #        (c) 2015 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
+ * #                 Antonio Espinosa <antonioea@antiun.com>
+ * #
+ * #    This program is free software: you can redistribute it and/or modify
+ * #    it under the terms of the GNU Affero General Public License as
+ * #    published by the Free Software Foundation, either version 3 of the
+ * #    License, or (at your option) any later version.
+ * #
+ * #    This program is distributed in the hope that it will be useful,
+ * #    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * #    GNU Affero General Public License for more details.
+ * #
+ * #    You should have received a copy of the GNU Affero General Public License
+ * #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * #
+ * ##############################################################################
+ */
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+.openerp .oe_form_sheet_width {
+    max-width: 95%;
+}
+
+.openerp .oe_leftbar {
+    background-color: #fff;
+    border-right: 1px solid #1D559D;
+}
+
+#oe_main_menu_navbar .oe_systray #oe_topbar_imbutton_icon,
+#oe_main_menu_navbar .oe_systray #oe_attendance_sign_in_out_icon {
+    color: #004A99;
+}
+
+.openerp .oe_form header,
+.openerp .oe_view_manager_current > .oe_view_manager_header {
+    border-bottom: 1px solid #1D559D;
+    background: #d4dae1;
+    box-shadow: none;
+}
+
+.openerp .oe_horizontal_separator,
+.openerp .oe_button.oe_link span,
+.openerp .oe_application a,
+.openerp .ui-widget-content a,
+.openerp .oe_view_manager table.oe_view_manager_header h2 a,
+.openerp .oe_secondary_menu_section {
+    color: #1D559D;
+}
+
+.openerp .nav-pills > li.active > a,
+.openerp a.list-group-item.active > a {
+    background-color: #1D559D;
+}
+
+.openerp .nav-pills > li.active a:hover,
+.openerp .nav-pills > li.active a:focus,
+.openerp a.list-group-item.active a:hover,
+.openerp a.list-group-item.active a:focus {
+    background-color: #446b9d;
+}
+
+.navbar-inverse {
+    background-color: #fff;
+    border-color: #1D559D;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    border-color: #1D559D;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #1D559D;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #004A99;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #d4dae1;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

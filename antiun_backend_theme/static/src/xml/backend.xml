@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+
+<!-- Qweb templates for Backend -->
+
+<!-- About modal -->
+<t t-extend="UserMenu.about">
+    <t t-jquery=".user-image" t-operation="replace">
+        <div class="user-image">
+            <img src="/antiun_backend_theme/static/src/img/logo.png"
+                 alt="Antiun Ingeniería S.L."
+                 title="Antiun Ingeniería S.L." />
+        </div>
+    </t>
+    <t t-jquery=".user-info-block" t-operation="replace">
+        <div class="user-info-block">
+            <h3>Antiun OpenERP v<t t-esc="version_info.server_version"/></h3>
+            <h4>Copyright © 2014 Antiun Ingeniería, SL. Todos los derechos reservados.</h4>
+            <h4>Antiun Ingeniería, SL</h4>
+            <p>
+                Calle Pocito de San Roque, 30<br/>
+                28230 Las Rozas (Madrid) <br/>
+                España <br/> <br/>
+                <a href="mail:comercial@antiun.com">comercial@antiun.com</a> <br/>
+                +34 91 710 35 29
+            </p>
+            <h4>Copyright © 2004-TODAY OpenERP SA. All Rights Reserved.</h4>
+            <p>Odoo is a trademark of the <a target="_blank" href="https://www.odoo.com" style="text-decoration: underline;">OpenERP SA Company</a>.</p>
+            <p>Licenced under the terms of <a target="_blank" href="http://www.gnu.org/licenses/agpl.html" style="text-decoration: underline;">GNU Affero General Public License</a></p>
+            <p>For more information visit <a target="_blank" href="https://www.odoo.com" style="text-decoration: underline;">Odoo.com</a></p>
+        </div>
+    </t>
+
+</t>
+
+<t t-extend="web.login_layout">
+    <t t-jquery=".oe_single_form_footer a" t-operation="replace">
+        <a href="#" target="_blank">Antiun</a>
+    </t>
+    <t t-jquery=".oe_single_form_logo" t-operation="replace">
+        <div class="oe_single_form_logo">
+            <img src="/antiun_backend_theme/static/src/img/logo.png"
+                 alt="Antiun Ingeniería S.L."
+                 title="Antiun Ingeniería S.L." />
+        </div>
+    </t>
+</t>
+
+</templates>
