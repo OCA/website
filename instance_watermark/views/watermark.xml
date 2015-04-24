@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<!-- Add theme CSS and Javascript -->
+<template id="assets_backend" inherit_id="web.assets_backend"
+          name="Custom CSS and JS" priority="20">
+    <xpath expr="." position="inside">
+        <link rel="stylesheet" href="/instance_watermark/static/src/css/watermark.css"/>
+        <script type="text/javascript" src="/instance_watermark/static/src/js/watermark.js"></script>
+    </xpath>
+</template>
+
+
+</data>
+</openerp>
