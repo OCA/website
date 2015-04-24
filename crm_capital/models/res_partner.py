@@ -14,3 +14,7 @@ class ResPartner(models.Model):
     capital_registered = fields.Integer(string="Capital registered")
     turnover_range = fields.Many2one(comodel_name='crm.turnover_range')
     turnover_number = fields.Integer()
+    company_size = fields.Selection(
+        string="Company size",
+        selection=[('micro', 'Micro'), ('small', 'Small'),
+                   ('medium', 'Medium'), ('big', 'Big')])

@@ -14,6 +14,7 @@
             <field name="turnover_range" placeholder="Turnover range"
                    options='{"no_open": True}'/>
             <field name="turnover_number"/>
+            <field name="company_size"/>
         </field>
     </field>
 </record>
@@ -30,6 +31,9 @@
             <filter string="Turnover"
                     domain="[]"
                     context="{'group_by': 'turnover_number'}"/>
+            <filter string="Company size"
+                    domain="[]"
+                    context="{'group_by': 'company_size'}"/>
         </filter>
     </field>
 </record>
@@ -46,6 +50,7 @@
             <field name="turnover_range" placeholder="Turnover range"
                    options='{"no_open": True}'/>
             <field name="turnover_number"/>
+            <field name="company_size"/>
         </field>
     </field>
 </record>
@@ -62,6 +67,9 @@
             <filter string="Turnover"
                     domain="[]"
                     context="{'group_by': 'turnover_number'}"/>
+            <filter string="Company size"
+                    domain="[]"
+                    context="{'group_by': 'company_size'}"/>
         </filter>
     </field>
 </record>

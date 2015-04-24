@@ -18,6 +18,8 @@
                    options='{"no_open": True}'/>
             <field name="turnover_number"
                    attrs="{'invisible': [('is_company', '=', False)]}"/>
+            <field name="company_size"
+                   attrs="{'invisible': [('is_company', '=', False)]}"/>
         </field>
     </field>
 </record>
@@ -34,6 +36,9 @@
             <filter string="Turnover"
                     domain="[('is_company', '=', True)]"
                     context="{'group_by': 'turnover_number'}"/>
+            <filter string="Company size"
+                    domain="[('is_company', '=', True)]"
+                    context="{'group_by': 'company_size'}"/>
         </filter>
     </field>
 </record>

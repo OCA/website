@@ -14,6 +14,10 @@ class CrmLead(models.Model):
     capital_registered = fields.Integer(string="Capital registered")
     turnover_range = fields.Many2one(comodel_name='crm.turnover_range')
     turnover_number = fields.Integer()
+    company_size = fields.Selection(
+        string="Company size",
+        selection=[('micro', 'Micro'), ('small', 'Small'),
+                   ('medium', 'Medium'), ('big', 'Big')])
 
     def _lead_create_contact(self, cr, uid, lead, name, is_company,
                              parent_id=False, context=None):
@@ -28,5 +32,6 @@ class CrmLead(models.Model):
                 'capital_registered': lead.capital_registered,
                 'turnover_range': lead.turnover_range.id,
                 'turnover_number': lead.turnover_number,
+                'company_size': lead.company_size,
             }, context=context)
         return partner_id
