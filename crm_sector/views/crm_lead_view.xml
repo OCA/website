@@ -7,7 +7,7 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
     <field name="arch" type="xml">
-        <field name="partner_name" position="after">
+        <field name="phone" position="before">
             <field name="sector" placeholder="Sector"
                    options='{"no_open": True}'/>
         </field>
@@ -46,7 +46,7 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
     <field name="arch" type="xml">
-        <field name="partner_id" position="after">
+        <field name="phone" position="before">
             <field name="sector" placeholder="Sector"
                    options='{"no_open": True}'/>
         </field>

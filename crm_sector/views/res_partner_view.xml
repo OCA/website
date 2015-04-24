@@ -7,9 +7,10 @@
     <field name="model">res.partner</field>
     <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
-        <field name="category_id" position="after">
+        <field name="phone" position="before">
             <field name="sector" placeholder="Sector"
-                   options='{"no_open": True}'/>
+                   options='{"no_open": True}'
+                   attrs="{'invisible': [('is_company', '=', False)]}"/>
         </field>
     </field>
 </record>
