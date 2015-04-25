@@ -30,12 +30,6 @@ from openerp import models, fields
 class EventEvent(models.Model):
     _inherit = "event.event"
 
-    # extra_fields = fields.Many2many(
-    #     comodel_name='event.registration.fields', string="New Field",
-    #     relation='event_extra_fields')
-    # required_fields = fields.Many2many(
-    #     comodel_name='event.registration.fields', string="Required Field",
-    #     relation='event_required_fields')
     available_fields = fields.One2many(
         comodel_name='event.registration.field', string="Available fields",
         inverse_name="event_id")
