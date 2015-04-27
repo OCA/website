@@ -24,7 +24,7 @@
       <ul id="my-account-navbar" class="nav nav-pills">
         <li role="presentation" id="my-account"
             t-att-class="request.httprequest.path == '/shop/my-account' and 'active'">
-          <a href="/shop/my-account">Account</a>
+          <a href="/shop/my-account">My Account</a>
         </li>
       </ul>
     </div>
@@ -47,6 +47,13 @@
         <p class="help-block"
            t-raw="form_fields_helpers.get(f_name)">Help text here.</p>
       </t>
+      <div class="alert alert-danger" role="alert"
+           t-if="error.get(f_name) and error_messages.get(f_name)">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="error-message"
+              t-esc="error_messages.get(f_name)"
+              />
+      </div>
   </div>
 </template>
 
@@ -58,6 +65,11 @@
       <div class="container oe_website_sale">
 
         <t t-call="website_sale_customer.account_navbar" />
+
+        <div class="alert alert-success" role="alert" t-if="saved">
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          Account info updated!
+        </div>
 
         <h1>Your Address</h1>
         <form action="/shop/my-account" method="post">
@@ -203,7 +215,7 @@
             </div>
           </div>
           <div class="form-group">
-            <a class="btn btn-default a-submit">Save</a>
+            <a class="btn btn-primary a-submit">Save</a>
             <a class="btn btn-red"
                href="/shop/my-account">cancel</a>
           </div>

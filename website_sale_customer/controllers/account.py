@@ -43,6 +43,7 @@ class ShopUserAccountController(http.Controller):
             if values["error"]:
                 return request.website.render(self.my_account_template, values)
             self.save_user_form(values['user_info'])
+            values['saved'] = True
         return request.website.render(self.my_account_template, values)
 
     def user_info_values(self, data=None):
@@ -260,6 +261,11 @@ class ShopUserAccountController(http.Controller):
         # save partner informations
         partner_model.write(cr, SUPERUSER_ID, [partner_id], billing_info,
                             context=context)
+
+        if billing_info.get('email'):
+            # we must update login value to keep it synced
+            user_values = {'login': billing_info['email']}
+            user_model.write(cr, SUPERUSER_ID, uid, user_values)
 
         # create a new shipping partner
         if user_info.get('shipping_id') == -1:
