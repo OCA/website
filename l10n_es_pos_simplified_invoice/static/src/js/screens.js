@@ -964,10 +964,6 @@ function openerp_pos_screens(instance, module){ //module is instance.point_of_sa
         },
         refresh: function() {
             var order = this.pos.get('selectedOrder');
-            console.log("THIS");
-            console.log(this);
-            console.log("order");
-            console.log(order);
             $('.pos-receipt-container', this.$el).html(QWeb.render('PosTicket_l10n_es',{
                     widget:this,
                     order: order,
