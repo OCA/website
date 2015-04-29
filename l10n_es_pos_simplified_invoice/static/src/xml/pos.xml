@@ -12,7 +12,7 @@
 	            Vendedor: <t t-esc="widget.pos.cashier ? widget.pos.cashier.name : widget.pos.user.name"/><br />
 	            Cliente: <t t-esc="order.attributes.client ? order.attributes.client.name : ''"/><br />
 	            NIF cliente: <t t-esc="order.attributes.client ? order.attributes.client.vat : ''"/><br />
-	            Dirección: <t t-esc="order.attributes.client ? order.attributes.client.street : order.attributes.client.street"/><br />
+	            Dirección del cliente: <t t-esc="order.attributes.client ? order.attributes.client.street : ''"/><br />
 	            <!--Shop: <t t-esc="widget.pos.shop.name"/><br />-->
 	            <br />
 	            <t t-if="widget.pos.config.receipt_header">
