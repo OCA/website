@@ -30,6 +30,7 @@
         'website_sale',
     ],
     "data": [
+        'data/website.xml',
         'view/templates_account.xml',
         'view/templates_orders.xml',
     ],
