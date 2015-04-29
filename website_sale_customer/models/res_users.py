@@ -12,6 +12,9 @@ from openerp.addons.website_sale_customer import utils
 INVALID_EMAIL_MSG = _("Invalid email! "
                       "Please, provide a valid and existing email.")
 
+USER_EXISTS_MSG = _("Sorry, this email / login is not available. "
+                    "Are you already registered?")
+
 
 class ResUsers(models.Model):
     _inherit = 'res.users'
@@ -25,9 +28,19 @@ class ResUsers(models.Model):
                                                          context=context)
 
     def _validate_signup_values(self, cr, uid, values, context=None):
-        email = values.get('login') or values.get('email')
+        login = values.get('login')
+        email = values.get('email')
+        email = email or login
         if not utils.validate_email(email):
             raise SignupError(INVALID_EMAIL_MSG)
+        # raise proper error if user exists
+        # instead of throwing
+        # duplicate key value violates unique constraint
+        #   "res_users_login_key" DETAIL:
+        #        Key (login)=(LOGIN_HERE) already exists.
+        ids = self.search(cr, uid, [('login', '=', login or email)])
+        if ids:
+            raise SignupError(USER_EXISTS_MSG)
 
     def _get_default_action(self):
         return self.env.ref('website_sale_customer.default_home_action')
