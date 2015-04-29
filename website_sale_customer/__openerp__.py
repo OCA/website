@@ -28,9 +28,12 @@
     "depends": [
         'web',
         'website_sale',
+        'base_action_rule',
     ],
     "data": [
         'data/website.xml',
+        'data/emails.xml',
+        'data/action_rules.xml',
         'view/templates_account.xml',
         'view/templates_orders.xml',
     ],
