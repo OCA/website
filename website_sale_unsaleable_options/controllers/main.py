@@ -25,7 +25,7 @@ from openerp.addons.web.http import request
 from openerp.tools.translate import _
 
 
-class website_unsaleable_options(website_sale_options):
+class website_sale_unsaleable_options(website_sale_options):
 
     @http.route()
     def modal(self, product_id, **kw):
@@ -44,9 +44,9 @@ class website_unsaleable_options(website_sale_options):
                         "following products:\n"
                         "%s") % '\n'.join(prod_list)
             return request.website._render(
-                "website_unsaleable_options.modal_warning", {
+                "website_sale_unsaleable_options.modal_warning", {
                     'message': message,
                     })
         else:
-            return super(website_unsaleable_options, self).modal(
+            return super(website_sale_unsaleable_options, self).modal(
                 product_id, **kw)
