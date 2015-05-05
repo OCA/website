@@ -53,7 +53,7 @@ class WebsiteSale(website_sale):
             values = self.checkout_values(data={'shipping_id': -1})
             return request.website.render("website_sale.checkout", values)
         else:
-            return super(WebsiteSale, self).checkout(self, **post)
+            return super(WebsiteSale, self).checkout(**post)
 
     @http.route(['/shop/confirm_order'], type='http', auth="public",
                 website=True)
