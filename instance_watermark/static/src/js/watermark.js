@@ -68,7 +68,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Instance Watermark Addon r
                 this._super.apply(this, arguments);
                 var url = this.session.url('');
                 // TODO : Read these regex from Odoo config
-                var local = /openerp\.local\.net/i;
+                var local = /(openerp|odoo)\.local\.net/i;
                 var devel = /devel\.antiun\.net/i;
                 var demo = /demo\.antiun\.net/i;
                 if (local.test(url)) {this.service_instance = 'local';}
