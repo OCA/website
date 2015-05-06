@@ -14,6 +14,8 @@ To configure this module, you need to:
 
 * go to your company and load a logo image in the website logo field
 
+Note that, in case of anonymous visitors, the company associated to admin user will be used
+
 
 Credits
 =======
