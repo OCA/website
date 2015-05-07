@@ -18,19 +18,24 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.osv import osv, fields
+from openerp.models import TransientModel
+from openerp import fields
 
 
-class website(osv.osv):
+class website(TransientModel):
+
+    """Adds the fields for options of the OSC."""
+
     _inherit = 'website'
 
-    _columns = {
-        'use_osc': fields.boolean('Use OSC'),
-        'use_all_checkout_countries': fields.boolean('Use All Countries in Checkout'),
-        'checkout_country_ids': fields.many2many('res.country', 'checkout_country_rel',
-                                                 'website_id', 'country_id', 'Checkout Countries'),
-    }
-    _defaults = {
-        'use_osc': True,
-        'use_all_checkout_countries': True
-    }
+    use_osc = fields.Boolean(
+        string='Use OSC',
+        default=True,)
+    use_all_checkout_countries = fields.Boolean(
+        string='Use All Countries in Checkout',
+        default=True,)
+    checkout_country_ids = fields.Many2many(
+        'res.country',
+        'checkout_country_rel',
+        'website_id', 'country_id',
+        'Checkout Countries')
