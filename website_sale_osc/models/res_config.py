@@ -18,11 +18,11 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.models import TransientModel
+from openerp.models import Model
 from openerp import fields
 
 
-class website_config_settings(TransientModel):
+class website_config_settings(Model):
 
     """Settings for the OSC."""
 

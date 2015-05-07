@@ -18,7 +18,8 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.osv import orm, fields
+from openerp.models import Model
+from openerp import fields
 from openerp import SUPERUSER_ID
 from openerp.addons import decimal_precision
 
@@ -26,7 +27,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class sale_order(orm.Model):
+class sale_order(Model):
 
     """Overwrites and add Definitions to module: sale."""
 
@@ -74,20 +75,19 @@ class sale_order(orm.Model):
             result[line.order_id.id] = True
         return result.keys()
 
-    _columns = {
-        'amount_subtotal': fields.function(
-            _amount_all_wrapper, type='float',
-            digits_compute=decimal_precision.get_precision('Account'),
-            string='Subtotal Amount',
-            store={
+    amount_subtotal = fields.Float(
+        compute=_amount_all_wrapper,
+        digits_compute=decimal_precision.get_precision('Account'),
+        string='Subtotal Amount',
+        store={
                 'sale.order': (lambda self, cr, uid, ids, c={}: ids, ['order_line'], 10),
                 'sale.order.line': (_get_order, ['price_unit', 'tax_id', 'discount',
-                                                 'product_uom_qty'], 10),
-            },
-            multi='sums', help="The amount without anything.", track_visibility='always'
-        ),
-    }
-
+                                                 'product_uom_qty'], 10),},
+        multi='sums',
+        help="The amount without anything.",
+        track_visibility='always'
+        )
+    
     def tax_overview(self, cr, uid, order, context=None):
         """
         Calculate additional tax information for displaying them in
@@ -115,10 +115,8 @@ class sale_order(orm.Model):
         return res
 
 
-class res_partner(orm.Model):
+class res_partner(Model):
     _inherit = 'res.partner'
 
-    _columns = {
-        'street_name': fields.char('Street name'),
-        'street_number': fields.char('Street number'),
-    }
+    street_name = fields.Char(string='Street name')
+    street_number = fields.Char(tring='Street number')
