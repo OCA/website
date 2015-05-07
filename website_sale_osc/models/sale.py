@@ -82,12 +82,11 @@ class sale_order(Model):
         store={
                 'sale.order': (lambda self, cr, uid, ids, c={}: ids, ['order_line'], 10),
                 'sale.order.line': (_get_order, ['price_unit', 'tax_id', 'discount',
-                                                 'product_uom_qty'], 10),},
+                                                 'product_uom_qty'], 10)},
         multi='sums',
         help="The amount without anything.",
-        track_visibility='always'
-        )
-    
+        track_visibility='always')
+
     def tax_overview(self, cr, uid, order, context=None):
         """
         Calculate additional tax information for displaying them in
