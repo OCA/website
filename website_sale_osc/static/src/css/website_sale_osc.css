@@ -1,0 +1,21 @@
+.modal-dialog .modal-content .modal-body .container {
+  width: auto;
+}
+
+.required_asterisk {
+  color:red;
+  float: left;
+}
+
+#mycart_total .tax-overview .label {
+  color: #000000;
+  font-weight: normal;
+}
+
+#mycart_total .tax-overview td .oe_currency_value {
+  font-size: 75%;
+}
+
+.oe_website_sale_osc label {
+  display: block;
+}

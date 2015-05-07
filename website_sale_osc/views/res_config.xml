@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<!-- Add one step checkout activation in global website settings -->
+		<record id="view_website_config_settings_bd_inherit" model="ir.ui.view">
+			<field name="name">Website settings</field>
+			<field name="model">website.config.settings</field>
+			<field name="inherit_id" ref="website.view_website_config_settings" />
+			<field name="arch" type="xml">
+				<xpath expr="/form/div/group[@string='Language']" position="after">
+					<group string="Checkout">
+						<label for="group_website_sale_terms_conditions" />
+						<div name="group_website_sale_terms_conditions">
+							<div>
+								<div name="group_website_sale_terms_conditions" class="oe_inline">
+									<field name="group_website_sale_terms_conditions" />
+								</div>
+							</div>
+						</div>
+						<label for="use_osc" />
+						<div name="use_osc">
+							<div>
+								<div name="use_osc" class="oe_inline">
+									<field name="use_osc" />
+								</div>
+							</div>
+						</div>
+						<label for="use_all_checkout_countries" />
+						<div name="use_all_checkout_countries">
+							<div>
+								<div name="use_all_checkout_countries" class="oe_inline">
+									<field name="use_all_checkout_countries" />
+								</div>
+							</div>
+						</div>
+						<label for="checkout_country_ids" attrs="{'invisible': [('use_all_checkout_countries', '=', True)]}" />
+						<div name="checkout_country_ids" attrs="{'invisible': [('use_all_checkout_countries', '=', True)]}">
+							<div>
+								<div name="checkout_country_ids" class="oe_inline">
+									<field name="checkout_country_ids" />
+								</div>
+							</div>
+						</div>
+					</group>
+				</xpath>
+			</field>
+		</record>
+
+
+	</data>
+</openerp>
