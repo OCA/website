@@ -18,28 +18,30 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.osv import fields, osv
+from openerp.models import TransientModel
+from openerp import fields
 
 
-class website_config_settings(osv.osv_memory):
+class website_config_settings(TransientModel):
 
     """Settings for the OSC."""
 
     _inherit = 'website.config.settings'
 
-    _columns = {
-        'group_website_sale_terms_conditions': fields.boolean(
-            "Terms and Conditions",
-            implied_group='website_sale_osc.group_website_sale_terms_conditions',
-            help="Enable Terms and Conditions on the Checkout"),
-        'use_osc': fields.related('website_id', 'use_osc', type='boolean', string='Use OSC'),
-        'use_all_checkout_countries': fields.related('website_id', 'use_all_checkout_countries',
-                                                     type='boolean',
-                                                     string='Use All Countries in Checkout'),
-        'checkout_country_ids': fields.related('website_id', 'checkout_country_ids',
-                                               type='many2many', relation='res.country',
-                                               string='Checkout Countries'),
-    }
+    group_website_sale_terms_conditions = fields.Boolean(
+        string="Terms and Conditions",
+        implied_group='website_sale_osc.group_website_sale_terms_conditions',
+        help="Enable Terms and Conditions on the Checkout")
+    use_osc = fields.Boolean(
+        related='website_id.use_osc',
+        string='Use OSC')
+    use_all_checkout_countries = fields.Boolean(
+        related='website_id.use_all_checkout_countries',
+        string='Use All Countries in Checkout')
+    checkout_country_ids = fields.Many2many(
+        related='website_id.checkout_country_ids',
+        relation='res.country',
+        string='Checkout Countries')
 
     def write(self, cr, uid, ids, vals, context=None):
         """
