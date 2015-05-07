@@ -6,39 +6,41 @@
 		<record id="view_website_config_settings_bd_inherit" model="ir.ui.view">
 			<field name="name">Website settings</field>
 			<field name="model">website.config.settings</field>
-			<field name="inherit_id" ref="website.view_website_config_settings" />
+			<field name="inherit_id" ref="website.view_website_config_settings"/>
 			<field name="arch" type="xml">
 				<xpath expr="/form/div/group[@string='Language']" position="after">
 					<group string="Checkout">
-						<label for="group_website_sale_terms_conditions" />
+						<label for="group_website_sale_terms_conditions"/>
 						<div name="group_website_sale_terms_conditions">
 							<div>
 								<div name="group_website_sale_terms_conditions" class="oe_inline">
-									<field name="group_website_sale_terms_conditions" />
+									<field name="group_website_sale_terms_conditions"/>
 								</div>
 							</div>
 						</div>
-						<label for="use_osc" />
+						<label for="use_osc"/>
 						<div name="use_osc">
 							<div>
 								<div name="use_osc" class="oe_inline">
-									<field name="use_osc" />
+									<field name="use_osc"/>
 								</div>
 							</div>
 						</div>
-						<label for="use_all_checkout_countries" />
+						<label for="use_all_checkout_countries"/>
 						<div name="use_all_checkout_countries">
 							<div>
 								<div name="use_all_checkout_countries" class="oe_inline">
-									<field name="use_all_checkout_countries" />
+									<field name="use_all_checkout_countries"/>
 								</div>
 							</div>
 						</div>
-						<label for="checkout_country_ids" attrs="{'invisible': [('use_all_checkout_countries', '=', True)]}" />
-						<div name="checkout_country_ids" attrs="{'invisible': [('use_all_checkout_countries', '=', True)]}">
+						<label for="checkout_country_ids"
+							   attrs="{'invisible': [('use_all_checkout_countries', '=', True)]}"/>
+						<div name="checkout_country_ids"
+							 attrs="{'invisible': [('use_all_checkout_countries', '=', True)]}">
 							<div>
 								<div name="checkout_country_ids" class="oe_inline">
-									<field name="checkout_country_ids" />
+									<field name="checkout_country_ids"/>
 								</div>
 							</div>
 						</div>

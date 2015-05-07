@@ -27,6 +27,9 @@ _logger = logging.getLogger(__name__)
 
 
 class sale_order(orm.Model):
+
+    """Overwrites and add Definitions to module: sale."""
+
     _inherit = 'sale.order'
 
     def _amount_all_wrapper(self, cr, uid, ids, field_name, arg, context=None):

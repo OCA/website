@@ -22,6 +22,9 @@ from openerp.osv import fields, osv
 
 
 class website_config_settings(osv.osv_memory):
+
+    """Settings for the OSC."""
+
     _inherit = 'website.config.settings'
 
     _columns = {

@@ -28,7 +28,7 @@
                 element:   'form[action="/payment/transfer/feedback"] .btn:contains("Order Now ")',
                 onload: function (tour) {
                     $("input[name='phone']").val("");
-                },
+                }
             },
             {
                 //step 5

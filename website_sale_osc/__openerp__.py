@@ -19,15 +19,14 @@
 #
 ##############################################################################
 {
-    'name': 'eCommerce One Step Checkout',
+    'name': 'One Step Checkout',
     'category': 'Website',
     'summary': 'Provide an All-In-One Checkout for Your Customer',
     'version': '1.0',
     'description': """
-OpenERP E-Commerce One Step Checkout
-====================================
-
-...
+odoo One Step Checkout
+======================
+Provide an All-In-One Checkout for Your Customer
     """,
     'author': "bloopark systems GmbH & Co. KG",
     'website': "http://www.bloopark.de",

@@ -11,7 +11,7 @@
 				<script type="text/javascript"
 						src="/website_sale_osc/static/src/js/website_sale_osc.js"></script>
 				<script type="text/javascript"
-						src="/website_sale_osc/static/src/js/website.sale.osc.tour.js"></script>
+						src="/website_sale_osc/static/src/js/website_sale_osc_tour.js"></script>
 			</xpath>
 		</template>
 
@@ -375,6 +375,7 @@
 							</div>
 
 							<div id="col-2" class="col-md-4 oe_mycart">
+
 								<!-- Delivery Methods Start -->
 								<div t-if="deliveries" id="delivery_carrier">
 									<h3 class="page-header mt16">Delivery Method</h3>
