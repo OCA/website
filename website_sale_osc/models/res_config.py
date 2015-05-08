@@ -45,8 +45,10 @@ class WebsiteConfigSettings(Model):
 
     def write(self, cr, uid, ids, vals, context=None):
         """
-        Add or remove website settings (Default Checkout, One Step Checkout and
-        Terms and Conditions) for portal and public users.
+        Add or remove website settings.
+
+        Default Checkout, One Step Checkout and Terms and Conditions
+        for portal and public users.
         """
         setting = []
         group_checkout_terms = self.pool.get('ir.model.data').get_object_reference(

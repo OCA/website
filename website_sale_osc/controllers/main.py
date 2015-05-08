@@ -31,12 +31,14 @@ logger = logging.getLogger(__name__)
 
 class website_sale(website_sale):
 
+    """Add aditional functions to the website_sale controller."""
+
     mandatory_billing_fields = ["name", "phone", "email", "street", "city", "country_id"]
     optional_billing_fields = ["street2", "state_id", "vat", "vat_subjected", "zip"]
 
     @http.route(['/shop/checkout'], type='http', auth='public', website=True, multilang=True)
     def checkout(self, **post):
-        """"""
+        """Checkout controller."""
         # if onestepcheckout is deactivated use the normal checkout
         if not request.website.use_osc:
             return super(website_sale, self).checkout()
@@ -200,8 +202,7 @@ class website_sale(website_sale):
     @http.route(['/shop/checkout/confirm_address/'], type='json', auth='public', website=True,
                 multilang=True)
     def confirm_address(self, **post):
-        """
-        """
+        """Address controller."""
         cr, uid, context, registry = request.cr, request.uid, request.context, request.registry
         order_line_obj = request.registry.get('sale.order')
 
@@ -332,10 +333,7 @@ class website_sale(website_sale):
         return {'success': True}
 
     def do_change_delivery(self, cr, uid, order, carrier_id, context=None):
-        """
-        Apply delivery amount to current sale order.
-        """
-
+        """Apply delivery amount to current sale order."""
         if order and carrier_id:
 
             # order_id is needed to get delivery carrier price
@@ -376,8 +374,9 @@ class website_sale(website_sale):
                 multilang=True)
     def change_delivery(self, **post):
         """
-        If delivery method is was changed in frontend change and apply delivery
-        carrier / amount to sale order.
+        If delivery method is was changed in frontend.
+
+        Change and apply delivery carrier / amount to sale order.
         """
         cr, uid, context = request.cr, request.uid, request.context
         order = request.website.sale_get_order()
@@ -387,9 +386,7 @@ class website_sale(website_sale):
 
     @http.route()
     def cart(self, **post):
-        """
-        If one active delivery carrier exists apply this delivery to sale order.
-        """
+        """If one active delivery carrier exists apply this delivery to sale order."""
         cr, uid, context = request.cr, request.uid, request.context
 
         response_object = super(website_sale, self).cart(**post)
@@ -411,15 +408,12 @@ class website_sale(website_sale):
     @http.route(['/page/terms_and_conditions/'], type='http', auth="public", website=True,
                 multilang=True)
     def checkout_terms(self, **opt):
-        """
-        """
+        """Function for terms of condition."""
         return request.website.render('website_sale_osc.checkout_terms')
 
     @http.route('/shop/get_country', type='json', auth="public", website=True, multilang=True)
     def get_country(self, **post):
-        """
-        AJAX call in zippopotam module.
-        """
+        """AJAX call in zippopotam module."""
         cr, uid, context, registry, website = request.cr, request.uid, request.context, \
             request.registry, request.website
 
@@ -443,7 +437,7 @@ class website_sale(website_sale):
     @http.route('/shop/get_related_state', type='json', auth='public', website=True)
     def get_state(self, **post):
         """
-        Overwrites module: website_sale.
+        Overwrite module: website_sale.
 
         Returns states related to one country. If no states exist for one
         country an empty list will be returned.

@@ -42,6 +42,7 @@ class SaleOrder(models.Model):
 
     @api.depends('order_line', 'order_line.price_subtotal')
     def _compute_amount_subtotal(self):
+        """compute Function for amount_subtotal."""
         for rec in self:
             line_amount = sum([line.price_subtotal for line in rec.order_line if
                                not line.is_delivery])
@@ -50,10 +51,7 @@ class SaleOrder(models.Model):
 
     @api.model
     def tax_overview(self, order):
-        """
-        Calculate additional tax information for displaying them in
-        onestepcheckout page.
-        """
+        """Calculate additional tax information for displaying them in onestepcheckout page."""
         taxes = {}
         for line in order.order_line:
             for tax in line.tax_id:
@@ -74,6 +72,9 @@ class SaleOrder(models.Model):
 
 
 class ResPartner(models.Model):
+
+    """Add Fields to res.partner."""
+
     _inherit = 'res.partner'
 
     street_name = fields.Char(string='Street name')
