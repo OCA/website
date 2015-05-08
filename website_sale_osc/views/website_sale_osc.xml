@@ -93,7 +93,7 @@
 			<xpath expr="//tr[@id='order_delivery']" position="before">
 				<t t-foreach="tax_overview or []" t-as="tax">
 					<tr width="100" class="tax-overview">
-						<td class="label">
+						<td>
 							<span t-esc="tax['label']"/>
 						</td>
 						<td class="text-right">
