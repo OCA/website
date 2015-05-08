@@ -47,7 +47,7 @@ class website_sale(website_sale):
         #                                                                      #
         # -------------------------------------------------------------------- #
         cr, uid, context, registry, website = request.cr, request.uid, request.context, \
-                                              request.registry, request.website
+            request.registry, request.website
 
         # must have a draft sale order with lines at this point, otherwise reset
         order = request.website.sale_get_order()
@@ -301,8 +301,8 @@ class website_sale(website_sale):
             }
             domain = [(key, '_id' in key and '=' or 'ilike', '_id' in key and value and int(
                 value) or value)
-                      for key, value in shipping_info.items() if key in
-                      self.mandatory_billing_fields + ['type', 'parent_id']]
+                for key, value in shipping_info.items() if key in
+                self.mandatory_billing_fields + ['type', 'parent_id']]
             shipping_ids = orm_partner.search(cr, SUPERUSER_ID, domain, context=context)
             logger.info(' --- shipping_ids')
             logger.info(shipping_ids)
@@ -421,7 +421,7 @@ class website_sale(website_sale):
         AJAX call in zippopotam module.
         """
         cr, uid, context, registry, website = request.cr, request.uid, request.context, \
-                                              request.registry, request.website
+            request.registry, request.website
 
         orm_country = registry.get('res.country')
 

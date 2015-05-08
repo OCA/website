@@ -22,7 +22,7 @@ from openerp.models import Model
 from openerp import fields
 
 
-class website_config_settings(Model):
+class WebsiteConfigSettings(Model):
 
     """Settings for the OSC."""
 
@@ -68,4 +68,4 @@ class website_config_settings(Model):
         if user_ids:
             self.pool.get('res.users').write(cr, uid, user_ids, {'groups_id': setting})
 
-        return super(website_config_settings, self).write(cr, uid, ids, vals, context)
+        return super(WebsiteConfigSettings, self).write(cr, uid, ids, vals, context)

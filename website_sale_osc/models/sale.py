@@ -18,76 +18,38 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.models import Model
-from openerp import fields
-from openerp import SUPERUSER_ID
+from openerp import api, fields, models
 from openerp.addons import decimal_precision
 
 import logging
 _logger = logging.getLogger(__name__)
 
 
-class sale_order(Model):
+class SaleOrder(models.Model):
 
     """Overwrites and add Definitions to module: sale."""
 
     _inherit = 'sale.order'
 
-    def _amount_all_wrapper(self, cr, uid, ids, field_name, arg, context=None):
-        """
-        Overwrites module: sale.
-
-        Call original _amount_all_wrapper() function via super() function for
-        function field.
-        """
-        return super(sale_order, self)._amount_all_wrapper(cr, uid, ids, field_name, arg, context)
-
-    def _amount_all(self, cr, uid, ids, field_name, arg, context=None):
-        """
-        Overwrites module: sale.
-
-        Call original _amount_all() function and extend it with new subtotal
-        calculation.
-        """
-        res = super(sale_order, self)._amount_all(cr, uid, ids, field_name, arg, context=context)
-
-        currency_pool = self.pool.get('res.currency')
-        for order in self.browse(cr, uid, ids, context=context):
-            line_amount = sum([line.price_subtotal for line in order.order_line if
-                               line.is_delivery is False])
-            currency = order.pricelist_id.currency_id
-            res[order.id]['amount_subtotal'] = currency_pool.round(cr, uid, currency, line_amount)
-
-        return res
-
-    def _get_order(self, cr, uid, ids, context=None):
-        """
-        Overwrites module: sale.
-
-        Call original _get_order() function for function field.
-
-        Important: We can't use super() function here because of getting an
-        TypeError when adding or deleting products in cart: (TypeError:
-        super(type, obj): obj must be an instance or subtype of type).
-        """
-        result = {}
-        for line in self.pool.get('sale.order.line').browse(cr, uid, ids, context=context):
-            result[line.order_id.id] = True
-        return result.keys()
-
     amount_subtotal = fields.Float(
-        compute=_amount_all_wrapper,
-        digits_compute=decimal_precision.get_precision('Account'),
+        compute='_compute_amount_subtotal',
+        digits=decimal_precision.get_precision('Account'),
         string='Subtotal Amount',
-        store={
-                'sale.order': (lambda self, cr, uid, ids, c={}: ids, ['order_line'], 10),
-                'sale.order.line': (_get_order, ['price_unit', 'tax_id', 'discount',
-                                                 'product_uom_qty'], 10)},
-        multi='sums',
+        store=True,
         help="The amount without anything.",
-        track_visibility='always')
+        track_visibility='always'
+    )
 
-    def tax_overview(self, cr, uid, order, context=None):
+    @api.depends('order_line', 'order_line.price_subtotal')
+    def _compute_amount_subtotal(self):
+        for rec in self:
+            line_amount = sum([line.price_subtotal for line in rec.order_line if
+                               not line.is_delivery])
+            currency = rec.pricelist_id.currency_id
+            rec.amount_subtotal = currency.round(line_amount)
+
+    @api.model
+    def tax_overview(self, order):
         """
         Calculate additional tax information for displaying them in
         onestepcheckout page.
@@ -96,25 +58,22 @@ class sale_order(Model):
         for line in order.order_line:
             for tax in line.tax_id:
                 if str(tax.id) in taxes:
-                    taxes[str(tax.id)]['value'] += self._amount_line_tax(cr, uid, line,
-                                                                         context=context)
+                    taxes[str(tax.id)]['value'] += self._amount_line_tax(line)
                 else:
-                    taxes[str(tax.id)] = {'label': tax.name, 'value': self._amount_line_tax(
-                        cr, uid, line, context=context)}
+                    taxes[str(tax.id)] = {'label': tax.name, 'value': self._amount_line_tax(line)}
 
         # round and formatting valid taxes
         res = []
-        rc_obj = self.pool.get('res.currency')
         currency = order.pricelist_id.currency_id
         for key in taxes:
             if taxes[key]['value'] > 0:
-                taxes[key]['value'] = '%.2f' % rc_obj.round(cr, uid, currency, taxes[key]['value'])
+                taxes[key]['value'] = '%.2f' % currency.round(taxes[key]['value'])
                 res.append(taxes[key])
 
         return res
 
 
-class res_partner(Model):
+class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     street_name = fields.Char(string='Street name')

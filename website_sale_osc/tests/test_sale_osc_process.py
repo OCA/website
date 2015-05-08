@@ -24,9 +24,7 @@ import openerp.tests
 
 
 @openerp.tests.common.at_install(False)
-@openerp.tests.common.post_install(True)\
-
-
+@openerp.tests.common.post_install(True)
 class TestUi(openerp.tests.HttpCase):
     def test_01_admin_checkout(self):
         self.phantom_js("/", "openerp.Tour.run('shop_buy_product_osc', 'test')",
