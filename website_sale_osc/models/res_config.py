@@ -19,7 +19,7 @@
 #
 ##############################################################################
 from openerp.models import Model
-from openerp import fields
+from openerp import api, fields
 
 
 class WebsiteConfigSettings(Model):
@@ -43,7 +43,8 @@ class WebsiteConfigSettings(Model):
         relation='res.country',
         string='Checkout Countries')
 
-    def write(self, cr, uid, ids, vals, context=None):
+    @api.multi
+    def write(self, vals):
         """
         Add or remove website settings.
 
@@ -51,23 +52,23 @@ class WebsiteConfigSettings(Model):
         for portal and public users.
         """
         setting = []
-        group_checkout_terms = self.pool.get('ir.model.data').get_object_reference(
-            cr, uid, 'website_sale_osc', 'group_website_sale_terms_conditions')
+        group_checkout_terms = self.env['ir.model.data'].xmlid_to_res_id(
+            'website_sale_osc.group_website_sale_terms_conditions')
         if 'group_website_sale_terms_conditions' in vals:
             if vals['group_website_sale_terms_conditions']:
-                setting.append((4, group_checkout_terms[1]))
+                setting.append((4, group_checkout_terms))
             else:
-                setting.append((3, group_checkout_terms[1]))
+                setting.append((3, group_checkout_terms))
 
-        portal_group = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'base',
-                                                                           'group_portal')
-        user_ids = self.pool.get('res.users').search(cr, uid, [('groups_id', '=', portal_group[1])])
+        portal_group = self.env['ir.model.data'].xmlid_to_res_id('base.group_portal')
+        users = self.env['res.users'].search([('groups_id', '=', portal_group)])
 
-        public_user = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'base',
-                                                                          'public_user')
-        user_ids.append(public_user[1])
+        if users:
+            users.write({'groups_id': setting})
 
-        if user_ids:
-            self.pool.get('res.users').write(cr, uid, user_ids, {'groups_id': setting})
+        public_user = self.env.ref('base.public_user')
 
-        return super(WebsiteConfigSettings, self).write(cr, uid, ids, vals, context)
+        if public_user:
+            public_user.write({'groups_id': setting})
+
+        return super(WebsiteConfigSettings, self).write(vals)
