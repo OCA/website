@@ -3,10 +3,34 @@
 from openerp import SUPERUSER_ID
 from openerp import http
 from openerp.http import request
+from openerp.tools.translate import _
 
 from ..utils import validate_email
 from ..utils import HAS_PyDNS
 from ..utils import validate_phonenumber
+
+
+FIELDS_LABELS = {
+    'name': _(u'Name'),
+    'phone': _(u'Phone'),
+    'email': _(u'Email'),
+    'street2': _(u'Street'),
+    'city': _(u'City'),
+    'country_id': _(u'Country'),
+    'zip': _(u'Zip / Postal code'),
+    'street': _(u'Company Name'),
+    'state_id': _(u'State / Province'),
+    'vat': _(u'VAT Number'),
+    # shipping
+    'shipping_name': _(u'Name (Shipping)'),
+    'shipping_phone': _(u'Phone'),
+    'shipping_email': _(u'Email'),
+    'shipping_street2': _(u'Street'),
+    'shipping_city': _(u'City'),
+    'shipping_country_id': _(u'Country'),
+    'shipping_zip': _(u'Zip / Postal code'),
+    'shipping_state_id': _(u'State / Province'),
+}
 
 
 class ShopUserAccountController(http.Controller):
@@ -31,8 +55,19 @@ class ShopUserAccountController(http.Controller):
         ['shipping_%s' % x for x in mandatory_shipping_fields],
         True
     )
+    labels = FIELDS_LABELS
     # use this to inject your form fields helpers
     form_fields_helpers = {}
+
+    def translate(self, term):
+        cr, uid, context, registry = \
+            request.cr, request.uid, request.context, request.registry
+        translations = registry.get('ir.translation')
+        name = ''  # can ben empty since we are passing the source = term
+        _type = 'code'
+        lang = context.get('lang')
+        return translations._get_source(cr, uid, name, _type, lang,
+                                        source=term)
 
     @http.route(['/shop/my-account'], type='http', auth="user", website=True)
     def my_account(self, **post):
@@ -123,7 +158,10 @@ class ShopUserAccountController(http.Controller):
             'error': {},
             'form_fields_helpers': self.form_fields_helpers,
             'mandatory_fields': self.mandatory_fields,
-            'has_check_vat': hasattr(registry['res.partner'], 'check_vat')
+            'has_check_vat': hasattr(registry['res.partner'], 'check_vat'),
+            # we must force translations here
+            'labels': {k: self.translate(v)
+                       for k, v in self.labels.iteritems()},
         }
         return self.prepare_values(values)
 

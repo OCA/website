@@ -87,43 +87,43 @@
 
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'name'" />
-                      <t t-set="f_label" t-value="'Name'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                     </t>
 
                     <div t-if="has_check_vat" class="clearfix"/>
 
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'street'" />
-                      <t t-set="f_label" t-value="'Company Name'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                     </t>
 
                     <t t-if="has_check_vat">
                       <t t-call="website_sale_customer.account_base_text_field">
                         <t t-set="f_name" t-value="'vat'" />
-                        <t t-set="f_label" t-value="'VAT Number'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                       </t>
                     </t>
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'email'" />
-                      <t t-set="f_label" t-value="'Email'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                     </t>
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'phone'" />
-                      <t t-set="f_label" t-value="'Phone'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                     </t>
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'street2'" />
-                      <t t-set="f_label" t-value="'Street'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                     </t>
                     <div class="clearfix"/>
 
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'city'" />
-                      <t t-set="f_label" t-value="'City'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                     </t>
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'zip'" />
-                      <t t-set="f_label" t-value="'Zip / Postal code'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                     </t>
                     <div t-attf-class="form-group #{mandatory_fields.get('country_id') and 'required' or ''} #{error.get('country_id') and 'has-error' or ''} col-lg-6">
                         <label class="control-label" for="country_id">Country</label>
@@ -170,27 +170,27 @@
 
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'shipping_name'" />
-                      <t t-set="f_label" t-value="'Name (Shipping)'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                       <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
                     </t>
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'shipping_phone'" />
-                      <t t-set="f_label" t-value="'Phone'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                       <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
                     </t>
                     <t t-call="website_sale_customer.account_base_text_field">
-                      <t t-set="f_name" t-value="'shipping_street'" />
-                      <t t-set="f_label" t-value="'Street'" />
+                      <t t-set="f_name" t-value="'shipping_street2'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                       <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
                     </t>
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'shipping_city'" />
-                      <t t-set="f_label" t-value="'City'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                       <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
                     </t>
                     <t t-call="website_sale_customer.account_base_text_field">
                       <t t-set="f_name" t-value="'shipping_zip'" />
-                      <t t-set="f_label" t-value="'Zip / Postal Code'" />
+                      <t t-set="f_label" t-value="labels.get(f_name)" />
                       <t t-set="f_readonly" t-value="'readonly' if shipping_id &gt;= 0 else ''" />
                     </t>
                     <div t-attf-class="form-group #{mandatory_fields.get('shipping_country_id') and 'required' or ''} #{error.get('shipping_country_id') and 'has-error' or ''} col-lg-6">
