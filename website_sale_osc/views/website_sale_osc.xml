@@ -198,14 +198,6 @@
 									</div>
 									<div class="clearfix"/>
 
-									<div t-attf-class="form-group #{error.get('zip') and 'has-error' or ''} col-lg-6">
-										<label class="control-label" for="zip">
-											<div class="required_asterisk">*</div>
-											Zip / Postal Code
-										</label>
-										<input type="text" name="zip" class="form-control"
-											   t-att-value="checkout.get('zip')"/>
-									</div>
 									<div t-attf-class="form-group #{error.get('city') and 'has-error' or ''} col-lg-6">
 										<label class="control-label" for="city">
 											<div class="required_asterisk">*</div>
@@ -213,6 +205,14 @@
 										</label>
 										<input type="text" name="city" class="form-control"
 											   t-att-value="checkout.get('city')"/>
+									</div>
+									<div t-attf-class="form-group #{error.get('zip') and 'has-error' or ''} col-lg-6">
+										<label class="control-label" for="zip">
+											<div class="required_asterisk">*</div>
+											Zip / Postal Code
+										</label>
+										<input type="text" name="zip" class="form-control"
+											   t-att-value="checkout.get('zip')"/>
 									</div>
 									<div t-attf-class="form-group #{error.get('state_id') and 'has-error' or ''} col-lg-6">
 										<label class="control-label" for="state_id"
@@ -467,17 +467,6 @@
 									<div class="clearfix"/>
 								</div>
 
-								<div class="js_payment"
-									 t-if="acquirers and website_sale_order.amount_total">
-									<t t-foreach="acquirers or []" t-as="acquirer">
-										<div t-att-data-id="acquirer.id"
-											 class="oe_sale_acquirer_button hidden">
-											<div t-raw="acquirer.button"/>
-											<div t-field="acquirer.pre_msg"/>
-										</div>
-									</t>
-								</div>
-
 								<div groups="website_sale_osc.group_website_sale_terms_conditions">
 									<label class="checkbox checkbox-modal-link">
 										<input type="checkbox" name="terms_conditions"/>
@@ -487,6 +476,17 @@
 										   title="Terms and Conditions">Terms &amp; Condtions
 										</a>
 									</label>
+								</div>
+
+								<div class="js_payment"
+									 t-if="acquirers and website_sale_order.amount_total">
+									<t t-foreach="acquirers or []" t-as="acquirer">
+										<div t-att-data-id="acquirer.id"
+											 class="oe_sale_acquirer_button hidden">
+											<div t-raw="acquirer.button"/>
+											<div t-field="acquirer.pre_msg"/>
+										</div>
+									</t>
 								</div>
 
 								<div class="js_payment" t-if="not website_sale_order.amount_total">
