@@ -145,7 +145,8 @@
 									</small>
 								</h3>
 								<div id="osc_billing">
-									<div t-attf-class="form-group #{error.get('name') and 'has-error' or ''} col-lg-6">
+									<div t-attf-class="form-group #{error.get('name') and
+									'has-error' or ''} col-lg-12">
 										<label class="control-label" for="contact_name">
 											<div class="required_asterisk">*</div>
 											Your Name
@@ -153,7 +154,8 @@
 										<input type="text" name="name" class="form-control"
 											   t-att-value="checkout.get('name')"/>
 									</div>
-									<div t-attf-class="form-group #{error.get('company') and 'has-error' or ''} col-lg-6">
+									<div t-attf-class="form-group #{error.get('company') and
+									'has-error' or ''} col-lg-12">
 										<label class="control-label" for="company"
 											   style="font-weight: normal">Your Company
 										</label>
@@ -538,8 +540,8 @@
 		</template>
 
 		<!-- Include terms and condition link in footer -->
-		<template id="footer_terms" inherit_id="website.layout" name="Footer Terms">
-			<xpath expr='//ul[1]/li' position="after">
+		<template id="footer_terms" inherit_id="website.footer_default" name="Footer Terms">
+			<xpath expr="//ul[@id='products']/li" position="inside">
 				<li>
 					<a href="/page/terms_and_conditions/">Terms &amp; Conditions</a>
 				</li>
