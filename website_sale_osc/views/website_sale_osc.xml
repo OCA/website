@@ -138,7 +138,7 @@
 									Billing Information
 									<small t-if="website.user_id == user_id">
 										or
-										<a class='btn btn-primary' t-if="not partner"
+										<a class='btn btn-primary'
 										   t-attf-href="/web?redirect=#{ request.httprequest.url }">
 											Sign in
 										</a>
