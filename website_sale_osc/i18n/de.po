@@ -99,7 +99,7 @@ msgstr "Name (Versand)"
 #. module: website_sale_osc
 #: view:website:website_sale_osc.osc_onestepcheckout
 msgid "No."
-msgstr "Nummer."
+msgstr "Nr."
 
 #. module: website_sale_osc
 #: view:website:website_sale_osc.osc_onestepcheckout
@@ -240,7 +240,7 @@ msgstr "Allgemeine Geschäftsbedingungen"
 #. module: website_sale_osc
 #: view:website:website_sale_osc.osc_onestepcheckout
 msgid "Terms & Condtions"
-msgstr "Allgemeine Geschäftsbedingungen"
+msgstr "Allgemeinen Geschäftsbedingungen"
 
 #. module: website_sale_osc
 #: view:website:website_sale_osc.osc_onestepcheckout
