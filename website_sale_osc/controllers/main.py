@@ -24,9 +24,7 @@ from openerp.addons.website_sale.controllers.main import website_sale
 from openerp.addons.web import http
 from openerp.addons.web.http import request
 from openerp.report import report_sxw
-
-import logging
-logger = logging.getLogger(__name__)
+from openerp.tools.translate import _
 
 
 class website_sale(website_sale):
@@ -182,7 +180,7 @@ class website_sale(website_sale):
         acquirer_ids = payment_obj.search(cr, SUPERUSER_ID, [('website_published', '=', True)],
                                           context=context)
         values['acquirers'] = list(payment_obj.browse(cr, uid, acquirer_ids, context=context))
-        render_ctx = dict(context, submit_class='btn btn-primary', submit_txt='Order Now')
+        render_ctx = dict(context, submit_class='btn btn-primary', submit_txt=_('Order Now'))
         for acquirer in values['acquirers']:
             acquirer.button = payment_obj.render(
                 cr, SUPERUSER_ID, acquirer.id,
@@ -211,12 +209,10 @@ class website_sale(website_sale):
         if not order or order.state != 'draft' or not order.order_line:
             request.session['sale_order_id'] = None
             request.session['sale_transaction_id'] = None
-            logger.warn(' --- redirect shop')
             return request.redirect('/shop')
         # if transaction pending / done: redirect to confirmation
         tx = context.get('website_sale_transaction')
         if tx and tx.state != 'draft':
-            logger.warn(' --- redirect confirmation')
             return request.redirect('/shop/payment/confirmation/%s' % order.id)
 
         orm_partner = registry.get('res.partner')
@@ -228,8 +224,6 @@ class website_sale(website_sale):
         states_ids = orm_state.search(cr, SUPERUSER_ID, [], context=context)
         states = orm_state.browse(cr, SUPERUSER_ID, states_ids, context)
 
-        logger.info(' --- post')
-        logger.info(post)
         info = {}
         values = {
             'countries': countries,
@@ -240,8 +234,6 @@ class website_sale(website_sale):
         checkout = values['checkout']
         checkout.update(post)
 
-        logger.info(' --- checkout')
-        logger.info(checkout)
         values['error'] = self.checkout_form_validate(values['checkout'])
         if values['error']:
             return {
@@ -284,7 +276,6 @@ class website_sale(website_sale):
         else:
             partner_id = orm_partner.create(cr, SUPERUSER_ID, billing_info, context=context)
         shipping_id = None
-        logger.info(checkout.get('shipping_id'))
         if int(checkout.get('shipping_id')) == -1:
             shipping_info = {
                 'phone': post['shipping_phone'],
@@ -305,8 +296,6 @@ class website_sale(website_sale):
                 for key, value in shipping_info.items() if key in
                 self.mandatory_billing_fields + ['type', 'parent_id']]
             shipping_ids = orm_partner.search(cr, SUPERUSER_ID, domain, context=context)
-            logger.info(' --- shipping_ids')
-            logger.info(shipping_ids)
             if shipping_ids:
                 shipping_id = shipping_ids[0]
                 orm_partner.write(cr, SUPERUSER_ID, [shipping_id], shipping_info, context)
@@ -329,7 +318,6 @@ class website_sale(website_sale):
 
         order_line_obj.write(cr, SUPERUSER_ID, [order.id], order_info, context=context)
         request.session['sale_last_order_id'] = order.id
-        logger.info(' --- success')
         return {'success': True}
 
     def do_change_delivery(self, cr, uid, order, carrier_id, context=None):
@@ -413,7 +401,7 @@ class website_sale(website_sale):
 
     @http.route('/shop/get_country', type='json', auth="public", website=True, multilang=True)
     def get_country(self, **post):
-        """AJAX call in zippopotam module."""
+        """AJAX call."""
         cr, uid, context, registry, website = request.cr, request.uid, request.context, \
             request.registry, request.website
 

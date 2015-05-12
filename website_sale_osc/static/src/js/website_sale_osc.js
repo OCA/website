@@ -47,15 +47,6 @@
             if (result.order_subtotal) {
               $('#order_subtotal .oe_currency_value').text(result.order_subtotal);
             }
-            $('.tax-overview').remove();
-            // detailed tax overview is not correct, fix it first
-            /*if (result.order_total_tax_overview) {
-              var html = '';
-              for (var i = 0; i < result.order_total_tax_overview.length; i++) {
-                html += '<tr width="100" class="tax-overview"><td class="label"><span>' + result.order_total_tax_overview[i]['label'] + '</span></td><td class="text-right"><span class="oe_currency_value"><span>' + result.order_total_tax_overview[i]['value'] + '</span>&#160;&#8364;</span></td></tr>';
-              }
-              $('#order_total_taxes').after(html);
-            } */
             if (result.order_total_delivery) {
               $('#order_delivery .oe_currency_value').text(result.order_total_delivery);
             }

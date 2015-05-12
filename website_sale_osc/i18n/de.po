@@ -31,7 +31,7 @@ msgid "Checkout"
 msgstr "Checkout"
 
 #. module: website_sale_osc
-#: field:website,checkout_country_ids:0
+#: field:website.config.settings,checkout_country_ids:0
 msgid "Checkout Countries"
 msgstr "Checkout Länder"
 
@@ -103,6 +103,8 @@ msgstr "Nr."
 
 #. module: website_sale_osc
 #: view:website:website_sale_osc.osc_onestepcheckout
+#: code:addons/website_sale_osc/controllers/main.py:183
+#, python-format
 msgid "Order Now"
 msgstr "Jetzt Bestellen"
 
@@ -259,12 +261,12 @@ msgid "Total:"
 msgstr "Summe:"
 
 #. module: website_sale_osc
-#: field:website,use_all_checkout_countries:0
+#: field:website.config.settings,use_all_checkout_countries:0
 msgid "Use All Countries in Checkout"
 msgstr "Alle Länder im Checkout freigeben"
 
 #. module: website_sale_osc
-#: field:website,use_osc:0
+#: field:website.config.settings,use_osc:0
 msgid "Use OSC"
 msgstr "Benutze OSC"
 

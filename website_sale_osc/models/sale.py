@@ -21,9 +21,6 @@
 from openerp import api, fields, models
 from openerp.addons import decimal_precision
 
-import logging
-_logger = logging.getLogger(__name__)
-
 
 class SaleOrder(models.Model):
 

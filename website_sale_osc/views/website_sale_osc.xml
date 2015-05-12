@@ -88,23 +88,8 @@
 			</xpath>
 		</template>
 
-		<!-- Move order total to bottom in checkout totals, add additional tax information and add total tax information -->
+		<!-- Move order total to bottom in checkout totals, add total tax information -->
 		<template id="osc_total" name="Total" inherit_id="website_sale_delivery.cart_delivery">
-			<!--<xpath expr="//tr[@id='order_delivery']" position="before">
-				<t t-foreach="tax_overview or []" t-as="tax">
-					<tr width="100" class="tax-overview">
-						<td>
-							<span t-esc="tax['label']"/>
-						</td>
-						<td class="text-right">
-							<span class="oe_currency_value">
-								<span t-esc="tax['value']"/>
-								&#8364;
-							</span>
-						</td>
-					</tr>
-				</t>
-			</xpath>-->
 			<xpath expr="//tr[@id='order_delivery']" position="after">
 				<tr width="100" id="order_total">
 					<th>
