@@ -10,14 +10,6 @@
 			<field name="arch" type="xml">
 				<xpath expr="/form/div/group[@string='Language']" position="after">
 					<group string="Checkout">
-						<label for="group_website_sale_terms_conditions"/>
-						<div name="group_website_sale_terms_conditions">
-							<div>
-								<div name="group_website_sale_terms_conditions" class="oe_inline">
-									<field name="group_website_sale_terms_conditions"/>
-								</div>
-							</div>
-						</div>
 						<label for="use_osc"/>
 						<div name="use_osc">
 							<div>
@@ -26,24 +18,36 @@
 								</div>
 							</div>
 						</div>
-						<label for="use_all_checkout_countries"/>
-						<div name="use_all_checkout_countries">
+						<label for="group_website_sale_terms_conditions"
+								attrs="{'invisible': [('use_osc', '=', False)]}"/>
+						<div name="group_website_sale_terms_conditions"
+								attrs="{'invisible': [('use_osc', '=', False)]}">
+							<div>
+								<div name="group_website_sale_terms_conditions" class="oe_inline">
+									<field name="group_website_sale_terms_conditions"/>
+								</div>
+							</div>
+						</div>
+						<label for="use_all_checkout_countries"
+								attrs="{'invisible': [('use_osc', '=', False)]}"/>
+						<div name="use_all_checkout_countries"
+								attrs="{'invisible': [('use_osc', '=', False)]}">
 							<div>
 								<div name="use_all_checkout_countries" class="oe_inline">
 									<field name="use_all_checkout_countries"/>
 								</div>
 							</div>
 						</div>
-						<label for="checkout_country_ids"
-							   attrs="{'invisible': [('use_all_checkout_countries', '=', True)]}"/>
-						<div name="checkout_country_ids"
-							 attrs="{'invisible': [('use_all_checkout_countries', '=', True)]}">
-							<div>
-								<div name="checkout_country_ids" class="oe_inline">
-									<field name="checkout_country_ids"/>
+							<label for="checkout_country_ids"
+								   attrs="{'invisible': [('use_all_checkout_countries', '=', True)] or [('use_all_checkout_countries', '=', False)]}"/>
+							<div name="checkout_country_ids"
+								 attrs="{'invisible': [('use_all_checkout_countries', '=', True)]  or [('use_all_checkout_countries', '=', False)]}">
+								<div>
+									<div name="checkout_country_ids" class="oe_inline">
+										<field name="checkout_country_ids"/>
+									</div>
 								</div>
 							</div>
-						</div>
 					</group>
 				</xpath>
 			</field>

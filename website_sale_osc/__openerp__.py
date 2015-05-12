@@ -34,6 +34,7 @@ Provide an All-In-One Checkout for Your Customer
         'website_sale_delivery'
     ],
     'data': [
+        'security/ir.model.access.csv',
         'security/website_sale_ocs.xml',
         'views/res_config.xml',
         'views/website_sale_osc.xml',
