@@ -139,6 +139,9 @@
       });
     }
 
+    //
+    $carrier.find('input[checked="checked"]').trigger('click');
+
     // when clicking checkout submit button validate address data,
     // if all is fine form submit will be done in validate function because of
     // ajax call
