@@ -23,7 +23,7 @@ msgstr "-- Neue Adresse anlegen --"
 #. module: website_sale_osc
 #: view:website:website_sale_osc.osc_onestepcheckout
 msgid "Billing Information"
-msgstr "Abrechnungsinformationen"
+msgstr "Persönliche Informationen"
 
 #. module: website_sale_osc
 #: view:website.config.settings:website_sale_osc.view_website_config_settings_bd_inherit

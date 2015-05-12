@@ -452,26 +452,32 @@
 									<div class="clearfix"/>
 								</div>
 
+
 								<div groups="website_sale_osc.group_website_sale_terms_conditions">
-									<label class="checkbox checkbox-modal-link">
-										<input type="checkbox" name="terms_conditions"/>
-										I've accepted the
-										<a href="javascript:;"
-										   data-page-id="/page/terms_and_conditions/"
-										   title="Terms and Conditions">Terms &amp; Condtions
-										</a>
-									</label>
+									<ul>
+										<label class="checkbox checkbox-modal-link">
+											<input type="checkbox" name="terms_conditions"/>
+											I've accepted the
+											<a href="javascript:;"
+											   data-page-id="/page/terms_and_conditions/"
+											   title="Terms and Conditions">Terms &amp;
+												Condtions
+											</a>
+										</label>
+									</ul>
 								</div>
 
 								<div class="js_payment"
 									 t-if="acquirers and website_sale_order.amount_total">
-									<t t-foreach="acquirers or []" t-as="acquirer">
-										<div t-att-data-id="acquirer.id"
-											 class="oe_sale_acquirer_button hidden">
-											<div t-raw="acquirer.button"/>
-											<div t-field="acquirer.pre_msg"/>
-										</div>
-									</t>
+									<ul>
+										<t t-foreach="acquirers or []" t-as="acquirer">
+											<div t-att-data-id="acquirer.id"
+												 class="oe_sale_acquirer_button hidden">
+												<div t-raw="acquirer.button"/>
+												<div t-field="acquirer.pre_msg"/>
+											</div>
+										</t>
+									</ul>
 								</div>
 
 								<div class="js_payment" t-if="not website_sale_order.amount_total">
