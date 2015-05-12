@@ -90,7 +90,7 @@
 
 		<!-- Move order total to bottom in checkout totals, add additional tax information and add total tax information -->
 		<template id="osc_total" name="Total" inherit_id="website_sale_delivery.cart_delivery">
-			<xpath expr="//tr[@id='order_delivery']" position="before">
+			<!--<xpath expr="//tr[@id='order_delivery']" position="before">
 				<t t-foreach="tax_overview or []" t-as="tax">
 					<tr width="100" class="tax-overview">
 						<td>
@@ -104,7 +104,7 @@
 						</td>
 					</tr>
 				</t>
-			</xpath>
+			</xpath>-->
 			<xpath expr="//tr[@id='order_delivery']" position="after">
 				<tr width="100" id="order_total">
 					<th>
@@ -535,7 +535,35 @@
 		<!-- Checkout Terms & Conditions -->
 		<template id="checkout_terms" name="Terms And Conditions">
 			<t t-call="website.layout">
-				<div id="wrap" class="oe_structure oe_empty"></div>
+				<div id="wrap" class="oe_structure oe_empty">
+					<section>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<h1 class="text-center">Edit your Terms And Conditions</h1>
+									<h4 class="text-muted">By using the Websitebuilder.
+										You find the Terms of conditions page by using the link in
+										the footer or click on this picture.
+									</h4>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="oe_dark mt16 mb16">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<a href="/page/terms_and_conditions/">
+										<img alt="Odoo CMS - a big picture"
+											 class="img img-responsive"
+											 src="/website_sale_osc/static/src/img/terms.png"
+											 style="margin: 0 auto;"/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 			</t>
 		</template>
 
