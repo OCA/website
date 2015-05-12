@@ -18,7 +18,6 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-# -*- coding: utf-8 -*-
 from openerp import SUPERUSER_ID
 from openerp.addons.website_sale.controllers.main import website_sale
 from openerp.addons.web import http
@@ -42,35 +41,28 @@ class website_sale(website_sale):
             return super(website_sale, self).checkout()
 
         # -------------------------------------------------------------------- #
-        #                                                                      #
         #                       Checkout Part                                  #
-        #                                                                      #
         # -------------------------------------------------------------------- #
         cr, uid, context, registry, website = request.cr, request.uid, request.context, \
             request.registry, request.website
 
         # must have a draft sale order with lines at this point, otherwise reset
         order = request.website.sale_get_order()
-        if not order or order.state != 'draft' or not order.order_line:
-            request.session['sale_order_id'] = None
-            request.session['sale_transaction_id'] = None
-            return request.redirect('/shop')
-        # if transaction pending / done: redirect to confirmation
         tx = context.get('website_sale_transaction')
-        if tx and tx.state != 'draft':
-            return request.redirect('/shop/payment/confirmation/%s' % order.id)
+
+        redirection = self.checkout_redirection(order)
+        if redirection:
+            return redirection
 
         self.get_pricelist()
 
-        orm_partner = registry.get('res.partner')
-        orm_user = registry.get('res.users')
-        orm_country = registry.get('res.country')
-        state_orm = registry.get('res.country.state')
-        states_ids = state_orm.search(cr, SUPERUSER_ID, [], context=context)
-        states = state_orm.browse(cr, SUPERUSER_ID, states_ids, context)
-        partner = orm_user.browse(cr, SUPERUSER_ID, request.uid, context).partner_id
+        values = self.checkout_values(post)
 
         # get countries dependent on website settings
+        orm_country = registry.get('res.country')
+        orm_user = registry.get('res.users')
+        partner = orm_user.browse(cr, SUPERUSER_ID, request.uid, context).partner_id
+
         country_ids = []
         if website.use_all_checkout_countries:
             country_ids = orm_country.search(cr, SUPERUSER_ID, [], context=context)
@@ -79,78 +71,15 @@ class website_sale(website_sale):
                 cr, SUPERUSER_ID, [('id', 'in', [c.id for c in website.checkout_country_ids])],
                 context=context)
         countries = orm_country.browse(cr, SUPERUSER_ID, country_ids, context)
-
-        shipping_id = None
-        shipping_ids = []
-        checkout = {}
+        values['countries'] = countries
 
         if not post:
             if request.uid != request.website.user_id.id:
-                checkout.update(self.checkout_parse('billing', partner))
-                checkout.update({'street': partner.street_name,
-                                 'street_number': partner.street_number})
-
-                shipping_ids = orm_partner.search(
-                    cr, SUPERUSER_ID,
-                    [("parent_id", "=", partner.id),
-                     ('type', "=", 'delivery')],
-                    context=context)
-            else:
-                order = website.sale_get_order(force_create=1, context=context)
-                if order.partner_id:
-                    domain = [("active", "=", False), ("partner_id", "=", order.partner_id.id)]
-                    user_ids = request.registry['res.users'].search(cr, SUPERUSER_ID, domain,
-                                                                    context=context)
-                    if not user_ids or request.website.user_id.id not in user_ids:
-                        checkout.update(self.checkout_parse("billing", order.partner_id))
-        else:
-            checkout = self.checkout_parse('billing', post)
-            try:
-                shipping_id = int(post["shipping_id"])
-            except ValueError:
-                pass
-            if shipping_id == -1:
-                checkout.update(self.checkout_parse('shipping', post))
-
-        if shipping_id is None:
-            if not order:
-                order = request.website.sale_get_order(context=context)
-            if order and order.partner_shipping_id:
-                shipping_id = order.partner_shipping_id.id
-
-        shipping_ids = list(set(shipping_ids) - set([partner.id]))
-
-        if shipping_id == partner.id:
-            shipping_id = 0
-        elif shipping_id > 0 and shipping_id not in shipping_ids:
-            shipping_ids.append(shipping_id)
-        elif shipping_id is None and shipping_ids:
-            shipping_id = shipping_ids[0]
-
-        ctx = dict(context, show_address=1)
-        shippings = []
-        if shipping_ids:
-            shippings = shipping_ids and orm_partner.browse(
-                cr, SUPERUSER_ID, list(shipping_ids), ctx) or []
-        if shipping_id > 0:
-            shipping = orm_partner.browse(cr, SUPERUSER_ID, shipping_id, ctx)
-            checkout.update(self.checkout_parse("shipping", shipping))
-
-        checkout['shipping_id'] = shipping_id
-
-        values = {
-            'countries': countries,
-            'states': states,
-            'checkout': checkout,
-            'shipping_id': partner.id != shipping_id and shipping_id or 0,
-            'shippings': shippings,
-            'error': {},
-        }
+                values['checkout'].update({'street': partner.street_name,
+                                           'street_number': partner.street_number})
 
         # -------------------------------------------------------------------- #
-        #                                                                      #
         #                       Payment Part                                   #
-        #                                                                      #
         # -------------------------------------------------------------------- #
         payment_obj = request.registry.get('payment.acquirer')
 
