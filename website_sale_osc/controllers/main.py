@@ -352,7 +352,7 @@ class website_sale(website_sale):
                 'order_total_taxes': rml_obj.formatLang(updated_order.amount_tax,
                                                         digits=price_digits),
                 'order_total_tax_overview': tax_overview,
-                'order_total_delivery': rml_obj.formatLang(updated_order.carrier_id.normal_price,
+                'order_total_delivery': rml_obj.formatLang(updated_order.amount_delivery,
                                                            digits=price_digits)
             }
         else:
