@@ -72,3 +72,39 @@ class WebsiteConfigSettings(Model):
             public_user.write({'groups_id': setting})
 
         return super(WebsiteConfigSettings, self).write(vals)
+
+
+class SaleConfiguration(Model):
+
+    """Settings for the OSC."""
+
+    _inherit = 'sale.config.settings'
+
+    @api.multi
+    def write(self, vals):
+        """
+        Add or remove sale settings.
+
+        Different shipping address for portal and public users.
+        """
+        setting = []
+        group_shipping = self.env['ir.model.data'].xmlid_to_res_id(
+            'sale.group_delivery_invoice_address')
+        if 'group_sale_delivery_address' in vals:
+            if vals['group_sale_delivery_address']:
+                setting.append((4, group_shipping))
+            else:
+                setting.append((3, group_shipping))
+
+        portal_group = self.env['ir.model.data'].xmlid_to_res_id('base.group_portal')
+        users = self.env['res.users'].search([('groups_id', '=', portal_group)])
+
+        if users:
+            users.write({'groups_id': setting})
+
+        public_user = self.env.ref('base.public_user')
+
+        if public_user:
+            public_user.write({'groups_id': setting})
+
+        return super(SaleConfiguration, self).write(vals)
