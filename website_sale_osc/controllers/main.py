@@ -133,20 +133,20 @@ class website_sale(website_sale):
         billing_info = dict((k, v) for k, v in checkout.items() if 'shipping_' not in k and k !=
                             'company')
         billing_info['parent_id'] = (company and company.id) or None
-        partner_id = None
+        partner = None
 
         if request.uid != request.website.user_id.id:
-            partner_id = orm_user.sudo().browse(request.uid).partner_id.id
+            partner = orm_user.sudo().browse(request.uid).partner_id
         elif order.partner_id:
             domain = [('active', '=', False), ('partner_id', '=', order.partner_id.id)]
             users = request.env['res.users'].sudo().search(domain)
             if not users or request.website.user_id.id not in users.ids:
-                partner_id = order.partner_id.id
+                partner = order.partner_id
 
-        if partner_id:
-            orm_partner.sudo().write([partner_id], billing_info)
+        if partner:
+            partner.sudo().write(billing_info)
         else:
-            partner_id = orm_partner.sudo().create(billing_info).id
+            partner = orm_partner.sudo().create(billing_info)
         shipping_partner_id = None
         if int(checkout.get('shipping_id')) == -1:
             shipping_info = {
@@ -159,7 +159,7 @@ class website_sale(website_sale):
                 'name': post['shipping_name'],
                 'email': post['email'],
                 'type': 'delivery',
-                'parent_id': partner_id,
+                'parent_id': partner.id,
                 'country_id': post['shipping_country_id'],
                 'state_id': post['shipping_state_id'],
             }
@@ -175,16 +175,16 @@ class website_sale(website_sale):
                 shipping_partner_id = orm_partner.sudo().create(shipping_info).id
 
         order_info = {
-            'partner_id': partner_id,
-            'message_follower_ids': [(4, partner_id), (3, request.website.partner_id.id)],
-            'partner_invoice_id': partner_id
+            'partner_id': partner.id,
+            'message_follower_ids': [(4, partner.id), (3, request.website.partner_id.id)],
+            'partner_invoice_id': partner.id
         }
         order_info.update(request.env['sale.order'].sudo().onchange_partner_id(
-            partner_id)['value'])
+            partner.id)['value'])
         # we need to update partner_shipping_id after onchange_partner_id() call
         # otherwise the deselection of the option 'Ship to a different address'
         # would be overwritten by an existing shipping partner type
-        order_info.update({'partner_shipping_id': shipping_partner_id or partner_id})
+        order_info.update({'partner_shipping_id': shipping_partner_id or partner.id})
         order_info.pop('user_id')
 
         order.sudo().write(order_info)
