@@ -18,11 +18,10 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.models import Model
-from openerp import api, fields
+from openerp import api, fields, models
 
 
-class WebsiteConfigSettings(Model):
+class WebsiteConfigSettings(models.TransientModel):
 
     """Settings for the OSC."""
 
@@ -74,7 +73,7 @@ class WebsiteConfigSettings(Model):
         return super(WebsiteConfigSettings, self).write(vals)
 
 
-class SaleConfiguration(Model):
+class SaleConfiguration(models.TransientModel):
 
     """Settings for the OSC."""
 

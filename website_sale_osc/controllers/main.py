@@ -39,8 +39,6 @@ class website_sale(website_sale):
         if not request.website.use_osc:
             return super(website_sale, self).checkout()
 
-        website = request.website
-
         # must have a draft sale order with lines at this point, otherwise reset
         order = request.website.sale_get_order()
 
@@ -50,22 +48,18 @@ class website_sale(website_sale):
 
         values = self.checkout_values(post)
 
+        partner = request.env['res.users'].sudo().browse(request.uid).partner_id
+
         # get countries dependent on website settings
-        orm_country = request.env['res.country']
-        orm_user = request.env['res.users']
-        partner = orm_user.sudo().browse(request.uid).partner_id
+        countries_domain = []
+        if not request.website.use_all_checkout_countries:
+            countries_domain = [('id', 'in', request.website.checkout_country_ids.ids)]
 
-        if website.use_all_checkout_countries:
-            countries = orm_country.search([])
-        else:
-            countries = orm_country.search(
-                [('id', 'in', [c.id for c in website.checkout_country_ids])])
-        values['countries'] = countries
+        values['countries'] = request.env['res.country'].search(countries_domain)
 
-        if not post:
-            if request.uid != request.website.user_id.id:
-                values['checkout'].update({'street': partner.street_name,
-                                           'street_number': partner.street_number})
+        if not post and request.uid != request.website.user_id.id:
+            values['checkout'].update({'street': partner.street_name,
+                                       'street_number': partner.street_number})
 
         result = self.payment(post=post)
         values.update(result.qcontext)
@@ -84,22 +78,18 @@ class website_sale(website_sale):
             request.session['sale_order_id'] = None
             request.session['sale_transaction_id'] = None
             return request.redirect('/shop')
+
         # if transaction pending / done: redirect to confirmation
         tx = request.context.get('website_sale_transaction')
         if tx and tx.state != 'draft':
             return request.redirect('/shop/payment/confirmation/%s' % order.id)
 
         orm_partner = request.env['res.partner']
-        orm_user = request.env['res.users']
-        orm_country = request.env['res.country']
-        countries = orm_country.sudo().search([])
-        orm_state = request.env['res.country.state']
-        states = orm_state.sudo().search([])
 
         info = {}
         values = {
-            'countries': countries,
-            'states': states,
+            'countries': request.env['res.country'].sudo().search([]),
+            'states': request.env['res.country.state'].search([]),
             'checkout': info,
             'shipping': post.get('shipping_different')
         }
@@ -116,8 +106,8 @@ class website_sale(website_sale):
         company_name = ''
         if 'company' in checkout:
             company_name = checkout['company']
-        company = None
 
+        company = None
         if 'company' in post and post['company']:
             companies = orm_partner.sudo().search([('name', 'ilike', company_name),
                                                    ('is_company', '=', True)])
@@ -133,13 +123,13 @@ class website_sale(website_sale):
         billing_info = dict((k, v) for k, v in checkout.items() if 'shipping_' not in k and k !=
                             'company')
         billing_info['parent_id'] = (company and company.id) or None
-        partner = None
 
+        partner = None
         if request.uid != request.website.user_id.id:
-            partner = orm_user.sudo().browse(request.uid).partner_id
+            partner = request.env['res.users'].sudo().browse(request.uid).partner_id
         elif order.partner_id:
-            domain = [('active', '=', False), ('partner_id', '=', order.partner_id.id)]
-            users = request.env['res.users'].sudo().search(domain)
+            users = request.env['res.users'].sudo().search([
+                ('active', '=', False), ('partner_id', '=', order.partner_id.id)])
             if not users or request.website.user_id.id not in users.ids:
                 partner = order.partner_id
 
@@ -147,7 +137,8 @@ class website_sale(website_sale):
             partner.sudo().write(billing_info)
         else:
             partner = orm_partner.sudo().create(billing_info)
-        shipping_partner_id = None
+
+        shipping_partner = None
         if int(checkout.get('shipping_id')) == -1:
             shipping_info = {
                 'phone': post['shipping_phone'],
@@ -169,10 +160,10 @@ class website_sale(website_sale):
                 self.mandatory_billing_fields + ['type', 'parent_id']]
             shipping_partners = orm_partner.sudo().search(domain)
             if shipping_partners:
-                shipping_partner_id = shipping_partners[0].id
-                orm_partner.write([shipping_partner_id], shipping_info)
+                shipping_partner = shipping_partners[0]
+                shipping_partner.write(shipping_info)
             else:
-                shipping_partner_id = orm_partner.sudo().create(shipping_info).id
+                shipping_partner = orm_partner.sudo().create(shipping_info)
 
         order_info = {
             'partner_id': partner.id,
@@ -184,7 +175,8 @@ class website_sale(website_sale):
         # we need to update partner_shipping_id after onchange_partner_id() call
         # otherwise the deselection of the option 'Ship to a different address'
         # would be overwritten by an existing shipping partner type
-        order_info.update({'partner_shipping_id': shipping_partner_id or partner.id})
+        order_info.update({
+            'partner_shipping_id': (shipping_partner and shipping_partner.id) or partner.id})
         order_info.pop('user_id')
 
         order.sudo().write(order_info)
@@ -193,38 +185,38 @@ class website_sale(website_sale):
 
     def do_change_delivery(self, order, carrier_id):
         """Apply delivery amount to current sale order."""
-        if order and carrier_id:
-
-            # order_id is needed to get delivery carrier price
-            if not request.context.get('order_id'):
-                request.context['order_id'] = order.id
-
-            # recompute delivery costs
-            request.env['sale.order']._check_carrier_quotation(order, force_carrier_id=carrier_id)
-
-            # generate updated total prices
-            updated_order = request.website.sale_get_order()
-            product_pool = request.env['product.product']
-            rml_obj = report_sxw.rml_parse(request.cr, SUPERUSER_ID, product_pool._name,
-                                           context=request.context)
-            price_digits = rml_obj.get_digits(dp='Product Price')
-
-            # get additional tax information
-            tax_overview = request.env['sale.order'].tax_overview(updated_order)
-
-            return {
-                'success': True,
-                'order_total': rml_obj.formatLang(updated_order.amount_total, digits=price_digits),
-                'order_subtotal': rml_obj.formatLang(updated_order.amount_subtotal,
-                                                     digits=price_digits),
-                'order_total_taxes': rml_obj.formatLang(updated_order.amount_tax,
-                                                        digits=price_digits),
-                'order_total_tax_overview': tax_overview,
-                'order_total_delivery': rml_obj.formatLang(updated_order.amount_delivery,
-                                                           digits=price_digits)
-            }
-        else:
+        if not order or not carrier_id:
             return {'success': False}
+
+        # order_id is needed to get delivery carrier price
+        if not request.context.get('order_id'):
+            request.context['order_id'] = order.id
+
+        # recompute delivery costs
+        request.env['sale.order']._check_carrier_quotation(order, force_carrier_id=carrier_id)
+
+        # generate updated total prices
+        updated_order = request.website.sale_get_order()
+
+        rml_obj = report_sxw.rml_parse(request.cr, SUPERUSER_ID,
+                                       request.env['product.product']._name,
+                                       context=request.context)
+        price_digits = rml_obj.get_digits(dp='Product Price')
+
+        # get additional tax information
+        tax_overview = request.env['sale.order'].tax_overview(updated_order)
+
+        return {
+            'success': True,
+            'order_total': rml_obj.formatLang(updated_order.amount_total, digits=price_digits),
+            'order_subtotal': rml_obj.formatLang(updated_order.amount_subtotal,
+                                                 digits=price_digits),
+            'order_total_taxes': rml_obj.formatLang(updated_order.amount_tax,
+                                                    digits=price_digits),
+            'order_total_tax_overview': tax_overview,
+            'order_total_delivery': rml_obj.formatLang(updated_order.amount_delivery,
+                                                       digits=price_digits)
+        }
 
     @http.route(['/shop/checkout/change_delivery'], type='json', auth="public", website=True,
                 multilang=True)
