@@ -6,7 +6,6 @@
 #        (c) 2014 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
 #                 Igor Pastor <igorpg@antiun.com>
 #                 Endika Iglesias <endikaig@antiun.com>
-#                 Antonio Espinosa <antonioea@antiun.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as

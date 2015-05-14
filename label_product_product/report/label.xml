@@ -10,7 +10,7 @@
             <div style="float:left;width:396px;height:140px;margin:5px 5px 30px 5px;padding:3px;border:solid #eee 1px;">
                 <div style="float:left;font-size:20px;text-align:left;width:100%;padding-left:5px;">
                     <div style="float:left;width:40%;"><span t-field="o.default_code"/></div>
-                    <div style="float:right;width:60%;"><span t-field="o.lst_price"/> EUR</div>
+                    <div style="float:right;width:60%;"><span t-field="o.total_price"/> EUR</div>
                 </div>
                 <div>
                     <div style="float:left;width:40%;height:50px;overflow:hidden;">

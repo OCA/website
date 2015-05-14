@@ -6,7 +6,6 @@
 #        (c) 2014 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
 #                 Igor Pastor <igorpg@antiun.com>
 #                 Endika Iglesias <endikaig@antiun.com>
-#                 Antonio Espinosa <antonioea@antiun.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,12 +22,18 @@
 #
 ##############################################################################
 
-from openerp import models, api
+from openerp import models, fields, api
 
 
 class ProductProduct(models.Model):
     _inherit = 'product.product'
 
-    @api.multi
-    def label_print(self):
-        return self.env['report'].get_action(self, 'report_label')
+    total_price = fields.Char(
+        string="Product total price", compute="_get_product_total_price")
+
+    @api.one
+    def _get_product_total_price(self):
+        sum_tax = 0
+        for tax in self.taxes_id:
+            sum_tax += self.lst_price * tax.amount
+        self.total_price = str('%.2f' % (self.lst_price + sum_tax))
