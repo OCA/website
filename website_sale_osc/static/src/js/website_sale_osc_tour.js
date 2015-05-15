@@ -34,7 +34,7 @@
                 //step 5
                 title:     "test without input error",
                 waitFor:   'div[id="osc_billing"] .has-error',
-                element:   'form[action="/payment/transfer/feedback"] .btn:contains("Pay Now ")',
+                element:   'form[action="/payment/transfer/feedback"] .btn:contains("Pay Now")',
                 onload: function (tour) {
                     if ($("input[name='name']").val() === "")
                         $("input[name='name']").val("website_sale-test-shoptest");
