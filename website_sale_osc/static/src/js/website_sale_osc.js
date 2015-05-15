@@ -4,29 +4,24 @@
   var website = openerp.website;
 
   function startTransaction(acquirer_id, form) {
-	  if (typeof openerp.website.prePaymenProcess === 'function') {
-	    // the transaction process should only start when the pre payment process is
-	    // finished
-	    openerp.website.prePaymenProcess(function(result) {
-	      openerp.jsonRpc('/shop/payment/transaction/' + acquirer_id, 'call', {}).then(function (data) {
-	        form.submit();
-	      });
-	    });
-	  } else {
-	    openerp.jsonRpc('/shop/payment/transaction/' + acquirer_id, 'call', {}).then(function (data) {
-	      form.submit();
-	    });
-	  }
-	}
+    if (typeof openerp.website.prePaymenProcess === 'function') {
+      // the transaction process should only start when the pre payment process is
+      // finished
+      openerp.website.prePaymenProcess(function(result) {
+        openerp.jsonRpc('/shop/payment/transaction/' + acquirer_id, 'call', {}).then(function (data) {
+          form.submit();
+        });
+      });
+    } else {
+      openerp.jsonRpc('/shop/payment/transaction/' + acquirer_id, 'call', {}).then(function (data) {
+        form.submit();
+      });
+    }
+  }
 
   function getPostAddressFields(elms, data) {
     elms.each(function(index) {
-      var elm = elms.eq(index);
-      if (elm.is('input') && elm.parent().hasClass('has-error')) {
-        data[elm.attr('name')] = '';
-      } else {
-        data[elm.attr('name')] = elm.val();
-      }
+      data[$(this).attr('name')] = $(this).val();
     });
 
     return data;
