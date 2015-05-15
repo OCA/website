@@ -4,7 +4,7 @@ Provide an All-In-One Checkout for Your Odoo Customer
 
 <img src="https://raw.githubusercontent.com/blooparksystems/website_sale_osc/master/static/description/osc.png">
 
-The One Step Checkout bings different options:
+The One Step Checkout brings different options:
 
 <img src="https://raw.githubusercontent.com/blooparksystems/website_sale_osc/master/static/description/settings.png">
 
