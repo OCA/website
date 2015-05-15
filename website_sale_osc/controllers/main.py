@@ -96,23 +96,19 @@ class website_sale(website_sale):
         checkout = values['checkout']
         checkout.update(post)
 
-        values['error'] = self.checkout_form_validate(values['checkout'])
+        values['error'] = self.checkout_form_validate(checkout)
         if values['error']:
             return {
                 'success': False,
                 'errors': values['error']
             }
 
-        company_name = ''
-        if 'company' in checkout:
-            company_name = checkout['company']
-
         company = None
-        if 'company' in post and post['company']:
-            companies = orm_partner.sudo().search([('name', 'ilike', company_name),
+        if 'company' in checkout:
+            companies = orm_partner.sudo().search([('name', 'ilike', checkout['company']),
                                                    ('is_company', '=', True)])
             company = (companies and companies[0]) or orm_partner.sudo().create({
-                'name': company_name,
+                'name': checkout['company'],
                 'is_company': True
             })
 
@@ -120,8 +116,8 @@ class website_sale(website_sale):
         if checkout.get('street_number'):
             checkout['street'] = checkout.get('street') + ' ' + checkout.get('street_number')
 
-        billing_info = dict((k, v) for k, v in checkout.items() if 'shipping_' not in k and k !=
-                            'company')
+        billing_info = dict((k, v) for k, v in checkout.items()
+                            if 'shipping_' not in k and k != 'company')
         billing_info['parent_id'] = (company and company.id) or None
 
         partner = None
