@@ -22,10 +22,4 @@
 #
 ##############################################################################
 
-from openerp import models, fields, api
-
-
-class ResPartnerCategory(models.Model):
-    _inherit = 'res.partner.category'
-
-    description = fields.Char(string='Description', translate=True)
+from . import models

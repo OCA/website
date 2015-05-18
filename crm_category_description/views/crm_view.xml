@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="crm_case_categ-view" model="ir.ui.view">
+    <field name="name">CRM Tags extra fields</field>
+    <field name="model">crm.case.categ</field>
+    <field name="inherit_id" ref="crm.crm_case_categ-view"/>
+    <field name="arch" type="xml">
+        <field name="name" position="after">
+            <field name="description"/>
+        </field>
+    </field>
+</record>
+
+<record id="crm_case_categ_tree-view" model="ir.ui.view">
+    <field name="name">CRM Tags extra columns</field>
+    <field name="model">crm.case.categ</field>
+    <field name="inherit_id" ref="crm.crm_case_categ_tree-view"/>
+    <field name="arch" type="xml">
+        <field name="name" position="after">
+            <field name="description"/>
+        </field>
+    </field>
+</record>
+
+</data>
+</openerp>

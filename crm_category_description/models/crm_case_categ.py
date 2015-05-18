@@ -25,7 +25,7 @@
 from openerp import models, fields, api
 
 
-class ResPartnerCategory(models.Model):
-    _inherit = 'res.partner.category'
+class CrmCaseCateg(models.Model):
+    _inherit = 'crm.case.categ'
 
     description = fields.Char(string='Description', translate=True)

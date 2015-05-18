@@ -1,10 +1,10 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
     :alt: AGPLv3 License
 
-Partner category description
+CRM category description
 ============================
 
-This module was written to extend partner category fields, adding a description.
+This module was written to extend crm category fields, adding a description.
 
 Credits
 =======
