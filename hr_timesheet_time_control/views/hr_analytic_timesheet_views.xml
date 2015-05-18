@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="hr_analytic_timesheet_time">
+            <field name="name">hr.analytic.timesheet.time</field>
+            <field name="model">hr.analytic.timesheet</field>
+            <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
+            <field name="arch" type="xml">
+                <field name="unit_amount" position="after">
+                    <button name="button_end_work"
+                            string="Stop"
+                            type="object"
+                            icon="STOCK_STOP"
+                            attrs="{'invisible': [('unit_amount', '>', 0)]}"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+
