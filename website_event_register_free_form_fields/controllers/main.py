@@ -27,39 +27,40 @@ class WebsiteSale(WebsiteSale):
 
     def checkout_values(self, data=None):
         values = super(WebsiteSale, self).checkout_values(data=data)
-        event = request.env['event.event'].sudo().browse(
-            int(request.session['event_id']))
+        if request.session.get('free_tickets'):
+            event = request.env['event.event'].sudo().browse(
+                int(request.session['event_id']))
 
-        extra_fields = []
-        select_option = []
+            extra_fields = []
+            select_option = []
 
-        if 'phone' in self.mandatory_free_registration_fields:
-            self.mandatory_free_registration_fields.remove('phone')
-        if 'zip' in self.mandatory_free_registration_fields:
-            self.mandatory_free_registration_fields.remove('zip')
-        if 'city' in self.mandatory_free_registration_fields:
-            self.mandatory_free_registration_fields.remove('city')
-        if 'street' in self.mandatory_free_registration_fields:
-            self.mandatory_free_registration_fields.remove('street')
-        if 'street2' in self.mandatory_free_registration_fields:
-            self.mandatory_free_registration_fields.remove('street2')
+            if 'phone' in self.mandatory_free_registration_fields:
+                self.mandatory_free_registration_fields.remove('phone')
+            if 'zip' in self.mandatory_free_registration_fields:
+                self.mandatory_free_registration_fields.remove('zip')
+            if 'city' in self.mandatory_free_registration_fields:
+                self.mandatory_free_registration_fields.remove('city')
+            if 'street' in self.mandatory_free_registration_fields:
+                self.mandatory_free_registration_fields.remove('street')
+            if 'street2' in self.mandatory_free_registration_fields:
+                self.mandatory_free_registration_fields.remove('street2')
 
-        for field in event['available_fields']:
-            extra_fields.append(field.field_id.key)
-            self.optional_free_registration_fields.append(field.field_id.key)
-            if field.is_required:
-                self.mandatory_free_registration_fields.append(
-                    field.field_id.key)
-            if 'options_model' in field and field.options_model:
-                model = str(field['options_model'])
-                list_values = field['options_available'].split(',')
-                for option in list_values:
-                    model_obj = request.env[model].sudo().search(
-                        [('name', '=', option)])
-                    if model_obj:
-                        select_option.append(option)
+            for field in event['available_fields']:
+                extra_fields.append(field.field_id.key)
+                self.optional_free_registration_fields.append(field.field_id.key)
+                if field.is_required:
+                    self.mandatory_free_registration_fields.append(
+                        field.field_id.key)
+                if 'options_model' in field and field.options_model:
+                    model = str(field['options_model'])
+                    list_values = field['options_available'].split(',')
+                    for option in list_values:
+                        model_obj = request.env[model].sudo().search(
+                            [('name', '=', option)])
+                        if model_obj:
+                            select_option.append(option)
 
-        values['extra_fields'] = extra_fields
-        if select_option:
-            values['select_option'] = select_option
+            values['extra_fields'] = extra_fields
+            if select_option:
+                values['select_option'] = select_option
         return values
