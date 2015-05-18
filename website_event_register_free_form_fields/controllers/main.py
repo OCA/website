@@ -47,7 +47,8 @@ class WebsiteSale(WebsiteSale):
 
             for field in event['available_fields']:
                 extra_fields.append(field.field_id.key)
-                self.optional_free_registration_fields.append(field.field_id.key)
+                self.optional_free_registration_fields.append(
+                    field.field_id.key)
                 if field.is_required:
                     self.mandatory_free_registration_fields.append(
                         field.field_id.key)
