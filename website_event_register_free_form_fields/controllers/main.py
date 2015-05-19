@@ -27,7 +27,9 @@ class WebsiteSale(WebsiteSale):
 
     def checkout_values(self, data=None):
         values = super(WebsiteSale, self).checkout_values(data=data)
-        if request.session.get('free_tickets'):
+        values['free_tickets'] = request.session.get('free_tickets')
+        values['has_paid_tickets'] = request.session.get('has_paid_tickets')
+        if values['free_tickets']:
             event = request.env['event.event'].sudo().browse(
                 int(request.session['event_id']))
 
