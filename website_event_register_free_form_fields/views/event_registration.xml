@@ -42,8 +42,8 @@
                           </t>
                          <t t-if="not free_tickets and has_paid_tickets">
                             <div t-attf-class="form-group #{error.get('phone') and 'has-error' or ''} col-lg-6">
-                                <label class="control-label" for="phone" style="display:block;">Phone</label>
-                                <input type="text" name="phone" class="form-control" t-att-value="checkout.get('phone')" style="display:block;"/>
+                                <label class="control-label" for="phone" style="display:none;">Phone</label>
+                                <input type="text" name="phone" class="form-control" t-att-value="checkout.get('phone')" placeholder="teléfono" style="display:block;"/>
                             </div>
                           </t>
         </xpath>
