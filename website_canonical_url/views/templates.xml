@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="canonical_url_link" inherit_id="website.layout" name="Canonical URL">
+            <xpath expr="//title" position="after">
+                <t t-if="request and website">
+                    <t t-foreach="website.get_canonical_urls(request.httprequest)" t-as="canonical_url">
+                        <link rel="canonical" t-att-href="canonical_url" />
+                    </t>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>
