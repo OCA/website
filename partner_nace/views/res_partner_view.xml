@@ -28,7 +28,7 @@
         </field>
         <filter string="Salesperson" position="after">
             <filter string="Activity"
-                    domain="[]"
+                    domain="[('is_company', '=', True)]"
                     context="{'group_by': 'main_nace'}"/>
         </filter>
     </field>
