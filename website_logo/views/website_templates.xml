@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>        
+    <template id="layout_logo_show" inherit_id="website.layout_logo_show">
+        <xpath expr="//a//img" position="attributes">
+            <attribute name="src">/website_logo.png</attribute>
+        </xpath>
+    </template>
+    </data>
+</openerp>
