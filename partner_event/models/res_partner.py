@@ -21,6 +21,9 @@ class ResPartner(models.Model):
     attended_registration_count = fields.Integer(
         string='Attended registration number',
         compute='_count_attended_registration', store=True)
+    event_registrations = fields.One2many(
+        comodel_name="event.registration",
+        inverse_name="partner_id", string="Event registrations")
 
     @api.one
     @api.depends('registrations')

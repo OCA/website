@@ -25,6 +25,11 @@
                                string="Events"/>
                     </button>
                 </div>
+                <notebook position="inside">
+                    <page string="Events">
+                        <field name="event_registrations"/>
+                    </page>
+                </notebook>
             </field>
         </record>
 

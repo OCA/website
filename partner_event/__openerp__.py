@@ -4,6 +4,8 @@
 #    OpenERP, Odoo Source Management Solution
 #    Copyright (c) 2014 Serv. Tecnol. Avanzados (http://www.serviciosbaeza.com)
 #                       Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+#        (c) 2014 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
+#                 Javier Iniesta <javieria@antiun.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published
