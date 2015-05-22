@@ -13,7 +13,7 @@
     <field name="name">CRM sector tree</field>
     <field name="model">crm.sector</field>
     <field name="arch" type="xml">
-        <tree string="Sectors" editable="bottom">
+        <tree string="Sectors" editable="top">
             <field name="name"/>
             <field name="parent_id"/>
         </tree>

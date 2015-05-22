@@ -13,7 +13,7 @@
     <field name="name">CRM employees_range tree</field>
     <field name="model">crm.employees_range</field>
     <field name="arch" type="xml">
-        <tree string="Employees ranges" editable="bottom">
+        <tree string="Employees ranges" editable="top">
             <field name="name"/>
         </tree>
     </field>

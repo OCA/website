@@ -13,7 +13,7 @@
     <field name="name">CRM job_position tree</field>
     <field name="model">crm.job_position</field>
     <field name="arch" type="xml">
-        <tree string="Job positions" editable="bottom">
+        <tree string="Job positions" editable="top">
             <field name="name"/>
             <field name="parent_id"/>
         </tree>

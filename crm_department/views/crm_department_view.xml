@@ -13,7 +13,7 @@
     <field name="name">CRM department tree</field>
     <field name="model">crm.department</field>
     <field name="arch" type="xml">
-        <tree string="Departments" editable="bottom">
+        <tree string="Departments" editable="top">
             <field name="name"/>
             <field name="parent_id"/>
         </tree>

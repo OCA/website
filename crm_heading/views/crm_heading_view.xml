@@ -13,7 +13,7 @@
             <field name="name">CRM heading tree</field>
             <field name="model">crm.heading</field>
             <field name="arch" type="xml">
-                <tree string="Headings" editable="bottom">
+                <tree string="Headings" editable="top">
                     <field name="name"/>
                 </tree>
             </field>

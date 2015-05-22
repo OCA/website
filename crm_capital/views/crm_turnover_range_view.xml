@@ -13,7 +13,7 @@
     <field name="name">CRM Turnover range tree</field>
     <field name="model">crm.turnover_range</field>
     <field name="arch" type="xml">
-        <tree string="Turnover ranges" editable="bottom">
+        <tree string="Turnover ranges" editable="top">
             <field name="name"/>
         </tree>
     </field>
