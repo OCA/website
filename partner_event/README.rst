@@ -6,6 +6,9 @@ smart button, and the detailed list in a notebook page.
 
 It also includes a field for view and search only attended events.
 
+And finally, partner column is visible on registration one2many list inside
+the event.
+
 Credits
 =======
 
