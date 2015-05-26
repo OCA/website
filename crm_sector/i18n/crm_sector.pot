@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-24 13:47+0000\n"
-"PO-Revision-Date: 2015-01-24 13:47+0000\n"
+"POT-Creation-Date: 2015-05-06 09:29+0000\n"
+"PO-Revision-Date: 2015-05-06 09:29+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -46,6 +46,11 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: crm_sector
+#: model:ir.model,name:crm_sector.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_sector
 #: field:crm.sector,name:0
 msgid "Name"
 msgstr ""
@@ -66,10 +71,29 @@ msgid "Parent id"
 msgstr ""
 
 #. module: crm_sector
+#: model:ir.model,name:crm_sector.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: crm_sector
+#: view:crm.lead:crm_sector.view_crm_case_leads_filter_sector
+#: view:crm.lead:crm_sector.view_crm_case_opportunities_filter_sector
+msgid "Sales Team"
+msgstr ""
+
+#. module: crm_sector
+#: view:res.partner:crm_sector.view_res_partner_filter_sector
+msgid "Salesperson"
+msgstr ""
+
+#. module: crm_sector
+#: view:crm.lead:crm_sector.crm_case_form_view_leads_sector
+#: view:crm.lead:crm_sector.crm_case_form_view_oppor_sector
 #: view:crm.lead:crm_sector.view_crm_case_leads_filter_sector
 #: view:crm.lead:crm_sector.view_crm_case_opportunities_filter_sector
 #: field:crm.lead,sector:0
 #: model:ir.model,name:crm_sector.model_crm_sector
+#: view:res.partner:crm_sector.view_partner_form_sector
 #: view:res.partner:crm_sector.view_res_partner_filter_sector
 #: field:res.partner,sector:0
 msgid "Sector"
