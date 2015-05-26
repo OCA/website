@@ -41,7 +41,8 @@ Include tax in price on website.
 
     # Views templates, pages, menus, options and snippets
     'data': [
-        'views/product_item_view.xml'
+        'views/product_item_view.xml',
+        'views/product_price_view.xml',
     ],
 
     # Qweb templates
