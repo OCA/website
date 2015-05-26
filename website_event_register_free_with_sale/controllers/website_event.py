@@ -52,6 +52,5 @@ class WebsiteEvent(website_event):
         request.session.update({
             'free_tickets': post['free_tickets'],
             'event_id': post['event_id'],
-            'has_paid_tickets': has_paid_tickets,
         })
         return request.redirect("/shop/checkout")

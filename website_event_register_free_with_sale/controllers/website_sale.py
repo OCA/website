@@ -48,8 +48,9 @@ class WebsiteSale(website_sale):
 
     @http.route(['/shop/checkout'], type='http', auth="public", website=True)
     def checkout(self, **post):
-        if (request.session.get('free_tickets') and
-                not request.session.get('has_paid_tickets')):
+        order = request.website.sale_get_order(force_create=0)
+        has_paid_tickets = bool(order.order_line)
+        if request.session.get('free_tickets') and not has_paid_tickets:
             values = self.checkout_values(data={'shipping_id': -1})
             return request.website.render("website_sale.checkout", values)
         else:
@@ -83,9 +84,12 @@ class WebsiteSale(website_sale):
             if registration.partner_id:
                 registration._onchange_partner()
             registration.registration_open()
-        if request.session.get('has_paid_tickets'):
+        order = request.website.sale_get_order(force_create=0)
+        has_paid_tickets = bool(order.order_line)
+        if has_paid_tickets:
             return super(WebsiteSale, self).confirm_order(**post)
         elif request.session.get('free_tickets'):
+            request.session['free_tickets'] = 0
             return http.request.render(
                 'website_event_register_free.partner_register_confirm',
                 {'registration': registration})
