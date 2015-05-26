@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+    <record id="view_event_event_form" model="ir.ui.view">
+      <field name="name">view_event_event_form</field>
+      <field name="model">event.event</field>
+      <field name="inherit_id" ref="event.view_event_form"/>
+      <field name="arch" type="xml">
+
+        <field name="twitter_hashtag" position="after">
+          <field name="allow_duplicates"/>
+        </field>
+
+      </field>
+    </record>
+  </data>
+</openerp>
