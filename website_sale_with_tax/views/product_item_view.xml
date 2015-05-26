@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+<data>
+
+	<template id="products_item_with_tax" inherit_id="website_sale.products_item">
+	    <xpath expr="//div[@class='product_price']" position="replace">
+	      <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price" t-if="product.product_variant_ids">
+	          <b>
+	              <t t-if="(compute_currency(product.lst_price) - product.price_with_tax) &gt; 0.1">
+	                <del class="text-danger" style="white-space: nowrap;" t-field="product.lst_price" t-field-options='{
+	                  "widget": "monetary",
+	                  "from_currency": "product.company_id.currency_id",
+	                  "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
+	                }'/>&amp;nbsp;
+	              </t>
+	              <span t-field="product.price_with_tax" style="white-space: nowrap;"  t-field-options='{
+	                   "widget": "monetary",
+	                   "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
+	               }'>
+	              </span>
+	              <span itemprop="price" style="display:none;" t-esc="product.price_with_tax"/>
+	              <span itemprop="priceCurrency" style="display:none;" t-esc="user_id.partner_id.property_product_pricelist.currency_id.name"/>
+	          </b>
+	      </div>
+	  </xpath>
+	</template>
+
+
+</data>
+</openerp>
