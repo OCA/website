@@ -14,11 +14,7 @@
                           "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
                        }'/>
                       <b class="oe_price" style="white-space: nowrap;"
-                        t-field="product.price_with_tax"
-                        t-field-options='{
-                           "widget": "monetary",
-                           "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
-                       }'/>
+                        t-field="product.price_with_tax"/>
                       <span itemprop="price" style="display:none;" t-esc="product.price_with_tax"/>
                       <span itemprop="priceCurrency" style="display:none;" t-esc="user_id.partner_id.property_product_pricelist.currency_id.name"/>
                   </h4>

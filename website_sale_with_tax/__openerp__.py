@@ -43,6 +43,7 @@ Include tax in price on website.
     'data': [
         'views/product_item_view.xml',
         'views/product_price_view.xml',
+        'views/product_cart_products_view.xml',
     ],
 
     # Qweb templates

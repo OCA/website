@@ -24,8 +24,22 @@
 from openerp import models, fields, api
 
 
-class ProductProduct(models.Model):
+class ProductTemplate(models.Model):
     _inherit = 'product.template'
+
+    price_with_tax = fields.Float(
+        string="Price with tax", compute="_get_product_total_price_with_tax")
+
+    @api.one
+    def _get_product_total_price_with_tax(self):
+        sum_tax = 0
+        for tax in self.taxes_id:
+            sum_tax += self.price * tax.amount
+        self.price_with_tax = ('%.2f' % (self.price + sum_tax))
+
+
+class ProductProduct(models.Model):
+    _inherit = 'product.product'
 
     price_with_tax = fields.Float(
         string="Price with tax", compute="_get_product_total_price_with_tax")
