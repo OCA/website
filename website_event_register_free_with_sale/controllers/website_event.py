@@ -47,6 +47,8 @@ class WebsiteEvent(website_event):
                 order = request.website.sale_get_order(force_create=1)
                 order.with_context(event_ticket_id=ticket.id)._cart_update(
                     product_id=ticket.product_id.id, add_qty=qty)
+        if not post['free_tickets'] and not has_paid_tickets:
+            return request.redirect("/event/%s" % post['event_id'])
         request.session.update({
             'free_tickets': post['free_tickets'],
             'event_id': post['event_id'],
