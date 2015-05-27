@@ -17,5 +17,21 @@
             </field>
         </record>
 
+        <record id="view_crm_case_form_view_leads" model="ir.ui.view">
+            <field name="name">crm.lead.form.city</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
+            <field name="arch" type="xml">
+                <field name="street2" position="after">
+                    <field name="better_zip_id"
+                        options="{'create_name_field': 'city'}"
+                        colspan="4"
+                        placeholder="City completion"
+                        class="oe_edit_only" />
+                </field>
+            </field>
+        </record>
+
+
     </data>
 </openerp>
