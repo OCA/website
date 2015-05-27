@@ -41,7 +41,8 @@ function pos_with_tax_widgets(instance, module){ //module is instance.point_of_s
             for(i=product_taxes.length;i--;){
                 total_amount += product_taxes[i].amount;
             }
-            product.price = (product.list_price + (product.list_price * total_amount)).toFixed(2)
+            product.price_base = parseFloat(product.price);
+            product.price = parseFloat((product.list_price + (product.list_price * total_amount)).toFixed(2));
         },
         replace: function($target){
             this.renderElement();
@@ -53,9 +54,9 @@ function pos_with_tax_widgets(instance, module){ //module is instance.point_of_s
             var cached = this.product_cache.get_node(product.id);
             if(!cached){
                 var image_url = this.get_product_image_url(product);
-                this.get_product_price_with_tax(product)
+                this.get_product_price_with_tax(product);
 
-                var product_html = QWeb.render('Product_pos_tax',{
+                var product_html = QWeb.render('Product',{
                         widget:  this,
                         product: product,
                         image_url: this.get_product_image_url(product),

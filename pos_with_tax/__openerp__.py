@@ -33,19 +33,17 @@ Include tax in price on POS.
     'version': '1.0',
 
     # Dependencies
-    'depends': [
-        'base',
-        'website_sale'
-    ],
+    'depends': ['base',
+                'point_of_sale'],
     'external_dependencies': {},
 
     # Views templates, pages, menus, options and snippets
     'data': [
+            'views/pos_template.xml',
     ],
 
     # Qweb templates
     'qweb': [
-        'static/src/xml/pos.xml',
     ],
 
     # Your information
