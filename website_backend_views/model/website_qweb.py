@@ -23,7 +23,7 @@ from lxml import etree
 from openerp import models
 
 
-class IrQweb(models.Model):
+class WebsiteQweb(models.Model):
     _inherit = 'website.qweb'
 
     def render_tag_website_backend_view(
