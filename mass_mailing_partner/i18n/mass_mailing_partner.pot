@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-04 12:13+0000\n"
-"PO-Revision-Date: 2015-04-04 12:13+0000\n"
+"POT-Creation-Date: 2015-05-27 09:11+0000\n"
+"PO-Revision-Date: 2015-05-27 09:11+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,19 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: mass_mailing_partner
+#: model:ir.model,name:mass_mailing_partner.model_mail_mass_mailing_contact
+msgid "Mass Mailing Contact"
+msgstr ""
+
+#. module: mass_mailing_partner
 #: field:res.partner,mass_mailing_contacts:0
 msgid "Mass mailing contacts"
 msgstr ""
 
 #. module: mass_mailing_partner
-#: field:mail.mass_mailing.contact,partner_id:0
+#: model:ir.model,name:mass_mailing_partner.model_res_partner
 #: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_search_partner
+#: field:mail.mass_mailing.contact,partner_id:0
 msgid "Partner"
 msgstr ""
+
