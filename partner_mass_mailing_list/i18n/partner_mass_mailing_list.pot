@@ -18,60 +18,60 @@ msgstr ""
 #. module: partner_mass_mailing_list
 #: model:ir.actions.act_window,name:partner_mass_mailing_list.action_partner_mail_list
 msgid "Add to mailing list"
-msgstr "Añadir a lista de correos"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: view:partner.mail.list.wizard:partner_mass_mailing_list.partner_mail_list_wizard_form
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: model:ir.model,name:partner_mass_mailing_list.model_partner_mail_list_wizard
 #: view:partner.mail.list.wizard:partner_mass_mailing_list.partner_mail_list_wizard_form
 msgid "Create contact mailing list"
-msgstr "Crear contacto de lista de correos"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: view:partner.mail.list.wizard:partner_mass_mailing_list.partner_mail_list_wizard_form
 msgid "Create contacts"
-msgstr "Crear contactos"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: field:partner.mail.list.wizard,create_uid:0
 msgid "Created by"
-msgstr "Creado por"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: field:partner.mail.list.wizard,create_date:0
 msgid "Created on"
-msgstr "Creado en"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: field:partner.mail.list.wizard,id:0
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: field:partner.mail.list.wizard,write_uid:0
 msgid "Last Updated by"
-msgstr "Última actualización por"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: field:partner.mail.list.wizard,write_date:0
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: field:partner.mail.list.wizard,mail_list:0
 msgid "Mailing List"
-msgstr "Lista de correos"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: field:partner.mail.list.wizard,partners:0
 msgid "Partners"
-msgstr "Empresas"
+msgstr ""
 
 #. module: partner_mass_mailing_list
 #: view:partner.mail.list.wizard:partner_mass_mailing_list.partner_mail_list_wizard_form
 msgid "or"
-msgstr "o"
+msgstr ""

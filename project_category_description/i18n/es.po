@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * project_category_description
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-27 09:49+0000\n"
+"PO-Revision-Date: 2015-05-27 09:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_category_description
+#: model:ir.model,name:project_category_description.model_project_category
+msgid "Category of project's task, issue, ..."
+msgstr "Categoría de la tarea del proyecto, la incidencia, ..."
+
+#. module: project_category_description
+#: field:project.category,description:0
+msgid "Description"
+msgstr "Descripción"
+

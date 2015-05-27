@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* crm_job_position
+#   * crm_job_position
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-24 13:47+0000\n"
-"PO-Revision-Date: 2015-01-24 13:47+0000\n"
+"POT-Creation-Date: 2015-05-27 09:03+0000\n"
+"PO-Revision-Date: 2015-05-27 09:03+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,25 @@ msgid "ID"
 msgstr "ID"
 
 #. module: crm_job_position
+#: view:crm.lead:crm_job_position.crm_case_form_view_leads_job_position
+#: view:crm.lead:crm_job_position.crm_case_form_view_oppor_job_position
+#: view:crm.lead:crm_job_position.view_crm_case_opportunities_filter_job_position
+#: field:crm.lead,job_position:0
+#: model:ir.model,name:crm_job_position.model_crm_job_position
+#: view:res.partner:crm_job_position.view_partner_form_job_position
+#: view:res.partner:crm_job_position.view_res_partner_filter_job_position
+#: field:res.partner,job_position:0
+msgid "Job position"
+msgstr "Puesto de trabajo"
+
+#. module: crm_job_position
+#: view:crm.job_position:crm_job_position.crm_job_position_tree_view
+#: model:ir.actions.act_window,name:crm_job_position.crm_job_position_action
+#: model:ir.ui.menu,name:crm_job_position.menu_crm_job_position
+msgid "Job positions"
+msgstr "Puestos de trabajo"
+
+#. module: crm_job_position
 #: field:crm.job_position,write_uid:0
 msgid "Last Updated by"
 msgstr "Última actualización por"
@@ -44,6 +63,11 @@ msgstr "Última actualización por"
 #: field:crm.job_position,write_date:0
 msgid "Last Updated on"
 msgstr "Última actualización en"
+
+#. module: crm_job_position
+#: model:ir.model,name:crm_job_position.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
 
 #. module: crm_job_position
 #: field:crm.job_position,name:0
@@ -66,25 +90,23 @@ msgid "Parent id"
 msgstr "ID del padre"
 
 #. module: crm_job_position
+#: model:ir.model,name:crm_job_position.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: crm_job_position
 #: view:crm.lead:crm_job_position.view_crm_case_leads_filter_job_position
 #: view:crm.lead:crm_job_position.view_crm_case_opportunities_filter_job_position
-#: field:crm.lead,job_position:0
-#: model:ir.model,name:crm_job_position.model_crm_job_position
+msgid "Sales Team"
+msgstr "Equipo de ventas"
+
+#. module: crm_job_position
 #: view:res.partner:crm_job_position.view_res_partner_filter_job_position
-#: field:res.partner,job_position:0
-msgid "Job position"
-msgstr "Puesto de trabajo"
+msgid "Salesperson"
+msgstr "Comercial"
 
 #. module: crm_job_position
-#: field:crm.lead,function:0
-#: field:res.partner,function:0
-msgid "Detailed job position"
-msgstr "Puesto de trabajo detallado"
-
-#. module: crm_job_position
-#: view:crm.job_position:crm_job_position.crm_job_position_tree_view
-#: model:ir.actions.act_window,name:crm_job_position.crm_job_position_action
-#: model:ir.ui.menu,name:crm_job_position.menu_crm_job_position
-msgid "Job positions"
-msgstr "Puestos de trabajo"
+#: view:crm.lead:crm_job_position.view_crm_case_leads_filter_job_position
+msgid "job_position"
+msgstr ""
 

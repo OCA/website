@@ -6,19 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-24 13:47+0000\n"
-"PO-Revision-Date: 2015-01-24 13:47+0000\n"
+"POT-Creation-Date: 2015-05-27 08:07+0000\n"
+"PO-Revision-Date: 2015-05-27 08:07+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: crm_heading
-#: field:crm.heading,children:0
-msgid "Children"
-msgstr ""
 
 #. module: crm_heading
 #: field:crm.heading,create_uid:0
@@ -28,6 +23,23 @@ msgstr ""
 #. module: crm_heading
 #: field:crm.heading,create_date:0
 msgid "Created on"
+msgstr ""
+
+#. module: crm_heading
+#: view:crm.lead:crm_heading.crm_case_form_view_leads_heading
+#: view:crm.lead:crm_heading.crm_case_form_view_oppor_heading
+#: field:crm.lead,heading:0
+#: model:ir.model,name:crm_heading.model_crm_heading
+#: view:res.partner:crm_heading.view_partner_form_heading
+#: field:res.partner,heading:0
+msgid "Heading"
+msgstr ""
+
+#. module: crm_heading
+#: view:crm.heading:crm_heading.crm_heading_tree_view
+#: model:ir.actions.act_window,name:crm_heading.crm_heading_action
+#: model:ir.ui.menu,name:crm_heading.menu_crm_heading
+msgid "Headings"
 msgstr ""
 
 #. module: crm_heading
@@ -46,39 +58,17 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: crm_heading
+#: model:ir.model,name:crm_heading.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_heading
 #: field:crm.heading,name:0
 msgid "Name"
 msgstr ""
 
 #. module: crm_heading
-#: field:crm.heading,parent_left:0
-msgid "Parent Left"
-msgstr ""
-
-#. module: crm_heading
-#: field:crm.heading,parent_right:0
-msgid "Parent Right"
-msgstr ""
-
-#. module: crm_heading
-#: field:crm.heading,parent_id:0
-msgid "Parent id"
-msgstr ""
-
-#. module: crm_heading
-#: view:crm.lead:crm_heading.view_crm_case_leads_filter_heading
-#: view:crm.lead:crm_heading.view_crm_case_opportunities_filter_heading
-#: field:crm.lead,heading:0
-#: model:ir.model,name:crm_heading.model_crm_heading
-#: view:res.partner:crm_heading.view_res_partner_filter_heading
-#: field:res.partner,heading:0
-msgid "Heading"
-msgstr ""
-
-#. module: crm_heading
-#: view:crm.heading:crm_heading.crm_heading_tree_view
-#: model:ir.actions.act_window,name:crm_heading.crm_heading_action
-#: model:ir.ui.menu,name:crm_heading.menu_crm_heading
-msgid "Headings"
+#: model:ir.model,name:crm_heading.model_res_partner
+msgid "Partner"
 msgstr ""
 
