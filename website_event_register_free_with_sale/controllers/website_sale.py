@@ -72,13 +72,13 @@ class WebsiteSale(website_sale):
                 request.session['event_id'])
             if (http.request.env.ref('base.public_user') !=
                     http.request.env.user):
-                partner_id = http.request.env.user.partner_id.id
+                partner = http.request.env.user.partner_id
             else:
-                partner_id = False
+                partner = False
             # Use same hook as without website_sale
             reg_obj = http.request.env['event.registration']
             registration_vals = reg_obj._prepare_registration(
-                event, post, http.request.env.user.id, partner_id=partner_id)
+                event, post, http.request.env.user.id, partner=partner)
             registration = reg_obj.sudo().create(registration_vals)
             if registration.partner_id:
                 registration._onchange_partner()
