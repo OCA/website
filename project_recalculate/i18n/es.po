@@ -1,0 +1,150 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* project_recalculate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-28 22:07+0000\n"
+"PO-Revision-Date: 2015-05-28 22:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_recalculate
+#: view:project.recalculate.wizard:project_recalculate.wizard_project_recalculate_form
+msgid "\"\n"
+"      Continue?"
+msgstr "\"\n"
+"      Continuar?"
+
+#. module: project_recalculate
+#: view:project.recalculate.wizard:project_recalculate.wizard_project_recalculate_form
+msgid "\" will be recalculated.\n"
+"      The reference date is \""
+msgstr "\" se recalculará.\n"
+"      La fecha tomada como referencia es \""
+
+#. module: project_recalculate
+#: help:project.task,from_days:0
+msgid "Anticipation days from date begin or date end"
+msgstr "Días de anticipación a la fecha de inicio o fin"
+
+#. module: project_recalculate
+#: field:project.project,calculation_type:0
+msgid "Calculation type"
+msgstr "Tipo de calculo"
+
+#. module: project_recalculate
+#: code:addons/project_recalculate/wizard/recalculate_wizard.py:49
+#, python-format
+msgid "Cannot recalculate project because your project don't have date end."
+msgstr "No se puede recalcular el proyecto porque no tiene fecha fin."
+
+#. module: project_recalculate
+#: code:addons/project_recalculate/wizard/recalculate_wizard.py:44
+#, python-format
+msgid "Cannot recalculate project because your project don't have date start."
+msgstr "No se puede recalcular el proyecto porque no tiene fecha inicio."
+
+#. module: project_recalculate
+#: view:project.recalculate.wizard:project_recalculate.wizard_project_recalculate_form
+msgid "Continue"
+msgstr "Continuar"
+
+#. module: project_recalculate
+#: field:project.recalculate.wizard,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: project_recalculate
+#: field:project.recalculate.wizard,create_date:0
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: project_recalculate
+#: selection:project.project,calculation_type:0
+msgid "Date begin"
+msgstr "Fecha inicio"
+
+#. module: project_recalculate
+#: selection:project.project,calculation_type:0
+msgid "Date end"
+msgstr "Fecha fin"
+
+#. module: project_recalculate
+#: code:addons/project_recalculate/wizard/recalculate_wizard.py:44
+#: code:addons/project_recalculate/wizard/recalculate_wizard.py:49
+#, python-format
+msgid "Error!"
+msgstr "Error!"
+
+#. module: project_recalculate
+#: field:project.task,estimated_days:0
+msgid "Estimated days"
+msgstr "Días estimados"
+
+#. module: project_recalculate
+#: help:project.task,estimated_days:0
+msgid "Estimated days to end"
+msgstr "Días estimados para completar"
+
+#. module: project_recalculate
+#: field:project.task,from_days:0
+msgid "From days"
+msgstr "Días desde"
+
+#. module: project_recalculate
+#: field:project.recalculate.wizard,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: project_recalculate
+#: field:project.recalculate.wizard,write_uid:0
+msgid "Last Updated by"
+msgstr "última actualización por"
+
+#. module: project_recalculate
+#: field:project.recalculate.wizard,write_date:0
+msgid "Last Updated on"
+msgstr "última actualización en"
+
+#. module: project_recalculate
+#: model:ir.model,name:project_recalculate.model_project_project
+#: field:project.recalculate.wizard,project:0
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: project_recalculate
+#: field:project.recalculate.wizard,project_date:0
+msgid "Project date"
+msgstr "Fecha proyecto"
+
+#. module: project_recalculate
+#: model:ir.actions.act_window,name:project_recalculate.wizard_project_recalculate
+msgid "Project recalculate"
+msgstr "Recalcular proyecto"
+
+#. module: project_recalculate
+#: view:project.recalculate.wizard:project_recalculate.wizard_project_recalculate_form
+msgid "Project tasks \""
+msgstr "Las tareas del proyecto \""
+
+#. module: project_recalculate
+#: view:project.project:project_recalculate.edit_project_recalculate
+msgid "Recalculate project"
+msgstr "Recalcular proyecto"
+
+#. module: project_recalculate
+#: model:ir.model,name:project_recalculate.model_project_task
+msgid "Task"
+msgstr "Tareas"
+
+#. module: project_recalculate
+#: help:project.project,calculation_type:0
+msgid "how to calculate tasks with date start or date end references"
+msgstr "Cómo organizar las tareas con la fecha inicio o con la fecha fin como referencia"
