@@ -21,11 +21,9 @@
 #
 ##############################################################################
 
-from openerp import models, fields, api
-
-import logging
-from pprint import pformat
-_logger = logging.getLogger(__name__)
+from openerp import models, fields
+from openerp.osv import osv
+from openerp.tools.translate import _
 
 
 class ProjectProject(models.Model):
@@ -64,6 +62,19 @@ class ProjectProject(models.Model):
                 fields.Datetime.to_string(date_end))
 
     def project_recalculate(self):
+        if not self.calculation_type:
+            raise osv.except_osv(_('Error!'), _("Cannot recalculate project "
+                                                "because your project don't "
+                                                "have calculation type."))
+        if self.calculation_type == 'date_begin' and not self.date_start:
+            raise osv.except_osv(_('Error!'), _("Cannot recalculate project "
+                                                "because your project don't "
+                                                "have date start."))
+
+        if self.calculation_type == 'date_end' and not self.date:
+            raise osv.except_osv(_('Error!'), _("Cannot recalculate project "
+                                                "because your project don't "
+                                                "have date end."))
         project_task_obj = self.env['project.task']
         project_task_type_done = self.env.ref('project.project_tt_deployment')
         project_task_ids = project_task_obj.search(
