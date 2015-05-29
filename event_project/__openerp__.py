@@ -24,8 +24,7 @@
 {
     "name": "Event project",
     "version": "1.0",
-    "author": "Antiun Ingeniería S.L., "
-              "Serv. Tecnol. Avanzados - Pedro M. Baeza, ",
+    "author": "Antiun Ingeniería S.L., ",
     "website": "http://www.antiun.com",
     "license": "AGPL-3",
     "category": "Event Management",
