@@ -5,6 +5,7 @@
 #    This module copyright :
 #        (c) 2014 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
 #                 Endika Iglesias <endikaig@antiun.com>
+#                 Antonio Espinosa <antonioea@antiun.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,40 +23,20 @@
 ##############################################################################
 
 {
-    # Addon information
     'name': "Point of sale with tax",
-    'description': """
-Point of sale with tax
-======================
-Include tax in price on POS.
-    """,
     'category': 'Website',
     'version': '1.0',
-
-    # Dependencies
-    'depends': ['base',
-                'point_of_sale'],
-    'external_dependencies': {},
-
-    # Views templates, pages, menus, options and snippets
+    'depends': [
+        'point_of_sale',
+    ],
     'data': [
-            'views/pos_template.xml',
+        'views/pos_template.xml',
     ],
-
-    # Qweb templates
     'qweb': [
+        'static/src/xml/pos.xml',
     ],
-
-    # Your information
     'author': 'Antiun Ingenieria S.L.',
-    'maintainer': 'Antiun Ingenieria S.L.',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
-
-    # Technical options
-    'demo': [],
-    'test': [],
     'installable': True,
-    # 'auto_install':False,
-    # 'active':True,
 }
