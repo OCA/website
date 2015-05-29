@@ -24,13 +24,12 @@
     'summary': """
         Canonical URL in Website Headers""",
 
-    'description': "",
-
     'author': "initOS GmbH & Co. KG",
     'website': "http://www.initos.com",
 
     'category': 'Website',
     'version': '0.1',
+    'license': 'AGPL-3',
 
     'depends': [
         'website',
