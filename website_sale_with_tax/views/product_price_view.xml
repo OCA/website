@@ -3,33 +3,19 @@
 <data>
 
 	<template id="products_price_with_tax" inherit_id="website_sale.product_price">
-	    <xpath expr="//div[@class='product_price mt16']" position="replace">
-              <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price mt16">
-                  <h4 class="oe_price_h4 css_editable_mode_hidden">
-                      <span class="text-danger oe_default_price" style="text-decoration: line-through; white-space: nowrap;"
-                        t-field="product.lst_price"
-                        t-field-options='{
-                          "widget": "monetary",
-                          "from_currency": "product.company_id.currency_id",
-                          "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
-                       }'/>
-                      <b class="oe_price" style="white-space: nowrap;"
-                        t-field="product.price_with_tax"/>
-                      <span itemprop="price" style="display:none;" t-esc="product.price_with_tax"/>
-                      <span itemprop="priceCurrency" style="display:none;" t-esc="user_id.partner_id.property_product_pricelist.currency_id.name"/>
-                  </h4>
-                  <h4 class="css_editable_mode_display" style="display: none;">
-                    <span t-field="product.lst_price"
-                        t-field-options='{
-                           "widget": "monetary",
-                           "display_currency": "website.pricelist_id.currency_id"
-                       }'/>
-                  </h4>
-                  <h4 class="hidden oe_not_available bg-warning">Product not available</h4>
-              </div>
+	    <xpath expr="//h4[@class='oe_price_h4 css_editable_mode_hidden']" position="replace">
+            <h4 class="oe_price_h4 css_editable_mode_hidden">
+                <span class="text-danger oe_default_price" style="text-decoration: line-through; white-space: nowrap;" t-field="product.lst_price" t-field-options='{
+                    "widget": "monetary",
+                    "from_currency": "product.company_id.currency_id",
+                    "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
+                }'/>
+                <b class="oe_price" style="white-space: nowrap;" t-field="product.price_with_tax"/>
+                    <span itemprop="price" style="display:none;" t-esc="product.price_with_tax"/>
+                    <span itemprop="priceCurrency" style="display:none;" t-esc="user_id.partner_id.property_product_pricelist.currency_id.name"/>
+            </h4>
 	  </xpath>
 	</template>
-
 
 </data>
 </openerp>
