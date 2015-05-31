@@ -25,7 +25,7 @@
     'author': "initOS GmbH & Co. KG,OpenAT,Odoo Community Association (OCA)",
     'website': "http://www.initos.com/",
     'category': 'website',
-    'version': '0.1',
+    'version': '1.0',
     'depends': [
         'website_sale',
     ],
