@@ -24,6 +24,7 @@
     'summary': """add Public Product Categories CMS Blocks""",
     'author': "initOS GmbH & Co. KG,OpenAT,Odoo Community Association (OCA)",
     'website': "http://www.initos.com/",
+    'license': 'AGPL-3',
     'category': 'website',
     'version': '1.0',
     'depends': [
