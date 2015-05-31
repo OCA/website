@@ -33,7 +33,4 @@
     'data': [
         'views/templates.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-    ],
 }
