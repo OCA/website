@@ -25,5 +25,7 @@ from openerp import models, fields
 class product_public_category(models.Model):
     _inherit = 'product.public.category'
 
-    cms_top = fields.Html()
-    cms_bottom = fields.Html()
+    cms_top = fields.Html(help="You can insert a html snippet here it will be"\
+                               "displayed on top of this categorie")
+    cms_bottom = fields.Html(help="You can insert a html snippet here it will be"\
+                                  "displayed on bottom of this categorie")
