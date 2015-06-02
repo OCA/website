@@ -23,19 +23,8 @@
     'category': 'Website',
     'summary': 'Provide an All-In-One Checkout for Your Odoo Customer',
     'version': '1.0',
-    'description': """
-odoo One Step Checkout
-======================
-One Step Checkout combines all Odoo Checkout steps into one and removes all unnecessary fields and
-questions. Never before has check- out been easier and faster!
-
-Improving the checkout process results in more customers completing their sales, and this has an
-immediate impact on your bottom line. It is the single most effective technical change you can make
-to reduce shopping cart abandonment.
-
-Regards Bloopark
-    """,
-    'author': "bloopark systems GmbH & Co. KG",
+    'author': "bloopark systems GmbH & Co. KG ,"
+              "Odoo Community Association (OCA)",
     'website': "http://www.bloopark.de",
     'depends': [
         'website_sale_delivery'
@@ -46,10 +35,6 @@ Regards Bloopark
         'views/res_config.xml',
         'views/website_sale_osc.xml',
     ],
-    'test': [],
-    'demo': [],
-    'qweb': [],
     'installable': True,
     'auto_install': False,
-    'images': [],
 }

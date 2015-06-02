@@ -59,8 +59,10 @@ class WebsiteConfigSettings(models.TransientModel):
             else:
                 setting.append((3, group_checkout_terms))
 
-        portal_group = self.env['ir.model.data'].xmlid_to_res_id('base.group_portal')
-        users = self.env['res.users'].search([('groups_id', '=', portal_group)])
+        portal_group = self.env['ir.model.data'].xmlid_to_res_id(
+            'base.group_portal')
+        users = self.env['res.users'].search([('groups_id', '=',
+                                               portal_group)])
 
         if users:
             users.write({'groups_id': setting})
@@ -95,8 +97,10 @@ class SaleConfiguration(models.TransientModel):
             else:
                 setting.append((3, group_shipping))
 
-        portal_group = self.env['ir.model.data'].xmlid_to_res_id('base.group_portal')
-        users = self.env['res.users'].search([('groups_id', '=', portal_group)])
+        portal_group = self.env['ir.model.data'].xmlid_to_res_id(
+            'base.group_portal')
+        users = self.env['res.users'].search([('groups_id', '=',
+                                               portal_group)])
 
         if users:
             users.write({'groups_id': setting})

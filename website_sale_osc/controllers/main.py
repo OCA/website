@@ -29,17 +29,19 @@ class website_sale(website_sale):
 
     """Add aditional functions to the website_sale controller."""
 
-    mandatory_billing_fields = ["name", "phone", "email", "street", "city", "country_id", "zip"]
+    mandatory_billing_fields = ["name", "phone", "email", "street", "city",
+                                "country_id", "zip"]
     optional_billing_fields = ["street2", "state_id", "vat", "vat_subjected"]
 
-    @http.route(['/shop/checkout'], type='http', auth='public', website=True, multilang=True)
+    @http.route(['/shop/checkout'], type='http', auth='public',
+                website=True, multilang=True)
     def checkout(self, **post):
         """Checkout controller."""
         # if onestepcheckout is deactivated use the normal checkout
         if not request.website.use_osc:
             return super(website_sale, self).checkout()
 
-        # must have a draft sale order with lines at this point, otherwise reset
+        # must have a draft sale order with lines at this point
         order = request.website.sale_get_order()
 
         redirection = self.checkout_redirection(order)
@@ -48,14 +50,17 @@ class website_sale(website_sale):
 
         values = self.checkout_values(post)
 
-        partner = request.env['res.users'].sudo().browse(request.uid).partner_id
+        partner = request.env['res.users'].sudo().browse(
+            request.uid).partner_id
 
         # get countries dependent on website settings
         countries_domain = []
         if not request.website.use_all_checkout_countries:
-            countries_domain = [('id', 'in', request.website.checkout_country_ids.ids)]
+            countries_domain = [('id', 'in',
+                                 request.website.checkout_country_ids.ids)]
 
-        values['countries'] = request.env['res.country'].search(countries_domain)
+        values['countries'] = request.env['res.country'].search(
+            countries_domain)
 
         if not post and request.uid != request.website.user_id.id:
             values['checkout'].update({'street': partner.street_name,
@@ -66,13 +71,15 @@ class website_sale(website_sale):
 
         # get additional tax information
         values['tax_overview'] = request.env['sale.order'].tax_overview(order)
-        return request.website.render('website_sale_osc.osc_onestepcheckout', values)
+        return request.website.render(
+            'website_sale_osc.osc_onestepcheckout', values)
 
-    @http.route(['/shop/checkout/confirm_address/'], type='json', auth='public', website=True,
-                multilang=True)
+    @http.route(['/shop/checkout/confirm_address/'], type='json',
+                auth='public', website=True, multilang=True)
     def confirm_address(self, **post):
         """Address controller."""
-        # must have a draft sale order with lines at this point, otherwise redirect to shop
+        # must have a draft sale order with lines at this point, otherwise
+        # redirect to shop
         order = request.website.sale_get_order()
         if not order or order.state != 'draft' or not order.order_line:
             request.session['sale_order_id'] = None
@@ -105,16 +112,19 @@ class website_sale(website_sale):
 
         company = None
         if 'company' in checkout:
-            companies = orm_partner.sudo().search([('name', 'ilike', checkout['company']),
+            companies = orm_partner.sudo().search([('name', 'ilike',
+                                                    checkout['company']),
                                                    ('is_company', '=', True)])
-            company = (companies and companies[0]) or orm_partner.sudo().create({
+            company = (companies and companies[0])or orm_partner.sudo(
+            ).create({
                 'name': checkout['company'],
                 'is_company': True
             })
 
         checkout['street_name'] = checkout.get('street')
         if checkout.get('street_number'):
-            checkout['street'] = checkout.get('street') + ' ' + checkout.get('street_number')
+            checkout['street'] = checkout.get('street') + ' ' + checkout.get(
+                'street_number')
 
         billing_info = dict((k, v) for k, v in checkout.items()
                             if 'shipping_' not in k and k != 'company')
@@ -122,10 +132,12 @@ class website_sale(website_sale):
 
         partner = None
         if request.uid != request.website.user_id.id:
-            partner = request.env['res.users'].sudo().browse(request.uid).partner_id
+            partner = request.env['res.users'].sudo().browse(
+                request.uid).partner_id
         elif order.partner_id:
             users = request.env['res.users'].sudo().search([
-                ('active', '=', False), ('partner_id', '=', order.partner_id.id)])
+                ('active', '=', False),
+                ('partner_id', '=', order.partner_id.id)])
             if not users or request.website.user_id.id not in users.ids:
                 partner = order.partner_id
 
@@ -139,7 +151,8 @@ class website_sale(website_sale):
             shipping_info = {
                 'phone': post['shipping_phone'],
                 'zip': post['shipping_zip'],
-                'street': post['shipping_street'] + ' ' + post.get('shipping_street_number'),
+                'street': post['shipping_street'] + ' ' + post.get(
+                    'shipping_street_number'),
                 'street_name': post['shipping_street'],
                 'street_number': post['shipping_street_number'],
                 'city': post['shipping_city'],
@@ -150,8 +163,9 @@ class website_sale(website_sale):
                 'country_id': post['shipping_country_id'],
                 'state_id': post['shipping_state_id'],
             }
-            domain = [(key, '_id' in key and '=' or 'ilike', '_id' in key and value and int(
-                value) or value)
+            domain = [
+                (key, '_id' in key and '=' or 'ilike',
+                 '_id' in key and value and int(value) or value)
                 for key, value in shipping_info.items() if key in
                 self.mandatory_billing_fields + ['type', 'parent_id']]
             shipping_partners = orm_partner.sudo().search(domain)
@@ -163,16 +177,19 @@ class website_sale(website_sale):
 
         order_info = {
             'partner_id': partner.id,
-            'message_follower_ids': [(4, partner.id), (3, request.website.partner_id.id)],
+            'message_follower_ids': [(4, partner.id),
+                                     (3, request.website.partner_id.id)],
             'partner_invoice_id': partner.id
         }
-        order_info.update(request.env['sale.order'].sudo().onchange_partner_id(
-            partner.id)['value'])
-        # we need to update partner_shipping_id after onchange_partner_id() call
-        # otherwise the deselection of the option 'Ship to a different address'
-        # would be overwritten by an existing shipping partner type
+        order_info.update(
+            request.env['sale.order'].sudo().onchange_partner_id(
+                partner.id)['value'])
+        # we need to update partner_shipping_id after onchange_partner_id()
+        # call otherwise the deselection of the option 'Ship to a different
+        # address'  would be overwritten by an existing shipping partner type
         order_info.update({
-            'partner_shipping_id': (shipping_partner and shipping_partner.id) or partner.id})
+            'partner_shipping_id': (shipping_partner and
+                                    shipping_partner.id) or partner.id})
         order_info.pop('user_id')
 
         order.sudo().write(order_info)
@@ -189,7 +206,8 @@ class website_sale(website_sale):
             request.context['order_id'] = order.id
 
         # recompute delivery costs
-        request.env['sale.order']._check_carrier_quotation(order, force_carrier_id=carrier_id)
+        request.env['sale.order']._check_carrier_quotation(
+            order, force_carrier_id=carrier_id)
 
         # generate updated total prices
         updated_order = request.website.sale_get_order()
@@ -204,17 +222,19 @@ class website_sale(website_sale):
 
         return {
             'success': True,
-            'order_total': rml_obj.formatLang(updated_order.amount_total, digits=price_digits),
+            'order_total': rml_obj.formatLang(updated_order.amount_total,
+                                              digits=price_digits),
             'order_subtotal': rml_obj.formatLang(updated_order.amount_subtotal,
                                                  digits=price_digits),
             'order_total_taxes': rml_obj.formatLang(updated_order.amount_tax,
                                                     digits=price_digits),
             'order_total_tax_overview': tax_overview,
-            'order_total_delivery': rml_obj.formatLang(updated_order.amount_delivery,
-                                                       digits=price_digits)
+            'order_total_delivery': rml_obj.formatLang(
+                updated_order.amount_delivery, digits=price_digits)
         }
 
-    @http.route(['/shop/checkout/change_delivery'], type='json', auth="public", website=True,
+    @http.route(['/shop/checkout/change_delivery'], type='json',
+                auth="public", website=True,
                 multilang=True)
     def change_delivery(self, **post):
         """
@@ -229,7 +249,10 @@ class website_sale(website_sale):
 
     @http.route()
     def cart(self, **post):
-        """If one active delivery carrier exists apply this delivery to sale order."""
+        """
+        If one active delivery carrier exists apply this delivery to sale
+        order.
+        """
         response_object = super(website_sale, self).cart(**post)
         values = response_object.qcontext
 
@@ -246,8 +269,8 @@ class website_sale(website_sale):
 
         return request.website.render(response_object.template, values)
 
-    @http.route(['/page/terms_and_conditions/'], type='http', auth="public", website=True,
-                multilang=True)
+    @http.route(['/page/terms_and_conditions/'], type='http', auth="public",
+                website=True, multilang=True)
     def checkout_terms(self, **opt):
         """Function for terms of condition."""
         return request.website.render('website_sale_osc.checkout_terms')

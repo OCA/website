@@ -41,28 +41,33 @@ class SaleOrder(models.Model):
     def _compute_amount_subtotal(self):
         """compute Function for amount_subtotal."""
         for rec in self:
-            line_amount = sum([line.price_subtotal for line in rec.order_line if
-                               not line.is_delivery])
+            line_amount = sum([line.price_subtotal for line in
+                               rec.order_line if not line.is_delivery])
             currency = rec.pricelist_id.currency_id
             rec.amount_subtotal = currency.round(line_amount)
 
     @api.model
     def tax_overview(self, order):
-        """Calculate additional tax information for displaying them in onestepcheckout page."""
+        """
+        Calculate additional tax information for displaying them in
+        onestepcheckout page.
+        """
         taxes = {}
         for line in order.order_line:
             for tax in line.tax_id:
                 if str(tax.id) in taxes:
                     taxes[str(tax.id)]['value'] += self._amount_line_tax(line)
                 else:
-                    taxes[str(tax.id)] = {'label': tax.name, 'value': self._amount_line_tax(line)}
+                    taxes[str(tax.id)] = {'label': tax.name,
+                                          'value': self._amount_line_tax(line)}
 
         # round and formatting valid taxes
         res = []
         currency = order.pricelist_id.currency_id
         for key in taxes:
             if taxes[key]['value'] > 0:
-                taxes[key]['value'] = '%.2f' % currency.round(taxes[key]['value'])
+                taxes[key]['value'] = '%.2f' % currency.round(taxes[key][
+                    'value'])
                 res.append(taxes[key])
 
         return res
