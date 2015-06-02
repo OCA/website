@@ -27,7 +27,8 @@
               "Odoo Community Association (OCA)",
     'website': "http://www.bloopark.de",
     'depends': [
-        'website_sale_delivery'
+        'website_sale_delivery',
+        'website'
     ],
     'data': [
         'security/website_sale_ocs.xml',
