@@ -19,7 +19,6 @@
 #
 ##############################################################################
 from openerp import api, fields, models
-from openerp.addons import decimal_precision
 
 
 class SaleOrder(models.Model):
