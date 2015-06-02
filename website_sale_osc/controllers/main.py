@@ -25,7 +25,7 @@ from openerp.addons.web.http import request
 from openerp.report import report_sxw
 
 
-class website_sale(website_sale):
+class WebsiteSale(website_sale):
 
     """Add aditional functions to the website_sale controller."""
 
@@ -39,7 +39,7 @@ class website_sale(website_sale):
         """Checkout controller."""
         # if onestepcheckout is deactivated use the normal checkout
         if not request.website.use_osc:
-            return super(website_sale, self).checkout()
+            return super(WebsiteSale, self).checkout()
 
         # must have a draft sale order with lines at this point
         order = request.website.sale_get_order()
@@ -253,7 +253,7 @@ class website_sale(website_sale):
         If one active delivery carrier exists apply this delivery to sale
         order.
         """
-        response_object = super(website_sale, self).cart(**post)
+        response_object = super(WebsiteSale, self).cart(**post)
         values = response_object.qcontext
 
         dc_ids = request.env['delivery.carrier'].search(

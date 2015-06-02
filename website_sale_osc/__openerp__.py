@@ -21,7 +21,7 @@
 {
     'name': 'One Step Checkout',
     'category': 'Website',
-    'summary': 'Provide an All-In-One Checkout for Your Odoo Customer',
+    'summary': 'Provide an All-In-One Checkout for your website e-commerce',
     'version': '1.0',
     'author': "bloopark systems GmbH & Co. KG ,"
               "Odoo Community Association (OCA)",

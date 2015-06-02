@@ -1,7 +1,7 @@
 One Step Checkout
 =================
 
-Provide an All-In-One Checkout for Your Odoo Customer
+Provides an All-In-One Checkout for Your Odoo Customer
 
 .. image:: https://raw.githubusercontent.com/blooparksystems/website_sale_osc/master/static/description/osc.png
 
@@ -21,6 +21,7 @@ Known issues / Roadmap
 ======================
 
  * For now, this add-on will add a One Step Checkout to the website_sale add-on.
+ * Check if the One Step Checkout works with website_event_register_free_with_sale.
 
 Credits
 =======

@@ -28,24 +28,6 @@ class SaleOrder(models.Model):
 
     _inherit = 'sale.order'
 
-    amount_subtotal = fields.Float(
-        compute='_compute_amount_subtotal',
-        digits=decimal_precision.get_precision('Account'),
-        string='Subtotal Amount',
-        store=True,
-        help="The amount without anything.",
-        track_visibility='always'
-    )
-
-    @api.depends('order_line', 'order_line.price_subtotal')
-    def _compute_amount_subtotal(self):
-        """compute Function for amount_subtotal."""
-        for rec in self:
-            line_amount = sum([line.price_subtotal for line in
-                               rec.order_line if not line.is_delivery])
-            currency = rec.pricelist_id.currency_id
-            rec.amount_subtotal = currency.round(line_amount)
-
     @api.model
     def tax_overview(self, order):
         """

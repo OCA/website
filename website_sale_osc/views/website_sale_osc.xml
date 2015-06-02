@@ -81,7 +81,7 @@
             <abbr title="Subtotal of all products">Subtotal:</abbr>
           </td>
           <td class="text-right">
-            <span t-field="website_sale_order.amount_subtotal"
+            <span t-field="website_sale_order.amount_untaxed"
                   t-field-options='{
 								"widget": "monetary",
 								"display_currency": "website.pricelist_id.currency_id"
