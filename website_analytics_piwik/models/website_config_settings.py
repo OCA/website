@@ -21,7 +21,7 @@
 from openerp import models, fields
 
 
-class WebsiteConfigSettings(models.Model):
+class WebsiteConfigSettings(models.TransientModel):
     _inherit = 'website.config.settings'
 
     piwik_analytics_id = fields.Integer(
