@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_partner_form_membership_period">
+            <field name="name">res.partner.form.membership.period</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="membership.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='member_lines']/tree//field[@name='date']" position="after">
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
