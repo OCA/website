@@ -105,11 +105,12 @@ class ProjectTask(models.Model):
                 self.calculate_date_without_weekend(
                     date_start, self.estimated_days))
         else:
-            task_date_end = fields.Datetime.to_string(
-                self.calculate_date_without_weekend(
-                    project_date, self.from_days, increment=increment))
-            date_end = fields.Datetime.from_string(task_date_end)
             task_date_start = fields.Datetime.to_string(
                 self.calculate_date_without_weekend(
-                    date_end, self.estimated_days, increment=increment))
+                    project_date, self.from_days + self.estimated_days,
+                    increment=increment))
+            date_start = fields.Datetime.from_string(task_date_start)
+            task_date_end = fields.Datetime.to_string(
+                self.calculate_date_without_weekend(
+                    date_start, self.estimated_days))
         self.write({'date_start': task_date_start, 'date_end': task_date_end})

@@ -33,7 +33,6 @@ class EventEvent(models.Model):
     project = fields.Many2one(
         comodel_name='project.project', string='Related project',
         readonly=True)
-
     tasks = fields.One2many(
         comodel_name='project.task', related='project.task_ids',
         string="Tasks")
@@ -44,33 +43,45 @@ class EventEvent(models.Model):
     def _count_tasks(self):
         self.count_tasks = len(self.tasks)
 
-    def get_project_with_duplicate_template(self, template):
-        return self.env['project.project'].browse(
-            int(template.duplicate_template()['res_id']))
-
-    @api.onchange('project_template')
-    def on_change_project_template(self):
+    def project_template_duplicate(self):
         if self.project_template and not self.project:
-            self.project = self.get_project_with_duplicate_template(
-                self.project_template)
-
-    @api.onchange('date_begin')
-    def on_change_date_begin(self):
-        if (self.date_begin and self.project
-                and self.project.calculation_type is not False
-                and self.project.calculation_type == 'date_begin'):
-            self.project.write({'date_start': self.date_begin})
+            assert len(self) >= 0 and len(self) <= 1, "Expected singleton"
+            result = self.project_template.duplicate_template()
+            self.project = result['res_id']
+            name = self.name
+            self.project.write({'name': name,
+                                'date_start': self.date_begin,
+                                'date': self.date_begin,
+                                'calculation_type': 'date_end'})
             self.project.project_recalculate()
+            return True
+        return False
 
-    @api.onchange('date_end')
-    def on_change_date_end(self):
-        if (self.date_begin and self.project
-                and self.project.calculation_type is not False
-                and self.project.calculation_type == 'date_end'):
-            self.project.write({'date': self.date_end})
-            self.project.project_recalculate()
+    def project_data_update(self, vals):
+        map_vals = {}
+        recalculate = False
+        if self.project:
+            if vals.get('name'):
+                map_vals['name'] = self.name
+            if vals.get('date_begin'):
+                map_vals['date_start'] = self.date_begin
+                map_vals['date'] = self.date_begin
+                recalculate = True
+            if map_vals:
+                self.project.write(map_vals)
+                if recalculate:
+                    self.project.project_recalculate()
+        return True
 
-    @api.onchange('name')
-    def on_change_name(self):
-        if self.name and self.project:
-            self.project.write({'name': self.name})
+    @api.model
+    def create(self, vals):
+        event = super(EventEvent, self).create(vals)
+        event.project_template_duplicate()
+        return event
+
+    @api.multi
+    def write(self, vals):
+        super(EventEvent, self).write(vals)
+        if not self.project_template_duplicate():
+            self.project_data_update(vals)
+        return True

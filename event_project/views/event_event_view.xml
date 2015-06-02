@@ -22,16 +22,16 @@
                 </field>
 
                 <notebook position="inside">
-                    <page string="Tareas">
+                    <page string="Tareas" attrs="{'invisible':[('project','=',False)]}">
                         <field name="tasks" nolabel="1" context="{'default_project_id': project}"/>
                     </page>
                 </notebook>
                 <div class="oe_right oe_button_box" position="inside">
-                    <button name="%(event_project_new.act_event_task_list)d"
+                    <button name="%(event_project.act_event_task_list)d"
                         type="action"
                         class="oe_stat_button oe_inline"
-                        icon="fa-tasks">
-                        <field name="count_tasks" widget="statinfo" string="Tareas"/>
+                        icon="fa-tasks" attrs="{'invisible':[('project','=',False)]}" context="{'default_project_id': project}">
+                        <field name="count_tasks" widget="statinfo" string="Tareas" context="{'default_project_id': project}"/>
                     </button>
                 </div>
             </field>
