@@ -72,7 +72,7 @@ class WebsiteSale(website_sale):
         # get additional tax information
         values['tax_overview'] = request.env['sale.order'].tax_overview(order)
         return request.website.render(
-            'website_sale_osc.osc_onestepcheckout', values)
+            'website_sale_one_step_checkout.osc_onestepcheckout', values)
 
     @http.route(['/shop/checkout/confirm_address/'], type='json',
                 auth='public', website=True, multilang=True)
@@ -224,7 +224,7 @@ class WebsiteSale(website_sale):
             'success': True,
             'order_total': rml_obj.formatLang(updated_order.amount_total,
                                               digits=price_digits),
-            'order_subtotal': rml_obj.formatLang(updated_order.amount_subtotal,
+            'order_subtotal': rml_obj.formatLang(updated_order.amount_untaxed,
                                                  digits=price_digits),
             'order_total_taxes': rml_obj.formatLang(updated_order.amount_tax,
                                                     digits=price_digits),
@@ -273,4 +273,4 @@ class WebsiteSale(website_sale):
                 website=True, multilang=True)
     def checkout_terms(self, **opt):
         """Function for terms of condition."""
-        return request.website.render('website_sale_osc.checkout_terms')
+        return request.website.render('website_sale_one_step_checkout.checkout_terms')

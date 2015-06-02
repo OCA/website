@@ -8,11 +8,11 @@
               priority="900">
       <xpath expr="." position="inside">
         <link rel="stylesheet"
-              href="/website_sale_osc/static/src/css/website_sale_osc.css"/>
+              href="/website_sale_one_step_checkout/static/src/css/website_sale_osc.css"/>
         <script type="text/javascript"
-                src="/website_sale_osc/static/src/js/website_sale_osc.js"></script>
+                src="/website_sale_one_step_checkout/static/src/js/website_sale_osc.js"></script>
         <script type="text/javascript"
-                src="/website_sale_osc/static/src/js/website_sale_osc_tour.js"></script>
+                src="/website_sale_one_step_checkout/static/src/js/website_sale_osc_tour.js"></script>
       </xpath>
     </template>
 
@@ -478,7 +478,7 @@
 
 
                 <div
-                    groups="website_sale_osc.group_website_sale_terms_conditions">
+                    groups="website_sale_one_step_checkout.group_website_sale_terms_conditions">
                   <ul>
                     <label class="checkbox checkbox-modal-link">
                       <input type="checkbox" name="terms_conditions"/>
@@ -574,7 +574,7 @@
                   <a href="/page/terms_and_conditions/">
                     <img alt="Odoo CMS - a big picture"
                          class="img img-responsive"
-                         src="/website_sale_osc/static/src/img/terms.png"
+                         src="/website_sale_one_step_checkout/static/src/img/terms.png"
                          style="margin: 0 auto;"/>
                   </a>
                 </div>
