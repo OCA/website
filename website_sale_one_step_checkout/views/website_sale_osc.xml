@@ -478,7 +478,7 @@
 
 
                 <div
-                    groups="website_sale_one_step_checkout.group_website_sale_terms_conditions">
+                    groups="website_sale_one_step_checkout.group_terms_conditions">
                   <ul>
                     <label class="checkbox checkbox-modal-link">
                       <input type="checkbox" name="terms_conditions"/>

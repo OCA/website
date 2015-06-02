@@ -273,4 +273,5 @@ class WebsiteSale(website_sale):
                 website=True, multilang=True)
     def checkout_terms(self, **opt):
         """Function for terms of condition."""
-        return request.website.render('website_sale_one_step_checkout.checkout_terms')
+        return request.website.render(
+            'website_sale_one_step_checkout.checkout_terms')

@@ -27,9 +27,9 @@ class WebsiteConfigSettings(models.TransientModel):
 
     _inherit = 'website.config.settings'
 
-    group_website_sale_terms_conditions = fields.Boolean(
+    group_terms_conditions = fields.Boolean(
         string="Terms and Conditions",
-        implied_group='website_sale_one_step_checkout.group_website_sale_terms_conditions',
+        implied_group='website_sale_one_step_checkout.group_terms_conditions',
         help="Enable Terms and Conditions on the Checkout")
     use_osc = fields.Boolean(
         related='website_id.use_osc',
@@ -52,9 +52,9 @@ class WebsiteConfigSettings(models.TransientModel):
         """
         setting = []
         group_checkout_terms = self.env['ir.model.data'].xmlid_to_res_id(
-            'website_sale_one_step_checkout.group_website_sale_terms_conditions')
-        if 'group_website_sale_terms_conditions' in vals:
-            if vals['group_website_sale_terms_conditions']:
+            'website_sale_one_step_checkout.group_terms_conditions')
+        if 'group_terms_conditions' in vals:
+            if vals['group_terms_conditions']:
                 setting.append((4, group_checkout_terms))
             else:
                 setting.append((3, group_checkout_terms))

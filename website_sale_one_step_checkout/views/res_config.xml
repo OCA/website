@@ -18,14 +18,14 @@
                 </div>
               </div>
             </div>
-            <label for="group_website_sale_terms_conditions"
+            <label for="group_website_conditions"
                    attrs="{'invisible': [('use_osc', '=', False)]}"/>
-            <div name="group_website_sale_terms_conditions"
+            <div name="group_website_conditions"
                  attrs="{'invisible': [('use_osc', '=', False)]}">
               <div>
-                <div name="group_website_sale_terms_conditions"
+                <div name="group_website_conditions"
                      class="oe_inline">
-                  <field name="group_website_sale_terms_conditions"/>
+                  <field name="group_terms_conditions"/>
                 </div>
               </div>
             </div>
