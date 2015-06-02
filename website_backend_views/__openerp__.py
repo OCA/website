@@ -21,7 +21,7 @@
 {
     "name": "Backend views for website",
     "version": "1.0",
-    "author": "Therp BV",
+    "author": "Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Dependency",
     "summary": "Hook backend views into your website frontend",

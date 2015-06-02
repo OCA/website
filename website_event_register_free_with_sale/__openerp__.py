@@ -22,7 +22,8 @@
     "name": "Register for free events - Sale extension",
     "version": "1.0",
     "author": "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
-              "Antiun Ingeniería S.L.",
+              "Antiun Ingeniería S.L.,",
+              "Odoo Community Association (OCA)"
     "license": "AGPL-3",
     "category": "Website",
     "summary": "Combine free and paid tickets on events",

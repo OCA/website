@@ -21,8 +21,7 @@
 {
     'name': 'Website blog Management',
     'version': '1.0',
-    'author': 'ACSONE SA/NV',
-    'maintainer': 'ACSONE SA/NV',
+    'author': 'ACSONE SA/NV,Odoo Community Association (OCA)',
     'website': 'http://www.acsone.eu',
     'license': 'AGPL-3',
     'category': 'Website',
