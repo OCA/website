@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2015 Therp BV <http://therp.nl>.
+#    This module copyright (C) 2015 Savoir-faire Linux
+#    (<http://www.savoirfairelinux.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,4 +19,27 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import website_qweb
+
+{
+    'name': 'Website Menu By User Display',
+    'version': '1.1',
+    'author': 'Savoir-faire Linux',
+    'maintainer': 'Savoir-faire Linux',
+    'website': 'http://www.savoirfairelinux.com',
+    'license': 'AGPL-3',
+    'category': 'Website',
+    'summary': 'Allow to manage the display of website.menus',
+    'depends': [
+        'website',
+    ],
+    'external_dependencies': {
+        'python': [],
+    },
+    'data': [
+        'views/website_templates.xml',
+        'views/website_views.xml',
+    ],
+    'demo': [],
+    'test': [],
+    'installable': True,
+}

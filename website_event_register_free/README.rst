@@ -20,6 +20,8 @@ Contributors
 ------------
 
 * Holger Brunn <hbrunn@therp.nl>
+* Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+* Daniel Gómez Zurita <danielgz@antiun.com>
 
 Addon icon
 ----------

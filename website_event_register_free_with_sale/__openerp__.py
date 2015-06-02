@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2015 Therp BV <http://therp.nl>.
+#    Copyright (c) 2015 Serv. Tecnol. Avanzados (http://www.serviciosbaeza.com)
+#                       Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,4 +18,18 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import website_qweb
+{
+    "name": "Register for free events - Sale extension",
+    "version": "1.0",
+    "author": "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
+              "Antiun Ingeniería S.L.",
+    "license": "AGPL-3",
+    "category": "Website",
+    "summary": "Combine free and paid tickets on events",
+    "depends": [
+        'website_event_register_free',
+        'website_event_sale',
+    ],
+    "auto_install": True,
+    "installable": True,
+}
