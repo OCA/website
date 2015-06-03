@@ -48,16 +48,26 @@ class ProjectTask(models.Model):
         return date
 
     def calculate_date_without_weekend(self, date_start, days, increment=True):
-        count_days = 0
-        date = 0
-        if increment:
-            count_days = self.count_days_without_weekend(
-                date_start, date_start + timedelta(days=days))
-            date = date_start + timedelta(days=(days + (days - count_days)))
-        else:
-            count_days = self.count_days_without_weekend(
-                date_start - timedelta(days=days), date_start)
-            date = date_start - timedelta(days=(days + (days - count_days)))
+        count_days = (self.count_days_without_weekend(
+                      date_start, date_start + timedelta(days=days))
+                      if increment
+                      else self.count_days_without_weekend(
+                      date_start - timedelta(days=days), date_start))
+        recalculate = (days + (days - count_days))
+        cont = 1
+        while count_days < days:
+            recalculate = (days + (days - count_days) + cont)
+            count_days = (self.count_days_without_weekend(
+                          date_start,
+                          date_start + timedelta(days=recalculate))
+                          if increment
+                          else self.count_days_without_weekend(
+                          date_start - timedelta(days=recalculate),
+                          date_start))
+            cont += 1
+        date = (date_start + timedelta(days=recalculate)
+                if increment
+                else date_start - timedelta(days=recalculate))
         date = self.correct_days_to_workable(date, increment)
         return date
 
@@ -96,20 +106,16 @@ class ProjectTask(models.Model):
         project_date = (fields.Datetime.from_string(self.project_id.date_start)
                         if self.project_id.calculation_type == 'date_begin'
                         else fields.Datetime.from_string(self.project_id.date))
-        if increment:
-            task_date_start = fields.Datetime.to_string(
+        task_date_start = (fields.Datetime.to_string(
+            self.calculate_date_without_weekend(
+                project_date, self.from_days, increment=increment))
+            if increment
+            else fields.Datetime.to_string(
                 self.calculate_date_without_weekend(
-                    project_date, self.from_days, increment=increment))
-            date_start = fields.Datetime.from_string(task_date_start)
-            task_date_end = fields.Datetime.to_string(
-                self.calculate_date_without_weekend(
-                    date_start, self.estimated_days))
-        else:
-            task_date_end = fields.Datetime.to_string(
-                self.calculate_date_without_weekend(
-                    project_date, self.from_days, increment=increment))
-            date_end = fields.Datetime.from_string(task_date_end)
-            task_date_start = fields.Datetime.to_string(
-                self.calculate_date_without_weekend(
-                    date_end, self.estimated_days, increment=increment))
+                    project_date, self.from_days + self.estimated_days,
+                    increment=increment)))
+        date_start = fields.Datetime.from_string(task_date_start)
+        task_date_end = fields.Datetime.to_string(
+            self.calculate_date_without_weekend(
+                date_start, self.estimated_days))
         self.write({'date_start': task_date_start, 'date_end': task_date_end})

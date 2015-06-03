@@ -7,11 +7,11 @@
             <field name="model">event.event</field>
             <field name="inherit_id" ref="event.view_event_form"/>
             <field name="arch" type="xml">
-                <field name="date_begin" position="replace">
-                    <field name="date_begin" attrs="{'required':[('parent_id','!=',False)]}"/>
+                <field name="date_begin"  position="attributes">
+                    <attribute name="attrs">{'required':[('parent_id','!=',False)]}</attribute>
                 </field>
-                <field name="date_end" position="replace">
-                    <field name="date_end" attrs="{'required':[('parent_id','!=',False)]}"/>
+                <field name="date_end" position="attributes">
+                    <attribute name="attrs">{'required':[('parent_id','!=',False)]}</attribute>
                 </field>
                 <field name="date_tz" position="after">
                     <field name="parent_id"/>

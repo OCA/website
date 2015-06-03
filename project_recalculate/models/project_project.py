@@ -22,7 +22,7 @@
 ##############################################################################
 
 from openerp import models, fields
-from openerp.osv import osv
+from openerp.exceptions import Warning  # , RedirectWarning
 from openerp.tools.translate import _
 
 
@@ -38,11 +38,17 @@ class ProjectProject(models.Model):
         project_task_obj = self.env['project.task']
         project_task_ids = project_task_obj.search(
             [('project_id', '=', self.id)])
+        if not project_task_ids:
+            raise Warning(_('Cannot recalculate project because your project '
+                            'don\'t have tasks.'))
         min_date_start = fields.Datetime.from_string(
             project_task_ids[0].date_start)
         date_start_from_days = project_task_ids[0].from_days
         max_date_end = fields.Datetime.from_string(
             project_task_ids[0].date_end)
+        date_end_from_days = project_task_ids[0].from_days
+        date_start = fields.Datetime.from_string(
+            project_task_ids[0].date_start)
         for project_task in project_task_ids:
             date_start = fields.Datetime.from_string(project_task.date_start)
             date_end = fields.Datetime.from_string(project_task.date_end)
@@ -51,35 +57,36 @@ class ProjectProject(models.Model):
                 date_start_from_days = project_task.from_days
             if max_date_end < date_end:
                 max_date_end = date_end
+                date_end_from_days = project_task.from_days
         if self.calculation_type == 'date_begin':
             date_start = project_task_obj.calculate_date_without_weekend(
                 date_start, date_start_from_days, increment=False)
             date_end = max_date_end
         else:
+            date_start = min_date_start
             date_end = project_task_obj.calculate_date_without_weekend(
-                date_end, date_start_from_days, increment=True)
+                max_date_end, date_end_from_days,
+                increment=True)
         return (fields.Datetime.to_string(date_start),
                 fields.Datetime.to_string(date_end))
 
     def project_recalculate(self):
         if not self.calculation_type:
-            raise osv.except_osv(_('Error!'), _("Cannot recalculate project "
-                                                "because your project don't "
-                                                "have calculation type."))
+            raise Warning(_('Cannot recalculate project because your project '
+                            'don\'t have calculation type.'))
         if self.calculation_type == 'date_begin' and not self.date_start:
-            raise osv.except_osv(_('Error!'), _("Cannot recalculate project "
-                                                "because your project don't "
-                                                "have date start."))
-
+            raise Warning(_('Cannot recalculate project because your project '
+                            'don\'t have date start.'))
         if self.calculation_type == 'date_end' and not self.date:
-            raise osv.except_osv(_('Error!'), _("Cannot recalculate project "
-                                                "because your project don't "
-                                                "have date end."))
+            raise Warning(_('Cannot recalculate project because your project '
+                            'don\'t have date end.'))
         project_task_obj = self.env['project.task']
-        project_task_type_done = self.env.ref('project.project_tt_deployment')
+        project_task_type_obj = self.env['project.task.type']
+        project_task_type = project_task_type_obj.search([('fold', '=', True)])
+        project_task_type_ids = [x.id for x in project_task_type]
         project_task_ids = project_task_obj.search(
             [('project_id', '=', self.id),
-             ('stage_id', '!=', project_task_type_done.id)
+             ('stage_id', 'not in', project_task_type_ids)
              ])
         for project_task in project_task_ids:
             project_task.task_recalculate()

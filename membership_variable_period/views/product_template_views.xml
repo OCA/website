@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="membership_products_form_period">
+            <field name="name">Membership Products (variable period)</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="membership.membership_products_form" />
+            <field name="arch" type="xml">
+                <label for="membership_date_from" position="before">
+                    <field name="membership_type"/>
+                    <label for="membership_interval_qty"
+                           string="Interval"
+                           attrs="{'invisible': [('membership_type', '!=', 'variable')]}"
+                           />
+                    <div attrs="{'invisible': [('membership_type', '!=', 'variable')]}">
+                        <field name="membership_interval_qty"
+                               attrs="{'required': [('membership_type', '=', 'variable')]}"
+                               class="oe_inline"
+                               nolabel="1"
+                                />
+                        <field name="membership_interval_unit"
+                               attrs="{'required': [('membership_type', '=', 'variable')]}"
+                               class="oe_inline"
+                               nolabel="1"
+                                />
+                    </div>
+                </label>
+                <label for="membership_date_from" position="attributes">
+                    <attribute name="attrs">{'invisible': [('membership_type', '!=', 'fixed')]}</attribute>
+                </label>
+                <xpath expr="//field[@name='membership_date_from']/.." position="attributes">
+                    <attribute name="attrs">{'invisible': [('membership_type', '!=', 'fixed')]}</attribute>
+                </xpath>
+                <field name="membership_date_from" position="attributes">
+                    <attribute name="attrs">{'required': [('membership_type', '=', 'fixed')]}</attribute>
+                    <attribute name="required">0</attribute>
+                </field>
+                <field name="membership_date_to" position="attributes">
+                    <attribute name="attrs">{'required': [('membership_type', '=', 'fixed')]}</attribute>
+                    <attribute name="required">0</attribute>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
