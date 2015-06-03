@@ -23,15 +23,15 @@
 
                 <notebook position="inside">
                     <page string="Tareas" attrs="{'invisible':[('project','=',False)]}">
-                        <field name="tasks" nolabel="1" context="{'default_project_id': project}"/>
+                        <field name="tasks" nolabel="1" context="{'search_default_project_id': project}"/>
                     </page>
                 </notebook>
                 <div class="oe_right oe_button_box" position="inside">
                     <button name="%(event_project.act_event_task_list)d"
                         type="action"
                         class="oe_stat_button oe_inline"
-                        icon="fa-tasks" attrs="{'invisible':[('project','=',False)]}" context="{'default_project_id': project}">
-                        <field name="count_tasks" widget="statinfo" string="Tareas" context="{'default_project_id': project}"/>
+                        icon="fa-tasks" attrs="{'invisible':[('project','=',False)]}" context="{'search_default_project_id': project}">
+                        <field name="count_tasks" widget="statinfo" string="Tareas" context="{'search_default_project_id': project}"/>
                     </button>
                 </div>
             </field>

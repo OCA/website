@@ -24,6 +24,10 @@
 from openerp import models, fields, api
 from datetime import timedelta
 
+import logging
+from pprint import pformat
+_logger = logging.getLogger(__name__)
+
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'
@@ -35,9 +39,14 @@ class ProjectTask(models.Model):
         string='Estimated days', help='Estimated days to end', default=1)
 
     def count_days_without_weekend(self, date_start, date_end):
-        all_days = (date_start + timedelta(x + 1)
-                    for x in xrange((date_end - date_start).days))
-        return sum(1 for day in all_days if day.weekday() < 5)
+        days = (date_end - date_start).days
+        return sum(1 for x in xrange(days)
+                   if (date_start + timedelta(x + 1)).weekday() < 5)
+
+    def count_days_weekend(self, date_start, date_end):
+        days = (date_end - date_start).days
+        return sum(1 for x in xrange(days)
+                   if (date_start + timedelta(x + 1)).weekday() >= 5)
 
     def correct_days_to_workable(self, date, increment=True):
         while date.weekday() >= 5:
@@ -48,32 +57,22 @@ class ProjectTask(models.Model):
         return date
 
     def calculate_date_without_weekend(self, date_start, days, increment=True):
-        count_days = (self.count_days_without_weekend(
-                      date_start, date_start + timedelta(days=days))
-                      if increment
-                      else self.count_days_without_weekend(
-                      date_start - timedelta(days=days), date_start))
-        recalculate = (days + (days - count_days))
-        cont = 1
-        while count_days < days:
-            recalculate = (days + (days - count_days) + cont)
-            count_days = (self.count_days_without_weekend(
-                          date_start,
-                          date_start + timedelta(days=recalculate))
-                          if increment
-                          else self.count_days_without_weekend(
-                          date_start - timedelta(days=recalculate),
-                          date_start))
-            cont += 1
-        date = (date_start + timedelta(days=recalculate)
-                if increment
-                else date_start - timedelta(days=recalculate))
+        if increment:
+            start = date_start
+            end = date_start + timedelta(days=days)
+        else:
+            start = date_start - timedelta(days=days)
+            end = date_start
+        holidays = self.count_days_weekend(start, end)
+        recalculate = (days + holidays)
+        if increment:
+            date = date_start + timedelta(days=recalculate)
+        else:
+            date = date_start - timedelta(days=recalculate)
         date = self.correct_days_to_workable(date, increment)
         return date
 
-    @api.one
-    @api.onchange('date_start')
-    def on_change_date_start(self):
+    def on_change_dates(self, date_start, date_end):
         if self.date_start is not False and self.date_end is not False:
             date_start = fields.Datetime.from_string(self.date_start)
             date_end = fields.Datetime.from_string(self.date_end)
@@ -86,35 +85,41 @@ class ProjectTask(models.Model):
             self.from_days = self.count_days_without_weekend(
                 date_start, date_end)
 
-    @api.one
-    @api.onchange('date_end')
-    def on_change_date_end(self):
-        if self.date_start is not False and self.date_end is not False:
+    @api.multi
+    def write(self, vals):
+        if vals.get('date_start') or vals.get('date_end'):
+            date_start = (vals.get('date_start')
+                          if vals.get('date_start') else self.date_start)
+            date_end = (vals.get('date_end')
+                        if vals.get('date_end') else self.date_end)
             self.estimated_days = self.count_days_without_weekend(
-                fields.Datetime.from_string(self.date_start),
-                fields.Datetime.from_string(self.date_end))
-            if self.project_id.calculation_type == 'date_end':
-                date_end = fields.Datetime.from_string(
-                    self.project_id.date)
-                date_start = fields.Datetime.from_string(self.date_end)
-            self.from_days = self.count_days_without_weekend(
-                date_start, date_end)
+                fields.Datetime.from_string(date_start),
+                fields.Datetime.from_string(date_end))
+            calculation_type = self.project_id.calculation_type
+            if calculation_type:
+                date_start = (self.project_id.date_start
+                              if calculation_type == 'date_begin'
+                              else self.date_end)
+                date_end = (self.date_start
+                            if calculation_type == 'date_begin'
+                            else self.project_id.date)
+                self.from_days = self.count_days_without_weekend(
+                    fields.Datetime.from_string(date_start),
+                    fields.Datetime.from_string(date_end))
+        super(ProjectTask, self).write(vals)
 
     def task_recalculate(self):
+        self.ensure_one()
         increment = (True if self.project_id.calculation_type == 'date_begin'
                      else False)
         project_date = (fields.Datetime.from_string(self.project_id.date_start)
                         if self.project_id.calculation_type == 'date_begin'
                         else fields.Datetime.from_string(self.project_id.date))
-        task_date_start = (fields.Datetime.to_string(
-            self.calculate_date_without_weekend(
-                project_date, self.from_days, increment=increment))
-            if increment
-            else fields.Datetime.to_string(
-                self.calculate_date_without_weekend(
-                    project_date, self.from_days + self.estimated_days,
-                    increment=increment)))
-        date_start = fields.Datetime.from_string(task_date_start)
+        total_days = (self.from_days
+                      if increment else self.from_days + self.estimated_days)
+        date_start = self.calculate_date_without_weekend(
+            project_date, total_days, increment=increment)
+        task_date_start = fields.Datetime.to_string(date_start)
         task_date_end = fields.Datetime.to_string(
             self.calculate_date_without_weekend(
                 date_start, self.estimated_days))
