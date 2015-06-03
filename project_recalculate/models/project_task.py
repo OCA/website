@@ -106,21 +106,16 @@ class ProjectTask(models.Model):
         project_date = (fields.Datetime.from_string(self.project_id.date_start)
                         if self.project_id.calculation_type == 'date_begin'
                         else fields.Datetime.from_string(self.project_id.date))
-        if increment:
-            task_date_start = fields.Datetime.to_string(
-                self.calculate_date_without_weekend(
-                    project_date, self.from_days, increment=increment))
-            date_start = fields.Datetime.from_string(task_date_start)
-            task_date_end = fields.Datetime.to_string(
-                self.calculate_date_without_weekend(
-                    date_start, self.estimated_days))
-        else:
-            task_date_start = fields.Datetime.to_string(
+        task_date_start = (fields.Datetime.to_string(
+            self.calculate_date_without_weekend(
+                project_date, self.from_days, increment=increment))
+            if increment
+            else fields.Datetime.to_string(
                 self.calculate_date_without_weekend(
                     project_date, self.from_days + self.estimated_days,
-                    increment=increment))
-            date_start = fields.Datetime.from_string(task_date_start)
-            task_date_end = fields.Datetime.to_string(
-                self.calculate_date_without_weekend(
-                    date_start, self.estimated_days))
+                    increment=increment)))
+        date_start = fields.Datetime.from_string(task_date_start)
+        task_date_end = fields.Datetime.to_string(
+            self.calculate_date_without_weekend(
+                date_start, self.estimated_days))
         self.write({'date_start': task_date_start, 'date_end': task_date_end})
