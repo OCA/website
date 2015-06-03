@@ -23,7 +23,7 @@
     'category': 'Website',
     'summary': 'Provide an All-In-One Checkout for your website e-commerce',
     'version': '1.0',
-    'author': "bloopark systems GmbH & Co. KG ,"
+    'author': "bloopark systems GmbH & Co. KG, "
               "Odoo Community Association (OCA)",
     'website': "http://www.bloopark.de",
     'depends': [
