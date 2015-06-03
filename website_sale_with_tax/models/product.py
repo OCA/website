@@ -32,6 +32,9 @@ class ProductTemplate(models.Model):
 
     @api.one
     def _get_product_total_price_with_tax(self):
+        # TODO implement with compute_all
+        # taxes = self.env['account.tax'].compute_all(
+        #     self.price, 1, product=self)
         sum_tax = 0
         for tax in self.taxes_id:
             sum_tax += self.price * tax.amount
