@@ -1,19 +1,30 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* mass_mailing_partner
+#   * mass_mailing_partner
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-27 09:11+0000\n"
-"PO-Revision-Date: 2015-05-27 09:11+0000\n"
+"POT-Creation-Date: 2015-06-03 15:32+0000\n"
+"PO-Revision-Date: 2015-06-03 15:32+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: mass_mailing_partner
+#: field:res.partner,mass_mailing_contacts_count:0
+msgid "Mailing list number"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: model:ir.actions.act_window,name:mass_mailing_partner.act_partner_mass_mailing_contacts
+#: view:res.partner:mass_mailing_partner.view_partner_form_mass_mailing_contacts
+msgid "Mailing lists"
+msgstr ""
 
 #. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_mail_mass_mailing_contact
@@ -31,4 +42,3 @@ msgstr ""
 #: field:mail.mass_mailing.contact,partner_id:0
 msgid "Partner"
 msgstr ""
-
