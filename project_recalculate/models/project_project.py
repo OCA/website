@@ -25,10 +25,6 @@ from openerp import models, fields
 from openerp.exceptions import Warning  # , RedirectWarning
 from openerp.tools.translate import _
 
-import logging
-from pprint import pformat
-_logger = logging.getLogger(__name__)
-
 
 class ProjectProject(models.Model):
     _inherit = 'project.project'
@@ -48,6 +44,7 @@ class ProjectProject(models.Model):
         min_date_start = fields.Datetime.from_string(
             project_task_ids[0].date_start)
         date_start_from_days = project_task_ids[0].from_days
+        date_start_estimated_days = project_task_ids[0].estimated_days
         max_date_end = fields.Datetime.from_string(
             project_task_ids[0].date_end)
         date_start = fields.Datetime.from_string(
@@ -57,6 +54,7 @@ class ProjectProject(models.Model):
             if min_date_start > date_start:
                 min_date_start = date_start
                 date_start_from_days = project_task.from_days
+                date_start_estimated_days = project_task.estimated_days
             if max_date_end < date_end:
                 max_date_end = date_end
         if self.calculation_type == 'date_begin':
@@ -64,8 +62,10 @@ class ProjectProject(models.Model):
                 date_start, date_start_from_days, increment=False)
             date_end = max_date_end
         else:
+            date_start = min_date_start
             date_end = project_task_obj.calculate_date_without_weekend(
-                date_end, date_start_from_days, increment=True)
+                date_start, date_start_from_days + date_start_estimated_days,
+                increment=True)
         return (fields.Datetime.to_string(date_start),
                 fields.Datetime.to_string(date_end))
 
