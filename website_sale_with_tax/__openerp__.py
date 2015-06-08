@@ -35,7 +35,8 @@ Include tax in price on website.
     # Dependencies
     'depends': [
         'base',
-        'website_sale'
+        'website_sale',
+        'account'
     ],
     'external_dependencies': {},
 
