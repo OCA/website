@@ -24,7 +24,7 @@
     'name': 'Product Brand Filtering in Website',
     'category': 'Website',
     'author': 'Serpent Consulting Services Pvt Ltd',
-    'website':'http://www.serpentcs.com',
+    'website': 'http://www.serpentcs.com',
     'summary': '',
     'version': '1.0',
     'description': """
@@ -39,7 +39,10 @@ The Youtube Video is here :
 https://www.youtube.com/watch?feature=player_embedded&v=LkV5umivylw
 
         """,
-    'depends': ['product_brand','website_sale'],
+    'depends': [
+        'product_brand',
+        'website_sale'
+    ],
     'data': [
         "security/ir.model.access.csv",
         "views/product_brand.xml",
