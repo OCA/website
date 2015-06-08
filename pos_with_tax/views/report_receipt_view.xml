@@ -7,10 +7,6 @@
         <attribute name="t-esc">formatLang(line.price_subtotal_incl, currency_obj=res_company.currency_id)</attribute>
     </xpath>
 
-    <xpath expr="//div/table[@class='table table-condensed']/tbody/tr/td[@class='text-right'][2]/t[2]/span" position="attributes">
-        <attribute name="t-esc">formatLang((line.price_subtotal_incl - line.discount), currency_obj=res_company.currency_id)</attribute>
-    </xpath>
-
 </template>
 </data>
 </openerp>

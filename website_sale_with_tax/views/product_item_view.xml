@@ -4,17 +4,8 @@
 
     <template id="products_item_with_tax" inherit_id="website_sale.products_item">
 
-        <xpath expr="//div[@class='product_price']/b/t" position="attributes">
-            <attribute name="t-if">(compute_currency(product.lst_price) - product.price_with_tax) &gt; 0.1</attribute>
-        </xpath>
-
         <xpath expr="//div[@class='product_price']/b/span[1]" position="attributes">
-            <attribute name="t-field">product.price_with_tax</attribute>
-            <attribute name="t-field-options"></attribute>
-        </xpath>
-
-        <xpath expr="//div[@class='product_price']/b/span[2]" position="attributes">
-            <attribute name="t-field">product.price_with_tax</attribute>
+            <attribute name="t-esc">product.price_with_tax</attribute>
         </xpath>
 
     </template>

@@ -31,7 +31,7 @@
     ],
     'data': [
         'views/pos_template.xml',
-        'views/report_receipt.xml',
+        'views/report_receipt_view.xml',
     ],
     'qweb': [
         'static/src/xml/pos.xml',

@@ -30,6 +30,6 @@ function AcceptCookie(){
     document.getElementById("bar_cookies").style.display="none";
 }
 
-if(getCookie('odoo_cookies_polity_accept')!='51'){
+if(getCookie('odoo_cookies_polity_accept')!='1'){
     document.getElementById("bar_cookies").style.display="block";
 }
