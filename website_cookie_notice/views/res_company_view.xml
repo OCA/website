@@ -19,6 +19,9 @@
                             <field name="cookieAcceptButton"></field>
                             <field name="cookieResetButton"></field>
                             <field name="cookieWhatAreTheyLink"></field>
+                            <field name="cookieAcceptButtonText"></field>
+                            <field name="cookieDeclineButtonText"></field>
+                            <field name="cookieResetButtonText"></field>
                         </group>
                     </page>
                 </notebook>

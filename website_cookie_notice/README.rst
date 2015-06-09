@@ -13,6 +13,15 @@ Configuration
 To change default options, go to your company form, click on 'cookie notice' tab and edit module options
 
 
+Known issues / Roadmap
+======================
+
+TODO
+----
+
+* Add to company form remaining options https://github.com/eLBati/website/blob/cookie_law/website_cookie_notice/static/src/js/jquery.cookiecuttr.js#L27
+
+
 Bug Tracker
 ===========
 

@@ -33,6 +33,9 @@ CONFIG_FIELDS = [
     'cookieAcceptButton',
     'cookieResetButton',
     'cookieWhatAreTheyLink',
+    'cookieAcceptButtonText',
+    'cookieDeclineButtonText',
+    'cookieResetButtonText',
     ]
 
 

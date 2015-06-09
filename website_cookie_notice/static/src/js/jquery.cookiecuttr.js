@@ -29,9 +29,6 @@
             cookieCutterDeclineOnly: false, // you'd like the CookieCutter to only hide when someone has clicked declined set this to true
             cookieDisable: '',
             cookieExpires: 365,
-            cookieAcceptButtonText: "ACCEPT COOKIES",
-            cookieDeclineButtonText: "DECLINE COOKIES",
-            cookieResetButtonText: "RESET COOKIES FOR THIS WEBSITE",
             cookieWhatAreLinkText: "What are cookies?",
             cookieNotificationLocationBottom: false, // top or bottom - they are your only options, so true for bottom, false for top            
             cookiePolicyPage: false,

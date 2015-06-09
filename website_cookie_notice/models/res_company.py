@@ -62,3 +62,13 @@ class Company(models.Model):
     cookieWhatAreTheyLink = fields.Char(
         string="cookieWhatAreTheyLink",
         default="http://www.allaboutcookies.org/")
+    cookieAcceptButtonText = fields.Char(
+        string="cookieAcceptButtonText", default="ACCEPT COOKIES",
+        translate=True)
+    cookieDeclineButtonText = fields.Char(
+        string="cookieDeclineButtonText", default="DECLINE COOKIES",
+        translate=True)
+    cookieResetButtonText = fields.Char(
+        string="cookieResetButtonText",
+        default="RESET COOKIES FOR THIS WEBSITE",
+        translate=True)
