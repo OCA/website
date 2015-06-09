@@ -17,24 +17,4 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-{
-    'name': 'Cookie notice',
-    'summary': 'Show cookie notice according to cookie law',
-    'version': '1.0',
-    'category': 'Website',
-    'author': "Agile Business Group,Odoo Community Association (OCA)",
-    'website': 'http://www.agilebg.com',
-    'license': 'AGPL-3',
-    'depends': [
-        'website',
-    ],
-    'data': [
-        'website.xml',
-        'views/res_company_view.xml',
-    ],
-    'qweb': [
-    ],
-    'installable': True,
-    'auto_install': False,
-}
+from . import main
