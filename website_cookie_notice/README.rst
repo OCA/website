@@ -4,7 +4,13 @@
 Cookie notice
 =============
 
-This module adds the cookie notice, according to `cookie law <http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32002L0058:en:HTML>`_, to your website
+This module adds the cookie notice, according to the `cookie law <http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32002L0058:en:HTML>`_, to your website
+
+
+Configuration
+=============
+
+To change default options, go to your company form, click on 'cookie notice' tab and edit module options
 
 
 Bug Tracker
