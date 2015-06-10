@@ -31,6 +31,7 @@
     "depends": ['base', 'point_of_sale'],
     'data': [
         "views/pos_ticket_logo_report_receipt_report.xml",
+        "views/pos_template.xml",
     ],
     "qweb": [
         'static/src/xml/pos.xml',
