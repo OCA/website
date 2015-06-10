@@ -7,6 +7,10 @@
             <img src="/web/binary/company_logo" /><br />
     </xpath>
 
+    <xpath expr="//div[@class='col-xs-12 text-center']/h2" position="attributes">
+        <attribute name="style">display:none;</attribute>
+    </xpath>
+
 </template>
 </data>
 </openerp>
