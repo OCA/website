@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="pos_ticket_logo_report_receipt_report" inherit_id="point_of_sale.report_receipt">
+
+    <xpath expr="//div[@class='col-xs-12 text-center']/h2" position="after">
+            <img src="/web/binary/company_logo" /><br />
+    </xpath>
+
+</template>
+</data>
+</openerp>
