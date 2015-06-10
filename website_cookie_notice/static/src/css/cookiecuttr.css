@@ -1,6 +1,6 @@
 /* To be used with cookieCuttr by Chris Wharton (http://cookiecuttr.com) */
 
-.cc-cookies { position:fixed; width: 100%; left: 0; top: 0; padding: 0.5em 5%; background: #565656; background: rgba(86,86,86,0.95); color: #fff; font-size: 13px; font-weight: 700; text-shadow: 0 -1px 0 rgba(0,0,0,0.35); z-index: 99999; text-align: center; color: #fff; }
+.cc-cookies { width: 100%; left: 0; top: 0; padding: 0.5em 5%; background: #565656; background: rgba(86,86,86,0.95); color: #fff; font-size: 13px; font-weight: 700; text-shadow: 0 -1px 0 rgba(0,0,0,0.35); z-index: 99999; text-align: center; color: #fff; }
 .cc-cookies a, .cc-cookies a:hover { color: #fff; text-decoration: underline; }
 .cc-cookies a:hover { text-decoration: none; }
 .cc-overlay { height: 100%; padding-top: 25%; }
@@ -18,6 +18,3 @@
 .cc-cookies a.cc-cookie-accept, .cc-cookies a.cc-cookie-decline, .cc-cookies a.cc-cookie-reset { display: block; margin: 1em 0; }
 }
 
-@media screen and (max-width: 480px) {
-.cc-cookies { position: relative; float: left; }
-}
