@@ -18,7 +18,14 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import res_config
-from . import website
-from . import sale
-from . import res_partner
+from openerp import fields, models
+
+
+class ResPartner(models.Model):
+
+    """Add Fields to res.partner."""
+
+    _inherit = 'res.partner'
+
+    street_name = fields.Char(string='Street name')
+    street_number = fields.Char(tring='Street number')

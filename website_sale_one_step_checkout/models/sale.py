@@ -52,13 +52,3 @@ class SaleOrder(models.Model):
                 res.append(taxes[key])
 
         return res
-
-
-class ResPartner(models.Model):
-
-    """Add Fields to res.partner."""
-
-    _inherit = 'res.partner'
-
-    street_name = fields.Char(string='Street name')
-    street_number = fields.Char(tring='Street number')
