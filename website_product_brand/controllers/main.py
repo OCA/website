@@ -32,7 +32,7 @@ PPG = 20
 PPR = 4
 
 
-class website_sale(openerp.addons.website_sale.controllers.main.website_sale):
+class WebsiteSale(openerp.addons.website_sale.controllers.main.website_sale):
 
     @http.route(['/shop',
                  '/shop/page/<int:page>',
