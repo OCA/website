@@ -14,6 +14,11 @@ The 1st one allows the customer to edit his/her data with a form that validates 
 
 The second view allows the customer to view his/her orders without having to deal w/ odoo backend.
 
+Registration
+------------
+
+This module also add validation to user registration/login and fixes translations for it.
+
 
 Credits
 =======
