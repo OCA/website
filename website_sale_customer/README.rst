@@ -1,12 +1,18 @@
 Customer views for ecommerce
 ============================
 
-TODO
+Adds proper customer views to your shop.
+
+It starts as a port of the improvements done on odoo 9 but it gives you more.
 
 Views
 -----
 
-TODO
+The customer has 2 new items in his/her personal menu: `my account` and `my orders`.
+
+The 1st one allows the customer to edit his/her data with a form that validates the inputs and that ease overrides of validation and other stuff.
+
+The second view allows the customer to view his/her orders without having to deal w/ odoo backend.
 
 
 Credits
