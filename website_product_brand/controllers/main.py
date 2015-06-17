@@ -172,10 +172,10 @@ class WebsiteSale(openerp.addons.website_sale.controllers.main.website_sale):
             to_currency,
             price,
             context=context)
-        style_in_product = lambda style,product: style.id in [s.id for s in
-            product.website_style_ids]
-        attrib_encode = lambda attribs:werkzeug.url_encode([('attrib', i) for
-            i in attribs])
+        style_in_product = lambda style, product: style.id in [
+            s.id for s in product.website_style_ids]
+        attrib_encode = lambda attribs: werkzeug.url_encode(
+            [('attrib', i) for i in attribs])
         values.update({'search': search,
                        'category': category,
                        'attrib_values': attrib_values,
