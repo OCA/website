@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+<data>
+
+<!-- Inherit from : /addons/report/views/layouts.xml -->
+<template id="external_layout_header"
+          inherit_id="report.external_layout_header"
+          name="Add VAT in invoice">
+    <xpath expr="//div[@t-field='company.partner_id']/.." position="attributes">
+        <attribute name="class">col-xs-6</attribute>
+    </xpath>
+    <xpath expr="//div[@t-field='company.partner_id']" position="before">
+        <div t-field="company.vat"/>
+    </xpath>
+</template>
+
+</data>
+</openerp>
