@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from openerp.osv import orm, osv, fields
+from openerp.osv import osv, fields
 
 
-class website_published_mixin(osv.AbstractModel):
+class WebsitePublishedMixin(osv.AbstractModel):
     _name = "website.published.mixin"
 
     _website_url_proxy = lambda self, *a, **kw: self._website_url(*a, **kw)

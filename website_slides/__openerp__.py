@@ -1,23 +1,14 @@
 # -*- coding: utf-8 -*-
+
 {
     'name': 'Slides',
     'version': '1.0',
     'summary': 'Share and Publish Videos, Presentations and Documents',
     'category': 'website',
-    'description': """
-Share and Publish Videos, Presentations and Documents'
-======================================================
-
- * Website Application
- * Channel Management
- * Filters and Tagging
- * Statistics of Presentation
- * Channel Subscription
- * Supported document types supported: PDF, images, YouTube videos and
- Google Drive documents)
-""",
-    'author': 'Odoo SA',
-    'website': 'https://www.odoo.com',
+    'author': "Odoo SA, "
+              "Incaser Informatica - Sergio Teruel, "
+              "Odoo Community Association (OCA)",
+    'website': 'https://github.com/OCA/website',
     'depends': ['website', 'website_mail'],
     'data': [
         'view/res_config.xml',

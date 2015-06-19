@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# ##############################################################################
+# #############################################################################
 #
 #    Odoo, Open Source Management Solution
 #    Copyright (C) 2014-TODAY Odoo SA (<https://www.odoo.com>).
@@ -19,5 +19,5 @@
 #
 ##############################################################################
 
-import controllers
-import models
+from . import controllers
+from . import models

@@ -11,7 +11,7 @@ from openerp.tools.translate import _
 _logger = logging.getLogger(__name__)
 
 
-class website_slides(http.Controller):
+class WebsiteSlides(http.Controller):
     _slides_per_page = 12
     _slides_per_list = 20
     _order_by_criterion = {
@@ -42,8 +42,8 @@ class website_slides(http.Controller):
             'related_slides': related_slides,
             'user': request.env.user,
             'is_public_user': request.env.user == request.website.user_id,
-            'comments': slide.channel_id.can_see_full and
-                        slide.website_message_ids or [],
+            'comments': (slide.channel_id.can_see_full and
+                         slide.website_message_ids or []),
             'private': not slide.channel_id.can_see_full,
         }
 
@@ -76,9 +76,10 @@ class website_slides(http.Controller):
         '/slides/<model("slide.channel"):channel>/<string:slide_type>'
         '/page/<int:page>',
 
-        '/slides/<model("slide.channel"):channel>/tag/<model("slide.tag"):tag>',
-        '/slides/<model("slide.channel"):channel>/tag/<model("slide.tag"):tag>'
-        '/page/<int:page>',
+        '/slides/<model("slide.channel"):channel>/tag/'
+        '<model("slide.tag"):tag>',
+        '/slides/<model("slide.channel"):channel>/tag/'
+        '<model("slide.tag"):tag>/page/<int:page>',
 
         '/slides/<model("slide.channel"):channel>/category/'
         '<model("slide.category"):category>',
@@ -125,7 +126,7 @@ class website_slides(http.Controller):
 
         pager_count = Slide.search_count(domain)
         pager = request.website.pager(url=pager_url, total=pager_count,
-                                      page=page,step=self._slides_per_page,
+                                      page=page, step=self._slides_per_page,
                                       scope=self._slides_per_page,
                                       url_args=pager_args)
 
@@ -154,7 +155,7 @@ class website_slides(http.Controller):
             for category in Slide.read_group(
                     domain, ['category_id'], ['category_id']):
                 category_id, name = category.get('category_id') or \
-                                    (False, _('Uncategorized'))
+                    (False, _('Uncategorized'))
                 category_datas.append({
                     'id': category_id,
                     'name': name,
@@ -249,9 +250,8 @@ class website_slides(http.Controller):
     @http.route('/slides/slide/<model("slide.slide"):slide>/download',
                 type='http', auth="public", website=True)
     def slide_download(self, slide):
-        if slide.download_security == 'public' or (
-                        slide.download_security == 'user'
-                        and request.session.uid):
+        if slide.download_security == 'public' or \
+                (slide.download_security == 'user' and request.session.uid):
             filecontent = base64.b64decode(slide.datas)
             disposition = 'attachment; filename=%s.pdf' % (
                 werkzeug.urls.url_quote(slide.name))
@@ -278,7 +278,8 @@ class website_slides(http.Controller):
         slide.likes += 1
         return slide.likes
 
-    @http.route('/slides/slide/dislike', type='json', auth="user", website=True)
+    @http.route(
+        '/slides/slide/dislike', type='json', auth="user", website=True)
     def slide_dislike(self, slide_id):
         slide = request.env['slide.slide'].browse(int(slide_id))
         slide.dislikes += 1
@@ -324,7 +325,8 @@ class website_slides(http.Controller):
             data['url'])
         preview = {}
         if not document_id:
-            preview['error'] = _('Please enter valid youtube or google doc url')
+            preview['error'] = _(
+                'Please enter valid youtube or google doc url')
             return preview
         existing_slide = Slide.search([('channel_id', '=', int(
             data['channel_id'])), ('document_id', '=', document_id)], limit=1)
@@ -389,7 +391,8 @@ class website_slides(http.Controller):
     def slides_embed(self, slide_id, page="1", **kw):
         # Note : don't use the 'model' in the route (use 'slide_id'), otherwise
         # if public cannot access the embedded slide, the error will be the
-        # website.403 page instead of the one of the website_slides.embed_slide.
+        # website.403 page instead of the one of the
+        # website_slides.embed_slide.
         # Do not forget the rendering here will be displayed in
         # the embedded iframe
 
@@ -416,4 +419,4 @@ class website_slides(http.Controller):
             # and properly display the error message.
             slide = request.env['slide.slide'].sudo().browse(slide_id)
             return request.website.render(
-                'website_slides.embed_slide_forbidden', {'slide' : slide})
+                'website_slides.embed_slide_forbidden', {'slide': slide})

@@ -3,7 +3,7 @@
 from openerp import api, fields, models
 
 
-class website_config_settings(models.TransientModel):
+class WebsiteConfigSettings(models.TransientModel):
 
     _inherit = "website.config.settings"
 

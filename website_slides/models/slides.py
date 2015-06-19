@@ -61,7 +61,7 @@ class Channel(models.Model):
             elif record.promote_strategy:
                 slides = self.env['slide.slide'].search(
                     [('website_published', '=', True),
-                     ('channel_id', '=', record.id)],limit=1,
+                     ('channel_id', '=', record.id)], limit=1,
                     order=self._order_by_strategy[record.promote_strategy])
                 record.promoted_slide_id = slides and slides[0] or False
 
@@ -170,7 +170,7 @@ class Category(models.Model):
     slide_ids = fields.One2many(
         'slide.slide', 'category_id', string="Slides")
     nbr_presentations = fields.Integer(
-        "Number of Presentations",compute='_count_presentations', store=True)
+        "Number of Presentations", compute='_count_presentations', store=True)
     nbr_documents = fields.Integer(
         "Number of Documents", compute='_count_presentations', store=True)
     nbr_videos = fields.Integer(
@@ -183,7 +183,8 @@ class Category(models.Model):
     def _count_presentations(self):
         result = dict.fromkeys(self.ids, dict())
         res = self.env['slide.slide'].read_group(
-            [('website_published', '=', True), ('category_id', 'in', self.ids)],
+            [('website_published', '=', True),
+             ('category_id', 'in', self.ids)],
             ['category_id', 'slide_type'], ['category_id', 'slide_type'],
             lazy=False)
         for res_group in res:
@@ -250,7 +251,8 @@ class Slide(models.Model):
      - Infographic
      - Video
 
-    Slide has various statistics like view count, embed count, like, dislikes"""
+    Slide has various statistics like view count, embed count,
+    like, dislikes"""
 
     _name = 'slide.slide'
     _inherit = ['mail.thread',
@@ -260,9 +262,10 @@ class Slide(models.Model):
 
     _PROMOTIONAL_FIELDS = [
         '__last_update', 'name', 'image_thumb', 'slide_type', 'total_views',
-        'category_id', 'channel_id', 'description', 'tag_ids', 'write_date', 'create_date',
-        'website_published','website_url', 'website_meta_title',
-        'website_meta_description', 'website_meta_keywords']
+        'category_id', 'channel_id', 'description', 'tag_ids', 'write_date',
+        'create_date', 'website_published', 'website_url',
+        'website_meta_title', 'website_meta_description',
+        'website_meta_keywords']
 
     _sql_constraints = [
         ('name_uniq', 'UNIQUE(channel_id, name)',
@@ -375,22 +378,22 @@ class Slide(models.Model):
                     # embed youtube video
                     record.embed_code = '' \
                         '<iframe src="//www.youtube.com/embed/%s?theme=light"'\
-                            'frameborder="0" allowfullscreen="true">' \
-                                        '</iframe>' % (record.document_id)
+                        'frameborder="0" allowfullscreen="true">' \
+                        '</iframe>' % (record.document_id)
                 else:
                     # embed google doc video
                     record.embed_code = '' \
                         '<embed src="https://video.google.com/get_player?' \
-                                    'ps=docs&partnerid=30&docid=%s" ' \
-                                    'type="application/x-shockwave-flash">' \
-                                    '</embed>' % (record.document_id)
+                        'ps=docs&partnerid=30&docid=%s" ' \
+                        'type="application/x-shockwave-flash">' \
+                        '</embed>' % (record.document_id)
             elif 'application/vnd.google-apps.document' in record.mime_type:
                 record.embed_code = '' \
                     '<iframe src="https://docs.google.com/document/d/%s/pub?' \
-                        'embedded=true" frameborder="0">' \
-                                    '</iframe>' % (record.document_id)
-            elif 'application/vnd.google-apps.presentation' in record.mime_type:
-                # record.embed_code = '<iframe src="https://docs.google.com/presentation/d/%s/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>' % (record.document_id)
+                    'embedded=true" frameborder="0">' \
+                    '</iframe>' % (record.document_id)
+            elif 'application/vnd.google-apps.presentation' in \
+                    record.mime_type:
                 record.embed_code = '' \
                     '<iframe ' \
                     'src="https://docs.google.com/presentation/d/%s/embed?' \
@@ -410,7 +413,6 @@ class Slide(models.Model):
             base_url, slug(slide))) for slide in self})
         return res
 
-
     @api.model
     def create(self, values):
         if not values.get('index_content'):
@@ -428,7 +430,7 @@ class Slide(models.Model):
                 values.setdefault(key, value)
         if 'mime_type' in values:
             if 'application/vnd.google-apps.' in values['mime_type']:
-                values['datas']= False
+                values['datas'] = False
         # Do not publish slide if user has not publisher rights
         if not self.user_has_groups('base.group_website_publisher'):
             values['website_published'] = False
@@ -440,7 +442,8 @@ class Slide(models.Model):
     @api.multi
     def write(self, values):
         if values.get('url'):
-            doc_data = self._parse_document_url(values['url']).get('values', dict())
+            doc_data = self._parse_document_url(
+                values['url']).get('values', dict())
             for key, value in doc_data.iteritems():
                 values.setdefault(key, value)
         res = super(Slide, self).write(values)
@@ -472,7 +475,7 @@ class Slide(models.Model):
         # still read not perform so we can not access self.channel_id
         if self.ids:
             self.env.cr.execute(
-                'SELECT DISTINCT channel_id FROM '+
+                'SELECT DISTINCT channel_id FROM ' +
                 self._table + ' WHERE id IN %s', (tuple(self.ids),))
             channel_ids = [x[0] for x in self.env.cr.fetchall()]
             channels = self.env['slide.channel'].sudo().browse(channel_ids)

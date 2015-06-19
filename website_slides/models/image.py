@@ -32,6 +32,7 @@ from random import randint
 # Image resizing
 # ----------------------------------------
 
+
 def image_resize_image(base64_source, size=(1024, 1024), encoding='base64',
                        filetype=None, avoid_if_small=False):
     """ Function to resize an image. The image will be resized to the given
@@ -44,8 +45,9 @@ def image_resize_image(base64_source, size=(1024, 1024), encoding='base64',
           sizes, the original image is returned. This is used to avoid adding
           transparent content around images that we do not want to alter but
           just resize if too big. This is used for example when storing images
-          in the 'image' field: we keep the original image, resized to a maximal
-          size, without adding transparent content around it if smaller.
+          in the 'image' field: we keep the original image, resized to a
+          maximal size, without adding transparent content around it if
+          smaller.
         - create a thumbnail of the source image through using the thumbnail
           function. Aspect ratios are preserved when using it. Note that if the
           source image is smaller than the expected size, it will not be
@@ -79,13 +81,16 @@ def image_resize_image(base64_source, size=(1024, 1024), encoding='base64',
 
     asked_width, asked_height = size
     if asked_width is None:
-        asked_width = int(image.size[0] * (float(asked_height) / image.size[1]))
+        asked_width = int(image.size[0] * (
+            float(asked_height) / image.size[1]))
     if asked_height is None:
-        asked_height = int(image.size[1] * (float(asked_width) / image.size[0]))
+        asked_height = int(image.size[1] * (
+            float(asked_width) / image.size[0]))
     size = asked_width, asked_height
 
     # check image size: do not create a thumbnail if avoiding smaller images
-    if avoid_if_small and image.size[0] <= size[0] and image.size[1] <= size[1]:
+    if avoid_if_small \
+            and image.size[0] <= size[0] and image.size[1] <= size[1]:
         return base64_source
 
     if image.size != size:
@@ -96,6 +101,7 @@ def image_resize_image(base64_source, size=(1024, 1024), encoding='base64',
     background_stream = StringIO.StringIO()
     image.save(background_stream, filetype)
     return background_stream.getvalue().encode(encoding)
+
 
 def image_resize_and_sharpen(
         image, size, preserve_aspect_ratio=False, factor=2.0):
@@ -122,6 +128,7 @@ def image_resize_and_sharpen(
             size[1] - resized_image.size[1]) / 2))
     return image
 
+
 def image_save_for_web(image, fp=None, format=None):
     """
         Save image optimized for web usage.
@@ -147,6 +154,7 @@ def image_save_for_web(image, fp=None, format=None):
         image.save(img, **opt)
         return img.getvalue()
 
+
 def image_resize_image_big(
         base64_source, size=(1024, 1024),
         encoding='base64', filetype=None, avoid_if_small=True):
@@ -158,6 +166,7 @@ def image_resize_image_big(
     return image_resize_image(
         base64_source, size, encoding, filetype, avoid_if_small)
 
+
 def image_resize_image_medium(
         base64_source, size=(128, 128),
         encoding='base64', filetype=None, avoid_if_small=False):
@@ -168,6 +177,7 @@ def image_resize_image_medium(
     """
     return image_resize_image(
         base64_source, size, encoding, filetype, avoid_if_small)
+
 
 def image_resize_image_small(
         base64_source, size=(64, 64), encoding='base64',
@@ -183,6 +193,8 @@ def image_resize_image_small(
 # ----------------------------------------
 # Crop Image
 # ----------------------------------------
+
+
 def crop_image(
         data, type='top', ratio=False,
         thumbnail_ratio=None, image_format="PNG"):
@@ -241,6 +253,7 @@ def crop_image(
 # Colors
 # ---------------------------------------
 
+
 def image_colorize(original, randomize=True, color=(255, 255, 255)):
     """ Add a color to the transparent background of an image.
         :param original: file object on the original image file
@@ -264,10 +277,12 @@ def image_colorize(original, randomize=True, color=(255, 255, 255)):
 # Misc image tools
 # ---------------------------------------
 
+
 def image_get_resized_images(
         base64_source, return_big=False, return_medium=True, return_small=True,
     big_name='image', medium_name='image_medium', small_name='image_small',
-    avoid_resize_big=True, avoid_resize_medium=False, avoid_resize_small=False):
+    avoid_resize_big=True, avoid_resize_medium=False,
+        avoid_resize_small=False):
     """ Standard tool function that returns a dictionary containing the
         big, medium and small versions of the source image. This function
         is meant to be used for the methods of functional fields for
@@ -300,11 +315,10 @@ def image_get_resized_images(
     return return_dict
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     import sys
 
-    assert len(sys.argv)==3, 'Usage to Test: image.py SRC.png DEST.png'
-
-    img = file(sys.argv[1],'rb').read().encode('base64')
-    new = image_resize_image(img, (128,100))
+    assert len(sys.argv) == 3, 'Usage to Test: image.py SRC.png DEST.png'
+    img = file(sys.argv[1], 'rb').read().encode('base64')
+    new = image_resize_image(img, (128, 100))
     file(sys.argv[2], 'wb').write(new.decode('base64'))

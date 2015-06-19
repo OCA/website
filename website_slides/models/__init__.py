@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import res_config
-import website
-import slides
 
+from . import res_config
+from . import website
+from . import slides
