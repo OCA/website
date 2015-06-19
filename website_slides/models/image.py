@@ -280,8 +280,8 @@ def image_colorize(original, randomize=True, color=(255, 255, 255)):
 
 def image_get_resized_images(
         base64_source, return_big=False, return_medium=True, return_small=True,
-    big_name='image', medium_name='image_medium', small_name='image_small',
-    avoid_resize_big=True, avoid_resize_medium=False,
+        big_name='image', medium_name='image_medium', small_name='image_small',
+        avoid_resize_big=True, avoid_resize_medium=False,
         avoid_resize_small=False):
     """ Standard tool function that returns a dictionary containing the
         big, medium and small versions of the source image. This function
