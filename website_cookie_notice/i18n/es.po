@@ -6,14 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-23 09:42+0000\n"
-"PO-Revision-Date: 2015-06-23 09:42+0000\n"
+"POT-Creation-Date: 2015-06-23 19:38+0000\n"
+"PO-Revision-Date: 2015-06-23 19:38+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: website_cookie_notice
+#: code:addons/website_cookie_notice/models/res_company.py:67
+#, python-format
+msgid "ACCEPT COOKIES"
+msgstr "ACEPTAR"
 
 #. module: website_cookie_notice
 #: model:ir.model,name:website_cookie_notice.model_res_company
@@ -24,6 +30,41 @@ msgstr "Compañías"
 #: view:res.company:website_cookie_notice.view_company_form
 msgid "Cookie notice"
 msgstr "Aviso de uso de cookies"
+
+#. module: website_cookie_notice
+#: code:addons/website_cookie_notice/models/res_company.py:70
+#, python-format
+msgid "DECLINE COOKIES"
+msgstr "RECHAZAR"
+
+#. module: website_cookie_notice
+#: code:addons/website_cookie_notice/models/res_company.py:74
+#, python-format
+msgid "RESET COOKIES FOR THIS WEBSITE"
+msgstr "ELIMINAR COOKIES"
+
+#. module: website_cookie_notice
+#: code:addons/website_cookie_notice/models/res_company.py:33
+#, python-format
+msgid "We use cookies on this website, you can <a href=\"{{cookiePolicyLink}}\" title=\"read about our cookies\">read about them here</a>. To use the website as intended please..."
+msgstr "Usamos cookies en este sitio web, usted puede saber más sobre ellas en"
+" <a href=\"{{cookiePolicyLink}}\" title=\"lea nuestra política de privacidad\">"
+" nuestra politica de privacidad</a>. Para continuar por favor pulse en ..."
+
+#. module: website_cookie_notice
+#: code:addons/website_cookie_notice/models/res_company.py:47
+#, python-format
+msgid "We use cookies, just to track visits to our website, we store no personal details."
+msgstr "Usamos cookies sólo para analizar las visitas a este sitio web,"
+" no almacenamos ningún dato personal."
+
+#. module: website_cookie_notice
+#: code:addons/website_cookie_notice/models/res_company.py:52
+#, python-format
+msgid "We're sorry, this feature places cookies in your browser and has been disabled. <br>To continue using this functionality, please"
+msgstr "Lo sentimos, esta funcionalidad almacena cookies en su navegador"
+" y ha sido deshabilitada. <br> Para seguir utilizando esta funcionalidad,"
+" por favor pulse en ..."
 
 #. module: website_cookie_notice
 #: field:res.company,cookieAcceptButton:0
@@ -93,7 +134,7 @@ msgstr "cookieWhatAreTheyLink"
 #. module: website_cookie_notice
 #: help:res.company,cookieOverlayEnabled:0
 msgid "don't want a discreet toolbar? Fine, set this to true"
-msgstr "¿No quiere una barra discreta? Entonces, activa esta opción"
+msgstr "¿No quiere una barra discreta? Entonces, active esta opción"
 
 #. module: website_cookie_notice
 #: help:res.company,cookiePolicyLink:0
@@ -103,6 +144,6 @@ msgstr "Si aplica, introduce el enlace a la página de Política de Privacidad a
 #. module: website_cookie_notice
 #: help:res.company,cookieAnalytics:0
 msgid "just using a simple analytics package? change this to true"
-msgstr "¿Está usando un paquete simple de cookies de estadísticas de uso?"
+msgstr "¿Está usando sólo cookies para medir las visitas?"
 " Entonces, activa esta opción y se mostrará el mensaje configurado en 'cookieAnalyticsMessage'"
 
