@@ -20,6 +20,7 @@
 ##############################################################################
 
 from openerp import models, fields
+from openerp.tools.translate import _
 
 
 class Company(models.Model):
@@ -29,28 +30,28 @@ class Company(models.Model):
         help="just using a simple analytics package? change this to true")
     cookieMessage = fields.Char(
         string="cookieMessage",
-        default='We use cookies on this website, you can '
-                '<a href="{{cookiePolicyLink}}" title="read about our '
-                'cookies">read about them here</a>. To use the website as '
-                'intended please...',
+        default=_('We use cookies on this website, you can '
+                  '<a href="{{cookiePolicyLink}}" title="read about our '
+                  'cookies">read about them here</a>. To use the website as '
+                  'intended please...'),
         translate=True)
     cookiePolicyLink = fields.Char(
         string="cookiePolicyLink",
         help="if applicable, enter the link to your privacy policy here...",
-        default='/privacy-policy')
+        default='/page/privacy')
     cookieOverlayEnabled = fields.Boolean(
         string="cookieOverlayEnabled",
         help="don't want a discreet toolbar? Fine, set this to true")
     cookieAnalyticsMessage = fields.Char(
         string="cookieAnalyticsMessage",
-        default='We use cookies, just to track visits to our website, we store'
-                ' no personal details.',
+        default=_('We use cookies, just to track visits to our website, we '
+                  'store no personal details.'),
         translate=True)
     cookieErrorMessage = fields.Char(
         string="cookieErrorMessage",
-        default="We\'re sorry, this feature places cookies in your browser and"
-                " has been disabled. <br>To continue using this functionality,"
-                " please",
+        default=_("We\'re sorry, this feature places cookies in your browser "
+                  "and has been disabled. <br>To continue using this "
+                  "functionality, please"),
         translate=True)
     cookieDeclineButton = fields.Boolean(
         string="cookieDeclineButton")
@@ -63,12 +64,12 @@ class Company(models.Model):
         string="cookieWhatAreTheyLink",
         default="http://www.allaboutcookies.org/")
     cookieAcceptButtonText = fields.Char(
-        string="cookieAcceptButtonText", default="ACCEPT COOKIES",
+        string="cookieAcceptButtonText", default=_("ACCEPT COOKIES"),
         translate=True)
     cookieDeclineButtonText = fields.Char(
-        string="cookieDeclineButtonText", default="DECLINE COOKIES",
+        string="cookieDeclineButtonText", default=_("DECLINE COOKIES"),
         translate=True)
     cookieResetButtonText = fields.Char(
         string="cookieResetButtonText",
-        default="RESET COOKIES FOR THIS WEBSITE",
+        default=_("RESET COOKIES FOR THIS WEBSITE"),
         translate=True)
