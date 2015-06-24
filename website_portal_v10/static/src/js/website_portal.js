@@ -1,8 +1,8 @@
-(function () {
+odoo.define('website_portal', function(require) {
     'use strict';
 
-    var website = openerp.website;
-    var qweb = openerp.qweb;
+    var website = require('website.website');
+    var qweb = require('qweb');
     website.ready().done(function() {
 
         $('.oe_website_portal').on('change', "select[name='country_id']", function () {
@@ -18,7 +18,7 @@
             $(this).parents('table').find(".to_hide").toggleClass('hidden');
             $(this).find('span').toggleClass('hidden');
         });
-        
+
     });
 
-})();
+});

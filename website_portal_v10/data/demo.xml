@@ -79,45 +79,4 @@
         <!-- Confirm some Sale Orders-->
         <workflow action="order_confirm" model="sale.order" ref="sale_order_2"/>
 
-        <!-- Invoice for Indirect Marketing -->
-
-        <record id="account_invoice_1" model="account.invoice">
-            <field name="currency_id" ref="base.EUR"/>
-            <field name="company_id" ref="base.main_company"/>
-            <field name="partner_id" ref="portal.partner_demo_portal"/>
-            <field name="journal_id" ref="account.sales_journal"/>
-            <field name="team_id" ref="sales_team.crm_team_1"/>
-            <field name="state">open</field>
-            <field name="type">out_invoice</field>
-            <field name="account_id" ref="account.a_recv"/>
-            <field name="name">Test invoice 1</field>
-        </record>
-        <record id="account_invoice_1_line_1" model="account.invoice.line">
-            <field name="name">Basic formation with Dvorak</field>
-            <field name="invoice_id" ref="account_invoice_1"/>
-            <field name="price_unit">500</field>
-            <field name="quantity">1</field>
-            <field name="account_id" ref="account.a_sale"/>
-        </record>
-
-        <record id="account_invoice_2" model="account.invoice">
-            <field name="currency_id" ref="base.EUR"/>
-            <field name="company_id" ref="base.main_company"/>
-            <field name="partner_id" ref="portal.partner_demo_portal"/>
-            <field name="journal_id" ref="account.sales_journal"/>
-            <field name="team_id" ref="sales_team.crm_team_1"/>
-            <field name="state">paid</field>
-            <field name="type">out_invoice</field>
-            <field name="account_id" ref="account.a_recv"/>
-            <field name="name">Test invoice 1</field>
-        </record>
-        <record id="account_invoice_2_line_1" model="account.invoice.line">
-            <field name="name">Service on demand</field>
-            <field name="invoice_id" ref="account_invoice_2"/>
-            <field name="price_unit">75</field>
-            <field name="quantity">6</field>
-            <field name="account_id" ref="account.a_sale"/>
-        </record>
-
-
 </odoo>
