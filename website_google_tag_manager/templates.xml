@@ -1,0 +1,43 @@
+<openerp>
+    <data>
+        <record id="view_website_config_settings" model="ir.ui.view">
+            <field name="name">Google Tag Manager settings</field>
+            <field name="model">website.config.settings</field>
+            <field name="inherit_id" ref="website.view_website_config_settings"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@string='Domain']" position="inside">
+                    <label for="google_tag_key"/>
+                        <div name="google_tag_key">
+                            <div>
+                                <div name="google_tag_key" class="oe_inline">
+                                    <field name="google_tag_key" placeholder="GTM-XXXXXX"/>
+                                </div>
+                            </div>
+                        </div>
+                </xpath>
+            </field>
+        </record>
+        <template id="add_gtm" inherit_id="website.layout" priority="1">
+            <xpath expr="//body/*[1]" position="before">
+                <t t-if="website and website.google_tag_key">
+                <!-- Google Tag Manager -->
+                <noscript><iframe t-att-src="'//www.googletagmanager.com/ns.html?id=%s' % website.google_tag_key"
+
+                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+                <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+                j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+                })(window,document,'script','dataLayer','<t t-esc="website.google_tag_key"/>');</script>
+
+                <!-- End Google Tag Manager -->
+                </t>
+            </xpath>
+        </template>
+    </data>
+</openerp>
