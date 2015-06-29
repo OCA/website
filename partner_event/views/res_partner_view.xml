@@ -27,7 +27,7 @@
                 </div>
                 <notebook position="inside">
                     <page string="Events">
-                        <field name="event_registrations"/>
+                        <field name="event_registrations" context="{'default_partner_id': active_id}"/>
                     </page>
                 </notebook>
             </field>
