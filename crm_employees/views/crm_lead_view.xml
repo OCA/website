@@ -2,8 +2,8 @@
 <openerp>
 <data>
 
-<record model="ir.ui.view" id="crm_case_form_view_leads_employees">
-    <field name="name">CRM - Leads Form with employees</field>
+<record model="ir.ui.view" id="crm_case_form_view_leads">
+    <field name="name">Add employees field</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
     <field name="arch" type="xml">
@@ -15,8 +15,8 @@
     </field>
 </record>
 
-<record model="ir.ui.view" id="crm_case_form_view_oppor_employees">
-    <field name="name">CRM - Leads Form with employees</field>
+<record model="ir.ui.view" id="crm_case_form_view_oppor">
+    <field name="name">Add employees field</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
     <field name="arch" type="xml">

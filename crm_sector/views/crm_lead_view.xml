@@ -2,8 +2,8 @@
 <openerp>
 <data>
 
-<record model="ir.ui.view" id="crm_case_form_view_leads_sector">
-    <field name="name">CRM - Leads Form with sector</field>
+<record model="ir.ui.view" id="crm_case_form_view_leads">
+    <field name="name">Add sector field</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
     <field name="arch" type="xml">
@@ -14,8 +14,8 @@
     </field>
 </record>
 
-<record model="ir.ui.view" id="crm_case_tree_view_leads_sector">
-    <field name="name">Leads with sector</field>
+<record model="ir.ui.view" id="crm_case_tree_view_leads">
+    <field name="name">Add sector field as tree column</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
     <field name="arch" type="xml">
@@ -25,8 +25,8 @@
     </field>
 </record>
 
-<record model="ir.ui.view" id="view_crm_case_leads_filter_sector">
-    <field name="name">CRM - Leads Search with sectors</field>
+<record model="ir.ui.view" id="view_crm_case_leads_filter">
+    <field name="name">Add sector field for searching and grouping</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
     <field name="arch" type="xml">
@@ -41,8 +41,8 @@
     </field>
 </record>
 
-<record model="ir.ui.view" id="crm_case_form_view_oppor_sector">
-    <field name="name">CRM - Leads Form with sector</field>
+<record model="ir.ui.view" id="crm_case_form_view_oppor">
+    <field name="name">Add sector field</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
     <field name="arch" type="xml">
@@ -53,8 +53,8 @@
     </field>
 </record>
 
-<record model="ir.ui.view" id="crm_case_tree_view_oppor_sector">
-    <field name="name">Leads with sector</field>
+<record model="ir.ui.view" id="crm_case_tree_view_oppor">
+    <field name="name">Add sector field as tree column</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
     <field name="arch" type="xml">
@@ -64,8 +64,8 @@
     </field>
 </record>
 
-<record model="ir.ui.view" id="view_crm_case_opportunities_filter_sector">
-    <field name="name">CRM - Leads Search with sectors</field>
+<record model="ir.ui.view" id="view_crm_case_opportunities_filter">
+    <field name="name">Add sector field for searching and grouping</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
     <field name="arch" type="xml">

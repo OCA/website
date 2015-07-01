@@ -2,8 +2,8 @@
 <openerp>
 <data>
 
-<record model="ir.ui.view" id="crm_case_form_view_leads_capital">
-    <field name="name">CRM - Leads Form with capital info</field>
+<record model="ir.ui.view" id="crm_case_form_view_leads">
+    <field name="name">Add capital fields</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
     <field name="arch" type="xml">
@@ -19,8 +19,8 @@
     </field>
 </record>
 
-<record model="ir.ui.view" id="view_crm_case_leads_filter_capital">
-    <field name="name">CRM - Leads Search with capital</field>
+<record model="ir.ui.view" id="view_crm_case_leads_filter">
+    <field name="name">Add capital fields for grouping</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
     <field name="arch" type="xml">
@@ -38,8 +38,8 @@
     </field>
 </record>
 
-<record model="ir.ui.view" id="crm_case_form_view_oppor_capital">
-    <field name="name">CRM - Leads Form with capital info</field>
+<record model="ir.ui.view" id="crm_case_form_view_oppor">
+    <field name="name">Add capital fields</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
     <field name="arch" type="xml">
@@ -55,8 +55,8 @@
     </field>
 </record>
 
-<record model="ir.ui.view" id="view_crm_case_opportunities_filter_capital">
-    <field name="name">CRM - Leads Search with capital</field>
+<record model="ir.ui.view" id="view_crm_case_opportunities_filter">
+    <field name="name">Add capital fields for grouping</field>
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
     <field name="arch" type="xml">

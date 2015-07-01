@@ -42,7 +42,8 @@ class CrmLead(models.Model):
             context=context)
         data = {
             'region': lead.region.id,
-            'substate': lead.substate.id}
+            'substate': lead.substate.id
+        }
         self.pool['res.partner'].write(cr, uid, partner_id, data,
                                        context=context)
         return partner_id
