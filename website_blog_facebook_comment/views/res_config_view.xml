@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_facebook_comment_configuration" model="ir.ui.view">
+            <field name="name">Facebook comment settings</field>
+            <field name="model">website.blog.facebook.comment.settings</field>
+            <field name="arch" type="xml">
+                <form string="Facebook Blog app" class="oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <separator string="App data"/>
+                    <group>
+                        <div>
+                            <div name="appId">
+                                <label for="appId"/>
+                                <field name="appId" class="oe_inline"/>
+                            </div>
+                            <div name="numposts">
+                                <label for="numposts"/>
+                                <field name="numposts" class="oe_inline"/>
+                            </div>
+                        </div>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_facebook_comment_configuration" model="ir.actions.act_window">
+            <field name="name">acebook comment action</field>
+            <field name="res_model">website.blog.facebook.comment.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem id="menu_facebook_comment_configuration" name="Blog Facebook Comment" parent="base.menu_config"
+            sequence="20" action="action_facebook_comment_configuration"/>
+
+    </data>
+</openerp>

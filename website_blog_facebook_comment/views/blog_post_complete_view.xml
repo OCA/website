@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="blog_post_complete" name="Blog Post" inherit_id="website_blog.blog_post_complete">
+        <xpath expr="//section[@id='comments']/hr" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+        <xpath expr="//section[@id='comments']/section" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+        <xpath expr="//section[@id='comments']/ul" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+        <xpath expr="//section[@id='comments']" position="inside">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/<t t-raw='lang'/>/sdk.js#xfbml=1&amp;version=v2.3&amp;appId=<t t-raw='appId'/>";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+            <section class="fb-comments read_width" t-att-data-href="base_url" t-att-data-numposts="numposts">
+            </section>
+        </xpath>
+    </template>
+
+</data>
+</openerp>
