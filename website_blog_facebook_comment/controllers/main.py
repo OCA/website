@@ -27,10 +27,6 @@ from openerp.addons.website_blog.controllers.main import WebsiteBlog
 from openerp.http import request
 from openerp.addons.website.models.website import slug
 
-import logging
-from pprint import pformat
-_logger = logging.getLogger(__name__)
-
 
 class WebsiteBlog(WebsiteBlog):
 
