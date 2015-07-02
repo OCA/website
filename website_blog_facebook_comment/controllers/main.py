@@ -27,26 +27,12 @@ from openerp.addons.website_blog.controllers.main import WebsiteBlog
 from openerp.http import request
 from openerp.addons.website.models.website import slug
 
+import logging
+from pprint import pformat
+_logger = logging.getLogger(__name__)
+
 
 class WebsiteBlog(WebsiteBlog):
-
-    def _appid(self):
-        config_pool = request.registry['ir.config_parameter']
-        appid = config_pool.get_param(
-            request.cr, request.uid,
-            'blog_facebook_comment.appId', default=False)
-        if appid is False or len(appid) <= 0:
-            return False
-        return appid
-
-    def _numposts(self):
-        config_pool = request.registry['ir.config_parameter']
-        numposts = config_pool.get_param(
-            request.cr, request.uid,
-            'blog_facebook_comment.numposts', default=5)
-        if numposts is False or len(numposts) <= 0:
-            return False
-        return numposts
 
     def _base_url(self):
         config_pool = request.registry['ir.config_parameter']
@@ -58,16 +44,19 @@ class WebsiteBlog(WebsiteBlog):
         return base_url
 
     @http.route([
-        '''/blog/<model("blog.blog"):blog>/post/'''
-        '''<model("blog.post", "[('blog_id','=',blog[0])]"):blog_post>'''],
+        '''/blog/<model("blog.blog"):blog>/post/<model("blog.post", "[('blog_id','=',blog[0])]"):blog_post>'''],
         type='http', auth="public", website=True)
     def blog_post(self, blog, blog_post,
                   tag_id=None, page=1, enable_editor=None, **post):
         response = super(WebsiteBlog, self).blog_post(
             blog, blog_post, tag_id=None, page=1, enable_editor=None, **post)
-        response.qcontext['appId'] = self._appid()
+        _logger.info("blog_post::::response " + pformat(dir(response)))
+        _logger.info("blog_post::::qcontext " + pformat(response.qcontext))
+        _logger.info("blog_post::::request " + pformat(dir(request)))
+        _logger.info("blog_post::::context " + pformat(request.website))
+        response.qcontext['appId'] = request.website.facebook_appid
         response.qcontext['lang'] = request.context['lang']
-        response.qcontext['numposts'] = self._numposts()
+        response.qcontext['numposts'] = request.website.facebook_numposts
         base_url = (self._base_url() + '/blog/' +
                     str(slug(response.qcontext['blog'])) + '/post/' +
                     str(slug(response.qcontext['blog_post'])))

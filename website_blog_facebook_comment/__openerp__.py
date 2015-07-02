@@ -26,17 +26,15 @@
     'version': '1.0',
     'depends': [
         'base',
+        'website',
         'website_blog',
     ],
     'data': [
         'views/blog_post_complete_view.xml',
-        'views/res_config_view.xml',
+        'views/facebook_settings_view.xml',
     ],
-    'qweb': [
-    ],
-    'js': [
-    ],
-    'author': 'Antiun Ingeniería S.L.',
+    "author": "Antiun Ingeniería S.L., "
+              "Odoo Community Association (OCA)",
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
     'installable': True,

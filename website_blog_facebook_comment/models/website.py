@@ -22,36 +22,11 @@
 #
 ##############################################################################
 
-from openerp import models, fields, api
+from openerp import models, fields
 
 
-class DigitalConfigSettings(models.TransientModel):
-    _name = 'website.blog.facebook.comment.settings'
-    _inherit = 'res.config.settings'
+class Website(models.Model):
+    _inherit = 'website'
 
-    appId = fields.Char(string="Facebook AppID")
-    numposts = fields.Char(string="Number of Posts", default=5)
-
-    @api.multi
-    def get_default_appid(self):
-        conf_par = self.env['ir.config_parameter']
-        token = conf_par.get_param('blog_facebook_comment.appId', default="")
-        return {'token': token}
-
-    @api.multi
-    def set_appid(self):
-        conf_par = self.env['ir.config_parameter']
-        conf_par.set_param('blog_facebook_comment.appId', self.appId)
-
-    @api.multi
-    def get_default_numposts(self):
-        conf_par = self.env['ir.config_parameter']
-        token = conf_par.get_param('blog_facebook_comment.numposts', default="")
-        return {'token': token}
-
-    @api.multi
-    def set_numposts(self):
-        conf_par = self.env['ir.config_parameter']
-        if self.numposts <= 0:
-            self.numposts = 5
-        conf_par.set_param('blog_facebook_comment.numposts', self.numposts)
+    facebook_appid = fields.Char(string="Facebook AppID")
+    facebook_numposts = fields.Integer(string="Number of Posts", default=5)

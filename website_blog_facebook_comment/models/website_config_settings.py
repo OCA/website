@@ -22,5 +22,13 @@
 #
 ##############################################################################
 
-from . import website
-from . import website_config_settings
+from openerp import models, fields
+
+
+class FacebookSettings(models.TransientModel):
+    _inherit = 'website.config.settings'
+
+    facebook_appid = fields.Char(
+        string="Facebook AppID", related=['website_id', 'facebook_appid'])
+    facebook_numposts = fields.Integer(
+        string="Number of Posts", related=['website_id', 'facebook_numposts'])
