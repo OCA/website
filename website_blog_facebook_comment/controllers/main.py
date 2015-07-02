@@ -27,10 +27,6 @@ from openerp.addons.website_blog.controllers.main import WebsiteBlog
 from openerp.http import request
 from openerp.addons.website.models.website import slug
 
-import logging
-from pprint import pformat
-_logger = logging.getLogger(__name__)
-
 
 class WebsiteBlog(WebsiteBlog):
 
@@ -44,16 +40,13 @@ class WebsiteBlog(WebsiteBlog):
         return base_url
 
     @http.route([
-        '''/blog/<model("blog.blog"):blog>/post/<model("blog.post", "[('blog_id','=',blog[0])]"):blog_post>'''],
+        "/blog/<model('blog.blog'):blog>/post/"
+        "<model('blog.post', '[('blog_id','=',blog[0])]'):blog_post>"],
         type='http', auth="public", website=True)
     def blog_post(self, blog, blog_post,
                   tag_id=None, page=1, enable_editor=None, **post):
         response = super(WebsiteBlog, self).blog_post(
             blog, blog_post, tag_id=None, page=1, enable_editor=None, **post)
-        _logger.info("blog_post::::response " + pformat(dir(response)))
-        _logger.info("blog_post::::qcontext " + pformat(response.qcontext))
-        _logger.info("blog_post::::request " + pformat(dir(request)))
-        _logger.info("blog_post::::context " + pformat(request.website))
         response.qcontext['appId'] = request.website.facebook_appid
         response.qcontext['lang'] = request.context['lang']
         response.qcontext['numposts'] = request.website.facebook_numposts
