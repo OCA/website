@@ -2,7 +2,6 @@
 # Python source code encoding : https://www.python.org/dev/peps/pep-0263/
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
 #    This module copyright :
 #        (c) 2015 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
 #                 Endika Iglesias <endikaig@antiun.com>
@@ -25,19 +24,9 @@
 from openerp.addons.web import http
 from openerp.addons.website_blog.controllers.main import WebsiteBlog
 from openerp.http import request
-from openerp.addons.website.models.website import slug
 
 
 class WebsiteBlog(WebsiteBlog):
-
-    def _base_url(self):
-        config_pool = request.registry['ir.config_parameter']
-        base_url = config_pool.get_param(
-            request.cr, request.uid,
-            'web.base.url', default=False)
-        if base_url is False or len(base_url) <= 0:
-            return False
-        return base_url
 
     @http.route([
         """/blog/<model('blog.blog'):blog>/post/"""
@@ -50,8 +39,5 @@ class WebsiteBlog(WebsiteBlog):
         response.qcontext['appId'] = request.website.facebook_appid
         response.qcontext['lang'] = request.context['lang']
         response.qcontext['numposts'] = request.website.facebook_numposts
-        base_url = (self._base_url() + '/blog/' +
-                    str(slug(response.qcontext['blog'])) + '/post/' +
-                    str(slug(response.qcontext['blog_post'])))
-        response.qcontext['base_url'] = base_url
+        response.qcontext['base_url'] = request.httprequest.url
         return response

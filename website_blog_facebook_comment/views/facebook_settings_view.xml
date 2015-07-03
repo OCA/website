@@ -8,19 +8,19 @@
             <field name="inherit_id" ref="website.view_website_config_settings"/>
             <field name="arch" type="xml">
                 <xpath expr="//div[@name='social_facebook']" position="after">
-                      <label for="id" string="Facebook comment API"/>
-                      <div>
-                          <p>Set your Facebook API access below to be able to use the Facebook comment Website blog.<br/>
-                          </p>
-                          <div>
-                              <label for="facebook_appid"/>
-                              <field name="facebook_appid" class="oe_inline"/>
-                          </div>
-                          <div>
-                              <label for="facebook_numposts"/>
-                              <field name="facebook_numposts" class="oe_inline"/>
-                          </div>
-                      </div>
+                    <label for="id" string="Facebook comment API"/>
+                    <div>
+                        <p>Set your Facebook API access below to be able to use the Facebook comment Website blog.<br/>
+                        </p>
+                        <div>
+                            <label for="facebook_appid"/>
+                            <field name="facebook_appid" class="oe_inline"/>
+                        </div>
+                        <div>
+                            <label for="facebook_numposts"/>
+                            <field name="facebook_numposts" class="oe_inline"/>
+                        </div>
+                    </div>
                 </xpath>
             </field>
         </record>

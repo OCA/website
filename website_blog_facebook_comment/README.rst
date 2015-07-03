@@ -18,7 +18,9 @@ Configuration
 
 To configure this module, you need to:
 
-* add Facebook appId
+* create your app in Facebook (https://developers.facebook.com/)
+
+* add copy appId in website configuration area.
 
 Bug Tracker
 ===========

@@ -2,7 +2,6 @@
 # Python source code encoding : https://www.python.org/dev/peps/pep-0263/
 ##############################################################################
 #
-#    OpenERP, Odoo Source Management Solution
 #    Copyright (c) 2015 Antiun Ingeniería S.L. (http://www.antiun.com)
 #                       Endika Iglesias <endikaig@antiun.com>
 #
@@ -21,7 +20,7 @@
 #
 ##############################################################################
 {
-    'name': "Blog with Facebook comment",
+    'name': "Add Facebook comments on blog posts",
     'category': 'Website',
     'version': '1.0',
     'depends': [

@@ -2,7 +2,6 @@
 # Python source code encoding : https://www.python.org/dev/peps/pep-0263/
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
 #    This module copyright :
 #        (c) 2015 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
 #                 Endika Iglesias <endikaig@antiun.com>
