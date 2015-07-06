@@ -28,4 +28,7 @@
         # 'security/ir.model.access.csv',
         'templates.xml',
     ],
+    'demo': [
+        'demo/data.xml',
+    ],
 }
