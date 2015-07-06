@@ -21,7 +21,7 @@
     'category': 'Website',
     'version': '0.1',
 
-    'depends': ['website'],
+    'depends': ['website', 'website_event_sale'],
 
     # always loaded
     'data': [
