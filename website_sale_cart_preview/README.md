@@ -6,12 +6,14 @@ This module adds a preview of your cart on mouseover.
 Credits
 =======
 
-This module is a backport of the v9 implementation of this feature.
+This module is an extraction of the v9 implementation of this feature.
+You can find the original implementation by @JKE-be
+[here](https://github.com/odoo/odoo/commit/a2b7678f10a9dd7c3c3a15ff1e444a6514e72252).
 
 Contributors
 ------------
 
-* Leonardo Donelli <donelli@webmonks.it>: Initial author of the module
+* Leonardo Donelli <donelli@webmonks.it>
 
 Maintainer
 ----------
