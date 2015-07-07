@@ -1,17 +1,14 @@
-/*global $, _, PDFJS */
-odoo.define('website_slides.upload', function (require) {
+(function () {
 "use strict";
 
-var ajax = require('web.ajax');
-var core = require('web.core');
-var Widget = require('web.Widget');
-var website = require('website.website');
-var slides = require('website_slides.slides');
+var ajax = openerp;
+var Widget = openerp.Widget;
+var website = openerp.website;
+var slides = openerp.slides();
 
-var _t = core._t;
+var _t = openerp._t;
 
 $(document).ready(function () {
-
     website.add_template_file('/website_slides/static/src/xml/website_slides.xml');
 
     var SlideDialog = Widget.extend({
@@ -49,6 +46,7 @@ $(document).ready(function () {
             this.$('.alert-warning').remove();
             this.is_valid_url = false;
             this.$('.save').button('loading');
+            debugger
             ajax.jsonRpc('/slides/dialog_preview/', 'call', value).then(function (data) {
                 self.$('.save').button('reset');
                 if (data.error) {
@@ -357,9 +355,10 @@ $(document).ready(function () {
     // bind the event to the button
     $('.oe_slide_js_upload').on('click', function () {
         var channel_id = $(this).attr('channel_id');
+        debugger
         slides.page_widgets['upload_dialog'] = new SlideDialog(this, channel_id).appendTo(document.body);
     });
 
 });
 
-});
+})();

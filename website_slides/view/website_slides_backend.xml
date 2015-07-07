@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <menuitem name="Slides" id="menu_website_slides_root" sequence="32" parent="website.menu_website_configuration"/>
+        <menuitem name="Marketing" id="base.marketing_menu" sequence="85" groups="base.group_user"/>
+        <menuitem id="menu_slides" parent="base.marketing_menu" name="Slides" groups="marketing.group_marketing_user"/>
 
         <!-- SLIDE.TAG -->
         <record id="view_slide_tag_form" model="ir.ui.view">
@@ -31,7 +32,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <menuitem action="action_slide_tag" id="menu_slide_tag" parent="menu_website_slides_root" sequence="10" groups="base.group_no_one"/>
+        <menuitem action="action_slide_tag" id="menu_slide_tag" parent="menu_slides" sequence="10" groups="base.group_no_one"/>
 
         <!-- SLIDE.SLIDE -->
         <record id="view_slide_slide_form" model="ir.ui.view">
@@ -40,12 +41,6 @@
             <field name="arch" type="xml">
                 <form string="Slide">
                     <sheet>
-                        <div class="oe_button_box" name="button_box">
-                            <button class="oe_stat_button" name="open_website_url"
-                                    type="object" icon="fa-globe">
-                                <field name="website_published" widget="website_button"/>
-                            </button>
-                        </div>
                         <field name="image" widget="image" class="oe_left oe_avatar" options='{"preview_image": "image_thumb"}'/>
                         <div class="oe_title oe_left">
                             <div class="oe_edit_only">
@@ -56,7 +51,16 @@
                             </h1>
                             <field name="tag_ids" widget="many2many_tags" placeholder="Tags..."/>
                         </div>
+                        <div class="oe_right oe_button_box" name="buttons">
+                            <button class="oe_inline oe_stat_button" name="open_website_url"
+                                    type="object" icon="fa-globe" string="Show in website">
+                            </button>
+                            <div style="margin-top:2px;">
+                                <field name="website_published" widget="website_button"/>
+                            </div>
+                        </div>
                         <group>
+
                             <field name="channel_id"/>
                             <field name="category_id" context="{'default_channel_id': channel_id}"/>
                             <field name="website_url"/>
@@ -149,7 +153,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,graph</field>
         </record>
-        <menuitem action="action_slides_slides" id="submenu_action_slides_slides" parent="menu_website_slides_root" sequence="3"/>
+        <menuitem action="action_slides_slides" id="submenu_action_slides_slides" parent="menu_slides" sequence="3"/>
 
         <!-- SLIDE.CATEGORY -->
         <record model="ir.ui.view" id="view_slides_category_form">
@@ -185,7 +189,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <menuitem action="action_ir_slide_category" id="menu_action_ir_slide_category" parent="menu_website_slides_root" sequence="2"/>
+        <menuitem action="action_ir_slide_category" id="menu_action_ir_slide_category" parent="menu_slides" sequence="2"/>
 
         <!-- SLIDE.CHANNEL VIEWS -->
         <record model="ir.ui.view" id="view_slide_channel_form">
@@ -194,19 +198,27 @@
             <field name="arch" type="xml">
                 <form string="Channels">
                     <sheet>
-                        <div class="oe_button_box" name="button_box">
-                            <button class="oe_stat_button" name="open_website_url"
-                                    type="object" icon="fa-globe">
-                                <field name="website_published" widget="website_button"/>
-                            </button>
-                        </div>
-                        <div class="oe_title oe_left">
+                        <div class="oe_title">
                             <div class="oe_edit_only">
                                 <label for="name" string="Name"/>
                             </div>
                             <h1>
                                 <field name="name" default_focus="1" placeholder="Name"/>
                             </h1>
+                        </div>
+                        <div class="oe_clear oe_left ">
+                            <field name="promoted_image" widget="image" options='{"preview_image": "promoted_image", "size": [120, 120]}'/>
+                            <p>
+                                Image size: 330px x 240px
+                            </p>
+                        </div>
+                        <div class="oe_right oe_button_box" name="buttons">
+                            <button class="oe_inline oe_stat_button" name="open_website_url"
+                                    type="object" icon="fa-globe" string="Show in website">
+                            </button>
+                            <div style="margin-top:2px;">
+                                <field name="website_published" widget="website_button"/>
+                            </div>
                         </div>
                         <field name="category_ids" widget="many2many_tags" placeholder="Categories" context="{'default_channel_id': active_id}"
                             domain="[('channel_id','=', active_id)]"/>
@@ -219,8 +231,8 @@
                                         <field name="promoted_slide_id" attrs="{'invisible': [('promote_strategy', '!=', 'custom')]}"/>
                                     </group>
                                     <group>
-                                        <field name="publish_template_id" domain="[('model','=','slide.slide')]"/>
-                                        <field name="share_template_id" domain="[('model','=','slide.slide')]"/>
+                                        <field name="publish_template_id" domain="[('model_id','=','slide.slide')]"/>
+                                        <field name="share_template_id" domain="[('model_id','=','slide.slide')]"/>
                                     </group>
                                 </group>
                                 <label for="description"/>
@@ -266,8 +278,7 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <menuitem action="action_slide_channels" id="menu_action_slide_channels" 
-            parent="menu_website_slides_root" sequence="1"/>
+        <menuitem action="action_slide_channels" id="menu_action_slide_channels" parent="menu_slides" sequence="1"/>
 
     </data>
 </openerp>

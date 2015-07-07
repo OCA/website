@@ -15,7 +15,7 @@
             <field name="sequence" type="int">50</field>
         </record>
 
-        <record id="slide_template_published" model="mail.template">
+        <record id="slide_template_published" model="email.template">
             <field name="name">Slide Published</field>
             <field name="subject">New ${object.slide_type} published on ${object.channel_id.name}</field>
             <field name="model_id" ref="model_slide_slide"/>
@@ -64,7 +64,7 @@
 </div>]]></field>
         </record>
 
-        <record id="slide_template_shared" model="mail.template">
+        <record id="slide_template_shared" model="email.template">
             <field name="name">Slide Shared</field>
             <field name="subject">${user.name} shared a ${object.slide_type} with you!</field>
             <field name="model_id" ref="model_slide_slide"/>

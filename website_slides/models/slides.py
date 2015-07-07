@@ -10,18 +10,20 @@ import urllib2
 from urlparse import urlparse
 
 from openerp import api, fields, models, SUPERUSER_ID, _
-from openerp.tools import image
+from . import image
 from openerp.exceptions import Warning
 from openerp.addons.website.models.website import slug
 
 
 class Channel(models.Model):
-    """ A channel is a container of slides. It has group-based access configuration
-    allowing to configure slide upload and access. Slides can be promoted in
-    channels. """
+    """ A channel is a container of slides. It has group-based access
+    configuration allowing to configure slide upload and access. Slides can be
+    promoted in channels. """
     _name = 'slide.channel'
     _description = 'Channel for Slides'
-    _inherit = ['mail.thread', 'website.seo.metadata', 'website.published.mixin']
+    _inherit = ['mail.thread',
+                'website.seo.metadata',
+                'website.published.mixin']
     _order = 'sequence, id'
     _order_by_strategy = {
         'most_viewed': 'total_views desc',
@@ -32,7 +34,8 @@ class Channel(models.Model):
     name = fields.Char('Name', translate=True, required=True)
     description = fields.Html('Description', translate=True)
     sequence = fields.Integer(default=10, help='Display order')
-    category_ids = fields.One2many('slide.category', 'channel_id', string="Categories")
+    category_ids = fields.One2many(
+        'slide.category', 'channel_id', string="Categories")
     slide_ids = fields.One2many('slide.slide', 'channel_id', string="Slides")
     promote_strategy = fields.Selection([
         ('none', 'No Featured Presentation'),
@@ -42,7 +45,10 @@ class Channel(models.Model):
         ('custom', 'Featured Presentation')],
         string="Featuring Policy", default='most_voted', required=True)
     custom_slide_id = fields.Many2one('slide.slide', string='Slide to Promote')
-    promoted_slide_id = fields.Many2one('slide.slide', string='Featured Slide', compute='_compute_promoted_slide_id', store=True)
+    promoted_slide_id = fields.Many2one(
+        'slide.slide', string='Featured Slide',
+        compute='_compute_promoted_slide_id', store=True)
+    promoted_image = fields.Binary('Promoted image')
 
     @api.depends('custom_slide_id', 'promote_strategy', 'slide_ids.likes',
                  'slide_ids.total_views', "slide_ids.date_published")
@@ -54,14 +60,19 @@ class Channel(models.Model):
                 record.promoted_slide_id = record.custom_slide_id
             elif record.promote_strategy:
                 slides = self.env['slide.slide'].search(
-                    [('website_published', '=', True), ('channel_id', '=', record.id)],
-                    limit=1, order=self._order_by_strategy[record.promote_strategy])
+                    [('website_published', '=', True),
+                     ('channel_id', '=', record.id)], limit=1,
+                    order=self._order_by_strategy[record.promote_strategy])
                 record.promoted_slide_id = slides and slides[0] or False
 
-    nbr_presentations = fields.Integer('Number of Presentations', compute='_count_presentations', store=True)
-    nbr_documents = fields.Integer('Number of Documents', compute='_count_presentations', store=True)
-    nbr_videos = fields.Integer('Number of Videos', compute='_count_presentations', store=True)
-    nbr_infographics = fields.Integer('Number of Infographics', compute='_count_presentations', store=True)
+    nbr_presentations = fields.Integer(
+        'Number of Presentations', compute='_count_presentations', store=True)
+    nbr_documents = fields.Integer(
+        'Number of Documents', compute='_count_presentations', store=True)
+    nbr_videos = fields.Integer(
+        'Number of Videos', compute='_count_presentations', store=True)
+    nbr_infographics = fields.Integer(
+        'Number of Infographics', compute='_count_presentations', store=True)
     total = fields.Integer(compute='_count_presentations', store=True)
 
     @api.depends('slide_ids.slide_type', 'slide_ids.website_published')
@@ -72,22 +83,29 @@ class Channel(models.Model):
             ['channel_id', 'slide_type'], ['channel_id', 'slide_type'],
             lazy=False)
         for res_group in res:
-            result[res_group['channel_id'][0]][res_group['slide_type']] = result[res_group['channel_id'][0]].get(res_group['slide_type'], 0) + res_group['__count']
+            result[res_group['channel_id'][0]][res_group['slide_type']] = \
+                result[res_group['channel_id'][0]].get(
+                    res_group['slide_type'], 0) + res_group['__count']
         for record in self:
             record.nbr_presentations = result[record.id].get('presentation', 0)
             record.nbr_documents = result[record.id].get('document', 0)
             record.nbr_videos = result[record.id].get('video', 0)
             record.nbr_infographics = result[record.id].get('infographic', 0)
-            record.total = record.nbr_presentations + record.nbr_documents + record.nbr_videos + record.nbr_infographics
+            record.total = (record.nbr_presentations +
+                            record.nbr_documents +
+                            record.nbr_videos +
+                            record.nbr_infographics)
 
     publish_template_id = fields.Many2one(
-        'mail.template', string='Published Template',
+        'email.template', string='Published Template',
         help="Email template to send slide publication through email",
-        default=lambda self: self.env['ir.model.data'].xmlid_to_res_id('website_slides.slide_template_published'))
+        default=lambda self: self.env['ir.model.data'].xmlid_to_res_id(
+            'website_slides.slide_template_published'))
     share_template_id = fields.Many2one(
-        'mail.template', string='Shared Template',
+        'email.template', string='Shared Template',
         help="Email template used when sharing a slide",
-        default=lambda self: self.env['ir.model.data'].xmlid_to_res_id('website_slides.slide_template_shared'))
+        default=lambda self: self.env['ir.model.data'].xmlid_to_res_id(
+            'website_slides.slide_template_shared'))
     visibility = fields.Selection([
         ('public', 'Public'),
         ('private', 'Private'),
@@ -95,13 +113,20 @@ class Channel(models.Model):
         default='public', required=True)
     group_ids = fields.Many2many(
         'res.groups', 'rel_channel_groups', 'channel_id', 'group_id',
-        string='Channel Groups', help="Groups allowed to see presentations in this channel")
+        string='Channel Groups',
+        help="Groups allowed to see presentations in this channel")
     access_error_msg = fields.Html(
-        'Error Message', help="Message to display when not accessible due to access rights",
-        default="<p>This channel is private and its content is restricted to some users.</p>", translate=True)
+        'Error Message',
+        help="Message to display when not accessible due to access rights",
+        default=""
+                "<p>This channel is private and its content "
+                "is restricted to some users.</p>""", translate=True)
     upload_group_ids = fields.Many2many(
         'res.groups', 'rel_upload_groups', 'channel_id', 'group_id',
-        string='Upload Groups', help="Groups allowed to upload presentations in this channel. If void, every user can upload.")
+        string='Upload Groups',
+        help=""
+             "Groups allowed to upload presentations in this channel."
+             " If void, every user can upload.")
     # not stored access fields, depending on each user
     can_see = fields.Boolean('Can See', compute='_compute_access')
     can_see_full = fields.Boolean('Full Access', compute='_compute_access')
@@ -110,16 +135,20 @@ class Channel(models.Model):
     @api.one
     @api.depends('visibility', 'group_ids', 'upload_group_ids')
     def _compute_access(self):
-        self.can_see = self.visibility in ['public', 'private'] or bool(self.group_ids & self.env.user.groups_id)
-        self.can_see_full = self.visibility == 'public' or bool(self.group_ids & self.env.user.groups_id)
-        self.can_upload = self.can_see and (not self.upload_group_ids or bool(self.upload_group_ids & self.env.user.groups_id))
+        self.can_see = self.visibility in ['public', 'private'] or bool(
+            self.group_ids & self.env.user.groups_id)
+        self.can_see_full = self.visibility == 'public' or bool(
+            self.group_ids & self.env.user.groups_id)
+        self.can_upload = self.can_see and (not self.upload_group_ids or bool(
+            self.upload_group_ids & self.env.user.groups_id))
 
     @api.multi
     @api.depends('name')
     def _website_url(self, name, arg):
         res = super(Channel, self)._website_url(name, arg)
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
-        res.update({(channel.id, '%s/slides/%s' % (base_url, slug(channel))) for channel in self})
+        res.update({(channel.id, '%s/slides/%s' % (
+            base_url, slug(channel))) for channel in self})
         return res
 
     @api.onchange('visibility')
@@ -135,46 +164,62 @@ class Category(models.Model):
     _order = "sequence, id"
 
     name = fields.Char('Name', translate=True, required=True)
-    channel_id = fields.Many2one('slide.channel', string="Channel", required=True)
+    channel_id = fields.Many2one(
+        'slide.channel', string="Channel", required=True)
     sequence = fields.Integer(default=10, help='Display order')
-    slide_ids = fields.One2many('slide.slide', 'category_id', string="Slides")
-    nbr_presentations = fields.Integer("Number of Presentations", compute='_count_presentations', store=True)
-    nbr_documents = fields.Integer("Number of Documents", compute='_count_presentations', store=True)
-    nbr_videos = fields.Integer("Number of Videos", compute='_count_presentations', store=True)
-    nbr_infographics = fields.Integer("Number of Infographics", compute='_count_presentations', store=True)
+    slide_ids = fields.One2many(
+        'slide.slide', 'category_id', string="Slides")
+    nbr_presentations = fields.Integer(
+        "Number of Presentations", compute='_count_presentations', store=True)
+    nbr_documents = fields.Integer(
+        "Number of Documents", compute='_count_presentations', store=True)
+    nbr_videos = fields.Integer(
+        "Number of Videos", compute='_count_presentations', store=True)
+    nbr_infographics = fields.Integer(
+        "Number of Infographics", compute='_count_presentations', store=True)
     total = fields.Integer(compute='_count_presentations', store=True)
 
     @api.depends('slide_ids.slide_type', 'slide_ids.website_published')
     def _count_presentations(self):
         result = dict.fromkeys(self.ids, dict())
         res = self.env['slide.slide'].read_group(
-            [('website_published', '=', True), ('category_id', 'in', self.ids)],
+            [('website_published', '=', True),
+             ('category_id', 'in', self.ids)],
             ['category_id', 'slide_type'], ['category_id', 'slide_type'],
             lazy=False)
         for res_group in res:
-            result[res_group['category_id'][0]][res_group['slide_type']] = result[res_group['category_id'][0]].get(res_group['slide_type'], 0) + res_group['__count']
+            result[res_group['category_id'][0]][res_group['slide_type']] =\
+                result[res_group['category_id'][0]].get(
+                    res_group['slide_type'], 0) + res_group['__count']
         for record in self:
             record.nbr_presentations = result[record.id].get('presentation', 0)
             record.nbr_documents = result[record.id].get('document', 0)
             record.nbr_videos = result[record.id].get('video', 0)
             record.nbr_infographics = result[record.id].get('infographic', 0)
-            record.total = record.nbr_presentations + record.nbr_documents + record.nbr_videos + record.nbr_infographics
+            record.total = (record.nbr_presentations +
+                            record.nbr_documents +
+                            record.nbr_videos +
+                            record.nbr_infographics)
 
 
 class EmbeddedSlide(models.Model):
-    """ Embedding in third party websites. Track view count, generate statistics. """
+    """ Embedding in third party websites. Track view count,
+    generate statistics. """
     _name = 'slide.embed'
     _description = 'Embedded Slides View Counter'
     _rec_name = 'slide_id'
 
-    slide_id = fields.Many2one('slide.slide', string="Presentation", required=True, select=1)
+    slide_id = fields.Many2one(
+        'slide.slide', string="Presentation", required=True,
+        select=1, ondelete="cascade")
     url = fields.Char('Third Party Website URL', required=True)
     count_views = fields.Integer('# Views', default=1)
 
     def add_embed_url(self, slide_id, url):
         schema = urlparse(url)
         baseurl = schema.netloc
-        embeds = self.search([('url', '=', baseurl), ('slide_id', '=', int(slide_id))], limit=1)
+        embeds = self.search([('url', '=', baseurl),
+                              ('slide_id', '=', int(slide_id))], limit=1)
         if embeds:
             embeds.count_views += 1
         else:
@@ -206,29 +251,41 @@ class Slide(models.Model):
      - Infographic
      - Video
 
-    Slide has various statistics like view count, embed count, like, dislikes """
+    Slide has various statistics like view count, embed count,
+    like, dislikes"""
 
     _name = 'slide.slide'
-    _inherit = ['mail.thread', 'website.seo.metadata', 'website.published.mixin']
+    _inherit = ['mail.thread',
+                'website.seo.metadata',
+                'website.published.mixin']
     _description = 'Slides'
 
     _PROMOTIONAL_FIELDS = [
-        '__last_update', 'name', 'image_thumb', 'slide_type', 'total_views', 'category_id',
-        'channel_id', 'description', 'tag_ids', 'write_date', 'create_date',
-        'website_published', 'website_url', 'website_meta_title', 'website_meta_description', 'website_meta_keywords']
+        '__last_update', 'name', 'image_thumb', 'slide_type', 'total_views',
+        'category_id', 'channel_id', 'description', 'tag_ids', 'write_date',
+        'create_date', 'website_published', 'website_url',
+        'website_meta_title', 'website_meta_description',
+        'website_meta_keywords']
 
     _sql_constraints = [
-        ('name_uniq', 'UNIQUE(channel_id, name)', 'The slide name must be unique within a channel')
+        ('name_uniq', 'UNIQUE(channel_id, name)',
+         'The slide name must be unique within a channel')
     ]
 
     # description
     name = fields.Char('Title', required=True, translate=True)
     description = fields.Text('Description', translate=True)
-    channel_id = fields.Many2one('slide.channel', string="Channel", required=True)
-    category_id = fields.Many2one('slide.category', string="Category", domain="[('channel_id', '=', channel_id)]")
-    tag_ids = fields.Many2many('slide.tag', 'rel_slide_tag', 'slide_id', 'tag_id', string='Tags')
+    channel_id = fields.Many2one(
+        'slide.channel', string="Channel", required=True)
+    category_id = fields.Many2one(
+        'slide.category', string="Category",
+        domain="[('channel_id', '=', channel_id)]")
+    tag_ids = fields.Many2many(
+        'slide.tag', 'rel_slide_tag', 'slide_id', 'tag_id', string='Tags')
     download_security = fields.Selection(
-        [('none', 'No One'), ('user', 'Authentified Users Only'), ('public', 'Everyone')],
+        [('none', 'No One'),
+         ('user', 'Authentified Users Only'),
+         ('public', 'Everyone')],
         string='Download Security',
         required=True, default='user')
     image = fields.Binary('Image')
@@ -239,8 +296,10 @@ class Slide(models.Model):
     def _get_image(self):
         for record in self:
             if record.image:
-                record.image_medium = image.crop_image(record.image, thumbnail_ratio=3)
-                record.image_thumb = image.crop_image(record.image, thumbnail_ratio=4)
+                record.image_medium = image.crop_image(
+                    record.image, thumbnail_ratio=3)
+                record.image_thumb = image.crop_image(
+                    record.image, thumbnail_ratio=4)
             else:
                 record.image_medium = False
                 record.iamge_thumb = False
@@ -253,11 +312,14 @@ class Slide(models.Model):
         ('video', 'Video')],
         string='Type', required=True,
         default='document',
-        help="Document type will be set automatically depending on file type, height and width.")
+        help=""
+             "Document type will be set automatically depending on file type,"
+             "height and width.")
     index_content = fields.Text('Transcript')
     datas = fields.Binary('Content')
     url = fields.Char('Document URL', help="Youtube or Google Document URL")
-    document_id = fields.Char('Document ID', help="Youtube or Google Document ID")
+    document_id = fields.Char(
+        'Document ID', help="Youtube or Google Document ID")
     mime_type = fields.Char('Mime-type')
 
     @api.onchange('url')
@@ -266,10 +328,14 @@ class Slide(models.Model):
         if self.url:
             res = self._parse_document_url(self.url)
             if res.get('error'):
-                raise Warning(_('Could not fetch data from url. Document or access right not available:\n%s') % res['error'])
+                raise Warning(_(
+                    "Could not fetch data from url."
+                    "Document or access right not available:\n%s") % (
+                    res['error']))
             values = res['values']
             if not values.get('document_id'):
-                raise Warning(_('Please enter valid Youtube or Google Doc URL'))
+                raise Warning(
+                    _('Please enter valid Youtube or Google Doc URL'))
             for key, value in values.iteritems():
                 setattr(self, key, value)
 
@@ -277,35 +343,64 @@ class Slide(models.Model):
     date_published = fields.Datetime('Publish Date')
     website_message_ids = fields.One2many(
         'mail.message', 'res_id',
-        domain=lambda self: [('model', '=', self._name), ('message_type', '=', 'comment')],
+        domain=lambda self: [('model', '=', self._name),
+                             ('type', '=', 'comment')],
         string='Website Messages', help="Website communication history")
     likes = fields.Integer('Likes')
     dislikes = fields.Integer('Dislikes')
     # views
-    embedcount_ids = fields.One2many('slide.embed', 'slide_id', string="Embed Count")
+    embedcount_ids = fields.One2many(
+        'slide.embed', 'slide_id', string="Embed Count")
     slide_views = fields.Integer('# of Website Views')
     embed_views = fields.Integer('# of Embedded Views')
-    total_views = fields.Integer("Total # Views", default="0", compute='_compute_total', store=True)
+    total_views = fields.Integer(
+        "Total # Views", default="0", compute='_compute_total', store=True)
 
     @api.depends('slide_views', 'embed_views')
     def _compute_total(self):
         for record in self:
             record.total_views = record.slide_views + record.embed_views
 
-    embed_code = fields.Text('Embed Code', readonly=True, compute='_get_embed_code')
+    embed_code = fields.Text(
+        'Embed Code', readonly=True, compute='_get_embed_code')
 
     def _get_embed_code(self):
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         for record in self:
             if record.datas and not record.document_id:
-                record.embed_code = '<iframe src="%s/slides/embed/%s?page=1" allowFullScreen="true" height="%s" width="%s" frameborder="0"></iframe>' % (base_url, record.id, 315, 420)
+                record.embed_code = \
+                    '<iframe src="%s/slides/embed/%s?page=1" ' \
+                    'allowFullScreen="true" height="%s" width="%s" ' \
+                    'frameborder="0"></iframe>' % (
+                        base_url, record.id, 315, 420)
             elif record.slide_type == 'video' and record.document_id:
                 if not record.mime_type:
                     # embed youtube video
-                    record.embed_code = '<iframe src="//www.youtube.com/embed/%s?theme=light" allowFullScreen="true" frameborder="0"></iframe>' % (record.document_id)
+                    record.embed_code = '' \
+                        '<iframe src="//www.youtube.com/embed/%s?theme=light"'\
+                        'frameborder="0" allowfullscreen="true">' \
+                        '</iframe>' % (record.document_id)
                 else:
                     # embed google doc video
-                    record.embed_code = '<embed src="https://video.google.com/get_player?ps=docs&partnerid=30&docid=%s" type="application/x-shockwave-flash"></embed>' % (record.document_id)
+                    record.embed_code = '' \
+                        '<embed src="https://video.google.com/get_player?' \
+                        'ps=docs&partnerid=30&docid=%s" ' \
+                        'type="application/x-shockwave-flash">' \
+                        '</embed>' % (record.document_id)
+            elif 'application/vnd.google-apps.document' in record.mime_type:
+                record.embed_code = '' \
+                    '<iframe src="https://docs.google.com/document/d/%s/pub?' \
+                    'embedded=true" frameborder="0">' \
+                    '</iframe>' % (record.document_id)
+            elif 'application/vnd.google-apps.presentation' in \
+                    record.mime_type:
+                record.embed_code = '' \
+                    '<iframe ' \
+                    'src="https://docs.google.com/presentation/d/%s/embed?' \
+                    'start=false&loop=false&delayms=3000" frameborder="0" ' \
+                    'allowfullscreen="true" mozallowfullscreen="true" ' \
+                    'webkitallowfullscreen="true">' \
+                    '</iframe>' % (record.document_id)
             else:
                 record.embed_code = False
 
@@ -314,22 +409,28 @@ class Slide(models.Model):
     def _website_url(self, name, arg):
         res = super(Slide, self)._website_url(name, arg)
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
-        res.update({(slide.id, '%s/slides/slide/%s' % (base_url, slug(slide))) for slide in self})
+        res.update({(slide.id, '%s/slides/slide/%s' % (
+            base_url, slug(slide))) for slide in self})
         return res
-
 
     @api.model
     def create(self, values):
         if not values.get('index_content'):
             values['index_content'] = values.get('description')
-        if values.get('slide_type') == 'infographic' and not values.get('image'):
+        if values.get('slide_type') == 'infographic' and (
+                not values.get('image')):
             values['image'] = values['datas']
-        if values.get('website_published') and not values.get('date_published'):
+        if values.get('website_published') and (
+                not values.get('date_published')):
             values['date_published'] = datetime.datetime.now()
         if values.get('url'):
-            doc_data = self._parse_document_url(values['url']).get('values', dict())
+            doc_data = self._parse_document_url(
+                values['url']).get('values', dict())
             for key, value in doc_data.iteritems():
                 values.setdefault(key, value)
+        if 'mime_type' in values:
+            if 'application/vnd.google-apps.' in values['mime_type']:
+                values['datas'] = False
         # Do not publish slide if user has not publisher rights
         if not self.user_has_groups('base.group_website_publisher'):
             values['website_published'] = False
@@ -341,7 +442,8 @@ class Slide(models.Model):
     @api.multi
     def write(self, values):
         if values.get('url'):
-            doc_data = self._parse_document_url(values['url']).get('values', dict())
+            doc_data = self._parse_document_url(
+                values['url']).get('values', dict())
             for key, value in doc_data.iteritems():
                 values.setdefault(key, value)
         res = super(Slide, self).write(values)
@@ -354,52 +456,71 @@ class Slide(models.Model):
     def check_field_access_rights(self, operation, fields):
         """ As per channel access configuration (visibility)
          - public  ==> no restriction on slides access
-         - private ==> restrict all slides of channel base on access group defined on channel group_ids field
-         - partial ==> show channel, but presentations based on groups means any user can see channel but not slide's content.
+         - private ==> restrict all slides of channel base on access group
+            defined on channel group_ids field
+         - partial ==> show channel, but presentations based on groups means
+            any user can see channel but not slide's content.
         For private: implement using record rule
-        For partial: user can see channel, but channel gridview have slide detail so we have to implement
-        partial field access mechanism for public user so he can have access of promotional field (name, view_count) of slides,
-        but not all fields like data (actual pdf content)
-        all fields should be accessible only for user group define on channel group_ids
+        For partial: user can see channel, but channel gridview have slide
+        detail so we have to implement partial field access mechanism for
+        public user so he can have access of promotional
+        field (name, view_count) of slides,but not all fields like
+        data (actual pdf content) all fields should be accessible only
+        for user group define on channel group_ids
         """
         if self.env.uid == SUPERUSER_ID:
             return fields or list(self._fields)
-        fields = super(Slide, self).check_field_access_rights(operation, fields)
+        fields = super(
+            Slide, self).check_field_access_rights(operation, fields)
         # still read not perform so we can not access self.channel_id
         if self.ids:
-            self.env.cr.execute('SELECT DISTINCT channel_id FROM ' + self._table + ' WHERE id IN %s', (tuple(self.ids),))
+            self.env.cr.execute(
+                'SELECT DISTINCT channel_id FROM ' +
+                self._table + ' WHERE id IN %s', (tuple(self.ids),))
             channel_ids = [x[0] for x in self.env.cr.fetchall()]
             channels = self.env['slide.channel'].sudo().browse(channel_ids)
             limited_access = all(channel.visibility == 'partial' and
-                                 not len(channel.group_ids & self.env.user.groups_id)
+                                 not len(channel.group_ids &
+                                         self.env.user.groups_id)
                                  for channel in channels)
             if limited_access:
-                fields = [field for field in fields if field in self._PROMOTIONAL_FIELDS]
+                fields = [field for field in fields
+                          if field in self._PROMOTIONAL_FIELDS]
         return fields
 
     def get_related_slides(self, limit=20):
-        domain = [('website_published', '=', True), ('channel_id.visibility', '!=', 'private'), ('id', '!=', self.id)]
+        domain = [('website_published', '=', True),
+                  ('channel_id.visibility', '!=', 'private'),
+                  ('id', '!=', self.id)]
         if self.category_id:
             domain += [('category_id', '=', self.category_id.id)]
         for record in self.search(domain, limit=limit):
             yield record
 
     def get_most_viewed_slides(self, limit=20):
-        for record in self.search([('website_published', '=', True), ('channel_id.visibility', '!=', 'private'), ('id', '!=', self.id)], limit=limit, order='total_views desc'):
+        for record in self.search([('website_published', '=', True),
+                                   ('channel_id.visibility', '!=', 'private'),
+                                   ('id', '!=', self.id)],
+                                  limit=limit, order='total_views desc'):
             yield record
 
     def _post_publication(self):
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         for slide in self.filtered(lambda slide: slide.website_published):
             publish_template = slide.channel_id.publish_template_id
-            html_body = publish_template.with_context({'base_url': base_url}).render_template(publish_template.body_html, 'slide.slide', slide.id)
-            slide.channel_id.message_post(body=html_body, subtype='website_slides.mt_channel_slide_published')
+            html_body = publish_template.with_context(
+                {'base_url': base_url}).render_template(
+                publish_template.body_html, 'slide.slide', slide.id)
+            slide.channel_id.message_post(
+                body=html_body,
+                subtype='website_slides.mt_channel_slide_published')
         return True
 
     @api.one
     def send_share_email(self, email):
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
-        return self.channel_id.share_template_id.with_context({'email': email, 'base_url': base_url}).send_mail(self.id)
+        return self.channel_id.share_template_id.with_context(
+            {'email': email, 'base_url': base_url}).send_mail(self.id)
 
     # --------------------------------------------------
     # Parsing methods
@@ -427,13 +548,17 @@ class Slide(models.Model):
         return result
 
     def _find_document_data_from_url(self, url):
-        expr = re.compile(r'^.*((youtu.be/)|(v/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*')
+        expr = re.compile(
+            r'^.*((youtu.be/)|(v/)|(\/u\/\w\/)|(embed\/)|'
+            r'(watch\?))\??v?=?([^#\&\?]*).*')
         arg = expr.match(url)
         document_id = arg and arg.group(7) or False
         if document_id:
             return ('youtube', document_id)
 
-        expr = re.compile(r'(^https:\/\/docs.google.com|^https:\/\/drive.google.com).*\/d\/([^\/]*)')
+        expr = re.compile(
+            r'(^https:\/\/docs.google.com|'
+            r'^https:\/\/drive.google.com).*\/d\/([^\/]*)')
         arg = expr.match(url)
         document_id = arg and arg.group(2) or False
         if document_id:
@@ -443,13 +568,20 @@ class Slide(models.Model):
 
     def _parse_document_url(self, url, only_preview_fields=False):
         document_source, document_id = self._find_document_data_from_url(url)
-        if document_source and hasattr(self, '_parse_%s_document' % document_source):
-            return getattr(self, '_parse_%s_document' % document_source)(document_id, only_preview_fields)
+        if document_source and hasattr(
+                self, '_parse_%s_document' % document_source):
+            return getattr(
+                self, '_parse_%s_document' % document_source)(
+                document_id, only_preview_fields)
         return {'error': _('Unknown document')}
 
     def _parse_youtube_document(self, document_id, only_preview_fields):
-        key = self.env['ir.config_parameter'].sudo().get_param('website_slides.google_app_key')
-        fetch_res = self._fetch_data('https://www.googleapis.com/youtube/v3/videos', {'id': document_id, 'key': key, 'part': 'snippet', 'fields': 'items(id,snippet)'}, 'json')
+        key = self.env['ir.config_parameter'].sudo().get_param(
+            'website_slides.google_app_key')
+        fetch_res = self._fetch_data(
+            'https://www.googleapis.com/youtube/v3/videos',
+            {'id': document_id, 'key': key, 'part': 'snippet',
+             'fields': 'items(id,snippet)'}, 'json')
         if fetch_res.get('error'):
             return fetch_res
 
@@ -466,7 +598,9 @@ class Slide(models.Model):
                 return values
             values.update({
                 'name': snippet['title'],
-                'image': self._fetch_data(snippet['thumbnails']['high']['url'], {}, 'image')['values'],
+                'image': self._fetch_data(
+                    snippet[
+                        'thumbnails']['high']['url'], {}, 'image')['values'],
                 'description': snippet['description'],
             })
         return {'values': values}
@@ -481,8 +615,11 @@ class Slide(models.Model):
                 return 'document'
             else:
                 return 'presentation'
-        key = self.env['ir.config_parameter'].sudo().get_param('website_slides.google_app_key')
-        fetch_res = self._fetch_data('https://www.googleapis.com/drive/v2/files/%s' % document_id, {'projection': 'BASIC', 'key': key}, "json")
+        key = self.env['ir.config_parameter'].sudo().get_param(
+            'website_slides.google_app_key')
+        fetch_res = self._fetch_data(
+            'https://www.googleapis.com/drive/v2/files/%s' % document_id, {
+                'projection': 'BASIC', 'key': key}, "json")
         if fetch_res.get('error'):
             return fetch_res
 
@@ -495,7 +632,9 @@ class Slide(models.Model):
 
         values = {
             'name': google_values['title'],
-            'image': self._fetch_data(google_values['thumbnailLink'].replace('=s220', ''), {}, 'image')['values'],
+            'image': self._fetch_data(
+                google_values['thumbnailLink'].replace(
+                    '=s220', ''), {}, 'image')['values'],
             'mime_type': google_values['mimeType'],
             'document_id': document_id,
         }
@@ -504,16 +643,23 @@ class Slide(models.Model):
         elif google_values['mimeType'].startswith('image/'):
             values['datas'] = values['image']
             values['slide_type'] = 'infographic'
-        elif google_values['mimeType'].startswith('application/vnd.google-apps'):
-            values['datas'] = self._fetch_data(google_values['exportLinks']['application/pdf'], {}, 'pdf')['values']
+        elif google_values['mimeType'].startswith(
+                'application/vnd.google-apps'):
+            values['datas'] = self._fetch_data(
+                google_values['exportLinks'][
+                    'application/pdf'], {}, 'pdf')['values']
             values['slide_type'] = get_slide_type(values)
             if google_values['exportLinks'].get('text/plain'):
-                values['index_content'] = self._fetch_data(google_values['exportLinks']['text/plain'], {})['values']
+                values['index_content'] = self._fetch_data(
+                    google_values['exportLinks']['text/plain'], {})['values']
             if google_values['exportLinks'].get('text/csv'):
-                values['index_content'] = self._fetch_data(google_values['exportLinks']['text/csv'], {})['values']
+                values['index_content'] = self._fetch_data(
+                    google_values['exportLinks']['text/csv'], {})['values']
         elif google_values['mimeType'] == 'application/pdf':
-            # TODO: Google Drive PDF document doesn't provide plain text transcript
-            values['datas'] = self._fetch_data(google_values['webContentLink'], {}, 'pdf')['values']
+            # TODO: Google Drive PDF document doesn't provide
+            # plain text transcript
+            values['datas'] = self._fetch_data(
+                google_values['webContentLink'], {}, 'pdf')['values']
             values['slide_type'] = get_slide_type(values)
 
         return {'values': values}

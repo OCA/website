@@ -1,12 +1,15 @@
 /*global $, _, PDFJS */
-odoo.define('website_slides.slides', function (require) {
+
+openerp.slides = function () {
 "use strict";
 
-var ajax = require('web.ajax');
-var core = require('web.core');
-var time = require('web.time');
-var Widget = require('web.Widget');
+var ajax = openerp;
+var core = openerp;
+var time = openerp;
+var Widget = openerp.Widget;
 
+//global slidesxx = {}
+openerp.slides = {}
 var _t = core._t;
 var page_widgets = {};
 
@@ -188,8 +191,13 @@ $(document).ready(function () {
     }
 });
 
+//slidesxx = {page_widgets: page_widgets};
+
 return {
+
     page_widgets: page_widgets,
 };
 
-});
+};
+
+

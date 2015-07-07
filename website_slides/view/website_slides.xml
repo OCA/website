@@ -14,6 +14,7 @@
 <!-- assets -->
 <template id="assets_frontend" inherit_id="website.assets_frontend" name="Slide">
     <xpath expr="." position="inside">
+
         <link rel="stylesheet" href="/web/static/lib/select2/select2.css"/>
         <link rel="stylesheet" href="/website/static/lib/select2-bootstrap-css/select2-bootstrap.css"/>
         <link type="text/less" href="/website_slides/static/src/less/website_slides.less" rel="stylesheet" t-ignore="true"/>
@@ -21,8 +22,14 @@
         <script type="text/javascript" src="/web/static/lib/select2/select2.js"></script>
         <script type="text/javascript" src="/website_slides/static/src/js/slides.js"/>
         <script type="text/javascript" src="/website_slides/static/src/js/slides_upload.js"/>
+
     </xpath>
 </template>
+
+<template id="slide_bootstrap_assets" name="Website slides bootstrap assets">
+    <link rel='stylesheet' href='/web/static/lib/bootstrap/css/bootstrap.css'/>
+</template>
+
 
 <!-- Tools template: share on social networkds -->
 <template id='slides_share' name="Slides Media Share">
@@ -45,15 +52,22 @@
 <!-- Channels View: main template, display list of available channels -->
 <template id="channels" name="Channels">
     <t t-call="website.layout">
+        <div class="oe_structure oe_empty"/>
         <div class="container mt16">
-            <h1>Select a Channel</h1>
-            <div class="row">
-                <div t-foreach="channels" t-as="channel" class="col-sm-4 mb32">
+            <!--<h1>Select a Channel</h1>-->
+            <t t-foreach="channels" t-as="channel">
+                <div class="row" t-if="(channel_index % 3) == 0"/>
+                <div  class="col-sm-4 mb32">
                     <div class="well well-sm">
                         <div>
                             <a t-attf-href="/slides/#{slug(channel)}">
-                                <img t-if="channel.promoted_slide_id" t-attf-src="/website/image/slide.slide/#{channel.promoted_slide_id.id}/image_medium" class="img-responsive oe_slides_channel_thumbnail"/>
-                                <img t-if="not channel.promoted_slide_id" src="/website_slides/static/description/channel-default.jpg" class="img-responsive oe_slides_opacity"/>
+                                <t t-if="channel.promoted_image">
+                                    <span class="img-responsive oe_slides_channel_thumbnail"
+                                         t-field="channel.promoted_image" t-field-options='{"widget": "image"}'>
+                                    </span>
+                                </t>
+                                <!--<img t-if="channel.promoted_slide_id" t-attf-src="/website/image/slide.slide/#{channel.promoted_slide_id.id}/image_small" class="img-responsive oe_slides_channel_thumbnail"/>-->
+                                <img t-if="not channel.promoted_image" src="/website_slides/static/description/channel-default.jpg" class="img-responsive oe_slides_opacity"/>
                             </a>
                         </div>
                         <div>
@@ -63,7 +77,7 @@
                                     <t t-set="publish_edit" t-value="True"/>
                                 </t>
                             </div>
-                            <h3 class="mt4 mb4 lead" t-att-title="channel.name" style="width:55%">
+                            <h3 class="mt4 mb4 lead" t-att-title="channel.name">
                                 <a t-attf-href="/slides/#{slug(channel)}" t-esc="channel.name"/>
                             </h3>
                             <span class="label label-warning" t-if="not channel.can_see_full">Private channel</span>
@@ -73,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </t>
         </div>
     </t>
 </template>
@@ -123,7 +137,7 @@
                 <div class="col-md-4 col-sm-12 col-xs-12 pul-right mt16 mb8">
                     <form t-attf-action="/slides/#{slug(channel)}" role="search" method="get">
                         <div class="input-group">
-                            <input type="text" class="form-control" name="search" t-attf-placeholder="Search in #{channel.name}" t-att-value="search"/>
+                            <input type="text" class="form-control" name="search" t-attf-placeholder="Buscar en #{channel.name}" t-att-value="search"/>
                             <span class="input-group-btn">
                                 <button class="btn btn-primary" type="submit">
                                     <i class="fa fa-search"></i>
@@ -187,7 +201,7 @@
 <!-- Channel main template -->
 <template id='home' name="Odoo Slides">
      <t t-set="head">
-        <t t-call-assets="website.pdf_js_lib" t-css="false"/>
+        <t t-call-assets="website_slides.pdf_js_lib" t-css="false"/>
         <script type="text/javascript" src="/website_slides/static/lib/pdfslidesviewer/PDFSlidesViewer.js"></script>
     </t>
     <t t-call="website.layout">
@@ -350,7 +364,8 @@
                 </span>
             </a>
 
-            <div style="padding: 5px;">
+            <!--<div style="padding: 5px;">-->
+            <div style="padding: 0px;">
                 <h4 class="mt4 mb8 oe_slides_ellipsis">
                     <a t-att-title="slide.name" t-attf-href="/slides/slide/#{slug(slide)}" t-esc="slide.name"/>
                 </h4>
@@ -425,7 +440,7 @@
                             <div class="col-sm-8 col-xs-12">
                                 <div class="pull-left">
                                     <a t-attf-href="/slides/#{slug(slide.channel_id)}">
-                                        <i class="fa fa-circle-o fa-5x" style="color: #a24689;font-weight: bold;"></i>
+                                        <i class="fa fa-circle-o fa-5x" style="color: #00a388;font-weight: bold;"></i>
                                     </a>
                                 </div>
                                 <div style="margin-left: 80px">
@@ -543,7 +558,7 @@
                                     </h4>
                                 </div>
                                 <div t-att-class="comments and 'tab-pane fade active in' or 'tab-pane fade'" id="discuss">
-                                    <form id="comment" class="js_website_submit_form" t-attf-action="/slides/slide/#{slide.id}/comment" method="POST">
+                                    <form id="comment" t-attf-action="/slides/slide/#{slide.id}/comment" method="POST">
                                         <div class="media">
                                             <span class="pull-left">
                                                 <img class="img img-circle media-object"
