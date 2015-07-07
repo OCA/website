@@ -7,8 +7,9 @@ Credits
 =======
 
 This module is an extraction of the v9 implementation of this feature.
-You can find the original implementation by @JKE-be
-[here](https://github.com/odoo/odoo/commit/a2b7678f10a9dd7c3c3a15ff1e444a6514e72252).
+You can find the original implementation by @JKE-be here_.
+
+.. _here: https://github.com/odoo/odoo/commit/a2b7678f10a9dd7c3c3a15ff1e444a6514e72252
 
 Contributors
 ------------

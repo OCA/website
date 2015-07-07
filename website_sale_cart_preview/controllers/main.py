@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from openerp import http
 from openerp.http import request
 import openerp.addons.website_sale.controllers.main
