@@ -9,11 +9,13 @@
     <field name="arch" type="xml">
         <field name="title" position="before">
             <field name="heading" placeholder="Heading"
-                   options='{"no_open": True}'/>
+                   context="{'lang': lang}"
+                   options="{'no_open': True, 'always_reload': True}"/>
         </field>
         <xpath expr="//field[@name='child_ids']/form//field[@name='function']" position="before">
             <field name="heading" placeholder="Heading"
-                   options='{"no_open": True}'/>
+                   context="{'lang': lang}"
+                   options="{'no_open': True, 'always_reload': True}"/>
         </xpath>
     </field>
 </record>
