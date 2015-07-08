@@ -9,12 +9,15 @@ class website_sale(openerp.addons.website_sale.controllers.main.website_sale):
 
     @http.route(['/shop/cart'], type='http', auth="public", website=True)
     def cart(self, **post):
-        cr, uid, context, pool = request.cr, request.uid, request.context, request.registry
+        cr, uid, context = request.cr, request.uid, request.context
+        pool = request.registry
         order = request.website.sale_get_order()
         if order:
-            from_currency = pool.get('product.price.type')._get_field_currency(cr, uid, 'list_price', context)
+            from_currency = pool.get('product.price.type')._get_field_currency(
+                cr, uid, 'list_price', context)
             to_currency = order.pricelist_id.currency_id
-            compute_currency = lambda price: pool['res.currency']._compute(cr, uid, from_currency, to_currency, price, context=context)
+            compute_currency = lambda price: pool['res.currency']._compute(
+                cr, uid, from_currency, to_currency, price, context=context)
         else:
             compute_currency = lambda price: price
 
