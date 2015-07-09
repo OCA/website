@@ -18,10 +18,10 @@ msgstr ""
 #. module: mail_remove_footer_signature
 #: model:ir.model,name:mail_remove_footer_signature.model_mail_notification
 msgid "Notifications"
-msgstr "Notificaciones"
+msgstr ""
 
 #. module: mail_remove_footer_signature
 #: model:ir.model,name:mail_remove_footer_signature.model_mail_mail
 msgid "Outgoing Mails"
-msgstr "Correos salientes"
+msgstr ""
 
