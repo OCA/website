@@ -255,7 +255,7 @@ msgstr "La seguridad de su Información personal es importante para nosotros,"
 #. module: website_legal_page
 #: view:website:website.terms
 msgid "These Terms shall be governed and construed in accordance with the laws of ​"
-msgstr "Estos Términos se regirán e interpretarán de conformidad con las leyes de"
+msgstr "Estos Términos se regirán e interpretarán de conformidad con las leyes de "
 
 #. module: website_legal_page
 #: view:website:website.terms
