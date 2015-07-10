@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <!-- Page template for displaying Brands -->
+    <template id="product_brands" name="Brands">
+        <t t-call="website.layout">
+            <t t-set="additional_title">Product Brands</t>
+            <div id="wrap" t-attf-class="wrapper"> 
+                <div class="container">
+                    <div class="row">
+                        <form action="/shop/brands" class="form-horizontal mt32 col-md-8" method="post" > 
+                            <div class="input-group" style="margin-left:60%;">
+                                <div class='col-md-6'>
+                                    <input type="text" name="search" class="form-control" placeholder="Search..." t-att-value='search'/>
+                                </div>
+                                <div class='col-md-2'>
+                                    <button class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <br/>
+                    <section>
+                        <t t-if='brand_rec'>
+                            <t t-foreach="brand_rec" t-as="o">
+                                <div class="col-md-3" style="display: inline-block;">
+                                    <a t-att-href="keep('/shop/brands',brand = o.id)">
+                                        <div class='row' style='margin-left:15%;'>
+                                            <img itemprop="image" width="200px" height="200px" class="img" t-attf-src="/website/image/product.brand/#{o.id}/logo#{'?max_width=300&amp;max_height=300'}"/>
+                                        </div>
+                                        <div class='row' style='text-align:center;'>
+                                            <t t-esc='o.name' />
+                                        </div>
+                                    </a>
+                                </div>
+                            </t>
+                        </t>
+                        <t t-if='not brand_rec'>
+                            <div class="text-center text-muted">
+                                <h3 class="css_editable_display">No Brands Found.</h3>
+                            </div>
+                        </t>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="website_sale.categories_recursive" name="Category list">
+        <li t-att-class="'active' if c.id == int(category or 0) else ''">
+            <a t-att-href="keep('/shop/category/' + slug(c), category=0, brand=brand)" t-field="c.name"/>
+            <ul t-if="c.child_id" class="nav nav-pills nav-stacked nav-hierarchy">
+                <t t-foreach="c.child_id" t-as="c">
+                    <t t-call="website_sale.categories_recursive"/></t>
+            </ul>
+        </li>
+    </template>
+
+    <!-- Menu in website for Brand -->
+    <record id="menu_website_sale_shop" model="website.menu">
+        <field name="name">Shop All</field>
+        <field name="url">/shop</field>
+        <field name="parent_id" ref="website_sale.menu_shop" />
+    </record>
+
+    <record id="menu_website_sale_brand" model="website.menu">
+        <field name="name">Shop by Brand</field>
+        <field name="url">/page/product_brands</field>
+        <field name="parent_id" ref="website_sale.menu_shop" />
+    </record>
+
+    </data>
+</openerp>
