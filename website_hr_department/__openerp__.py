@@ -26,7 +26,7 @@
     'summary': """
         Display the structure of your departments and their members.
         """,
-    'author': "ACSONE SA/NV",
+    'author': "ACSONE SA/NV,Odoo Community Association (OCA)",
     'website': "http://acsone.eu",
     'category': 'Website',
     'version': '0.1',

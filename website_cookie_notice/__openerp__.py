@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Authors: Laurent Mignon
-#    Copyright (c) 2015 Acsone SA/NV (http://www.acsone.eu)
+#    Copyright (C) 2015 Agile Business Group sagl (<http://www.agilebg.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published
@@ -18,22 +17,24 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+
 {
-    'name': 'Website blog Management',
+    'name': 'Cookie notice',
+    'summary': 'Show cookie notice according to cookie law',
     'version': '1.0',
-    'author': 'ACSONE SA/NV,Odoo Community Association (OCA)',
-    'website': 'http://www.acsone.eu',
-    'license': 'AGPL-3',
     'category': 'Website',
+    'author': "Agile Business Group,Odoo Community Association (OCA)",
+    'website': 'http://www.agilebg.com',
+    'license': 'AGPL-3',
     'depends': [
-        'website_blog',
+        'website',
     ],
     'data': [
-        'data/website_blog_mgmt_data.xml',
-        'views/website_blog_views.xml',
-        'views/website_blog_templates.xml',
+        'website.xml',
+        'views/res_company_view.xml',
+    ],
+    'qweb': [
     ],
     'installable': True,
     'auto_install': False,
-    'post_init_hook': 'post_init',
 }
