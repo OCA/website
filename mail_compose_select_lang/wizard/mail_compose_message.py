@@ -21,3 +21,11 @@ class MailComposeMessage(models.TransientModel):
                 composition_mode=composition_mode, model=model,
                 template_id=template_id, res_id=res_id)
             return res
+
+    @api.multi
+    def send_mail(self):
+        if self.lang:
+            obj = self.with_context(lang=self.lang.code)
+        else:
+            obj = self
+        return super(MailComposeMessage, obj).send_mail()
