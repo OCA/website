@@ -12,7 +12,9 @@ var website = require('website.website');
 var qweb = core.qweb;
 var _t = core._t;
 
-        website.slide.template = website.add_template_file('/website_slides/static/src/xml/website_slides.xml');
+if(!$('.oe_slide_js_upload').length) {
+    return $.Deferred().reject("DOM doesn't contain '.oe_slide_js_upload'");
+}
 
 ajax.loadXML('/website_slides/static/src/xml/website_slides.xml', qweb);
 
@@ -356,17 +358,10 @@ var SlideDialog = Widget.extend({
     }
 });
 
-base.dom_ready.then(function () {
-
-        // bind the event to the button
-        $('.oe_slide_js_upload').on('click', function () {
-            var channel_id = $(this).attr('channel_id');
-            website.slide.page_widgets['upload_dialog'] = new website.slide.Dialog(this, channel_id).appendTo(document.body);
-        });
+    // bind the event to the button
+    $('.oe_slide_js_upload').on('click', function () {
+        var channel_id = $(this).attr('channel_id');
+        slides.page_widgets['upload_dialog'] = new SlideDialog(this, channel_id).appendTo(document.body);
     });
-
-});
-
-});
 
 });
