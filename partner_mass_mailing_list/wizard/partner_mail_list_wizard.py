@@ -48,7 +48,7 @@ class PartnerMailListWizard(models.TransientModel):
                 continue
             contact_vals = {
                 'email': partner.email,
-                'name': partner.display_name,
+                'name': partner.name,
                 'list_id': self.mail_list.id
             }
             contact_obj.create(contact_vals)
