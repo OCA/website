@@ -26,6 +26,7 @@
     'author': "bloopark systems GmbH & Co. KG, "
               "Odoo Community Association (OCA)",
     'website': "http://www.bloopark.de",
+    'license': 'AGPL-3',
     'depends': [
         'website_sale_delivery',
         'website'
