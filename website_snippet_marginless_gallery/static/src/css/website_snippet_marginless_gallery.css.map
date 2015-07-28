@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;AAMA,6BAA6B;EAEzB,MAAM,EAAE,GAAG;EAGX,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;EAG3B,OAAO,EAAE,KAAK;EACd,UAAU,EAAE,MAAM;EAClB,mCAAK;IACD,OAAO,EAAE,UAAU;IACnB,cAAc,EAAE,MAAM",
+"sources": ["website_snippet_marginless_gallery.sass"],
+"names": [],
+"file": "website_snippet_marginless_gallery.css"
+}
