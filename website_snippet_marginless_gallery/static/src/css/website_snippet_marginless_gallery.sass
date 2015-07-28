@@ -1,0 +1,20 @@
+@charset "utf-8"
+/* © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+   License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
+@import "compass/css3/flexbox"
+
+.marginless-gallery .row .img
+    // As the name of the module says...
+    margin: 0px
+
+    // Background changes depending on div and layout size
+    background-size: cover
+    background-position: center
+
+    // Center inner text
+    display: table
+    text-align: center
+    > div
+        display: table-cell
+        vertical-align: middle

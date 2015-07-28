@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). */
+.marginless-gallery .row .img {
+  margin: 0px;
+  background-size: cover;
+  background-position: center;
+  display: table;
+  text-align: center; }
+  .marginless-gallery .row .img > div {
+    display: table-cell;
+    vertical-align: middle; }
+
+/*# sourceMappingURL=website_snippet_marginless_gallery.css.map */
