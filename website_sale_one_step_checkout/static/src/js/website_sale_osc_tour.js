@@ -2,7 +2,7 @@
     'use strict';
 
     openerp.Tour.register({
-        id:   'shop_buy_product',
+        id:   'shop_buy_product_oca',
         name: "Try to buy products with one step checkout",
         path: '/shop',
         mode: 'test',
@@ -10,22 +10,22 @@
             {
                 //step 0
                 title:    "select iPad Mini",
-                element:  '.oe_product_cart a:contains("iPad Mini")',
+                element: 'a[itemprop="name"][href*="ipad-mini"]',
             },
             {
                 //step 1
                 title:    "click on add to cart",
-                element:  '.btn-primary:contains("Add to Cart")',
+                element: '#add_to_cart',
             },
             {
                 //step 2
                 title:    "go to checkout",
-                element:  '.btn-primary:contains("Process Checkout")',
+                element: 'a[href="/shop/checkout"]',
             },
             {
                 //step 3
                 title:     "test with input error",
-                element:   'form[action="/payment/transfer/feedback"] .btn:contains("Pay Now")',
+                element:   'form[action="/payment/transfer/feedback"] .btn[type="submit"]',
                 onload: function (tour) {
                     $("input[name='phone']").val("");
                 }
@@ -34,7 +34,7 @@
                 //step 5
                 title:     "test without input error",
                 waitFor:   'div[id="osc_billing"] .has-error',
-                element:   'form[action="/payment/transfer/feedback"] .btn:contains("Pay Now")',
+                element:   'form[action="/payment/transfer/feedback"] .btn[type="submit"]',
                 onload: function (tour) {
                     if ($("input[name='name']").val() === "")
                         $("input[name='name']").val("website_sale-test-shoptest");

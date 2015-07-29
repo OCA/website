@@ -27,18 +27,18 @@ import openerp.tests
 @openerp.tests.common.post_install(True)
 class TestUi(openerp.tests.HttpCase):
     def test_01_admin_checkout(self):
-        self.phantom_js("/", "openerp.Tour.run('shop_buy_product',"
+        self.phantom_js("/", "openerp.Tour.run('shop_buy_product_oca',"
                              "" "'test')",
-                        "openerp.Tour.tours.shop_buy_product",
+                        "openerp.Tour.tours.shop_buy_product_oca",
                         login="admin")
 
     def test_02_demo_checkout(self):
-        self.phantom_js("/", "openerp.Tour.run('shop_buy_product', "
+        self.phantom_js("/", "openerp.Tour.run('shop_buy_product_oca', "
                              "'test')",
-                        "openerp.Tour.tours.shop_buy_product",
+                        "openerp.Tour.tours.shop_buy_product_oca",
                         login="demo")
 
     def test_03_public_checkout(self):
-        self.phantom_js("/", "openerp.Tour.run('shop_buy_product', "
+        self.phantom_js("/", "openerp.Tour.run('shop_buy_product_oca', "
                              "'test')",
-                        "openerp.Tour.tours.shop_buy_product")
+                        "openerp.Tour.tours.shop_buy_product_oca")
