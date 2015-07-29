@@ -2,7 +2,7 @@
     'use strict';
 
     openerp.Tour.register({
-        id:   'shop_buy_product_osc',
+        id:   'shop_buy_product',
         name: "Try to buy products with one step checkout",
         path: '/shop',
         mode: 'test',
