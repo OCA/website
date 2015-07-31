@@ -43,8 +43,7 @@ class LocalizedPages(Website):
         if request.httprequest.remote_addr and view.country_line_ids:
             country = self.get_country_by_ip(request.httprequest.remote_addr)
             if country:
-                for country_line in view.country_line_ids:
-                    if country_line.country_id.id == country.id:
-                        if country_line.localized_view_id.xml_id:
-                            page = country_line.localized_view_id.xml_id
+                country_view = view.country_line_ids.filtered(
+                    lambda x: x.country == country)[:1]
+                page = country_view.localized_view_id.xml_id or page
         return super(LocalizedPages, self).page(page, **opt)
