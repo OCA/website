@@ -21,7 +21,6 @@ install:
   - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
-  - git clone https://github.com/OCA/product-attribute -b ${VERSION} $HOME/product-attribute
 
 script:
   - travis_run_tests
