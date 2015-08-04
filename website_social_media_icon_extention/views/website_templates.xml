@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="footer_default_extra"
+              inherit_id="website.footer_default">
+      <xpath expr="//a[6]"
+             position="after">
+
+        <a t-att-href="website.social_xing"
+           t-if="website.social_xing">
+          <i class="fa fa-xing"/>
+        </a>
+        <a t-att-href="website.social_dribbble"
+           t-if="website.social_dribbble">
+          <i class="fa fa-dribbble"/>
+        </a>
+        <a t-att-href="website.social_tripadvisor"
+           t-if="website.social_tripadvisor">
+          <i class="fa fa-tripadvisor"/>
+        </a>
+
+      </xpath>
+    </template>
+
+
+    <!-- css and scripts -->
+    <template id="assets_frontend"
+              inherit_id="website.assets_frontend"
+              name="Social Media Icon"
+              priority="900">
+      <xpath expr="."
+             position="inside">
+
+        <!-- version 4.4 of Fontawesome odoo uses only 4.0 -->
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+
+      </xpath>
+    </template>
+
+  </data>
+</openerp>
