@@ -23,7 +23,7 @@
 {
     'name': 'Product Brand Filtering in Website',
     'category': 'Website',
-    'author': 'Serpent Consulting Services Pvt Ltd',
+    'author': 'Serpent Consulting Services Pvt. Ltd.',
     'website': 'http://www.serpentcs.com',
     'summary': '',
     'version': '1.0',
