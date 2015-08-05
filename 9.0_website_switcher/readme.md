@@ -5,7 +5,7 @@ Website Switcher
 <img class="oe_picture" width="700" src="https://raw.githubusercontent.com/blooparksystems/9.0_website_switcher/master/static/description/frontend.png">
 
 
-If you are using different websites this Add-on  will let you switch easily through them.
+If you are using different websites this Add-on will let you switch easily through them.
 
 
 Credits

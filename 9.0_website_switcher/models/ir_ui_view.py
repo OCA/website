@@ -35,7 +35,6 @@ class view(osv.osv):
 
         website_ids = website_obj.search(cr, uid, [])
         values['select_websites'] = website_obj.browse(cr, uid, website_ids)
-        print values.keys()
 
         return super(view, self).render(cr, uid, id_or_xml_id,
                                         values=values, engine=engine,
