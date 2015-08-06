@@ -8,7 +8,14 @@
             <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_contact_tree"/>
             <field name="arch" type="xml">
                 <field name="email" position="after">
-                    <field name="partner_id"/>
+                    <field name="partner_mandatory" invisible="1"/>
+                    <field name="partner_id" attrs="{'required': [('partner_mandatory', '=', True)]}"/>
+                </field>
+                <field name="email" position="attributes">
+                    <attribute name="attrs">{'readonly': [('partner_id', '!=', False)]}</attribute>
+                </field>
+                <field name="name" position="attributes">
+                    <attribute name="attrs">{'readonly': [('partner_id', '!=', False)]}</attribute>
                 </field>
             </field>
         </record>

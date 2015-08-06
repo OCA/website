@@ -7,7 +7,6 @@ Features
 --------
 * When creating or saving a mass-mailing contact, partners are matched through
   email, linking matched partner, or creating a new one if no match.
-* Field 'Opt-Out' is synchronized between both models.
 
 Configuration
 =============

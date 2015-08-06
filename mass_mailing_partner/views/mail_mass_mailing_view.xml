@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_mail_mass_mailing_list_form">
+            <field name="name">mail.mass_mailing.list.form</field>
+            <field name="model">mail.mass_mailing.list</field>
+            <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_list_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@class='oe_title']" position="after">
+                    <group>
+                        <group>
+                            <field name="partner_mandatory"/>
+                            <field name="partner_category"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

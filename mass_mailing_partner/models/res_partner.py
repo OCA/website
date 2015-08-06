@@ -37,14 +37,10 @@ class ResPartner(models.Model):
     def _count_mass_mailing_contacts(self):
         self.mass_mailing_contacts_count = len(self.mass_mailing_contacts)
 
-    @api.multi
+    @api.one
     def write(self, vals):
-        res = super(ResPartner, self).write(vals)
-        # Synchronize opt_out value
-        if vals.get('opt_out') is not None:
-            for partner in self:
-                recs = partner.mass_mailing_contacts.filtered(
-                    lambda x: x.opt_out != vals['opt_out'])
-                if recs:
-                    recs.write({'opt_out': vals['opt_out']})
-        return res
+        self.mass_mailing_contacts.write({
+            'name': vals.get('name') or self.name,
+            'email': vals.get('email') or self.email
+        })
+        return super(ResPartner, self).write(vals)

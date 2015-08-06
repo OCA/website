@@ -19,6 +19,13 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import mail_mass_mailing_contact
-from . import res_partner
-from . import mail_mass_mailing
+from openerp import models, fields, api
+
+
+class MailMassMailingList(models.Model):
+    _inherit = 'mail.mass_mailing.list'
+
+    partner_mandatory = fields.Boolean(string="Mandatory Partner",
+                                       default=False)
+    partner_category = fields.Many2one(comodel_name='res.partner.category',
+                                       string="Partner Tag")

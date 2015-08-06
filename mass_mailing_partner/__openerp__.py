@@ -32,6 +32,7 @@
     "post_init_hook": "_match_existing_contacts",
     'data': [
         'views/mail_mass_mailing_contact_view.xml',
+        'views/mail_mass_mailing_view.xml',
         'views/res_partner_view.xml',
     ],
     "installable": True,

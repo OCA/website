@@ -26,12 +26,14 @@ class MailMassMailingContact(models.Model):
     _inherit = 'mail.mass_mailing.contact'
 
     partner_id = fields.Many2one(comodel_name='res.partner', string="Partner")
+    partner_mandatory = fields.Boolean(related='list_id.partner_mandatory')
 
     def _prepare_partner(self, vals):
         return {
             'name': vals.get('name') or vals.get('email'),
             'email': vals.get('email', False),
             'opt_out': vals.get('opt_out', False),
+            'category_id': vals.get('_partner_category'),
         }
 
     def _check_partner(self, vals):
@@ -49,17 +51,18 @@ class MailMassMailingContact(models.Model):
     @api.model
     def create(self, vals):
         if not vals.get('partner_id') and vals.get('email'):
-            vals['partner_id'] = self._check_partner(vals)
+            mailing_list = self.env['mail.mass_mailing.list'].browse(vals.get(
+                'list_id'))
+            if mailing_list.partner_mandatory:
+                category = mailing_list.partner_category
+                if category:
+                    vals['_partner_category'] = [(4, category.id, 0)]
+                vals['partner_id'] = self._check_partner(vals)
+                vals.pop('_partner_category')
         return super(MailMassMailingContact, self).create(vals)
 
-    @api.multi
-    def write(self, vals):
-        # Synchronize opt_out value
-        if vals.get('opt_out') is not None:
-            recs = self.filtered(lambda x: x.partner_id)
-            for contact in recs:
-                if contact.partner_id.opt_out != vals['opt_out']:
-                    contact.partner_id.opt_out = vals['opt_out']
-        if not vals.get('partner_id') and vals.get('email'):
-            vals['partner_id'] = self._check_partner(vals)
-        return super(MailMassMailingContact, self).write(vals)
+    @api.onchange('partner_id')
+    def _onchange_partner(self):
+        if self.partner_id:
+            self.name = self.partner_id.name
+            self.email = self.partner_id.email
