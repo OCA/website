@@ -23,22 +23,19 @@
 #
 ##############################################################################
 
-from openerp import models, fields, api
+from openerp import models
 from passlib.context import CryptContext
-from passlib.hash import bcrypt
-
 import logging
-from pprint import pformat
+
+
 _logger = logging.getLogger(__name__)
 
 
-class resUsers(models.Model):
+class ResUsers(models.Model):
     _inherit = "res.users"
 
     def _crypt_context(self, cr, uid, id, context=None):
-        uid = super(resUsers, self)._crypt_context(
-            cr, uid, id, context=context)
-
+        super(ResUsers, self)._crypt_context(cr, uid, id, context=context)
         default_crypt_context = CryptContext(
             ['pbkdf2_sha512', 'md5_crypt', 'bcrypt'],
             deprecated=['md5_crypt', 'bcrypt'],

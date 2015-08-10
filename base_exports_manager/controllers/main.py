@@ -23,20 +23,21 @@
 ##############################################################################
 
 from openerp import http
+from openerp.addons.web.http import request
+import operator
 
 
 class Export(http.Controller):
 
     @http.route('/web/export/namelist', type='json', auth="user")
     def namelist(self, model, export_id):
-        # TODO: namelist really has no reason to be in Python (although itertools.groupby helps)
+        # TODO: namelist really has no reason to be in Python (although
+        # itertools.groupby helps)
         export = request.session.model("ir.exports").read([export_id])[0]
         export_fields_list = request.session.model("ir.exports.line").read(
             export['export_fields'])
-
         fields_data = self.fields_info(
             model, map(operator.itemgetter('name'), export_fields_list))
-
         return [
             {'name': field['name'], 'label': fields_data[field['name']]}
             for field in export_fields_list

@@ -63,13 +63,11 @@ class WebsiteBlog(WebsiteBlog):
         cr, uid, context = request.cr, request.uid, request.context
         redirect_url = request.httprequest.referrer + "#comments"
         if kw.get('comment'):
-            if not request.session.uid:  # if not logged, redirect to the login
-                                         # form, keeping the url to post the
-                                         # comment
-                kw['comment'] = kw.get('comment').encode('utf8')  # avoid crash
-                                                                  # from
-                                                                  # urlencode
-                                                                  # if accent
+            # if not logged, redirect to the login form, keeping the url to
+            # post the comment
+            if not request.session.uid:
+                # avoid crash from urlencode if accent
+                kw['comment'] = kw.get('comment').encode('utf8')
                 url = '/blogpost/comment/?blog_post_id=%s&%s' % (
                     blog_post_id, urllib.urlencode(kw))
                 redirect_url = '/web/login?redirect=%s' % urllib.quote(url)

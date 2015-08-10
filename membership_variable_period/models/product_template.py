@@ -2,7 +2,7 @@
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
-from openerp import models, api, fields
+from openerp import models, fields
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 

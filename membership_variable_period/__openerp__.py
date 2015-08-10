@@ -37,4 +37,3 @@
     ],
     "installable": True,
 }
-

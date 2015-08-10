@@ -23,6 +23,7 @@
 ##############################################################################
 
 from openerp import models
+from openerp.osv import osv
 from openerp.tools.translate import _
 import logging
 _logger = logging.getLogger(__name__)
@@ -39,36 +40,51 @@ class MailMail(models.TransientModel):
         notification_obj = self.pool.get('mail.notification')
         user = self.pool.get('res.users').browse(cr, UID_ROOT, uid)
         if not user.email:
-            raise osv.except_osv(_('Email Required'), _('The current user must have an email address configured in User Preferences to be able to send outgoing emails.'))
-
+            raise osv.except_osv(
+                _('Email Required'),
+                _('The current user must have an email address configured in '
+                  'User Preferences to be able to send outgoing emails.'))
         # TODO: also send an HTML version of this mail
         for result_line in wizard_data.result_line_ids:
             email_to = result_line.user_id.email
             if not email_to:
                 continue
-            subject = _('Invitation to collaborate about %s') % (wizard_data.record_name)
+            subject = (_('Invitation to collaborate about %s') %
+                       wizard_data.record_name)
             body = _("Hello,\n\n")
-            body += _("I have shared %s (%s) with you!\n\n") % (wizard_data.record_name, wizard_data.name)
+            body += (_("I have shared %s (%s) with you!\n\n") %
+                     wizard_data.record_name, wizard_data.name)
             if wizard_data.message:
-                body += "%s\n\n" % (wizard_data.message)
+                body += "%s\n\n" % wizard_data.message
             if result_line.newly_created:
-                body += _("The documents are not attached, you can view them online directly on my Odoo server at:\n    %s\n\n") % (result_line.share_url)
-                body += _("These are your credentials to access this protected area:\n")
-                body += "%s: %s" % (_("Username"), result_line.user_id.login) + "\n"
+                body += _("The documents are not attached, you can view them "
+                          "online directly on my Odoo server at:\n    "
+                          "%s\n\n") % result_line.share_url
+                body += _("These are your credentials to access this "
+                          "protected area:\n")
+                body += "%s: %s" % (_("Username"),
+                                    result_line.user_id.login) + "\n"
                 body += "%s: %s" % (_("Password"), result_line.password) + "\n"
                 body += "%s: %s" % (_("Database"), cr.dbname) + "\n"
-            body += _("The documents have been automatically added to your subscriptions.\n\n")
-            body += '%s\n\n' % ((user.signature or ''))
-            msg_id = message_obj.schedule_with_attach(cr, uid, user.email, [email_to], subject, body, model='', context=context)
-            notification_obj.create(cr, uid, {'user_id': result_line.user_id.id, 'message_id': msg_id}, context=context)
+            body += _("The documents have been automatically added to your "
+                      "subscriptions.\n\n")
+            body += '%s\n\n' % (user.signature or '')
+            msg_id = message_obj.schedule_with_attach(
+                cr, uid, user.email, [email_to], subject, body, model='',
+                context=context)
+            notification_obj.create(
+                cr, uid, {'user_id': result_line.user_id.id,
+                          'message_id': msg_id}, context=context)
 
     def send_emails(self, cr, uid, wizard_data, context=None):
         _logger.info('Sending share notifications by email...')
         mail_mail = self.pool.get('mail.mail')
         user = self.pool.get('res.users').browse(cr, UID_ROOT, uid)
         if not user.email:
-            raise osv.except_osv(_('Email Required'), _('The current user must have an email address configured in User Preferences to be able to send outgoing emails.'))
-
+            raise osv.except_osv(
+                _('Email Required'),
+                _('The current user must have an email address configured in '
+                  'User Preferences to be able to send outgoing emails.'))
         # TODO: also send an HTML version of this mail
         mail_ids = []
         for result_line in wizard_data.result_line_ids:
@@ -78,23 +94,30 @@ class MailMail(models.TransientModel):
             subject = wizard_data.name
             body = _("Hello,\n\n")
             body += _("I've shared %s with you!\n\n") % wizard_data.name
-            body += _("The documents are not attached, you can view them online directly on my Odoo server at:\n    %s\n\n") % (result_line.share_url)
+            body += (
+                _("The documents are not attached, you can view them online "
+                  "directly on my Odoo server at:\n    %s\n\n") %
+                result_line.share_url)
             if wizard_data.message:
                 body += '%s\n\n' % (wizard_data.message)
             if result_line.newly_created:
-                body += _("These are your credentials to access this protected area:\n")
+                body += _("These are your credentials to access this "
+                          "protected area:\n")
                 body += "%s: %s\n" % (_("Username"), result_line.user_id.login)
                 body += "%s: %s\n" % (_("Password"), result_line.password)
                 body += "%s: %s\n" % (_("Database"), cr.dbname)
             else:
-                body += _("The documents have been automatically added to your current Odoo documents.\n")
-                body += _("You may use your current login (%s) and password to view them.\n") % result_line.user_id.login
-            body += "\n\n%s\n\n" % ( (user.signature or '') )
-            mail_ids.append(mail_mail.create(cr, uid, {
-                    'email_from': user.email,
-                    'email_to': email_to,
-                    'subject': subject,
-                    'body_html': '<pre>%s</pre>' % body}, context=context))
+                body += _("The documents have been automatically added to "
+                          "your current Odoo documents.\n")
+                body += _("You may use your current login (%s) and password "
+                          "to view them.\n") % result_line.user_id.login
+            body += "\n\n%s\n\n" % (user.signature or '')
+            mail_ids.append(mail_mail.create(
+                cr, uid, {'email_from': user.email,
+                          'email_to': email_to,
+                          'subject': subject,
+                          'body_html': '<pre>%s</pre>' % body},
+                context=context))
         # force direct delivery, as users expect instant notification
         mail_mail.send(cr, uid, mail_ids, context=context)
         _logger.info('%d share notification(s) sent.', len(mail_ids))

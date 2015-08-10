@@ -23,14 +23,10 @@
 #
 ##############################################################################
 
-from openerp import models, fields, api
-import urllib
-import base64
-import json
-import datetime
-
+from openerp import models, fields
 import logging
-from pprint import pformat
+
+
 _logger = logging.getLogger(__name__)
 
 
