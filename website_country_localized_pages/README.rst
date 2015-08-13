@@ -17,6 +17,9 @@ https://pypi.python.org/pypi/ipwhois
 Configuration
 =============
 
+Example
+-------
+
 Through CMS (frontend website) interface, create for instance a new 'US features' page for Unites States, without adding it to the menu, and fill it with US specific content.
 
 Then, go to
