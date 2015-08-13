@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+      <template id="apply" inherit_id="website_hr_recruitment.apply">
+            <xpath expr="//div[label[@for='partner_name']]" position="before">
+                 <div t-attf-class="form-group #{error.get('partner_firstname') and 'has-error' or ''}">
+                    <label class="col-md-3 col-sm-4 control-label" for="partner_firstname">Your Firstname</label>
+                    <div class="col-md-7 col-sm-8">
+                        <input type="text" t-att-value="default.get('partner_firstname')" class="form-control" name="partner_firstname" required="True"/>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//label[@for='partner_name']" position="replace">
+                <label class="col-md-3 col-sm-4 control-label" for="partner_name">Your Lastname</label>
+            </xpath>
+      </template>
+  </data>
+</openerp>
