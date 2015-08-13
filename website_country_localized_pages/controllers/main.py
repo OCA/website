@@ -21,8 +21,13 @@
 from openerp.addons.website.controllers.main import Website
 from openerp.addons.web import http
 from openerp.http import request
-from ipwhois import IPWhois
-from ipwhois import IPDefinedError
+import logging
+_logger = logging.getLogger(__name__)
+try:
+    from ipwhois import IPWhois
+    from ipwhois import IPDefinedError
+except ImportError:
+    _logger.debug("Can not 'import ipwhois'.")
 
 
 class LocalizedPages(Website):
