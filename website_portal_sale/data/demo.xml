@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<openerp>
+    <data>
 
         <record id="sale_order_1" model="sale.order">
             <field name="partner_id" ref="portal.partner_demo_portal"/>
@@ -79,4 +80,5 @@
         <!-- Confirm some Sale Orders-->
         <workflow action="order_confirm" model="sale.order" ref="sale_order_2"/>
 
-</odoo>
+    </data>
+</openerp>

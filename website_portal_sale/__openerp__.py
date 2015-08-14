@@ -3,17 +3,16 @@
     'category': 'Website',
     'summary': 'Add your sales document in the frontend portal (sales order, quotations, invoices)',
     'version': '1.0',
-    'description': """
-Add your sales document in the frontend portal. Your customers will be able to connect to their portal to see the list (and the state) of their invoices (pdf report), sales orders and quotations (web pages).
-        """,
-    'author': 'Odoo SA',
-    'website': 'https://www.odoo.com/',
+    'author': 'Odoo SA, MONK Software',
+    'website': 'https://www.odoo.com/, http://www.wearemonk.com',
     'depends': [
         'sale',
         'website_portal',
     ],
     'data': [
-        'views/templates.xml',
+        'templates/website_portal_sale.xml',
+        'templates/website_portal.xml',
+        'templates/website.xml',
     ],
     'demo': [
         'data/demo.xml'
