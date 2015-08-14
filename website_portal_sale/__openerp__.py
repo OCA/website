@@ -1,7 +1,10 @@
 {
     'name': 'Website Portal for Sales',
     'category': 'Website',
-    'summary': 'Add your sales document in the frontend portal (sales order, quotations, invoices)',
+    'summary': (
+        'Add your sales document in the frontend portal (sales order'
+        ', quotations, invoices)'
+    ),
     'version': '1.0',
     'author': 'Odoo SA, MONK Software',
     'website': 'https://www.odoo.com/, http://www.wearemonk.com',
