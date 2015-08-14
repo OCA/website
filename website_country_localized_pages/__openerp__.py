@@ -33,8 +33,6 @@
         'ir_ui_view_view.xml',
         'security/ir.model.access.csv',
     ],
-    'qweb': [
-    ],
     'installable': True,
     'auto_install': False,
     'external_dependencies': {

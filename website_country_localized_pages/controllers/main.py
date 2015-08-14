@@ -5,10 +5,11 @@
 #    See __openerp__.py file
 #
 
+import logging
 from openerp.addons.website.controllers.main import Website
 from openerp.addons.web import http
 from openerp.http import request
-import logging
+
 _logger = logging.getLogger(__name__)
 try:
     from ipwhois import IPWhois

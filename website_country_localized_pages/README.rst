@@ -24,10 +24,14 @@ Through CMS (frontend website) interface, create for instance a new 'US features
 
 Then, go to
 Settings -> Technical -> User interface -> Views
-search for standard 'features' page, go to 'country specific views' tab, add one line with 'US' country and 'US features' page.
+search for standard 'features' page, go to 'country specific views' tab, add one line selecting 'US' country and 'US features' page.
 
 Visitors from Unites States will see the 'US features' page instead of the standard one.
 
+Known issues / Roadmap
+======================
+
+* Ddding a way to let the user opt-out of the localized pages, or switch to another localization
 
 Bug Tracker
 ===========
