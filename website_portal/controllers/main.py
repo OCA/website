@@ -6,7 +6,8 @@ from openerp.tools.translate import _
 
 
 class website_account(http.Controller):
-    @http.route(['/my', '/my/home'], type='http', auth="public", website=True)
+
+    @http.route(['/my', '/my/home'], type='http', auth='public', website=True)
     def account(self):
         partner = request.env.user.partner_id
 
@@ -21,7 +22,7 @@ class website_account(http.Controller):
             'user': request.env.user
         }
 
-        return request.website.render("website_portal.account", values)
+        return request.website.render('website_portal.account', values)
 
     @http.route(['/my/account'], type='http', auth='user', website=True)
     def details(self, redirect=None, **post):
@@ -53,13 +54,15 @@ class website_account(http.Controller):
             'redirect': redirect,
         })
 
-        return request.website.render("website_portal.details", values)
+        return request.website.render('website_portal.details', values)
 
     def details_form_validate(self, data):
         error = dict()
         error_message = []
 
-        mandatory_billing_fields = ["name", "phone", "email", "street2", "city", "country_id"]
+        mandatory_billing_fields = [
+            'name', 'phone', 'email', 'street2', 'city', 'country_id'
+        ]
 
         # Validation
         for field_name in mandatory_billing_fields:
@@ -67,21 +70,24 @@ class website_account(http.Controller):
                 error[field_name] = 'missing'
 
         # email validation
-        if data.get('email') and not tools.single_email_re.match(data.get('email')):
-            error["email"] = 'error'
-            error_message.append(_('Invalid Email! Please enter a valid email address.'))
+        if not tools.single_email_re.match(data.get('email', '')):
+            error['email'] = 'error'
+            error_message.append(
+                _('Invalid Email! Please enter a valid email address.'))
 
         # vat validation
-        if data.get("vat") and hasattr(request.env["res.partner"], "check_vat"):
+        if (data.get('vat') and
+                hasattr(request.env['res.partner'], 'check_vat')):
             if request.website.company_id.vat_check_vies:
                 # force full VIES online check
-                check_func = request.env["res.partner"].vies_vat_check
+                check_func = request.env['res.partner'].vies_vat_check
             else:
                 # quick and partial off-line checksum validation
-                check_func = request.env["res.partner"].simple_vat_check
-            vat_country, vat_number = request.env["res.partner"]._split_vat(data.get("vat"))
+                check_func = request.env['res.partner'].simple_vat_check
+            vat_country, vat_number = request.env['res.partner']._split_vat(
+                data.get('vat'))
             if not check_func(vat_country, vat_number):  # simple_vat_check
-                error["vat"] = 'error'
+                error['vat'] = 'error'
         # error message for empty required fields
         if [err for err in error.values() if err == 'missing']:
             error_message.append(_('Some required fields are empty.'))

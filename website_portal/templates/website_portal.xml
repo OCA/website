@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<odoo>
-
-    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Account Manager">
-      <xpath expr="." position="inside">
-          <link rel='stylesheet' href='/website_portal/static/src/less/website_portal.less'/>
-          <script type="text/javascript" src="/website_portal/static/src/js/website_portal.js"></script>
-      </xpath>
-    </template>
+<openerp>
+  <data>
 
     <template id="account" name="Account">
         <t t-call="website.layout">
@@ -15,14 +9,13 @@
                     <div class="col-md-8 o_my_documents">
                         <div class="oe_structure"/>
                     </div>
-                    <div t-if="sales_rep" class="col-md-3">
-                      <t t-call="website_portal.contact" />
-                      <div class="oe_structure"/>
-                    </div>
                     <div class="col-md-3 col-md-offset-1 o_my_sidebar">
                         <div class="o_my_details">
                             <h3 class="page-header">Your Details <a href="/my/account" class="btn btn-default btn-xs">Change</a></h3>
                             <div t-field="user.partner_id" t-field-options='{"widget": "contact", "fields": ["email", "phone", "address", "name"]}'/>
+                        </div>
+                        <div t-if="sales_rep">
+                          <t t-call="website_portal.contact"/>
                         </div>
                     </div>
                     <div class="col-md-12 oe_structure"/>
@@ -32,7 +25,7 @@
     </template>
 
     <template id="website_portal.custom_panel" inherit_id='website_portal.account' customize_show="True" name="Editable Panel" active="False">
-        <xpath expr="//div[@class='o_my_sidebar']" position="inside">
+        <xpath expr="//div[contains(@class,'o_my_sidebar')]" position="inside">
             <div class="oe_structure">
               <h3 class="page-header">Custom Panel</h3>
               <p>Place your content here.</p>
@@ -95,7 +88,7 @@
                                     </div>
 
                                     <div class="clearfix" />
-                                    <div t-attf-class="form-group #{error.get('street') and 'has-error' or ''} col-lg-6">
+                                    <div t-attf-class="form-group #{error.get('street2') and 'has-error' or ''} col-lg-6">
                                         <label class="control-label" for="street">Street</label>
                                         <input type="text" name="street2" class="form-control" t-att-value="street2 or partner.street2" />
                                     </div>
@@ -145,9 +138,5 @@
         </t>
     </template>
 
-    <template id="my_account_link" name="Link to frontend portal" inherit_id="website.layout">
-        <xpath expr="//li[@id='o_logout']" position="before">
-            <li><a href="/my/home" role="menuitem">My Account</a></li>
-        </xpath>
-    </template>
-</odoo>
+  </data>
+</openerp>
