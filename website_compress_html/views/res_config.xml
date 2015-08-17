@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <!-- Add menu entry for Compress HTML -->
+    <record id="compress_view_website_config_settings"
+            model="ir.ui.view">
+      <field name="name">Compress HTML</field>
+      <field name="model">website.config.settings</field>
+      <field name="inherit_id"
+             ref="website.view_website_config_settings"/>
+      <field name="arch"
+             type="xml">
+        <xpath expr="//group[@string='Language']"
+               position="after">
+
+          <group string="Advanced">
+            <label for="compress_html"/>
+            <div name="compress_html">
+              <div class="oe_inline">
+                <field name="compress_html"/>
+                Compress rendered html for a better google pagespeed result
+              </div>
+            </div>
+          </group>
+
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</openerp>
