@@ -23,7 +23,7 @@
 ##############################################################################
 
 {
-    'name': 'Departments in CRM',
+    'name': 'Department field in CRM contact',
     'version': '1.0',
     'category': 'Customer Relationship Management',
     'author': 'Serv. Tecnolog. Avanzados - Pedro M. Baeza, '
