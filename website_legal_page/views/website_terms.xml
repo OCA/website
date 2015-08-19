@@ -191,7 +191,7 @@
                       </t>
                       <t t-if="res_company.email">
                         <li>Email address:
-                          <a t-attf-href="'mailto:' + res_company.email">
+                          <a t-attf-href="mailto:#{res_company.email}">
                             <span t-field="res_company.email"/>
                           </a>
                         </li>
