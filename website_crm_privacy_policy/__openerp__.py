@@ -25,7 +25,7 @@
 {
     'name': 'Website CRM privacy policy',
     'category': 'Website',
-    'version': '1.0',
+    'version': '1.0.0',
     'depends': [
         'website',
         'website_crm',
