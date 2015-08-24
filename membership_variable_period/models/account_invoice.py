@@ -4,6 +4,7 @@
 ##############################################################################
 from openerp import models, api, fields
 from datetime import timedelta
+import math
 
 
 class AccountInvoiceLine(models.Model):
@@ -70,7 +71,8 @@ class AccountInvoiceLine(models.Model):
                             memb_line_model.create(membership_vals)
                     elif len(memb_lines) > quantity:
                         # Remove extra membership lines
-                        extra_number = len(memb_lines) - quantity
+                        extra_number = (
+                            len(memb_lines) - int(math.ceil(quantity)))
                         memb_lines[:extra_number].unlink()
         return super(AccountInvoiceLine, self).write(vals)
 

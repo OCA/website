@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="membership_products_form_prorrate">
+            <field name="name">Membership Products (prorrate)</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="membership.membership_products_form" />
+            <field name="arch" type="xml">
+                <field name="list_price" position="before">
+                    <field name="membership_prorrate"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

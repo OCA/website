@@ -4,10 +4,10 @@
 import openerp.tests.common as common
 
 
-class TestAccountPaymentTermMultiDay(common.TransactionCase):
+class TestMembershipInitialFee(common.TransactionCase):
 
     def setUp(self):
-        super(TestAccountPaymentTermMultiDay, self).setUp()
+        super(TestMembershipInitialFee, self).setUp()
         self.product_fixed = self.env['product.product'].create(
             {
                 'name': 'Membership product with fixed initial fee',

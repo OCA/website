@@ -1,0 +1,97 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* membership_variable_period
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-08-21 00:25+0000\n"
+"PO-Revision-Date: 2015-08-21 00:25+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: membership_variable_period
+#: selection:product.template,membership_type:0
+msgid "Fixed dates"
+msgstr ""
+
+#. module: membership_variable_period
+#: view:product.template:membership_variable_period.membership_products_form_period
+msgid "Interval"
+msgstr ""
+
+#. module: membership_variable_period
+#: field:product.template,membership_interval_qty:0
+msgid "Interval quantity"
+msgstr ""
+
+#. module: membership_variable_period
+#: field:product.template,membership_interval_unit:0
+msgid "Interval unit"
+msgstr ""
+
+#. module: membership_variable_period
+#: model:ir.model,name:membership_variable_period.model_account_invoice_line
+msgid "Invoice Line"
+msgstr ""
+
+#. module: membership_variable_period
+#: field:account.invoice.line,membership_lines:0
+msgid "Membership lines"
+msgstr ""
+
+#. module: membership_variable_period
+#: field:product.template,membership_type:0
+msgid "Membership type"
+msgstr ""
+
+#. module: membership_variable_period
+#: model:ir.model,name:membership_variable_period.model_res_partner
+msgid "Partner"
+msgstr ""
+
+#. module: membership_variable_period
+#: model:ir.model,name:membership_variable_period.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: membership_variable_period
+#: selection:product.template,membership_type:0
+msgid "Variable periods"
+msgstr ""
+
+#. module: membership_variable_period
+#: selection:product.template,membership_interval_unit:0
+msgid "days"
+msgstr ""
+
+#. module: membership_variable_period
+#: selection:product.template,membership_interval_unit:0
+msgid "months"
+msgstr ""
+
+#. module: membership_variable_period
+#: selection:product.template,membership_interval_unit:0
+msgid "weeks"
+msgstr ""
+
+#. module: membership_variable_period
+#: selection:product.template,membership_interval_unit:0
+msgid "years"
+msgstr ""
+
+#. module: membership_variable_period
+#: view:product.template:membership_variable_period.membership_products_form_period
+msgid "{'invisible': [('membership_type', '!=', 'fixed')]}"
+msgstr ""
+
+#. module: membership_variable_period
+#: view:product.template:membership_variable_period.membership_products_form_period
+msgid "{'required': [('membership_type', '=', 'fixed')]}"
+msgstr ""
+
