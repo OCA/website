@@ -26,17 +26,6 @@
                                string="Mailing lists"/>
                     </button>
                 </div>
-                <notebook position="inside">
-                    <page string="Mailing lists">
-                        <field name="mass_mailing_contacts" context="{'default_email': email, 'default_name': name, 'default_partner_id': active_id}">
-                            <tree editable="bottom">
-                                <field name="list_id" options="{'create': false, 'create_edit': false}"/>
-                                <field name="name" invisible="True" />
-                                <field name="email" invisible="True" />
-                            </tree>
-                        </field>
-                    </page>
-                </notebook>
             </field>
         </record>
 
