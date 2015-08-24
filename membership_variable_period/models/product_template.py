@@ -2,7 +2,7 @@
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
-from openerp import models, fields
+from openerp import models, fields, api
 from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 
@@ -42,3 +42,23 @@ class ProductTemplate(models.Model):
                    ('months', 'months'),
                    ('years', 'years')],
         string="Interval unit", default='years')
+
+    def _check_vals_membership_type(self, vals, membership_type):
+        if membership_type == 'variable':
+            if vals.get('membership_date_from'):
+                del vals['membership_date_from']
+            if vals.get('membership_date_to'):
+                del vals['membership_date_to']
+        return vals
+
+    @api.model
+    def create(self, vals):
+        self._check_vals_membership_type(
+            vals, vals.get('membership_type', 'fixed'))
+        return super(ProductTemplate, self).create(vals)
+
+    @api.multi
+    def write(self, vals):
+        self._check_vals_membership_type(
+            vals, vals.get('membership_type', self.membership_type))
+        return super(ProductTemplate, self).write(vals)
