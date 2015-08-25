@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data noupdate="1">
+
+    <!-- Add seo url to all existing blogs and blog posts, its needed for existing databases, we don't update the url fields of the website blog records "menu_news" 
+      and "action_open_website" because a template reference is used here and we can't use the seo_url field in a dynamically way -->
+    <function name="add_seo_url" model="blog.blog" />
+
+  </data>
+</openerp>

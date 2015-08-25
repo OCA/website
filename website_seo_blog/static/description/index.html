@@ -1,0 +1,43 @@
+<section class="oe_container">
+	<div class="oe_row oe_spaced">
+		<div class="oe_span12">
+			<h2>Provide an improved SEO handling for the blog module</h2>
+		</div>
+		<div class="oe_span12">
+			<p class="oe_mt32">This module adds a SEO handling for blog and blog posts. It means that blogs and blog posts use now the seo_url field provided by the
+				website_seo module. One goal of these changes is the reducing of the blog url level, means we reduce the url level from 2 to 1 for blogs and from 4 to 2 for
+				blog posts. Another goal is the separation between the blog and blog post names and the urls, means you can change the blog and blog post names later
+				without changing the urls.</p>
+			<p class="oe_mt32">The blog url changes from "/blog/slugged_blog_name_ID" to "/blog-seo_url". Example: if the blog seo_url is "our-news" the blog url
+				http://www.yourdomain.de/blog/our-news-1 is also available by http://www.yourdomain.de/blog-our-news. The fix part "blog-" is important because we need a
+				unique url part for the odoo routers. Without this fix part there are problems with different languages and translations. Maybe we address this issue at a
+				later time. You don't need to add "blog-" to the seo_url field but you need to add "blog-" to all links which refers to the blog.</p>
+			<p class="oe_mt32">The blog post url changes from "/blog/slugged_blog_name_ID/post/slugged_blog_post_name_ID" to "/blog-seo_url/seo_url". Example: if the
+				blog post seo_url is "my-first-blogpost" the blog post url http://www.yourdomain.de/blog/our-news-1/post/my-first-blogpost is also available by
+				http://www.yourdomain.de/blog-our-news/my-first-blogpost.</p>
+			<p class="oe_mt32">The original routers for blogs and blog posts are still available which means that the urls are also available by the old url
+				structure. The reasons are that it is not that easy to delete or deactivate routers in another module and some functions like the blog post creation in the
+				frontend won't work well.</p>
+			<h3>Important</h3>
+			<p class="oe_mt32">If you install this module and you haven't installed the module website_seo and update the module website before you have to update
+				all modules with models which inherits website.seo.metadata after the installation. In general it is enough to update the website module. It is needed to
+				populate the seo_url field in all related models of the installed website modules.</p>
+			<p class="oe_mt32">If you install this module in an existing database it will add the SEO urls of existing blogs and blog posts based on the names
+				automatically.</p>
+			<p class="oe_mt32">After the module installation you have to update the website menu entry with the correct link manually.</p>
+			<p class="oe_mt32">Regards Bloopark</p>
+		</div>
+	</div>
+</section>
+<section class="oe_container oe_dark">
+	<div class="oe_row oe_spaced">
+		<h2 class="oe_slogan">
+			<a href="http://www.bloopark.de/">bloopark systems GmbH &amp; Co. KG</a>
+		</h2>
+		<div class="oe_span12">
+			<p class="oe_mt32">We are an internet agency and Odoo partner based in Magdeburg, Germany with over 10 years of experience in e-commerce, responsive
+				design and development. We consider ourselves as A-team, small and efficient. With remote developers all across the world, we are pride of our wide
+				perspective and approach in every challenge, which leads to the best customer-oriented solutions.</p>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record id="view_website_config_settings" model="ir.ui.view">
+      <field name="name">Website settings</field>
+      <field name="model">website.config.settings</field>
+      <field name="inherit_id" ref="website.view_website_config_settings"/>
+      <field name="arch" type="xml">
+        <xpath expr="//form/div" position="inside">
+          <group string="SEO Pages">
+            <button type="action" name="%(website_seo.action_website_seo_pages)d" string="Configure SEO pages" class="oe_link"/>
+          </group>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</openerp>

@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_seo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-26 09:02+0000\n"
+"PO-Revision-Date: 2015-06-26 09:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_seo
+#: help:website.seo.metadata,seo_url:0
+msgid "If you fill out this field manually the allowed characters are a-z, A-Z, 0-9, - and _."
+msgstr "Wenn Sie dieses Feld manuell ausfüllen, sind nur die Zeichen a-z, A-Z, 0-9, - and _ erlaubt."
+
+#. module: website_seo
+#: field:website.seo.metadata,seo_url:0
+msgid "SEO Url"
+msgstr "SEO Url"
+
+#. module: website_seo
+#: model:ir.model,name:website_seo.model_website_seo_metadata
+msgid "SEO metadata"
+msgstr "SEO Metadaten"
+
+#. module: website_seo
+#: model:ir.model,name:website_seo.model_website_menu
+msgid "Website Menu"
+msgstr "Webseite Menü"
+
+#. module: website_seo
+#: code:addons/website_seo/models/website.py:90
+#, python-format
+msgid "Only a-z, A-Z, 0-9, - and _ are allowed characters for the SEO url."
+msgstr "Nur a-z, A-Z, 0-9, - and _ sind erlaubte Zeichen für die SEO Url."
+
+#. module: website_seo
+#: code:addons/website_seo/static/src/xml/website_seo_robots.xml
+#, python-format
+msgid "Robots Content"
+msgstr "Robots Inhalt"
+
+#. module: website_seo
+#: help:ir.ui.view,seo_url_parent:0
+msgid ""
+"The SEO Parent field is used to describe hierarchical urls like "
+"\"/ecommerce/study/how-to-do-it-right\". Taking this as example you "
+"have to create 3 pages (ir.ui.view records) for \"ecommerce\", \"study\" "
+"and \"how-to-do-it-right\". The \"ecommerce\" page is the first level "
+"part and it doesn't need a SEO parent. The \"study\" page is the "
+"second level part and it needs the parent page \"ecommerce\". The "
+"\"how-to-do-it-right\" page is the third part and it needs the parent "
+"page \"study\". If all pages are configured correct the page "
+"\"how-to-do-it-right\" is rendered when calling "
+"\"/ecommerce/study/how-to-do-it-right\"."
+msgstr ""
+"Die SEO übergeordnete Seite wird für hierarchische Urls wie \"/ecommerce/"
+"study/how-to-do-it-right\" benutzt. Taking this as example you "
+"have to create 3 pages (ir.ui.view records) for \"ecommerce\", \"study\" "
+"and \"how-to-do-it-right\". The \"ecommerce\" page is the first level "
+"part and it doesn't need a SEO parent. The \"study\" page is the "
+"second level part and it needs the parent page \"ecommerce\". The "
+"\"how-to-do-it-right\" page is the third part and it needs the parent "
+"page \"study\". If all pages are configured correct the page "
+"\"how-to-do-it-right\" is rendered when calling "
+"\"/ecommerce/study/how-to-do-it-right\"."

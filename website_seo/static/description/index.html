@@ -1,0 +1,50 @@
+<section class="oe_container">
+	<div class="oe_row oe_spaced">
+		<div class="oe_span12">
+			<h2>Provide the base for an improved SEO handling</h2>
+		</div>
+		<div class="oe_span12">
+			<p class="oe_mt32">This module adds a new seo_url field to the website.seo.metadata model. It means all models which inherit website.seo.metadata will
+				have the new seo_url field. In general it affects website modules like website_blog, website_forum, website_hr_recruitment etc. The module itself adds no
+				SEO handling. It is done in additional modules like website_seo_blog.</p>
+		</div>
+		<div class="oe_span12">
+            <h2>Provide the base for Robots Meta Information</h2>
+        </div>
+        <div class="oe_span12">
+            <p class="oe_mt32">This module adds a new 'Robots Content' field to the promote panel where the user have full control on the robots meta information.
+                The selected value is stored in the website_meta_robots field in the website.seo.metadata model. It means all models which inherit website.seo.metadata
+                will have access to this functionality except of the ir.ui.view model. We add the website_meta_robots field to this model separately because ir.ui.view
+                doesn't inherit website.seo.metadata.</p>
+            <p class="oe_mt32"><em>The description of the meta robots information is as follow</em>:</p>
+            <ul class="simple">
+                <li><strong>index</strong>: pages may be indexed</li>
+                <li><strong>noindex</strong>: pages may not be indexed</li>
+                <li><strong>follow</strong>: pages must be followed</li>
+                <li><strong>nofollow</strong>: pages should not be followed</li>
+            </ul>
+        </div>
+        <div class="oe_span12">
+            <h3>Important</h3>
+            <p class="oe_mt32">If you install this module you have to update all modules with models which inherits website.seo.metadata after the installation. In
+                general it is enough to update the website module. It is needed to populate the seo_url and website_meta_robots fields in all related models of the
+                installed website modules.</p>
+            <p class="oe_mt32">If you uninstall this module or a related SEO module like website_seo_blog you have to clean up the related seo_url and website_meta_robots
+                entries in the database table ir_model_fields manually. You also have to delete the seo_url and website_meta_robots column in the related database tables
+                manually.</p>
+            <p class="oe_mt32">Regards Bloopark</p>
+        </div>
+	</div>
+</section>
+<section class="oe_container oe_dark">
+	<div class="oe_row oe_spaced">
+		<h2 class="oe_slogan">
+			<a href="http://www.bloopark.de/">bloopark systems GmbH &amp; Co. KG</a>
+		</h2>
+		<div class="oe_span12">
+			<p class="oe_mt32">We are an internet agency and Odoo partner based in Magdeburg, Germany with over 10 years of experience in e-commerce, responsive
+				design and development. We consider ourselves as A-team, small and efficient. With remote developers all across the world, we are pride of our wide
+				perspective and approach in every challenge, which leads to the best customer-oriented solutions.</p>
+		</div>
+	</div>
+</section>

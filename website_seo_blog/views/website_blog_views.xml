@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+
+    <!-- Add seo_url field and on_change attribute for automatically filling the SEO url in blog view -->
+    <record model="ir.ui.view" id="view_blog_blog_form">
+      <field name="name">blog.blog.form</field>
+      <field name="model">blog.blog</field>
+      <field name="inherit_id" ref="website_blog.view_blog_blog_form" />
+      <field name="arch" type="xml">
+        <field name="name" position="replace">
+          <field name="name" on_change="onchange_name(name, seo_url)" />
+          <field name="seo_url" required="1" />
+        </field>
+      </field>
+    </record>
+
+    <!-- Add seo_url field and on_change attribute for automatically filling the SEO url in blog post view -->
+    <record model="ir.ui.view" id="view_blog_post_form">
+      <field name="name">blog.post.form</field>
+      <field name="model">blog.post</field>
+      <field name="inherit_id" ref="website_blog.view_blog_post_form" />
+      <field name="arch" type="xml">
+        <field name="name" position="replace">
+          <field name="name" on_change="onchange_name(name, seo_url)" />
+          <field name="seo_url" required="1" />
+        </field>
+      </field>
+    </record>
+
+  </data>
+</openerp>

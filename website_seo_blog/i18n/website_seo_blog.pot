@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_seo_blog
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-26 09:04+0000\n"
+"PO-Revision-Date: 2015-06-26 09:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_seo_blog
+#: help:blog.blog,seo_url:0
+msgid ""
+"If you create or update a blog and this field is empty it is "
+"filled automatically when you enter a blog name.\nIf you fill out "
+"this field manually the allowed characters are a-z, A-Z, 0-9, - and "
+"_.\nAfter changing the SEO url you also have to update the blog menu "
+"entry in Settings -> Configuration -> Website Settings -> Configure "
+"website menus (also take care of the blog SEO url and blog menu entry"
+" translations).\nImportant: If you use the SEO url as link, e. g. in "
+"the blog menu entry, you have to add \"blog-\" at the beginning. It "
+"is needed to identify the blog correctly. Example: If your SEO url is"
+" \"our-news\" the link is \"blog-our-news\"."
+msgstr ""
+"If you create or update a blog and this field is empty it is "
+"filled automatically when you enter a blog name.\nIf you fill out "
+"this field manually the allowed characters are a-z, A-Z, 0-9, - and "
+"_.\nAfter changing the SEO url you also have to update the blog menu "
+"entry in Settings -> Configuration -> Website Settings -> Configure "
+"website menus (also take care of the blog SEO url and blog menu entry"
+" translations).\nImportant: If you use the SEO url as link, e. g. in "
+"the blog menu entry, you have to add \"blog-\" at the beginning. It "
+"is needed to identify the blog correctly. Example: If your SEO url is"
+" \"our-news\" the link is \"blog-our-news\"."
+
+#. module: website_seo_blog
+#: help:blog.post,seo_url:0
+msgid ""
+"If you create or update a blog post and this field is empty it "
+"is filled automatically when you enter a blog post name.\nIf you fill"
+" out this field manually the allowed characters are a-z, A-Z, 0-9, - "
+"and _."
+msgstr ""
+"If you create or update a blog post and this field is empty it "
+"is filled automatically when you enter a blog post name.\nIf you fill"
+" out this field manually the allowed characters are a-z, A-Z, 0-9, - "
+"and _."
+
+#. module: website_seo_blog
+#: model:ir.model,name:website_seo_blog.model_blog_post
+msgid "Blog Post"
+msgstr "Blog Post"
+
+#. module: website_seo_blog
+#: model:ir.model,name:website_seo_blog.model_blog_blog
+msgid "Blogs"
+msgstr "Blogs"
+
+#. module: website_seo_blog
+#: sql_constraint:blog.blog:0
+#: sql_constraint:blog.post:0
+msgid "SEO url must be unique!"
+msgstr "SEO url must be unique!"
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="template" xml:space="preserve">
+
+  <t t-extend="website.seo_configuration">
+    <t t-jquery="section div.form-horizontal.mt16" t-operation="append">
+      <div class="form-group">
+        <label for="seo_page_robots" class="col-lg-2 control-label">Robots Content</label>
+        <div class="col-lg-8">
+          <select name="seo_page_robots" class="form-control">
+            <option value="INDEX,FOLLOW">INDEX,FOLLOW</option>
+            <option value="NOINDEX,FOLLOW">NOINDEX,FOLLOW</option>
+            <option value="INDEX,NOFOLLOW">INDEX,NOFOLLOW</option>
+            <option value="NOINDEX,NOFOLLOW">NOINDEX,NOFOLLOW</option>
+          </select>
+        </div>
+      </div>
+    </t>
+  </t>
+
+</templates>

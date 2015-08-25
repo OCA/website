@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="head_meta_robots" inherit_id="website.layout" name="Head Meta Robots">
+      <xpath expr="//meta[@name='keywords']" position="after">
+        <t t-if="not request_query_string or request_query_string == ''">
+          <meta name="robots"
+                t-att-content="main_object and 'website_meta_robots' in main_object and main_object.website_meta_robots or website_meta_robots or 'INDEX,FOLLOW'"/>
+        </t>
+        <t t-if="request_query_string and request_query_string != ''">
+          <meta name="robots" content="NOINDEX,FOLLOW"/>
+        </t>
+      </xpath>
+    </template>
+
+  </data>
+</openerp>
