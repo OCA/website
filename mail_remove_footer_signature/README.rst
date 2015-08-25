@@ -1,7 +1,7 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
     :alt: License: AGPL-3
 
-Remove share email footer signature
+Remove email footer signature
 ==============
 
 This module remove footer signature from all emails. This module autoinstall "Remove share email footer signature" and "Remove portal email footer signature"
