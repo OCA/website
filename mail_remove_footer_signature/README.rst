@@ -4,7 +4,7 @@
 Remove email footer signature
 ==============
 
-This module remove footer signature from all emails. This module autoinstall "Remove share email footer signature" and "Remove portal email footer signature"
+This module remove footer signature from all emails sent from chatter and compose mode sent by the system when there are changes (i.e. stage changes in tasks or projects, sending invoices, mass mailings, internal messages to followers, etc.). This module autoinstall "Remove share email footer signature" and "Remove portal email footer signature"
 
 
 Installation
