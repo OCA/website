@@ -14,8 +14,8 @@
         </record>
 
         <template id="event_description_full" inherit_id="website_event_sale.event_description_full">
-            <xpath expr="//select[@t-if='ticket.seats_available']/t" position="replace">
-                <t t-foreach="range(0, ticket.seats_available > ticket.max_tickets and ticket.max_tickets+1 or ticket.seats_available+1 )" t-as="nb"><option t-esc="nb"/></t>
+            <xpath expr="//t[@t-as='nb']" position="attributes">
+                <attribute name="t-foreach">range(0, ticket.seats_available > ticket.max_tickets and ticket.max_tickets+1 or ticket.seats_available+1 )</attribute>
             </xpath>
         </template>
 
