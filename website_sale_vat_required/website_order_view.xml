@@ -2,7 +2,7 @@
 <openerp>
 <data>
     <template id="checkout_vat_required" inherit_id="website_sale.checkout">
-        <xpath expr="//label[@for='vat']" position="attributes">
+        <xpath expr="//div[@class='container oe_website_sale']/form/div[@class='row']/div[@class='col-md-8 oe_cart']/div[@class='row']/div[4]/label" position="attributes">
             <attribute name="style"/>
         </xpath>
     </template>
