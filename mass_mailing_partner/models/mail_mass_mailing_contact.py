@@ -1,24 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#
-#    Copyright (c) 2015 Serv. Tecnol. Avanzados (http://www.serviciosbaeza.com)
-#                       Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
-#    Copyright (c) 2015 Antiun Ingeniería S.L.
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
+# License AGPL-3 - See LICENSE file on root folder for details
 ##############################################################################
+
 from openerp import models, fields, api
 
 
@@ -36,13 +20,14 @@ class MailMassMailingContact(models.Model):
             'category_id': vals.get('_partner_category'),
         }
 
-    def _check_partner(self, vals):
+    def _check_partner(self, vals, partner_mandatory):
         partner_model = self.env['res.partner']
         # Look for a partner with that email
         partners = partner_model.search([('email', '=ilike', vals['email'])])
+        partner_id = False
         if partners:
             partner_id = partners[0].id
-        else:
+        elif partner_mandatory:
             # Create partner
             partner = partner_model.sudo().create(self._prepare_partner(vals))
             partner_id = partner.id
@@ -57,8 +42,8 @@ class MailMassMailingContact(models.Model):
                 category = mailing_list.partner_category
                 if category:
                     vals['_partner_category'] = [(4, category.id, 0)]
-                vals['partner_id'] = self._check_partner(vals)
-                vals.pop('_partner_category')
+            vals['partner_id'] = self._check_partner(vals, partner_mandatory)
+            vals.pop('_partner_category')
         return super(MailMassMailingContact, self).create(vals)
 
     @api.onchange('partner_id')
