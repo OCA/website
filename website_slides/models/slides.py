@@ -401,6 +401,18 @@ class Slide(models.Model):
                     'allowfullscreen="true" mozallowfullscreen="true" ' \
                     'webkitallowfullscreen="true">' \
                     '</iframe>' % (record.document_id)
+            elif record.slide_type == 'document' and record.document_id:
+                # embed code for google pdf
+                # https://drive.google.com/file/d/0B5vkWsCFJsb-TUh5azY0ZnlHZDQ/view
+                    # '<iframe src="http://docs.google.com/gview?' \
+                    # 'url=https://drive.google.com/file/d/%s/view&embedded=true" ' \
+                    # 'style="width:600px; height:500px;" frameborder="0">' \
+                    # '</iframe>' % (record.document_id)
+
+                record.embed_code = '' \
+                    '<iframe src="https://drive.google.com/file/d/%s/preview" ' \
+                    ' frameborder="0">' \
+                    '</iframe>' % (record.document_id)
             else:
                 record.embed_code = False
 
