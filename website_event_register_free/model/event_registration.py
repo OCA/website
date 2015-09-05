@@ -34,5 +34,5 @@ class EventRegistration(models.Model):
             'phone': partner and partner.phone or post['phone'],
             'name': partner and partner.name or post['name'],
             'user_id': user_id,
-            'partner_id': partner.id,
+            'partner_id': partner and partner.id,
         }
