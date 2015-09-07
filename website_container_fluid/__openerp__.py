@@ -2,7 +2,7 @@
 {
     "name": "Snippet container width type chooser",
     "summary": "Let you choose between fixed or fluid containers",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.0.1",
     "category": "Website",
     "license": "AGPL-3",
 
@@ -16,6 +16,7 @@
         "website",
     ],
     "data": [
+        "views/assets.xml",
         "views/snippets.xml",
     ],
     "demo": [
