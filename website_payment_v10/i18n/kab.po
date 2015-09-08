@@ -3,59 +3,57 @@
 # * website_payment
 # 
 # Translators:
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015
-# Kari Lindgren <kari.lindgren@emsystems.fi>, 2015
-# Mikko Salmela <salmemik@gmail.com>, 2015
+# Belkacem Mohammed <belkacem77@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:09+0000\n"
-"PO-Revision-Date: 2015-09-06 15:04+0000\n"
-"Last-Translator: Mikko Salmela <salmemik@gmail.com>\n"
-"Language-Team: Finnish (http://www.transifex.com/odoo/odoo-8/language/fi/)\n"
+"PO-Revision-Date: 2015-07-09 22:58+0000\n"
+"Last-Translator: Belkacem Mohammed <belkacem77@gmail.com>\n"
+"Language-Team: Kabyle (http://www.transifex.com/odoo/odoo-8/language/kab/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: fi\n"
+"Language: kab\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_payment
 #: view:website:website_payment.cc_form
 msgid "Card code"
-msgstr "Kortin koodi"
+msgstr "Tangalt n Karḍa"
 
 #. module: website_payment
 #: view:website:website_payment.cc_form
 msgid "Card number"
-msgstr "Kortin numero"
+msgstr "Uṭṭun n Tkarḍa."
 
 #. module: website_payment
 #: view:website:website_payment.website_settings_payment
 msgid "Configure payment acquirers"
-msgstr "Konfiguroi maksun vastaanottajat"
+msgstr ""
 
 #. module: website_payment
 #: view:website:website_payment.website_settings_payment
 msgid "E-Commerce"
-msgstr "Sähköinen kaupankäynti"
+msgstr "E-Aznuzu"
 
 #. module: website_payment
 #: view:website:website_payment.cc_form
 msgid "Expires"
-msgstr "Vanhentuu"
+msgstr "Ad immet"
 
 #. module: website_payment
 #: view:website:website_payment.cc_form
 msgid "Holder Name"
-msgstr "Haltijan nimi"
+msgstr "Isem n bab n tkarḍa"
 
 #. module: website_payment
 #: view:website:website_payment.cc_form
 msgid "MM / YY"
-msgstr "KK / VV"
+msgstr ""
 
 #. module: website_payment
 #: view:website:website_payment.cc_form
 msgid "Paypal payment: server 2 server"
-msgstr ""
+msgstr "Afru Paypal: Aqeddac ɣer uqeddac"
