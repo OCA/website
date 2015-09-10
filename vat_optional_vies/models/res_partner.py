@@ -94,7 +94,7 @@ class ResPartner(models.Model):
         """
         vat_country = False
         vat_number = vat
-        if re.match(r'[A-Za-z]{2}', vat):
+        if vat and re.match(r'[A-Za-z]{2}', vat):
             vat_country = vat[:2].upper()
             vat_number = vat[2:].replace(' ', '')
         elif country:
