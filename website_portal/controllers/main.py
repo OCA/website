@@ -5,7 +5,7 @@ from openerp import tools
 from openerp.tools.translate import _
 
 
-class website_account(http.Controller):
+class WebsiteAccount(http.Controller):
 
     @http.route(['/my', '/my/home'], type='http', auth='public', website=True)
     def account(self):
