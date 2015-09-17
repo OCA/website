@@ -26,13 +26,12 @@
     "name": "Event register free form fields",
     "version": "1.0",
     'author': 'Antiun Ingenieria S.L.',
-    'maintainer': 'Antiun Ingenieria S.L.',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
     "category": "Event Management",
     "description": """
 Event register free form fields
-=====================
+===============================
 
 This module edit the event form and add or
 remove fields (phone, zip, promo source)
@@ -41,7 +40,7 @@ and you check required or not
     "depends": ['base', 'event', 'website_event_register_free_with_sale',
                 'website_sale'],
     "data": [
-        'views/default_data.xml',
+        'data/default_data.xml',
         'views/event_registration.xml',
         'views/event_event_view.xml',
         'views/event_registration_fields_view.xml',

@@ -47,7 +47,7 @@ class WebsiteSale(WebsiteSale):
             if 'street2' in self.mandatory_free_registration_fields:
                 self.mandatory_free_registration_fields.remove('street2')
 
-            for field in event['available_fields']:
+            for field in event.available_fields:
                 extra_fields.append(field.field_id.key)
                 self.optional_free_registration_fields.append(
                     field.field_id.key)
