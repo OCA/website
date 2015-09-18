@@ -30,7 +30,7 @@ class WebsiteSale(website_sale):
     # TODO: Not used yet
     optional_free_registration_fields = ["street", "city", "country_id", "zip"]
 
-    def checkout_form_validate(self, data):
+    def checkout_form_validate_free(self, data):
         errors = dict()
         if request.session.get('free_tickets'):
             # Make validation for free tickets
@@ -40,10 +40,6 @@ class WebsiteSale(website_sale):
                 elif not WebsiteEvent()._validate(field_name, data, True):
                     # Patch for current free registration implementation
                     errors[field_name] = 'error'
-        if request.session.get('has_paid_tickets'):
-            # Make validation for paid tickets
-            errors.update(super(WebsiteSale, self).checkout_form_validate(
-                data))
         return errors
 
     @http.route(['/shop/checkout'], type='http', auth="public", website=True)
@@ -65,7 +61,7 @@ class WebsiteSale(website_sale):
             return super(WebsiteSale, self).confirm_order(**post)
         if request.session.get('free_tickets'):
             values = self.checkout_values(post)
-            values['error'] = self.checkout_form_validate(post)
+            values['error'] = self.checkout_form_validate_free(post)
             if values["error"]:
                 return request.website.render("website_sale.checkout", values)
             post['tickets'] = request.session['free_tickets']
