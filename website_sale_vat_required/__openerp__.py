@@ -32,8 +32,6 @@
     'data': [
         'website_order_view.xml',
     ],
-    'qweb': [
-    ],
     'installable': True,
     'auto_install': False,
 }
