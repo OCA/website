@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<!-- Page /doc/jsonrpc -->
+<template id="index" name="Api Doc">
+    <t t-call="website.layout">
+      <div id="wrap">
+        <div class="oe_structure"/>
+        <div class="container">
+            <div class="row mt8">
+                <div class="col-sm-5">
+                    <ol class="breadcrumb mb0">
+                        <li>
+                            <a href="/doc/jsonrpc">All Models</a>
+                        </li>
+                        <li t-if="current_date"><t t-esc="current_date"/></li>
+                        <li t-if="current_type"><t t-esc="current_type.name"/></li>
+                        <li t-if="current_country"><t t-esc="current_country.name"/></li>
+                    </ol>
+                </div><div class="col-sm-7">
+                </div>
+            </div>
+            <div class="row mt32 mb32">
+                <div class="col-md-9" id="middle_column">
+                    <ul class="media-list">
+                        <li t-foreach="model_ids" t-as="model" class="meida">
+                            <strong t-field="model.name"> </strong>
+                            <a itemprop="url" t-attf-href="/doc/jsonrpc/#{ slug(model) }/#{(not model.id) and 'register' or ''}">
+                                <span t-field="model.model"> </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 oe_structure" id="right_column">
+                </div>
+            </div>
+        </div>
+        <div class="oe_structure"/>
+      </div>
+    </t>
+</template>
+
+<!-- Page /doc/jsonrpc/$model -->
+<template id="single" name="Api Doc">
+    <t t-call="website.layout">
+      <div id="wrap">
+        <div class="oe_structure"/>
+        <div class="container">
+            <div class="row mt8">
+                <div class="col-sm-5">
+                    <ol class="breadcrumb mb0">
+                        <li>
+                            <a href="/doc/jsonrpc">All Models</a>
+                        </li>
+                        <li t-if="current_date"><t t-esc="current_date"/></li>
+                        <li t-if="current_type"><t t-esc="current_type.name"/></li>
+                        <li t-if="current_country"><t t-esc="current_country.name"/></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row mt32 mb32">
+                <div class="col-md-9" id="middle_column">
+                    <div t-foreach="model_ids" t-as="model" class="meida">
+                        <h2 t-field="model.name"> </h2>
+                        <div>
+                            <h3>Info</h3>
+                            <dl>
+                                <dt for="name">Name</dt><dd><span t-field="model.name"> </span></dd>
+                                <dt for="name">Technical name</dt><dd><span t-field="model.model"> </span></dd>
+                                <t t-if="model.osv_memory">
+                                    <dt for="name">Transient Model</dt><dd>Yes</dd>
+                                </t>
+                                <dt for="name">Used in</dt><dd><span t-field="model.modules"> </span></dd>
+                                <dt for="name">Type</dt><dd><span t-field="model.state"> </span></dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <h3>Fields</h3>
+                            <ul>
+                                <li t-foreach="model.field_id" t-as="field">
+                                    <strong t-field="field.name"> </strong>
+                                    <span t-field="field.ttype"> </span>
+                                    <t t-if="field.relation">
+                                        <t t-foreach="all_models" t-as="m">
+                                            <t t-if="m.model == field.relation">
+                                                <a itemprop="url" t-attf-href="/doc/jsonrpc/#{ slug(m) }/#{(not m.id) and 'register' or ''}">
+                                                    <span t-field="field.relation"> </span>
+                                                </a>
+                                            </t>
+                                        </t>
+                                    </t>
+                                    <t t-if="field.required">
+                                        <strong>required</strong>
+                                    </t>
+                                    <t t-if="field.readonly">
+                                        <strong>readonly</strong>
+                                    </t>
+                                    <t t-if="field.translate">
+                                        <strong>translateble</strong>
+                                    </t>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Views</h3>
+                            <ul>
+                                <li t-foreach="model.view_ids" t-as="view">
+                                    <strong t-field="view.name"> </strong>
+                                    <span t-field="view.xml_id"> </span>
+                                    <span t-field="view.type"> </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 oe_structure" id="right_column">
+                </div>
+            </div>
+        </div>
+        <div class="oe_structure"/>
+      </div>
+    </t>
+</template>
+
+</data>
+</openerp>
