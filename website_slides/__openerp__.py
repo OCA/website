@@ -30,11 +30,11 @@
     'website': 'https://github.com/OCA/website',
     'depends': ['website', 'website_mail'],
     'data': [
-        'view/res_config.xml',
-        'view/website_slides.xml',
-        'view/website_slides_embed.xml',
-        'view/website_slides_backend.xml',
-        'view/website_templates.xml',
+        'views/res_config.xml',
+        'views/website_slides.xml',
+        'views/website_slides_embed.xml',
+        'views/website_slides_backend.xml',
+        'views/website_templates.xml',
         'data/website_slides_data.xml',
         'security/ir.model.access.csv',
         'security/website_slides_security.xml'

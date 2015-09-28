@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-
-from openerp import api, fields, models
+from openerp import fields, models
 
 
 class WebsiteConfigSettings(models.TransientModel):
@@ -9,19 +8,16 @@ class WebsiteConfigSettings(models.TransientModel):
 
     website_slide_google_app_key = fields.Char(string='Google Doc Key')
 
-    @api.model
-    def get_website_slide_google_app_key(self, fields):
-        website_slide_google_app_key = False
-        if 'website_slide_google_app_key' in fields:
-            website_slide_google_app_key = self.env['ir.config_parameter'].\
-                sudo().get_param('website_slides.google_app_key')
+    def get_default_website_slide_google_app_key(
+            self, cr, uid, fields, context=None):
+        icp = self.pool.get('ir.config_parameter')
         return {
-            'website_slide_google_app_key': website_slide_google_app_key
+            'website_slide_google_app_key': icp.get_param(
+                cr, uid, 'website_slides.google_app_key', '')
         }
 
-    @api.multi
-    def set_website_slide_google_app_key(self):
-        for wizard in self:
-            self.env['ir.config_parameter'].sudo().set_param(
-                'website_slides.google_app_key',
-                wizard.website_slide_google_app_key)
+    def set_website_slide_google_app_key(self, cr, uid, ids, context=None):
+        config = self.browse(cr, uid, ids[0], context=context)
+        icp = self.pool.get('ir.config_parameter')
+        icp.set_param(cr, uid, 'website_slides.google_app_key',
+                      config.website_slide_google_app_key)
