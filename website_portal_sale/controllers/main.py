@@ -4,15 +4,15 @@ import datetime
 from openerp import http
 from openerp.http import request
 
-from openerp.addons.website_portal.controllers.main import website_account
+from openerp.addons.website_portal.controllers.main import WebsiteAccount
 
 
-class WebsiteAccount(website_account):
+class PortalSaleWebsiteAccount(WebsiteAccount):
 
     @http.route(['/my/home'], type='http', auth="user", website=True)
     def account(self, **kw):
         """ Add sales documents to main account page """
-        response = super(WebsiteAccount, self).account(**kw)
+        response = super(PortalSaleWebsiteAccount, self).account(**kw)
 
         partner = request.env.user.partner_id
         quotations = request.env['sale.order'].search([
