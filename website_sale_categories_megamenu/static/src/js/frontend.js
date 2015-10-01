@@ -41,7 +41,7 @@ if (typeof jQuery === 'undefined') {
         });
 
         // Submenu items - go back link
-        $('.go-back').on('click', function(){
+        $('.go-back').on('click', function(event){
             event.preventDefault();
             event.stopPropagation();
             $(this).parent('ul').addClass('is-hidden')
