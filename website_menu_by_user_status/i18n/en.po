@@ -1,0 +1,47 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_menu_by_user_status
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-03 23:14+0000\n"
+"PO-Revision-Date: 2015-09-25 08:30+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_menu_by_user_status
+#: code:addons/website_menu_by_user_status/models/website_menu.py:36
+#: help:website.menu,user_logged:0
+#, python-format
+msgid "If checked, the menu will be displayed when the user is logged."
+msgstr "If checked, the menu will be displayed when the user is logged."
+
+#. module: website_menu_by_user_status
+#: code:addons/website_menu_by_user_status/models/website_menu.py:43
+#: help:website.menu,user_not_logged:0
+#, python-format
+msgid "If checked, the menu will be displayed when the user is not logged."
+msgstr "If checked, the menu will be displayed when the user is not logged."
+
+#. module: website_menu_by_user_status
+#: field:website.menu,user_logged:0
+msgid "User Logged"
+msgstr "User Logged"
+
+#. module: website_menu_by_user_status
+#: field:website.menu,user_not_logged:0
+msgid "User Not Logged"
+msgstr "User Not Logged"
+
+#. module: website_menu_by_user_status
+#: model:ir.model,name:website_menu_by_user_status.model_website_menu
+msgid "Website Menu"
+msgstr "Website Menu"

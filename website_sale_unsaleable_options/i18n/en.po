@@ -10,17 +10,17 @@ msgstr ""
 "POT-Creation-Date: 2015-10-03 23:14+0000\n"
 "PO-Revision-Date: 2015-09-25 08:31+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
+"Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: it\n"
+"Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_sale_unsaleable_options
 #: view:website:website_sale_unsaleable_options.modal_warning
 msgid "Warning"
-msgstr "Attenzione"
+msgstr "Warning"
 
 #. module: website_sale_unsaleable_options
 #: code:addons/website_sale_unsaleable_options/controllers/main.py:45
@@ -28,4 +28,4 @@ msgstr "Attenzione"
 msgid ""
 "You can't direcly add to cart an optional product. You should first add one "
 "of the following products: %s"
-msgstr ""
+msgstr "You can't direcly add to cart an optional product. You should first add one of the following products: %s"
