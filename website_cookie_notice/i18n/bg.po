@@ -3,20 +3,19 @@
 # * website_cookie_notice
 # 
 # Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2016
-# Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
+# Kaloyan Naumov <kaloyan@lumnus.net>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 03:55+0000\n"
 "PO-Revision-Date: 2016-11-29 03:55+0000\n"
-"Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>, 2016\n"
-"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
+"Last-Translator: Kaloyan Naumov <kaloyan@lumnus.net>, 2016\n"
+"Language-Team: Bulgarian (https://www.transifex.com/oca/teams/23907/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
+"Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_cookie_notice
@@ -24,22 +23,19 @@ msgstr ""
 msgid ""
 ". To disable them, configure your browser properly. If you keep using this "
 "website, you are accepting those."
-msgstr ""
-". Para desactivarlas, configure adecuadamente su navegador. Si continúa "
-"usando este sitio web, está aceptándolas."
+msgstr ". Ако продължите да използвате уебсайта, значи сте съгласни."
 
 #. module: website_cookie_notice
 #: model:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "OK"
-msgstr "Aceptar"
+msgstr "Приемам"
 
 #. module: website_cookie_notice
 #: model:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "We use cookies in this website. Read about them in our"
-msgstr "Usamos cookies en este sitio web. Lea más acerca de ellas en nuestra"
+msgstr "Този сайт използва бисквитки. Можете да прочетете повече в нашата"
 
 #. module: website_cookie_notice
 #: model:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "privacy policy"
-msgstr "política de privacidad"
-
+msgstr "политика за личните данни"
