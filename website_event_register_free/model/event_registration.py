@@ -30,9 +30,9 @@ class EventRegistration(models.Model):
             'nb_register': int(post['tickets']),
             'event_id': event.id,
             'date_open': fields.Datetime.now(),
-            'email': partner and partner.email or post['email'],
-            'phone': partner and partner.phone or post['phone'],
-            'name': partner and partner.name or post['name'],
+            'email': post.get('email') or partner and partner.email,
+            'phone': post.get('phone') or partner and partner.phone,
+            'name': post.get('name') or partner and partner.name,
             'user_id': user_id,
             'partner_id': partner and partner.id,
         }
