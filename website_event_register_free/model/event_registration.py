@@ -24,15 +24,15 @@ from openerp import models, fields
 class EventRegistration(models.Model):
     _inherit = 'event.registration'
 
-    def _prepare_registration(self, event, post, user_id, partner_id=False):
+    def _prepare_registration(self, event, post, user_id, partner=False):
         return {
             'origin': 'Website',
             'nb_register': int(post['tickets']),
             'event_id': event.id,
             'date_open': fields.Datetime.now(),
-            'email': post['email'],
-            'phone': post['phone'],
-            'name': post['name'],
+            'email': post.get('email') or partner and partner.email,
+            'phone': post.get('phone') or partner and partner.phone,
+            'name': post.get('name') or partner and partner.name,
             'user_id': user_id,
-            'partner_id': partner_id,
+            'partner_id': partner and partner.id,
         }
