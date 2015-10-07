@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* website_legal_page_required
+# 	* website_signup_legal_page_required
 #
 msgid ""
 msgstr ""
@@ -17,60 +17,60 @@ msgstr ""
 "Last-Translator: \n"
 "Language: es\n"
 
-#. module: website_legal_page_required
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid ""
 ",\n"
 "                the"
 msgstr ", la"
 
-#. module: website_legal_page_required
+#. module: website_signup_legal_page_required
 #: field:res.users,accepted_legal_terms:0
 msgid "Accepted legal terms"
 msgstr "Acuerdos legales aceptados"
 
-#. module: website_legal_page_required
+#. module: website_signup_legal_page_required
 #: help:res.users,accepted_legal_terms:0
 msgid "Did the user accept our legal terms when opening the account?"
 msgstr "¿El usuario aceptó nuestros acuerdos legales cuando creó su cuenta?"
 
-#. module: website_legal_page_required
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "I accept the"
 msgstr "Acepto el"
 
-#. module: website_legal_page_required
-#: model:ir.model,name:website_legal_page_required.model_res_users
+#. module: website_signup_legal_page_required
+#: model:ir.model,name:website_signup_legal_page_required.model_res_users
 msgid "Users"
 msgstr "Usuarios"
 
-#. module: website_legal_page_required
-#: code:addons/website_legal_page_required/exceptions.py:10
+#. module: website_signup_legal_page_required
+#: code:addons/website_signup_legal_page_required/exceptions.py:10
 #, python-format
 msgid "You must accept our legal terms."
 msgstr "Debe aceptar nuestros acuerdos legales."
 
-#. module: website_legal_page_required
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "and the"
 msgstr "y los"
 
-#. module: website_legal_page_required
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "legal advice"
 msgstr "aviso legal"
 
-#. module: website_legal_page_required
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "of this website."
 msgstr "de este sitio web."
 
-#. module: website_legal_page_required
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "privacy policy"
 msgstr "política de privacidad"
 
-#. module: website_legal_page_required
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "terms of use"
 msgstr "términos de uso"
