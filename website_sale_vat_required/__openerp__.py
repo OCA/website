@@ -21,7 +21,7 @@
 {
     'name': 'e-commerce required VAT',
     'summary': 'VAT number required in checkout form',
-    'version': '1.0',
+    'version': '8.0.1.0.0',
     'category': 'Website',
     'author': "Agile Business Group,Odoo Community Association (OCA)",
     'website': 'http://www.agilebg.com',

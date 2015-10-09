@@ -3,7 +3,7 @@
     'name': 'Website Portal',
     'category': 'Website',
     'summary': 'Account Management Frontend for your Customers',
-    'version': '1.0',
+    'version': '8.0.1.0.0',
     'license': 'LGPL-3',
     'author': 'Odoo SA, MONK Software',
     'website': (
