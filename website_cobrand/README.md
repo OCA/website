@@ -9,6 +9,7 @@ Implemented features:
  * Logo
 
 Planned:
+ * Context CSS (allow companies to have own colors)
  * Option to allow parent logo in footer
  * Context pages - Pages that are only shown in context of the company
  * Dynamic company blocks (places like footer, about, contact, etc)
