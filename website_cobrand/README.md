@@ -3,7 +3,7 @@ Website Cobranding
 
 This allows for Odoo front-end to be be branded based on the URI it is being accessed on.
 
-If no user is logged in, company context will be discovered based on the URI by trying to find a company with a matching URI.
+If no user is logged in, company context will be discovered using company.website search
 
 Implemented features:
  * Logo
