@@ -104,10 +104,10 @@ class ResPartner(models.Model):
     def validate_vat(self):
         if self.company_id.vat_check_vies:
             # VIES online check
-            check_func = self.vies_vat_check
+            check_func = self._vies_vat_check
         else:
             # quick and partial off-line checksum validation
-            check_func = self.simple_vat_check
+            check_func = self._simple_vat_check
         vat_country, vat_number = self._split_vat(self.vat, self.vat_country)
         if not check_func(vat_country, vat_number):
             _logger.info("VAT Number [%s] is not valid !" % vat_number)
@@ -118,11 +118,28 @@ class ResPartner(models.Model):
         values = [v for v, _ in self._columns['vat_country'].selection]
         return country_code and country_code in values
 
+    @api.multi
+    def _simple_vat_check(self, country_code, vat_number):
+        country_code = country_code.upper() if country_code else False
+        data = {}
+        res = self.simple_vat_check(country_code, vat_number)
+        if res:
+            if country_code != self.vat_country:
+                # If country code is indicated in vat number, copy to country field
+                data['vat_country'] = country_code
+            if vat_number != self.vat:
+                data['vat'] = vat_number
+        if data:
+            self.with_context(avoid_check_vat=True).write(data)
+        return res
+
+    @api.model
     def simple_vat_check(self, country_code, vat_number):
         """
         Check the VAT number depending of the country.
         http://sima-pc.com/nif.php
         """
+        country_code = country_code.upper() if country_code else False
         if not self._country_is_available(country_code):
             # If no available country code, then this VAT is OK
             return True
@@ -132,47 +149,39 @@ class ResPartner(models.Model):
         if not check_func:
             # No VAT validation available, then this VAT is OK
             return True
-        res = check_func(vat_number)
+        return check_func(vat_number)
+
+    @api.multi
+    def _vies_vat_check(self, country_code, vat_number):
+        country_code = country_code.upper() if country_code else False
         data = {}
-        if res and country_code != self.vat_country:
-            # If country code is indicated in vat number, copy to country field
-            data['vat_country'] = country_code
-        if res and vat_number != self.vat:
-            data['vat'] = vat_number
+        res = self.vies_vat_check(country_code, vat_number)
+        if res:
+            vat = country_code + vat_number
+            if not self.vies_passed:
+                data['vies_passed'] = True
+            if vat != self.vat:
+                data['vat'] = vat
+            if country_code != self.vat_country:
+                data['vat_country'] = country_code
+        else:
+            res = self._simple_vat_check(country_code, vat_number)
+            if self.vies_passed:
+                data['vies_passed'] = False
         if data:
             self.with_context(avoid_check_vat=True).write(data)
         return res
 
+    @api.model
     def vies_vat_check(self, country_code, vat_number):
-        data = {}
-        res = False
+        country_code = country_code.upper() if country_code else False
         try:
             # Validate against  VAT Information Exchange System (VIES)
             # see also http://ec.europa.eu/taxation_customs/vies/
             vat = country_code + vat_number
             res = vatnumber.check_vies(vat)
-            if res and not self.vies_passed:
-                data['vies_passed'] = True
-            if res and vat != self.vat:
-                data['vat'] = vat
-            if res and country_code != self.vat_country:
-                data['vat_country'] = country_code
         except Exception:
-            # See:
-            #   http://ec.europa.eu/taxation_customs/vies/checkVatService.wsdl
-            # Fault code may contain INVALID_INPUT, SERVICE_UNAVAILABLE,
-            # MS_UNAVAILABLE, TIMEOUT or SERVER_BUSY. There is no way we can
-            # validate the input with VIES if any of these arise, including
-            # the first one (it means invalid country code or empty
-            # VAT number), so we fall back to the simple check.
-            pass
-
-        if not res:
-            res = self.simple_vat_check(country_code, vat_number)
-            if self.vies_passed:
-                data['vies_passed'] = False
-        if data:
-            self.with_context(avoid_check_vat=True).write(data)
+            return False
         return res
 
     # Delete old api constraint defined in base_vat addon
