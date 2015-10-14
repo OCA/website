@@ -40,4 +40,5 @@
         'data/websiste_hr_department_data.xml',
         'views/website_hr_department.xml',
     ],
+    'installable': False,
 }

@@ -46,6 +46,6 @@ TODO:
     'data': [
         'view/website.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': False,
 }

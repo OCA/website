@@ -10,7 +10,7 @@
     "author": "Grupo ESOC, Odoo Community Association (OCA)",
 
     "application": False,
-    "installable": True,
+    'installable': False,
 
     "depends": [
         "website",

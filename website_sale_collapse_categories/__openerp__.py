@@ -34,5 +34,5 @@
     'data': [
         'views/website_sale_template.xml',
     ],
-    "installable": True,
+    'installable': False,
 }

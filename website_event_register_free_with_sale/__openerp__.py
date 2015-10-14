@@ -32,5 +32,5 @@
         'website_event_sale',
     ],
     "auto_install": True,
-    "installable": True,
+    'installable': False,
 }

@@ -33,7 +33,7 @@
         'views/website_blog_views.xml',
         'views/website_blog_templates.xml',
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'post_init_hook': 'post_init',
 }

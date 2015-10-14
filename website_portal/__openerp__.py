@@ -17,5 +17,5 @@
         'templates/website.xml',
         'templates/website_portal.xml',
     ],
-    'installable': True,
+    'installable': False,
 }
