@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_crm_quick_answer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-15 18:34+0200\n"
+"PO-Revision-Date: 2015-10-15 18:35+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.5\n"
+"Last-Translator: \n"
+"Language: es\n"
+
+#. module: website_crm_quick_answer
+#: model:email.template,body_html:website_crm_quick_answer.email_template
+msgid ""
+"<p>\n"
+"            Dear\n"
+"            <b>${object.partner_id and object.partner_id.name or\n"
+"                 object.contact_name}</b>,\n"
+"          </p>\n"
+"        <h3>Thanks for contacting us!</h3>\n"
+"        <p>\n"
+"            We have received your request and will answer you as soon as\n"
+"            possible.\n"
+"        </p>\n"
+"        <p>Please, be patient. Best regards.</p>\n"
+"    "
+msgstr ""
+"<p>\n"
+"            Estimado/a\n"
+"            <b>${object.partner_id and object.partner_id.name or\n"
+"                 object.contact_name}</b>,\n"
+"          </p>\n"
+"        <h3>¡Gracias por contactarnos!</h3>\n"
+"        <p>\n"
+"            Hemos recibido su solicitud y será respondida con la mayor prontitud posible.\n"
+"        </p>\n"
+"        <p>Por favor, sea paciente. Un cordial saludo.</p>\n"
+"    "
+
+#. module: website_crm_quick_answer
+#: model:ir.filters,name:website_crm_quick_answer.website_form_leads_filter
+msgid "Coming from the website contact form"
+msgstr "Procedentes del formulario de contacto del sitio web"
+
+#. module: website_crm_quick_answer
+#: model:ir.actions.server,name:website_crm_quick_answer.server_action
+msgid "Quick response to website contact form"
+msgstr "Respuesta rápida al formulario de contacto del sitio web"
+
+#. module: website_crm_quick_answer
+#: model:email.template,subject:website_crm_quick_answer.email_template
+msgid "Thanks for your request"
+msgstr "Gracias por su solicitud"
