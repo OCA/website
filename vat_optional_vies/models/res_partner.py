@@ -87,14 +87,17 @@ class ResPartner(models.Model):
             raise ValidationError(_("VAT number is not valid"))
         return True
 
-    def _split_vat(self, vat, country=False):
+    @api.model
+    def split_vat(self, vat, country=False):
         """
         @summary: Split Partner vat into country_code and number
         @result: (vat_country, vat_number)
         """
         vat_country = False
         vat_number = vat
-        if vat and re.match(r'[A-Za-z]{2}', vat):
+        countries = [v for v, _ in self._columns['vat_country'].selection]
+        pattern = r'(%s)' % '|'.join(countries)
+        if vat and re.match(pattern, vat):
             vat_country = vat[:2].upper()
             vat_number = vat[2:].replace(' ', '')
         elif country:
@@ -108,15 +111,15 @@ class ResPartner(models.Model):
         else:
             # quick and partial off-line checksum validation
             check_func = self._simple_vat_check
-        vat_country, vat_number = self._split_vat(self.vat, self.vat_country)
+        vat_country, vat_number = self.split_vat(self.vat, self.vat_country)
         if not check_func(vat_country, vat_number):
             _logger.info("VAT Number [%s] is not valid !" % vat_number)
             return False
         return True
 
     def _country_is_available(self, country_code):
-        values = [v for v, _ in self._columns['vat_country'].selection]
-        return country_code and country_code in values
+        countries = [v for v, _ in self._columns['vat_country'].selection]
+        return country_code and country_code in countries
 
     @api.multi
     def _simple_vat_check(self, country_code, vat_number):
