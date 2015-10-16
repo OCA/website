@@ -19,57 +19,61 @@
 #
 ##############################################################################
 
-from openerp import models, fields
-from openerp.tools.translate import _
+from openerp import _, models, fields
 
 
 class Company(models.Model):
     _inherit = "res.company"
     cookieAnalytics = fields.Boolean(
-        string="cookieAnalytics",
-        help="just using a simple analytics package? change this to true")
+        string="Analytics",
+        help="Just using a simple analytics package? change this to true")
     cookieMessage = fields.Char(
-        string="cookieMessage",
-        default=_('We use cookies on this website, you can '
-                  '<a href="{{cookiePolicyLink}}" title="read about our '
-                  'cookies">read about them here</a>. To use the website as '
-                  'intended please...'),
+        string="Message",
+        default=lambda self: _(
+            'We use cookies on this website, you can '
+            '<a href="{{cookiePolicyLink}}" title="read about our '
+            'cookies">read about them here</a>. To use the website as '
+            'intended please...'),
         translate=True)
     cookiePolicyLink = fields.Char(
-        string="cookiePolicyLink",
-        help="if applicable, enter the link to your privacy policy here...",
+        string="Policy link",
+        help="If applicable, enter the link to your privacy policy here...",
         default='/page/privacy')
     cookieOverlayEnabled = fields.Boolean(
-        string="cookieOverlayEnabled",
-        help="don't want a discreet toolbar? Fine, set this to true")
+        string="Overlay enabled",
+        help="Don't want a discreet toolbar? Fine, set this to true")
     cookieAnalyticsMessage = fields.Char(
-        string="cookieAnalyticsMessage",
-        default=_('We use cookies, just to track visits to our website, we '
-                  'store no personal details.'),
+        string="Analytics message",
+        default=lambda self: _(
+            'We use cookies, just to track visits to our website, we '
+            'store no personal details.'),
         translate=True)
     cookieErrorMessage = fields.Char(
-        string="cookieErrorMessage",
-        default=_("We\'re sorry, this feature places cookies in your browser "
-                  "and has been disabled. <br>To continue using this "
-                  "functionality, please"),
+        string="Error message",
+        default=lambda self: _(
+            "We are sorry, this feature places cookies in your browser "
+            "and has been disabled. <br/>To continue using this "
+            "functionality, please"),
         translate=True)
     cookieDeclineButton = fields.Boolean(
-        string="cookieDeclineButton")
+        string="Decline button")
     cookieAcceptButton = fields.Boolean(
-        string="cookieAcceptButton",
+        string="Accept button",
         default=True)
     cookieResetButton = fields.Boolean(
-        string="cookieResetButton")
+        string="Reset button")
     cookieWhatAreTheyLink = fields.Char(
-        string="cookieWhatAreTheyLink",
+        string="What are they link",
         default="http://www.allaboutcookies.org/")
     cookieAcceptButtonText = fields.Char(
-        string="cookieAcceptButtonText", default=_("ACCEPT COOKIES"),
+        string="Accept button text",
+        default="Accept cookies",
         translate=True)
     cookieDeclineButtonText = fields.Char(
-        string="cookieDeclineButtonText", default=_("DECLINE COOKIES"),
+        string="Decline button text",
+        default=lambda self: _("Decline cookies"),
         translate=True)
     cookieResetButtonText = fields.Char(
-        string="cookieResetButtonText",
-        default=_("RESET COOKIES FOR THIS WEBSITE"),
+        string="Reset button text",
+        default=lambda self: _("Reset cookies for this website"),
         translate=True)
