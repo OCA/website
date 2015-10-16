@@ -13,7 +13,6 @@
 <record id="email_template" model="email.template">
     <field name="name">Quick response to website contact form</field>
     <field name="model_id" ref="crm.model_crm_lead"/>
-    <field name="state">email</field>
     <field name="use_default_to" eval="True"/>
     <field name="email_from">${object.company_id.email}</field>
     <field name="lang">${object.env.context.get("lang")}</field>
