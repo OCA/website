@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-23 19:38+0000\n"
-"PO-Revision-Date: 2015-06-23 19:38+0000\n"
+"POT-Creation-Date: 2015-10-16 14:06+0000\n"
+"PO-Revision-Date: 2015-10-16 14:06+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,9 +16,23 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: website_cookie_notice
-#: code:addons/website_cookie_notice/models/res_company.py:67
-#, python-format
-msgid "ACCEPT COOKIES"
+#: field:res.company,cookieAcceptButton:0
+msgid "Accept button"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookieAcceptButtonText:0
+msgid "Accept button text"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookieAnalytics:0
+msgid "Analytics"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookieAnalyticsMessage:0
+msgid "Analytics message"
 msgstr ""
 
 #. module: website_cookie_notice
@@ -32,19 +46,80 @@ msgid "Cookie notice"
 msgstr ""
 
 #. module: website_cookie_notice
-#: code:addons/website_cookie_notice/models/res_company.py:70
-#, python-format
-msgid "DECLINE COOKIES"
+#: field:res.company,cookieDeclineButton:0
+msgid "Decline button"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookieDeclineButtonText:0
+msgid "Decline button text"
 msgstr ""
 
 #. module: website_cookie_notice
 #: code:addons/website_cookie_notice/models/res_company.py:74
 #, python-format
-msgid "RESET COOKIES FOR THIS WEBSITE"
+msgid "Decline cookies"
 msgstr ""
 
 #. module: website_cookie_notice
-#: code:addons/website_cookie_notice/models/res_company.py:33
+#: help:res.company,cookieOverlayEnabled:0
+msgid "Don't want a discreet toolbar? Fine, set this to true"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookieErrorMessage:0
+msgid "Error message"
+msgstr ""
+
+#. module: website_cookie_notice
+#: help:res.company,cookiePolicyLink:0
+msgid "If applicable, enter the link to your privacy policy here..."
+msgstr ""
+
+#. module: website_cookie_notice
+#: help:res.company,cookieAnalytics:0
+msgid "Just using a simple analytics package? change this to true"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookieMessage:0
+msgid "Message"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookieOverlayEnabled:0
+msgid "Overlay enabled"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookiePolicyLink:0
+msgid "Policy link"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookieResetButton:0
+msgid "Reset button"
+msgstr ""
+
+#. module: website_cookie_notice
+#: field:res.company,cookieResetButtonText:0
+msgid "Reset button text"
+msgstr ""
+
+#. module: website_cookie_notice
+#: code:addons/website_cookie_notice/models/res_company.py:78
+#, python-format
+msgid "Reset cookies for this website"
+msgstr ""
+
+#. module: website_cookie_notice
+#: code:addons/website_cookie_notice/models/res_company.py:53
+#, python-format
+msgid "We are sorry, this feature places cookies in your browser and has been disabled. <br/>To continue using this functionality, please"
+msgstr ""
+
+#. module: website_cookie_notice
+#: code:addons/website_cookie_notice/models/res_company.py:32
 #, python-format
 msgid "We use cookies on this website, you can <a href=\"{{cookiePolicyLink}}\" title=\"read about our cookies\">read about them here</a>. To use the website as intended please..."
 msgstr ""
@@ -56,88 +131,7 @@ msgid "We use cookies, just to track visits to our website, we store no personal
 msgstr ""
 
 #. module: website_cookie_notice
-#: code:addons/website_cookie_notice/models/res_company.py:52
-#, python-format
-msgid "We're sorry, this feature places cookies in your browser and has been disabled. <br>To continue using this functionality, please"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieAcceptButton:0
-msgid "cookieAcceptButton"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieAcceptButtonText:0
-msgid "cookieAcceptButtonText"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieAnalytics:0
-msgid "cookieAnalytics"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieAnalyticsMessage:0
-msgid "cookieAnalyticsMessage"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieDeclineButton:0
-msgid "cookieDeclineButton"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieDeclineButtonText:0
-msgid "cookieDeclineButtonText"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieErrorMessage:0
-msgid "cookieErrorMessage"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieMessage:0
-msgid "cookieMessage"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieOverlayEnabled:0
-msgid "cookieOverlayEnabled"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookiePolicyLink:0
-msgid "cookiePolicyLink"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieResetButton:0
-msgid "cookieResetButton"
-msgstr ""
-
-#. module: website_cookie_notice
-#: field:res.company,cookieResetButtonText:0
-msgid "cookieResetButtonText"
-msgstr ""
-
-#. module: website_cookie_notice
 #: field:res.company,cookieWhatAreTheyLink:0
-msgid "cookieWhatAreTheyLink"
-msgstr ""
-
-#. module: website_cookie_notice
-#: help:res.company,cookieOverlayEnabled:0
-msgid "don't want a discreet toolbar? Fine, set this to true"
-msgstr ""
-
-#. module: website_cookie_notice
-#: help:res.company,cookiePolicyLink:0
-msgid "if applicable, enter the link to your privacy policy here..."
-msgstr ""
-
-#. module: website_cookie_notice
-#: help:res.company,cookieAnalytics:0
-msgid "just using a simple analytics package? change this to true"
+msgid "What are they link"
 msgstr ""
 
