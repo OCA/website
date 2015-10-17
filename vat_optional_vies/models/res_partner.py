@@ -135,6 +135,8 @@ class ResPartner(models.Model):
                 data['vat_country'] = country_code
             if vat_number != self.vat:
                 data['vat'] = vat_number
+            if self.vies_passed:
+                data['vies_passed'] = False
         if data:
             self.with_context(avoid_check_vat=True).write(data)
         return res
@@ -172,8 +174,6 @@ class ResPartner(models.Model):
                 data['vat_country'] = country_code
         else:
             res = self._simple_vat_check(country_code, vat_number)
-            if self.vies_passed:
-                data['vies_passed'] = False
         if data:
             self.with_context(avoid_check_vat=True).write(data)
         return res
