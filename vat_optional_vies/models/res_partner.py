@@ -104,6 +104,9 @@ class ResPartner(models.Model):
             vat_country = country
         return vat_country, vat_number
 
+    def _split_vat(self, vat):
+        return self.split_vat(vat)
+
     def validate_vat(self):
         if self.company_id.vat_check_vies:
             # VIES online check
