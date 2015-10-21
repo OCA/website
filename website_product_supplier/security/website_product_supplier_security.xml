@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="1">
+
+    <record id="website_product_template_supplier_all" model="ir.rule">
+        <field name="name">Supplier Products</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="global" eval="False"/>
+        <field name="groups" eval="[(4,ref('auth_supplier.group_auth_supplier'))]"/>
+        <field name="domain_force">[('seller_id', 'in', [user.partner_id.id])]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <record id="website_product_supplierinfo" model="ir.rule">
+        <field name="name">Product Supplier Info</field>
+        <field name="model_id" ref="product.model_product_supplierinfo"/>
+        <field name="global" eval="False"/>
+        <field name="groups" eval="[(4,ref('auth_supplier.group_auth_supplier'))]"/>
+        <field name="domain_force">[('name', '=', user.partner_id.id)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+</data>
+</openerp>

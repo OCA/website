@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+
+<!-- Product view for create and edit -->
+<template id="product" name="Supplier Product">
+    <div class="container mt8">
+        <div class="row mt32">
+                <!-- Show error information -->
+                <div class="alert alert-warning" t-if="error">
+                    <i class="fa fa-exclamation-triangle"/><span t-esc="error.get('error_name', '')"/>
+                </div>
+                <form id="supplier_product" class="form-horizontal" t-attf-action="/supplierinfo/save/#{main_obj and slug(main_obj) or ''}" method="post" enctype="multipart/form-data">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><span t-esc="supplierinfo.get('product_name','New product')"/></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="col-sm-4 col-md-4 col-lg-4">
+                                        <span t-field="product.image" t-field-options='{"widget": "image", "class": "product_detail_img", "alt-field": "name"}' class="oe_form_field_image_controls"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div t-attf-class="form-group #{error.get('product_name') and 'has-error' or ''}">
+                                        <label class="col-md-2 control-label">Name</label>
+                                        <div class="col-md-10">
+                                            <input id="product_name" class="form-control" name="product_name" placeholder="Product name..."
+                                                   t-att-value="supplierinfo.get('product_name')"/>
+                                        </div>
+                                    </div>
+                                    <div t-attf-class="form-group #{error.get('product_code') and 'has-error' or ''}">
+                                        <label class="col-md-2 control-label">Code</label>
+                                        <div class="col-md-10">
+                                            <input id="product_code" class="form-control" name="product_code" placeholder="Product Code..."
+                                                   t-att-value="supplierinfo.get('product_code')"/>
+                                        </div>
+                                    </div>
+                                    <div t-attf-class="form-group #{error.get('min_qty') and 'has-error' or ''}">
+                                        <label class="col-md-2 control-label">Min Quantity</label>
+                                        <div class="col-md-10">
+                                            <input id="min_qty" class="form-control" name="min_qty" placeholder="Min Quantity..."
+                                                   t-att-value="supplierinfo.get('min_qty')"/>
+                                        </div>
+                                    </div>
+                                    <div t-attf-class="form-group #{error.get('delay') and 'has-error' or ''}">
+                                        <label class="col-md-2 control-label">Delay</label>
+                                        <div class="col-md-10">
+                                            <input id="delay" class="form-control" name="delay" placeholder="Delay..."
+                                                   t-att-value="supplierinfo.get('delay')"/>
+                                        </div>
+                                    </div>
+                                    <div t-attf-class="form-group">
+                                        <label class="col-md-2 control-label">Price Min Quantity</label>
+                                        <div class="col-md-10">
+                                            <input id="min_quantity" class="form-control" name="min_quantity" placeholder="Min Quantity..."
+                                                   t-att-value="pricelist and pricelist[0].min_quantity"/>
+                                        </div>
+                                    </div>
+                                    <div t-attf-class="form-group">
+                                        <label class="col-md-2 control-label">Price</label>
+                                        <div class="col-md-10">
+                                            <input id="price" class="form-control" name="price" placeholder="Price..."
+                                                   t-att-value="pricelist and pricelist[0].price"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label" for="ufile">Picture</label>
+                                        <div class="col-md-10">
+                                            <input class="input-file" id="fileInput" type="file" name="ufile" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <button  type="submit" class="btn btn-primary">Save Product</button>
+                            or <a href="/supplierinfo/list">back to list</a>
+                        </div>
+                    </div>
+                </form>
+        </div>
+    </div>
+</template>
+
+<template id="product_list" name="Supplier Products">
+    <div class="container mt8">
+        <div class="products_pager">
+            <div class="row" style="width: 100%;">
+                <!--<t t-call="website_sale.search"><t t-set="search_class">pagination form-inline col-md-3</t></t>-->
+                <t t-call="website.pager"/>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Your Products</h3>
+            </div>
+            <div class="panel-body">
+                <t t-foreach="suppliersinfo" t-as="supplierinfo">
+                    <t t-set="product" t-value="supplierinfo.product_tmpl_id"/>
+                    <div class="row mb8">
+                        <div class="col-md-2">
+                          <div class="oe_product_image">
+                              <a itemprop="url" t-att-href="'/supplierinfo/%s' % slug(supplierinfo)">
+                                  <img itemprop="image" class="img img-responsive"
+                                       t-att-src="website.image_url(product, 'image', None if product_image_big else '300x300')"
+                                       t-att-alt="supplierinfo.product_name"/>
+                              </a>
+                          </div>
+                        </div>
+                        <div class="col col-md-4 col-xs-6">
+                            <div class="row">
+                                <a t-att-href="'/supplierinfo/%s' % slug(supplierinfo)" t-att-alt="supplierinfo.product_name">
+                                    <span t-field="supplierinfo.product_name"></span>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <span t-field="supplierinfo.product_code"></span>
+                            </div>
+                        </div>
+                        <div class="col col-md-1 col-xs-2">
+                            <t t-esc="product.standard_price"/>
+                        </div>
+                        <div class="col col-md-1 col-xs-2">
+                            <span t-if="product.website_published">
+                                <span class="label label-success"><i class="fa fa-fw fa-check"/>Published</span>
+                            </span>
+                            <span t-if="not product.website_published">
+                                <span class="label label-info"><i class="fa fa-fw fa-lock"/>Not Published</span>
+                            </span>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </div>
+        <div class="products_pager">
+          <t t-call="website.pager"/>
+        </div>
+    </div>
+</template>
+
+<template id="supplier_products" name="Supplier products"
+          inherit_id="website_portal.account">
+    <xpath expr="//div[@class='col-md-3 col-md-offset-1 o_my_sidebar']" position="inside">
+        <div class="o_my_products">
+            <h3 class="page-header">Your Products</h3>
+            <ul>
+                <li><a href="/supplierinfo/new">New Product</a></li>
+                <li><a href="/supplierinfo/list">Your Products</a></li>
+            </ul>
+        </div>
+    </xpath>
+</template>
+
+<template id="product_supplier_container" name="Products"
+          inherit_id="website_portal.account" primary="True">
+    <xpath expr="//div[contains(@class,'o_my_documents')]" position="replace">
+        <div class="col-md-8 o_my_documents">
+            <t t-call="website_product_supplier.product_list"/>
+            <div class="oe_structure"/>
+        </div>
+    </xpath>
+</template>
+
+<template id="product_supplier_container_form" name="Product Form"
+          inherit_id="website_portal.account" primary="True">
+    <xpath expr="//div[contains(@class,'o_my_documents')]" position="replace">
+        <div class="col-md-8 o_my_documents">
+            <t t-call="website_product_supplier.product"/>
+            <div class="oe_structure"/>
+        </div>
+    </xpath>
+</template>
+
+</data>
+</openerp>
