@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+<data>
+
+<template id="signup_fields" inherit_id="auth_signup.fields">
+    <xpath expr="//div[@class='form-group field-password']"
+           position="replace"/>
+    <xpath expr="//div[@class='form-group field-confirm_password']"
+           position="replace"/>
+    <xpath expr="//input[@name='login']" position="attributes">
+        <attribute name="type">email</attribute>
+    </xpath>
+</template>
+
+</data>
+</openerp>
