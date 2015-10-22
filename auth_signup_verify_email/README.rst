@@ -34,12 +34,6 @@ To use this module, you need to:
    :alt: Try me on Runbot
    :target: https://runbot.odoo-community.org/runbot/186/8.0
 
-Known issues / Roadmap
-======================
-
-* If your email server is not properly configured or reachable, users will get
-  an error 500.
-
 Bug Tracker
 ===========
 
