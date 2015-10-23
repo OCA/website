@@ -17,6 +17,7 @@ To enable users to create accounts:
 
 * Go to *Settings > Configuration > General settings*.
 * Enable *Allow external users to sign up*.
+* Enable *Activate the customer portal*.
 
 To customize the legal pages, visit these **after installing the module**:
 
