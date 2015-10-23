@@ -6,21 +6,38 @@ import logging
 from openerp import _, http
 from openerp.addons.auth_signup.controllers.main import AuthSignupHome
 
+
 _logger = logging.getLogger(__name__)
 
 
 class SignupVerifyEmail(AuthSignupHome):
-    def _signup_with_values(self, token, values):
-        values["password"] = False
+    @http.route()
+    def web_auth_signup(self, *args, **kw):
+        if (http.request.params.get("login") and
+                not http.request.params.get("password")):
+            return self.passwordless_signup(http.request.params)
+        else:
+            return super(SignupVerifyEmail, self).web_auth_signup(*args, **kw)
+
+    def passwordless_signup(self, values):
         qcontext = self.get_auth_signup_qcontext()
+
+        # Check good format of e-mail
+        from validate_email import validate_email
+        if not validate_email(values.get("login", "")):
+            qcontext["error"] = _("That does not seem to be an email address.")
+            return http.request.render("auth_signup.signup", qcontext)
+
+        # Remove password
+        values["password"] = False
         sudo_users = http.request.env["res.users"].sudo()
 
         try:
-            sudo_users.signup(values, token)
-            sudo_users.reset_password(values.get("login"))
+            sudo_users.create(values)
         except Exception as error:
             # Duplicate key or wrong SMTP settings, probably
             _logger.exception(error)
+            http.request.env.cr.rollback()
 
             # Agnostic message for security
             qcontext["error"] = _(
