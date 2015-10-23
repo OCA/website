@@ -12,6 +12,11 @@ users to provide a valid email address.
 To reinforce this requirement, the user will not need to provide a password at
 sign up, but when logging in later for the first time.
 
+Installation
+============
+
+* Install validate_email_ with ``pip install validate_email`` or equivalent.
+
 Configuration
 =============
 
@@ -75,3 +80,5 @@ mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
 To contribute to this module, please visit http://odoo-community.org.
+
+.. _validate_email: https://pypi.python.org/pypi/validate_email
