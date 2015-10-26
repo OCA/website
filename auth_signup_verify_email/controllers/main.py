@@ -32,10 +32,12 @@ class SignupVerifyEmail(AuthSignupHome):
 
         # Remove password
         values["password"] = False
-        sudo_users = http.request.env["res.users"].sudo()
+        sudo_users = (http.request.env["res.users"]
+                      .with_context(create_user=True).sudo())
 
         try:
-            sudo_users.create(values)
+            sudo_users.signup(values, qcontext.get("token"))
+            sudo_users.reset_password(values.get("login"))
         except Exception as error:
             # Duplicate key or wrong SMTP settings, probably
             _logger.exception(error)
