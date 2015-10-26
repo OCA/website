@@ -3,13 +3,13 @@
 # * website_logo
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-14 08:34+0000\n"
-"PO-Revision-Date: 2015-10-18 04:13+0000\n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"PO-Revision-Date: 2016-05-02 04:10+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -24,26 +24,36 @@ msgid "/website_logo.png"
 msgstr "/website_logo.png"
 
 #. module: website_logo
-#: model:ir.model,name:website_logo.model_res_company
-msgid "Companies"
-msgstr "Družbe"
+#: view:website.config.settings:website_logo.view_website_config_settings
+msgid "Domain"
+msgstr "Domena"
 
 #. module: website_logo
 #: view:website:website_logo.view_website_form
+#: view:website.config.settings:website_logo.view_website_config_settings
 msgid "Logo"
-msgstr ""
+msgstr "Logotip"
 
 #. module: website_logo
 #: help:website,logo:0
-msgid "This field holds the logo for this website, showed in header. Recommended size is 180x50"
-msgstr ""
+msgid ""
+"This field holds the logo for this website, showed in header. Recommended "
+"size is 180x50"
+msgstr "Polje, ki vsebuje logotip prikazan v glavi spletne strani. Priporočena velikost je 180x50"
+
+#. module: website_logo
+#: help:website.config.settings,logo:0
+msgid ""
+"This field holds the logo for this website, showed in header.Recommended "
+"size is 180x50"
+msgstr "Polje, ki vsebuje logotip prikazan v glavi spletne strani. Priporočena velikost je 180x50"
 
 #. module: website_logo
 #: model:ir.model,name:website_logo.model_website
 msgid "Website"
-msgstr ""
+msgstr "Spletna stran"
 
 #. module: website_logo
-#: field:website,logo:0
+#: field:website,logo:0 field:website.config.settings,logo:0
 msgid "Website logo"
 msgstr "Spletni logotip"
