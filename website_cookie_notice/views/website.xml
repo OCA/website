@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<template id="loader" name="Cookies script loader">
+    <script t-if="request and
+        not request.httpsession.get('accepted_cookies')"
+        type="text/javascript"
+        src="/website_cookie_notice/static/src/js/accept_cookies.js">
+    </script>
+</template>
+
+<template id="message" name="Cookies notice">
+    <div t-if="request and
+        not request.httpsession.get('accepted_cookies')"
+        id="website_cookie_notice"
+        class="container-fluid bg-warning cc-cookies">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10">
+                    We use cookies in this website. Read about them in our
+                    <a href="/page/privacy">privacy policy</a>.
+                    To disable them, configure your browser properly.
+                    If you keep using this website, you are accepting those.
+                </div>
+                <div class="col-xs-2 text-center">
+                    <a class="btn btn-primary"
+                        href="/website_cookie_notice/ok">OK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</template>
+
+<template id="assets_frontend" inherit_id="website.assets_frontend">
+    <xpath expr=".">
+        <t t-call="website_cookie_notice.loader"/>
+    </xpath>
+</template>
+
+<template id="cookiebanner" inherit_id="website.layout">
+    <xpath expr="//header" position="before">
+        <t t-call="website_cookie_notice.message"/>
+    </xpath>
+</template>
+
+</data>
+</openerp>
