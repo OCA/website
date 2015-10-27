@@ -28,6 +28,7 @@
     'license': 'AGPL-3',
     'depends': [
         'website_sale',
+        'base_vat',
     ],
     'data': [
         'website_order_view.xml',
