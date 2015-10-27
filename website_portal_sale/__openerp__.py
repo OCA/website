@@ -17,8 +17,5 @@
         'templates/website_portal.xml',
         'templates/website.xml',
     ],
-    'demo': [
-        'data/demo.xml'
-    ],
     'installable': True,
 }
