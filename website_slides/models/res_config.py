@@ -20,4 +20,4 @@ class WebsiteConfigSettings(models.TransientModel):
         config = self.browse(cr, uid, ids[0], context=context)
         icp = self.pool.get('ir.config_parameter')
         icp.set_param(cr, uid, 'website_slides.google_app_key',
-                      config.website_slide_google_app_key)
+                      config.website_slide_google_app_key or '')
