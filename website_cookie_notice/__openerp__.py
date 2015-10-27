@@ -21,19 +21,18 @@
 {
     'name': 'Cookie notice',
     'summary': 'Show cookie notice according to cookie law',
-    'version': '8.0.1.0.0',
+    'version': '8.0.2.0.0',
     'category': 'Website',
-    'author': "Agile Business Group,Odoo Community Association (OCA)",
+    'author': "Agile Business Group, "
+              u"Antiun Ingeniería S.L., "
+              "Odoo Community Association (OCA)",
     'website': 'http://www.agilebg.com',
     'license': 'AGPL-3',
     'depends': [
-        'website',
+        'website_legal_page',
     ],
     'data': [
-        'website.xml',
-        'views/res_company_view.xml',
-    ],
-    'qweb': [
+        'views/website.xml',
     ],
     'installable': True,
     'auto_install': False,
