@@ -37,5 +37,7 @@ addon | version | summary
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 | Prevent optional products to be sold singularly
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 | VAT number required in checkout form
+[website_signup_legal_page_required](website_signup_legal_page_required/) | 8.0.1.0.0 | Force the user to accept the legal terms to open an account
+[website_slides](website_slides/) | 8.0.1.0.0 | Share and Publish Videos, Presentations and Documents
 
 [//]: # (end addons)
