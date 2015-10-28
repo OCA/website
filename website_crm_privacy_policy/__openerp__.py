@@ -27,8 +27,8 @@
     'category': 'Website',
     'version': '8.0.1.0.0',
     'depends': [
-        'website',
         'website_crm',
+        'website_legal_page',
     ],
     'data': [
         'views/assets.xml',
