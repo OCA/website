@@ -11,18 +11,19 @@ This module allow publish documents into frontend website.
 Share and Publish Videos, Presentations and Documents'
 ======================================================
 
- * Website Application
- * Channel Management
- * Filters and Tagging
- * Statistics of Presentation
- * Channel Subscription
- * Supported document types supported: PDF, images, YouTube videos and
- Google Drive documents)
+* Website Application
+* Channel Management
+* Filters and Tagging
+* Statistics of Presentation
+* Channel Subscription
+* Supported document types supported: PDF, images, YouTube videos and
+  Google Drive documents)
 
 Installation
 ============
 
 This module depends on :
+
 * website
 * website_mail
 * Marketing
@@ -39,7 +40,6 @@ Usage
 For further information, please visit:
 
 * https://www.odoo.com/forum/help-1
-
 
 Known issues / Roadmap
 ======================
