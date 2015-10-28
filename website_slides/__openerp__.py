@@ -21,7 +21,7 @@
 
 {
     'name': 'Slides',
-    'version': '1.0',
+    'version': '8.0.1.0.0',
     'summary': 'Share and Publish Videos, Presentations and Documents',
     'category': 'website',
     'author': "Odoo SA, "
