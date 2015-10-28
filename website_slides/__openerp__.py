@@ -22,6 +22,7 @@
 {
     'name': 'Slides',
     'version': '8.0.1.0.0',
+    'license': 'LGPL-3',
     'summary': 'Share and Publish Videos, Presentations and Documents',
     'category': 'website',
     'author': "Odoo SA, "

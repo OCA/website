@@ -1,12 +1,12 @@
-.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
-    :alt: License: AGPL-3
+.. image:: https://img.shields.io/badge/licence-LGPL--3-blue.svg
+    :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
+    :alt: License: LGPL-3
 
 ==============
 Website Slides
 ==============
 
-This module allow publish documents into frontend website.
+This module allows publish documents into frontend website.
 
 Share and Publish Videos, Presentations and Documents'
 ======================================================
@@ -61,6 +61,9 @@ Contributors
 ------------
 * Odoo S.A.
 * Sergio Teruel (Incaser) <sergio@incaser.es>
+* Carlos Dauden (Incaser) <carlos@incaser.es>
+* Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+* Rafael Blasco <rafabn@antiun.com>
 
 Maintainer
 ----------
