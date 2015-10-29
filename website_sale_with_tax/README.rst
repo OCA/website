@@ -15,6 +15,15 @@ This helps to shop owner because he can set product prices with or without taxes
 but prices are always shown in website shop with taxes
 
 
+Usage
+======
+First you need to check permissions in Odoo, activate Technical Features in Settings/USers and set the Financial Manager permissions in Accounting and Finance
+
+Go to Invoicing/Taxes and create one
+You have to check tax included to try the usability
+Go back to Sales/products and select the product you are going to buy in the website and add the taxes in the product
+Then check in the shop cart both options, when you buy a product tax included or tax excluded
+
 Credits
 =======
 
