@@ -20,6 +20,19 @@ To change the cookie message:
 If you are developing a theme for Odoo, remember that this message has the
 ``cc-cookies`` class. You can style it at will too.
 
+Known Issues / Roadmap
+======================
+
+* If you are using this module in version < 2.0.0 and update it, any other
+  module that modifies the ``res.company`` view will break in the next update
+  if Odoo decides to update it before this one. To avoid that:
+
+  1. Stop your server.
+  2. Update only this module: ``odoo.py -u website_cookie_notice``.
+  3. Stop your server.
+  4. Update all other modules: ``odoo.py -u all``.
+  5. Start your server.
+
 Bug Tracker
 ===========
 
