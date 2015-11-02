@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import openerp
 from openerp import http
 from openerp.http import request
 from openerp import tools
@@ -93,3 +94,16 @@ class WebsiteAccount(http.Controller):
             error_message.append(_('Some required fields are empty.'))
 
         return error, error_message
+
+
+class Website(openerp.addons.web.controllers.main.Home):
+
+    @http.route(website=True, auth="public")
+    def web_login(self, redirect=None, *args, **kw):
+        res = super(Website, self).web_login(redirect=redirect, *args, **kw)
+        if request.session.uid:
+            user = request.env['res.users'].browse(request.session.uid)
+            if not user.has_group('base.group_user'):
+                redirect = '/'
+                return http.redirect_with_hash(redirect)
+        return res
