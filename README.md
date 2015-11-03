@@ -22,7 +22,7 @@ addon | version | summary
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 | Add Facebook comments on blog posts
 [website_blog_mgmt](website_blog_mgmt/) | 8.0.1.0.0 | Website blog Management
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 | Let you choose between fixed or fluid containers
-[website_cookie_notice](website_cookie_notice/) | 8.0.1.0.0 | Show cookie notice according to cookie law
+[website_cookie_notice](website_cookie_notice/) | 8.0.2.0.0 | Show cookie notice according to cookie law
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 | Website CRM privacy policy
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 | Combine free and paid tickets on events
