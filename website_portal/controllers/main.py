@@ -104,6 +104,5 @@ class Website(openerp.addons.web.controllers.main.Home):
         if request.session.uid:
             user = request.env['res.users'].browse(request.session.uid)
             if not user.has_group('base.group_user'):
-                redirect = '/'
-                return http.redirect_with_hash(redirect)
+                return http.redirect_with_hash('/')
         return res
