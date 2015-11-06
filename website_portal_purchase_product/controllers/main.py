@@ -74,67 +74,81 @@ class WebsiteProductSupplier(http.Controller):
         return request.website.render(
             "website_product_supplier.product_supplier_container_form", values)
 
-    @http.route(
-        ['/supplierinfo/save/<model("product.supplierinfo"):supplierinfo>',
-         '/supplierinfo/save/'], type='http', auth="user", website=True)
-    def supplier_info_save(self, supplierinfo=None, **post):
-        new_product = False
-        if supplierinfo is None:
-            supplierinfo = request.env['product.supplierinfo']
-            new_product = True
-        elif supplierinfo.name != request.env.user.partner_id:
-            return request.website.render('website.404')
-        supplierinfo = supplierinfo.sudo()
+    def _prepare_render_values(self, supplierinfo, form_vals):
         values = {
             'main_obj': supplierinfo,
-            'supplierinfo': self.supplierinfo_field_parse(post),
+            'supplierinfo': form_vals,
             'product': supplierinfo.product_tmpl_id,
             'user': request.env.user,
             'pricelist': supplierinfo.pricelist_ids,
+            'error': self.check_product_form_validate(form_vals),
         }
-        values["error"] = self.check_product_form_validate(
-            values["supplierinfo"])
+        return values
+
+    @http.route('/supplierinfo/save/', type='http', auth="user", website=True)
+    def supplier_info_create(self, **post):
+        supplierinfo = request.env['product.supplierinfo'].sudo()
+        form_vals = self.supplierinfo_field_parse(post)
+        values = self._prepare_render_values(supplierinfo, form_vals)
         if values["error"]:
             return request.website.render(
                 "website_product_supplier.product_supplier_container_form",
                 values)
 
-        vals = values['supplierinfo']
-        if new_product:
-            product_vals = {'name': vals.get('product_name')}
-            if post.get('ufile', False):
-                product_vals.update(
-                    image=base64.encodestring(post['ufile'].read()))
-            product = supplierinfo.product_tmpl_id.create(
-                self._prepare_product_values(product_vals))
-            vals.update({
-                'name': request.env.user.partner_id.id,
-                'product_tmpl_id': product.id,
-                'pricelist_ids': [(0, 0, {
-                    'min_quantity': post.get('min_quantity', 0.0),
-                    'price': post.get('price', 0.0)})]
-            })
-            values['product'] = product
+        product_vals = {'name': form_vals.get('product_name')}
+        if post.get('ufile', False):
+            product_vals.update(
+                image=base64.encodestring(post['ufile'].read()))
+        product = supplierinfo.product_tmpl_id.create(
+            self._prepare_product_values(product_vals))
+        form_vals.update({
+            'name': request.env.user.partner_id.id,
+            'product_tmpl_id': product.id,
+            'pricelist_ids': [(0, 0, {
+                'min_quantity': post.get('min_quantity', 0.0),
+                'price': post.get('price', 0.0)})]
+        })
+        values['product'] = product
+        try:
             supplierinfo = supplierinfo.create(
-                self._prepare_supplierinfo_values(vals))
+                self._prepare_supplierinfo_values(form_vals))
             values.update({
                 'product': product,
                 'main_obj': supplierinfo,
                 'pricelist': supplierinfo.pricelist_ids
             })
-        else:
-            try:
-                vals.update({
-                    'pricelist_ids': [(1, supplierinfo.pricelist_ids[0].id, {
-                        'min_quantity': post.get('min_quantity', 0.0),
-                        'price': post.get('price', 0.0)})]})
-                supplierinfo.write(self._prepare_supplierinfo_values(vals))
-            except:
-                values.update(error={'error_name': 'Invalid fields'})
-                return request.website.render(
-                    "website_product_supplier.product_supplier_container_form",
-                    values)
+        except:
+            values.update(error={'error_name': 'Invalid fields'})
+            return request.website.render(
+                "website_product_supplier.product_supplier_container_form",
+                values)
+        return request.website.render(
+            "website_product_supplier.product_supplier_container_form", values)
 
+    @http.route(
+        '/supplierinfo/save/<model("product.supplierinfo"):supplierinfo>',
+        type='http', auth="user", website=True)
+    def supplier_info_save(self, supplierinfo=None, **post):
+        if supplierinfo.name != request.env.user.partner_id:
+            return request.website.render('website.404')
+        supplierinfo = supplierinfo.sudo()
+        form_vals = self.supplierinfo_field_parse(post)
+        values = self._prepare_render_values(supplierinfo, form_vals)
+        if values["error"]:
+            return request.website.render(
+                "website_product_supplier.product_supplier_container_form",
+                values)
+        try:
+            form_vals.update({
+                'pricelist_ids': [(1, supplierinfo.pricelist_ids[0].id, {
+                    'min_quantity': post.get('min_quantity', 0.0),
+                    'price': post.get('price', 0.0)})]})
+            supplierinfo.write(self._prepare_supplierinfo_values(form_vals))
+        except:
+            values.update(error={'error_name': 'Invalid fields'})
+            return request.website.render(
+                "website_product_supplier.product_supplier_container_form",
+                values)
         return request.website.render(
             "website_product_supplier.product_supplier_container_form", values)
 
