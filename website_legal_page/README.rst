@@ -7,11 +7,8 @@ Website legal page
 This module was written to provide common legal pages needed in any website:
 
 * **Legal advice**: Website propietary and disclaimers
-* **Terms of use**: Which services website offers and legal restrictions
-applied to them
-* **Privacy policy**: Company privacy policy applied to user data collected
-through the website
-
+* **Terms of use**: Which services website offers and legal restrictions applied to them
+* **Privacy policy**: Company privacy policy applied to user data collected through the website
 
 Usage
 =====
@@ -51,7 +48,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/website/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us smashing it by providing a detailed and welcomed feedback
-`here <https://github.com/OCA/website/issues/new?body=module:%20website_legal_page%0Aversion:%208.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`here <https://github.com/OCA/website/issues/new?body=module:%20website_legal_page%0Aversion:%209.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 
 Credits
@@ -60,18 +57,18 @@ Credits
 Templates
 ---------
 
-Templates are based on legal templates publicy provided by [termsfeed.com](https://termsfeed.com):
+Templates are based on legal templates publicy provided by `termsfeed.com <https://termsfeed.com>`_:
 
-* [Privacy policy](https://media.termsfeed.com/pdf/privacy-policy-template.pdf)
-* [Terms of use](https://media.termsfeed.com/pdf/terms-of-use-template.pdf)
+* `Privacy policy <https://media.termsfeed.com/pdf/privacy-policy-template.pdf>`_
+* `Terms of use <https://media.termsfeed.com/pdf/terms-of-use-template.pdf>`_
 
 Icon
 ----
 
 Icon based on ```johnny-automatic-scales-of-justice.svg``` from
-[Openclipart](https://openclipart.org/detail/26849/scales-of-justice)
+`Openclipart <https://openclipart.org/detail/26849/scales-of-justice>`_
 
-Thanks to [johnny_automatic](https://openclipart.org/user-detail/johnny_automatic)
+Thanks to `johnny_automatic <https://openclipart.org/user-detail/johnny_automatic>`_
 
 
 Contributors
