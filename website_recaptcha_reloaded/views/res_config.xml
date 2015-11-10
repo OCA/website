@@ -7,7 +7,7 @@
             <field name="model">website.config.settings</field>
             <field name="inherit_id" ref="website.view_website_config_settings" />
             <field name="arch" type="xml">
-                <group string="social" position="after">
+                <group name="social" position="after">
                     <group string="Google reCAPTCHA Reloaded">
                         <label for="recaptcha_site_key"/>
                         <div name="recaptcha_site_key">
