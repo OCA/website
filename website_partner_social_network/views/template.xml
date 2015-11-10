@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+
+
+<template id ="website_top_menu_partner" name="menu_on_top" inherit_id="website.layout" >
+        <xpath expr="//header//ul[@id='top_menu']/li" position="before">
+            <li><a href="/partners">Partner</a></li>
+        </xpath>
+</template>
+
+
+
+
+        <template id="web_partner_extended" inherit_id="website_partner.partner_detail">
+                <xpath expr='//address[@class="well"]' position="inside">
+	                <div>
+	                    <t t-set="fb_url" t-value="'http://' + (partner.facebook_url or '')"/>
+	                    <a t-att-href="fb_url" target="_blank"><button class="btn btn-facebook"><i class="fa fa-facebook"></i></button></a>
+	                    <t t-set="tw_url" t-value="'http://' + (partner.twitter_url or '')"/>
+	                    <a t-att-href="tw_url" target="_blank"><button class="btn btn-twitter"><i class="fa fa-twitter"></i></button></a>
+	                    <t t-set="you_url" t-value="'http://' + (partner.youtube_url or '')"/>
+	                    <a t-att-href="you_url" target="_blank"><button class="btn btn-youtube"><i class="fa fa-youtube"></i></button></a>
+	                    <t t-set="ins_url" t-value="'http://' + (partner.instagram_url or '')"/>
+	                    <a t-att-href="ins_url" target="_blank"><button class="btn btn-instagram"><i class="fa fa-instagram"></i></button></a>
+	                    <t t-set="goog_url" t-value="'http://' + (partner.googleplus_url or '')"/>
+	                    <a t-att-href="goog_url" target="_blank"><button class="btn btn-google-plus"><i class="fa fa-google-plus"></i></button></a>
+                    </div>
+                </xpath>
+        </template>
+
+
+
+     </data>
+</openerp>

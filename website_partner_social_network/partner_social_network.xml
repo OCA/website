@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+
+        <record id="res_partner_extended_form_view" model="ir.ui.view">
+            <field name="name">res.partner.extended.view.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@string='Internal Notes']" position="after">
+                    <page string="Social Networks">
+						<group>
+                            <field name="facebook_url" widget="url"/>
+                            <field name="twitter_url" widget="url"/>
+                            <field name="youtube_url" widget="url"/>
+                            <field name="instagram_url" widget="url"/>
+                            <field name="googleplus_url" widget="url"/>
+						</group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+	</data>
+</openerp>
