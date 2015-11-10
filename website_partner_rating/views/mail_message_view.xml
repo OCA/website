@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <record model="ir.ui.view" id="view_message_tree_for_partner_rating">
+            <field name="name">mail.message.tree.partner.rating</field>
+            <field name="model">mail.message</field>
+            <field name="priority">25</field>
+            <field name="arch" type="xml">
+                <tree string="Messages">
+                    <field name="message_rate"/>
+                    <field name="date"/>
+                    <field name="author_id"/>
+                    <field name="short_description"/>
+                    <field name="website_published"/>
+                </tree>
+            </field>
+        </record>       
+
+        <record model="ir.ui.view" id="view_message_form_partner_rating">
+            <field name="name">mail.message.form.partner.rating</field>
+            <field name="model">mail.message</field>
+            <field name="priority">25</field>
+            <field name="arch" type="xml">
+                <form string="Message">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="short_description"/>
+                                <field name="author_id" string='Customer'/>
+                                <field name="website_published"/>
+                            </group>
+                            <group>
+                            	<field name="date"/>
+                                <field name="message_rate"/>
+                                <field name="website_message" />
+                                <field name="res_id" />
+                                <field name="model" />
+                            </group>
+                        </group>
+                        <field name="body"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>        
+    </data>
+</openerp>
+            
