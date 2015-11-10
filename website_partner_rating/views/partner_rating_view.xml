@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+      <!-- <record model="ir.ui.view" id="product_template_form_rating_button">
+            <field name="name">product.template.form.rating.button</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='buttons']" position="inside">
+                   <button class="oe_inline oe_stat_button" name="action_view_product_rating"
+                        type="object" icon="fa-star">
+                        <field string="Rating" name="message_count" widget="statinfo" />
+                    </button>   
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="product_template_website_form_product_rate">
+            <field name="name">product.template.website.form.product.rate</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="website_sale.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="website_sequence" position="after">
+                	<field name="product_rate" string="Avg. Product Rate"/>
+                </field>
+            </field>
+        </record>-->
+    
+    </data>
+</openerp>
+            
