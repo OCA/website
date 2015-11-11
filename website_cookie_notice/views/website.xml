@@ -3,10 +3,8 @@
 <data>
 
 <template id="assets_frontend" inherit_id="website.assets_frontend">
-    <xpath expr=".">
-        <script t-if="request and
-                      not request.httpsession.get('accepted_cookies')"
-                type="text/javascript"
+    <xpath expr="." position="inside">
+        <script type="text/javascript"
                 src="/website_cookie_notice/static/src/js/accept_cookies.js">
         </script>
     </xpath>
@@ -26,8 +24,7 @@
                         If you keep using this website, you are accepting those.
                     </div>
                     <div class="col-xs-2 text-center">
-                        <a class="btn btn-primary"
-                           href="/website_cookie_notice/ok">OK</a>
+                        <a class="btn btn-primary" href="#">OK</a>
                     </div>
                 </div>
             </div>
