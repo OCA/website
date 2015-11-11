@@ -24,8 +24,13 @@ from openerp import http
 
 
 class CookieNotice(http.Controller):
-    @http.route("/website_cookie_notice/ok", auth="public")
+    @http.route(
+        "/website_cookie_notice/ok", auth="public", website=True, type='json',
+        methods=['POST'])
     def accept_cookies(self):
         """Stop spamming with cookie banner."""
         http.request.httpsession["accepted_cookies"] = True
-        return http.local_redirect("/")
+        http.request.env['ir.ui.view'].search([
+            ('type', '=', 'qweb')
+            ]).clear_caches()
+        return {'result': 'ok'}
