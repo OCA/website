@@ -90,6 +90,10 @@
       </section>
     </template>
 
+    <template id="hide_employee_logo" inherit_id="website_hr_contact.employee" customize_show="True" name="Hide Employee Logo">
+        <xpath expr="//img" position="replace"/>
+    </template>
+
     <template id="employee_address" name="Employee address information">
         <t t-call="website_hr_contact.address">
             <t t-set="classname">employee_address</t>
