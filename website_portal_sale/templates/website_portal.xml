@@ -3,10 +3,19 @@
 <data>
 
     <template id="account" name="Account" inherit_id="website_portal.account">
-        <xpath expr="//div[contains(@class,'o_my_documents')]" position="inside">
-            <t t-call="website_portal_sale.quotations" />
-            <t t-call="website_portal_sale.sale_orders" />
-            <t t-call="website_portal_sale.invoices" />
+        <xpath expr="//ul[contains(@name,'account-content-nav')]" position="inside">
+            <t t-if="user_id.partner_id.customer">
+                <li class="active"><a data-toggle="tab" href="#home-customer">Customer</a></li>
+            </t>
+        </xpath>
+        <xpath expr="//div[contains(@name,'account-content')]" position="inside">
+            <t t-if="user_id.partner_id.customer">
+                <div id="home-customer" class="tab-pane fade in active">
+                    <t t-call="website_portal_sale.quotations" />
+                    <t t-call="website_portal_sale.sale_orders" />
+                    <t t-call="website_portal_sale.invoices" />
+                </div>
+            </t>
         </xpath>
     </template>
 

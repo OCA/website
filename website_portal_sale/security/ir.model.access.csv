@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+website_portal_product_product_public,website.portal.product.product.public,product.model_product_product,base.group_portal,1,0,0,0
+website_portal_product_template_public,website.portal.product.template.public,product.model_product_template,base.group_portal,1,0,0,0
+website_portal_account_payment_term,website.portal.account.payment.term,account.model_account_payment_term,base.group_portal,1,0,0,0
