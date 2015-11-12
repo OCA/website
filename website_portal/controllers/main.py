@@ -96,11 +96,22 @@ class WebsiteAccount(http.Controller):
         return error, error_message
 
 
-class Website(openerp.addons.web.controllers.main.Home):
+class WebsitePortalAuthSignupHome(
+        openerp.addons.auth_signup.controllers.main.AuthSignupHome):
 
     @http.route(website=True, auth="public")
-    def web_login(self, redirect=None, *args, **kw):
-        res = super(Website, self).web_login(redirect=redirect, *args, **kw)
+    def web_login(self, *args, **kw):
+        res = super(WebsitePortalAuthSignupHome, self).web_login(*args, **kw)
+        if request.session.uid:
+            user = request.env['res.users'].browse(request.session.uid)
+            if not user.has_group('base.group_user'):
+                return http.redirect_with_hash('/')
+        return res
+
+    @http.route('/web/signup', type='http', auth='public', website=True)
+    def web_auth_signup(self, *args, **kw):
+        res = super(
+            WebsitePortalAuthSignupHome, self).web_auth_signup(*args, **kw)
         if request.session.uid:
             user = request.env['res.users'].browse(request.session.uid)
             if not user.has_group('base.group_user'):
