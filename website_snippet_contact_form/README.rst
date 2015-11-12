@@ -15,7 +15,7 @@ Usage
 To use this module, you need to:
 
 * Go to your website and edit any page.
-* Go to *Insert Blocks > Features*.
+* Go to *Insert Blocks > Content*.
 * Drag *Contact Form* anywhere.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
