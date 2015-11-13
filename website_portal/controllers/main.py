@@ -3,6 +3,7 @@ import openerp
 from openerp import http
 from openerp.http import request
 from openerp import tools
+from openerp.addons.auth_signup.controllers.main import AuthSignupHome
 from openerp.tools.translate import _
 
 
@@ -96,7 +97,7 @@ class WebsiteAccount(http.Controller):
         return error, error_message
 
 
-class AuthSignup(openerp.addons.auth_signup.controllers.main.AuthSignupHome):
+class AuthSignup(AuthSignupHome):
 
     @http.route(website=True, auth="public")
     def web_login(self, *args, **kw):
