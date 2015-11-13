@@ -2,6 +2,7 @@
 from openerp import http
 from openerp.http import request
 from openerp import tools
+from openerp.addons.auth_signup.controllers.main import AuthSignupHome
 from openerp.tools.translate import _
 
 
@@ -93,3 +94,25 @@ class WebsiteAccount(http.Controller):
             error_message.append(_('Some required fields are empty.'))
 
         return error, error_message
+
+
+class AuthSignup(AuthSignupHome):
+
+    @http.route(website=True, auth="public")
+    def web_login(self, *args, **kw):
+        res = super(AuthSignup, self).web_login(*args, **kw)
+        if request.session.uid:
+            user = request.env['res.users'].browse(request.session.uid)
+            if not user.has_group('base.group_user'):
+                return http.redirect_with_hash('/')
+        return res
+
+    @http.route('/web/signup', type='http', auth='public', website=True)
+    def web_auth_signup(self, *args, **kw):
+        res = super(
+            AuthSignup, self).web_auth_signup(*args, **kw)
+        if request.session.uid:
+            user = request.env['res.users'].browse(request.session.uid)
+            if not user.has_group('base.group_user'):
+                return http.redirect_with_hash('/')
+        return res

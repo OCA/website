@@ -11,6 +11,7 @@
         'https://github.com/OCA/website'
     ),
     'depends': [
+        'auth_signup',
         'website',
     ],
     'data': [
