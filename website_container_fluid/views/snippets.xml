@@ -7,7 +7,8 @@
           name="Container width type chooser">
     <xpath expr=".">
         <div data-snippet-option-id="container-type"
-            data-selector=".container, .container-fluid">
+            data-selector=".container, .container-fluid,
+                           .carousel, .carousel .item">
             <li class="dropdown-submenu" data-required="true">
                 <a tabindex="-1" href="#">Container width type</a>
                 <ul class="dropdown-menu">
