@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+    <template id="styles"
+              inherit_id="website.theme"
+              name="Website snippets background image style">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/website_img_bg_style/static/src/css/styles.css"
+                  rel="stylesheet"
+                  t-ignore="True"
+                  type="text/css"/>
+        </xpath>
+    </template>
+</data>
+</openerp>
