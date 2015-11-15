@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-29 10:27+0000\n"
-"PO-Revision-Date: 2015-11-09 04:51+0000\n"
+"PO-Revision-Date: 2015-11-11 13:46+0000\n"
 "Last-Translator: Martin Trigaux\n"
-"Language-Team: Japanese (http://www.transifex.com/odoo/odoo-9/language/ja/)\n"
+"Language-Team: Afrikaans (http://www.transifex.com/odoo/odoo-9/language/af/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: ja\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: af\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.invoices
@@ -101,7 +101,7 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "<strong>Date:</strong>"
-msgstr "<strong>日付:</strong>"
+msgstr ""
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
@@ -116,7 +116,7 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "<strong>Product</strong>"
-msgstr "<strong>製品</strong>"
+msgstr "<strong>Produk</strong>"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
@@ -136,7 +136,7 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "<strong>Total:</strong>"
-msgstr ""
+msgstr "<strong>Totaal:</strong>"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
@@ -151,7 +151,7 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.invoices
 msgid "Due Date"
-msgstr "期日"
+msgstr ""
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.sales_backend_access
@@ -168,7 +168,7 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.invoices
 msgid "Invoice Date"
-msgstr "請求日"
+msgstr ""
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
@@ -178,12 +178,12 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "Order"
-msgstr "オーダー"
+msgstr "Bestelling"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.sale_orders
 msgid "Order Date"
-msgstr ""
+msgstr "Besteldatum"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.invoices
@@ -193,12 +193,12 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "Quotation"
-msgstr "見積"
+msgstr "Kwotasie"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "Kwotasie #"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.sale_orders
@@ -208,12 +208,12 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.model,name:website_portal_sale.model_sale_order
 msgid "Sales Order"
-msgstr "受注"
+msgstr ""
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "Taxes:"
-msgstr "税金："
+msgstr ""
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.invoices
@@ -235,7 +235,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_portal_sale.quotations
 #: model:ir.ui.view,arch_db:website_portal_sale.sale_orders
 msgid "Total"
-msgstr "合計"
+msgstr "Totaal"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
@@ -245,7 +245,7 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.quotations
 msgid "Valid Until"
-msgstr "失効日"
+msgstr ""
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.invoices
@@ -255,7 +255,7 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.sale_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "Jou Bestellings"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.quotations
