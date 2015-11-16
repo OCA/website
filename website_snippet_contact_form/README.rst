@@ -15,8 +15,10 @@ Usage
 To use this module, you need to:
 
 * Go to your website and edit any page.
+* Go to *Insert Blocks > Structure*.
+* Insert any structure block.
 * Go to *Insert Blocks > Content*.
-* Drag *Contact Form* anywhere.
+* Drag *Contact Form* inside the structure block you just created.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
@@ -42,6 +44,7 @@ Contributors
 
 * Rafael Blasco <rafaelbn@antiun.com>
 * Jairo Llopis <yajo.sk8@gmail.com>
+* Antonio Espinosa <antonioea@antiun.com>
 
 Maintainer
 ----------
