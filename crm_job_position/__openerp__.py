@@ -24,7 +24,7 @@
 
 {
     'name': 'Job positions in CRM',
-    'version': '1.0',
+    'version': '8.0.1.1.0',
     'category': 'Customer Relationship Management',
     'author': 'Serv. Tecnolog. Avanzados - Pedro M. Baeza, '
               'Antiun Ingeniería S.L.',
