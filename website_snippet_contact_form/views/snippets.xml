@@ -5,13 +5,13 @@
 <openerp>
 <data>
 
-<template id="snippet"
+<template id="website_snippet_contact_form"
           inherit_id="website.snippets"
           name="Contact Form">
     <xpath expr="//div[@id='snippet_content']">
         <div>
             <div class="oe_snippet_thumbnail">
-                <img src="/website_crm_snippet/static/description/icon.png"
+                <img src="/website_snippet_contact_form/static/description/icon.png"
                      class="oe_snippet_thumbnail_img"/>
                 <span class="oe_snippet_thumbnail_title">
                     Contact Form
@@ -20,20 +20,20 @@
 
             <form action="/crm/contactus"
                   method="post"
-                  class="form-horizontal mt32 oe_snippet_body website_crm_snippet col-md-12"
+                  class="form-horizontal oe_snippet_body website_snippet_contact_form mt32"
                   enctype="multipart/form-data">
 
-                <div class="col-md-12 text-center">
+                <div class="text-center">
                     <h2>Contact Form</h2>
                     <h3 class="text-muted">Tell us something!</h3>
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label class="col-sm-4 control-label"
+                <div class="form-group">
+                    <label class="col-md-3 col-sm-4 control-label"
                            for="contact_name">
                         Your Name
                     </label>
-                    <div class="col-sm-8">
+                    <div class="col-md-7 col-sm-8">
                         <input class="form-control"
                                name="contact_name"
                                required="required"
@@ -41,23 +41,23 @@
                     </div>
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label class="col-sm-4 control-label" for="phone">
+                <div class="form-group">
+                    <label class="col-md-3 col-sm-4 control-label" for="phone">
                         Phone Number
                     </label>
-                    <div class="col-sm-8">
+                    <div class="col-md-7 col-sm-8">
                         <input class="form-control"
                                name="phone"
                                type="text"/>
                     </div>
                 </div>
 
-                <div name="email_from_container" class="form-group col-md-12">
-                    <label class="col-sm-4 control-label"
+                <div name="email_from_container" class="form-group">
+                    <label class="col-md-3 col-sm-4 control-label"
                            for="email_from">
                         Email
                     </label>
-                    <div class="col-sm-8">
+                    <div class="col-md-7 col-sm-8">
                         <input class="form-control"
                                name="email_from"
                                required="required"
@@ -65,12 +65,12 @@
                     </div>
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label class="col-sm-4 control-label"
+                <div class="form-group">
+                    <label class="col-md-3 col-sm-4 control-label"
                            for="partner_name">
                         Your Company
                     </label>
-                    <div class="col-sm-8">
+                    <div class="col-md-7 col-sm-8">
                         <input class="form-control"
                                name="partner_name"
                                required="required"
@@ -78,11 +78,11 @@
                     </div>
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label class="col-sm-4 control-label" for="name">
+                <div class="form-group">
+                    <label class="col-md-3 col-sm-4 control-label" for="name">
                         Subject
                     </label>
-                    <div class="col-sm-8">
+                    <div class="col-md-7 col-sm-8">
                         <input class="form-control"
                                name="name"
                                required="required"
@@ -90,19 +90,19 @@
                     </div>
                 </div>
 
-                <div class="form-group col-md-12">
-                    <label class="col-sm-4 control-label"
+                <div class="form-group">
+                    <label class="col-md-3 col-sm-4 control-label"
                            for="description">
                         Your Question
                     </label>
-                    <div class="col-sm-8">
+                    <div class="col-md-7 col-sm-8">
                         <textarea class="form-control"
                                   name="description"
                                   required="required"></textarea>
                     </div>
                 </div>
 
-                <div class="form-group col-md-12">
+                <div class="form-group">
                     <label class="col-md-3 col-sm-4 control-label" for="terms"></label>
                     <div class="col-md-7 col-sm-8">
                         <div class="checkbox">
@@ -120,8 +120,8 @@
                     </div>
                 </div>
 
-                <div class="form-group col-md-12">
-                    <div class="col-sm-offset-4 col-sm-8">
+                <div class="form-group">
+                    <div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
                         <button class="btn btn-primary btn-lg"
                                 type="submit">
                             Send
@@ -129,6 +129,14 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </xpath>
+    <xpath expr="//div[@id='snippet_options']" position="inside">
+        <div data-snippet-option-id='website_snippet_contact_form'
+            data-selector=".website_snippet_contact_form"
+            data-selector-siblings="p, h1, h2, h3, blockquote, .well, .panel"
+            data-selector-children=".content"
+           >
         </div>
     </xpath>
 </template>
