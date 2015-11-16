@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* website_crm_snippet
+# 	* website_snippet_contact_form
 #
 msgid ""
 msgstr ""
@@ -17,47 +17,47 @@ msgstr ""
 "Last-Translator: \n"
 "Language: es\n"
 
-#. module: website_crm_snippet
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Contact Form"
 msgstr "Formulario de contacto"
 
-#. module: website_crm_snippet
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Email"
 msgstr "Correo electrónico"
 
-#. module: website_crm_snippet
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Phone Number"
 msgstr "Teléfono"
 
-#. module: website_crm_snippet
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Send"
 msgstr "Enviar"
 
-#. module: website_crm_snippet
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Subject"
 msgstr "Asunto"
 
-#. module: website_crm_snippet
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Tell us something!"
 msgstr "¡Díganos algo!"
 
-#. module: website_crm_snippet
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Your Company"
 msgstr "Su empresa"
 
-#. module: website_crm_snippet
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Your Name"
 msgstr "Su nombre"
 
-#. module: website_crm_snippet
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Your Question"
 msgstr "Su pregunta"
