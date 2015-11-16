@@ -22,7 +22,7 @@
 
 {
     'name': 'Heading in CRM',
-    'version': '1.0',
+    'version': '8.0.1.1.0',
     'category': 'Customer Relationship Management',
     'author': 'Antiun Ingeniería S.L.',
     'website': 'http://www.antiun.com',
