@@ -10,12 +10,12 @@
         <field name="title" position="before">
             <field name="heading" placeholder="Heading"
                    context="{'lang': lang}"
-                   options="{'no_open': True, 'always_reload': True}"/>
+                   options="{'no_open': True, 'no_create': True,'always_reload': True}"/>
         </field>
         <xpath expr="//field[@name='child_ids']/form//field[@name='function']" position="before">
             <field name="heading" placeholder="Heading"
                    context="{'lang': lang}"
-                   options="{'no_open': True, 'always_reload': True}"/>
+                   options="{'no_open': True, 'no_create': True,'always_reload': True}"/>
         </xpath>
     </field>
 </record>
