@@ -6,8 +6,8 @@
     <field name="name">Coming from the website contact form</field>
     <field name="model_id">crm.lead</field>
     <field name="domain"
-           eval="[('section_id', '=',
-                   ref('website.salesteam_website_sales'))]"/>
+           eval="[('section_id', '=', ref('website.salesteam_website_sales')),
+                  ('medium_id', '=', ref('crm.crm_medium_website'))]"/>
 </record>
 
 <record id="email_template" model="email.template">
