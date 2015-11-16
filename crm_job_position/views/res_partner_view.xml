@@ -11,13 +11,13 @@
             <field name="job_position"
                    placeholder="Job position"
                    attrs="{'invisible': [('is_company','=', True)]}"
-                   options='{"no_open": True}'/>
+                   options="{'no_open': True, 'no_create': True}"/>
         </field>
         <xpath expr="//field[@name='child_ids']/form//field[@name='function']" position="before">
             <field name="job_position"
                    placeholder="Job position"
                    attrs="{'invisible': [('is_company','=', True)]}"
-                   options='{"no_open": True}'/>
+                   options="{'no_open': True, 'no_create': True}"/>
         </xpath>
     </field>
 </record>
