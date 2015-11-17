@@ -122,7 +122,7 @@
                             </div>
                         </div>
                         <div class="col col-md-1 col-xs-2">
-                            <t t-esc="product.standard_price"/>
+                            <span t-field="product.standard_price"/>
                         </div>
                         <div class="col col-md-1 col-xs-2">
                             <span t-if="product.website_published">
@@ -145,13 +145,15 @@
 <template id="supplier_products" name="Supplier products"
           inherit_id="website_portal.account">
     <xpath expr="//div[@class='col-md-3 col-md-offset-1 o_my_sidebar']" position="inside">
-        <div class="o_my_products">
-            <h3 class="page-header">Your Products</h3>
-            <ul>
-                <li><a href="/supplierinfo/new">New Product</a></li>
-                <li><a href="/supplierinfo/list">Your Products</a></li>
-            </ul>
-        </div>
+        <t t-if="user_id.partner_id.supplier">
+            <div class="o_my_products">
+                <h3 class="page-header">Your Products</h3>
+                <ul>
+                    <li><a href="/supplierinfo/new">New Product</a></li>
+                    <li><a href="/supplierinfo/list">Your Products</a></li>
+                </ul>
+            </div>
+        </t>
     </xpath>
 </template>
 

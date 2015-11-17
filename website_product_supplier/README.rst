@@ -6,14 +6,15 @@
 Website Product Supplier
 ========================
 
-This module was written to allow suppliers to create new products in frontend.
+This module was written to allow suppliers to create new products in
+website portal purchase.
 
 Usage
 =====
 
 To use this module, you need to:
 
-1. You must logon as supplier account.
+1. You must logon with a supplier account.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot

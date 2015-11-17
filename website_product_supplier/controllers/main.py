@@ -180,7 +180,7 @@ class WebsiteProductSupplier(http.Controller):
         pager = request.website.pager(
             url=url, total=supplierinfo_count, page=page, step=PPG, scope=7,
             url_args=post)
-        supplierinfo = supplierinfo_obj.sudo().search(
+        supplierinfo = supplierinfo_obj.search(
             domain, limit=PPG, offset=pager['offset'])
 
         values = self._prepare_supplierinfo_list(supplierinfo, pager)

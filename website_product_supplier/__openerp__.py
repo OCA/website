@@ -8,8 +8,7 @@
     'category': 'Website',
     'version': '8.0.1.0.0',
     'depends': [
-        'auth_supplier',
-        'website_portal',
+        'website_portal_purchase',
     ],
     'data': [
         'security/ir.model.access.csv',
@@ -20,7 +19,7 @@
     'author': 'Antiun Ingeniería S.L., '
               'Incaser Informatica S.L., '
               'Odoo Community Association (OCA)',
-    'website': 'http://www.incaser.es',
+    'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
     'installable': True,
 }
