@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;AAMI,iBAAI;EACA,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,MAAM",
+"sources": ["website_snippet_big_button.sass"],
+"names": [],
+"file": "website_snippet_big_button.css"
+}
