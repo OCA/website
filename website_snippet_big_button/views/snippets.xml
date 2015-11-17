@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+<data>
+
+<template id="snippets" inherit_id="website.snippets">
+    <xpath expr="//div[@id='snippet_structure']">
+        <div>
+            <div class="oe_snippet_thumbnail">
+                <img class="oe_snippet_thumbnail_img"
+                     src="/website_snippet_big_button/static/description/icon.png"/>
+                <span class="oe_snippet_thumbnail_title">Big Buttons</span>
+            </div>
+
+            <section class="oe_snippet_body readable big-buttons">
+                <div class="container">
+                    <div class="row mt16 mb16">
+                        <div class="text-center col-md-6 col-xs-6">
+                            <div class="btn btn-success js_big_button">
+                                <span class="fa fa-thumbs-o-up fa-5x"/>
+                                <h3 class="mt8 mb0">
+                                    <a href="/page/contactus">I want this</a>
+                                </h3>
+                                <p>Request budget</p>
+                            </div>
+                        </div>
+                        <div class="text-center col-md-6 col-xs-6">
+                            <div class="btn btn-danger js_big_button">
+                                <span class="fa fa-thumbs-o-down fa-5x"/>
+                                <h3 class="mt8 mb0">
+                                    <a href="/">
+                                        I want another thing
+                                    </a>
+                                </h3>
+                                <p>Continue searching</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </xpath>
+</template>
+
+</data>
+</openerp>
