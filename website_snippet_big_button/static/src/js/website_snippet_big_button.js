@@ -2,7 +2,7 @@
  * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
  */
 
-(function () {
+(function ($) {
     'use strict';
 
     var snippet = openerp.website.snippet;
@@ -23,4 +23,4 @@
             $(event.currentTarget).find("a")[0].click();
         },
     });
-})();
+})(jQuery);
