@@ -177,5 +177,11 @@
     </xpath>
 </template>
 
+<template id="supplier_product_list">
+    <t t-call="website.layout">
+        <t t-call="website_product_supplier.product_list"/>
+    </t>
+</template>
+
 </data>
 </openerp>

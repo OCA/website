@@ -171,7 +171,7 @@ class WebsiteProductSupplier(http.Controller):
     @http.route(['/supplierinfo/list',
                  '/supplierinfo/list/page/<int:page>'],
                 type='http', auth="user", website=True)
-    def supplier_product_list(self, page=0, **post):
+    def supplierinfo_list(self, page=0, **post):
         supplierinfo_obj = request.env['product.supplierinfo']
         domain = [('name', '=', request.env.user.partner_id.id)]
         url = "/supplierinfo/list"
@@ -187,3 +187,23 @@ class WebsiteProductSupplier(http.Controller):
 
         return request.website.render(
             "website_product_supplier.product_supplier_container", values)
+
+    @http.route(['/supplier/product/list',
+                 '/supplier/product/list/page/<int:page>'],
+                type='http', auth="user", website=True)
+    def supplier_product_list(self, page=0, **post):
+        supplierinfo_obj = request.env['product.supplierinfo']
+        domain = [('name', '=', request.env.user.partner_id.id)]
+        url = "/supplier/product/list"
+        supplierinfo_count = supplierinfo_obj.search_count(domain)
+
+        pager = request.website.pager(
+            url=url, total=supplierinfo_count, page=page, step=PPG, scope=7,
+            url_args=post)
+        supplierinfo = supplierinfo_obj.search(
+            domain, limit=PPG, offset=pager['offset'])
+
+        values = self._prepare_supplierinfo_list(supplierinfo, pager)
+
+        return request.website.render(
+            "website_product_supplier.supplier_product_list", values)
