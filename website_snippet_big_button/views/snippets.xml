@@ -17,7 +17,7 @@
             <section class="oe_snippet_body readable big-buttons">
                 <div class="container">
                     <div class="row mt16 mb16">
-                        <div class="text-center col-md-6 col-sm-6">
+                        <div class="text-center col-md-6 col-xs-6">
                             <div class="btn btn-success js_big_button">
                                 <span class="fa fa-thumbs-o-up fa-5x"/>
                                 <h3 class="mt8 mb0">
@@ -26,7 +26,7 @@
                                 <p>Request budget</p>
                             </div>
                         </div>
-                        <div class="text-center col-md-6 col-sm-6">
+                        <div class="text-center col-md-6 col-xs-6">
                             <div class="btn btn-danger js_big_button">
                                 <span class="fa fa-thumbs-o-down fa-5x"/>
                                 <h3 class="mt8 mb0">
