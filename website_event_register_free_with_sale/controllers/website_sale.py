@@ -66,7 +66,7 @@ class WebsiteSale(website_sale):
                 return request.website.render("website_sale.checkout", values)
             post['tickets'] = request.session['free_tickets']
             event = request.env['event.event'].browse(
-                request.session['event_id'])
+                int(request.session['event_id']))
             if (http.request.env.ref('base.public_user') !=
                     http.request.env.user):
                 partner = http.request.env.user.partner_id
