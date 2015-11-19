@@ -12,8 +12,8 @@ PPG = 20  # Products Per Page
 
 class WebsiteProductSupplier(http.Controller):
 
-    mandatory_product_fields = ['product_name', 'min_qty', 'delay']
-    optional_product_fields = ['product_code', ]
+    mandatory_product_fields = ['product_name']
+    optional_product_fields = ['product_code']
 
     def _get_mandatory_product_fields(self):
         return self.mandatory_product_fields
@@ -49,8 +49,8 @@ class WebsiteProductSupplier(http.Controller):
             supplierinfo_dic, data)
         return supplierinfo_dic
 
-    @http.route(['/supplierinfo/<model("product.supplierinfo"):supplierinfo>',
-                 '/supplierinfo/new'],
+    @http.route(['/my/supplier/product/<model("product.supplierinfo"):supplierinfo>',
+                 '/my/supplier/product/new'],
                 type='http', auth="user", website=True)
     def supplier_info(self, supplierinfo=None, category='', search='', **post):
         if supplierinfo and supplierinfo.name != request.env.user.partner_id:
@@ -85,7 +85,7 @@ class WebsiteProductSupplier(http.Controller):
         }
         return values
 
-    @http.route('/supplierinfo/save/', type='http', auth="user", website=True)
+    @http.route('/my/supplier/product/save/', type='http', auth="user", website=True)
     def supplier_info_create(self, **post):
         supplierinfo = request.env['product.supplierinfo'].sudo()
         form_vals = self.supplierinfo_field_parse(post)
@@ -126,7 +126,7 @@ class WebsiteProductSupplier(http.Controller):
             "website_product_supplier.product_supplier_container_form", values)
 
     @http.route(
-        '/supplierinfo/save/<model("product.supplierinfo"):supplierinfo>',
+        '/my/supplier/product/save/<model("product.supplierinfo"):supplierinfo>',
         type='http', auth="user", website=True)
     def supplier_info_save(self, supplierinfo=None, **post):
         if supplierinfo.name != request.env.user.partner_id:
@@ -168,13 +168,13 @@ class WebsiteProductSupplier(http.Controller):
         }
         return values
 
-    @http.route(['/supplierinfo/list',
-                 '/supplierinfo/list/page/<int:page>'],
+    @http.route(['/my/supplier/product/list',
+                 '/my/supplier/product/list/page/<int:page>'],
                 type='http', auth="user", website=True)
     def supplierinfo_list(self, page=0, **post):
         supplierinfo_obj = request.env['product.supplierinfo']
         domain = [('name', '=', request.env.user.partner_id.id)]
-        url = "/supplierinfo/list"
+        url = "/my/supplier/product/list"
         supplierinfo_count = supplierinfo_obj.search_count(domain)
 
         pager = request.website.pager(
@@ -192,18 +192,6 @@ class WebsiteProductSupplier(http.Controller):
                  '/supplier/product/list/page/<int:page>'],
                 type='http', auth="user", website=True)
     def supplier_product_list(self, page=0, **post):
-        supplierinfo_obj = request.env['product.supplierinfo']
-        domain = [('name', '=', request.env.user.partner_id.id)]
-        url = "/supplier/product/list"
-        supplierinfo_count = supplierinfo_obj.search_count(domain)
-
-        pager = request.website.pager(
-            url=url, total=supplierinfo_count, page=page, step=PPG, scope=7,
-            url_args=post)
-        supplierinfo = supplierinfo_obj.search(
-            domain, limit=PPG, offset=pager['offset'])
-
-        values = self._prepare_supplierinfo_list(supplierinfo, pager)
-
-        return request.website.render(
-            "website_product_supplier.supplier_product_list", values)
+        res = self.supplierinfo_list(page, **post)
+        res.template = "website_product_supplier.supplier_product_list"
+        return res
