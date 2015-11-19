@@ -10,7 +10,7 @@
                 <div class="alert alert-warning" t-if="error">
                     <i class="fa fa-exclamation-triangle"/><span t-esc="error.get('error_name', '')"/>
                 </div>
-                <form id="supplier_product" class="form-horizontal" t-attf-action="/supplierinfo/save/#{main_obj and slug(main_obj) or ''}" method="post" enctype="multipart/form-data">
+                <form id="supplier_product" class="form-horizontal" t-attf-action="/my/supplier/product/save/#{main_obj and slug(main_obj) or ''}" method="post" enctype="multipart/form-data">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title"><span t-esc="supplierinfo.get('product_name','New product')"/></h3>
@@ -78,7 +78,7 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <button  type="submit" class="btn btn-primary">Save Product</button>
-                            or <a href="/supplierinfo/list">back to list</a>
+                            or <a href="/my/supplier/product/list">back to list</a>
                         </div>
                     </div>
                 </form>
@@ -104,7 +104,7 @@
                     <div class="row mb8">
                         <div class="col-md-2">
                           <div class="oe_product_image">
-                              <a itemprop="url" t-att-href="'/supplierinfo/%s' % slug(supplierinfo)">
+                              <a itemprop="url" t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)">
                                   <img itemprop="image" class="img img-responsive"
                                        t-att-src="website.image_url(product, 'image', None if product_image_big else '300x300')"
                                        t-att-alt="supplierinfo.product_name"/>
@@ -113,7 +113,7 @@
                         </div>
                         <div class="col col-md-4 col-xs-6">
                             <div class="row">
-                                <a t-att-href="'/supplierinfo/%s' % slug(supplierinfo)" t-att-alt="supplierinfo.product_name">
+                                <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)" t-att-alt="supplierinfo.product_name">
                                     <span t-field="supplierinfo.product_name"></span>
                                 </a>
                             </div>
@@ -149,8 +149,8 @@
             <div class="o_my_products">
                 <h3 class="page-header">Your Products</h3>
                 <ul>
-                    <li><a href="/supplierinfo/new">New Product</a></li>
-                    <li><a href="/supplierinfo/list">Your Products</a></li>
+                    <li><a href="/my/supplier/product/new">New Product</a></li>
+                    <li><a href="/my/supplier/product/list">Your Products</a></li>
                 </ul>
             </div>
         </t>
