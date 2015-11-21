@@ -31,6 +31,8 @@ Contributors
 
 * Odoo SA <https://www.odoo.com>
 * Leonardo Donelli @ MONK Software <donelli@webmonks.it>
+* Rafael Blasco <rafabn@antiun.com>
+* Sergio Teruel <sergio@incaser.es>
 
 Maintainer
 ----------

@@ -6,7 +6,10 @@
         <t t-call="website.layout">
             <div id="wrap">
                 <div class="container mb64">
-                    <div class="col-md-8 o_my_documents">
+                    <div class="col-md-8 o_my_documents mt16">
+                        <ul name="account-content-nav" class="nav nav-tabs">
+                        </ul>
+                        <div name="account-content" class="tab-content"/>
                         <div class="oe_structure"/>
                     </div>
                     <div class="col-md-3 col-md-offset-1 o_my_sidebar">
