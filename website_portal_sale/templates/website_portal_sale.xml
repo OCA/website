@@ -256,7 +256,7 @@
                                 <img t-att-src="'/website/image/product.product/%s/image_small/48x48' % ol.product_id.id"/>
                             </div>
                             <div id='product_name' class="col-md-5">
-                              <span t-esc="ol.product_id.name"/>
+                              <span t-field="ol.product_id"/>
                             </div>
                           <div class="col-md-2 text-right">
                             <span t-field="ol.price_unit" t-field-options='{"widget": "monetary", "display_currency": "order.pricelist_id.currency_id"}'/>
