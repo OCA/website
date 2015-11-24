@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Antiun Ingeniería S.L. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<templates id="template" xml:space="preserve">
+
+<t t-extend="website.editor.dialog.link">
+    <t t-jquery="form>.link-style:has(#link-preview)" t-operation="before">
+        <div class="form-horizontal"
+             title="Anchors are appended to the URL like http://localhost/#your-anchor">
+            <div class="form-group">
+                <label for="anchor" class="col-sm-2 control-label">
+                    Anchor
+                </label>
+                <div class="col-sm-10">
+                    <input id="anchor"
+                           type="text"
+                           placeholder="your-anchor"
+                           class="form-control"/>
+                </div>
+            </div>
+        </div>
+    </t>
+</t>
+
+</templates>
