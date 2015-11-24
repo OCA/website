@@ -3,7 +3,7 @@
 <data>
 
     <template id="quotations" name="Quotations">
-        <h3 class="page-header">Your Quotes</h3>
+        <h3 >Your Quotes</h3>
         <t t-if="not quotations">
             <p>There are currently no quotes for your account.</p>
         </t>
@@ -47,7 +47,7 @@
     </template>
 
     <template id="sale_orders" name="Sales Orders">
-        <h3 class="page-header">Your Orders</h3>
+        <h3 >Your Orders</h3>
         <t t-if="not orders">
             <p>There are currently no orders for your account.</p>
         </t>
@@ -101,7 +101,7 @@
     </template>
 
     <template id="invoices" name="Invoices and Payments">
-        <h3 class="page-header">Your Invoices and Payments</h3>
+        <h3 >Your Invoices and Payments</h3>
         <t t-if="not invoices">
             <p>There are currently no invoices for your account.</p>
         </t>
