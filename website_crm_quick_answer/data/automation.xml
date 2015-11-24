@@ -4,6 +4,7 @@
 
 <record id="website_form_leads_filter" model="ir.filters">
     <field name="name">Coming from the website contact form</field>
+    <field name="user_id" eval="False"/>
     <field name="model_id">crm.lead</field>
     <field name="domain"
            eval="[('section_id', '=', ref('website.salesteam_website_sales')),
