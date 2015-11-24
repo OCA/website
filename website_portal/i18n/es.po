@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-14 08:34+0000\n"
-"PO-Revision-Date: 2015-10-12 18:04+0000\n"
+"POT-Creation-Date: 2015-11-23 10:22+0000\n"
+"PO-Revision-Date: 2015-11-18 13:47+0000\n"
 "Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgid "Email"
 msgstr "Correo electrónico"
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:76
+#: code:addons/website_portal/controllers/main.py:77
 #, python-format
 msgid "Invalid Email! Please enter a valid email address."
 msgstr "¡Correo Electrónico incorrecto! Por favor, introduce una dirección de correo electrónico válida."
@@ -100,7 +100,7 @@ msgid "Place your content here."
 msgstr "Coloca tu contenido aquí."
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:93
+#: code:addons/website_portal/controllers/main.py:94
 #, python-format
 msgid "Some required fields are empty."
 msgstr "Algunos campos requeridos están vacíos."

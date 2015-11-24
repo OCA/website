@@ -3,20 +3,20 @@
 # * website_slides
 # 
 # Translators:
-# Carles Antolí <carlesantoli@hotmail.com>, 2015
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-11-23 10:22+0000\n"
-"PO-Revision-Date: 2015-11-18 13:47+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"PO-Revision-Date: 2015-11-14 04:48+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_shared
@@ -64,7 +64,7 @@ msgid ""
 "    </tr></tbody>\n"
 "</table>\n"
 "</div>"
-msgstr ""
+msgstr "\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n            </a>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n            <h2 style=\"margin:0px;\">\n                ${user.name} souporablja ${object.slide_type} ${object.name} z vami!\n            </h2>\n        </td>\n    </tr><tr>\n        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\"\n                    style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n            </a>\n            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n            <p style=\"color: #ccc;\">Objavljeno ${object.write_date}</p>\n            <p><a href=\"${object.website_url}\">Kliknite za odpiranje ${object.slide_type}</a></p>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n    <tbody><tr>\n        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n            <a href=\"${object.website_url}\" style=\"color:#a24689\">Prikaz v brskalniku</a> |\n            <a href=\"/page/contactus\" style=\"color:#a24689\">Stik</a>\n        </td>\n    </tr></tbody>\n</table>\n</div>"
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_published
@@ -111,39 +111,39 @@ msgid ""
 "    </tr></tbody>\n"
 "</table>\n"
 "</div>"
-msgstr ""
+msgstr "\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n            </a>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n            <h2 style=\"margin:0px;\">\n                Nova ${object.slide_type} objavljena ${object.channel_id.name}\n            </h2>\n        </td>\n    </tr><tr>\n        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\" style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n            </a>\n            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n            <p style=\"color: #ccc;\">Objavljeno ${object.write_date}</p>\n            <p><a href=\"${object.website_url}\">Odprite ${object.slide_type}</a></p>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n    <tbody><tr>\n        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n            <a href=\"${object.website_url}\" style=\"color:#a24689\">Prikaz v brskalniku</a> |\n            <a href=\"/page/contactus\" style=\"color:#a24689\">Stik</a>\n        </td>\n    </tr></tbody>\n</table>\n</div>"
 
 #. module: website_slides
 #: field:slide.embed,count_views:0
 msgid "# Views"
-msgstr "# Vistas"
+msgstr "# prikazov"
 
 #. module: website_slides
 #: field:slide.slide,embed_views:0
 msgid "# of Embedded Views"
-msgstr "# de Vistas Embebidas"
+msgstr "# vgrajenih prikazov"
 
 #. module: website_slides
 #: field:slide.slide,slide_views:0
 msgid "# of Website Views"
-msgstr "# Vistas del Sitio Web"
+msgstr "# spletnih prikazov"
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_shared
 msgid "${user.name} shared a ${object.slide_type} with you!"
-msgstr "${user.name} ha compartido un ${object.slide_type} contigo!"
+msgstr "${user.name} souporablja ${object.slide_type} z vami!"
 
 #. module: website_slides
 #: view:website:website_slides.slides_search
 msgid ". Please try again with different keywords."
-msgstr ". Por favor inténtelo de nuevo con otras palabras."
+msgstr "Ponovno poskusite z drugačnimi ključnimi besedami."
 
 #. module: website_slides
 #: model:slide.channel,description:website_slides.channel_public
 msgid ""
 "<p>Default channel for slides, all public users can access content of this "
 "channel.</p>"
-msgstr "<p>Canal por defecto para las diapositivas, todos los usuarios públicos tienen acceso al contenido.</p>"
+msgstr "<p>Privzeti kanal za prosojnice; vsi javni uporabniki imajo dostop do vsebine tega kanala.</p>"
 
 #. module: website_slides
 #: model:slide.channel,access_error_msg:website_slides.channel_partial
@@ -151,37 +151,37 @@ msgstr "<p>Canal por defecto para las diapositivas, todos los usuarios públicos
 #: model:slide.channel,access_error_msg:website_slides.channel_public
 msgid ""
 "<p>This channel is private and its content is restricted to some users.</p>"
-msgstr "<p>Este canal es privado y su contenido está restringido a algunos usuarios.</p>"
+msgstr "<p>Privaten kanal, katerega vsebina je omejena na nekatere uporabnike.</p>"
 
 #. module: website_slides
 #: model:slide.channel,description:website_slides.channel_private
 msgid "<p>Used to publish internal slides of company.</p>"
-msgstr "<p>Usado para publicar contenido interno a los empleados.</p>"
+msgstr "<p>Za objavo internih prosojnic v sklopu družbe.</p>"
 
 #. module: website_slides
 #: model:slide.channel,description:website_slides.channel_partial
 msgid "<p>Used to publish slides in partner network privately.</p>"
-msgstr "<p>Usado para publicar diapositivas de forma privada entre los partners.</p>"
+msgstr "<p>Za privatno objavo prosojnic v sklopu mreže partnerjev.</p>"
 
 #. module: website_slides
 #: sql_constraint:slide.tag:0
 msgid "A tag must be unique!"
-msgstr "La etiqueta debe de ser única!"
+msgstr "Oznaka mora biti unikatna!"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "About"
-msgstr "Acerca de"
+msgstr "Opis"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Actions"
-msgstr "Acciones"
+msgstr "Dejanja"
 
 #. module: website_slides
 #: selection:slide.slide,download_security:0
 msgid "Authentified Users Only"
-msgstr "Solo usuarios autenticados"
+msgstr "Le overjeni uporabniki"
 
 #. module: website_slides
 #: model:ir.actions.act_window,name:website_slides.action_ir_slide_category
@@ -189,7 +189,7 @@ msgstr "Solo usuarios autenticados"
 #: view:slide.channel:website_slides.view_slide_channel_form
 #: field:slide.channel,category_ids:0
 msgid "Categories"
-msgstr "Categorías"
+msgstr "Kategorije"
 
 #. module: website_slides
 #. openerp-web
@@ -201,7 +201,7 @@ msgstr "Categorías"
 #: field:slide.slide,category_id:0
 #, python-format
 msgid "Category"
-msgstr "Categoría"
+msgstr "Kategorija"
 
 #. module: website_slides
 #: field:slide.category,channel_id:0
@@ -209,17 +209,17 @@ msgstr "Categoría"
 #: view:slide.slide:website_slides.view_slide_slide_search
 #: field:slide.slide,channel_id:0
 msgid "Channel"
-msgstr "Canal"
+msgstr "Kanal"
 
 #. module: website_slides
 #: field:slide.channel,group_ids:0
 msgid "Channel Groups"
-msgstr "Grupos de canales"
+msgstr "Skupine kanalov"
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "Channel Settings"
-msgstr "Configuración del canal"
+msgstr "Nastavitve kanala"
 
 #. module: website_slides
 #. openerp-web
@@ -227,17 +227,17 @@ msgstr "Configuración del canal"
 #, python-format
 msgid ""
 "Channel contains the given title, please change before Save or Publish."
-msgstr "El canal contiene el título dado, por favor cambie antes de guardar o publicar."
+msgstr "Kanal vsebuje podani naslov; pred shranjevanjem ali objavo ga spremenite."
 
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_channel
 msgid "Channel for Slides"
-msgstr "Canal para las diapositivas"
+msgstr "Kanal za prosojnice"
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Channel visibility"
-msgstr "Visibilidad del canal"
+msgstr "Vidljivost kanala"
 
 #. module: website_slides
 #: model:ir.actions.act_url,name:website_slides.action_open_channels
@@ -245,24 +245,24 @@ msgstr "Visibilidad del canal"
 #: model:ir.ui.menu,name:website_slides.menu_action_slide_channels
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Channels"
-msgstr "Canales"
+msgstr "Kanali"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Comments"
-msgstr "Comentarios"
+msgstr "Komentarji"
 
 #. module: website_slides
 #: field:slide.slide,datas:0
 msgid "Content"
-msgstr "Contenido"
+msgstr "Vsebina"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:18
 #, python-format
 msgid "Content Preview"
-msgstr "Previsualizar el contenido"
+msgstr "Predogled vsebine"
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:344
@@ -270,7 +270,7 @@ msgstr "Previsualizar el contenido"
 msgid ""
 "Could not fetch data from url. Document or access right not available.\n"
 "Here is the received response: %s"
-msgstr ""
+msgstr "Iz URL ni bilo mogoče pridobiti podatkov. Dokument ali dostopna pravica nista na voljo.\nPrejeti odgovor: %s"
 
 #. module: website_slides
 #: code:addons/website_slides/models/slides.py:331
@@ -278,14 +278,14 @@ msgstr ""
 msgid ""
 "Could not fetch data from url.Document or access right not available:\n"
 "%s"
-msgstr ""
+msgstr "Iz URL ni bilo mogoče pridobiti podatkov. Dokument ali dostopna pravica nista na voljo:\n%s"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/js/slides_upload.js:210
 #, python-format
 msgid "Create New %s '%s'"
-msgstr "Crear nuevo %s '%s'"
+msgstr "Ustvari nov %s '%s'"
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_1
@@ -295,26 +295,26 @@ msgid ""
 "This is a new open source application in Python/Javascript based on Bootstrap and OpenERP.\n"
 "\n"
 "Download or use online on http://openerp.com"
-msgstr ""
+msgstr "Ustvari profesionalno spletno stran z enostavnim graditeljem strani. Uporabite dobro zasnovane gradnike in vse urejajte iz istega mesta. Izkoristite privzete poslovne funkcije; e-trgovina, dogodki, blogi, razpisi dela, reference, pozivi, izd.\n\nTo je nova Python/Javascript odprto kodna aplikacija na osnovi Bootstrap in OpenERP.\n\nPrenesite ali uporabljajte preko spleta na http://openerp.com"
 
 #. module: website_slides
 #: field:slide.category,create_uid:0 field:slide.channel,create_uid:0
 #: field:slide.embed,create_uid:0 field:slide.slide,create_uid:0
 #: field:slide.tag,create_uid:0
 msgid "Created by"
-msgstr "Creado por"
+msgstr "Ustvaril"
 
 #. module: website_slides
 #: field:slide.category,create_date:0 field:slide.channel,create_date:0
 #: field:slide.embed,create_date:0 field:slide.slide,create_date:0
 #: field:slide.tag,create_date:0
 msgid "Created on"
-msgstr "Creado en"
+msgstr "Ustvarjeno"
 
 #. module: website_slides
 #: help:slide.channel,message_last_post:0 help:slide.slide,message_last_post:0
 msgid "Date of the last message posted on the record."
-msgstr "Fecha del último mensaje publicado en el registro."
+msgstr "Datum zadnjega objavljenega sporočila na zapisu."
 
 #. module: website_slides
 #. openerp-web
@@ -325,128 +325,128 @@ msgstr "Fecha del último mensaje publicado en el registro."
 #: field:slide.slide,description:0
 #, python-format
 msgid "Description"
-msgstr "Descripción"
+msgstr "Opis"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:68
 #, python-format
 msgid "Discard"
-msgstr "Descartar"
+msgstr "Zavrzi"
 
 #. module: website_slides
 #: field:slide.slide,dislikes:0 view:website:website_slides.slide_detail_view
 msgid "Dislikes"
-msgstr "No le gusta"
+msgstr "Odpor"
 
 #. module: website_slides
 #: help:slide.category,sequence:0 help:slide.channel,sequence:0
 msgid "Display order"
-msgstr "Orden"
+msgstr "Vrstni red prikaza"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: selection:slide.slide,slide_type:0
 msgid "Document"
-msgstr "Documento"
+msgstr "Dokument"
 
 #. module: website_slides
 #: field:slide.slide,document_id:0
 msgid "Document ID"
-msgstr "ID del documento"
+msgstr "ID dokumenta"
 
 #. module: website_slides
 #: field:slide.slide,url:0
 msgid "Document URL"
-msgstr "URL del documento"
+msgstr "URL dokumenta"
 
 #. module: website_slides
 #: help:slide.slide,slide_type:0
 msgid ""
 "Document type will be set automatically depending on file type,height and "
 "width."
-msgstr ""
+msgstr "Tip dokumenta se samodejno nastavi glede na tip datoteke, višino in širino."
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Documents"
-msgstr "Documentos"
+msgstr "Dokumenti"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Download"
-msgstr "Descargar"
+msgstr "Prenos"
 
 #. module: website_slides
 #: field:slide.slide,download_security:0
 msgid "Download Security"
-msgstr "Seguridad para descargar"
+msgstr "Varnost prenosov"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Email"
-msgstr "Correo electrónico"
+msgstr "E-pošta"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Email Address"
-msgstr "Dirección de correo electrónico"
+msgstr "E-poštni naslov"
 
 #. module: website_slides
 #: help:slide.channel,publish_template_id:0
 msgid "Email template to send slide publication through email"
-msgstr "Plantilla de correo electrónico para enviar la publicación de diapositivas a través de correo electrónico"
+msgstr "E-poštna predloga za pošiljanje objavljenih prosojnic preko e-pošte"
 
 #. module: website_slides
 #: help:slide.channel,share_template_id:0
 msgid "Email template used when sharing a slide"
-msgstr "Plantilla de correo electrónico utilizada al compartir una diapositiva"
+msgstr "E-poštna predloga za souporabo prosojnice"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Embed"
-msgstr "Incrustar"
+msgstr "Vgradi"
 
 #. module: website_slides
 #: field:slide.slide,embedcount_ids:0
 msgid "Embed Count"
-msgstr "Número de incrustaciones"
+msgstr "Seštevek vgradenj"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_embed
 msgid "Embed in your website"
-msgstr "Incrustar en tu página web"
+msgstr "Vgradi v spletno stran"
 
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_embed
 msgid "Embedded Slides View Counter"
-msgstr "Incrustar contador de diapositivas vistas"
+msgstr "Števec prikazov vgrajenih prosojnic"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Embeded Views"
-msgstr "Incrustar vistas"
+msgstr "Vgrajeni prikazi"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Embeds"
-msgstr "Incrustaciones"
+msgstr "Vgradnje"
 
 #. module: website_slides
 #: model:slide.channel,name:website_slides.channel_private
 msgid "Employee Channel"
-msgstr "Canal de empleados"
+msgstr "Kanal kadrov"
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 #: field:slide.channel,access_error_msg:0
 msgid "Error Message"
-msgstr "Mensaje de error"
+msgstr "Sporočilo o napaki"
 
 #. module: website_slides
 #: selection:slide.slide,download_security:0
 msgid "Everyone"
-msgstr "Todos"
+msgstr "Vsi"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -456,56 +456,56 @@ msgstr "Facebook"
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
 msgid "Featured Presentation"
-msgstr "Presentación destacada"
+msgstr "Izpostavljena predstavitev"
 
 #. module: website_slides
 #: model:slide.category,name:website_slides.category_1
 msgid "Featured Presentations"
-msgstr ""
+msgstr "Izpostavljene predstavitve"
 
 #. module: website_slides
 #: field:slide.channel,promoted_slide_id:0
 msgid "Featured Slide"
-msgstr "Diapositiva destacada"
+msgstr "Izpostavljena prosojnica"
 
 #. module: website_slides
 #: field:slide.channel,promote_strategy:0
 msgid "Featuring Policy"
-msgstr "Política de destacados"
+msgstr "Pravilnik za izpostavo"
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:357
 #, python-format
 msgid "File is too big."
-msgstr "El fichero es demasiado grande."
+msgstr "Datoteka je prevelika."
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/js/slides_upload.js:84
 #, python-format
 msgid "File is too big. Please select file upto 15MB"
-msgstr "El fichero es demasiado grande. El máximo son 15MB"
+msgstr "Datoteka je prevelika. Izberite datoteko do 15MB"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "First slide"
-msgstr "Primera diapositiva"
+msgstr "Prva prosojnica"
 
 #. module: website_slides
 #: field:slide.channel,message_follower_ids:0
 #: field:slide.slide,message_follower_ids:0
 msgid "Followers"
-msgstr "Seguidores"
+msgstr "Sledilci"
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "General"
-msgstr "General"
+msgstr "Splošno"
 
 #. module: website_slides
 #: field:website.config.settings,website_slide_google_app_key:0
 msgid "Google Doc Key"
-msgstr "Google Doc Key"
+msgstr "Google Dokument ključ"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -515,68 +515,68 @@ msgstr "Google+"
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_graph
 msgid "Graph of Slides"
-msgstr "Gráficos de diapositivas"
+msgstr "Graf prosojnic"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Group By"
-msgstr "Agrupar por"
+msgstr "Združi po"
 
 #. module: website_slides
 #: help:slide.channel,group_ids:0
 msgid "Groups allowed to see presentations in this channel"
-msgstr "Grupos permitidos para ver presentaciones de este canal"
+msgstr "Skupine, ki se jim dovoljuje ogled predstavitev na tem kanalu"
 
 #. module: website_slides
 #: help:slide.channel,upload_group_ids:0
 msgid ""
 "Groups allowed to upload presentations in this channel. If void, every user "
 "can upload."
-msgstr "Grupos que tienen permiso para subir presentaciones a este canal. Si lo deja en blanco todos pueden subir. "
+msgstr "Skupine, ki se jim dovoli nalaganje predstavitev na ta kanal. Če prazno, lahko nalaga katerikoli uporabnik."
 
 #. module: website_slides
 #: help:slide.channel,message_summary:0 help:slide.slide,message_summary:0
 msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
-msgstr "Contiene el resumen del chatter (nº de mensajes, ...). Este resumen está directamente en formato html para ser insertado en vistas kanban."
+msgstr "Povzetek komunikacij (število sporočil) neposredno v html formatu, da se lahko neposredno vstavlja v prikaze tipa kanban."
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Home"
-msgstr "Inicio"
+msgstr "Domov"
 
 #. module: website_slides
 #: field:slide.category,id:0 field:slide.channel,id:0 field:slide.embed,id:0
 #: field:slide.slide,id:0 field:slide.tag,id:0
 #: field:website.published.mixin,id:0
 msgid "ID"
-msgstr "ID (identificación)"
+msgstr "ID"
 
 #. module: website_slides
 #: help:slide.channel,message_unread:0 help:slide.slide,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr "Si está marcado, hay nuevos mensajes que requieren su atención"
+msgstr "Če označeno, zahtevajo nova sporočila vašo pozornost."
 
 #. module: website_slides
 #: field:slide.slide,image:0
 msgid "Image"
-msgstr "Imagen"
+msgstr "Slika"
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Image size: 330px x 240px"
-msgstr ""
+msgstr "Velikost slike: 330px x 240px"
 
 #. module: website_slides
 #: selection:slide.slide,slide_type:0
 msgid "Infographic"
-msgstr "Infografía"
+msgstr "Informacijska grafika"
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Infographics"
-msgstr "Infografías"
+msgstr "Informacijske grafike"
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:381
@@ -584,62 +584,62 @@ msgstr "Infografías"
 msgid ""
 "Internal server error, please try again later or contact administrator.\n"
 "Here is the error message: %s"
-msgstr "Error interno del servidor, por favor inténtelo de nuevo más tarde o contacte con el admnistrador.\nMensaje del error: %s"
+msgstr "Notranja napaka strežnika, poskusite kasneje ali pa se obrnite na\nadministratorja. Sporočilo o napaki: %s"
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_3
 msgid ""
 "Interview with Guy Christiaens, Finance Manager at Alpinter, about their use of Odoo.\n"
 "Discover more about Odoo at www.odoo.com"
-msgstr ""
+msgstr "Intervjuvanec Guy Christiaens, Finančni vodja pri Alpinter, o uporabi Odoo.\nOdkrij več o Odoo na www.odoo.com"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/js/slides_upload.js:79
 #, python-format
 msgid "Invalid file type. Please select pdf or image file"
-msgstr "Tipo de fichero incorrecto. Por favor seleccione un pdf o una imagen"
+msgstr "Neveljaven tip datoteke. Izberite pdf ali slikovno datoteko"
 
 #. module: website_slides
 #: field:slide.channel,message_is_follower:0
 #: field:slide.slide,message_is_follower:0
 msgid "Is a Follower"
-msgstr "Es un seguidor"
+msgstr "Je sledilec"
 
 #. module: website_slides
 #: field:slide.channel,message_last_post:0
 #: field:slide.slide,message_last_post:0
 msgid "Last Message Date"
-msgstr "Fecha del último mensaje"
+msgstr "Datum zadnjega sporočila"
 
 #. module: website_slides
 #: field:slide.category,write_uid:0 field:slide.channel,write_uid:0
 #: field:slide.embed,write_uid:0 field:slide.slide,write_uid:0
 #: field:slide.tag,write_uid:0
 msgid "Last Updated by"
-msgstr "Última actualización de"
+msgstr "Zadnji posodobil"
 
 #. module: website_slides
 #: field:slide.category,write_date:0 field:slide.channel,write_date:0
 #: field:slide.embed,write_date:0 field:slide.slide,write_date:0
 #: field:slide.tag,write_date:0
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr "Zadnjič posodobljeno"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Last slide"
-msgstr "Última diapositiva"
+msgstr "Zadnja prosojnica"
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
 msgid "Latest Published"
-msgstr "Última pubicada"
+msgstr "Zadnja objava"
 
 #. module: website_slides
 #: field:slide.slide,likes:0 view:website:website_slides.slide_detail_view
 msgid "Likes"
-msgstr "Me gusta"
+msgstr "Všečki"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -649,27 +649,27 @@ msgstr "LinkedIn"
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Loading ..."
-msgstr "Cargando ..."
+msgstr "Nalaganje..."
 
 #. module: website_slides
 #: field:slide.slide,image_medium:0
 msgid "Medium"
-msgstr "Mediana"
+msgstr "Srednje"
 
 #. module: website_slides
 #: help:slide.channel,access_error_msg:0
 msgid "Message to display when not accessible due to access rights"
-msgstr "Mensaje a mostrar cuando no tienen permisos de acceso"
+msgstr "Sporočilo, ki se prikaže ob nedostopnosti zaradi dostopnih pravic"
 
 #. module: website_slides
 #: field:slide.channel,message_ids:0 field:slide.slide,message_ids:0
 msgid "Messages"
-msgstr "Mensajes"
+msgstr "Sporočila"
 
 #. module: website_slides
 #: help:slide.channel,message_ids:0 help:slide.slide,message_ids:0
 msgid "Messages and communication history"
-msgstr "Mensajes e historial de comunicación"
+msgstr "Sporočila in kronologija komunikacij"
 
 #. module: website_slides
 #: field:slide.slide,mime_type:0
@@ -681,13 +681,13 @@ msgstr "Mime-type"
 #: view:website:website_slides.slide_detail_view
 #: view:website:website_slides.slides_channel_header
 msgid "Most Viewed"
-msgstr "Más visto"
+msgstr "Najbolj gledano"
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
 #: view:website:website_slides.slides_channel_header
 msgid "Most Voted"
-msgstr "Más votado"
+msgstr "Najbolj glasovano"
 
 #. module: website_slides
 #: field:slide.category,name:0
@@ -696,121 +696,121 @@ msgstr "Más votado"
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: field:slide.tag,name:0
 msgid "Name"
-msgstr "Nombre"
+msgstr "Naziv"
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_published
 msgid "New ${object.slide_type} published on ${object.channel_id.name}"
-msgstr "Nuevo ${object.slide_type} ha sido publicado en ${object.channel_id.name}"
+msgstr "Nova objava ${object.slide_type} na ${object.channel_id.name}"
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Newest"
-msgstr "Más nuevo"
+msgstr "Najnovejše"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Next slide"
-msgstr "Siguiente diapositiva"
+msgstr "Naslednja prosojnica"
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
 msgid "No Featured Presentation"
-msgstr "No hay presentaciones destacadas"
+msgstr "Ni izpostavljenih prosojnic"
 
 #. module: website_slides
 #: selection:slide.slide,download_security:0
 msgid "No One"
-msgstr "Ninguno"
+msgstr "Nič"
 
 #. module: website_slides
 #: view:website:website_slides.channel_not_found
 msgid "No channel created or published yet."
-msgstr "No hay canales creados o publicados todavía."
+msgstr "Noben kanal še ni ustvarjen ali objavljen."
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/js/slides_upload.js:195
 #, python-format
 msgid "No matches found. Type to create new %s"
-msgstr "No se han encontrado coincidencias. escriba para crear nuevo %s"
+msgstr "Ni najdenih ujemanj. Ustvarite novo %s"
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "No presentation published yet."
-msgstr "No hay presentaciones publicadas."
+msgstr "Nobena prosojnica še ni objavljena."
 
 #. module: website_slides
 #: view:website:website_slides.slides_grid_view
 msgid "Not Published"
-msgstr "No publicado"
+msgstr "Ni objavljeno"
 
 #. module: website_slides
 #: field:slide.category,nbr_documents:0 field:slide.channel,nbr_documents:0
 msgid "Number of Documents"
-msgstr "Número de documentos"
+msgstr "Število dokumentov"
 
 #. module: website_slides
 #: field:slide.category,nbr_infographics:0
 #: field:slide.channel,nbr_infographics:0
 msgid "Number of Infographics"
-msgstr "Número de infografías"
+msgstr "Število informacijskih grafik"
 
 #. module: website_slides
 #: field:slide.category,nbr_presentations:0
 #: field:slide.channel,nbr_presentations:0
 msgid "Number of Presentations"
-msgstr "Número de presentaciones"
+msgstr "Število predstavitev"
 
 #. module: website_slides
 #: field:slide.category,nbr_videos:0 field:slide.channel,nbr_videos:0
 msgid "Number of Videos"
-msgstr "Número de videos"
+msgstr "Število videov"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_3
 msgid "Odoo - The Voice of the Customer: Alpinter"
-msgstr ""
+msgstr "Odoo - glas kupca: Alpinter"
 
 #. module: website_slides
 #: model:slide.category,name:website_slides.category_2
 msgid "Odoo Days"
-msgstr ""
+msgstr "Odoo dnevi"
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_2
 msgid "Odoo Experience - Register now https://www.odoo.com/event/304/"
-msgstr ""
+msgstr "Odoo Experience - prijavite se zdaj https://www.odoo.com/event/304/"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_0
 msgid "Odoo Explained"
-msgstr ""
+msgstr "Odoo obrazložitev"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_6
 msgid "Odoo Marketing - part 1: ATTRACT"
-msgstr ""
+msgstr "Odoo Marketing - 1. del: ATTRACT"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_7
 msgid "Odoo Marketing - part 1: ATTRACT_2"
-msgstr ""
+msgstr "Odoo Marketing - 1. del: ATTRACT_2"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_8
 msgid "Odoo Marketing - part 1: ATTRACT_3"
-msgstr ""
+msgstr "Odoo Marketing - 1. del: ATTRACT_3"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_2
 msgid "Odoo Open Days 2014"
-msgstr ""
+msgstr "Odoo Open Days 2014"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_10
 msgid "Odoo Roadmap & Strategy - Fabien Pinckaers"
-msgstr ""
+msgstr "Odoo načrti in strategija - Fabien Pinckaers"
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_6
@@ -818,7 +818,7 @@ msgid ""
 "Odoo's fully-integrated marketing app will help you to attract, convert and "
 "close new leads. Check out our three-part video and discover more at "
 "www.odoo.com"
-msgstr ""
+msgstr "Odoo integrirana marketinška aplikacija pomaga pri privabljanju, konverziji in zaključevanju novih indicev. Preverite tri-delni video in odkrijte več na www.odoo.com"
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_7
@@ -827,160 +827,160 @@ msgid ""
 "Odoo's fully-integrated marketing app will help you to attract, convert and close new leads. Check out our three-part video and discover more at www.odoo.com\n"
 "\n"
 "Video made by Miroslava Ganzarcikova and Sophia Eribo."
-msgstr ""
+msgstr "Odoo integrirana marketinška aplikacija pomaga pri privabljanju, konverziji in zaključevanju novih indicev. Preverite tri-delni video in odkrijte več na www.odoo.com\n\nVideo pripravili Miroslava Ganzarcikova in Sophia Eribo."
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_9
 msgid "Open Days 2014 Infographic"
-msgstr ""
+msgstr "Open Days 2014 Infographic"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_1
 msgid "Open Source Website Builder and eCommerce: OpenERP"
-msgstr ""
+msgstr "Odprto kodni gradnik spletnih strani in e-trgovin: OpenERP"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_5
 msgid "OpenERP POS Indiegogo Campaign"
-msgstr ""
+msgstr "OpenERP POS Indiegogo kampanja"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_4
 msgid "OpenERP SEO - Boost Your Website Trafic"
-msgstr ""
+msgstr "OpenERP SEO - povečajte si spletni promet"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_11
 msgid "OpenSource CMS, A performance comparison - Mantavya Gajjar"
-msgstr ""
+msgstr "Odprto kodni CMS, Primerjava zmogljivosti - Mantavya Gajjar"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:24
 #, python-format
 msgid "PDF or Image File"
-msgstr "PDF o archivo de imagen"
+msgstr "PDF ali slikovna datoteka"
 
 #. module: website_slides
 #: model:slide.channel,name:website_slides.channel_partial
 msgid "Partner Channel"
-msgstr "Canal del partner"
+msgstr "Partnerski kanal"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Please"
-msgstr "Por favor"
+msgstr "Prosimo"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/js/slides.js:50
 #, python-format
 msgid "Please <a href=\"/web?redirect=%s\">login</a> to vote this slide"
-msgstr "Por favor <a href=\"/web?redirect=%s\">inicie sesión</a> para votar esta diapositiva"
+msgstr "<a href=\"/web?redirect=%s\">prijavite se</a> za glasovanje za to prosojnico"
 
 #. module: website_slides
 #: code:addons/website_slides/models/slides.py:338
 #, python-format
 msgid "Please enter valid Youtube or Google Doc URL"
-msgstr "Por favor introduzca una URL de Youtube or Google Doc válida"
+msgstr "Vnesite veljaven Youtube ali Google Doc URL"
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:328
 #, python-format
 msgid "Please enter valid youtube or google doc url"
-msgstr "Por favor introduzca una URL de Youtube or Google Doc válida"
+msgstr "Vnesite veljaven Youtube ali Google Doc URL"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Post"
-msgstr "Comentar"
+msgstr "Objava"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid ""
 "Post comment with email address (confirmation of email is required in order "
 "to publish comment on website) or please"
-msgstr ""
+msgstr "Objavi komentar z e-poštnim naslovom (za objavo komentarja na spletni strani se zahteva e-poštna potrditev) ali"
 
 #. module: website_slides
 #: field:slide.embed,slide_id:0 selection:slide.slide,slide_type:0
 msgid "Presentation"
-msgstr "Presentación"
+msgstr "Predstavitev"
 
 #. module: website_slides
 #: model:mail.message.subtype,description:website_slides.mt_channel_slide_published
 #: model:mail.message.subtype,name:website_slides.mt_channel_slide_published
 msgid "Presentation Published"
-msgstr "Presentación publicada"
+msgstr "Predstavitev objavljena"
 
 #. module: website_slides
 #: view:website:website.layout
 #: view:website:website_slides.slides_channel_header
 #: model:website.menu,name:website_slides.website_menu_slides
 msgid "Presentations"
-msgstr "Presentaciones"
+msgstr "Predstavitve"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Previous slide"
-msgstr "Anterior diapositiva"
+msgstr "Prejšnja prosojnica"
 
 #. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Private"
-msgstr "Privada"
+msgstr "Privatno"
 
 #. module: website_slides
 #: view:website:website_slides.channels
 msgid "Private channel"
-msgstr "Canal privado"
+msgstr "Privatni kanal"
 
 #. module: website_slides
 #: field:slide.channel,promoted_image:0
 msgid "Promoted image"
-msgstr ""
+msgstr "Promovirana slika"
 
 #. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Public"
-msgstr "Público"
+msgstr "Javno"
 
 #. module: website_slides
 #: model:slide.channel,name:website_slides.channel_public
 msgid "Public Channel"
-msgstr "Canal público"
+msgstr "Javni kanal"
 
 #. module: website_slides
 #: field:slide.slide,date_published:0
 msgid "Publish Date"
-msgstr "Fecha de publicación"
+msgstr "Datum objave"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Publish a presentation to enable social sharing feature"
-msgstr "Publica una presentación para habilitar las características de compartición"
+msgstr "Da bi omogočili opcijo socialne souporabe objavite predstavitev"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Published"
-msgstr "Publicado"
+msgstr "Objavljeno"
 
 #. module: website_slides
 #: field:slide.channel,publish_template_id:0
 msgid "Published Template"
-msgstr "Plantilla publicada"
+msgstr "Objavljena predloga"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Related"
-msgstr "Relacionado"
+msgstr "Povezano"
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid ""
 "Review your channel settings to promote your most viewed or recent published"
 " presentation"
-msgstr "Revisa la configuración del canal para promocionar tus presentaciones más vistas o recientemente publicadas"
+msgstr "Preverite nastavitve kanala za promocijo najbolj gledanih ali najnovejših objavljenih predstavitev"
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_0
@@ -988,118 +988,118 @@ msgid ""
 "Run your business with a comprehensive suite of business apps. Do it easily with Odoo! \n"
 "\n"
 "http://odoo.com/start"
-msgstr ""
+msgstr "Upravljajte poslovanje z zbirko poslovnih aplikacij. Z Odoo je enostavno! \n\nhttp://odoo.com/start"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:66
 #, python-format
 msgid "Save and Publish"
-msgstr "Guardar y publicar"
+msgstr "Shrani in objavi"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:65
 #, python-format
 msgid "Save as Draft"
-msgstr "Guardar como borrador"
+msgstr "Shrani kot osnutek"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Search Slides"
-msgstr "Buscar diapositivas"
+msgstr "Iskanje prosojnic"
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Security"
-msgstr "Seguridad"
+msgstr "Varnost"
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "See all"
-msgstr "Ver todo"
+msgstr "Prikaži vse"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_embed
 msgid "Select page to start with"
-msgstr "Seleccione la página para empezar"
+msgstr "Izbira začetne strani"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Send Email"
-msgstr "Enviar correo"
+msgstr "Pošlji e-pošto"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Send presentation through email"
-msgstr "Enviar presentación por email"
+msgstr "Pošlji predstavitev po e-pošti"
 
 #. module: website_slides
 #: field:slide.category,sequence:0 field:slide.channel,sequence:0
 msgid "Sequence"
-msgstr "Secuencia"
+msgstr "Zaporedje"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 #: view:website:website_slides.slide_detail_view
 msgid "Share"
-msgstr "Compartir"
+msgstr "Souporaba"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_media
 msgid "Share Link"
-msgstr "Link para compartir"
+msgstr "Povezava za souporabo"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Share count"
-msgstr "Número de comparticiones"
+msgstr "Seštevek souporab"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_media
 msgid "Share on Social Networks"
-msgstr "Compartir en redes sociales"
+msgstr "Souporaba preko socialnih omrežij"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Share with a friend"
-msgstr "Compartir con un amigo"
+msgstr "Souporaba s prijateljem"
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "Share:"
-msgstr "Compartir:"
+msgstr "Souporaba:"
 
 #. module: website_slides
 #: field:slide.channel,share_template_id:0
 msgid "Shared Template"
-msgstr "Plantilla compartida"
+msgstr "Predloga v souporabi"
 
 #. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Show channel but restrict presentations"
-msgstr "Mostrar canal pero restringir presentaciones"
+msgstr "Prikaži kanal a omeji predstavitve"
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Show in website"
-msgstr ""
+msgstr "Prikaz na spletni strani"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Slide"
-msgstr "Diapositiva"
+msgstr "Prosojnica"
 
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_tag
 msgid "Slide Tag"
-msgstr "Etiqueta de diapositiva"
+msgstr "Oznaka prosojnice"
 
 #. module: website_slides
 #: field:slide.channel,custom_slide_id:0
 msgid "Slide to Promote"
-msgstr "Diapositiva para promocionar"
+msgstr "Promovirana prosojnica"
 
 #. module: website_slides
 #: model:ir.actions.act_window,name:website_slides.action_slides_slides
@@ -1109,42 +1109,42 @@ msgstr "Diapositiva para promocionar"
 #: field:slide.category,slide_ids:0 field:slide.channel,slide_ids:0
 #: view:slide.slide:website_slides.view_slide_slide_tree
 msgid "Slides"
-msgstr "Diapositivas"
+msgstr "Prosojnice"
 
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_category
 msgid "Slides Category"
-msgstr "Categorías de diapositivas"
+msgstr "Kategorija prosojnic"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Social Shares"
-msgstr "Compaticiones"
+msgstr "Socialna souporaba"
 
 #. module: website_slides
 #: view:website:website_slides.slides_search
 msgid "Sorry, but nothing matches your search criteria"
-msgstr "Lo siento, pero no hay coincidencias para sus criterios de búsqueda"
+msgstr "Žal nič ne ustreza vašim kriterijem iskanja"
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Sort by:"
-msgstr "Ordenar por:"
+msgstr "Razvrsti po:"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Statistics"
-msgstr "Estadísticas"
+msgstr "Statistika"
 
 #. module: website_slides
 #: field:slide.channel,message_summary:0 field:slide.slide,message_summary:0
 msgid "Summary"
-msgstr "Resumen"
+msgstr "Povzetek"
 
 #. module: website_slides
 #: view:slide.tag:website_slides.view_slide_tag_form
 msgid "Tag"
-msgstr "Etiqueta"
+msgstr "Oznaka"
 
 #. module: website_slides
 #. openerp-web
@@ -1156,23 +1156,23 @@ msgstr "Etiqueta"
 #: view:slide.tag:website_slides.view_slide_tag_tree
 #, python-format
 msgid "Tags"
-msgstr "Etiquetas"
+msgstr "Oznake"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Tags..."
-msgstr "Etiquetas..."
+msgstr "Oznake..."
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "The"
-msgstr "El"
+msgstr " "
 
 #. module: website_slides
 #: help:slide.channel,website_url:0 help:slide.slide,website_url:0
 #: help:website.published.mixin,website_url:0
 msgid "The full URL to access the document through the website."
-msgstr "URL completa de acceso al documento a través del website."
+msgstr "Polna URL povezava za dostop do dokumenta preko spletne strani."
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_4
@@ -1180,7 +1180,7 @@ msgid ""
 "The open source OpenERP Promote tool suggests keywords according to Google most searched terms. Search Engine Optimization tools are ready to use, with no configuration required.\n"
 "\n"
 "Online demo and download: http://openerp.com"
-msgstr ""
+msgstr "Odprto kodno OpenERP promocijsko orodje predlaga ključne besede glede na najbolj iskane izraze na Google. Optimizacijska orodja za iskalnik so pripravljena za uporabo brez dodatnih nastavitev.\n\nSpletna demonstracija in prenos: http://openerp.com"
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_5
@@ -1188,24 +1188,24 @@ msgid ""
 "The presentation video for our OpenSource Pos Hardware  campaign at indiegogo: \n"
 "\n"
 "https://www.indiegogo.com/projects/opensource-your-shop/"
-msgstr ""
+msgstr "Predstavitveni video indiegogo kampanje za odprto kodni Pos Hardware: \n\nhttps://www.indiegogo.com/projects/opensource-your-shop/"
 
 #. module: website_slides
 #: sql_constraint:slide.slide:0
 msgid "The slide name must be unique within a channel"
-msgstr "El nombre de una diapositiva debe ser único dentro de un canal"
+msgstr "Naziv prosojnice mora biti unikaten v sklopu kanala"
 
 #. module: website_slides
 #: field:slide.embed,url:0
 msgid "Third Party Website URL"
-msgstr ""
+msgstr "URL spletne strani tretje osebe"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 #: view:website:website_slides.embed_slide_forbidden
 #: view:website:website_slides.slide_detail_view
 msgid "This"
-msgstr "Esto"
+msgstr "Ta"
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:334
@@ -1213,12 +1213,12 @@ msgstr "Esto"
 msgid ""
 "This video already exists in this channel <a target=\"_blank\" "
 "href=\"/slides/slide/%s\">click here to view it </a>"
-msgstr "Este vídeo ya existe en el canal <a target=\"_blank\" href=\"/slides/slide/%s\">pinche aquí para verlo </a>"
+msgstr "Ta video že obstaja na tem kanalu  <a target=\"_blank\" href=\"/slides/slide/%s\">Kliknite za prikaz </a>"
 
 #. module: website_slides
 #: field:slide.slide,image_thumb:0
 msgid "Thumbnail"
-msgstr "Miniatura"
+msgstr "Sličica"
 
 #. module: website_slides
 #. openerp-web
@@ -1227,28 +1227,28 @@ msgstr "Miniatura"
 #: field:slide.slide,name:0
 #, python-format
 msgid "Title"
-msgstr "Título"
+msgstr "Naslov"
 
 #. module: website_slides
 #: field:slide.category,total:0 field:slide.channel,total:0
 msgid "Total"
-msgstr "Total"
+msgstr "Skupaj"
 
 #. module: website_slides
 #: field:slide.slide,total_views:0
 msgid "Total # Views"
-msgstr "Total # Views"
+msgstr "Skupaj # prikazov"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Total Views"
-msgstr "Vistos"
+msgstr "Skupaj prikazov"
 
 #. module: website_slides
 #: field:slide.slide,index_content:0
 #: view:website:website_slides.slide_detail_view
 msgid "Transcript"
-msgstr "Transcripción"
+msgstr "Prepis"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -1259,47 +1259,47 @@ msgstr "Twitter"
 #: view:slide.slide:website_slides.view_slide_slide_search
 #: field:slide.slide,slide_type:0
 msgid "Type"
-msgstr "Tipo"
+msgstr "Tip"
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:158
 #, python-format
 msgid "Uncategorized"
-msgstr "Sin categoría"
+msgstr "Neopredeljeno"
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "Uncategorized presentation"
-msgstr "Presentación sin categorizar"
+msgstr "Neopredeljena predstavitev"
 
 #. module: website_slides
 #: code:addons/website_slides/models/slides.py:582
 #, python-format
 msgid "Unknown document"
-msgstr "Documento desconocido"
+msgstr "Neznan dokument"
 
 #. module: website_slides
 #: field:slide.channel,message_unread:0 field:slide.slide,message_unread:0
 msgid "Unread Messages"
-msgstr "Mensajes sin leer"
+msgstr "Neprebrana sporočila"
 
 #. module: website_slides
 #: view:website:website_slides.home
 #: view:website:website_slides.slides_channel_header
 msgid "Upload"
-msgstr "Subir"
+msgstr "Nalaganje"
 
 #. module: website_slides
 #: field:slide.channel,upload_group_ids:0
 msgid "Upload Groups"
-msgstr "Grupos que pueden subir"
+msgstr "Skupine nalaganja"
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid ""
 "Upload PDF presentations, documents, videos or infographic using the button "
 "below."
-msgstr "Sube presentaciones en PDF, documentos, vídeos o infografías usando el siguiente botón"
+msgstr "Naložite PDF predstavitve, dokumente, video ali informacijsko grafiko preko spodnjega gumba."
 
 #. module: website_slides
 #. openerp-web
@@ -1307,225 +1307,225 @@ msgstr "Sube presentaciones en PDF, documentos, vídeos o infografías usando el
 #: view:website:website_slides.slides_channel_header
 #, python-format
 msgid "Upload Presentation"
-msgstr "Subir presentación"
+msgstr "Nalaganje predstavitve"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:12
 #, python-format
 msgid "Uploading presentation..."
-msgstr "Subiendo presentación..."
+msgstr "Nalaganje predstavitve..."
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_media
 msgid "Use permanent link to share in social media"
-msgstr "Usar link permanente para compatir"
+msgstr "Uporabite stalno povezavo za souporabo preko socialnih medijev"
 
 #. module: website_slides
 #: selection:slide.slide,slide_type:0
 msgid "Video"
-msgstr "Vídeo"
+msgstr "Video"
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Videos"
-msgstr "Vídeos"
+msgstr "Videi"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "View fullscreen"
-msgstr "Pantalla completa"
+msgstr "Prikaz na celotnem zaslonu"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 #: view:website:website_slides.slides_grid_view
 msgid "Views"
-msgstr "Vistas"
+msgstr "Prikazi"
 
 #. module: website_slides
 #: view:website:website_slides.related_slides
 msgid "Views ."
-msgstr "Vistas ."
+msgstr "Prikazi"
 
 #. module: website_slides
 #: field:slide.channel,visibility:0
 msgid "Visibility"
-msgstr "Visibilidad"
+msgstr "Vidljivost"
 
 #. module: website_slides
 #: field:slide.channel,website_published:0
 #: field:slide.slide,website_published:0
 #: field:website.published.mixin,website_published:0
 msgid "Visible in Website"
-msgstr "Visible en la página web"
+msgstr "Vidno na spletni strani"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Waiting for validation"
-msgstr "Esperando validación"
+msgstr "Čakanje na overitev"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Website"
-msgstr "Sitio web"
+msgstr "Spletna stran"
 
 #. module: website_slides
 #: field:slide.channel,website_message_ids:0
 #: field:slide.slide,website_message_ids:0
 msgid "Website Messages"
-msgstr "Mensajes del sitio web"
+msgstr "Spletna sporočila"
 
 #. module: website_slides
 #: view:website.config.settings:website_slides.view_website_config_settings
 msgid "Website Slides"
-msgstr "Diapositivas web"
+msgstr "Spletne prosojnice"
 
 #. module: website_slides
 #: field:slide.channel,website_url:0 field:slide.slide,website_url:0
 #: field:website.published.mixin,website_url:0
 msgid "Website URL"
-msgstr "URL del sitio web"
+msgstr "Spletni URL"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Website Views"
-msgstr "Vistas del sitio web"
+msgstr "Prikazi spletne strani"
 
 #. module: website_slides
 #: help:slide.channel,website_message_ids:0
 #: help:slide.slide,website_message_ids:0
 msgid "Website communication history"
-msgstr "Historial de comunicación del sitio web"
+msgstr "Kronologija komunikacij spletne strani"
 
 #. module: website_slides
 #: field:slide.channel,website_meta_description:0
 #: field:slide.slide,website_meta_description:0
 msgid "Website meta description"
-msgstr "Meta descripción del sitio web"
+msgstr "Spletni meta opis"
 
 #. module: website_slides
 #: field:slide.channel,website_meta_keywords:0
 #: field:slide.slide,website_meta_keywords:0
 msgid "Website meta keywords"
-msgstr "Meta palabras clave del sitio web"
+msgstr "Spletne meta ključne besede"
 
 #. module: website_slides
 #: field:slide.channel,website_meta_title:0
 #: field:slide.slide,website_meta_title:0
 msgid "Website meta title"
-msgstr "Meta título del sitio web"
+msgstr "Spletni meta naslov"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Write a comment..."
-msgstr "Escribe un comentario..."
+msgstr "Zapišite komentar..."
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/js/slides_upload.js:109
 #, python-format
 msgid "You can not upload password protected file."
-msgstr "No puedes subir ficheros protegidos."
+msgstr "Z geslom zaščitene datoteke ne morete naložiti."
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/js/slides.js:59
 #, python-format
 msgid "You have already voted for this slide"
-msgstr "Ya has votado esta diapositiva"
+msgstr "Za to prosojnico ste že glasovali"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Your Name"
-msgstr "Su nombre"
+msgstr "Vaš naziv"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:32
 #, python-format
 msgid "Youtube Video URL"
-msgstr "URL del vídeo de Youtube"
+msgstr "Youtube video URL"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:30
 #, python-format
 msgid "Youtube or Google Doc URL"
-msgstr "URL del vídeo de Youtube o Google Doc"
+msgstr "Youtube ali Google Doc URL"
 
 #. module: website_slides
 #: help:slide.slide,document_id:0
 msgid "Youtube or Google Document ID"
-msgstr ""
+msgstr "Youtube ali Google Document ID"
 
 #. module: website_slides
 #: help:slide.slide,url:0
 msgid "Youtube or Google Document URL"
-msgstr ""
+msgstr "Youtube ali Google Document URL"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "by email!"
-msgstr "Por email!"
+msgstr "po e-pošti!"
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "is empty."
-msgstr "esta vacío."
+msgstr "je prazno."
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "is private"
-msgstr "es privado"
+msgstr "je zasebno"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 #: view:website:website_slides.embed_slide_forbidden
 msgid "is private."
-msgstr "es privado."
+msgstr "je zasebno."
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 #: view:website:website_slides.slide_social_email
 msgid "login"
-msgstr "inicia sesión"
+msgstr "prijava"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "on"
-msgstr "en"
+msgstr "na"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:66
 #, python-format
 msgid "or"
-msgstr "o"
+msgstr "ali"
 
 #. module: website_slides
 #: view:website:website_slides.slides_search
 msgid "results found for the given criteria"
-msgstr "resultados encontrados para sus criterios de búsqueda"
+msgstr "najdeni rezultati za dani kriterij"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "suggest_slide.name"
-msgstr ""
+msgstr "suggest_slide.name"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "to post comment"
-msgstr "Comentar"
+msgstr "za objavo komentarja"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "to send this"
-msgstr "to send this"
+msgstr "za pošiljanje"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "views"
-msgstr "vistas"
+msgstr "prikazi"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email

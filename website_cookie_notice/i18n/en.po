@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_cookie_notice
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-23 10:22+0000\n"
+"PO-Revision-Date: 2015-11-02 18:29+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_cookie_notice
+#: view:website:website.layout
+msgid ""
+".\n"
+"                        To disable them, configure your browser properly.\n"
+"                        If you keep using this website, you are accepting those."
+msgstr ".\n                        To disable them, configure your browser properly.\n                        If you keep using this website, you are accepting those."
+
+#. module: website_cookie_notice
+#: view:website:website.layout
+msgid "We use cookies in this website. Read about them in our"
+msgstr "We use cookies in this website. Read about them in our"
+
+#. module: website_cookie_notice
+#: view:website:website.layout
+msgid "privacy policy"
+msgstr "privacy policy"
