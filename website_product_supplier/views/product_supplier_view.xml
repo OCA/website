@@ -87,7 +87,7 @@
 </template>
 
 <template id="product_list" name="Supplier Products">
-    <div class="container mt8">
+    <div class="container">
         <div class="products_pager">
             <div class="row" style="width: 100%;">
                 <!--<t t-call="website_sale.search"><t t-set="search_class">pagination form-inline col-md-3</t></t>-->
@@ -96,7 +96,28 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Your Products</h3>
+                <div class="row mb0">
+                    <div class="col-md-8 col-xs-12">
+                        <h3 class="panel-title">Your Products</h3>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <div class="col-md-10">
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Search..."/>
+                              <span class="input-group-btn">
+                                <button class="btn btn-default active" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                              </span>
+                            </div>
+                        </div>
+                        <div id="actions" class="col-md-1">
+                            <a href="/my/supplier/product/new" class="btn btn-default active">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="panel-body">
                 <t t-foreach="suppliersinfo" t-as="supplierinfo">
@@ -144,10 +165,10 @@
 
 <template id="supplier_products" name="Supplier products"
           inherit_id="website_portal.account">
-    <xpath expr="//div[@class='col-md-3 col-md-offset-1 o_my_sidebar']" position="inside">
+    <xpath expr="//div[contains(@class,'o_my_sidebar')]" position="inside">
         <t t-if="user_id.partner_id.supplier">
             <div class="o_my_products">
-                <h3 class="page-header">Your Products</h3>
+                <h3>Your Products</h3>
                 <ul>
                     <li><a href="/my/supplier/product/new">New Product</a></li>
                     <li><a href="/my/supplier/product/list">Your Products</a></li>
