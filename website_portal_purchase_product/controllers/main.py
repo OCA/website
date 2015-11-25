@@ -188,8 +188,8 @@ class WebsiteProductSupplier(http.Controller):
         return request.website.render(
             "website_product_supplier.product_supplier_container", values)
 
-    @http.route(['/supplier/product/list',
-                 '/supplier/product/list/page/<int:page>'],
+    @http.route(['/my/supplier/product/list_only',
+                 '/my/supplier/product/list_only/page/<int:page>'],
                 type='http', auth="user", website=True)
     def supplier_product_list(self, page=0, **post):
         res = self.supplierinfo_list(page, **post)
