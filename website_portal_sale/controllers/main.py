@@ -52,6 +52,8 @@ class PortalSaleWebsiteAccount(WebsiteAccount):
     def account(self, **kw):
         """ Add sales documents to main account page """
         response = super(PortalSaleWebsiteAccount, self).account(**kw)
+        if not request.env.user.partner_id.customer:
+            return response
         quotations = self._prepare_quotations()
         orders = self._prepare_orders()
         invoices = self._prepare_invoices()

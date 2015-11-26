@@ -10,12 +10,30 @@
         </xpath>
         <xpath expr="//div[contains(@name,'account-content')]" position="inside">
             <t t-if="user_id.partner_id.customer">
-                <div id="home-customer" class="tab-pane fade in active">
-                    <t t-call="website_portal_sale.quotations" />
-                    <t t-call="website_portal_sale.sale_orders" />
-                    <t t-call="website_portal_sale.invoices" />
+                <div id="home_customer" class="tab-pane fade in active">
                 </div>
             </t>
+        </xpath>
+    </template>
+
+    <template id="account_quotations" name="Account Quotations"
+              inherit_id="website_portal_sale.account" customize_show="True" active="True">
+        <xpath expr="//div[@id='home_customer']" position="inside">
+            <t t-call="website_portal_sale.quotations" />
+        </xpath>
+    </template>
+
+    <template id="account_orders" name="Account Orders"
+              inherit_id="website_portal_sale.account" customize_show="True" active="True">
+        <xpath expr="//div[@id='home_customer']" position="inside">
+            <t t-call="website_portal_sale.sale_orders" />
+        </xpath>
+    </template>
+
+    <template id="account_invoices" name="Account Invoices"
+              inherit_id="website_portal_sale.account" customize_show="True" active="True">
+        <xpath expr="//div[@id='home_customer']" position="inside">
+            <t t-call="website_portal_sale.invoices" />
         </xpath>
     </template>
 
