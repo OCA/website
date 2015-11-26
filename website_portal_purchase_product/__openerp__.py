@@ -12,8 +12,9 @@
     ],
     'data': [
         'security/ir.model.access.csv',
-        'views/website_product_supplier.xml',
         'views/product_supplier_view.xml',
+        'views/website_portal.xml',
+        'views/assets.xml',
         'security/website_product_supplier_security.xml',
     ],
     'author': 'Antiun Ingeniería S.L., '
