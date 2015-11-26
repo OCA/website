@@ -64,6 +64,34 @@
     // Add anchor to link dialog
     website.editor.RTELinkDialog = website.editor.RTELinkDialog.extend({
         /**
+         * Allow the user to use only an anchor.
+         */
+        get_data: function (test) {
+            var $anchor = this.$el.find("#anchor");
+
+            if (test !== false && $anchor.val()) {
+                var $url_source = this.$el
+                                  .find(".active input.url-source:input"),
+                    style = this.$el
+                            .find("input[name='link-style-type']:checked")
+                            .val(),
+                    size = this.$el
+                           .find("input[name='link-style-size']:checked")
+                           .val(),
+                    classes = (style && style.length ? "btn " : "") +
+                              style + " " + size;
+
+                return new $.Deferred().resolve(
+                    $url_source.val() + "#" + $anchor.val(),
+                    this.$el.find("input.window-new").prop("checked"),
+                    this.$el.find("#link-text").val() || $url_source.val(),
+                    classes);
+            } else {
+                return this._super(test);
+            }
+        },
+
+        /**
          * Put data in its corresponding place in the link dialog.
          *
          * When user edits an existing link that contains an anchor, put it
@@ -71,24 +99,26 @@
          */
         bind_data: function () {
             var url = this.element && (this.element.data("cke-saved-href")
-                               ||  this.element.getAttribute("href"));
-            if ($.inArray("#", url) != -1) {
-                url = url.split("#", 2);
-                this.element.data("cke-saved-href", url[0]);
-                this.$el.find("#anchor").val(url[1]);
-            }
-            return this._super();
-        },
+                                   ||  this.element.getAttribute("href")),
+                url_parts = url.split("#", 2),
+                result = null;
 
-        /**
-         * Add #anchor to URL.
-         */
-        make_link: function (url, new_window, label, classes) {
-            var anchor = this.$el.find("#anchor").val();
-            if (anchor) {
-                url += "#" + anchor;
+            // Trick this._super()
+            if (url_parts.length > 1) {
+                this.element.setAttribute("href", url_parts[0]);
+                this.element.data("cke-saved-href", url_parts[0])
+                this.$el.find("#anchor").val(url_parts[1]);
             }
-            return this._super(url, new_window, label, classes);
-        }
+
+            result = this._super();
+
+            // Back to expected status of this.element
+            if (url_parts.length > 1) {
+                this.element.setAttribute("href", url)
+                this.element.data("cke-saved-href", url)
+            }
+
+            return result;
+        },
     })
 })(jQuery);
