@@ -7,6 +7,9 @@ import base64
 from openerp import http
 from openerp.http import request
 
+from openerp.addons.website_portal.controllers.main import WebsiteAccount
+
+
 PPG = 20  # Products Per Page
 
 
@@ -49,9 +52,10 @@ class WebsiteProductSupplier(http.Controller):
             supplierinfo_dic, data)
         return supplierinfo_dic
 
-    @http.route(['/my/supplier/product/<model("product.supplierinfo"):supplierinfo>',
-                 '/my/supplier/product/new'],
-                type='http', auth="user", website=True)
+    @http.route([
+        '/my/supplier/product/<model("product.supplierinfo"):supplierinfo>',
+        '/my/supplier/product/new'
+    ], type='http', auth="user", website=True)
     def supplier_info(self, supplierinfo=None, category='', search='', **post):
         if supplierinfo and supplierinfo.name != request.env.user.partner_id:
             return request.website.render('website.404')
@@ -72,7 +76,7 @@ class WebsiteProductSupplier(http.Controller):
             'pricelist': supplierinfo.pricelist_ids
         })
         return request.website.render(
-            "website_product_supplier.product_supplier_container_form", values)
+            "website_product_supplier.product", values)
 
     def _prepare_render_values(self, supplierinfo, form_vals):
         values = {
@@ -85,7 +89,8 @@ class WebsiteProductSupplier(http.Controller):
         }
         return values
 
-    @http.route('/my/supplier/product/save/', type='http', auth="user", website=True)
+    @http.route(
+        '/my/supplier/product/save/', type='http', auth="user", website=True)
     def supplier_info_create(self, **post):
         supplierinfo = request.env['product.supplierinfo'].sudo()
         form_vals = self.supplierinfo_field_parse(post)
@@ -126,7 +131,8 @@ class WebsiteProductSupplier(http.Controller):
             "website_product_supplier.product_supplier_container_form", values)
 
     @http.route(
-        '/my/supplier/product/save/<model("product.supplierinfo"):supplierinfo>',
+        '/my/supplier/'
+        'product/save/<model("product.supplierinfo"):supplierinfo>',
         type='http', auth="user", website=True)
     def supplier_info_save(self, supplierinfo=None, **post):
         if supplierinfo.name != request.env.user.partner_id:
@@ -195,3 +201,25 @@ class WebsiteProductSupplier(http.Controller):
         res = self.supplierinfo_list(page, **post)
         res.template = "website_product_supplier.supplier_product_list"
         return res
+
+
+class ProductSupplierWebsiteAccount(WebsiteAccount):
+
+    @http.route(['/my/home'], type='http', auth="user", website=True)
+    def account(self, **kw):
+        response = super(ProductSupplierWebsiteAccount, self).account(**kw)
+        if not request.env.user.partner_id.supplier:
+            return response
+
+        supplierinfo_obj = request.env['product.supplierinfo']
+        domain = [('name', '=', request.env.user.partner_id.id)]
+        # supplierinfo_count = supplierinfo_obj.search_count(domain)
+        #TODO manage pager
+        supplierinfo = supplierinfo_obj.search(domain, limit=PPG)
+        values = {
+            'suppliersinfo': supplierinfo,
+            # 'pager': pager,
+            'user': request.env.user,
+        }
+        response.qcontext.update(values)
+        return response
