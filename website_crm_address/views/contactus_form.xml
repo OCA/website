@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="contactus_form" inherit_id="website_crm.contactus_form">
+            <xpath expr="//div[./div/input[@name='email_from']]" position="after">
+                <div t-attf-class="form-group #{error and 'street' in error and 'has-error' or ''}">
+                    <label class="col-md-3 col-sm-4 control-label" for="street">Street</label>
+                    <div class="col-md-7 col-sm-8">
+                        <input type="text" class="form-control" name="street" t-attf-value="#{street or ''}"/>
+                    </div>
+                </div>
+                <div t-attf-class="form-group #{error and 'zipcode' in error and 'has-error' or ''}">
+                    <label class="col-md-3 col-sm-4 control-label" for="zipcode">Zip</label>
+                    <div class="col-md-7 col-sm-8">
+                        <input type="text" class="form-control" name="zipcode" t-attf-value="#{zipcode or dict(kwargs).get('zipcode', '')}"/>
+                    </div>
+                </div>
+                <div t-attf-class="form-group #{error and 'city' in error and 'has-error' or ''}">
+                    <label class="col-md-3 col-sm-4 control-label" for="city">City</label>
+                    <div class="col-md-7 col-sm-8">
+                        <input type="text" class="form-control" name="city" t-attf-value="#{city or ''}"/>
+                    </div>
+                </div>
+                <div t-attf-class="form-group #{error and 'country_id' in error and 'has-error' or ''}">
+                    <label class="col-md-3 col-sm-4 control-label" for="country_id">Country</label>
+                    <div class="col-md-7 col-sm-8">
+                        <select name="country_id" class="form-control">
+                            <option value="">Country...</option>
+                            <t t-foreach="request.env['res.country'].search([])" t-as="country">
+                                <option t-att-value="country.id" t-att-selected="country.id == (int(country_id) if country_id else website.user_id.company_id.country_id.id)"><t t-esc="country.name"/></option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</openerp>
