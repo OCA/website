@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Antiun Ingenieria S.L. - Antonio Espinosa
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data noupdate="1">
+
+<record id="web_tree_many2one_clickable_default" model="ir.config_parameter">
+    <field name="key">web_tree_many2one_clickable.default</field>
+    <field name="value">True</field>
+</record>
+
+</data>
+</openerp>

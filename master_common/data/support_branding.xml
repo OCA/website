@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Antiun Ingenieria S.L. - Antonio Espinosa
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data noupdate="1">
+
+<record id="support_branding_company_name" model="ir.config_parameter">
+    <field name="key">support_branding.company_name</field>
+    <field name="value">Antiun Ingeniería S.L.</field>
+</record>
+
+<record id="support_branding_company_url" model="ir.config_parameter">
+    <field name="key">support_branding.company_url</field>
+    <field name="value">http://www.antiun.com</field>
+</record>
+
+<record id="support_branding_company_color" model="ir.config_parameter">
+    <field name="key">support_branding.company_color</field>
+    <field name="value">#0190d8</field>
+</record>
+
+<record id="support_branding_support_email" model="ir.config_parameter">
+    <field name="key">support_branding.support_email</field>
+    <field name="value">desoporte@antiun.com</field>
+</record>
+
+</data>
+</openerp>
