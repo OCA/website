@@ -7,10 +7,8 @@
     'category': 'Personalization',
     'version': '8.0.1.0.0',
     'depends': [
-        'mass_mailing_confirm',
-        'mass_mailing_partner',
-        'mass_mailing_statistic_extra',
-        'marketing_security_group',
+        # 'crm_survey',
+        'partner_survey',
     ],
     'external_dependencies': {},
     'data': [
