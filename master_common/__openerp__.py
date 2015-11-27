@@ -7,6 +7,7 @@
     'category': 'Personalization',
     'version': '8.0.1.0.0',
     'depends': [
+        'antiun_backend_theme',
         'support_branding',
         'disable_openerp_online',
         'base_export_manager',
