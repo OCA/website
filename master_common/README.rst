@@ -46,6 +46,8 @@ And automatically configure this system parameters for Antiun Ingeniería:
 * web_tree_many2one_clickable.default
 * web_m2x_options.create
 
+**IMPORTANT NOTE**: support_branding.* parameters are overwritten with every update, but web_tree_many2one_clickable.default and web_m2x_options.create not.
+
 
 Bug Tracker
 ===========
