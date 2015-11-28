@@ -12,6 +12,8 @@ It depends on those addons:
 
 * `odoo/odoo <https://github.com/odoo/odoo/tree/8.0>`_ :
     * `survey_crm <https://github.com/odoo/odoo/tree/8.0/addons/survey_crm>`_
+
+* `OCA/survey <https://github.com/OCA/survey/tree/8.0>`_ :
     * `partner_survey <https://github.com/OCA/survey/tree/8.0/partner_survey>`_
 
 
