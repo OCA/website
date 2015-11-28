@@ -69,12 +69,8 @@ class WebsiteProductSupplier(http.Controller):
         if supplierinfo is None:
             supplierinfo = request.env['product.supplierinfo']
         supplierinfo = supplierinfo.sudo()
-        values['main_obj'] = supplierinfo
-        values.update({
-            'supplierinfo': self.supplierinfo_field_parse(supplierinfo),
-            'product': supplierinfo.product_tmpl_id,
-            'pricelist': supplierinfo.pricelist_ids
-        })
+        form_vals = self.supplierinfo_field_parse(supplierinfo)
+        values.update(self._prepare_render_values(supplierinfo, form_vals))
         return request.website.render(
             "website_product_supplier.product", values)
 
@@ -85,19 +81,19 @@ class WebsiteProductSupplier(http.Controller):
             'product': supplierinfo.product_tmpl_id,
             'user': request.env.user,
             'pricelist': supplierinfo.pricelist_ids,
-            'error': self.check_product_form_validate(form_vals),
         }
         return values
 
-    @http.route(
-        '/my/supplier/product/save/', type='http', auth="user", website=True)
+    @http.route('/my/supplier/product/save/', type='http', auth="user",
+                website=True)
     def supplier_info_create(self, **post):
         supplierinfo = request.env['product.supplierinfo'].sudo()
         form_vals = self.supplierinfo_field_parse(post)
         values = self._prepare_render_values(supplierinfo, form_vals)
+        values['error'] = self.check_product_form_validate(form_vals)
         if values["error"]:
             return request.website.render(
-                "website_product_supplier.product_supplier_container_form",
+                "website_product_supplier.product",
                 values)
 
         product_vals = {'name': form_vals.get('product_name')}
@@ -125,24 +121,23 @@ class WebsiteProductSupplier(http.Controller):
         except:
             values.update(error={'error_name': 'Invalid fields'})
             return request.website.render(
-                "website_product_supplier.product_supplier_container_form",
+                "website_product_supplier.product",
                 values)
         return request.website.render(
-            "website_product_supplier.product_supplier_container_form", values)
+            "website_product_supplier.product", values)
 
-    @http.route(
-        '/my/supplier/'
-        'product/save/<model("product.supplierinfo"):supplierinfo>',
-        type='http', auth="user", website=True)
+    @http.route('/my/supplier/product/save/<model("product.supplierinfo"):supp'
+                'lierinfo>', type='http', auth="user", website=True)
     def supplier_info_save(self, supplierinfo=None, **post):
         if supplierinfo.name != request.env.user.partner_id:
             return request.website.render('website.404')
         supplierinfo = supplierinfo.sudo()
         form_vals = self.supplierinfo_field_parse(post)
         values = self._prepare_render_values(supplierinfo, form_vals)
+        values['error'] = self.check_product_form_validate(form_vals)
         if values["error"]:
             return request.website.render(
-                "website_product_supplier.product_supplier_container_form",
+                "website_product_supplier.product",
                 values)
         try:
             form_vals.update({
@@ -153,10 +148,10 @@ class WebsiteProductSupplier(http.Controller):
         except:
             values.update(error={'error_name': 'Invalid fields'})
             return request.website.render(
-                "website_product_supplier.product_supplier_container_form",
+                "website_product_supplier.product",
                 values)
         return request.website.render(
-            "website_product_supplier.product_supplier_container_form", values)
+            "website_product_supplier.product", values)
 
     def _prepare_supplierinfo_values(self, vals):
         # Hook to rewrite
@@ -192,7 +187,7 @@ class WebsiteProductSupplier(http.Controller):
         values = self._prepare_supplierinfo_list(supplierinfo, pager)
 
         return request.website.render(
-            "website_product_supplier.product_supplier_container", values)
+            "website_product_supplier.product", values)
 
     @http.route(['/my/supplier/product/list_only',
                  '/my/supplier/product/list_only/page/<int:page>'],
