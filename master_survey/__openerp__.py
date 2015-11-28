@@ -7,7 +7,7 @@
     'category': 'Personalization',
     'version': '8.0.1.0.0',
     'depends': [
-        # 'crm_survey',
+        'survey_crm',
         'partner_survey',
     ],
     'external_dependencies': {},

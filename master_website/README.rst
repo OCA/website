@@ -11,7 +11,7 @@ This module is a master addon for installing and configuring a website vertical 
 It depends on those addons:
 
 * `odoo/odoo <https://github.com/odoo/odoo/tree/8.0>`_ :
-    * `website_crm <https://github.com/odoo/odoo/tree/8.0/website_crm>`_
+    * `website_crm <https://github.com/odoo/odoo/tree/8.0/addons/website_crm>`_
 
 * `OCA/social <https://github.com/OCA/social/tree/8.0>`_ :
     * `mass_mailing_custom_unsubscribe <https://github.com/OCA/social/tree/8.0/mass_mailing_custom_unsubscribe>`_

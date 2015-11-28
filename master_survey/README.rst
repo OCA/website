@@ -10,8 +10,8 @@ This module is a master addon for installing and configuring a survey vertical s
 
 It depends on those addons:
 
-* `OCA/survey <https://github.com/OCA/survey/tree/8.0>`_ :
-    * `crm_survey <#>`_ (not created yet)
+* `odoo/odoo <https://github.com/odoo/odoo/tree/8.0>`_ :
+    * `survey_crm <https://github.com/odoo/odoo/tree/8.0/addons/survey_crm>`_
     * `partner_survey <https://github.com/OCA/survey/tree/8.0/partner_survey>`_
 
 
