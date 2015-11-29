@@ -6,8 +6,6 @@
           name="website_product_supplier assets">
     <xpath expr="." position="inside">
         <link rel="stylesheet" href="/website_product_supplier/static/src/css/theme.css"/>
-        <script src="website_product_supplier/static/src/js/website_product_supplier.js"
-                type="text/javascript"/>
     </xpath>
 </template>
 
