@@ -112,7 +112,8 @@ class WebsiteProductSupplier(http.Controller):
         values['product'] = product
         try:
             supplierinfo = supplierinfo.create(
-                self._prepare_supplierinfo_values(form_vals))
+                self._prepare_supplierinfo_values(
+                    supplierinfo, form_vals, post))
             values.update({
                 'product': product,
                 'main_obj': supplierinfo,
