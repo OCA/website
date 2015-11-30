@@ -7,6 +7,7 @@
     'category': 'Personalization',
     'version': '8.0.1.0.0',
     'depends': [
+        'website_sale',
         'website_sale_require_legal',
     ],
     'external_dependencies': {},
