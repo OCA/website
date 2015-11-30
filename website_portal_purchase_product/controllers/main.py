@@ -144,7 +144,8 @@ class WebsiteProductSupplier(http.Controller):
                 'pricelist_ids': [(1, supplierinfo.pricelist_ids[0].id, {
                     'min_quantity': post.get('min_quantity', 0.0),
                     'price': post.get('price', 0.0)})]})
-            supplierinfo.write(self._prepare_supplierinfo_values(form_vals))
+            supplierinfo.write(self._prepare_supplierinfo_values(
+                supplierinfo, form_vals, post))
         except:
             values.update(error={'error_name': 'Invalid fields'})
             return request.website.render(
@@ -153,7 +154,7 @@ class WebsiteProductSupplier(http.Controller):
         return request.website.render(
             "website_product_supplier.product", values)
 
-    def _prepare_supplierinfo_values(self, vals):
+    def _prepare_supplierinfo_values(self, supplierinfo, vals, post):
         # Hook to rewrite
         return vals
 
