@@ -63,8 +63,7 @@ class WebsiteSale(website_sale):
             countries_domain)
 
         if not post and request.uid != request.website.user_id.id:
-            values['checkout'].update({'street': partner.street_name,
-                                       'street_number': partner.street_number})
+            values['checkout'].update({'street': partner.street})
 
         result = self.payment(post=post)
         values.update(result.qcontext)
@@ -121,10 +120,7 @@ class WebsiteSale(website_sale):
                 'is_company': True
             })
 
-        checkout['street_name'] = checkout.get('street')
-        if checkout.get('street_number'):
-            checkout['street'] = checkout.get('street') + ' ' + checkout.get(
-                'street_number')
+        checkout['street'] = checkout.get('street')
 
         billing_info = dict((k, v) for k, v in checkout.items()
                             if 'shipping_' not in k and k != 'company')
@@ -151,10 +147,7 @@ class WebsiteSale(website_sale):
             shipping_info = {
                 'phone': post['shipping_phone'],
                 'zip': post['shipping_zip'],
-                'street': post['shipping_street'] + ' ' + post.get(
-                    'shipping_street_number'),
-                'street_name': post['shipping_street'],
-                'street_number': post['shipping_street_number'],
+                'street': post['shipping_street'],
                 'city': post['shipping_city'],
                 'name': post['shipping_name'],
                 'email': post['email'],

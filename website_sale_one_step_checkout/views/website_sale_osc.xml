@@ -82,10 +82,7 @@
           </td>
           <td class="text-right">
             <span t-field="website_sale_order.amount_untaxed"
-                  t-field-options='{
-								"widget": "monetary",
-								"display_currency": "website.pricelist_id.currency_id"
-							}'/>
+                  t-field-options='{"widget": "monetary", "display_currency": "website.pricelist_id.currency_id"}'/>
           </td>
         </tr>
       </xpath>
@@ -102,10 +99,7 @@
           </th>
           <th class="text-right">
             <h3>
-              <span t-field="website_sale_order.amount_total" t-field-options='{
-									"widget": "monetary",
-									"display_currency": "website.pricelist_id.currency_id"
-								}'/>
+              <span t-field="website_sale_order.amount_total" t-field-options='{"widget": "monetary", "display_currency": "website.pricelist_id.currency_id"}'/>
             </h3>
           </th>
         </tr>
@@ -134,8 +128,7 @@
                   </small>
                 </h3>
                 <div id="osc_billing">
-                  <div t-attf-class="form-group #{error.get('name') and
-									'has-error' or ''} col-lg-12">
+                  <div t-attf-class="form-group #{error.get('name') and 'has-error' or ''} col-lg-12">
                     <label class="control-label" for="contact_name">
                       <div class="required_asterisk">*</div>
                       Your Name
@@ -143,8 +136,7 @@
                     <input type="text" name="name" class="form-control"
                            t-att-value="checkout.get('name')"/>
                   </div>
-                  <div t-attf-class="form-group #{error.get('company') and
-									'has-error' or ''} col-lg-12">
+                  <div t-attf-class="form-group #{error.get('company') and 'has-error' or ''} col-lg-12">
                     <label class="control-label" for="company"
                            style="font-weight: normal">Your Company
                     </label>
@@ -178,17 +170,6 @@
                     </label>
                     <input type="text" name="street" class="form-control"
                            t-att-value="checkout.get('street')"/>
-                  </div>
-
-                  <div
-                      t-attf-class="form-group #{error.get('street_number') and 'has-error' or ''} col-lg-3">
-                    <label class="control-label" for="street_number">
-                      <div class="required_asterisk">*</div>
-                      No.
-                    </label>
-                    <input type="text" name="street_number"
-                           class="form-control"
-                           t-att-value="checkout.get('street_number')"/>
                   </div>
                   <div class="clearfix"/>
 
@@ -308,16 +289,6 @@
                            class="form-control"
                            t-att-value="checkout.get('shipping_street')"/>
                   </div>
-                  <div
-                      t-attf-class="form-group #{error.get('shipping_street_number') and 'has-error' or ''} col-lg-3">
-                    <label class="control-label" for="shipping_street_number">
-                      <div class="required_asterisk">*</div>
-                      No.
-                    </label>
-                    <input type="text" name="shipping_street_number"
-                           class="form-control"
-                           t-att-value="checkout.get('shipping_street_number')"/>
-                  </div>
                   <div class="clearfix"/>
                   <div
                       t-attf-class="form-group #{error.get('shipping_city') and 'has-error' or ''} col-lg-6">
@@ -398,10 +369,7 @@
                                t-att-checked="order.carrier_id and order.carrier_id.id == delivery.id and 'checked' or False"/>
                         <span t-field="delivery.name"/>
                         <span class="badge" t-field="delivery.price"
-                              t-field-options='{
-														"widget": "monetary",
-														"display_currency": "website.pricelist_id.currency_id"
-													}'/>
+                              t-field-options='{"widget": "monetary", "display_currency": "website.pricelist_id.currency_id"}'/>
                       </label>
                     </li>
                   </ul>
@@ -461,10 +429,7 @@
                         </td>
                         <td class="text-center">
                           <span t-field="line.price_unit"
-                                t-field-options='{
-															"widget": "monetary",
-															"display_currency": "website.pricelist_id.currency_id"
-														}'/>
+                                t-field-options='{"widget": "monetary", "display_currency": "website.pricelist_id.currency_id"}'/>
                         </td>
                         <td>
                           <div t-esc="line.product_uom_qty"/>
