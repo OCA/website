@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="view_website_config_settings" model="ir.ui.view">
+    <field name="name">Adding website logo</field>
+    <field name="model">website.config.settings</field>
+    <field name="inherit_id" ref="website.view_website_config_settings"/>
+    <field name="arch" type="xml">
+        <group string="Domain" position="after">
+            <div name="logo">
+                <separator string="Logo"/>
+                <group name="logo">
+                    <field name="logo" widget="image" nolabel="1"/>
+                </group>
+            </div>
+        </group>
+    </field>
+</record>
+
+</data>
+</openerp>
