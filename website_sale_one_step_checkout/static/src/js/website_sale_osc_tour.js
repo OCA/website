@@ -42,7 +42,6 @@
                         $("input[name='email']").val("website_sale_test_shoptest@websitesaletest.optenerp.com");
                     $("input[name='phone']").val("123");
                     $("input[name='street']").val("xyz");
-                    $("input[name='street_number']").val("123");
                     $("input[name='city']").val("Magdeburg");
                     $("input[name='zip']").val("39104");
                     $("select[name='country_id']").val("11");
