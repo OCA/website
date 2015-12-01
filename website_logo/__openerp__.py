@@ -23,14 +23,17 @@
     'summary': 'Website company logo',
     'version': '9.0.1.0.0',
     'category': 'Website',
-    'author': "Agile Business Group,Odoo Community Association (OCA)",
+    'author': "Agile Business Group, "
+              "Antiun Ingeniería S.L., "
+              "Odoo Community Association (OCA)",
     'website': 'http://www.agilebg.com',
     'license': 'AGPL-3',
     'depends': [
         'website',
     ],
     'data': [
-        'views/company_view.xml',
+        'views/res_config_view.xml',
+        'views/website_view.xml',
         'views/website_templates.xml',
     ],
     'qweb': [
