@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-03 23:14+0000\n"
+"POT-Creation-Date: 2015-11-28 02:04+0000\n"
 "PO-Revision-Date: 2015-09-30 14:33+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Dutch (http://www.transifex.com/oca/OCA-website-8-0/language/nl/)\n"
@@ -25,7 +25,7 @@ msgstr ""
 #. module: website_portal
 #: view:website:website_portal.details
 msgid "City"
-msgstr ""
+msgstr "Stad"
 
 #. module: website_portal
 #: view:website:website_portal.details
@@ -50,12 +50,12 @@ msgstr ""
 #. module: website_portal
 #: view:website:website_portal.details
 msgid "Country"
-msgstr ""
+msgstr "Land"
 
 #. module: website_portal
 #: view:website:website_portal.details
 msgid "Country..."
-msgstr ""
+msgstr "Kies land..."
 
 #. module: website_portal
 #: view:website:website_portal.account
@@ -73,7 +73,7 @@ msgid "Email"
 msgstr "E-mail"
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:76
+#: code:addons/website_portal/controllers/main.py:77
 #, python-format
 msgid "Invalid Email! Please enter a valid email address."
 msgstr ""
@@ -99,7 +99,7 @@ msgid "Place your content here."
 msgstr ""
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:93
+#: code:addons/website_portal/controllers/main.py:94
 #, python-format
 msgid "Some required fields are empty."
 msgstr ""
@@ -112,7 +112,7 @@ msgstr ""
 #. module: website_portal
 #: view:website:website_portal.details
 msgid "Street"
-msgstr ""
+msgstr "Straat"
 
 #. module: website_portal
 #: view:website:website_portal.details
