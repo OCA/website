@@ -4,6 +4,7 @@
 # 
 # Translators:
 # Carles Antolí <carlesantoli@hotmail.com>, 2015
+# Antonio Espinosa <antonioea@antiun.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
@@ -29,12 +30,22 @@ msgid "Companies"
 msgstr "Compañías"
 
 #. module: website_logo
-#: view:res.company:website_logo.view_company_form
-msgid "Configuration"
-msgstr "Configuración"
+#: view:website:website_logo.view_website_form
+msgid "Logo"
+msgstr "Logo"
 
 #. module: website_logo
-#: view:res.company:website_logo.view_company_form
-#: field:res.company,website_logo:0
+#: help:website,logo:0
+msgid "This field holds the logo for this website, showed in header. Recommended size is 180x50"
+msgstr "Este campo define el logo para este sitio web, mostrado en la cabecera. Tamaño recomendado 180x50"
+
+#. module: website_logo
+#: model:ir.model,name:website_logo.model_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: website_logo
+#: field:website,logo:0
 msgid "Website logo"
 msgstr "Logo Sitio Web"
+
