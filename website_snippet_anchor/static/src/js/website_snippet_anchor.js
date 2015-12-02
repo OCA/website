@@ -21,9 +21,10 @@
          */
         select: function (event, window_title, default_) {
             var self = this;
+            default_ = default_ || self.$target.attr("id");
             website.prompt({
                 "window_title": window_title,
-                "default": default_ || self.$target.attr("id"),
+                "default": default_,
                 "input": _t("Name"),
             }).then(function (answer) {
                 if (answer) {
@@ -35,7 +36,7 @@
                             answer
                         );
                     } else {
-                        self.$target.attr("id", answer);
+                        self.update_anchor(self.$target, answer);
                     }
                 } else {
                     self.$target.removeAttr("id");
@@ -54,6 +55,32 @@
             });
 
             return anchors;
+        },
+
+        /**
+         * Update an anchor and all its dependencies.
+         */
+        update_anchor: function ($element, new_anchor, old_anchor) {
+            old_anchor = old_anchor || $element.attr("id");
+            var new_hashed = "#" + new_anchor,
+                old_hashed = "#" + old_anchor;
+
+            // Set new anchor
+            $element.attr("id", new_anchor);
+            $element.attr("data-cke-saved-id", new_anchor);
+
+            // Fix other elements' attributes. The "data-cke-saved-*" attribute
+            // forces Odoo to update when no visible changes are made.
+            $("[href='" + old_hashed + "'], \
+               [data-cke-saved-href='" + old_hashed + "']")
+                .attr("href", new_hashed)
+                .attr("data-cke-saved-href", new_hashed);
+            $("[data-target='" + old_hashed + "']")
+                .attr("data-target", new_hashed);
+            $("[for='" + old_anchor + "'], \
+               [data-cke-saved-for='" + old_anchor + "']")
+                .attr("for", new_anchor)
+                .attr("data-cke-saved-for", new_anchor);
         },
     });
 
