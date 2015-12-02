@@ -124,8 +124,8 @@ class WebsiteProductSupplier(http.Controller):
             return request.website.render(
                 "website_product_supplier.product",
                 values)
-        return request.website.render(
-            "website_product_supplier.product", values)
+        return http.redirect_with_hash(
+            '/my/supplier/product/%s' % supplierinfo.id)
 
     @http.route('/my/supplier/product/save/<model("product.supplierinfo"):supp'
                 'lierinfo>', type='http', auth="user", website=True)
@@ -152,8 +152,8 @@ class WebsiteProductSupplier(http.Controller):
             return request.website.render(
                 "website_product_supplier.product",
                 values)
-        return request.website.render(
-            "website_product_supplier.product", values)
+        return http.redirect_with_hash(
+            '/my/supplier/product/%s' % supplierinfo.id)
 
     def _prepare_supplierinfo_values(self, supplierinfo, vals, post):
         # Hook to rewrite
