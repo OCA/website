@@ -7,7 +7,7 @@
     "summary": "Force the user to accept the legal terms to open an account",
     "version": "8.0.1.0.0",
     "category": "Website",
-    "website": "https://odoo-community.org/",
+    "website": "http://www.antiun.com",
     "author": "Antiun Ingeniería, S.L., Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,

@@ -8,8 +8,7 @@
           active="True"
           customize_show="True">
     <xpath expr="./div[last()]" position="after">
-        <div t-if="not only_passwords"
-             class="form-group field-accepted_legal_terms">
+        <div class="form-group field-accepted_legal_terms">
             <label for="accepted_legal_terms" class="control-label">
                 <input type="checkbox"
                        name="accepted_legal_terms"
