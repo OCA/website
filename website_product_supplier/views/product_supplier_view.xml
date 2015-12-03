@@ -7,7 +7,7 @@
     <t t-call="website.layout">
         <div class="container mt8">
             <div class="row">
-                <div class="col-md-12 col-xs-12">
+                <div class="col-md-12">
                     <!-- Show error information -->
                     <div class="alert alert-warning" t-if="error">
                         <i class="fa fa-exclamation-triangle"/><span t-esc="error.get('error_name', '')"/>
@@ -35,26 +35,26 @@
                                     <div id="product_fields" class="col-md-8">
                                         <section id="product_fields_base">
                                             <div id="product_name" class="row">
-                                                <div t-attf-class="col-md-8 col-xs-12 form-group #{error.get('product_name') and 'has-error' or ''}">
+                                                <div t-attf-class="col-md-8 form-group #{error.get('product_name') and 'has-error' or ''}">
                                                     <label class="control-label">Name</label>
                                                         <input id="product_name" class="form-control" name="product_name" placeholder="Product name..."
                                                                t-att-value="supplierinfo.get('product_name')"/>
                                                 </div>
-                                                <div t-attf-class="col-md-4 col-xs-12 form-group #{error.get('product_code') and 'has-error' or ''}">
+                                                <div t-attf-class="col-md-4 form-group #{error.get('product_code') and 'has-error' or ''}">
                                                     <label class="control-label">Code</label>
                                                         <input id="product_code" class="form-control" name="product_code" placeholder="Product Code..."
                                                                t-att-value="supplierinfo.get('product_code')"/>
                                                 </div>
                                             </div>
                                             <div id="supplier_info" class="row">
-                                                <div t-attf-class="col-md-4 col-xs-12 form-group #{error.get('min_qty') and 'has-error' or ''}">
+                                                <div t-attf-class="col-md-4 form-group #{error.get('min_qty') and 'has-error' or ''}">
                                                     <label class="control-label">Min Quantity</label>
                                                     <div class="controls">
                                                         <input id="min_qty" class="form-control" name="min_qty" placeholder="Min Quantity..."
                                                                t-att-value="supplierinfo.get('min_qty')"/>
                                                     </div>
                                                 </div>
-                                                <div t-attf-class="col-md-4 col-xs-12 form-group #{error.get('delay') and 'has-error' or ''}">
+                                                <div t-attf-class="col-md-4 form-group #{error.get('delay') and 'has-error' or ''}">
                                                     <label class="control-label">Delay</label>
                                                     <div class="controls">
                                                         <input id="delay" class="form-control" name="delay" placeholder="Delay..."
@@ -63,14 +63,14 @@
                                                 </div>
                                             </div>
                                             <div id="price_list" class="row">
-                                                <div class="col-md-4 col-xs-12 form-group">
+                                                <div class="col-md-4 form-group">
                                                     <label class="control-label">Price Min Quantity</label>
                                                     <div class="controls">
                                                         <input id="min_quantity" class="form-control" name="min_quantity" placeholder="Min Quantity..."
                                                                t-att-value="pricelist and pricelist[0].min_quantity"/>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 col-xs-12 form-group">
+                                                <div class="col-md-4 form-group">
                                                     <label class="control-label">Price</label>
                                                     <div class="controls">
                                                         <input id="price" class="form-control" name="price" placeholder="Price..."
@@ -107,10 +107,10 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="row mb0">
-                    <div class="col-md-8 col-xs-12">
+                    <div class="col-md-6">
                         <h3 class="panel-title">Your Products</h3>
                     </div>
-                    <div class="col-md-4 col-xs-12">
+                    <div class="col-md-6">
                         <div class="col-md-10">
                             <div class="input-group">
                               <input type="text" class="form-control" placeholder="Search..."/>
