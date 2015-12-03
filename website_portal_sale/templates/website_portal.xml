@@ -5,7 +5,7 @@
     <template id="account" name="Account" inherit_id="website_portal.account">
         <xpath expr="//ul[contains(@name,'account-content-nav')]" position="inside">
             <t t-if="user_id.partner_id.customer">
-                <li class="active"><a data-toggle="tab" href="#home_customer">Customer</a></li>
+                <li class="active"><a data-toggle="tab" href="#home_customer">Sales</a></li>
             </t>
         </xpath>
         <xpath expr="//div[contains(@name,'account-content')]" position="inside">
