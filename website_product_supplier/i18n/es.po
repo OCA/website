@@ -1,0 +1,124 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_product_supplier
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-03 17:33+0000\n"
+"PO-Revision-Date: 2015-12-03 18:38+0100\n"
+"Last-Translator: Sergio Teruel <sergio@incaser.es>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es-ES\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Code"
+msgstr "Código"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Delay"
+msgstr "Retraso"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Delay..."
+msgstr "Retraso"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Load Picture"
+msgstr "Cargar Imagen"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Min Quantity"
+msgstr "Cantidad mínima"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Min Quantity..."
+msgstr "Cantidad mín."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Name"
+msgstr "Nombre"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_list
+msgid "Not Published"
+msgstr "No publicado"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price"
+msgstr "Precio"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price Min Quantity"
+msgstr "Precio"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price..."
+msgstr "Precio..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Product Code..."
+msgstr "Código producto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Product name..."
+msgstr "Nombre del producto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_list
+msgid "Published"
+msgstr "Publicado"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Save Product"
+msgstr "Guardar cambios"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_list
+msgid "Search..."
+msgstr "Buscar"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_list
+msgid "Your Products"
+msgstr "Sus productos"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "back to list"
+msgstr "Volver a la lista"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "or"
+msgstr "o"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_supplier_container
+#, fuzzy
+msgid "website_product_supplier.product_supplier_container"
+msgstr "Información de un proveedor de producto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_supplier_container_form
+#, fuzzy
+msgid "website_product_supplier.product_supplier_container_form"
+msgstr "Precios de proveedor en el formulario de producto"
