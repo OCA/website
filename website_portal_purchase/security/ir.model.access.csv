@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_auth_supplier_purchase_order,auth_supplier_purchase_order,purchase.model_purchase_order,auth_supplier.group_auth_supplier,1,0,0,0
+access_auth_supplier_purchase_order_line,auth_supplier_purchase_order_line,purchase.model_purchase_order_line,auth_supplier.group_auth_supplier,1,0,0,0
+access_auth_supplier_account_invoice,auth_supplier_account_invoice,account.model_account_invoice,auth_supplier.group_auth_supplier,1,0,0,0
+access_auth_supplier_account_invoice_line,auth_supplier_account_invoice_line,account.model_account_invoice_line,auth_supplier.group_auth_supplier,1,0,0,0
+access_product_product_purchase,website.portal.purchase.product.product,product.model_product_product,auth_supplier.group_auth_supplier,1,0,0,0
+access_product_template_purchase,website.portal.purchase.product.template,product.model_product_template,auth_supplier.group_auth_supplier,1,0,0,0
+access_account_payment_term_purchase,website.portal.purchase.account.payment.term,account.model_account_payment_term,auth_supplier.group_auth_supplier,1,0,0,0
+access_stock_picking_type_purchase,website.portal.purchase.stock.picking.type,stock.model_stock_picking_type,auth_supplier.group_auth_supplier,1,0,0,0
+access_stock_stock_warehouse_purchase,website.portal.purchase.stock.warehouse,stock.model_stock_warehouse,auth_supplier.group_auth_supplier,1,0,0,0
