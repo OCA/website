@@ -8,6 +8,7 @@
     'category': 'Website',
     'version': '8.0.1.0.0',
     'depends': [
+        'website_sale',
         'website_portal_purchase',
     ],
     'data': [
