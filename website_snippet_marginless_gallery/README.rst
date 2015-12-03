@@ -43,6 +43,10 @@ Known issues / Roadmap
   Bootstrap 4 starts being used in Odoo with its flexbox support, this will not
   be needed anymore.
 
+* Improve it using `Masonry <http://desandro.github.io/masonry/>`_ like the
+  `Graphene theme  <https://theme-graphene.odoo.com/page/blocks>`_ does. It
+  should allow to set arbitrary heights to images with a beautiful layout.
+
 Bug Tracker
 ===========
 
