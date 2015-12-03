@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="website_purchase_order_supplier_my" model="ir.rule">
+            <field name="name">Supplier Purchase Order</field>
+            <field name="model_id" ref="purchase.model_purchase_order"/>
+            <field name="global" eval="False"/>
+            <field name="groups" eval="[(4,ref('auth_supplier.group_auth_supplier'))]"/>
+            <field name="domain_force">[('partner_id', '=', user.partner_id.id)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="portal_purchase_order_user_rule" model="ir.rule">
+            <field name="name">Portal Personal Quotations/Purchase Orders</field>
+            <field name="model_id" ref="purchase.model_purchase_order"/>
+            <field name="domain_force">[('message_follower_ids','child_of',[user.commercial_partner_id.id])]</field>
+            <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+            <field eval="1" name="perm_unlink"/>
+            <field eval="1" name="perm_write"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_create"/>
+        </record>
+
+        <record id="website_account_invoice_supplier_my" model="ir.rule">
+            <field name="name">Supplier Account Invoice</field>
+            <field name="model_id" ref="account.model_account_invoice"/>
+            <field name="global" eval="False"/>
+            <field name="groups" eval="[(4,ref('auth_supplier.group_auth_supplier'))]"/>
+            <field name="domain_force">[('partner_id', '=', user.partner_id.id)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="website_account_invoice_line_supplier_my" model="ir.rule">
+            <field name="name">Supplier Account Invoice Lines</field>
+            <field name="model_id" ref="account.model_account_invoice_line"/>
+            <field name="global" eval="False"/>
+            <field name="groups" eval="[(4,ref('auth_supplier.group_auth_supplier'))]"/>
+            <field name="domain_force">[('invoice_id.partner_id', '=', user.partner_id.id)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+    </data>
+</openerp>

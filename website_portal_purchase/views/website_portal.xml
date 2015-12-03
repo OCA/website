@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="account" name="Account" inherit_id="website_portal.account">
+        <xpath expr="//ul[contains(@name,'account-content-nav')]" position="inside">
+            <t t-if="user_id.partner_id.supplier">
+                <li t-att-class="'active' if not user_id.partner_id.customer else ''">
+                    <a data-toggle="tab" href="#home_supplier">Purchases</a>
+                </li>
+            </t>
+        </xpath>
+        <xpath expr="//div[contains(@name,'account-content')]" position="inside">
+            <t t-if="user_id.partner_id.supplier">
+                <div id="home_supplier"
+                    t-att-class="'tab-pane fade' + (' in active' if not user_id.partner_id.customer else '')">
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="account_request_quotations" name="Account Request Quotations"
+              inherit_id="website_portal_purchase.account" customize_show="True"
+              active="True" priority="5">
+        <xpath expr="//div[@id='home_supplier']" position="inside">
+            <t t-call="website_portal_purchase.request_quotations" />
+        </xpath>
+    </template>
+
+    <template id="account_purchase_orders" name="Account Purchase Orders"
+              inherit_id="website_portal_purchase.account" customize_show="True"
+              active="True" priority="10">
+        <xpath expr="//div[@id='home_supplier']" position="inside">
+            <t t-call="website_portal_purchase.purchase_orders"/>
+        </xpath>
+    </template>
+
+    <template id="account_supplier_invoices" name="Account Supplier Invoices"
+              inherit_id="website_portal_purchase.account" customize_show="True"
+              active="True" priority="15">
+        <xpath expr="//div[@id='home_supplier']" position="inside">
+            <t t-call="website_portal_purchase.supplier_invoices" />
+        </xpath>
+    </template>
+
+</data>
+</openerp>
