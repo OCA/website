@@ -31,7 +31,7 @@ addon | version | summary
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 | Combine free and paid tickets on events
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 | Display the structure of your departments and their members.
 [website_legal_page](website_legal_page/) | 8.0.1.0.0 | Website legal page
-[website_logo](website_logo/) | 8.0.1.0.0 | Website company logo
+[website_logo](website_logo/) | 8.0.2.0.0 | Website company logo
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 | Website Menu Multilanguage
 [website_no_crawler](website_no_crawler/) | 8.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
