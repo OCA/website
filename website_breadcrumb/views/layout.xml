@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+<data>
+
+<template id="layout"
+          inherit_id="website.layout"
+          customize_show="True"
+          name="Breadcrumbs">
+    <xpath expr="//header">
+        <t t-call="website_breadcrumb.breadcrumb"/>
+    </xpath>
+</template>
+
+</data>
+</openerp>
