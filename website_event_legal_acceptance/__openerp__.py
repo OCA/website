@@ -29,15 +29,10 @@
 {
     'name': "Website Legal Acceptance",
     'category': 'Tools',
-    'version': '1.0',
+    'version': '8.0.2.0.0',
     'depends': [
-        'website_event',
-    ],
-    'data': [
-        'views/assets.xml',
-        'views/templates.xml',
-        'views/event_event_view.xml',
-        'security/ir.model.access.csv',
+        'website_sale_product_legal',
+        'website_event_sale_legal',
     ],
     'author': 'Antiun Ingenieria S.L., '
               'Serv. Tecnol. Avanzados - Pedro M. Baeza',
