@@ -54,6 +54,3 @@ docs/_build/
 # Backup files
 *~
 *.swp
-
-# Debug maps
-*.css.map
