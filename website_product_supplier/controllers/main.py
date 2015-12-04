@@ -113,7 +113,7 @@ class WebsiteProductSupplier(http.Controller):
         try:
             supplierinfo = supplierinfo.create(
                 self._prepare_supplierinfo_values(
-                    supplierinfo, form_vals, post))
+                    supplierinfo, product, form_vals, post))
             values.update({
                 'product': product,
                 'main_obj': supplierinfo,
@@ -146,7 +146,7 @@ class WebsiteProductSupplier(http.Controller):
                     'min_quantity': post.get('min_quantity', 0.0),
                     'price': post.get('price', 0.0)})]})
             supplierinfo.write(self._prepare_supplierinfo_values(
-                supplierinfo, form_vals, post))
+                supplierinfo, supplierinfo.product_tmpl_id, form_vals, post))
         except:
             values.update(error={'error_name': 'Invalid fields'})
             return request.website.render(
@@ -155,7 +155,7 @@ class WebsiteProductSupplier(http.Controller):
         return http.redirect_with_hash(
             '/my/supplier/product/%s' % supplierinfo.id)
 
-    def _prepare_supplierinfo_values(self, supplierinfo, vals, post):
+    def _prepare_supplierinfo_values(self, supplierinfo, product, vals, post):
         # Hook to rewrite
         return vals
 
