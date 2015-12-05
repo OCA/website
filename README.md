@@ -36,6 +36,7 @@ addon | version | summary
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 | Website Menu Multilanguage
 [website_no_crawler](website_no_crawler/) | 8.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
 [website_portal](website_portal/) | 8.0.1.0.0 | Account Management Frontend for your Customers
+[website_portal_sale](website_portal_sale/) | 8.0.1.0.0 | Add your sales document in the frontend portal (sales order, quotations, invoices)
 [website_sale_collapse_categories](website_sale_collapse_categories/) | 8.0.1.0.0 | Collapsible product categories in website shop
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 | Prevent optional products to be sold singularly
