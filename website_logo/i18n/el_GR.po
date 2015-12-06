@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-28 02:04+0000\n"
-"PO-Revision-Date: 2015-11-24 15:31+0000\n"
+"POT-Creation-Date: 2015-12-05 01:59+0000\n"
+"PO-Revision-Date: 2015-12-04 23:32+0000\n"
 "Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
 "Language-Team: Greek (Greece) (http://www.transifex.com/oca/OCA-website-8-0/language/el_GR/)\n"
 "MIME-Version: 1.0\n"
@@ -23,24 +23,27 @@ msgid "/website_logo.png"
 msgstr "/website_logo.png"
 
 #. module: website_logo
-#: model:ir.model,name:website_logo.model_res_company
-msgid "Companies"
-msgstr "Εταιρείες"
+#: view:website.config.settings:website_logo.view_website_config_settings
+msgid "Domain"
+msgstr ""
 
 #. module: website_logo
 #: view:website:website_logo.view_website_form
+#: view:website.config.settings:website_logo.view_website_config_settings
 msgid "Logo"
 msgstr ""
 
 #. module: website_logo
 #: help:website,logo:0
-msgid "This field holds the logo for this website, showed in header. Recommended size is 180x50"
+msgid ""
+"This field holds the logo for this website, showed in header. Recommended "
+"size is 180x50"
 msgstr ""
 
 #. module: website_logo
 #: model:ir.model,name:website_logo.model_website
 msgid "Website"
-msgstr ""
+msgstr "Ιστότοπος"
 
 #. module: website_logo
 #: field:website,logo:0
