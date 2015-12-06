@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-05 01:59+0000\n"
-"PO-Revision-Date: 2015-12-03 10:40+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2015-12-03 10:39+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Spanish (Costa Rica) (http://www.transifex.com/oca/OCA-website-8-0/language/es_CR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
+"Language: es_CR\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_snippet_anchor
@@ -22,28 +22,28 @@ msgstr ""
 #: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:12
 #, python-format
 msgid "Anchor"
-msgstr "Ancla"
+msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:35
 #, python-format
 msgid "Anchor already exists: "
-msgstr "El ancla ya existe: "
+msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:10
 #, python-format
 msgid "Anchors are appended to the URL like http://localhost/#your-anchor"
-msgstr "Las anclas se añaden a la URL como http://localhost/#su-ancla"
+msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:15
 #, python-format
 msgid "Choose anchor"
-msgstr "Escoja ancla"
+msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
@@ -55,18 +55,18 @@ msgstr "Nombre"
 #. module: website_snippet_anchor
 #: view:website:website.snippet_options
 msgid "Set anchor"
-msgstr "Establecer ancla"
+msgstr ""
 
 #. module: website_snippet_anchor
 #: view:website:website.snippet_options
 msgid ""
 "Use anchors to go directly to a section of your page, appending #anchor to "
 "the URL"
-msgstr "Use las anclas para ir directamente a una sección de su página, añadiendo #ancla a la URL"
+msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:19
 #, python-format
 msgid "your-anchor"
-msgstr "su-ancla"
+msgstr ""
