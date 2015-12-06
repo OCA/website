@@ -3,70 +3,71 @@
 # * website_snippet_anchor
 # 
 # Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-05 01:59+0000\n"
-"PO-Revision-Date: 2015-12-03 10:40+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"PO-Revision-Date: 2015-12-04 14:11+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:12
 #, python-format
 msgid "Anchor"
-msgstr "Ancla"
+msgstr "Sidro"
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:35
 #, python-format
 msgid "Anchor already exists: "
-msgstr "El ancla ya existe: "
+msgstr "Sidro že obstaja:"
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:10
 #, python-format
 msgid "Anchors are appended to the URL like http://localhost/#your-anchor"
-msgstr "Las anclas se añaden a la URL como http://localhost/#su-ancla"
+msgstr "Sidra so dodana URL povezavam, kot npr. http://localhost/#your-anchor"
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:15
 #, python-format
 msgid "Choose anchor"
-msgstr "Escoja ancla"
+msgstr "Izbira sidra"
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:28
 #, python-format
 msgid "Name"
-msgstr "Nombre"
+msgstr "Naziv"
 
 #. module: website_snippet_anchor
 #: view:website:website.snippet_options
 msgid "Set anchor"
-msgstr "Establecer ancla"
+msgstr "Nastavitev sidra"
 
 #. module: website_snippet_anchor
 #: view:website:website.snippet_options
 msgid ""
 "Use anchors to go directly to a section of your page, appending #anchor to "
 "the URL"
-msgstr "Use las anclas para ir directamente a una sección de su página, añadiendo #ancla a la URL"
+msgstr "Uporabite sidra za neposreden prehod na del strani, tako, da dodate #anchor URL povezavi"
 
 #. module: website_snippet_anchor
 #. openerp-web
 #: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:19
 #, python-format
 msgid "your-anchor"
-msgstr "su-ancla"
+msgstr "vaše-sidro"
