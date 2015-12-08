@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+
+    <t t-name="website.product.supplier.list.error">
+        <div class="alert alert-warning">
+            <i class="fa fa-exclamation-triangle"/>
+            <span name="error_description" t-raw="error_name"/>
+        </div>
+    </t>
+
+</templates>

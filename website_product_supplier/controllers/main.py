@@ -10,7 +10,7 @@ from openerp.http import request
 from openerp.addons.website_portal.controllers.main import WebsiteAccount
 
 
-PPG = 20  # Products Per Page
+PPG = 10  # Products Per Page
 
 
 class WebsiteProductSupplier(http.Controller):
@@ -171,13 +171,22 @@ class WebsiteProductSupplier(http.Controller):
         }
         return values
 
+    def _get_search_domain(self, search=None):
+        domain = [('name', '=', request.env.user.partner_id.id)]
+        if search:
+            for srch in search.split(" "):
+                domain += [
+                    ('product_name', 'ilike', srch),
+                ]
+        return domain
+
     @http.route(['/my/supplier/product/list',
                  '/my/supplier/product/list/page/<int:page>'],
                 type='http', auth="user", website=True)
     def supplierinfo_list(self, page=0, **post):
         supplierinfo_obj = request.env['product.supplierinfo']
-        domain = [('name', '=', request.env.user.partner_id.id)]
-        url = "/my/supplier/product/list"
+        domain = self._get_search_domain(post.get('search', ''))
+        url = "/my/supplier/product/list_only"
         supplierinfo_count = supplierinfo_obj.search_count(domain)
 
         pager = request.website.pager(
@@ -199,6 +208,17 @@ class WebsiteProductSupplier(http.Controller):
         res.template = "website_product_supplier.supplier_product_list"
         return res
 
+    @http.route(['/my/supplier/product/delete'], type='json',
+                auth="user", website=True)
+    def delete_product(self, supplierinfo_id):
+        supplierinfo = request.env['product.supplierinfo'].browse(
+            int(supplierinfo_id))
+        if len(supplierinfo.product_tmpl_id.seller_ids) == 1:
+            res = supplierinfo.product_tmpl_id.unlink()
+        else:
+            res = supplierinfo.unlink()
+        return res
+
 
 class ProductSupplierWebsiteAccount(WebsiteAccount):
 
@@ -207,15 +227,12 @@ class ProductSupplierWebsiteAccount(WebsiteAccount):
         response = super(ProductSupplierWebsiteAccount, self).account(**kw)
         if not request.env.user.partner_id.supplier:
             return response
-
         supplierinfo_obj = request.env['product.supplierinfo']
         domain = [('name', '=', request.env.user.partner_id.id)]
-        # supplierinfo_count = supplierinfo_obj.search_count(domain)
-        #TODO manage pager
         supplierinfo = supplierinfo_obj.search(domain, limit=PPG)
         values = {
             'suppliersinfo': supplierinfo,
-            # 'pager': pager,
+            'pager': False,
             'user': request.env.user,
         }
         response.qcontext.update(values)
