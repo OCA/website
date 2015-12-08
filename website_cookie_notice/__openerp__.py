@@ -24,7 +24,7 @@
     'version': '8.0.2.0.0',
     'category': 'Website',
     'author': "Agile Business Group, "
-              u"Antiun Ingeniería, S.L., "
+              u"Antiun Ingeniería S.L., "
               "Odoo Community Association (OCA)",
     'website': 'http://www.agilebg.com',
     'license': 'AGPL-3',
