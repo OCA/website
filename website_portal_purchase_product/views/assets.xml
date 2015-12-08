@@ -5,6 +5,8 @@
 <template id="assets_frontend" inherit_id="website.assets_frontend"
           name="website_product_supplier assets">
     <xpath expr="." position="inside">
+        <script type="text/javascript"
+                src="/website_product_supplier/static/src/js/website_product_supplier.js"></script>
         <link rel="stylesheet" href="/website_product_supplier/static/src/css/theme.css"/>
     </xpath>
 </template>

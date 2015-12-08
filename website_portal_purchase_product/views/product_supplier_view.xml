@@ -98,80 +98,90 @@
 
 <template id="product_list" name="Supplier Products">
     <div class="container">
-        <div class="products_pager">
-            <div class="row" style="width: 100%;">
-                <!--<t t-call="website_sale.search"><t t-set="search_class">pagination form-inline col-md-3</t></t>-->
-                <!--<t t-call="website.pager"/>-->
+        <h3>Your Products</h3>
+        <div class="info"/>
+        <div t-if="not suppliersinfo">
+            <p>There are currently no products for your account.</p>
+        </div>
+        <div t-if="pager" class="row">
+            <div class="products_pager">
+                <t t-call="website.pager"/>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="row mb0">
-                    <div class="col-md-6">
-                        <h3 class="panel-title">Your Products</h3>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="col-md-10">
-                            <div class="input-group">
-                              <input type="text" class="form-control" placeholder="Search..."/>
-                              <span class="input-group-btn">
-                                <button class="btn btn-default active" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                              </span>
-                            </div>
-                        </div>
-                        <div id="actions" class="col-md-1">
-                            <a href="/my/supplier/product/new" class="btn btn-default active">
-                                <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col-md-6 pull-right">
+                <div class="col-md-10 col-xs-8">
+                    <t t-call="website_product_supplier.search"/>
+                </div>
+                <div id="actions" class="col-md-2 col-xs-4">
+                    <t t-call="website_product_supplier.actions"/>
                 </div>
             </div>
-            <div class="panel-body">
-                <t t-foreach="suppliersinfo" t-as="supplierinfo">
-                    <t t-set="product" t-value="supplierinfo.product_tmpl_id"/>
-                    <div class="row mb8">
-                        <div class="col-md-2">
-                          <div class="oe_product_image">
-                              <a itemprop="url" t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)">
-                                  <img itemprop="image" class="img img-responsive"
-                                       t-att-src="website.image_url(product, 'image', None if product_image_big else '300x300')"
-                                       t-att-alt="supplierinfo.product_name"/>
-                              </a>
-                          </div>
-                        </div>
-                        <div class="col col-md-4 col-xs-6">
-                            <div class="row">
-                                <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)" t-att-alt="supplierinfo.product_name">
-                                    <span t-field="supplierinfo.product_name"></span>
-                                </a>
-                            </div>
-                            <div class="row">
-                                <span t-field="supplierinfo.product_code"></span>
-                            </div>
-                        </div>
-                        <div class="col col-md-1 col-xs-2">
-                            <span t-field="supplierinfo.pricelist_ids and supplierinfo.pricelist_ids[0].price"
-                                t-field-options='{"widget": "monetary", "display_currency": "user.company_id.currency_id"}'/>
-                        </div>
-                        <div class="col col-md-1 col-xs-2">
-                            <span t-if="product.website_published">
-                                <span class="label label-success"><i class="fa fa-fw fa-check"/>Published</span>
-                            </span>
-                            <span t-if="not product.website_published">
-                                <span class="label label-info"><i class="fa fa-fw fa-lock"/>Not Published</span>
-                            </span>
-                        </div>
-                    </div>
-                </t>
-            </div>
         </div>
-        <!--<div class="products_pager">-->
-          <!--<t t-call="website.pager"/>-->
-        <!--</div>-->
+        <div class="table-responsive mt8">
+            <t t-call="website_product_supplier.product_table"/>
+        </div>
+        <div t-if="pager" class="products_pager">
+          <t t-call="website.pager"/>
+        </div>
     </div>
+</template>
+
+<template id="product_table">
+    <table id="product_supplier" class="table table-striped ">
+        <thead>
+            <tr>
+                <th name="product_image">Picture</th>
+                <th name="product_name">Name</th>
+                <th name="price_list" class="text-right">Price</th>
+                <th name="website_published">Status</th>
+                <th name="actions"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <t t-foreach="suppliersinfo" t-as="supplierinfo">
+                <t t-call="website_product_supplier.product_item_table"/>
+            </t>
+        </tbody>
+    </table>
+</template>
+
+<template id="product_item_table">
+    <t t-set="product" t-value="supplierinfo.product_tmpl_id"/>
+    <tr>
+        <td name="product_image">
+          <div class="oe_product_image">
+              <a itemprop="url" t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)">
+                  <img itemprop="image" class="img img-responsive"
+                       t-att-src="website.image_url(product, 'image', None if product_image_big else '90x90')"
+                       t-att-alt="supplierinfo.product_name"/>
+              </a>
+          </div>
+        </td>
+        <td name="product_name">
+            <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)" t-att-alt="supplierinfo.product_name">
+                <span t-field="supplierinfo.product_name"></span>
+            </a>
+        </td>
+        <td name="price_list" class="text-right">
+            <span t-field="supplierinfo.pricelist_ids and supplierinfo.pricelist_ids[0].price"
+                t-field-options='{"widget": "monetary", "display_currency": "user.company_id.currency_id"}'/>
+        </td>
+        <td name="website_published" >
+            <span t-if="product.website_published">
+                <span class="label label-success"><i class="fa fa-fw fa-check"/>Published</span>
+            </span>
+            <span t-if="not product.website_published">
+                <span class="label label-info"><i class="fa fa-fw fa-lock"/>Not Published</span>
+            </span>
+        </td>
+        <td>
+            <button class="btn btn-default btn-del-product pull-right" type="button"
+                    t-att-oe_model_id="supplierinfo.id">
+                <i class="fa fa-trash"></i>
+            </button>
+        </td>
+    </tr>
 </template>
 
 <template id="product_supplier_container" name="Products"
@@ -198,6 +208,23 @@
     <t t-call="website.layout">
         <t t-call="website_product_supplier.product_list"/>
     </t>
+</template>
+
+<template id="search" name="Search hidden fields">
+    <form t-attf-action="/my/supplier/product/list_only/" method="get" t-att-class="search_class">
+        <div class="input-group">
+            <input type="text" name="search" class="search-query form-control" placeholder="Search..." t-att-value="search"/>
+            <span class="input-group-btn">
+                <a class="btn btn-default a-submit"><i class="fa fa-search"/></a>
+            </span>
+        </div>
+    </form>
+</template>
+
+<template id="actions" name="Website Product Supplier Actions">
+    <a href="/my/supplier/product/new" class="btn btn-default">
+        <i class="fa fa-plus"></i>
+    </a>
 </template>
 
 </data>
