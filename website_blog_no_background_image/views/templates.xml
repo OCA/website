@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+       <template id="show_post_complete_nobg" inherit_id="website_blog.blog_post_complete">
+           <xpath expr="//div[@id='title']" position="attributes">    
+               <attribute name="t-attf-style" />
+               <!-- todo reuse the full height calculator in js and divide it by four or five to have a small header (instead of the lazy 300px) -->
+               <attribute name="t-att-style"> 'background-image: ' + (' none;height: 300px;' if blog_post.background_image_show == 'no_image' else 'url(#'+ blog_post.background_image + '); height: 300px;' if blog_post.background_image_show == 'small_image' else 'url(#' + blog_post.background_image + ')' if blog_post.background_image_show == 'big_image' else '')
+              </attribute> 
+              <attribute name="class" />
+              <attribute name="t-att-class">'cover' + (' cover_js_small container' if (blog_post.background_image_show == 'small_image' or blog_post.background_image_show == 'no_image') else ' js_fullheight' if blog_post.background_image_show == 'big_image' else '' )</attribute>
+           </xpath>
+        </template>
+    </data>
+</openerp>
+
+
+
+

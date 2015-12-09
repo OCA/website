@@ -1,0 +1,9 @@
+/* best way to  contain an image cross browser approved */
+
+div.cover_js_small
+{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
