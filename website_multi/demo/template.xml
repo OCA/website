@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2014 Odoo SA
+     © 2015 Antiun Ingenieria S.L. - Antonio Espinosa
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+<!-- Different homepage for website 127.0.0.1 /!\ key should be the same as other homepage -->
+<!-- TODO: Refactor with ir.ui.view.template model
+<record id="website_ip_homepage_template" model="ir.ui.view">
+   <field name="name">Homepage (127.0.0.1)</field>
+   <field name="type">qweb</field>
+   <field name="page" eval="True" />
+
+   <field name="website_id" ref="website_ip" />
+   <field name="key">website.homepage</field>
+
+   <field name="arch" type="xml">
+       <t name="Homepage" priority="29" t-name="website.homepage">
+          <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+              <section class="oe_dark mt16 mb16">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 text-center mt32 mb32">
+                      <h2>Website 127.0.0.1 is so cool</h2>
+                    </div>
+                    <div class="col-md-12">
+                      <img class="img img-responsive" src="/website/static/src/img/big_picture.png" style="margin: 0 auto;"/>
+                    </div>
+                    <div class="col-md-6 col-md-offset-3 mb16 mt16">
+                      <p class="text-center">
+                        <b>A Small Subtitle</b>
+                      </p>
+                      <p class="text-center">Choose a vibrant image and write an inspiring paragraph about it. It does not have to be long, but it should reinforce your image.</p>
+                      <p class="text-center">
+                        <a href="/page/website.contactus">Contact us »</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </t>
+        </t>
+   </field>
+</record>
+-->
+
+<!--new page for website 127.0.0.1 /!\ key should be the end of url specify in the menu -->
+<!-- key should be equal to t-name -->
+<!-- TODO: Refactor with ir.ui.view.template model
+<record id="website_ip_other_template" model="ir.ui.view">
+   <field name="name">New page for 127.0.0.1</field>
+   <field name="type">qweb</field>
+   <field name="page" eval="True" />
+
+   <field name="website_id" ref="website_ip" />
+   <field name="key">website.other-127-0-0-1-page</field>
+
+   <field name="arch" type="xml">
+    <t t-name="website.other-127-0-0-1-page">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty"/>
+            <div><h1>Other page on 127.0.0.1</h1></div>
+            <div id="wrap" class="oe_structure oe_empty"/>
+        </t>
+    </t>
+
+   </field>
+</record>
+-->
+
+<!--Change Layout -->
+<!-- Page should be False for layout template -->
+<!-- TODO: Refactor with ir.ui.view.template model
+<record id="website_ip_layout" model="ir.ui.view">
+   <field name="name">Main Layout for 127.0.0.1</field>
+   <field name="type">qweb</field>
+
+   <field name="page" eval="False" />
+
+   <field name="website_id" ref="website_ip" />
+   <field name="key">website.layout</field>
+
+   <field name="arch" type="xml">
+    <t name="Main layout" t-name="website.layout">&lt;!DOCTYPE html&gt;
+        <html t-att-lang="lang and lang.replace('_', '-')" t-att-data-website-id="website.id if editable and website else None" t-att-data-editable="'1' if editable else None" t-att-data-translatable="'1' if translatable else None" t-att-data-view-xmlid="xmlid if editable else None" t-att-data-main-object="repr(main_object) if editable else None" t-att-data-oe-company-name="res_company.name">
+            <head>
+                <meta charset="utf-8"/>
+                <t t-if="main_object and 'website_meta_title' in main_object and not title">
+                    <t t-set="title" t-value="main_object.website_meta_title"/>
+                </t>
+                <t t-if="main_object and 'name' in main_object and not title and not additional_title">
+                    <t t-set="additional_title" t-value="main_object.name"/>
+                </t>
+                <t t-if="not title">
+                    <t t-set="title"><t t-if="additional_title"><t t-raw="additional_title"/> | </t><t t-esc="(website or res_company).name"/></t>
+                </t>
+
+                <meta name="viewport" content="initial-scale=1"/>
+                <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object                 and main_object.website_meta_description or website_meta_description"/>
+                <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object                 and main_object.website_meta_keywords or website_meta_keywords"/>
+                <title><t t-esc="title"/></title>
+
+                <t t-set="languages" t-value="website.get_languages() if website else None"/>
+                <t t-if="request and request.website_multilang and website">
+                    <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lang">
+                        <link rel="alternate" t-att-hreflang="lang['hreflang']" t-att-href="lang['href']"/>
+                    </t>
+                </t>
+
+                <t t-call-assets="web.assets_common" t-js="false"/>
+                <t t-call-assets="website.assets_frontend" t-js="false"/>
+
+                <t t-raw="head or ''" name="layout_head"/>
+            </head>
+            <body>
+                <div id="wrapwrap">
+                    <header>
+                        <div class="navbar navbar-default navbar-static-top">
+                            <div class="container">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"/>
+                                        <span class="icon-bar"/>
+                                        <span class="icon-bar"/>
+                                    </button>
+                                    <a class="navbar-brand" href="/" t-field="res_company.name"/>
+                                </div>
+                                <div class="collapse navbar-collapse navbar-top-collapse">
+                                    <ul class="nav navbar-nav navbar-right" id="top_menu">
+                                        <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                            <t t-call="website.submenu"/>
+                                        </t>
+                                        <li class="divider" t-ignore="true" t-if="website.user_id != user_id"/>
+                                        <li class="dropdown" t-ignore="true" t-if="website.user_id != user_id">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                <b>
+                                                    <span t-esc="user_id.name"/>
+                                                    <span class="caret"/>
+                                                </b>
+                                            </a>
+                                            <ul class="dropdown-menu js_usermenu" role="menu">
+                                                <li><a href="/web" role="menuitem">My Account</a></li>
+                                                <li class="divider"/>
+                                                <li><a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <main>
+                        <t t-raw="0"/>
+                    </main>
+                    <footer>
+                        <div id="footer_container">
+                        </div>
+                        <div id="other_footer">
+                            <h2> New stuff under the footer</h2>
+                        </div>
+                    </footer>
+
+                </div>
+
+                <t t-call-assets="web.assets_common" t-css="false"/>
+                <t t-call-assets="website.assets_frontend" t-css="false"/>
+                <script t-if="website and website.google_analytics_key">
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                    ga('create', _.str.trim('<t t-esc="website.google_analytics_key"/>'), 'auto');
+                    ga('send','pageview');
+                </script>
+            </body>
+        </html>
+    </t>
+
+   </field>
+</record>
+-->
+
+<!--Add footer, since we change the layout, we lost all the inherited view of the layout from localhost -->
+<!-- TODO: Refactor with ir.ui.view.template model
+<record id="website_ip_footer" model="ir.ui.view">
+   <field name="name">Main Layout for 127.0.0.1</field>
+   <field name="type">qweb</field>
+
+   <field name="page" eval="False" />
+
+   <field name="website_id" ref="website_ip" />
+   <field name="key">website.footer</field>
+   <field name="inherit_id" ref="website_ip_layout" />
+   <field name="arch" type="xml">
+   <data inherit_id="website.layout" name="Footer">
+        <xpath expr="//div[@id='footer_container']" position="replace">
+            <div class="oe_structure" id="footer">
+                <section data-snippet-id="three-columns">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4 class="mt16">Subtitle</h4>
+                                <p>
+                                    <a href="/">Homepage</a>
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <h4 class="mt16">Some Stuff for 127.0.0.1</h4>
+                                <p>
+                                    ...
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <h4 class="mt16">Contact editor of 127.0.0.1</h4>
+                                <p>
+                                    ...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </data>
+   </field>
+</record>
+-->
+</data>
+</openerp>
