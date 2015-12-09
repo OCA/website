@@ -97,33 +97,31 @@
 </template>
 
 <template id="product_list" name="Supplier Products">
-    <div class="container">
-        <h3>Your Products</h3>
-        <div class="info"/>
-        <div t-if="not suppliersinfo">
-            <p>There are currently no products for your account.</p>
+    <h3>Your Products</h3>
+    <div class="info"/>
+    <div t-if="not suppliersinfo">
+        <p>There are currently no products for your account.</p>
+    </div>
+    <div t-if="pager" class="row">
+        <div class="products_pager">
+            <t t-call="website.pager"/>
         </div>
-        <div t-if="pager" class="row">
-            <div class="products_pager">
-                <t t-call="website.pager"/>
+    </div>
+    <div class="row">
+        <div class="col-md-6 pull-right">
+            <div class="col-md-10 col-xs-8">
+                <t t-call="website_product_supplier.search"/>
+            </div>
+            <div id="actions" class="col-md-2 col-xs-4">
+                <t t-call="website_product_supplier.actions"/>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 pull-right">
-                <div class="col-md-10 col-xs-8">
-                    <t t-call="website_product_supplier.search"/>
-                </div>
-                <div id="actions" class="col-md-2 col-xs-4">
-                    <t t-call="website_product_supplier.actions"/>
-                </div>
-            </div>
-        </div>
-        <div class="table-responsive mt8">
-            <t t-call="website_product_supplier.product_table"/>
-        </div>
-        <div t-if="pager" class="products_pager">
-          <t t-call="website.pager"/>
-        </div>
+    </div>
+    <div class="table-responsive mt8">
+        <t t-call="website_product_supplier.product_table"/>
+    </div>
+    <div t-if="pager" class="products_pager">
+      <t t-call="website.pager"/>
     </div>
 </template>
 
