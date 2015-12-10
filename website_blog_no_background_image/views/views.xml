@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="blog_view_background" model="ir.ui.view">
+            <field name="name">blog_view_background</field>
+            <field name="model">blog.blog</field>
+            <field name="inherit_id" ref="website_blog.view_blog_blog_form"/>
+            <field name="arch" type="xml">
+                 <field name="name" position="before">
+                     <field name="background_image_show"/>
+                 </field>
+            </field>
+        </record>
+
+        <record id="blog_post_view_background" model="ir.ui.view">
+            <field name="name">blog_post_view_background</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="background_image_show"/>
+                    <field name="background_image" attrs=" {'invisible': [('background_image_show', '=', 'no_image')]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
