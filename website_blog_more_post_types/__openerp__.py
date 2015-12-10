@@ -1,41 +1,24 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    This module copyright (C) 2015 Therp BV <http://therp.nl>.
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# (C) 2015 Therp BV <http://therp.nl>.
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
 {
-    "name": "Blog Teasers",
-    "version": "1.0",
-    "author": "Therp BV",
-    "license": "AGPL-3",
-    "category": "Website",
-    "summary": "Adds teasers to blog for display on website",
-    "depends": [
+    'name': 'Blog post visualization options',
+    'version': '8.0.1.0.0',
+    'author': 'Therp BV,'
+              'Odoo Community Association (OCA)',
+    'license': 'AGPL-3',
+    'category': 'Website',
+    'website': 'https://odoo-community.org/',
+    'depends': [
         'website_blog'
     ],
-    "data": [
-        "views/teaser.xml",
-        "views/views.xml",
-        "views/templates.xml",
+    'data': [
+        'views/teaser.xml',
+        'views/views.xml',
+        'views/templates.xml',
     ],
-    "auto_install": False,
-    "installable": True,
-    "application": False,
-    "external_dependencies": {
-        'python': [],
-    },
+    'auto_install': False,
+    'installable': True,
+    'application': False,
 }
