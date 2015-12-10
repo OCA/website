@@ -3,4 +3,4 @@
 # (c) 2015 Incaser Informatica S.L. - Carlos Dauden
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-import main
+from . import main
