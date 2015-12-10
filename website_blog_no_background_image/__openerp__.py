@@ -19,13 +19,13 @@
 ##############################################################################
 {
     "name": "Optional Background image for Blog Posts",
-    "version": "1.0",
-    "author": "Therp BV",
-    "license": "AGPL-3",
+    "summary": "Choose how to display Blog Post headers",
+    "version": "8.0.1.0.0",
     "category": "Website",
-    "summary": "Allows the user to choose if a blogpost header"
-               "should have a full screen banner, "
-               "a traditional banner or no background at all",
+    "website": "https://odoo-community.org/",
+    "author": "Therp BV,"
+              "Odoo Community Association (OCA)",
+    "license": "AGPL-3",
     "depends": [
         'website_blog'
     ],
@@ -39,7 +39,4 @@
     "auto_install": False,
     "installable": True,
     "application": False,
-    "external_dependencies": {
-        'python': [],
-    },
 }

@@ -17,7 +17,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp import models, fields, api
+from openerp import api, fields, models
 
 
 class BlogPost(models.Model):
@@ -32,7 +32,7 @@ class BlogPost(models.Model):
         help="Choose if how you want to display the blog post:"
         "Just the title above the post, a small header image"
         "above the blog post title, or a big full screen image,"
-        "before showing the post, (odoo default")
+        "before showing the post, (odoo default)")
 
     @api.onchange('blog_id')
     def set_new_default(self):
