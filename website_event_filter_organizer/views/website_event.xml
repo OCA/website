@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<template id="event_organizer" inherit_id="website_event.event_left_column"
+          active="True" customize_show="True" name="Filter by Organizer">
+    <xpath expr="//div[@id='left_column']" position="inside">
+        <ul class="nav nav-pills nav-stacked mt32">
+            <t t-foreach="organizers" t-as="organizer">
+                <li t-if="organizer['organizer_id']"
+                    t-att-class="searches.get('organizer') == str(organizer['organizer_id'] and organizer['organizer_id'][0]) and 'active' or ''">
+                    <a t-attf-href="/event?{{ keep_query('country', 'date', 'type', organizer=organizer['organizer_id'][0])}}">
+                        <t t-esc="organizer['organizer_id'][1]"/>
+                        <span class="badge pull-right"> <t t-esc="organizer['organizer_id_count']"/></span>
+                    </a>
+                </li>
+            </t>
+        </ul>
+    </xpath>
+</template>
+
+<template id="event_left_column" inherit_id="website_event.event_left_column">
+    <xpath expr="//a[contains(@t-attf-href,'date=date[0]')]" position="attributes">
+        <attribute name="t-attf-href">
+            /event?{{ keep_query('country', 'type', 'organizer', date=date[0]) }}
+        </attribute>
+    </xpath>
+</template>
+
+<template id="event_category" inherit_id="website_event.event_category" name="Filter by Category Organizer">
+    <xpath expr="//a[contains(@t-attf-href,'type=type')]" position="attributes">
+        <attribute name="t-attf-href">
+            /event?{{ keep_query('country', 'date', 'organizer', type=type['type'][0]) }}
+        </attribute>
+    </xpath>
+</template>
+
+<template id="event_location" inherit_id="website_event.event_location" name="Filter by Location Organizer">
+    <xpath expr="//a[contains(@t-attf-href,'country_id')]" position="attributes">
+        <attribute name="t-attf-href">
+            /event?{{ keep_query('date', 'type', 'organizer', country=country['country_id'][0]) }}
+        </attribute>
+    </xpath>
+</template>
+
+<template id="index" inherit_id="website_event.index" name="Index Organizer">
+    <xpath expr="//ol[contains(@class,'breadcrumb')]" position="inside">
+        <li t-if="current_organizer">
+            <t t-esc="current_organizer"/>
+        </li>
+    </xpath>
+</template>
+
+</data>
+</openerp>
