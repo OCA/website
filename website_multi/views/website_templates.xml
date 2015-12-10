@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2014 Odoo SA
+     © 2015 Antiun Ingenieria S.L. - Antonio Espinosa
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+
+<template id="layout_multi_theme"
+          inherit_id="website.layout"
+          name="Multi-theme support">
+    <xpath expr="//body" position="attributes">
+        <attribute name="class" eval="website.body_css_class"/>
+    </xpath>
+</template>
+
+</data>
+</openerp>

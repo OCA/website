@@ -23,6 +23,7 @@
         "data/data.xml",
         "views/res_config.xml",
         "views/website_views.xml",
+        "views/website_templates.xml",
     ],
     "demo": [
         "demo/website.xml",
