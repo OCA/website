@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <template id="show_post_complete_types" inherit_id="website_blog.blog_post_complete">
+      <xpath expr="//h2[@t-field='blog_post.subtitle']" position="after">
+          <!--TODO editing types and teaser in the frontend-->
+      </xpath>
+    </template>
+  </data>
+</openerp>
