@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_portal
+# 
+# Translators:
+# Carles Antolí <carlesantoli@hotmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-23 10:22+0000\n"
+"PO-Revision-Date: 2015-10-22 16:02+0000\n"
+"Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_portal
+#: view:website:website_portal.account
+msgid "Change"
+msgstr "Canvi"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "City"
+msgstr "Ciutat"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Company Name"
+msgstr "Nom de l'Empresa"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: website_portal
+#: view:website:website_portal.contact
+msgid "Contact"
+msgstr "Contacte"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Contact Details"
+msgstr "Detalls Contacte"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Country"
+msgstr "País"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Country..."
+msgstr "País..."
+
+#. module: website_portal
+#: view:website:website_portal.account
+msgid "Custom Panel"
+msgstr "Panells Personalitzats"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Details"
+msgstr "Detalls"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Email"
+msgstr "Correu Electrònic"
+
+#. module: website_portal
+#: code:addons/website_portal/controllers/main.py:77
+#, python-format
+msgid "Invalid Email! Please enter a valid email address."
+msgstr "Correu electrònic incorrecte! Siusplau, introdueixi una adreça de correu electrònic vàlida."
+
+#. module: website_portal
+#: view:website:website.layout
+msgid "Logout"
+msgstr "Tancar Sessió"
+
+#. module: website_portal
+#: view:website:website.layout view:website:website_portal.details
+msgid "My Account"
+msgstr "El Meu Compte"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Phone"
+msgstr "Telèfon"
+
+#. module: website_portal
+#: view:website:website_portal.account
+msgid "Place your content here."
+msgstr "Col·loca el contingut aquí."
+
+#. module: website_portal
+#: code:addons/website_portal/controllers/main.py:94
+#, python-format
+msgid "Some required fields are empty."
+msgstr "Alguns camps obligatoris estan buits."
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "State / Province"
+msgstr "Estat / Província"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Street"
+msgstr "Carrer"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "VAT Number"
+msgstr "NIF-IVA"
+
+#. module: website_portal
+#: view:website:website_portal.account
+msgid "Your Details"
+msgstr "Els Seus Detalls"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Your Name"
+msgstr "El Seu Nom"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Zip / Postal Code"
+msgstr "CP / Codi Postal"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "select..."
+msgstr "selecciona..."

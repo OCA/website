@@ -22,7 +22,7 @@
 
 {
     'name': 'Collapsible product categories in website shop',
-    'version': '1.0',
+    'version': '8.0.1.0.0',
     'category': 'Sales Management',
     'author': 'OpenERP SA, '
               'Serv. Tecnol. Avanzados - Pedro M. Baeza, '

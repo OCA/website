@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_crm_address
+# 
+# Translators:
+# Eric Antones <eantones@users.noreply.github.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-28 02:04+0000\n"
+"PO-Revision-Date: 2015-11-30 11:05+0000\n"
+"Last-Translator: Eric Antones <eantones@users.noreply.github.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_crm_address
+#: view:website:website.contactus
+msgid "City"
+msgstr "Ciutat"
+
+#. module: website_crm_address
+#: view:website:website.contactus
+msgid "Country"
+msgstr "País"
+
+#. module: website_crm_address
+#: view:website:website.contactus
+msgid "Country..."
+msgstr "País..."
+
+#. module: website_crm_address
+#: view:website:website.contactus
+msgid "Street"
+msgstr "Carrer"
+
+#. module: website_crm_address
+#: view:website:website.contactus
+msgid "Zip"
+msgstr "Codi postal"

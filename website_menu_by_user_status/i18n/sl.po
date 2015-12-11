@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_menu_by_user_status
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-14 08:34+0000\n"
+"PO-Revision-Date: 2015-10-18 04:17+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: website_menu_by_user_status
+#: code:addons/website_menu_by_user_status/models/website_menu.py:36
+#: help:website.menu,user_logged:0
+#, python-format
+msgid "If checked, the menu will be displayed when the user is logged."
+msgstr "Če je označeno, bo meni prikazan ob prijavi uporabnika."
+
+#. module: website_menu_by_user_status
+#: code:addons/website_menu_by_user_status/models/website_menu.py:43
+#: help:website.menu,user_not_logged:0
+#, python-format
+msgid "If checked, the menu will be displayed when the user is not logged."
+msgstr "Če je označeno, bo meni prikazan tudi, ko uporabnik ni prijavljen."
+
+#. module: website_menu_by_user_status
+#: field:website.menu,user_logged:0
+msgid "User Logged"
+msgstr "Uporabnik prijavljen"
+
+#. module: website_menu_by_user_status
+#: field:website.menu,user_not_logged:0
+msgid "User Not Logged"
+msgstr "Uporabnik ni prijavljen"
+
+#. module: website_menu_by_user_status
+#: model:ir.model,name:website_menu_by_user_status.model_website_menu
+msgid "Website Menu"
+msgstr "Spletni meni"

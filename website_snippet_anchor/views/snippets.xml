@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Antiun Ingeniería S.L. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+<data>
+
+<template id="snippet_options" inherit_id="website.snippet_options">
+    <xpath expr=".">
+        <div data-snippet-option-id="anchor"
+            data-selector="section, .carousel">
+            <li>
+                <a class="js_anchor"
+                   title="Use anchors to go directly to a section of your page, appending #anchor to the URL">
+                    Set anchor
+                </a>
+            </li>
+        </div>
+    </xpath>
+</template>
+
+</data>
+</openerp>

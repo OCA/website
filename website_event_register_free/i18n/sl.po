@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_event_register_free
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-14 08:34+0000\n"
+"PO-Revision-Date: 2015-10-18 03:57+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Email"
+msgstr "E-pošta"
+
+#. module: website_event_register_free
+#: model:ir.model,name:website_event_register_free.model_event_registration
+msgid "Event Registration"
+msgstr "Registracija dogodka"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+msgid "Free"
+msgstr "Brezplačno"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+msgid "No seats available"
+msgstr "Ni prostih mest"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.partner_register_form
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Register"
+msgstr "Registriraj"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+msgid "Register Now"
+msgstr "Registriraj zdaj"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Review the amount of tickets to register"
+msgstr "Revizija količine vstopnic za registracijo"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_confirm
+msgid "Thank you"
+msgstr "Hvala"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+msgid "Ticket Type"
+msgstr "Tip vstopnice"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Your Details"
+msgstr "Vaše podrobnosti"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Your Name"
+msgstr "Vaš naziv"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Your company / organisation"
+msgstr "Vaša družba / organizacija"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_confirm
+msgid "Your registration for"
+msgstr "Vaša registracija za"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_confirm
+msgid "succeeded!"
+msgstr "uspešna!"

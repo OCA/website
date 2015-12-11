@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_contact_form
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-05 01:59+0000\n"
+"PO-Revision-Date: 2015-11-18 10:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Romanian (http://www.transifex.com/oca/OCA-website-8-0/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Contact Form"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Email"
+msgstr "Email"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "I have read and accept the"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Phone Number"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Privacy Policy"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Send"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Subject"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Tell us something!"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Company"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Name"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Question"
+msgstr ""
