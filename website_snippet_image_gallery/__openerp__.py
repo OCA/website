@@ -34,7 +34,6 @@ Allows to add image gallery snippet in website with hover effect.
         """,
     'depends': [
         'website',
-        'website_less'
     ],
     'data': [
         'views/assets.xml',
