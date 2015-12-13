@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_logo
+# 
+# Translators:
+# Carles Antolí <carlesantoli@hotmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-08 09:02+0000\n"
+"PO-Revision-Date: 2015-12-06 09:55+0000\n"
+"Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_logo
+#: view:website:website.layout
+msgid "/website_logo.png"
+msgstr "/website_logo.png"
+
+#. module: website_logo
+#: view:website.config.settings:website_logo.view_website_config_settings
+msgid "Domain"
+msgstr "Domini"
+
+#. module: website_logo
+#: view:website:website_logo.view_website_form
+#: view:website.config.settings:website_logo.view_website_config_settings
+msgid "Logo"
+msgstr "Logo"
+
+#. module: website_logo
+#: help:website,logo:0
+msgid ""
+"This field holds the logo for this website, showed in header. Recommended "
+"size is 180x50"
+msgstr "Aquest camp té el logotip d'aquest lloc web, es mostra a la capçalera. La mida recomanada és de 180x50"
+
+#. module: website_logo
+#: model:ir.model,name:website_logo.model_website
+msgid "Website"
+msgstr "Lloc web"
+
+#. module: website_logo
+#: field:website,logo:0
+msgid "Website logo"
+msgstr "Logo lloc web"
