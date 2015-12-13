@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-05 01:59+0000\n"
-"PO-Revision-Date: 2015-12-04 23:32+0000\n"
+"POT-Creation-Date: 2015-12-08 09:02+0000\n"
+"PO-Revision-Date: 2015-12-10 21:09+0000\n"
 "Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
 "Language-Team: Greek (Greece) (http://www.transifex.com/oca/OCA-website-8-0/language/el_GR/)\n"
 "MIME-Version: 1.0\n"
@@ -20,17 +20,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Access the complete Sale application"
-msgstr ""
+msgstr "Πρόσβαση στην πλήρη εφαρμογή Πωλήσεων"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Cancelled"
-msgstr ""
+msgstr "Ακυρωμένες"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Confirmation Date"
-msgstr ""
+msgstr "Ημερομηνία Επιβεβαίωσης"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -40,49 +40,49 @@ msgstr "Επαφή"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Date:"
-msgstr ""
+msgstr "Ημερομηνία:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Done"
-msgstr ""
+msgstr "Ολοκληρωμένο"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Due Date"
-msgstr ""
+msgstr "Ημερομηνία Λήξης"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid ""
 "If you wish to access the complete application to manage your orders, you "
 "can follow"
-msgstr ""
+msgstr "Εάν επιθυμείτε να αποκτήσετε πρόσβαση στην πλήρη εφαρμογή για να διαχειριστείτε τις παραγγελίες σας, μπορείτε να ακολουθήσετε"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice #"
-msgstr ""
+msgstr "Τιμολόγιο #"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice Date"
-msgstr ""
+msgstr "Ημερομηνία Παραστατικού"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Invoiced"
-msgstr ""
+msgstr "Τιμολογημένες"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Invoices"
-msgstr ""
+msgstr "Τιμολόγια"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Invoicing Address"
-msgstr ""
+msgstr "Διεύθυνση Τιμολόγησης:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -92,23 +92,23 @@ msgstr "Ο Λογαριασμός μου"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Order"
-msgstr ""
+msgstr "Παραγγελία"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.orders_followup
 msgid "Paid"
-msgstr ""
+msgstr "Εξοφλημένο"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Problem"
-msgstr ""
+msgstr "Πρόβλημα"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Product"
-msgstr ""
+msgstr "Προϊόν"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -118,66 +118,66 @@ msgstr "Ποσότητα"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Quotation"
-msgstr ""
+msgstr "Προσφορά"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "Προσφορά #"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Sale Order #"
-msgstr ""
+msgstr "Εντολή Πώλησης #"
 
 #. module: website_portal_sale
 #: view:website:website_portal.account
 msgid "Sales"
-msgstr ""
+msgstr "Πωλήσεις"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Shipping Address"
-msgstr ""
+msgstr "Διεύθυνση Παράδοσης"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Show less"
-msgstr ""
+msgstr "Δείξε λιγότερα"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Show more"
-msgstr ""
+msgstr "Δείτε περισσότερα"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Subtotal"
-msgstr ""
+msgstr "Υποσύνολο"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Taxes:"
-msgstr ""
+msgstr "Φόροι:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "There are currently no invoices for your account."
-msgstr ""
+msgstr "Δεν υπάρχουν τιμολόγια στον λογαριασμό σας."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "There are currently no orders for your account."
-msgstr ""
+msgstr "Δεν υπάρχουν παραγγελίες στον λογαριασμό σας."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "Δεν υπάρχουν προσφορές στον λογαριασμό σας."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -189,44 +189,44 @@ msgstr "Σύνολο"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Total:"
-msgstr ""
+msgstr "Σύνολο:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Unit Price"
-msgstr ""
+msgstr "Τιμή Μονάδας"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Untaxed Amount:"
-msgstr ""
+msgstr "Αφορολόγητο Ποσό:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Waiting"
-msgstr ""
+msgstr "Σε αναμονή"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Waiting for Payment"
-msgstr ""
+msgstr "Αναμονή για Πληρωμή"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Your Invoices and Payments"
-msgstr ""
+msgstr "Τα Τιμολόγια και οι πληρωμές σας"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "Οι Παραγγελίες σας"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Your Quotes"
-msgstr ""
+msgstr "Οι Προσφορές σας"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "this link"
-msgstr ""
+msgstr "αυτόν τον σύνδεσμο"
