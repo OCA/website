@@ -18,6 +18,7 @@ It depends on those addons:
     * `web_translate_dialog <https://github.com/OCA/web/tree/8.0/web_translate_dialog>`_
     * `web_tree_many2one_clickable <https://github.com/OCA/web/tree/8.0/web_tree_many2one_clickable>`_
     * `web_m2x_options <https://github.com/OCA/web/tree/8.0/web_m2x_options>`_
+    * `web_searchbar_full_width <https://github.com/OCA/web/tree/8.0/web_searchbar_full_width>`_
 
 * `OCA/server-tools <https://github.com/OCA/server-tools/tree/8.0>`_ :
     * `disable_openerp_online <https://github.com/OCA/server-tools/tree/8.0/disable_openerp_online>`_

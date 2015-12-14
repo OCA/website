@@ -11,7 +11,6 @@ This module is a master addon for installing and configuring a social vertical s
 It depends on those addons:
 
 * `OCA/social <https://github.com/OCA/social/tree/8.0>`_ :
-    * `mass_mailing_confirm <https://github.com/OCA/social/pull/29>`_ (PR merge pending or `Odoo fix <https://github.com/odoo/odoo/pull/9796>`_)
     * `mass_mailing_partner <https://github.com/OCA/social/tree/8.0/mass_mailing_partner>`_
     * `mass_mailing_statistic_extra <https://github.com/OCA/social/pull/19>`_ (PR merge pending)
     * `marketing_security_group <https://github.com/OCA/social/pull/25>`_ (PR merge pending)

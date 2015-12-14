@@ -20,6 +20,7 @@
         'web_tree_many2one_clickable',
         'web_m2x_options',
         'web_advanced_search_x2x',
+        'web_searchbar_full_width',
         'mail_attach_existing_attachment',
         'mail_compose_select_lang',
         'mail_forward',
