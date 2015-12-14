@@ -5,7 +5,6 @@
 {
     'name': 'Website Snippet Image Gallery',
     'category': 'Website',
-    'author': 'Serpent Consulting Services Pvt. Ltd.',
     "author": """Serpent Consulting Services Pvt. Ltd.,
                  Odoo Community Association (OCA)""",
     'website': 'http://www.serpentcs.com',
