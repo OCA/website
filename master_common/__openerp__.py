@@ -34,7 +34,7 @@
         'data/web_tree_many2one_clickable.xml',
         'data/web_m2x_options.xml',
     ],
-    'author': 'Antiun Ingeniería',
+    'author': 'Antiun Ingeniería S.L.',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
     'installable': True,

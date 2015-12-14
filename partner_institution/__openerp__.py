@@ -24,7 +24,7 @@
     'name': 'Institution in partners',
     'version': '1.0',
     'category': 'Partner Management',
-    'author': 'Serv. Tecnolog. Avanzados - Pedro M. Baeza, '
+    'author': 'Serv. Tecnol. Avanzados - Pedro M. Baeza, '
               'Antiun Ingeniería S.L.',
     'website': 'http://www.serviciosbaeza.com, http://www.antiun.com',
     'depends': [
