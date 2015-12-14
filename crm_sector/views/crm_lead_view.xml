@@ -10,6 +10,7 @@
         <field name="phone" position="before">
             <field name="sector" placeholder="Sector"
                    options='{"no_open": True}'/>
+            <field name="secondary_sector_ids" widget="many2many_tags"/>
         </field>
     </field>
 </record>
@@ -49,6 +50,7 @@
         <field name="phone" position="before">
             <field name="sector" placeholder="Sector"
                    options='{"no_open": True}'/>
+            <field name="secondary_sector_ids" widget="many2many_tags"/>
         </field>
     </field>
 </record>
