@@ -9,3 +9,5 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     sector = fields.Many2one(comodel_name='crm.sector')
+    secondary_sector_ids = fields.Many2many(comodel_name='crm.sector',
+                                            string="Other sectors")

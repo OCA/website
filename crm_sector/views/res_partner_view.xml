@@ -11,6 +11,7 @@
             <field name="sector" placeholder="Sector"
                    options='{"no_open": True}'
                    attrs="{'invisible': [('is_company', '=', False)]}"/>
+            <field name="secondary_sector_ids" widget="many2many_tags"/>
         </field>
     </field>
 </record>

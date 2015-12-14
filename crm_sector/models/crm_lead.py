@@ -9,6 +9,8 @@ class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
     sector = fields.Many2one(comodel_name='crm.sector')
+    secondary_sector_ids = fields.Many2many(comodel_name='crm.sector',
+                                            string="Other sectors")
 
     def _lead_create_contact(self, cr, uid, lead, name, is_company,
                              parent_id=False, context=None):
@@ -17,6 +19,11 @@ class CrmLead(models.Model):
         partner_id = super(CrmLead, self)._lead_create_contact(
             cr, uid, lead, name, is_company, parent_id=parent_id,
             context=context)
+        secondary_sector_ids = []
+        for sector in lead.secondary_sector_ids:
+            secondary_sector_ids.append((4, sector.id, 0))
         self.pool['res.partner'].write(
-            cr, uid, partner_id, {'sector': lead.sector.id}, context=context)
+            cr, uid, partner_id,
+            {'sector': lead.sector.id,
+             'secondary_sector_ids': secondary_sector_ids}, context=context)
         return partner_id

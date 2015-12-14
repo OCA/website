@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* crm_sector
+#   * crm_sector
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-06 09:29+0000\n"
-"PO-Revision-Date: 2015-05-06 09:29+0000\n"
+"POT-Creation-Date: 2015-12-14 09:19+0000\n"
+"PO-Revision-Date: 2015-12-14 09:19+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -56,6 +56,12 @@ msgid "Name"
 msgstr ""
 
 #. module: crm_sector
+#: field:crm.lead,secondary_sector_ids:0
+#: field:res.partner,secondary_sector_ids:0
+msgid "Other sectors"
+msgstr ""
+
+#. module: crm_sector
 #: field:crm.sector,parent_left:0
 msgid "Parent Left"
 msgstr ""
@@ -76,8 +82,8 @@ msgid "Partner"
 msgstr ""
 
 #. module: crm_sector
-#: view:crm.lead:crm_sector.view_crm_case_leads_filter_sector
-#: view:crm.lead:crm_sector.view_crm_case_opportunities_filter_sector
+#: view:crm.lead:crm_sector.view_crm_case_leads_filter
+#: view:crm.lead:crm_sector.view_crm_case_opportunities_filter
 msgid "Sales Team"
 msgstr ""
 
@@ -87,10 +93,10 @@ msgid "Salesperson"
 msgstr ""
 
 #. module: crm_sector
-#: view:crm.lead:crm_sector.crm_case_form_view_leads_sector
-#: view:crm.lead:crm_sector.crm_case_form_view_oppor_sector
-#: view:crm.lead:crm_sector.view_crm_case_leads_filter_sector
-#: view:crm.lead:crm_sector.view_crm_case_opportunities_filter_sector
+#: view:crm.lead:crm_sector.crm_case_form_view_leads
+#: view:crm.lead:crm_sector.crm_case_form_view_oppor
+#: view:crm.lead:crm_sector.view_crm_case_leads_filter
+#: view:crm.lead:crm_sector.view_crm_case_opportunities_filter
 #: field:crm.lead,sector:0
 #: model:ir.model,name:crm_sector.model_crm_sector
 #: view:res.partner:crm_sector.view_partner_form_sector
@@ -105,4 +111,3 @@ msgstr ""
 #: model:ir.ui.menu,name:crm_sector.menu_crm_sector
 msgid "Sectors"
 msgstr ""
-
