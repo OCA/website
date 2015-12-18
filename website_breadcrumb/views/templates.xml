@@ -6,6 +6,13 @@
 <data>
 
 <template id="breadcrumb" name="Breadcrumb snippet">
+    <t t-call="website_breadcrumb.breadcrumb-generator">
+        <t t-set='include_self' t-value='False'/>
+        <t t-set='revert_order' t-value='True'/>
+    </t>
+</template>
+
+<template id="breadcrumb-generator" name="Breadcrumb snippet generator">
     <!-- Know if current page is in a menu item -->
     <t t-set="bc_item"
        t-value="request.env['website.menu']
@@ -14,21 +21,34 @@
     <!-- If so, create the breadcrumbs -->
     <ol t-if="bc_item" class="breadcrumb">
         <!-- Parents -->
-        <t t-foreach="bc_item.get_parents(True)" t-as="step">
-            <li t-if="step.url or step_first">
-                <a t-att-href="step.url or (step_first and '/')">
-                    <t t-if="step_first and not step.url">
-                        Home
-                    </t>
-                    <t t-if="not step_first and step.url">
-                       <t t-esc="step.name_get()[0][1]"/>
-                   </t>
+        <t t-set='steps' t-value="[i for i in bc_item.get_parents(revert_order, include_self)]"/>
+        <t t-if='not revert_order'>
+            <!-- Current -->
+            <li class="active" t-esc="bc_item.name_get()[0][1]"/>
+            <t t-set='steps' t-value='steps[:-1]'/>
+        </t>
+        <t t-if='revert_order'>
+            <t t-set='steps' t-value='steps[1:]'/>
+            <li>
+              <a href="/">Home</a>
+            </li>
+        </t>
+        <t t-foreach="steps" t-as="step">
+            <li>
+                <a t-att-href="step.url">
+                    <t t-esc="step.name_get()[0][1]"/>
                 </a>
             </li>
         </t>
-
         <!-- Current -->
-        <li class="active" t-esc="bc_item.name_get()[0][1]"/>
+        <t t-if='revert_order'>
+            <li class="active" t-esc="bc_item.name_get()[0][1]"/>
+        </t>
+        <t t-if='not revert_order'>
+            <li>
+              <a href="/">Home</a>
+            </li>
+        </t>
     </ol>
 </template>
 

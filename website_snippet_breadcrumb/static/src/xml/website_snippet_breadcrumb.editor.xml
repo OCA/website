@@ -1,0 +1,28 @@
+<templates id="template" xml:space="preserve">
+
+    <t t-name="website_snippet_breadcrumb.editor.dialog.website_snippet_breadcrumb.settings">
+        <t t-call="website.editor.dialog">
+            <t t-set="title">Breadcrumb settings</t>
+            <form>
+                <div class="form-horizontal crp-department-related-settings">
+                    <div class="form-group include-self">
+                        <label for="include-self" class="col-sm-6 control-label">
+                            Include current page in breadcrumb
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="checkbox" id="include-self" class="include-self"/>
+                        </div>
+                    </div>
+                    <div class="form-group revert-order">
+                        <label for="revert-order" class="col-sm-6 control-label">
+                            Revert items order
+                        </label>
+                        <div class="col-sm-6">
+                            <input type="checkbox" id="revert-order" class="revert-order"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </t>
+    </t>
+</templates>
