@@ -15,10 +15,10 @@ Usage
 
 To use this module, you need to:
 
-1. Assign auth user group to the user.
-2. If you install 'portal_sale' you can invite user to access it.
-3. User can access to his request quotations, orders and supplier invoices
-from his account in user account link.
+1.Assign auth user group to the user.
+2.If you install 'portal_sale' you can invite user to access it.
+3.User can access to his request quotations, orders and supplier invoices
+  from his account in user account link.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
