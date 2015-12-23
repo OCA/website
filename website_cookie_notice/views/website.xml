@@ -9,6 +9,7 @@
                 type="text/javascript"
                 src="/website_cookie_notice/static/src/js/accept_cookies.js">
         </script>
+        <link rel="stylesheet" href="/website_cookie_notice/static/src/css/cookiecuttr.css"/>
     </xpath>
 </template>
 
