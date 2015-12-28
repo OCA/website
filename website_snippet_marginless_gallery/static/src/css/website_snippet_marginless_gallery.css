@@ -5,10 +5,13 @@
   margin: 0px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: table;
   text-align: center; }
   .marginless-gallery .row .img > div {
     display: table-cell;
     vertical-align: middle; }
+.marginless-gallery-contain .row .img {
+  background-size: contain; }
 
 /*# sourceMappingURL=website_snippet_marginless_gallery.css.map */
