@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 {
     "name": "Marginless Gallery Snippet",
     "summary": "Add a snippet to have a marginless image gallery",
@@ -11,7 +11,9 @@
 
     "application": False,
     "installable": True,
-
+    "images": [
+        "images/marginless_gallery.png",
+    ],
     "depends": [
         "website",
     ],
