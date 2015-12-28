@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-02 12:50+0000\n"
-"PO-Revision-Date: 2015-12-02 13:52+0100\n"
+"POT-Creation-Date: 2015-12-28 13:01+0100\n"
+"PO-Revision-Date: 2015-12-28 13:01+0100\n"
 "Last-Translator: Jairo Llopis <j.llopis@grupoesoc.es>\n"
 "Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: es\n"
 "X-Generator: Poedit 1.8.5\n"
 
 #. module: website_snippet_marginless_gallery
@@ -22,12 +22,19 @@ msgstr ""
 msgid ""
 "All photos must have the same height or the\n"
 "                                gallery layout will be broken"
-msgstr "Todas las fotos deben tener la misma altura o la maquetación de la galería se estropeará"
+msgstr ""
+"Todas las fotos deben tener la misma altura o la maquetación de la galería "
+"se estropeará"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippet_options
 msgid "Change Images Height"
 msgstr "Cambiar la altura de las imágenes"
+
+#. module: website_snippet_marginless_gallery
+#: view:website:website.snippet_options
+msgid "Do not trim images"
+msgstr "No recortar las imágenes"
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
@@ -50,8 +57,12 @@ msgstr "Lorem ipsum"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets
-msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna."
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna."
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets

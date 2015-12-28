@@ -145,6 +145,9 @@
                     Change Images Height
                 </a>
             </li>
+            <li data-value="marginless-gallery-contain">
+                <a>Do not trim images</a>
+            </li>
         </div>
     </xpath>
 
