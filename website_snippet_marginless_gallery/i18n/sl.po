@@ -1,54 +1,53 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* website_snippet_marginless_gallery
-#
+# * website_snippet_marginless_gallery
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-28 13:01+0100\n"
-"PO-Revision-Date: 2015-12-28 13:01+0100\n"
-"Last-Translator: Jairo Llopis <j.llopis@grupoesoc.es>\n"
-"Language-Team: \n"
-"Language: es\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-27 16:56+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 1.8.5\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets
 msgid ""
 "All photos must have the same height or the\n"
 "                                gallery layout will be broken"
-msgstr ""
-"Todas las fotos deben tener la misma altura o la maquetación de la galería "
-"se estropeará"
+msgstr "Vse fotografije morajo imeti enako višino, da se\n                                postavitev galerije ne pokvari"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippet_options
 msgid "Change Images Height"
-msgstr "Cambiar la altura de las imágenes"
+msgstr "Spremeni višino slik"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippet_options
 msgid "Do not trim images"
-msgstr "No recortar las imágenes"
+msgstr "Ne obrezuj slik"
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
 #: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:32
 #, python-format
 msgid "Height for all images in gallery"
-msgstr "Altura para todas las imágenes de la galería"
+msgstr "Višina za vse slike v galeriji"
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
 #: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:33
 #, python-format
 msgid "Image height in pixels"
-msgstr "Altura de imagen en píxeles"
+msgstr "Višina slik v pikslih"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets
@@ -60,19 +59,17 @@ msgstr "Lorem ipsum"
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna."
-msgstr ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
-"tempor incididunt ut labore et dolore magna."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets
 msgid "Marginless Gallery"
-msgstr "Galería sin margenes"
+msgstr "Galerija brez robov"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets
 msgid "Our Gallery"
-msgstr "Nuestra galería"
+msgstr "Naša galerija"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippet_options
@@ -81,8 +78,4 @@ msgid ""
 "            .carousel,\n"
 "            .parallax,\n"
 "            .marginless-gallery .img"
-msgstr ""
-"section,\n"
-"            .carousel,\n"
-"            .parallax,\n"
-"            .marginless-gallery .img"
+msgstr "section,\n            .carousel,\n            .parallax,\n            .marginless-gallery .img"
