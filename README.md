@@ -21,12 +21,14 @@ addon | version | summary
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 | Add Facebook comments on blog posts
 [website_blog_mgmt](website_blog_mgmt/) | 8.0.1.0.0 | Website blog Management
+[website_breadcrumb](website_breadcrumb/) | 8.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 8.0.2.0.0 | Show cookie notice according to cookie law
 [website_country_localized_pages](website_country_localized_pages/) | 1.0 | Show website pages localized according to country's visitor
 [website_crm_address](website_crm_address/) | 8.0.1.0.0 | Lets visitors fill in their address in the contact form
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 | Website CRM privacy policy
 [website_crm_quick_answer](website_crm_quick_answer/) | 8.0.1.0.0 | Add an automatic answer for contacts asking for info
+[website_event_filter_organizer](website_event_filter_organizer/) | 8.0.1.0.0 | Filter events by organizer in frontend
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 | Combine free and paid tickets on events
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 | Display the structure of your departments and their members.
@@ -46,5 +48,6 @@ addon | version | summary
 [website_slides](website_slides/) | 8.0.1.0.0 | Share and Publish Videos, Presentations and Documents
 [website_snippet_anchor](website_snippet_anchor/) | 8.0.1.0.0 | Allow to reach a concrete section in the page
 [website_snippet_contact_form](website_snippet_contact_form/) | 8.0.1.0.0 | Put a contact form anywhere you want
+[website_snippet_marginless_gallery](website_snippet_marginless_gallery/) | 8.0.1.0.1 | Add a snippet to have a marginless image gallery
 
 [//]: # (end addons)
