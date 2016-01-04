@@ -52,8 +52,8 @@ Add a short description to website events.
     ],
 
     # Your information
-    'author': 'Antiun Ingenieria S.L.',
-    'maintainer': 'Antiun Ingenieria S.L.',
+    'author': 'Antiun Ingeniería S.L.',
+    'maintainer': 'Antiun Ingeniería S.L.',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
 
