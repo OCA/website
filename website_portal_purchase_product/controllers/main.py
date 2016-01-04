@@ -16,7 +16,7 @@ PPG = 10  # Products Per Page
 class WebsiteProductSupplier(http.Controller):
 
     mandatory_product_fields = ['product_name']
-    optional_product_fields = ['product_code']
+    optional_product_fields = ['product_code', 'min_qty', 'delay']
 
     def _get_mandatory_product_fields(self):
         return self.mandatory_product_fields
