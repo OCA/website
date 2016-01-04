@@ -34,7 +34,7 @@
         'website_sale_product_legal',
         'website_event_sale_legal',
     ],
-    'author': 'Antiun Ingenieria S.L., '
+    'author': 'Antiun Ingeniería S.L., '
               'Serv. Tecnol. Avanzados - Pedro M. Baeza',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
