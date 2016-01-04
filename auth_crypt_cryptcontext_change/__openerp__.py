@@ -25,8 +25,8 @@
 {
     "name": "Change CryptContext",
     "version": "1.0",
-    'author': 'Antiun Ingenieria S.L.',
-    'maintainer': 'Antiun Ingenieria S.L.',
+    'author': 'Antiun Ingeniería S.L.',
+    'maintainer': 'Antiun Ingeniería S.L.',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
     "category": "Security",
