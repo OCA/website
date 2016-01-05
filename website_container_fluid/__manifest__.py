@@ -7,7 +7,8 @@
     "license": "AGPL-3",
 
     "website": "https://odoo-community.org/project/website-maintainers-79",
-    "author": "Grupo ESOC, Odoo Community Association (OCA)",
+    "author": "Grupo ESOC Ingeniería de Servicios, "
+              "Odoo Community Association (OCA)",
 
     "application": False,
     'installable': False,
