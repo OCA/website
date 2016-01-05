@@ -85,8 +85,10 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
-                                <button  type="submit" class="btn btn-primary">Save Product</button>
-                                or <a href="/my/supplier/product/list_only">back to list</a>
+                                <button  type="submit"
+                                         class="btn btn-primary">Save Product</button>
+                                or <a id="back_product_list"
+                                      href="/my/home">back to list</a>
                             </div>
                         </div>
                     </form>
