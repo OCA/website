@@ -395,7 +395,7 @@
             <meta property="og:title" t-att-content="slide.name" />
             <meta property="og:type" content="website" />
             <meta property="og:url" t-att-content="slide.website_url" />
-            <meta property="og:image" t-attf-content="#{request.httprequest.host_url}/website/image/slide.slide/#{slide.id}/image_thumb"/>
+            <meta property="og:image" t-attf-content="/website/image/slide.slide/#{slide.id}/image_thumb"/>
             <meta property="og:description" t-att-content="slide.description" />
         </t>
     </t>
