@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--  Inherited Template To Edit profile From Detail View -->
+
+        <template id="inherited_user_detail_view" inherit_id="website_portal.details">
+            <xpath expr="//form/div/div" position="before">
+                <div class="col-md-4">
+                    <label class="control-label col-md-4" for="Profile-Photo">Profile Photo</label>
+                    <img id='preview_image' height='200' width='200'/>
+                    <span class="btn btn-primary btn-file">
+                        <span class="fileinput"><i class="fa fa-camera" style="margin-right:5px;"/>Change Image</span>
+                        <input name="profie_image" id="image" type="file" class="img img-responsive" accept="image/*" t-att-name="prefix" onchange="handle(this.files)"/>
+                        <input type='hidden' id='image_src' name='image' t-att-value='image or partner.image'></input>
+                    </span>
+                </div>
+            </xpath>
+        </template>
+
+        <!--   Inherited Template To View profile From Account View    -->
+
+        <template id="inherited_user_account_view" inherit_id="website_portal.account">
+            <xpath expr="//div/div/div[1]/div[1]" position="after">
+                <div>
+                    <t t-if="user.partner_id.image">
+                        <div class="saved-image" t-field="user.partner_id.image" t-field-options='{"widget": "image"}'/>
+                    </t>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</openerp>
