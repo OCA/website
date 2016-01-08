@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+         <!-- Inherited Template For WebSite Assets Front End -->
+
+         <template id="assets_frontend_websiteportal_ext" name="website assets for backend" inherit_id="website.assets_frontend">
+            <xpath expr="." position="inside">
+                <link href="/website_portal_enhanced/static/src/css/website_portal_ext.css" rel="stylesheet" type="text/css"/>
+                <script type="text/javascript" src="/website_portal_enhanced/static/src/js/website_portal_ext.js" />
+            </xpath>
+        </template>
+    </data>
+</openerp>
