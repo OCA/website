@@ -1,3 +1,6 @@
+/* © <YEAR(S)> <AUTHOR(S)>
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+ */
 (function () {
     'use strict';
 
@@ -32,7 +35,7 @@
             this.$target.find('.parametricTemplate')
             .empty()
             .append(jQuery('<t />')
-                    .attr('t-call', "website_breadcrumb.breadcrumb-generator")
+                    .attr('t-call', "website_breadcrumb.breadcrumb_generator")
                     .attr('t-ignore-branding', '1')
                     .append(
                         jQuery('<t />')

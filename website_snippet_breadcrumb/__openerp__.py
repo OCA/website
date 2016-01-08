@@ -4,7 +4,8 @@
 {
     'name': "Website Snippet Breadcrumb",
     'summary': """Website Snippet Breadcrumb""",
-    'author': "Acsone SA/NV",
+    'author': "Acsone SA/NV, Odoo Community Association (OCA)",
+    "license": "AGPL-3",
     'website': "http://www.acsone.eu",
     'category': 'Website',
     'version': '8.0.1.0.0',

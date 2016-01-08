@@ -14,7 +14,11 @@
                     </div>
                     <section class="oe_snippet_body website_snippet_breadcrumb" data-revert-order='true' data-include-self='false'>
                         <div class="parametricTemplate">
-                          <p>Dynamic Breadcrumb: The content will be replaced after saving the page</p>
+                          <ol class="breadcrumb">
+                              <li>
+                                  Dynamic Breadcrumb: The content will be replaced after saving the page
+                              </li>
+                          </ol>
                             <!-- the template call code is injected via javascript 
                                  the class is parametricTemplate in order to 
                                  override odoo's normal behaviour 

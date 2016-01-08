@@ -6,13 +6,13 @@
 <data>
 
 <template id="breadcrumb" name="Breadcrumb snippet">
-    <t t-call="website_breadcrumb.breadcrumb-generator">
+    <t t-call="website_breadcrumb.breadcrumb_generator">
         <t t-set='include_self' t-value='False'/>
         <t t-set='revert_order' t-value='True'/>
     </t>
 </template>
 
-<template id="breadcrumb-generator" name="Breadcrumb snippet generator">
+<template id="breadcrumb_generator" name="Breadcrumb snippet generator">
     <!-- Know if current page is in a menu item -->
     <t t-set="bc_item"
        t-value="request.env['website.menu']
