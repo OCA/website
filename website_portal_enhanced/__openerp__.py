@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -32,9 +32,9 @@
         'website_portal',
     ],
     'data': [
-             'views/website_profile.xml',
-             'views/assets.xml',
-             'views/templates.xml',
+        'views/website_profile.xml',
+        'views/assets.xml',
+        'views/templates.xml',
     ],
     'installable': True,
 }
