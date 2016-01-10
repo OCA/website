@@ -1,0 +1,75 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_marginless_gallery
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-05 19:41+0000\n"
+"PO-Revision-Date: 2015-12-28 09:45+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_snippet_marginless_gallery
+#: view:website:website.snippets
+msgid ""
+"All photos must have the same height or the\n"
+"                                gallery layout will be broken"
+msgstr "All photos must have the same height or the\n                                gallery layout will be broken"
+
+#. module: website_snippet_marginless_gallery
+#: view:website:website.snippet_options
+msgid "Change Images Height"
+msgstr "Change Images Height"
+
+#. module: website_snippet_marginless_gallery
+#. openerp-web
+#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:32
+#, python-format
+msgid "Height for all images in gallery"
+msgstr "Height for all images in gallery"
+
+#. module: website_snippet_marginless_gallery
+#. openerp-web
+#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:33
+#, python-format
+msgid "Image height in pixels"
+msgstr "Image height in pixels"
+
+#. module: website_snippet_marginless_gallery
+#: view:website:website.snippets
+msgid "Lorem ipsum"
+msgstr "Lorem ipsum"
+
+#. module: website_snippet_marginless_gallery
+#: view:website:website.snippets
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+
+#. module: website_snippet_marginless_gallery
+#: view:website:website.snippets
+msgid "Marginless Gallery"
+msgstr "Marginless Gallery"
+
+#. module: website_snippet_marginless_gallery
+#: view:website:website.snippets
+msgid "Our Gallery"
+msgstr "Our Gallery"
+
+#. module: website_snippet_marginless_gallery
+#: view:website:website.snippet_options
+msgid ""
+"section,\n"
+"            .carousel,\n"
+"            .parallax,\n"
+"            .marginless-gallery .img"
+msgstr "section,\n            .carousel,\n            .parallax,\n            .marginless-gallery .img"
