@@ -61,7 +61,7 @@
                     <!--  PDF Viewer Body : contains the canvas, the loader, or the image-->
                     <div id="PDFSlideViewer" style="position:relative;"
                             t-attf-data-slideid="#{slide.id}"
-                            t-attf-data-slideurl="/slides/slide/#{slide.id}/pdf_content"
+                            t-attf-data-slideurl="#{slide.website_url}/pdf_content"
                             t-attf-data-downloadable="#{slide.download_security}"
                             t-att-data-defaultpage="page">
                         <t t-if="is_embedded">
