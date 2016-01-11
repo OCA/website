@@ -6,15 +6,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-03 17:33+0000\n"
-"PO-Revision-Date: 2015-12-03 18:38+0100\n"
+"POT-Creation-Date: 2016-01-11 12:31+0000\n"
+"PO-Revision-Date: 2016-01-11 13:32+0100\n"
 "Last-Translator: Sergio Teruel <sergio@incaser.es>\n"
 "Language-Team: \n"
+"Language: es-ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es-ES\n"
 "X-Generator: Poedit 1.5.4\n"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Add Product"
+msgstr "Añadir producto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Add your product. You can update later in this section"
+msgstr "Añada su producto. Usted puede modificarlo más tarde en esta sección"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -33,6 +43,21 @@ msgstr "Retraso"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
+msgid "Edit Product"
+msgstr "Modificar producto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "General Data"
+msgstr "Datos generales"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_supplier_breadcrumb
+msgid "Home"
+msgstr "Inicio"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
 msgid "Load Picture"
 msgstr "Cargar Imagen"
 
@@ -48,16 +73,29 @@ msgstr "Cantidad mín."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
+#: view:website:website_product_supplier.product_supplier_breadcrumb
+msgid "My Products"
+msgstr "Mis productos"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+#: view:website:website_product_supplier.product_table
 msgid "Name"
 msgstr "Nombre"
 
 #. module: website_product_supplier
-#: view:website:website_product_supplier.product_list
+#: view:website:website_product_supplier.product_item_table
 msgid "Not Published"
 msgstr "No publicado"
 
 #. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Picture"
+msgstr "Imagen"
+
+#. module: website_product_supplier
 #: view:website:website_product_supplier.product
+#: view:website:website_product_supplier.product_table
 msgid "Price"
 msgstr "Precio"
 
@@ -65,6 +103,11 @@ msgstr "Precio"
 #: view:website:website_product_supplier.product
 msgid "Price Min Quantity"
 msgstr "Precio"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price and stock"
+msgstr "Precio y stock"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -82,7 +125,7 @@ msgid "Product name..."
 msgstr "Nombre del producto"
 
 #. module: website_product_supplier
-#: view:website:website_product_supplier.product_list
+#: view:website:website_product_supplier.product_item_table
 msgid "Published"
 msgstr "Publicado"
 
@@ -92,9 +135,19 @@ msgid "Save Product"
 msgstr "Guardar cambios"
 
 #. module: website_product_supplier
-#: view:website:website_product_supplier.product_list
+#: view:website:website_product_supplier.search
 msgid "Search..."
 msgstr "Buscar"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Status"
+msgstr "Estado"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_list
+msgid "There are currently no products for your account."
+msgstr "Actualmente no hay productos para su cuenta"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list
