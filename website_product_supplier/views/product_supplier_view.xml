@@ -2,10 +2,39 @@
 <openerp>
 <data noupdate="0">
 
+<template id="product_supplier_breadcrumb" name="Product Supplier Breadcrumb">
+    <div class="row">
+        <div class="col-md-6">
+            <ol id="supplier_breadcrumb" class="breadcrumb">
+                <li><a href="/my/home">Home</a></li>
+                <li t-if="main_obj">
+                    <a href="/my/supplier/product/list_only">
+                        My Products</a>
+                </li>
+                <li>
+                    <span t-esc="supplierinfo.get('product_name', False) or 'New product'"/>
+                </li>
+            </ol>
+        </div>
+    </div>
+</template>
+
 <!-- Product view for create and edit -->
 <template id="product" name="Supplier Product">
     <t t-call="website.layout">
-        <div class="container mt8">
+        <div class="container">
+            <div class="row">
+                <div id="product_title" class="col-md-12">
+                    <h1 t-if="main_obj">Edit Product</h1>
+                    <h1 t-if="not main_obj">Add Product</h1>
+                </div>
+            </div>
+            <t t-call="website_product_supplier.product_supplier_breadcrumb"/>
+            <div id="product_help" class="row mb8">
+                <div id="add_product_help" t-if="not main_obj" class="col-md-12">
+                    <p>Add your product. You can update later in this section <a href="/my/supplier/product/list_only">My Products</a>.</p>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <!-- Show error information -->
@@ -17,7 +46,7 @@
                           method="post" enctype="multipart/form-data">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><span t-esc="supplierinfo.get('product_name','New product')"/></h3>
+                                <h3 class="panel-title"><span t-esc="supplierinfo.get('product_name', False) or 'New product'"/></h3>
                             </div>
                             <div class="panel-body">
                                 <hr/>
