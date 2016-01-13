@@ -1,6 +1,9 @@
 Capital in CRM
 ================
 
+.. warn::
+    DEPRECATED! Use OCA's partner_capital!
+
 This module allows to set capital country, capital registered and turnover
 for companies in the CRM main objects (lead, opportunity, partner), and
 propagate them through the workflow.
