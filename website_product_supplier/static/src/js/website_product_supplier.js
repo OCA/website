@@ -14,6 +14,7 @@
             $(this).closest('form').submit();
         });
         $('.btn-del-product').click(del_click);
+        $('#file_input').change(image_preview);
     });
 
     function del_click(e){
@@ -25,7 +26,6 @@
                 'supplierinfo_id': supplierinfo_id
             })
             .then(function(result) {
-                debugger;
                 if (result==true){
                     location.reload(true);
                 };
@@ -34,9 +34,23 @@
                 var $row = $(qweb.render("website.product.supplier.list.error", {
                     'error_name': error['data']['message'],
                 }));
-                debugger;
                 $('.info').append($row);
             });
+    };
+
+    function image_preview(e) {
+        var image = e.target.files[0];
+        var reader = new FileReader();
+        reader.onload = (function(file) {
+           return function(e) {
+                var $img = $(qweb.render("website.product.supplier.image.preview", {
+                    'src': e.target.result,
+                    'title': escape(file.name),
+                }));
+                $("#image").html($img);
+           };
+        })(image);
+        reader.readAsDataURL(image);
     };
 
 })();
