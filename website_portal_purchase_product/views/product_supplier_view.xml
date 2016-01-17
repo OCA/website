@@ -58,13 +58,16 @@
                                     </div>
                                     <div class="row">
                                         <div id="product_image" class="col-md-4">
-                                            <span t-field="product.image"
+                                            <span id="image"
+                                                  t-field="product.image"
                                                   t-field-options='{"widget": "image", "class": "product_detail_img", "alt-field": "name"}'
                                                   class="oe_form_field_image_controls"/>
                                             <div class="text-center">
                                                 <label class="custom-file-input">
                                                     <div class="btn btn-default">Load Picture</div>
-                                                    <input class="input-file" id="fileInput" type="file" name="ufile"/>
+                                                    <input id="file_input" class="input-file"
+                                                           type="file" name="ufile"
+                                                           accept="image/*"/>
                                                 </label>
                                             </div>
                                         </div>
