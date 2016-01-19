@@ -51,7 +51,7 @@
     </template>
 
     <template id="purchase_orders" name="Purchase Orders">
-        <h3>Your Orders</h3>
+        <h3 id="header">Your Orders</h3>
         <t t-if="not purchase_orders">
             <p>There are currently no orders for your account.</p>
         </t>
@@ -339,7 +339,7 @@
     </template>
 
     <template id="purchase_backend_link" inherit_id='website_portal_purchase.purchase_orders' customize_show="True" name="Link to Purchase Backend" active="False">
-        <xpath expr="//h3[@class='page-header']" position="inside">
+        <xpath expr="//h3[@id='header']" position="inside">
             <a href="/web#action=portal_purchase.action_orders_portal" target="_blank" class="btn btn-default btn-xs pull-right"> Access the complete Purchase application</a>
         </xpath>
     </template>
