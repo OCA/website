@@ -18,6 +18,7 @@
         'views/assets.xml',
         'security/website_product_supplier_security.xml',
     ],
+    'images': [],
     'qweb': ['static/src/xml/*.xml'],
     'author': 'Antiun Ingeniería S.L., '
               'Incaser Informatica S.L., '
