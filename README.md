@@ -40,6 +40,7 @@ addon | version | summary
 [website_portal](website_portal/) | 8.0.1.0.0 | Account Management Frontend for your Customers
 [website_portal_purchase](website_portal_purchase/) | 8.0.1.0.0 | Add your purchase document in the frontend portal (purchase order, request for quotations, supplier invoices)
 [website_portal_sale](website_portal_sale/) | 8.0.1.0.0 | Add your sales document in the frontend portal (sales order, quotations, invoices)
+[website_product_supplier](website_product_supplier/) | 8.0.1.0.0 | Website Product Supplier
 [website_sale_collapse_categories](website_sale_collapse_categories/) | 8.0.1.0.0 | Collapsible product categories in website shop
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 | Prevent optional products to be sold singularly
