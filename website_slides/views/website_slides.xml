@@ -17,7 +17,10 @@
 
         <link rel="stylesheet" href="/web/static/lib/select2/select2.css"/>
         <link rel="stylesheet" href="/website/static/lib/select2-bootstrap-css/select2-bootstrap.css"/>
-        <link type="text/less" href="/website_slides/static/src/less/website_slides.less" rel="stylesheet" t-ignore="true"/>
+        <link type="text/css"
+              href="/website_slides/static/src/css/website_slides.css"
+              rel="stylesheet"
+              t-ignore="true"/>
         <!-- Js widgets, ... order loading files is IMPORTANT -->
         <script type="text/javascript" src="/web/static/lib/select2/select2.js"></script>
         <script type="text/javascript" src="/website_slides/static/src/js/slides.js"/>
