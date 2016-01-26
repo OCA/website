@@ -57,21 +57,21 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div id="product_image" class="col-md-4">
+                                        <div id="product_image" class="col-md-3">
                                             <span id="image"
                                                   t-field="product.image"
                                                   t-field-options='{"widget": "image", "class": "product_detail_img", "alt-field": "name"}'
                                                   class="oe_form_field_image_controls"/>
                                             <div class="text-center">
                                                 <label class="custom-file-input">
-                                                    <div class="btn btn-default">Load Picture</div>
+                                                    <div class="btn btn-primary">Load Picture</div>
                                                     <input id="file_input" class="input-file"
                                                            type="file" name="ufile"
                                                            accept="image/*"/>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div id="product_fields" class="col-md-8">
+                                        <div id="product_fields" class="col-md-7">
                                             <section id="product_fields_base">
                                                 <div id="product_name" class="row">
                                                     <div t-attf-class="col-md-8 form-group #{error.get('product_name') and 'has-error' or ''}">
@@ -136,7 +136,7 @@
                                 </section>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="row form-group mb64">
                             <div class="col-md-12">
                                 <button  type="submit"
                                          class="btn btn-primary">Save Product</button>
@@ -162,21 +162,33 @@
             <t t-call="website.pager"/>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6 pull-right">
-            <div class="col-md-10 col-xs-8">
-                <t t-call="website_product_supplier.search"/>
+    <div class="row mt16 mb16">
+        <div class="col-md-6 col-md-push-6">
+            <div class="row mt16 mb16">
+                <div id="actions" class="col-md-8 pull-right">
+                    <t t-call="website_product_supplier.actions"/>
+                </div>
             </div>
-            <div id="actions" class="col-md-2 col-xs-4">
-                <t t-call="website_product_supplier.actions"/>
+        </div>
+        <div class="col-md-6  col-md-pull-6">
+            <div class="row mt16 mb16">
+                <div class="col-md-10">
+                    <t t-call="website_product_supplier.search"/>
+                </div>
             </div>
         </div>
     </div>
-    <div class="table-responsive mt8">
-        <t t-call="website_product_supplier.product_table"/>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="table-responsive mt8">
+                <t t-call="website_product_supplier.product_table"/>
+            </div>
+        </div>
     </div>
-    <div t-if="pager" class="products_pager">
-      <t t-call="website.pager"/>
+    <div class="row">
+        <div t-if="pager" class="products_pager">
+          <t t-call="website.pager"/>
+        </div>
     </div>
 </template>
 
@@ -188,7 +200,7 @@
                 <th name="product_name">Name</th>
                 <th name="price_list" class="text-right">Price</th>
                 <th name="website_published">Status</th>
-                <th name="actions"></th>
+                <th name="actions">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -268,16 +280,21 @@
         <div class="input-group">
             <input type="text" name="search" class="search-query form-control" placeholder="Search..." t-att-value="search"/>
             <span class="input-group-btn">
-                <a class="btn btn-default a-submit"><i class="fa fa-search"/></a>
+                <a class="btn btn-primary a-submit"><i class="fa fa-search"/></a>
             </span>
         </div>
     </form>
 </template>
 
 <template id="actions" name="Website Product Supplier Actions">
-    <a href="/my/supplier/product/new" class="btn btn-default">
-        <i class="fa fa-plus"></i>
-    </a>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Add new product" disabled="disabled"/>
+      <span class="input-group-btn">
+        <a href="/my/supplier/product/new" class="btn btn-primary pull-right">
+            <i class="fa fa-plus"></i>
+        </a>
+      </span>
+    </div>
 </template>
 
 </data>
