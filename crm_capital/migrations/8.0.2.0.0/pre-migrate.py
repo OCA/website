@@ -25,7 +25,7 @@ def migrate(cr, version):
            RENAME TO res_partner_turnover_range_pkey""",
         """ALTER TABLE res_partner_turnover_range
            RENAME CONSTRAINT crm_turnover_range_create_uid_fkey
-           TO res_partner_turnover_range_id_create_uid_fkey""",
+           TO res_partner_turnover_range_create_uid_fkey""",
         """ALTER TABLE res_partner_turnover_range
            RENAME CONSTRAINT crm_turnover_range_write_uid_fkey
            TO res_partner_turnover_range_write_uid_fkey""",
