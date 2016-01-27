@@ -199,8 +199,10 @@
                 <th name="product_image">Picture</th>
                 <th name="product_name">Name</th>
                 <th name="price_list" class="text-right">Price</th>
-                <th name="website_published">Status</th>
-                <th name="actions">Delete</th>
+                <th name="virtual_available" class="text-right">Stock</th>
+                <th name="website_published" class="text-center">Published</th>
+                <th name="product_edit" class="text-center">Edit</th>
+                <th name="actions" class="text-center">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -232,19 +234,29 @@
             <span t-field="supplierinfo.pricelist_ids and supplierinfo.pricelist_ids[0].price"
                 t-field-options='{"widget": "monetary", "display_currency": "user.company_id.currency_id"}'/>
         </td>
-        <td name="website_published" >
+        <td name="virtual_available" class="text-right">
+            <span t-field="supplierinfo.product_tmpl_id.sudo().virtual_available"/>
+        </td>
+        <td name="website_published" class="text-center">
             <span t-if="product.website_published">
-                <span class="label label-success"><i class="fa fa-fw fa-check"/>Published</span>
+                <i class="fa fa-check"/>
             </span>
             <span t-if="not product.website_published">
-                <span class="label label-info"><i class="fa fa-fw fa-lock"/>Not Published</span>
+                <i class="fa fa-close"/>
             </span>
         </td>
-        <td>
-            <button class="btn btn-default btn-del-product pull-right" type="button"
-                    t-att-oe_model_id="supplierinfo.id">
-                <i class="fa fa-trash"></i>
-            </button>
+        <td name="product_edit" class="text-center">
+            <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)"
+               t-att-alt="supplierinfo.product_name">
+                <span><i class="fa fa-pencil"/></span>
+            </a>
+        </td>
+        <td class="text-center">
+            <a href="" class="btn-del-product"
+               t-att-oe_model_id="supplierinfo.id"
+               t-att-alt="supplierinfo.product_name">
+                <span><i class="fa fa-trash"/></span>
+            </a>
         </td>
     </tr>
 </template>
