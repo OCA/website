@@ -152,7 +152,7 @@
 </template>
 
 <template id="product_list" name="Supplier Products">
-    <h3>Your Products</h3>
+    <h1>Your Products</h1>
     <div class="info"/>
     <div t-if="not suppliersinfo">
         <p>There are currently no products for your account.</p>
