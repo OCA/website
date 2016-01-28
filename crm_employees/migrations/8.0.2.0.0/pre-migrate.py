@@ -3,6 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 import logging
+from openerp.models import MAGIC_COLUMNS
 
 _logger = logging.getLogger(__name__)
 
@@ -29,15 +30,45 @@ def psql_catch(sentence, exception):
         END $$""".format(sentence, exception, exception.replace("'", "''"))
 
 
-def model_rename(oldmodel, newmodel,
+def model_remove(oldmodel, oldmodule=OLD_MODULE):
+    """Remove all occurences of :param:`oldmodel`."""
+    sentences = (
+        """DELETE FROM ir_model_data
+           WHERE module = '{oldmodule}' AND
+                 (name = 'model_{oldtable}' OR
+                  name LIKE 'field_{oldtable}_%')""",
+        """DELETE FROM ir_model_fields
+           WHERE model_id = (SELECT id
+                             FROM ir_model
+                             WHERE model = '{oldmodel}')""",
+        "DELETE FROM ir_model WHERE model = '{oldmodel}'",
+        "DROP TABLE IF EXISTS {oldtable}",
+    )
+
+    for s in sentences:
+        yield s.format(
+            oldmodel=oldmodel,
+            oldtable=dashed(oldmodel),
+            oldmodule=oldmodule,
+        )
+
+
+def model_rename(oldmodel, newmodel, transfercols=tuple(),
                  oldmodule=OLD_MODULE, newmodule=NEW_MODULE):
     """Rename a model. Transfer it to :param:`newmodule`.
+
+    If you only want to transfer it from old module to new one, set
+    :param:`oldmodel` and :param:`newmodel` the same value.
 
     :param str oldmodel:
         Old model name, like ``res.partner``.
 
     :param str newmodel:
         New model name, like ``res.partner``.
+
+    :param iterable transfercols:
+        Iterable with names of columns to transfer from :param:`oldmodel` to
+        :param:`newmodel`. They will not be renamed.
 
     :param str oldmodule:
         Old module name, like ``website_blog``.
@@ -102,10 +133,17 @@ def model_rename(oldmodel, newmodel,
             newtable=dashed(newmodel),
         )
 
+    for col in transfercols:
+        for s in column_rename(newmodel, col, col, oldmodule, newmodule):
+            yield s
 
-def rename_column(model, oldcol, newcol,
+
+def column_rename(model, oldcol, newcol,
                   oldmodule=OLD_MODULE, newmodule=NEW_MODULE):
     """Rename a column within a model.
+
+    If you only want to transfer it from old module to new one, set
+    :param:`oldcol` and :param:`newcol` the same value.
 
     :param str model:
         Model name, like ``res.partner``.
@@ -124,7 +162,9 @@ def rename_column(model, oldcol, newcol,
     """
     sentences = (
         "ALTER TABLE {table} DROP CONSTRAINT IF EXISTS {table}_{oldcol}_fkey",
-        "ALTER TABLE {table} RENAME COLUMN {oldcol} TO {newcol}",
+        psql_catch(
+            "ALTER TABLE {table} RENAME COLUMN {oldcol} TO {newcol};",
+            "duplicate_column"),
         """UPDATE ir_model_data
            SET name = 'field_{table}_{newcol}',
                module = '{newmodule}'
@@ -184,8 +224,14 @@ def migrate(cr, version):
     secure_migration(
         cr,
         model_rename("crm.employees_range",
-                     "res.partner.employee_quantity_range"),
+                     "res.partner.employee_quantity_range",
+                     MAGIC_COLUMNS + ["name"]),
+        model_remove("crm.employees_range"),
         model_rename("res.partner", "res.partner"),
+        column_rename("res.partner", "employees_number", "employee_quantity"),
+        column_rename("res.partner",
+                      "employees_range",
+                      "employee_quantity_range_id"),
     )
 
     _logger.warn(
