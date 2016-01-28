@@ -3,7 +3,7 @@
 <data>
 
     <template id="request_quotations" name="Request Quotations">
-        <h3>Your Request Quotations</h3>
+        <h1>Your Request Quotations</h1>
         <t t-if="not request_quotations">
             <p>There are currently no quotes for your account.</p>
         </t>
@@ -51,7 +51,7 @@
     </template>
 
     <template id="purchase_orders" name="Purchase Orders">
-        <h3 id="header">Your Orders</h3>
+        <h1 id="header">Your Orders</h1>
         <t t-if="not purchase_orders">
             <p>There are currently no orders for your account.</p>
         </t>
@@ -112,8 +112,8 @@
     </template>
 
     <template id="supplier_invoices" name="Invoices and Payments">
-        <h3>Your Invoices and Payments</h3>
-        <t t-if="not invoices">
+        <h1>Your Invoices and Payments</h1>
+        <t t-if="not supplier_invoices">
             <p>There are currently no invoices for your account.</p>
         </t>
         <t t-if="supplier_invoices">
@@ -339,7 +339,7 @@
     </template>
 
     <template id="purchase_backend_link" inherit_id='website_portal_purchase.purchase_orders' customize_show="True" name="Link to Purchase Backend" active="False">
-        <xpath expr="//h3[@id='header']" position="inside">
+        <xpath expr="//h1[@id='header']" position="inside">
             <a href="/web#action=portal_purchase.action_orders_portal" target="_blank" class="btn btn-default btn-xs pull-right"> Access the complete Purchase application</a>
         </xpath>
     </template>
