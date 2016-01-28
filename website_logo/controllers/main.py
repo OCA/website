@@ -75,8 +75,6 @@ class Website(http.Controller):
                     image, mtime = self._image_logo_get(cr, domain)
                     if not image:
                         image, mtime = self._image_logo_get(cr, 'localhost')
-                    if not image:
-                        image, mtime = self._image_logo_get(cr)
                     if image:
                         response = http.send_file(
                             image, filename=imgname, mtime=mtime)
