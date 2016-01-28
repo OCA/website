@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_cookie_notice
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
 msgid ""
@@ -19,25 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
-msgid ""
-". To disable them, configure your browser properly. If you keep using this "
-"website, you are accepting those."
-msgstr ""
-". Για να απενεργοποιήσετε τα cookies, ρυθμίσετε κατάλληλα τον browser σας. "
-"Εάν συνεχίσετε τη χρήση αυτού του ιστότοπου, αποδέχεστε αυτούς τους όρους."
+#: view:website:website_cookie_notice.message
+msgid ". To disable them, configure your browser properly. If you keep using this website, you are accepting those."
+msgstr ". Για να απενεργοποιήσετε τα cookies, ρυθμίσετε κατάλληλα τον browser σας. Εάν συνεχίσετε τη χρήση αυτού του ιστότοπου, αποδέχεστε αυτούς τους όρους."
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
-msgid "OK"
-msgstr ""
-
-#. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: view:website:website_cookie_notice.message
 msgid "We use cookies in this website. Read about them in our"
 msgstr "Χρησιμοποιούμε cookies σε αυτόν τον ιστότοπο. Διαβάστε σχετικά την"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: view:website:website_cookie_notice.message
 msgid "privacy policy"
 msgstr "πολιτική απορρήτου"

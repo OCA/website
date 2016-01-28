@@ -21,7 +21,7 @@
 {
     'name': 'Cookie notice',
     'summary': 'Show cookie notice according to cookie law',
-    'version': '8.0.2.0.0',
+    'version': '8.0.2.1.0',
     'category': 'Website',
     'author': "Agile Business Group, "
               u"Antiun Ingeniería S.L., "
