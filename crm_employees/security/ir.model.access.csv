@@ -1,5 +1,0 @@
-"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-"access_crm_employees_public","crm_employees_range group_public","model_crm_employees_range","base.group_public",1,0,0,0
-"access_crm_employees_portal","crm_employees_range group_portal","model_crm_employees_range","base.group_portal",1,0,0,0
-"access_crm_employees_group_partner_manager","crm_employees_range group_partner_manager","model_crm_employees_range","base.group_partner_manager",1,1,1,1
-"access_crm_employees_group_user","crm_employees_range group_user","model_crm_employees_range","base.group_user",1,0,0,0

@@ -22,18 +22,12 @@
 
 {
     'name': 'Employees in CRM',
-    'version': '1.0',
+    'version': '8.0.2.0.0',
     'category': 'Customer Relationship Management',
     'author': 'Antiun Ingeniería S.L.',
     'website': 'http://www.antiun.com',
     'depends': [
         'crm',
-    ],
-    'data': [
-        'views/crm_employees_range_view.xml',
-        'views/crm_lead_view.xml',
-        'views/res_partner_view.xml',
-        'security/ir.model.access.csv',
     ],
     "installable": True,
 }
