@@ -170,7 +170,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6  col-md-pull-6">
+        <div class="col-md-6 col-md-pull-6">
             <div class="row mt16 mb16">
                 <div class="col-md-10">
                     <t t-call="website_product_supplier.search"/>
@@ -196,13 +196,13 @@
     <table id="product_supplier" class="table table-striped ">
         <thead>
             <tr>
-                <th name="product_image">Picture</th>
-                <th name="product_name">Name</th>
-                <th name="price_list" class="text-right">Price</th>
-                <th name="virtual_available" class="text-right">Stock</th>
-                <th name="website_published" class="text-center">Published</th>
-                <th name="product_edit" class="text-center">Edit</th>
-                <th name="actions" class="text-center">Delete</th>
+                <th id="product_image">Picture</th>
+                <th id="product_name">Name</th>
+                <th id="price_list" class="text-right">Price</th>
+                <th id="virtual_available" class="text-right">Stock</th>
+                <th id="website_published" class="text-center">Published</th>
+                <th id="product_edit" class="text-center">Edit</th>
+                <th id="actions" class="text-center">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -216,7 +216,7 @@
 <template id="product_item_table">
     <t t-set="product" t-value="supplierinfo.product_tmpl_id"/>
     <tr>
-        <td name="product_image">
+        <td id="product_image">
           <div class="oe_product_image">
               <a itemprop="url" t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)">
                   <img itemprop="image" class="img img-responsive"
@@ -225,19 +225,19 @@
               </a>
           </div>
         </td>
-        <td name="product_name">
+        <td id="product_name">
             <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)" t-att-alt="supplierinfo.product_name">
                 <span t-field="supplierinfo.product_name"></span>
             </a>
         </td>
-        <td name="price_list" class="text-right">
+        <td id="price_list" class="text-right">
             <span t-field="supplierinfo.pricelist_ids and supplierinfo.pricelist_ids[0].price"
                 t-field-options='{"widget": "monetary", "display_currency": "user.company_id.currency_id"}'/>
         </td>
-        <td name="virtual_available" class="text-right">
+        <td id="virtual_available" class="text-right">
             <span t-field="supplierinfo.product_tmpl_id.sudo().virtual_available"/>
         </td>
-        <td name="website_published" class="text-center">
+        <td id="website_published" class="text-center">
             <span t-if="product.website_published">
                 <i class="fa fa-check"/>
             </span>
@@ -245,7 +245,7 @@
                 <i class="fa fa-close"/>
             </span>
         </td>
-        <td name="product_edit" class="text-center">
+        <td id="product_edit" class="text-center">
             <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)"
                t-att-alt="supplierinfo.product_name">
                 <span><i class="fa fa-pencil"/></span>
