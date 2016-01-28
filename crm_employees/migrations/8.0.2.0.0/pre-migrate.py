@@ -14,6 +14,21 @@ def dashed(name):
     return name.replace(".", "_")
 
 
+def psql_catch(sentence, exception):
+    """Catch exceptions in PL/pgSQL.
+
+    :param str sentence:
+        Sentence(s) to try. It must end with colon.
+
+    :param str exception:
+        Exception to catch.
+    """
+    return """DO $$
+        BEGIN {}
+        EXCEPTION WHEN {} THEN RAISE NOTICE '{} caught';
+        END $$""".format(sentence, exception, exception.replace("'", "''"))
+
+
 def model_rename(oldmodel, newmodel,
                  oldmodule=OLD_MODULE, newmodule=NEW_MODULE):
     """Rename a model. Transfer it to :param:`newmodule`.
@@ -31,16 +46,31 @@ def model_rename(oldmodel, newmodel,
         New module name, like ``website_blog``.
     """
     sentences = (
-        "ALTER TABLE {oldtable} RENAME TO {newtable}",
-        "ALTER SEQUENCE {oldtable}_id_seq RENAME TO {newtable}_id_seq",
-        "ALTER INDEX {oldtable}_pkey RENAME TO {newtable}_pkey",
+        # Common constraints
+        psql_catch(
+            "ALTER SEQUENCE {oldtable}_id_seq RENAME TO {newtable}_id_seq;",
+            "duplicate_table"),
+        psql_catch(
+            "ALTER INDEX {oldtable}_pkey RENAME TO {newtable}_pkey;",
+            "duplicate_table"),
+        psql_catch(
+            """ALTER TABLE {oldtable}
+               RENAME CONSTRAINT {oldtable}_create_uid_fkey
+               TO {newtable}_create_uid_fkey;""",
+            "duplicate_object"),
+        psql_catch(
+            """ALTER TABLE {oldtable}
+               RENAME CONSTRAINT {oldtable}_write_uid_fkey
+               TO {newtable}_write_uid_fkey;""",
+            "duplicate_object"),
+
+        # Rename table in DB
+        psql_catch(
+            "ALTER TABLE {oldtable} RENAME TO {newtable};",
+            "duplicate_table"),
+
+        # Rename model in Odoo, and change owner addon
         "UPDATE ir_model SET model = '{newmodel}' WHERE model = '{oldmodel}'",
-        """ALTER TABLE {oldtable}
-           RENAME CONSTRAINT {oldtable}_create_uid_fkey
-           TO {newtable}_create_uid_fkey""",
-        """ALTER TABLE {oldtable}
-           RENAME CONSTRAINT {oldtable}_write_uid_fkey
-           TO {newtable}_write_uid_fkey""",
         """UPDATE ir_model_data
            SET module = '{newmodule}', name = 'model_{newtable}'
            WHERE module = '{oldmodule}' AND
