@@ -2,6 +2,7 @@
 # Copyright 2015 ACSONE SA/NV (<http://acsone.eu>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
+
 def post_init(cr, registry):
     """Install hook
     fill website_publication_date field with create_date value for published
