@@ -57,21 +57,21 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div id="product_image" class="col-md-4">
+                                        <div id="product_image" class="col-md-3">
                                             <span id="image"
                                                   t-field="product.image"
                                                   t-field-options='{"widget": "image", "class": "product_detail_img", "alt-field": "name"}'
                                                   class="oe_form_field_image_controls"/>
                                             <div class="text-center">
                                                 <label class="custom-file-input">
-                                                    <div class="btn btn-default">Load Picture</div>
+                                                    <div class="btn btn-primary">Load Picture</div>
                                                     <input id="file_input" class="input-file"
                                                            type="file" name="ufile"
                                                            accept="image/*"/>
                                                 </label>
                                             </div>
                                         </div>
-                                        <div id="product_fields" class="col-md-8">
+                                        <div id="product_fields" class="col-md-7">
                                             <section id="product_fields_base">
                                                 <div id="product_name" class="row">
                                                     <div t-attf-class="col-md-8 form-group #{error.get('product_name') and 'has-error' or ''}">
@@ -136,7 +136,7 @@
                                 </section>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="row form-group mb64">
                             <div class="col-md-12">
                                 <button  type="submit"
                                          class="btn btn-primary">Save Product</button>
@@ -152,7 +152,7 @@
 </template>
 
 <template id="product_list" name="Supplier Products">
-    <h3>Your Products</h3>
+    <h1>Your Products</h1>
     <div class="info"/>
     <div t-if="not suppliersinfo">
         <p>There are currently no products for your account.</p>
@@ -162,21 +162,33 @@
             <t t-call="website.pager"/>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6 pull-right">
-            <div class="col-md-10 col-xs-8">
-                <t t-call="website_product_supplier.search"/>
+    <div class="row mt16 mb16">
+        <div class="col-md-6 col-md-push-6">
+            <div class="row mt16 mb16">
+                <div id="actions" class="col-md-8 pull-right">
+                    <t t-call="website_product_supplier.actions"/>
+                </div>
             </div>
-            <div id="actions" class="col-md-2 col-xs-4">
-                <t t-call="website_product_supplier.actions"/>
+        </div>
+        <div class="col-md-6 col-md-pull-6">
+            <div class="row mt16 mb16">
+                <div class="col-md-10">
+                    <t t-call="website_product_supplier.search"/>
+                </div>
             </div>
         </div>
     </div>
-    <div class="table-responsive mt8">
-        <t t-call="website_product_supplier.product_table"/>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="table-responsive mt8">
+                <t t-call="website_product_supplier.product_table"/>
+            </div>
+        </div>
     </div>
-    <div t-if="pager" class="products_pager">
-      <t t-call="website.pager"/>
+    <div class="row">
+        <div t-if="pager" class="products_pager">
+          <t t-call="website.pager"/>
+        </div>
     </div>
 </template>
 
@@ -184,11 +196,13 @@
     <table id="product_supplier" class="table table-striped ">
         <thead>
             <tr>
-                <th name="product_image">Picture</th>
-                <th name="product_name">Name</th>
-                <th name="price_list" class="text-right">Price</th>
-                <th name="website_published">Status</th>
-                <th name="actions"></th>
+                <th id="product_image">Picture</th>
+                <th id="product_name">Name</th>
+                <th id="price_list" class="text-right">Price</th>
+                <th id="virtual_available" class="text-right">Stock</th>
+                <th id="website_published" class="text-center">Published</th>
+                <th id="product_edit" class="text-center">Edit</th>
+                <th id="actions" class="text-center">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -202,7 +216,7 @@
 <template id="product_item_table">
     <t t-set="product" t-value="supplierinfo.product_tmpl_id"/>
     <tr>
-        <td name="product_image">
+        <td id="product_image">
           <div class="oe_product_image">
               <a itemprop="url" t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)">
                   <img itemprop="image" class="img img-responsive"
@@ -211,28 +225,38 @@
               </a>
           </div>
         </td>
-        <td name="product_name">
+        <td id="product_name">
             <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)" t-att-alt="supplierinfo.product_name">
                 <span t-field="supplierinfo.product_name"></span>
             </a>
         </td>
-        <td name="price_list" class="text-right">
+        <td id="price_list" class="text-right">
             <span t-field="supplierinfo.pricelist_ids and supplierinfo.pricelist_ids[0].price"
                 t-field-options='{"widget": "monetary", "display_currency": "user.company_id.currency_id"}'/>
         </td>
-        <td name="website_published" >
+        <td id="virtual_available" class="text-right">
+            <span t-field="supplierinfo.product_tmpl_id.sudo().virtual_available"/>
+        </td>
+        <td id="website_published" class="text-center">
             <span t-if="product.website_published">
-                <span class="label label-success"><i class="fa fa-fw fa-check"/>Published</span>
+                <i class="fa fa-check"/>
             </span>
             <span t-if="not product.website_published">
-                <span class="label label-info"><i class="fa fa-fw fa-lock"/>Not Published</span>
+                <i class="fa fa-close"/>
             </span>
         </td>
-        <td>
-            <button class="btn btn-default btn-del-product pull-right" type="button"
-                    t-att-oe_model_id="supplierinfo.id">
-                <i class="fa fa-trash"></i>
-            </button>
+        <td id="product_edit" class="text-center">
+            <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)"
+               t-att-alt="supplierinfo.product_name">
+                <span><i class="fa fa-pencil"/></span>
+            </a>
+        </td>
+        <td class="text-center">
+            <a href="" class="btn-del-product"
+               t-att-oe_model_id="supplierinfo.id"
+               t-att-alt="supplierinfo.product_name">
+                <span><i class="fa fa-trash"/></span>
+            </a>
         </td>
     </tr>
 </template>
@@ -268,16 +292,21 @@
         <div class="input-group">
             <input type="text" name="search" class="search-query form-control" placeholder="Search..." t-att-value="search"/>
             <span class="input-group-btn">
-                <a class="btn btn-default a-submit"><i class="fa fa-search"/></a>
+                <a class="btn btn-primary a-submit"><i class="fa fa-search"/></a>
             </span>
         </div>
     </form>
 </template>
 
 <template id="actions" name="Website Product Supplier Actions">
-    <a href="/my/supplier/product/new" class="btn btn-default">
-        <i class="fa fa-plus"></i>
-    </a>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Add new product" disabled="disabled"/>
+      <span class="input-group-btn">
+        <a href="/my/supplier/product/new" class="btn btn-primary pull-right">
+            <i class="fa fa-plus"></i>
+        </a>
+      </span>
+    </div>
 </template>
 
 </data>
