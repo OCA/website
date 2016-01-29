@@ -24,6 +24,7 @@ Contributors
 ------------
 
 * Laurent Mignon <laurent.mignon@acsone.eu>
+* Sergio Teruel <sergio@incaser.es>
 
 Maintainer
 ----------
