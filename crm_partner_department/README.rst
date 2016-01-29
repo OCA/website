@@ -1,19 +1,17 @@
 Department field in CRM contact
 ===============================
 
-This module adds the concept of department to the CRM main objects (lead,
-opportunity, partner), and propagate them through the workflow.
+.. warning::
+    DEPRECATED! Use OCA's partner_contact_department!
 
-Department is a drop-down field in lead, opportunity and partner forms. It
-refers to contact department in its own company
+DEPRECATION PROCESS
+===================
 
-Departments available list must be defined first at
-Sales > Configuration > Leads & Opportunities > Departments
+1. Update crm_partner_department to last version.
+2. Install partner_contact_department.
+3. Uninstall crm_partner_department.
 
-Credits
-=======
+When all these steps are done in all your databases:
 
-Contributors
-------------
-* Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
-* Antonio Espinosa <antonioea@antiun.com>
+1. Remove the source code of this module.
+2. Remove the module in all databases (via *More > Delete*).
