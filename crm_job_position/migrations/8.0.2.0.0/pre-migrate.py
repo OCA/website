@@ -145,6 +145,9 @@ def column_rename(model, oldcol, newcol,
     If you only want to transfer it from old module to new one, set
     :param:`oldcol` and :param:`newcol` the same value.
 
+    Remember that you don't need to rename non-stored computed fields nor
+    `One2many`.
+
     :param str model:
         Model name, like ``res.partner``.
 
@@ -226,11 +229,8 @@ def migrate(cr, version):
         model_rename("crm.job_position",
                      "res.partner.job_position",
                      MAGIC_COLUMNS + ["name", "parent_id", "parent_left",
-                                      "parent_right", "children"]),
+                                      "parent_right"]),
         model_remove("crm.job_position"),
-        column_rename("res.partner.job_position",
-                      "children",
-                      "child_ids"),
         model_rename("res.partner", "res.partner"),
         column_rename("res.partner", "job_position", "job_position_id"),
     )
