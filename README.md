@@ -13,6 +13,12 @@ Includes modules that expand official website modules and include:
 * and more...
 
 [//]: # (addons)
+Available addons
+----------------
+addon | version | summary
+--- | --- | ---
+[website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 | Website blog Management
+
 Unported addons
 ---------------
 addon | version | summary
@@ -20,7 +26,6 @@ addon | version | summary
 [website_analytics_piwik](website_analytics_piwik/) | 8.0.1.0.0 (unported) | Track website users using piwik
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 (unported) | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 (unported) | Add Facebook comments on blog posts
-[website_blog_mgmt](website_blog_mgmt/) | 8.0.1.0.0 (unported) | Website blog Management
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 (unported) | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 8.0.1.0.0 (unported) | Show cookie notice according to cookie law
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 (unported) | Website CRM privacy policy
