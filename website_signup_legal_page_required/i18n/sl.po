@@ -3,13 +3,13 @@
 # * website_signup_legal_page_required
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 10:22+0000\n"
-"PO-Revision-Date: 2015-11-04 05:32+0000\n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"PO-Revision-Date: 2016-05-02 04:14+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,meeting_count:0
+msgid "# Meetings"
+msgstr "# sestankov"
 
 #. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
@@ -31,6 +36,11 @@ msgid "Accepted legal terms"
 msgstr "Sprejeti pravni pogoji"
 
 #. module: website_signup_legal_page_required
+#: field:res.users,property_stock_customer:0
+msgid "Customer Location"
+msgstr "Lokacija kupca"
+
+#. module: website_signup_legal_page_required
 #: help:res.users,accepted_legal_terms:0
 msgid "Did the user accept our legal terms when opening the account?"
 msgstr "Ali je uporabnik ob odprtju računa sprejel naše pravne pogoje?"
@@ -41,9 +51,83 @@ msgid "I accept the"
 msgstr "Sprejemam"
 
 #. module: website_signup_legal_page_required
+#: field:res.users,opportunity_ids:0
+msgid "Leads and Opportunities"
+msgstr "Indici in priložnosti"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,meeting_ids:0
+msgid "Meetings"
+msgstr "Sestanki"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,opportunity_count:0
+msgid "Opportunity"
+msgstr "Priložnost"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,phonecall_count:0 field:res.users,phonecall_ids:0
+msgid "Phonecalls"
+msgstr "Telefonski klici"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,website_published:0
+msgid "Publish"
+msgstr "Objavi"
+
+#. module: website_signup_legal_page_required
+#: help:res.users,website_published:0
+msgid "Publish on the website"
+msgstr "Objavi na spletni strani"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,property_stock_supplier:0
+msgid "Supplier Location"
+msgstr "Lokacija dobavitelja"
+
+#. module: website_signup_legal_page_required
+#: help:res.users,property_stock_customer:0
+msgid ""
+"This stock location will be used, instead of the default one, as the "
+"destination location for goods you send to this partner"
+msgstr "Ta lokacija zaloge se uporabi namesto privzete za ciljno lokacijo blaga poslanega temu partnerju."
+
+#. module: website_signup_legal_page_required
+#: help:res.users,property_stock_supplier:0
+msgid ""
+"This stock location will be used, instead of the default one, as the source "
+"location for goods you receive from the current partner"
+msgstr "Ta lokacija zaloge se uporabi namesto privzete za izvorno lokacijo blaga prejetega od tega partnerja."
+
+#. module: website_signup_legal_page_required
 #: model:ir.model,name:website_signup_legal_page_required.model_res_users
 msgid "Users"
 msgstr "Uporabniki"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,website_description:0
+msgid "Website Partner Full Description"
+msgstr "Spletna stran - polni opis partnerja"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,website_short_description:0
+msgid "Website Partner Short Description"
+msgstr "Spletna stran - kratki opis partnerja"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,website_meta_description:0
+msgid "Website meta description"
+msgstr "Spletni meta opis"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,website_meta_keywords:0
+msgid "Website meta keywords"
+msgstr "Spletne meta ključne besede"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,website_meta_title:0
+msgid "Website meta title"
+msgstr "Spletni meta naslov"
 
 #. module: website_signup_legal_page_required
 #: code:addons/website_signup_legal_page_required/exceptions.py:10
@@ -75,3 +159,8 @@ msgstr "pravila o zasebnosti"
 #: view:website:auth_signup.fields
 msgid "terms of use"
 msgstr "pogoje uporabe"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,self:0
+msgid "unknown"
+msgstr "neznano"
