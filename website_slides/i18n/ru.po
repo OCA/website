@@ -3,20 +3,19 @@
 # * website_slides
 # 
 # Translators:
-# Carles Antolí <carlesantoli@hotmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-19 11:34+0000\n"
-"PO-Revision-Date: 2016-01-19 11:37+0000\n"
+"PO-Revision-Date: 2016-01-15 21:27+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
+"Language-Team: Russian (http://www.transifex.com/oca/OCA-website-8-0/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: ca\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_shared
@@ -116,22 +115,22 @@ msgstr ""
 #. module: website_slides
 #: field:slide.embed,count_views:0
 msgid "# Views"
-msgstr "# Vistes"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,embed_views:0
 msgid "# of Embedded Views"
-msgstr "# De visites incrustades"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,slide_views:0
 msgid "# of Website Views"
-msgstr "# De visites del lloc web"
+msgstr ""
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_shared
 msgid "${user.name} shared a ${object.slide_type} with you!"
-msgstr "${user.name} va compartir un ${object.slide_type} amb tu!"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slides_search
@@ -171,12 +170,12 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "About"
-msgstr "Sobre"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Actions"
-msgstr "Accions"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.slide,download_security:0
@@ -189,7 +188,7 @@ msgstr ""
 #: view:slide.channel:website_slides.view_slide_channel_form
 #: field:slide.channel,category_ids:0
 msgid "Categories"
-msgstr "Categories"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -201,7 +200,7 @@ msgstr "Categories"
 #: field:slide.slide,category_id:0
 #, python-format
 msgid "Category"
-msgstr "Categoria"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,channel_id:0
@@ -209,7 +208,7 @@ msgstr "Categoria"
 #: view:slide.slide:website_slides.view_slide_slide_search
 #: field:slide.slide,channel_id:0
 msgid "Channel"
-msgstr "Canal"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,group_ids:0
@@ -232,7 +231,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_channel
 msgid "Channel for Slides"
-msgstr "Canal per diapositives"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
@@ -245,24 +244,24 @@ msgstr ""
 #: model:ir.ui.menu,name:website_slides.menu_action_slide_channels
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Channels"
-msgstr "Canals"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Comments"
-msgstr "Comentaris"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,datas:0
 msgid "Content"
-msgstr "Contingut"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:18
 #, python-format
 msgid "Content Preview"
-msgstr "Vista prèvia del contingut"
+msgstr ""
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:344
@@ -285,7 +284,7 @@ msgstr ""
 #: code:addons/website_slides/static/src/js/slides_upload.js:210
 #, python-format
 msgid "Create New %s '%s'"
-msgstr "Crear nou %s '%s'"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_1
@@ -302,14 +301,14 @@ msgstr ""
 #: field:slide.embed,create_uid:0 field:slide.slide,create_uid:0
 #: field:slide.tag,create_uid:0
 msgid "Created by"
-msgstr "Creat per"
+msgstr "Создано"
 
 #. module: website_slides
 #: field:slide.category,create_date:0 field:slide.channel,create_date:0
 #: field:slide.embed,create_date:0 field:slide.slide,create_date:0
 #: field:slide.tag,create_date:0
 msgid "Created on"
-msgstr "Creat en"
+msgstr "Создано на"
 
 #. module: website_slides
 #: help:slide.channel,message_last_post:0 help:slide.slide,message_last_post:0
@@ -325,19 +324,19 @@ msgstr ""
 #: field:slide.slide,description:0
 #, python-format
 msgid "Description"
-msgstr "Descripció"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:68
 #, python-format
 msgid "Discard"
-msgstr "Descartar"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,dislikes:0 view:website:website_slides.slide_detail_view
 msgid "Dislikes"
-msgstr "No m'agrada"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.category,sequence:0 help:slide.channel,sequence:0
@@ -348,7 +347,7 @@ msgstr ""
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: selection:slide.slide,slide_type:0
 msgid "Document"
-msgstr "Document"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,document_id:0
@@ -370,12 +369,12 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Documents"
-msgstr "Documents"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Download"
-msgstr "Descarregar"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,download_security:0
@@ -385,12 +384,12 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Email"
-msgstr "Correu Electrònic"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Email Address"
-msgstr "Correu electrònic"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,publish_template_id:0
@@ -435,7 +434,7 @@ msgstr ""
 #. module: website_slides
 #: model:slide.channel,name:website_slides.channel_private
 msgid "Employee Channel"
-msgstr "Canal empleats"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
@@ -451,7 +450,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
@@ -489,18 +488,18 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "First slide"
-msgstr "Primera diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,message_follower_ids:0
 #: field:slide.slide,message_follower_ids:0
 msgid "Followers"
-msgstr "Seguidors"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "General"
-msgstr "General"
+msgstr ""
 
 #. module: website_slides
 #: field:website.config.settings,website_slide_google_app_key:0
@@ -510,7 +509,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Google+"
-msgstr "Google+"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_graph
@@ -520,7 +519,7 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Group By"
-msgstr "Agrupat per"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,group_ids:0
@@ -544,14 +543,14 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Home"
-msgstr "Inici"
+msgstr "Домой"
 
 #. module: website_slides
 #: field:slide.category,id:0 field:slide.channel,id:0 field:slide.embed,id:0
 #: field:slide.slide,id:0 field:slide.tag,id:0
 #: field:website.published.mixin,id:0
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,message_unread:0 help:slide.slide,message_unread:0
@@ -561,7 +560,7 @@ msgstr ""
 #. module: website_slides
 #: field:slide.slide,image:0
 msgid "Image"
-msgstr "Imatge"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
@@ -604,67 +603,67 @@ msgstr ""
 #: field:slide.channel,message_is_follower:0
 #: field:slide.slide,message_is_follower:0
 msgid "Is a Follower"
-msgstr "Es un seguidor"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,message_last_post:0
 #: field:slide.slide,message_last_post:0
 msgid "Last Message Date"
-msgstr "Data últim missatge"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,write_uid:0 field:slide.channel,write_uid:0
 #: field:slide.embed,write_uid:0 field:slide.slide,write_uid:0
 #: field:slide.tag,write_uid:0
 msgid "Last Updated by"
-msgstr "Darrera actualització per"
+msgstr "Последнее обновление "
 
 #. module: website_slides
 #: field:slide.category,write_date:0 field:slide.channel,write_date:0
 #: field:slide.embed,write_date:0 field:slide.slide,write_date:0
 #: field:slide.tag,write_date:0
 msgid "Last Updated on"
-msgstr "Darrera actualització de"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Last slide"
-msgstr "Última diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
 msgid "Latest Published"
-msgstr "Darrers publicats"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,likes:0 view:website:website_slides.slide_detail_view
 msgid "Likes"
-msgstr "M'agrada"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "LinkedIn"
-msgstr "LinkedIn"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Loading ..."
-msgstr "Carregant ..."
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,image_medium:0
 msgid "Medium"
-msgstr "Mitjà"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,access_error_msg:0
 msgid "Message to display when not accessible due to access rights"
-msgstr "Missatge a mostrar quan no sigui accessible a causa dels drets d'accés"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,message_ids:0 field:slide.slide,message_ids:0
 msgid "Messages"
-msgstr "Missatges"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,message_ids:0 help:slide.slide,message_ids:0
@@ -674,20 +673,20 @@ msgstr ""
 #. module: website_slides
 #: field:slide.slide,mime_type:0
 msgid "Mime-type"
-msgstr "Mime-type"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
 #: view:website:website_slides.slide_detail_view
 #: view:website:website_slides.slides_channel_header
 msgid "Most Viewed"
-msgstr "Més vist"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
 #: view:website:website_slides.slides_channel_header
 msgid "Most Voted"
-msgstr "Més votat"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,name:0
@@ -696,22 +695,22 @@ msgstr "Més votat"
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: field:slide.tag,name:0
 msgid "Name"
-msgstr "Nom"
+msgstr ""
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_published
 msgid "New ${object.slide_type} published on ${object.channel_id.name}"
-msgstr "Nou ${object.slide_type} publicat a ${object.channel_id.name}"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Newest"
-msgstr "Els més nous"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Next slide"
-msgstr "Diapositiva següent"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
@@ -743,12 +742,12 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_grid_view
 msgid "Not Published"
-msgstr "No publicat"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,nbr_documents:0 field:slide.channel,nbr_documents:0
 msgid "Number of Documents"
-msgstr "Nombre de documents"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,nbr_infographics:0
@@ -760,12 +759,12 @@ msgstr ""
 #: field:slide.category,nbr_presentations:0
 #: field:slide.channel,nbr_presentations:0
 msgid "Number of Presentations"
-msgstr "Nombre de presentacions"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,nbr_videos:0 field:slide.channel,nbr_videos:0
 msgid "Number of Videos"
-msgstr "Nombre de vídeos"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_3
@@ -864,19 +863,19 @@ msgstr ""
 #. module: website_slides
 #: model:slide.channel,name:website_slides.channel_partial
 msgid "Partner Channel"
-msgstr "Canal empresa"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Please"
-msgstr "Si us plau"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/js/slides.js:50
 #, python-format
 msgid "Please <a href=\"/web?redirect=%s\">login</a> to vote this slide"
-msgstr "Si us plau <a href=\"/web?redirect=%s\">iniciar Sessió</a> per votar aquesta diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: code:addons/website_slides/models/slides.py:338
@@ -893,47 +892,47 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Post"
-msgstr "Publicar"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid ""
 "Post comment with email address (confirmation of email is required in order "
 "to publish comment on website) or please"
-msgstr "Afegeix un comentari amb adreça de correu electrònic (es requereix confirmació de correu electrònic per tal de publicar comentaris a la pàgina web) o si us plau"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.embed,slide_id:0 selection:slide.slide,slide_type:0
 msgid "Presentation"
-msgstr "Presentació"
+msgstr ""
 
 #. module: website_slides
 #: model:mail.message.subtype,description:website_slides.mt_channel_slide_published
 #: model:mail.message.subtype,name:website_slides.mt_channel_slide_published
 msgid "Presentation Published"
-msgstr "Presentació publicada"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website.layout
 #: view:website:website_slides.slides_channel_header
 #: model:website.menu,name:website_slides.website_menu_slides
 msgid "Presentations"
-msgstr "Presentacions"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Previous slide"
-msgstr "Diapositiva anterior"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Private"
-msgstr "Privat"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.channels
 msgid "Private channel"
-msgstr "Canal privat"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,promoted_image:0
@@ -943,17 +942,17 @@ msgstr ""
 #. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Public"
-msgstr "Públic"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.channel,name:website_slides.channel_public
 msgid "Public Channel"
-msgstr "Canal públic"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,date_published:0
 msgid "Publish Date"
-msgstr "Data publicació"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -963,7 +962,7 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Published"
-msgstr "Publicat"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,publish_template_id:0
@@ -973,7 +972,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Related"
-msgstr "Relacionat"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
@@ -1007,68 +1006,68 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Search Slides"
-msgstr "Cercar diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Security"
-msgstr "Seguritat"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "See all"
-msgstr "Veure tot"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_embed
 msgid "Select page to start with"
-msgstr "Seleccioneu la pàgina per començar"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Send Email"
-msgstr "Envia un correu electrònic"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Send presentation through email"
-msgstr "Envia presentació per correu electrònic"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,sequence:0 field:slide.channel,sequence:0
 msgid "Sequence"
-msgstr "Seqüència"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 #: view:website:website_slides.slide_detail_view
 msgid "Share"
-msgstr "Compartir"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_media
 msgid "Share Link"
-msgstr "Compartir enllaç"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Share count"
-msgstr "Compartir comptador"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_media
 msgid "Share on Social Networks"
-msgstr "Compartir a les xarxes socials"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Share with a friend"
-msgstr "Compartir amb un amic"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "Share:"
-msgstr "Compartir:"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,share_template_id:0
@@ -1089,17 +1088,17 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Slide"
-msgstr "Diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_tag
 msgid "Slide Tag"
-msgstr "Etiqueta diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,custom_slide_id:0
 msgid "Slide to Promote"
-msgstr "Diapositiva per promoure"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.actions.act_window,name:website_slides.action_slides_slides
@@ -1109,7 +1108,7 @@ msgstr "Diapositiva per promoure"
 #: field:slide.category,slide_ids:0 field:slide.channel,slide_ids:0
 #: view:slide.slide:website_slides.view_slide_slide_tree
 msgid "Slides"
-msgstr "Diapositives"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_category
@@ -1119,7 +1118,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Social Shares"
-msgstr "Comparticions xarxes socials"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slides_search
@@ -1129,22 +1128,22 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Sort by:"
-msgstr "Ordenar per:"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Statistics"
-msgstr "Estadístiques"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,message_summary:0 field:slide.slide,message_summary:0
 msgid "Summary"
-msgstr "Resum"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.tag:website_slides.view_slide_tag_form
 msgid "Tag"
-msgstr "Etiqueta"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -1156,17 +1155,17 @@ msgstr "Etiqueta"
 #: view:slide.tag:website_slides.view_slide_tag_tree
 #, python-format
 msgid "Tags"
-msgstr "Etiquetes"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Tags..."
-msgstr "Etiquetes..."
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "The"
-msgstr "La"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,website_url:0 help:slide.slide,website_url:0
@@ -1205,7 +1204,7 @@ msgstr ""
 #: view:website:website_slides.embed_slide_forbidden
 #: view:website:website_slides.slide_detail_view
 msgid "This"
-msgstr "Aquest"
+msgstr ""
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:334
@@ -1227,39 +1226,39 @@ msgstr ""
 #: field:slide.slide,name:0
 #, python-format
 msgid "Title"
-msgstr "Títol"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,total:0 field:slide.channel,total:0
 msgid "Total"
-msgstr "Total"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,total_views:0
 msgid "Total # Views"
-msgstr "Total # Vistes"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Total Views"
-msgstr "Visites totals"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,index_content:0
 #: view:website:website_slides.slide_detail_view
 msgid "Transcript"
-msgstr "Transcripció"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Twitter"
-msgstr "Twitter"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 #: field:slide.slide,slide_type:0
 msgid "Type"
-msgstr "Tipus"
+msgstr ""
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:158
@@ -1287,12 +1286,12 @@ msgstr ""
 #: view:website:website_slides.home
 #: view:website:website_slides.slides_channel_header
 msgid "Upload"
-msgstr "Pujar"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,upload_group_ids:0
 msgid "Upload Groups"
-msgstr "Pujar grups"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
@@ -1307,14 +1306,14 @@ msgstr ""
 #: view:website:website_slides.slides_channel_header
 #, python-format
 msgid "Upload Presentation"
-msgstr "Pujar presentació"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:12
 #, python-format
 msgid "Uploading presentation..."
-msgstr "Càrrega de presentació ..."
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_media
@@ -1324,33 +1323,33 @@ msgstr ""
 #. module: website_slides
 #: selection:slide.slide,slide_type:0
 msgid "Video"
-msgstr "Vídeo"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Videos"
-msgstr "Vídeos"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "View fullscreen"
-msgstr "Veure a pantalla completa"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 #: view:website:website_slides.slides_grid_view
 msgid "Views"
-msgstr "Vistes"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.related_slides
 msgid "Views ."
-msgstr "Vistes ."
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,visibility:0
 msgid "Visibility"
-msgstr "Visibilitat"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,website_published:0
@@ -1367,7 +1366,7 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Website"
-msgstr "Lloc web"
+msgstr "Сайт"
 
 #. module: website_slides
 #: field:slide.channel,website_message_ids:0
@@ -1378,18 +1377,18 @@ msgstr ""
 #. module: website_slides
 #: view:website.config.settings:website_slides.view_website_config_settings
 msgid "Website Slides"
-msgstr "Diapositives lloc web"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,website_url:0 field:slide.slide,website_url:0
 #: field:website.published.mixin,website_url:0
 msgid "Website URL"
-msgstr "URL sitio web"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Website Views"
-msgstr "Vistes lloc web"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,website_message_ids:0
@@ -1418,7 +1417,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Write a comment..."
-msgstr "Escriure un comentari..."
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -1432,12 +1431,12 @@ msgstr ""
 #: code:addons/website_slides/static/src/js/slides.js:59
 #, python-format
 msgid "You have already voted for this slide"
-msgstr "Ja has votat per aquesta diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Your Name"
-msgstr "El Seu Nom"
+msgstr "Ваше имя"
 
 #. module: website_slides
 #. openerp-web
@@ -1466,68 +1465,68 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "by email!"
-msgstr "per correu electrònic!"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "is empty."
-msgstr "està buit."
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "is private"
-msgstr "és privat"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 #: view:website:website_slides.embed_slide_forbidden
 msgid "is private."
-msgstr "és privat."
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 #: view:website:website_slides.slide_social_email
 msgid "login"
-msgstr "Iniciar Sessió"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "on"
-msgstr "en"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:66
 #, python-format
 msgid "or"
-msgstr "o"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slides_search
 msgid "results found for the given criteria"
-msgstr "resultats trobats per als criteris donats"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "suggest_slide.name"
-msgstr "suggest_slide.name"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "to post comment"
-msgstr "per publicar comentari"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "to send this"
-msgstr "enviar aquesta"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "views"
-msgstr "vistes"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "your-friend@domain.com"
-msgstr "amic@domini.com"
+msgstr ""

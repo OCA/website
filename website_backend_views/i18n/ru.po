@@ -3,19 +3,20 @@
 # * website_backend_views
 # 
 # Translators:
+# Mikhail - <expromt.core@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-19 11:34+0000\n"
-"PO-Revision-Date: 2015-09-25 08:26+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
+"PO-Revision-Date: 2016-01-15 21:15+0000\n"
+"Last-Translator: Mikhail - <expromt.core@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/oca/OCA-website-8-0/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: ca\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. module: website_backend_views
 #: view:website:website_backend_views.demo_index
@@ -32,25 +33,25 @@ msgstr ""
 #. module: website_backend_views
 #: field:website.qweb,create_uid:0
 msgid "Created by"
-msgstr "Creat per"
+msgstr "Создано"
 
 #. module: website_backend_views
 #: field:website.qweb,create_date:0
 msgid "Created on"
-msgstr "Creat en"
+msgstr "Создано на"
 
 #. module: website_backend_views
 #: field:website.qweb,write_uid:0
 msgid "Last Updated by"
-msgstr "Darrera actualització per"
+msgstr "Последнее обновление "
 
 #. module: website_backend_views
 #: field:website.qweb,write_date:0
 msgid "Last Updated on"
-msgstr "Darrera actualització de"
+msgstr ""
 
 #. module: website_backend_views
 #: code:addons/website_backend_views/controllers/demo.py:29
 #, python-format
 msgid "You need to install this module in demo mode for this url to work!"
-msgstr ""
+msgstr "Вам необходимо установить этот модуль в демо режиме для работы данного URL."
