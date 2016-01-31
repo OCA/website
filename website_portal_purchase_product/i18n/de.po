@@ -3,187 +3,185 @@
 # * website_product_supplier
 # 
 # Translators:
-# Antonio Trueba, 2016
-# Antonio Trueba, 2016
-# Carles Antolí <carlesantoli@hotmail.com>, 2016
+# Rudolf Schnapka <rs@techno-flex.de>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-06 10:11+0000\n"
-"Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-24 17:53+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Add Product"
-msgstr "Añadir producto"
+msgstr "Produkt hinzufügen"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.actions
 msgid "Add new product"
-msgstr "Añadir nuevo producto"
+msgstr ""
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Add your product. You can update later in this section"
-msgstr "Añada su producto. Usted puede modificarlo más tarde en esta sección"
+msgstr "Fügen Sie Ihr Produkt hinzu. Sie können später in diesem Abschnitt aktualisieren"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Code"
-msgstr "Código"
+msgstr "Schlüssel"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Delay"
-msgstr "Retraso"
+msgstr "Verzug"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Delay..."
-msgstr "Retraso"
+msgstr "Verzug..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Delete"
-msgstr "Borrar"
+msgstr ""
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Edit"
-msgstr "Editar"
+msgstr ""
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Edit Product"
-msgstr "Modificar producto"
+msgstr "Produkt bearbeiten"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "General Data"
-msgstr "Datos generales"
+msgstr "Allgemeine Daten"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_supplier_breadcrumb
 msgid "Home"
-msgstr "Inicio"
+msgstr "Anfangsseite"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Load Picture"
-msgstr "Cargar Imagen"
+msgstr "Lade Bild"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Min Quantity"
-msgstr "Cantidad mínima"
+msgstr "Mindestmenge"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Min Quantity..."
-msgstr "Cantidad mín."
+msgstr "Mindestmenge..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 #: view:website:website_product_supplier.product_supplier_breadcrumb
 msgid "My Products"
-msgstr "Mis productos"
+msgstr "Meine Produkte"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 #: view:website:website_product_supplier.product_table
 msgid "Name"
-msgstr "Nombre"
+msgstr "Name"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Picture"
-msgstr "Imagen"
+msgstr "Bild"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 #: view:website:website_product_supplier.product_table
 msgid "Price"
-msgstr "Precio"
+msgstr "Preis"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Price Min Quantity"
-msgstr "Precio"
+msgstr "Preis bei Mindestmenge"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Price and stock"
-msgstr "Precio y stock"
+msgstr "Preis und Bestand"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Price..."
-msgstr "Precio..."
+msgstr "Preis..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Product Code..."
-msgstr "Código producto"
+msgstr "Artikelnummer"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Product name..."
-msgstr "Nombre del producto"
+msgstr "Produktbezeichnung..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Published"
-msgstr "Publicado"
+msgstr "veröffentlicht"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Save Product"
-msgstr "Guardar cambios"
+msgstr "Speichere Produkt"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.search
 msgid "Search..."
-msgstr "Buscar"
+msgstr "Suche..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Stock"
-msgstr "Stock"
+msgstr ""
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list
 msgid "There are currently no products for your account."
-msgstr "Actualmente no hay productos para su cuenta"
+msgstr "Es gibt für Ihr Konto derzeit keine Produkte."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list
 msgid "Your Products"
-msgstr "Sus productos"
+msgstr "Ihre Produkte"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "back to list"
-msgstr "Volver a la lista"
+msgstr "zurück zur Liste"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "or"
-msgstr "o"
+msgstr "oder"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_supplier_container
 msgid "website_product_supplier.product_supplier_container"
-msgstr "website_product_supplier.product_supplier_container"
+msgstr ""
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_supplier_container_form
 msgid "website_product_supplier.product_supplier_container_form"
-msgstr "website_product_supplier.product_supplier_container_form"
+msgstr ""

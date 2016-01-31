@@ -3,175 +3,174 @@
 # * website_product_supplier
 # 
 # Translators:
-# Antonio Trueba, 2016
-# Antonio Trueba, 2016
-# Carles Antolí <carlesantoli@hotmail.com>, 2016
+# Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-06 10:11+0000\n"
-"Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"POT-Creation-Date: 2016-04-14 08:43+0000\n"
+"PO-Revision-Date: 2016-04-27 19:55+0000\n"
+"Last-Translator: Paolo Valier\n"
+"Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
+"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Add Product"
-msgstr "Añadir producto"
+msgstr "Aggiungi Prodotto"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.actions
 msgid "Add new product"
-msgstr "Añadir nuevo producto"
+msgstr "Aggiungi nuovo prodotto"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Add your product. You can update later in this section"
-msgstr "Añada su producto. Usted puede modificarlo más tarde en esta sección"
+msgstr "Aggiungi il tuo prodotto. Lo potrai modificare in un secondo momento in questa sezione"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Code"
-msgstr "Código"
+msgstr "Codice"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Delay"
-msgstr "Retraso"
+msgstr "Ritardo"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Delay..."
-msgstr "Retraso"
+msgstr "Ritardo..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Elimina"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Edit"
-msgstr "Editar"
+msgstr "Modifica"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Edit Product"
-msgstr "Modificar producto"
+msgstr "Modifica Prodotto"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "General Data"
-msgstr "Datos generales"
+msgstr "Dati generali"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_supplier_breadcrumb
 msgid "Home"
-msgstr "Inicio"
+msgstr "Home"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Load Picture"
-msgstr "Cargar Imagen"
+msgstr "Carica Immagine"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Min Quantity"
-msgstr "Cantidad mínima"
+msgstr "Quantità minima"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Min Quantity..."
-msgstr "Cantidad mín."
+msgstr "Quantità minima..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 #: view:website:website_product_supplier.product_supplier_breadcrumb
 msgid "My Products"
-msgstr "Mis productos"
+msgstr "I miei prodotti"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 #: view:website:website_product_supplier.product_table
 msgid "Name"
-msgstr "Nombre"
+msgstr "Nome"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Picture"
-msgstr "Imagen"
+msgstr "Immagine"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 #: view:website:website_product_supplier.product_table
 msgid "Price"
-msgstr "Precio"
+msgstr "Prezzo"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Price Min Quantity"
-msgstr "Precio"
+msgstr "Prezzo quantità minima"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Price and stock"
-msgstr "Precio y stock"
+msgstr "Prezzo e disponibilità"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Price..."
-msgstr "Precio..."
+msgstr "Prezzo..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Product Code..."
-msgstr "Código producto"
+msgstr "Codice Prodotto..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Product name..."
-msgstr "Nombre del producto"
+msgstr "Nome prodotto..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Published"
-msgstr "Publicado"
+msgstr "Pubblicato"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Save Product"
-msgstr "Guardar cambios"
+msgstr "Salva Prodotto"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.search
 msgid "Search..."
-msgstr "Buscar"
+msgstr "Cerca..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Stock"
-msgstr "Stock"
+msgstr "Disponibilità"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list
 msgid "There are currently no products for your account."
-msgstr "Actualmente no hay productos para su cuenta"
+msgstr "Al momento non ci sono prodotti per il tuo account."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list
 msgid "Your Products"
-msgstr "Sus productos"
+msgstr "I tuoi Prodotti"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "back to list"
-msgstr "Volver a la lista"
+msgstr "indietro alla lista"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
