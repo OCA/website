@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+  <data>
+
+    <template id="paulson_blog_filters_js" name="Blog Filters" inherit_id="website_blog.blog_post_short">
+      <xpath expr="." position="inside">
+        <script type="text/javascript"  src="/website_blog_filter_posts/static/src/js/blog_filters.js"/>
+      </xpath>
+    </template>
+
+  </data>
+</openerp>
