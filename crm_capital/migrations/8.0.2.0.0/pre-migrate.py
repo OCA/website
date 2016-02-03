@@ -43,6 +43,11 @@ def migrate(cr, version):
         """UPDATE ir_model
            SET model = 'res.partner.turnover_range'
            WHERE model = 'crm.turnover_range'""",
+        """UPDATE ir_translation
+           SET name = REPLACE(name,
+                              'crm.turnover_range,',
+                              'res.partner.turnover_range,')
+           WHERE name LIKE 'crm.turnover_range,%' AND module = ''""",
     )
 
     renamed_fields = {
