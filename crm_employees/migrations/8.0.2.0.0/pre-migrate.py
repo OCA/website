@@ -121,6 +121,11 @@ def model_rename(oldmodel, newmodel, transfercols=tuple(),
                                    name = REPLACE(name,
                                                   'field_{oldtable}',
                                                   'field_{newtable}'))""",
+
+        # Migrate user translations
+        """UPDATE ir_translation
+           SET name = REPLACE(name, '{oldmodel},', '{newmodel},')
+           WHERE name LIKE '{oldmodel},%' AND module = ''""",
     )
 
     for s in sentences:
@@ -144,6 +149,9 @@ def column_rename(model, oldcol, newcol,
 
     If you only want to transfer it from old module to new one, set
     :param:`oldcol` and :param:`newcol` the same value.
+
+    Remember that you don't need to rename non-stored computed fields nor
+    `One2many`.
 
     :param str model:
         Model name, like ``res.partner``.
