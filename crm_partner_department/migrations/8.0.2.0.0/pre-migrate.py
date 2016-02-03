@@ -121,6 +121,11 @@ def model_rename(oldmodel, newmodel, transfercols=tuple(),
                                    name = REPLACE(name,
                                                   'field_{oldtable}',
                                                   'field_{newtable}'))""",
+
+        # Migrate user translations
+        """UPDATE ir_translation
+           SET name = REPLACE(name, '{oldmodel},', '{newmodel},')
+           WHERE name LIKE '{oldmodel},%' AND module = ''""",
     )
 
     for s in sentences:
