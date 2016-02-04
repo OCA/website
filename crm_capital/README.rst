@@ -1,18 +1,17 @@
 Capital in CRM
 ================
 
-This module allows to set capital country, capital registered and turnover
-for companies in the CRM main objects (lead, opportunity, partner), and
-propagate them through the workflow.
+.. warning::
+    DEPRECATED! Use OCA's partner_capital!
 
-By capital country we mean country of origin of the capital of the company
-By capital registered we mean the amount of money registered in comercial
-registry, aka social capital or just capital of a company
-By turnover we can define a range an a concret amount
+DEPRECATION PROCESS
+===================
 
-Credits
-=======
+1. Update crm_capital to last version.
+2. Install partner_capital.
+3. Uninstall crm_capital.
 
-Contributors
-------------
-* Antonio Espinosa <antonioea@antiun.com>
+When all these steps are done in all your databases:
+
+1. Remove the source code of this module.
+2. Remove the module in all databases (via *More > Delete*).
