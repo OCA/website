@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Filter Blog Posts',
-    'description': 'Add some filters in blog.',
+    'summary': 'Add some filters in blog.',
     'category': 'Website',
     "license": "AGPL-3",
     'author': "bloopark systems GmbH & Co. KG, Odoo Community Association (OCA)",
