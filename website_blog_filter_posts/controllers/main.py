@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import werkzeug
 
 from openerp.addons.web import http
