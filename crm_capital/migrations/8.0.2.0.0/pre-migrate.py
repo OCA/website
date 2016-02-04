@@ -47,7 +47,8 @@ def migrate(cr, version):
            SET name = REPLACE(name,
                               'crm.turnover_range,',
                               'res.partner.turnover_range,')
-           WHERE name LIKE 'crm.turnover_range,%' AND module = ''""",
+           WHERE name LIKE 'crm.turnover_range,%' AND
+                 (module = '' OR module IS NULL)""",
     )
 
     renamed_fields = {
