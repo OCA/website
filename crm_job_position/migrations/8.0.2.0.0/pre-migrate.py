@@ -125,7 +125,8 @@ def model_rename(oldmodel, newmodel, transfercols=tuple(),
         # Migrate user translations
         """UPDATE ir_translation
            SET name = REPLACE(name, '{oldmodel},', '{newmodel},')
-           WHERE name LIKE '{oldmodel},%' AND module = ''""",
+           WHERE name LIKE '{oldmodel},%' AND
+                 (module = '' OR module IS NULL)""",
     )
 
     for s in sentences:
