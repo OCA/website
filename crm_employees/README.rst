@@ -1,13 +1,17 @@
 Employees in CRM
 ================
 
-This module allows to set employees amount and employees ranges for companies
-in the CRM main objects (lead, opportunity, partner), and propagate them through
-the workflow.
+.. warning::
+    DEPRECATED! Use OCA's partner_employee_quantity!
 
-Credits
-=======
+DEPRECATION PROCESS
+===================
 
-Contributors
-------------
-* Antonio Espinosa <antonioea@antiun.com>
+1. Update crm_employees to last version.
+2. Install partner_employee_quantity.
+3. Uninstall crm_employees.
+
+When all these steps are done in all your databases:
+
+1. Remove the source code of this module.
+2. Remove the module in all databases (via *More > Delete*).
