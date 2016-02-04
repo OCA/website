@@ -18,4 +18,4 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import website_blog
+from . import main

@@ -4,7 +4,7 @@
 
     <template id="blog_post_filter_selector" inherit_id="website_blog.blog_post_short" active="True">
       <xpath expr="//t[@t-call='website.pager']" position="after">
-        <div class="row">
+        <div class="pull-left">
 
 
               <label for="blog_posts_selector" class="form-group sort_label">Blog Posts per Page</label>

@@ -17,7 +17,7 @@ Credits
 Contributors
 ------------
 
-* Farid Shahy <fshahy@gmail.com>
+* Farid Shahy <fshahy@bloopark.de>
 * Florian Fischer <ffischer@bloopark.de>
 
 Icon

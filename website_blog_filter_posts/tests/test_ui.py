@@ -18,21 +18,14 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{
-    'name': 'Filter Blog Posts',
-    'description': 'Add some filters in blog.',
-    'category': 'Website',
-    "license": "AGPL-3",
-    'author': "bloopark systems GmbH & Co. KG, Odoo Community Association (OCA)",
-    'website': "http://www.bloopark.de",
+import openerp.tests
 
-    'version': '9.0.1.0.0',
 
-    'data': [
-        'views/assets.xml',
-        'views/templates.xml'
-    ],
-    'depends': [
-        'website_blog',
-    ],
-}
+@openerp.tests.common.at_install(False)
+@openerp.tests.common.post_install(True)
+class TestUi(openerp.tests.HttpCase):
+    def test_01_admin_blog_filters(self):
+        self.phantom_js("/",
+                        "odoo.__DEBUG__.services['web.Tour'].run('blog_filters', 'test')",
+                        "odoo.__DEBUG__.services['web.Tour'].tours.blog_filters",
+                        login='admin')

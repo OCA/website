@@ -18,21 +18,6 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{
-    'name': 'Filter Blog Posts',
-    'description': 'Add some filters in blog.',
-    'category': 'Website',
-    "license": "AGPL-3",
-    'author': "bloopark systems GmbH & Co. KG, Odoo Community Association (OCA)",
-    'website': "http://www.bloopark.de",
 
-    'version': '9.0.1.0.0',
-
-    'data': [
-        'views/assets.xml',
-        'views/templates.xml'
-    ],
-    'depends': [
-        'website_blog',
-    ],
-}
+from . import test_ui
+from . import test_website_blog_filter_posts

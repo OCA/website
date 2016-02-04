@@ -18,21 +18,26 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{
-    'name': 'Filter Blog Posts',
-    'description': 'Add some filters in blog.',
-    'category': 'Website',
-    "license": "AGPL-3",
-    'author': "bloopark systems GmbH & Co. KG, Odoo Community Association (OCA)",
-    'website': "http://www.bloopark.de",
+from openerp.addons.website_blog.tests.common import TestWebsiteBlogCommon
 
-    'version': '9.0.1.0.0',
 
-    'data': [
-        'views/assets.xml',
-        'views/templates.xml'
-    ],
-    'depends': [
-        'website_blog',
-    ],
-}
+class TestWebsiteBlogFilterPosts(TestWebsiteBlogCommon):
+
+    def setUp(self):
+        super(TestWebsiteBlogFilterPosts, self).setUp()
+        self.blog_blog_obj = self.env['blog.blog']
+        self.blog_post_obj = self.env['blog.post']
+        # create a new blog
+        self.test_blog = self.blog_blog_obj.sudo(self.user_blogmanager.create({
+            'name': 'New Test Blog',
+            'description': 'This is a test blog.'
+        }))
+
+        self.test_blog_post_1 = self.blog_post_obj.sudo(selg.user_blogmanager.create({
+            'name': 'Blog Post 1',
+            'blog_id': self.test_blog.id
+        }))
+
+
+    def test_product_url(self):
+        self.assertTrue(self.env['product.product'].validate_seo_url('Sample_Product'))
