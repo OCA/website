@@ -37,7 +37,3 @@ class TestWebsiteBlogFilterPosts(TestWebsiteBlogCommon):
             'name': 'Blog Post 1',
             'blog_id': self.test_blog.id
         }))
-
-
-    def test_product_url(self):
-        self.assertTrue(self.env['product.product'].validate_seo_url('Sample_Product'))
