@@ -1,13 +1,17 @@
 Job positions in CRM
 ====================
 
-This module adds the concept of job position to the CRM main objects (lead,
-opportunity, partner), and propagate them through the workflow.
+.. warning::
+    DEPRECATED! Use OCA's partner_contact_job_position!
 
-Credits
-=======
+DEPRECATION PROCESS
+===================
 
-Contributors
-------------
-* Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
-* Antonio Espinosa <antonioea@antiun.com>
+1. Update crm_job_position to last version.
+2. Install partner_contact_job_position.
+3. Uninstall crm_job_position.
+
+When all these steps are done in all your databases:
+
+1. Remove the source code of this module.
+2. Remove the module in all databases (via *More > Delete*).

@@ -24,19 +24,13 @@
 
 {
     'name': 'Job positions in CRM',
-    'version': '8.0.1.1.0',
+    'version': '8.0.2.0.0',
     'category': 'Customer Relationship Management',
     'author': 'Serv. Tecnol. Avanzados - Pedro M. Baeza, '
               'Antiun Ingeniería S.L.',
     'website': 'http://www.serviciosbaeza.com, http://www.antiun.com',
     'depends': [
         'crm',
-    ],
-    'data': [
-        'views/crm_job_position_view.xml',
-        'views/crm_lead_view.xml',
-        'views/res_partner_view.xml',
-        'security/ir.model.access.csv',
     ],
     "installable": True,
 }
