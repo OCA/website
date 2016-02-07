@@ -3,14 +3,15 @@
 # * website_slides
 # 
 # Translators:
+# Antonio Trueba, 2016
 # Carles Antolí <carlesantoli@hotmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 10:22+0000\n"
-"PO-Revision-Date: 2015-11-18 13:47+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"POT-Creation-Date: 2016-01-19 11:34+0000\n"
+"PO-Revision-Date: 2016-02-05 12:25+0000\n"
+"Last-Translator: Antonio Trueba\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -278,7 +279,7 @@ msgstr ""
 msgid ""
 "Could not fetch data from url.Document or access right not available:\n"
 "%s"
-msgstr ""
+msgstr "No se ha podido recuperar información de la URL. Documento o permisos de acceso no disponibles:\n%s"
 
 #. module: website_slides
 #. openerp-web
@@ -566,7 +567,7 @@ msgstr "Imagen"
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Image size: 330px x 240px"
-msgstr ""
+msgstr "Tamaño de imagen: 330px x 240px"
 
 #. module: website_slides
 #: selection:slide.slide,slide_type:0
@@ -1084,7 +1085,7 @@ msgstr "Mostrar canal pero restringir presentaciones"
 #: view:slide.channel:website_slides.view_slide_channel_form
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Show in website"
-msgstr ""
+msgstr "Mostrar en sitio web"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
@@ -1456,12 +1457,12 @@ msgstr "URL del vídeo de Youtube o Google Doc"
 #. module: website_slides
 #: help:slide.slide,document_id:0
 msgid "Youtube or Google Document ID"
-msgstr ""
+msgstr "ID de Youtube o Google Doc"
 
 #. module: website_slides
 #: help:slide.slide,url:0
 msgid "Youtube or Google Document URL"
-msgstr ""
+msgstr "URL de Youtube o Google Docs"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
@@ -1510,7 +1511,7 @@ msgstr "resultados encontrados para sus criterios de búsqueda"
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "suggest_slide.name"
-msgstr ""
+msgstr "suggest_slide.name"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
