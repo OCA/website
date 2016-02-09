@@ -2,8 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
+==========
 Blog Share
-=========
+==========
 
 This module brings the users the possibility to globally enable/disable a share button 
 that will be displayed in each blog post.
@@ -20,7 +21,7 @@ NB: even if you have to go to one specific blog post, the set up is valid for al
 
 Know issues / Roadmap
 ====================
-* Share product configuration valid for all products. No individual configuration for each product
+* Share blog configuration valid for all blog posts. No individual configuration for each blog
 
 
 Bug Tracker
