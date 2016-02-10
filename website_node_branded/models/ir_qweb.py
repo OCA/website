@@ -15,9 +15,9 @@ class HTML(models.AbstractModel):
             cr, uid, field_name, record, options,
             source_element, t_att, g_att, qweb_context, context=context)
         # render t-call element inserted by dynamic snippets
-        dom = html.fromstring(document)
+        parser = etree.HTMLParser(encoding='utf-8')
+        dom = html.fromstring(document, parser=parser)
         qweb = self.pool['ir.qweb']
-        parser = etree.HTMLParser(encoding='UTF-8')
         for t_call in dom.xpath('//t[@t-call]'):
             t_att = t_att.copy()
             t_att['call'] = t_call.get('t-call')
@@ -27,4 +27,4 @@ class HTML(models.AbstractModel):
             parent = t_call.getparent()
             parent.append(el)
             parent.replace(t_call, el)
-        return html.tostring(dom, encoding='UTF-8')
+        return html.tostring(dom, encoding='utf-8')
