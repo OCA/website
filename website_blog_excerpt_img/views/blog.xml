@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+<data>
+
+<template id="blog_post_short"
+          inherit_id="website_blog.blog_post_short">
+    <!-- Entries are Bootstrap rows -->
+    <xpath expr="//div[@t-as='blog_post']" position="attributes">
+        <attribute name="class">mb32 row</attribute>
+    </xpath>
+    <xpath expr="//h2/.." position="attributes">
+        <attribute name="class">col-xs-10</attribute>
+    </xpath>
+    <xpath expr="//div[@name='blog_post_data']/.." position="attributes">
+        <attribute name="class">text-muted col-xs-12 mb16</attribute>
+    </xpath>
+
+    <!-- Excerpt, image, read more button -->
+    <xpath expr="//div[@name='blog_post_data']/.." position="after">
+        <div class="col-xs-7">
+            <p t-esc="env['ir.fields.converter']
+                      .text_from_html(blog_post.content, 40)"/>
+            <p>
+                <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/post/#{slug(blog_post)}"
+                   class="btn btn-primary">
+                   Read more
+                </a>
+            </p>
+        </div>
+        <div class="col-xs-5">
+            <!-- Use cover image if available -->
+            <t t-if="blog_post.background_image">
+                <img class="img img-responsive img-rounded"
+                     t-att-src="blog_post.background_image"/>
+            </t>
+
+            <!-- Get images from post otherwise -->
+            <t t-if="not (blog_post.background_image)">
+                <t t-as="url"
+                   t-foreach="env['ir.fields.converter']
+                              .imgs_from_html(blog_post.content, 1)">
+                    <img class="img img-responsive img-rounded"
+                         t-att-src="url"/>
+                </t>
+            </t>
+        </div>
+    </xpath>
+</template>
+
+</data>
+</openerp>
