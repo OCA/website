@@ -32,13 +32,21 @@
         </div>
         <div class="col-xs-5">
             <!-- Use cover image if available -->
-            <t t-if="blog_post.background_image">
+            <t t-if="(blog_post.background_image and
+                      not blog_post.background_image.startswith(
+                        '%s/blog/' %
+                            env['ir.config_parameter']
+                            .get_param('web.base.url')))">
                 <img class="img img-responsive img-rounded"
                      t-att-src="blog_post.background_image"/>
             </t>
 
             <!-- Get images from post otherwise -->
-            <t t-if="not (blog_post.background_image)">
+            <t t-if="not (blog_post.background_image and
+                          not blog_post.background_image.startswith(
+                            '%s/blog/' %
+                                env['ir.config_parameter']
+                                .get_param('web.base.url')))">
                 <t t-as="url"
                    t-foreach="env['ir.fields.converter']
                               .imgs_from_html(blog_post.content, 1)">
