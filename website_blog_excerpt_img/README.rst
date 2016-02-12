@@ -7,8 +7,8 @@ Excerpt + Image in Blog
 =======================
 
 This module extends the functionality of blogs to support having a more
-attractive layout that displays an excerpt of each post, a "Read more" button
-and an image. All automatic.
+attractive layout that automatically displays an excerpt of each post, a "Read
+more" button and an image.
 
 Installation
 ============
