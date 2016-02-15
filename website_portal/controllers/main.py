@@ -98,21 +98,21 @@ class WebsiteAccount(http.Controller):
 
 class AuthSignup(AuthSignupHome):
 
+    def redirect(self, res, **kw):
+        if request.session.uid:
+            user = request.env['res.users'].browse(request.session.uid)
+            redirect = kw.get('redirect', '')
+            if not user.has_group('base.group_user') and\
+                    (redirect == '' or redirect[-5:] == '/web?'):
+                    return http.redirect_with_hash('/')
+        return res
+
     @http.route(website=True, auth="public")
     def web_login(self, *args, **kw):
         res = super(AuthSignup, self).web_login(*args, **kw)
-        if request.session.uid:
-            user = request.env['res.users'].browse(request.session.uid)
-            if not user.has_group('base.group_user'):
-                return http.redirect_with_hash('/')
-        return res
+        return self.redirect(res, **kw)
 
     @http.route('/web/signup', type='http', auth='public', website=True)
     def web_auth_signup(self, *args, **kw):
-        res = super(
-            AuthSignup, self).web_auth_signup(*args, **kw)
-        if request.session.uid:
-            user = request.env['res.users'].browse(request.session.uid)
-            if not user.has_group('base.group_user'):
-                return http.redirect_with_hash('/')
-        return res
+        res = super(AuthSignup, self).web_auth_signup(*args, **kw)
+        return self.redirect(res, **kw)
