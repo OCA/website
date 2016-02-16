@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from urlparse import urlparse, parse_qs
+from urllib import urlencode
 from openerp import http
 from openerp.http import request
 from openerp import tools
@@ -99,12 +101,14 @@ class WebsiteAccount(http.Controller):
 class AuthSignup(AuthSignupHome):
 
     def redirect(self, res, **kw):
-        if request.session.uid:
-            user = request.env['res.users'].browse(request.session.uid)
-            redirect = kw.get('redirect', '')
-            if not user.has_group('base.group_user') and\
-                    (redirect == '' or redirect[-5:] == '/web?'):
-                    return http.redirect_with_hash('/')
+        redirect = kw.get('redirect', '')
+        if request.session.uid and (not redirect or '/web?' in redirect):
+            params = parse_qs(urlparse(redirect).query, keep_blank_values=True)
+            return_url = params.pop('redirect', ['/'])[0]
+            if '/web?' in return_url:
+                return_url = '/'
+            return_url = '%s?%s' % (return_url, urlencode(params))
+            return http.redirect_with_hash(return_url)
         return res
 
     @http.route(website=True, auth="public")
