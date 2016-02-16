@@ -19,6 +19,10 @@ Usage
 
 NB: even if you have to go to one specific blog post, the set up is valid for all of them.
 
+.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
+   :alt: Try me on Runbot
+   :target: https://runbot.odoo-community.org/runbot/186/8.0
+
 Know issues / Roadmap
 ====================
 * Share blog configuration valid for all blog posts. No individual configuration for each blog
