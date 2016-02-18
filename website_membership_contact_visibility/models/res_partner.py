@@ -9,6 +9,6 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     website_membership_published = fields.Boolean(
-        string='Show Contact Information',
+        string='Visible In The Website',
         copy=False,
         default=True)

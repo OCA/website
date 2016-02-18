@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agp
 
 {
-    'name': 'Website Membership Contact Information',
+    'name': 'Website Membership Contact Visibility',
     'version': '8.0.1.0.0',
     'author': 'Michael Viriyananda,Odoo Community Association (OCA)',
     'website': 'https://github.com/mikevhe18',
