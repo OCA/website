@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="membership_contact_visibility_form_view">
+            <field name="name">Membership Contact Visibility</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="membership.view_partner_form"/>
+            <field name="arch" type="xml">
+                <page string="Membership" position="inside">
+                    <group position="inside">
+                        <group position="inside">
+                            <field name="website_membership_published" class="pull-right" widget="website_button"/>
+                        </group>
+                    </group>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</openerp>

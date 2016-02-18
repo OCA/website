@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+       
+        <template id="partner_contact_visibility" inherit_id="website_partner.partner_detail">
+            <xpath expr="//div[@class='col-md-4']" position="replace">
+                <t t-if="partner.website_membership_published == True">
+                    <div class="col-md-4">
+                        <div t-field="partner.image" t-field-options='{"widget": "image", "class": "center-block mb16"}'/>
+                        <address class="well">
+                             <div t-field="partner.self" t-field-options='{
+                                 "widget": "contact",
+                                 "fields": ["address", "website", "phone", "fax", "email"]
+                             }'/>
+                        </address>
+                        <t t-raw="left_column or ''"/>
+                    </div>
+                </t>
+                <t t-if="partner.website_membership_published == False">
+                    <div class="col-md-4">
+                        <div t-field="partner.image" t-field-options='{"widget": "image", "class": "center-block mb16"}'/>
+                        <t t-raw="left_column or ''"/>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>
+
