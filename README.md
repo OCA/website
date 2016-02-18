@@ -21,6 +21,7 @@ addon | version | summary
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 | Add Facebook comments on blog posts
 [website_blog_mgmt](website_blog_mgmt/) | 8.0.1.0.0 | Website blog Management
+[website_blog_share](website_blog_share/) | 8.0.1.0.0 | Blog Share
 [website_breadcrumb](website_breadcrumb/) | 8.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 8.0.2.0.0 | Show cookie notice according to cookie law
