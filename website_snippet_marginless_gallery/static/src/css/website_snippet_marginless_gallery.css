@@ -11,6 +11,8 @@
   .marginless-gallery .row .img > div {
     display: table-cell;
     vertical-align: middle; }
+  .marginless-gallery .row .img:empty {
+    display: block; }
 .marginless-gallery-contain .row .img {
   background-size: contain; }
 

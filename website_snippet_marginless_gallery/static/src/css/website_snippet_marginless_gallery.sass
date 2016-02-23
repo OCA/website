@@ -22,6 +22,10 @@
             display: table-cell
             vertical-align: middle
 
+        // Ensure images get displayed if content is removed
+        &:empty
+            display: block
+
     // Do not trim images
     .marginless-gallery-contain &
         background-size: contain
