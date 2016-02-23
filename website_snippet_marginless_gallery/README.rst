@@ -38,6 +38,12 @@ To change the images height, you need to:
 * Go to *Customize > Change Images Height*.
 * Input a number and press *Continue*.
 
+To avoid trimming the images, you need to:
+
+* Select any block inside the snippet you just created.
+* Go to the top parent.
+* Go to *Customize > Do not trim images*.
+
 Known issues / Roadmap
 ======================
 
