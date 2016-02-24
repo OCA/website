@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_cookie_notice
-# 
+#
 # Translators:
 # Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
 msgid ""
@@ -20,16 +20,13 @@ msgstr ""
 
 #. module: website_cookie_notice
 #: view:website:website.layout
-msgid ""
-".\n"
-"                        To disable them, configure your browser properly.\n"
-"                        If you keep using this website, you are accepting those."
-msgstr ".\n                        Da bi jih onemogočili, temu primerno nastavite svoj brskalnik.\n                        Če boste nadaljevali z uporabo te spletne strani, smatramo, da jih sprejemate."
+msgid ". To disable them, configure your browser properly. If you keep using this website, you are accepting those."
+msgstr ". Da bi jih onemogočili, temu primerno nastavite svoj brskalnik. Če boste nadaljevali z uporabo te spletne strani, smatramo, da jih sprejemate."
 
 #. module: website_cookie_notice
 #: view:website:website.layout
-msgid "We use cookies in this website. Read about them in our"
-msgstr "Naša spletna stran uporablja piškotke. Več o njih preberite v naših"
+msgid "We use cookies in this website. Read about them in our "
+msgstr "Naša spletna stran uporablja piškotke. Več o njih preberite v naših "
 
 #. module: website_cookie_notice
 #: view:website:website.layout
