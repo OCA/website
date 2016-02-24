@@ -21,10 +21,10 @@
                 <div class="col-xs-2 text-center">
                     <a class="btn btn-primary"
                         href="/website_cookie_notice/ok">OK</a>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
 </template>
 
 <template id="assets_frontend" inherit_id="website.assets_frontend">
