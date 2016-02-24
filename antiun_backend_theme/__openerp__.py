@@ -38,7 +38,7 @@
     # Views templates, pages, menus, options and snippets
     'data': [
         'views/backend.xml',
-        'reports/common.xml',
+        # 'reports/common.xml',
     ],
 
     # Qweb templates

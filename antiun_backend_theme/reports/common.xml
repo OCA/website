@@ -3,6 +3,7 @@
 <data>
 
 <!-- Inherit from : /addons/report/views/layouts.xml -->
+<!-- TODO: Move it to customer specific addon
 <template id="external_layout_header"
           inherit_id="report.external_layout_header"
           name="Add VAT in invoice">
@@ -13,6 +14,7 @@
         <div t-field="company.vat"/>
     </xpath>
 </template>
+-->
 
 </data>
 </openerp>
