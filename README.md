@@ -24,7 +24,7 @@ addon | version | summary
 [website_blog_share](website_blog_share/) | 8.0.1.0.0 | Blog Share
 [website_breadcrumb](website_breadcrumb/) | 8.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 | Let you choose between fixed or fluid containers
-[website_cookie_notice](website_cookie_notice/) | 8.0.2.0.0 | Show cookie notice according to cookie law
+[website_cookie_notice](website_cookie_notice/) | 8.0.2.1.0 | Show cookie notice according to cookie law
 [website_country_localized_pages](website_country_localized_pages/) | 1.0 | Show website pages localized according to country's visitor
 [website_crm_address](website_crm_address/) | 8.0.1.0.0 | Lets visitors fill in their address in the contact form
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 | Website CRM privacy policy
