@@ -37,7 +37,6 @@ addon | version | summary
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 (unported) | Website Menu Multilanguage
 [website_no_crawler](website_no_crawler/) | 8.0.1.0.0 (unported) | Disables robots.txt for indexing by webcrawlers like Google
-[website_portal](website_portal/) | 8.0.1.0.0 (unported) | Account Management Frontend for your Customers
 [website_sale_collapse_categories](website_sale_collapse_categories/) | 8.0.1.0.0 (unported) | Collapsible product categories in website shop
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 (unported) | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 (unported) | Prevent optional products to be sold singularly
