@@ -3,13 +3,14 @@
 # * website_portal_sale
 # 
 # Translators:
+# Rudolf Schnapka <rs@techno-flex.de>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-05 01:59+0000\n"
-"PO-Revision-Date: 2015-12-04 16:36+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-23 15:38+0000\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,17 +21,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Access the complete Sale application"
-msgstr ""
+msgstr "Zugriff auf die gesamte Verkaufsanwendung"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Cancelled"
-msgstr ""
+msgstr "Storniert"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Confirmation Date"
-msgstr ""
+msgstr "Freigabedatum"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -40,49 +41,49 @@ msgstr "Kontakt"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Date:"
-msgstr ""
+msgstr "Datum:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Done"
-msgstr ""
+msgstr "Erledigt"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Due Date"
-msgstr ""
+msgstr "Fälligkeitsdatum"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid ""
 "If you wish to access the complete application to manage your orders, you "
 "can follow"
-msgstr ""
+msgstr "Wenn Sie auf die vollständige Anwendung zugreifen möchten, um Aufträge zu verwalten, folgen Sie"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice #"
-msgstr ""
+msgstr "Rechnungsnr."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice Date"
-msgstr ""
+msgstr "Rechnungsdatum"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Invoiced"
-msgstr ""
+msgstr "Abgerechnet"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Invoices"
-msgstr ""
+msgstr "Rechnungen"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Invoicing Address"
-msgstr ""
+msgstr "Rechnungsanschrift"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -92,92 +93,92 @@ msgstr "Mein Konto"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Order"
-msgstr ""
+msgstr "Auftrag"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.orders_followup
 msgid "Paid"
-msgstr ""
+msgstr "Bezahlt"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Problem"
-msgstr ""
+msgstr "Problem"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Product"
-msgstr ""
+msgstr "Produkt"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Quantity"
-msgstr ""
+msgstr "Menge"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Quotation"
-msgstr ""
+msgstr "Angebot"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "Angebotsnr."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Sale Order #"
-msgstr ""
+msgstr "Auftragsnr."
 
 #. module: website_portal_sale
 #: view:website:website_portal.account
 msgid "Sales"
-msgstr ""
+msgstr "Verkäufe"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Shipping Address"
-msgstr ""
+msgstr "Lieferanschrift"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Show less"
-msgstr ""
+msgstr "Zeige weniger"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Show more"
-msgstr ""
+msgstr "Zeige mehr"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Subtotal"
-msgstr ""
+msgstr "Zwischensumme"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Taxes:"
-msgstr ""
+msgstr "Steuern:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "There are currently no invoices for your account."
-msgstr ""
+msgstr "Es gibt derzeit keine Rechnungen zu Ihrem Konto."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "There are currently no orders for your account."
-msgstr ""
+msgstr "Es gibt derzeit keine Aufträge zu Ihrem Konto."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "Es gibt derzeit keine Angebote zu Ihrem Konto."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -189,44 +190,44 @@ msgstr "Total"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Total:"
-msgstr ""
+msgstr "Gesamt:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Unit Price"
-msgstr ""
+msgstr "Einzelpreis"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Untaxed Amount:"
-msgstr ""
+msgstr "Nettobetrag:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Waiting"
-msgstr ""
+msgstr "Wartend"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Waiting for Payment"
-msgstr ""
+msgstr "Erwarte Zahlung"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Your Invoices and Payments"
-msgstr ""
+msgstr "Ihre Rechnungen und Zahlungen"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "Ihre Aufträge"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Your Quotes"
-msgstr ""
+msgstr "Ihre Angebote"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "this link"
-msgstr ""
+msgstr "dieser Link"

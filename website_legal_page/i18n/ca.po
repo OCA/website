@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_sale_order_company
+# * website_legal_page
 # 
 # Translators:
 # Carles Antolí <carlesantoli@hotmail.com>, 2016
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-25 14:25+0000\n"
-"PO-Revision-Date: 2016-02-23 17:01+0000\n"
+"PO-Revision-Date: 2016-02-23 17:07+0000\n"
 "Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
 "Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -18,12 +18,17 @@ msgstr ""
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. module: website_sale_order_company
-#: model:ir.model,name:website_sale_order_company.model_sale_order
-msgid "Sales Order"
-msgstr "Comandes de venda"
+#. module: website_legal_page
+#: view:website:website.layout
+msgid "Legal advice"
+msgstr "Avís legal"
 
-#. module: website_sale_order_company
-#: model:ir.model,name:website_sale_order_company.model_website
-msgid "Website"
-msgstr "Lloc web"
+#. module: website_legal_page
+#: view:website:website.layout
+msgid "Privacy policy"
+msgstr "Política de privacitat"
+
+#. module: website_legal_page
+#: view:website:website.layout
+msgid "Terms of use"
+msgstr "Condicions d'ús"

@@ -3,13 +3,13 @@
 # * website_slides
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 10:22+0000\n"
-"PO-Revision-Date: 2015-11-14 04:48+0000\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-27 16:56+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -333,6 +333,11 @@ msgstr "Opis"
 #, python-format
 msgid "Discard"
 msgstr "Zavrzi"
+
+#. module: website_slides
+#: model:slide.slide,name:website_slides.slide_5
+msgid "Discover Odoo Point Of Sale - For Shops and Restaurants"
+msgstr "Odkrijte Odoo prodajno točko - za trgovine in restavracije"
 
 #. module: website_slides
 #: field:slide.slide,dislikes:0 view:website:website_slides.slide_detail_view
@@ -830,6 +835,14 @@ msgid ""
 msgstr "Odoo integrirana marketinška aplikacija pomaga pri privabljanju, konverziji in zaključevanju novih indicev. Preverite tri-delni video in odkrijte več na www.odoo.com\n\nVideo pripravili Miroslava Ganzarcikova in Sophia Eribo."
 
 #. module: website_slides
+#: model:slide.slide,description:website_slides.slide_5
+msgid ""
+"Odoo's online Point of Sale software for restaurants and shops is based on a smart interface that any retail company can use without difficulty. The POS can be used online or offline and iPads, Android tablets or laptops. \n"
+"\n"
+"More info - https://www.odoo.com/page/point-of-sale"
+msgstr "Odoo aplikacija Spletna prodajna točka za restavracije in trgovine sloni na preglednem vmesniku, ki ga lahko katerokoli podjetje brez težav uporablja.  POS se lahko uporablja 'online' ali 'offline', na iPad, Android tablicah ali prenosnikih. \n\nVeč o tem - https://www.odoo.com/page/point-of-sale"
+
+#. module: website_slides
 #: model:slide.slide,name:website_slides.slide_9
 msgid "Open Days 2014 Infographic"
 msgstr "Open Days 2014 Infographic"
@@ -838,11 +851,6 @@ msgstr "Open Days 2014 Infographic"
 #: model:slide.slide,name:website_slides.slide_1
 msgid "Open Source Website Builder and eCommerce: OpenERP"
 msgstr "Odprto kodni gradnik spletnih strani in e-trgovin: OpenERP"
-
-#. module: website_slides
-#: model:slide.slide,name:website_slides.slide_5
-msgid "OpenERP POS Indiegogo Campaign"
-msgstr "OpenERP POS Indiegogo kampanja"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_4
@@ -1181,14 +1189,6 @@ msgid ""
 "\n"
 "Online demo and download: http://openerp.com"
 msgstr "Odprto kodno OpenERP promocijsko orodje predlaga ključne besede glede na najbolj iskane izraze na Google. Optimizacijska orodja za iskalnik so pripravljena za uporabo brez dodatnih nastavitev.\n\nSpletna demonstracija in prenos: http://openerp.com"
-
-#. module: website_slides
-#: model:slide.slide,description:website_slides.slide_5
-msgid ""
-"The presentation video for our OpenSource Pos Hardware  campaign at indiegogo: \n"
-"\n"
-"https://www.indiegogo.com/projects/opensource-your-shop/"
-msgstr "Predstavitveni video indiegogo kampanje za odprto kodni Pos Hardware: \n\nhttps://www.indiegogo.com/projects/opensource-your-shop/"
 
 #. module: website_slides
 #: sql_constraint:slide.slide:0

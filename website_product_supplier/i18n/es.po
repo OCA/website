@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Antonio Trueba, 2016
+# Antonio Trueba, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 11:34+0000\n"
-"PO-Revision-Date: 2016-02-05 12:22+0000\n"
-"Last-Translator: Antonio Trueba\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-24 17:53+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,6 +23,11 @@ msgstr ""
 #: view:website:website_product_supplier.product
 msgid "Add Product"
 msgstr "Añadir producto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.actions
+msgid "Add new product"
+msgstr ""
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -42,6 +48,16 @@ msgstr "Retraso"
 #: view:website:website_product_supplier.product
 msgid "Delay..."
 msgstr "Retraso"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Delete"
+msgstr ""
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Edit"
+msgstr ""
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -86,11 +102,6 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: website_product_supplier
-#: view:website:website_product_supplier.product_item_table
-msgid "Not Published"
-msgstr "No publicado"
-
-#. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Picture"
 msgstr "Imagen"
@@ -127,7 +138,7 @@ msgid "Product name..."
 msgstr "Nombre del producto"
 
 #. module: website_product_supplier
-#: view:website:website_product_supplier.product_item_table
+#: view:website:website_product_supplier.product_table
 msgid "Published"
 msgstr "Publicado"
 
@@ -143,8 +154,8 @@ msgstr "Buscar"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
-msgid "Status"
-msgstr "Estado"
+msgid "Stock"
+msgstr ""
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list
@@ -174,4 +185,4 @@ msgstr "website_product_supplier.product_supplier_container"
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_supplier_container_form
 msgid "website_product_supplier.product_supplier_container_form"
-msgstr ""
+msgstr "website_product_supplier.product_supplier_container_form"

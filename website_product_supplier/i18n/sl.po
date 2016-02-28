@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 11:34+0000\n"
-"PO-Revision-Date: 2016-01-19 13:16+0000\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-27 16:56+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +22,11 @@ msgstr ""
 #: view:website:website_product_supplier.product
 msgid "Add Product"
 msgstr "Dodaj proizvod"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.actions
+msgid "Add new product"
+msgstr "Dodaj nov proizvod"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -42,6 +47,16 @@ msgstr "Zamik"
 #: view:website:website_product_supplier.product
 msgid "Delay..."
 msgstr "Zamik..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Delete"
+msgstr "Izbris"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Edit"
+msgstr "Urejanje"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -86,11 +101,6 @@ msgid "Name"
 msgstr "Naziv"
 
 #. module: website_product_supplier
-#: view:website:website_product_supplier.product_item_table
-msgid "Not Published"
-msgstr "Ni objavljeno"
-
-#. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Picture"
 msgstr "Slika"
@@ -127,7 +137,7 @@ msgid "Product name..."
 msgstr "Naziv proizvoda..."
 
 #. module: website_product_supplier
-#: view:website:website_product_supplier.product_item_table
+#: view:website:website_product_supplier.product_table
 msgid "Published"
 msgstr "Objavljeno"
 
@@ -143,8 +153,8 @@ msgstr "Iskanje..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
-msgid "Status"
-msgstr "Status"
+msgid "Stock"
+msgstr "Zaloga"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list

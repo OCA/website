@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 11:34+0000\n"
-"PO-Revision-Date: 2016-01-19 11:36+0000\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-24 17:53+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,11 @@ msgstr ""
 #: view:website:website_product_supplier.product
 msgid "Add Product"
 msgstr "Add Product"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.actions
+msgid "Add new product"
+msgstr "Add new product"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -41,6 +46,16 @@ msgstr "Delay"
 #: view:website:website_product_supplier.product
 msgid "Delay..."
 msgstr "Delay..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Delete"
+msgstr "Delete"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Edit"
+msgstr "Edit"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -85,11 +100,6 @@ msgid "Name"
 msgstr "Name"
 
 #. module: website_product_supplier
-#: view:website:website_product_supplier.product_item_table
-msgid "Not Published"
-msgstr "Not Published"
-
-#. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Picture"
 msgstr "Picture"
@@ -126,7 +136,7 @@ msgid "Product name..."
 msgstr "Product name..."
 
 #. module: website_product_supplier
-#: view:website:website_product_supplier.product_item_table
+#: view:website:website_product_supplier.product_table
 msgid "Published"
 msgstr "Published"
 
@@ -142,8 +152,8 @@ msgstr "Search..."
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
-msgid "Status"
-msgstr "Status"
+msgid "Stock"
+msgstr "Stock"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list
