@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+calendar_event_public,calendar_event public,calendar.model_calendar_event,base.group_public,1,0,0,0
+calendar_attendee_public,calendar_attendee public,calendar.model_calendar_attendee,base.group_public,1,0,0,0
+res_partner_public,res_partner public,base.model_res_partner,base.group_public,1,0,0,0
