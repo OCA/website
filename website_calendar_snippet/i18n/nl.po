@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_calendar_block
+#	* website_calendar_snippet
 #
 msgid ""
 msgstr ""
@@ -15,42 +15,42 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: website_calendar_block
+#. module: website_calendar_snippet
 #. openerp-web
-#: code:addons\website_calendar_block\static\src\js\website_calendar_block.js:29
+#: code:addons\website_calendar_snippet\static\src\js\website_calendar_snippet.js:29
 #, python-format
 msgid "All day"
 msgstr "Hele dag"
 
-#. module: website_calendar_block
+#. module: website_calendar_snippet
 #: view:website:website.snippets
 msgid "Calendar"
 msgstr "Kalender"
 
-#. module: website_calendar_block
+#. module: website_calendar_snippet
 #. openerp-web
-#: code:addons\website_calendar_block\static\src\js\website_calendar_block.js:34
+#: code:addons\website_calendar_snippet\static\src\js\website_calendar_snippet.js:34
 #, python-format
 msgid "Day"
 msgstr "Dag"
 
-#. module: website_calendar_block
+#. module: website_calendar_snippet
 #. openerp-web
-#: code:addons\website_calendar_block\static\src\js\website_calendar_block.js:32
+#: code:addons\website_calendar_snippet\static\src\js\website_calendar_snippet.js:32
 #, python-format
 msgid "Month"
 msgstr "Maand"
 
-#. module: website_calendar_block
+#. module: website_calendar_snippet
 #. openerp-web
-#: code:addons\website_calendar_block\static\src\js\website_calendar_block.js:31
+#: code:addons\website_calendar_snippet\static\src\js\website_calendar_snippet.js:31
 #, python-format
 msgid "Today"
 msgstr "Vandaag"
 
-#. module: website_calendar_block
+#. module: website_calendar_snippet
 #. openerp-web
-#: code:addons\website_calendar_block\static\src\js\website_calendar_block.js:33
+#: code:addons\website_calendar_snippet\static\src\js\website_calendar_snippet.js:33
 #, python-format
 msgid "Week"
 msgstr "Week"

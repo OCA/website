@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
-    'name': 'Calendar Block',
+    'name': 'Calendar Snippet',
     'images': [],
     'category': 'Website',
     'summary': 'Calendar (based on Messaging -> Calendar) on website.',
@@ -15,7 +15,7 @@
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',
-        'templates/website_calendar_block.xml',
+        'templates/website_calendar_snippet.xml',
     ],
     'demo': [],
     'installable': True,
