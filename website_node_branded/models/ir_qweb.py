@@ -23,8 +23,11 @@ class HTML(models.AbstractModel):
             t_att['call'] = t_call.get('t-call')
             val = qweb.render_tag_call(
                 t_call, t_att, g_att, qweb_context)
-            el = html.fromstring(val, parser=parser)
-            parent = t_call.getparent()
-            parent.append(el)
-            parent.replace(t_call, el)
+            try:
+                el = html.fromstring(val, parser=parser)
+                parent = t_call.getparent()
+                parent.append(el)
+                parent.replace(t_call, el)
+            except:
+                pass
         return html.tostring(dom, encoding='utf-8')
