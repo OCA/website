@@ -15,6 +15,13 @@ Since it's a block it can be placed anywhere on your website.
 Usage
 =====
 
+Privacy setting is per event; in order to change privacy setting you should:
+
+* open the event form;
+* click Edit Event button;
+* go to Options tab.
+
+
 To use this module, you need to:
 
 * Go to the website and click Edit;
