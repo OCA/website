@@ -23,6 +23,7 @@ addon | version | summary
 [website_blog_mgmt](website_blog_mgmt/) | 8.0.1.0.0 | Website blog Management
 [website_blog_share](website_blog_share/) | 8.0.1.0.0 | Blog Share
 [website_breadcrumb](website_breadcrumb/) | 8.0.1.0.0 | Let you have breadcrumbs in website pages
+[website_calendar_snippet](website_calendar_snippet/) | 8.0.1.0.0 | Calendar (based on Messaging -> Calendar) on website.
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 8.0.2.1.0 | Show cookie notice according to cookie law
 [website_country_localized_pages](website_country_localized_pages/) | 1.0 | Show website pages localized according to country's visitor
