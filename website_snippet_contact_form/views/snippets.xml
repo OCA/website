@@ -147,7 +147,8 @@
             data-selector-siblings="p, h1, h2, h3, blockquote, .well, .panel"
             data-selector-children=".content"
            >
-           <li data-value="allow-attach"><a>Allow Attachment</a></li>
+            <li data-value=""><a>Not Allow Attachment</a></li>
+            <li data-value="allow-attach"><a>Allow Attachment</a></li>
         </div>
     </xpath>
 
