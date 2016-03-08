@@ -19,10 +19,17 @@ To use this module, you need to:
 * Insert any structure block.
 * Go to *Insert Blocks > Content*.
 * Drag *Contact Form* inside the structure block you just created.
+* Optional: Go to Contact Form *Customize* and select *Allow attachment* to add
+  file input which will be attach to lead.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
    :target: https://runbot.odoo-community.org/runbot/186/8.0
+
+Known issues / Roadmap
+======================
+
+* Add possibility of uploading more than one files.
 
 Bug Tracker
 ===========
