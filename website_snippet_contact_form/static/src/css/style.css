@@ -1,0 +1,9 @@
+/* Style css */
+
+#allow_attach{
+    display: none;
+}
+
+.allow-attach > #allow_attach{
+    display: inline;
+}
