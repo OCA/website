@@ -24,7 +24,8 @@ Development
 To develop a module based on this one:
 
 * See module ``website_event_multi_image`` as an example.
-* Use the provided templates in frontend website views.
+* ``t-call`` the provided templates in frontend website views:
+  * ``website_multi_image.carousel``: outputs a carousel for images.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
