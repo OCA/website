@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-08 12:57+0000\n"
-"PO-Revision-Date: 2016-03-08 13:58+0100\n"
+"POT-Creation-Date: 2016-03-10 15:24+0000\n"
+"PO-Revision-Date: 2016-03-10 16:25+0100\n"
 "Last-Translator: Sergio Teruel <sergio@incaser.es>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/es/)\n"
@@ -40,9 +40,19 @@ msgid "File Upload"
 msgstr "Subir archivo"
 
 #. module: website_snippet_contact_form
+#: view:website:website_snippet_contact_form.validation_error_page
+msgid "Go to Back"
+msgstr "Volver"
+
+#. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "I have read and accept the"
 msgstr "He leído y acepto la"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Not Allow Attachment"
+msgstr "No permitir adjunto"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -68,6 +78,11 @@ msgstr "Asunto"
 #: view:website:website.snippets
 msgid "Tell us something!"
 msgstr "¡Díganos algo!"
+
+#. module: website_snippet_contact_form
+#: view:website:website_snippet_contact_form.validation_error_page
+msgid "Validation Error!"
+msgstr "Error de validación"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets

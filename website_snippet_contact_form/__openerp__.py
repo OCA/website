@@ -17,5 +17,6 @@
     "data": [
         "views/snippets.xml",
         "views/assets.xml",
+        "data/website_snippet_contact_form.xml",
     ],
 }
