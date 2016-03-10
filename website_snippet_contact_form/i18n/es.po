@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 15:24+0000\n"
-"PO-Revision-Date: 2016-03-10 16:25+0100\n"
+"POT-Creation-Date: 2016-03-10 17:41+0000\n"
+"PO-Revision-Date: 2016-03-10 18:43+0100\n"
 "Last-Translator: Sergio Teruel <sergio@incaser.es>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/es/)\n"
@@ -18,6 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "+1 541 754 3010"
+msgstr "+34 913123654"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets

@@ -4,6 +4,11 @@
 <data>
 
 <template id="validation_error_page">
+    <script>
+    function goBack() {
+        window.history.back()
+    }
+    </script>
     <t t-call="website.layout">
         <div id="wrap">
             <div class="oe_structure oe_empty">
@@ -12,10 +17,8 @@
                     <h3>
                         <span t-esc="error"/>
                     </h3>
-                    <p>
-                        <a class="btn btn-primary mt16 mb16"
-                           t-att-href="http_referrer">Go to Back</a>
-                    </p>
+                    <button class="btn btn-primary"
+                            onclick="goBack()">Go to Back</button>
                 </div>
             </div>
             <t t-if="request.debug">
