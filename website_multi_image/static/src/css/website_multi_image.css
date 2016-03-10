@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* © 2016 Antiun Ingeniería S.L. - Jairo Llopis
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). */
+#multi_image_carousel .item {
+  height: 400px;
+  background-position: center; }
+
+/*# sourceMappingURL=multi_image_base.css.map */
