@@ -11,7 +11,7 @@ in a snippet and allow you to put it in any page you want.
 
 You can enable or disable uploading files.
 
-This snippet catchs validations errors from server, if there is any server-side
+This snippet catches validations errors from server, if there is any server-side
 validation error, the user will see a friendly error page with an option to go
 back.
 
