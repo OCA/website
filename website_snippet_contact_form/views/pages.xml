@@ -4,11 +4,6 @@
 <data>
 
 <template id="validation_error_page">
-    <script>
-    function goBack() {
-        window.history.back()
-    }
-    </script>
     <t t-call="website.layout">
         <div id="wrap">
             <div class="oe_structure oe_empty">
@@ -18,7 +13,7 @@
                         <span t-esc="error"/>
                     </h3>
                     <button class="btn btn-primary"
-                            onclick="goBack()">Go Back</button>
+                            onclick="history.back()">Go Back</button>
                 </div>
             </div>
             <t t-if="request.debug">

@@ -8,9 +8,12 @@ Contact Form Snippet
 
 This module was written to extend the functionality of contact form to embed it
 in a snippet and allow you to put it in any page you want.
-You can choose if upload or not any file.
-This snippet catchs validations errors from server, if any server error happens
-the user is informed in a new page, but he can go back.
+
+You can enable or disable uploading files.
+
+This snippet catchs validations errors from server, if there is any server-side
+validation error, the user will see a friendly error page with an option to go
+back.
 
 Usage
 =====
