@@ -16,7 +16,6 @@ class snippetContactus(Contactus):
             res = super(snippetContactus, self).contactus(**kwargs)
         except ValidationError, e:
             kwargs.update({
-                'http_referrer': request.httprequest.referrer,
                 'error': e.value,
             })
             res = request.website.render(

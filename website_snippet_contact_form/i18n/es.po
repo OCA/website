@@ -46,7 +46,7 @@ msgstr "Subir archivo"
 
 #. module: website_snippet_contact_form
 #: view:website:website_snippet_contact_form.validation_error_page
-msgid "Go to Back"
+msgid "Go Back"
 msgstr "Volver"
 
 #. module: website_snippet_contact_form

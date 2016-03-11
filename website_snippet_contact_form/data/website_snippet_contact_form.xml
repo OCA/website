@@ -18,7 +18,7 @@
                         <span t-esc="error"/>
                     </h3>
                     <button class="btn btn-primary"
-                            onclick="goBack()">Go to Back</button>
+                            onclick="goBack()">Go Back</button>
                 </div>
             </div>
             <t t-if="request.debug">
