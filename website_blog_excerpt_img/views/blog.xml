@@ -20,9 +20,25 @@
 
     <!-- Excerpt, image, read more button -->
     <xpath expr="//div[@name='blog_post_data']/.." position="after">
-        <div class="col-xs-7">
+        <t
+            t-set="image_url"
+            t-value="(
+                blog_post.background_image and
+                not blog_post.background_image.startswith(
+                  '%s/blog/' %
+                      env['ir.config_parameter']
+                      .get_param('web.base.url')) and
+                blog_post.background_image
+            )"/>
+        <t t-if="not (image_url)">
+            <t t-foreach="env['ir.fields.converter']
+                          .imgs_from_html(blog_post.content, 1)"
+               t-as="image_url"/>
+        </t>
+
+        <div t-attf-class="excerpt-txt col-sm-#{7 if image_url else 12}">
             <p t-esc="env['ir.fields.converter']
-                      .text_from_html(blog_post.content, 40)"/>
+                      .text_from_html(blog_post.content, 80)"/>
             <p>
                 <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/post/#{slug(blog_post)}"
                    class="btn btn-primary">
@@ -30,30 +46,10 @@
                 </a>
             </p>
         </div>
-        <div class="col-xs-5">
+        <div t-if="image_url" class="col-sm-5 text-center excerpt-img">
             <!-- Use cover image if available -->
-            <t t-if="(blog_post.background_image and
-                      not blog_post.background_image.startswith(
-                        '%s/blog/' %
-                            env['ir.config_parameter']
-                            .get_param('web.base.url')))">
-                <img class="img img-responsive img-rounded"
-                     t-att-src="blog_post.background_image"/>
-            </t>
-
-            <!-- Get images from post otherwise -->
-            <t t-if="not (blog_post.background_image and
-                          not blog_post.background_image.startswith(
-                            '%s/blog/' %
-                                env['ir.config_parameter']
-                                .get_param('web.base.url')))">
-                <t t-as="url"
-                   t-foreach="env['ir.fields.converter']
-                              .imgs_from_html(blog_post.content, 1)">
-                    <img class="img img-responsive img-rounded"
-                         t-att-src="url"/>
-                </t>
-            </t>
+            <img class="img img-responsive img-thumbnail"
+                 t-att-src="image_url"/>
         </div>
     </xpath>
 </template>
