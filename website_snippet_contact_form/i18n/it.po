@@ -1,0 +1,104 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_contact_form
+# 
+# Translators:
+# Paolo Valier, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-12 02:17+0000\n"
+"PO-Revision-Date: 2016-03-11 16:45+0000\n"
+"Last-Translator: Paolo Valier\n"
+"Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "+1 541 754 3010"
+msgstr "+1 541 754 3010"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Allow Attachment"
+msgstr "Consenti allegati"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Contact Form"
+msgstr "Modulo di contatto"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Email"
+msgstr "Email"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "File Upload"
+msgstr "Carica File"
+
+#. module: website_snippet_contact_form
+#: view:website:website_snippet_contact_form.validation_error_page
+msgid "Go Back"
+msgstr "Indietro"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "I have read and accept the"
+msgstr "Ho letto e accettato le"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Not Allow Attachment"
+msgstr "Non consentire allegati"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Phone Number"
+msgstr "Numero di telefono"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Privacy Policy"
+msgstr "Informativa sulla Privacy"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Send"
+msgstr "Invia"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Subject"
+msgstr "Soggetto"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Tell us something!"
+msgstr "Dicci qualcosa!"
+
+#. module: website_snippet_contact_form
+#: view:website:website_snippet_contact_form.validation_error_page
+msgid "Validation Error!"
+msgstr "Errore di Convalida!"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Company"
+msgstr "La tua Azienda"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Name"
+msgstr "Il tuo nome"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Question"
+msgstr "La tua richiesta"

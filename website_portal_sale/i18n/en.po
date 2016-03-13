@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-05 01:59+0000\n"
-"PO-Revision-Date: 2015-12-04 16:36+0000\n"
+"POT-Creation-Date: 2016-03-12 02:17+0000\n"
+"PO-Revision-Date: 2016-03-01 16:32+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -60,6 +60,11 @@ msgid ""
 msgstr "If you wish to access the complete application to manage your orders, you can follow"
 
 #. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "In preparation"
+msgstr "In preparation"
+
+#. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice #"
 msgstr "Invoice #"
@@ -68,11 +73,6 @@ msgstr "Invoice #"
 #: view:website:website_portal_sale.invoices
 msgid "Invoice Date"
 msgstr "Invoice Date"
-
-#. module: website_portal_sale
-#: view:website:website_portal_sale.sale_orders
-msgid "Invoiced"
-msgstr "Invoiced"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

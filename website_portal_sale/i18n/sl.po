@@ -3,13 +3,13 @@
 # * website_portal_sale
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-05 01:59+0000\n"
-"PO-Revision-Date: 2015-12-04 19:31+0000\n"
+"POT-Creation-Date: 2016-03-12 02:17+0000\n"
+"PO-Revision-Date: 2016-03-02 06:54+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -61,6 +61,11 @@ msgid ""
 msgstr "Če želite dostop do celotne aplikacije za upravljanje nalogov, lahko sledite"
 
 #. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "In preparation"
+msgstr "V pripravi"
+
+#. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice #"
 msgstr "Račun #"
@@ -69,11 +74,6 @@ msgstr "Račun #"
 #: view:website:website_portal_sale.invoices
 msgid "Invoice Date"
 msgstr "Datum računa"
-
-#. module: website_portal_sale
-#: view:website:website_portal_sale.sale_orders
-msgid "Invoiced"
-msgstr "Zaračunano"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
