@@ -28,6 +28,7 @@
         'website',
     ],
     'data': [
+        'views/reusable_templates.xml',
         'views/website_legal.xml',
         'views/website_privacy.xml',
         'views/website_terms.xml',
