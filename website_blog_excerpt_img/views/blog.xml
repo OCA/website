@@ -23,20 +23,20 @@
         <t
             t-set="image_url"
             t-value="(
+                blog_post.background_image and
+                not blog_post.background_image.startswith(
+                  '%s/blog/' %
+                      env['ir.config_parameter']
+                      .get_param('web.base.url')) and
                 blog_post.background_image
-                if (
-                    blog_post.background_image and
-                    not blog_post.background_image.startswith(
-                      '%s/blog/' %
-                          env['ir.config_parameter']
-                          .get_param('web.base.url'))
-                ) else (
-                    env['ir.fields.converter']
-                    .imgs_from_html(blog_post.content, 1)
-                )
             )"/>
+        <t t-if="not (image_url)">
+            <t t-foreach="env['ir.fields.converter']
+                          .imgs_from_html(blog_post.content, 1)"
+               t-as="image_url"/>
+        </t>
 
-        <div t-att-class="'col-sm-7' if image_url else 'col-sm-12'">
+        <div t-attf-class="excerpt-txt col-sm-#{7 if image_url else 12}">
             <p t-esc="env['ir.fields.converter']
                       .text_from_html(blog_post.content, 40)"/>
             <p>
@@ -46,7 +46,7 @@
                 </a>
             </p>
         </div>
-        <div t-if="image_url" class="col-sm-5">
+        <div t-if="image_url" class="col-sm-5 text-center excerpt-img">
             <!-- Use cover image if available -->
             <img class="img img-responsive img-thumbnail"
                  t-att-src="image_url"/>
