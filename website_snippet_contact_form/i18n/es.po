@@ -108,6 +108,3 @@ msgstr "Su nombre"
 #: view:website:website.snippets
 msgid "Your Question"
 msgstr "Su pregunta"
-
-#~ msgid "Allow Attachment"
-#~ msgstr "Permitir adjunto"
