@@ -38,7 +38,7 @@
 
         <div t-attf-class="excerpt-txt col-sm-#{7 if image_url else 12}">
             <p t-esc="env['ir.fields.converter']
-                      .text_from_html(blog_post.content, 40)"/>
+                      .text_from_html(blog_post.content, 80)"/>
             <p>
                 <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/post/#{slug(blog_post)}"
                    class="btn btn-primary">
