@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 17:41+0000\n"
-"PO-Revision-Date: 2016-03-10 18:43+0100\n"
+"POT-Creation-Date: 2016-03-15 15:34+0000\n"
+"PO-Revision-Date: 2016-03-15 16:35+0100\n"
 "Last-Translator: Sergio Teruel <sergio@incaser.es>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/es/)\n"
@@ -26,8 +26,8 @@ msgstr "+34 913123654"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
-msgid "Allow Attachment"
-msgstr "Permitir adjunto"
+msgid "Allow"
+msgstr "Permitir"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -56,8 +56,8 @@ msgstr "He leído y acepto la"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
-msgid "Not Allow Attachment"
-msgstr "No permitir adjunto"
+msgid "Not Allow"
+msgstr "No permitir"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -85,6 +85,11 @@ msgid "Tell us something!"
 msgstr "¡Díganos algo!"
 
 #. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Upload file"
+msgstr "Subir archivo"
+
+#. module: website_snippet_contact_form
 #: view:website:website_snippet_contact_form.validation_error_page
 msgid "Validation Error!"
 msgstr "Error de validación"
@@ -103,3 +108,6 @@ msgstr "Su nombre"
 #: view:website:website.snippets
 msgid "Your Question"
 msgstr "Su pregunta"
+
+#~ msgid "Allow Attachment"
+#~ msgstr "Permitir adjunto"

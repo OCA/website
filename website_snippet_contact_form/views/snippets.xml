@@ -149,8 +149,13 @@
             data-selector-siblings="p, h1, h2, h3, blockquote, .well, .panel"
             data-selector-children=".content"
            >
-            <li data-value=""><a>Not Allow Attachment</a></li>
-            <li data-value="allow-attach"><a>Allow Attachment</a></li>
+            <li class="dropdown-submenu" data-required="true">
+                <a tabindex="-1" href="#">Upload file</a>
+                <ul class="dropdown-menu">
+                    <li data-value=""><a>Not Allow</a></li>
+                    <li data-value="allow-attach"><a>Allow</a></li>
+                </ul>
+            </li>
         </div>
     </xpath>
 
