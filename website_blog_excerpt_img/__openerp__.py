@@ -21,6 +21,7 @@
         "html_text",
     ],
     "data": [
+        "views/assets.xml",
         "views/blog.xml",
     ],
 }

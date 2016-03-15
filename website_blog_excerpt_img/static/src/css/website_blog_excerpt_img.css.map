@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;AAKI,+BAAiB;EACb,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EAEP,UAAG,EAAE,KAAK;EACV,eAAQ,EAAE,MAAM",
+"sources": ["website_blog_excerpt_img.sass"],
+"names": [],
+"file": "website_blog_excerpt_img.css"
+}
