@@ -3,7 +3,7 @@
 <data>
 
 <!-- Base templates for submodules -->
-<template id="acceptance_full" page="False">
+<template id="acceptance_full">
     I accept the <a href="/page/legal">legal advice</a>, the
     <a href="/page/privacy">privacy policy</a>, and the
     <a href="/page/terms">terms of use</a> of this website.
