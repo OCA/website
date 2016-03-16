@@ -7,22 +7,21 @@ Fair Data for Events
 ====================
 
 This module extends the functionality of events to support data usually needed
-for fairs and allow you to know the commercial partner related to the
-registrant, the amount of reserved square meters, and its location in the fair.
+for fairs and allow you to know the amount of reserved square meters and its
+location in the fair.
 
 Usage
 =====
 
 To use this module, you need to:
 
-* Go to *Marketing > Events > Registrations > Create*.
-* You will see the new fields.
+#. Go to *Marketing > Events > Registrations > Create*.
+#. You will see the new fields.
 
 To do BI analisys, you need to:
 
-* Go to *Reporting > Event > Events Analysis*.
-* You can use the *Commercial partner* and *Location* as row or column, and
-  *Square meters* as measure.
+#. Go to *Reporting > Event > Events Analysis*.
+#. You can use the *Location* as row or column, and *Square meters* as measure.
 
 Credits
 =======

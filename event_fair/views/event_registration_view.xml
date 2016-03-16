@@ -12,7 +12,6 @@
     <field name="arch" type="xml">
         <xpath expr="//sheet[@string='Registration']/group">
             <group string="Fair" name="fair">
-                <field name="commercial_partner_id"/>
                 <field name="square_meters"/>
                 <field name="location_id"/>
             </group>

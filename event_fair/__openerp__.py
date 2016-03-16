@@ -12,10 +12,10 @@
     "application": False,
     "installable": True,
     "depends": [
+        "event_sale_extra_info",
         "website_event_track",
     ],
     "data": [
-        "data/install.xml",
         "views/event_registration_view.xml",
     ],
 }
