@@ -8,13 +8,33 @@
 <record id="view_event_registration_form" model="ir.ui.view">
     <field name="name">Fair fields</field>
     <field name="model">event.registration</field>
-    <field name="inherit_id" ref="event.view_event_registration_form"/>
+    <field
+        name="inherit_id"
+        ref="event_sale_extra_info.view_event_registration_form"/>
     <field name="arch" type="xml">
         <xpath expr="//sheet[@string='Registration']/group">
             <group string="Fair" name="fair">
                 <field name="square_meters"/>
                 <field name="location_id"/>
             </group>
+        </xpath>
+    </field>
+</record>
+
+<record id="view_registration_search" model="ir.ui.view">
+    <field name="name">Fair fields</field>
+    <field name="model">event.registration</field>
+    <field
+        name="inherit_id"
+        ref="event_sale_extra_info.view_registration_search"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='commercial_partner_id']" position="after">
+            <field name="location_id"/>
+        </xpath>
+        <xpath expr="//group[@string='Group By']">
+            <filter
+                string="Location"
+                context="{'group_by': 'location_id'}"/>
         </xpath>
     </field>
 </record>
