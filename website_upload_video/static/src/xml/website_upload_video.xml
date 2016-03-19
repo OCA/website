@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-extend="website.editor.dialog.video">
+        <t t-jquery=".well" t-operation="append">
+            <br /> <!-- FIXME -->
+            <div class="form-group btn-group center-block">
+                <label for="o_website_upload_video_btn" style="width: 220px; line-height: 2em;" class="pull-left">Upload video</label>
+                <a class="btn btn-primary filepicker pull-left o_website_upload_video_btn" href="#">
+                    Upload a video from your computer
+                </a>
+                <span class="hidden pull-right text-muted o_website_upload_success" style="margin-left:10px; line-height: 2.4em;">Video uploaded</span>
+            </div>
+        </t>
+    </t>    
+    <t t-extend="website.editor.dialog.video">
+        <t t-jquery="form" t-operation="after">
+            <form method="POST" action="/website_upload_video/attach" enctype="multipart/form-data" target="fileframe">
+                <input type="file" name="upload" accept="video/*" style="position: absolute; opacity: 0; width: 1px; height: 1px;" />
+            </form>
+        </t>
+    </t>
+</templates>

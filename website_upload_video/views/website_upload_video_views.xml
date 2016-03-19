@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="website_upload_video_editor_assets" inherit_id="website.assets_editor" name="video upload editor assets">
+            <xpath expr="script[last()]" position="after">             
+                <script type="text/javascript" src="/website_upload_video/static/src/js/website_upload_video.js"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>
