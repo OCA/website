@@ -12,11 +12,12 @@ Usage
 =====
 
 On website:
-* click "Edit" button;
-* click add image button;
-* click "Video" tab;
-* click "Upload a video from your computer";
-* click "Save" button.
+
+ * click "Edit" button;
+ * click add image button;
+ * click "Video" tab;
+ * click "Upload a video from your computer";
+ * click "Save" button.
 
 Known issues / Roadmap
 ======================
