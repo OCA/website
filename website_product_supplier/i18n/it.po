@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-12 16:06+0000\n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-19 09:25+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -31,12 +32,12 @@ msgstr "Aggiungi nuovo prodotto"
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Add your product. You can update later in this section"
-msgstr ""
+msgstr "Aggiungi il tuo prodotto. Lo potrai modificare in un secondo momento in questa sezione"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Code"
-msgstr ""
+msgstr "Codice"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -119,7 +120,7 @@ msgstr "Prezzo quantità minima"
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "Price and stock"
-msgstr ""
+msgstr "Prezzo e disponibilità"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
@@ -154,7 +155,7 @@ msgstr "Cerca..."
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Stock"
-msgstr ""
+msgstr "Disponibilità"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list
@@ -169,7 +170,7 @@ msgstr "I tuoi Prodotti"
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product
 msgid "back to list"
-msgstr ""
+msgstr "indietro alla lista"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product

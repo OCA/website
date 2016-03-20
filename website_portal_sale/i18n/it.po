@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-12 16:09+0000\n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-19 09:15+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Access the complete Sale application"
-msgstr ""
+msgstr "Accedi all'applicazione Vendite"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -31,7 +32,7 @@ msgstr "Cancellato"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Confirmation Date"
-msgstr ""
+msgstr "Data della Conferma"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -42,6 +43,11 @@ msgstr "Contatto"
 #: view:website:website_portal_sale.orders_followup
 msgid "Date:"
 msgstr "Data:"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Discount (%)"
+msgstr "Sconto (%)"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
@@ -58,7 +64,7 @@ msgstr "Scadenza"
 msgid ""
 "If you wish to access the complete application to manage your orders, you "
 "can follow"
-msgstr ""
+msgstr "Se vuoi accedere all'applicazione completa per gestire gli ordini, puoi seguire"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
@@ -200,7 +206,7 @@ msgstr "Prezzo unitario"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Untaxed Amount:"
-msgstr ""
+msgstr "Imponibile:"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -230,4 +236,4 @@ msgstr "I tuoi Preventivi"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "this link"
-msgstr ""
+msgstr "questo link"

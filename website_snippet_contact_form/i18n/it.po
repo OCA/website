@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-11 16:45+0000\n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-19 09:33+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +26,8 @@ msgstr "+1 541 754 3010"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
-msgid "Allow Attachment"
-msgstr "Consenti allegati"
+msgid "Allow"
+msgstr "Permetti"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -55,8 +56,8 @@ msgstr "Ho letto e accettato le"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
-msgid "Not Allow Attachment"
-msgstr "Non consentire allegati"
+msgid "Not Allow"
+msgstr "Non permettere"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -82,6 +83,11 @@ msgstr "Soggetto"
 #: view:website:website.snippets
 msgid "Tell us something!"
 msgstr "Dicci qualcosa!"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Upload file"
+msgstr "Caricamento file"
 
 #. module: website_snippet_contact_form
 #: view:website:website_snippet_contact_form.validation_error_page

@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-12 15:58+0000\n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-19 09:22+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: website_hr_department
 #: field:hr.department,website_published:0
 msgid "Available in the website"
-msgstr ""
+msgstr "Disponibile nel sito web"
 
 #. module: website_hr_department
 #: view:website:website_hr_department.departments
@@ -45,12 +46,12 @@ msgstr "I nostri dipartimenti"
 msgid ""
 "Our products are designed for small to medium size companies willing to optimize\n"
 "                                        their performance."
-msgstr ""
+msgstr "I nostri prodotti sono progettati per piccole e medie imprese desiderose di ottimizzare\nlo svolgimento proprie attività."
 
 #. module: website_hr_department
 #: field:hr.department,public_info:0
 msgid "Public Info"
-msgstr ""
+msgstr "Informazioni pubbliche"
 
 #. module: website_hr_department
 #: view:website:website_hr_department.departments
@@ -58,7 +59,7 @@ msgid ""
 "We are a team of passionate people whose goal is to improve everyone's\n"
 "                                        life through disruptive products. We build great products to solve your\n"
 "                                        business problems."
-msgstr ""
+msgstr "Siamo un team di persone appassionate il cui obiettivo è migliorare la vita\ndi tutti attraverso prodotti dirompenti. Creiamo grandi prodotti in grado di\nrisolvere i tuoi problemi di business."
 
 #. module: website_hr_department
 #: model:ir.actions.act_url,name:website_hr_department.action_open_website
@@ -68,4 +69,4 @@ msgstr "Dipartimenti del sito web"
 #. module: website_hr_department
 #: view:website:website_hr_department.departments
 msgid "col-md-9"
-msgstr ""
+msgstr "col-md-9"

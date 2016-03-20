@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-01 17:06+0000\n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-15 15:01+0000\n"
 "Last-Translator: Eric Antones <eantones@users.noreply.github.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -42,6 +42,11 @@ msgstr "Contacto"
 #: view:website:website_portal_sale.orders_followup
 msgid "Date:"
 msgstr "Fecha:"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Discount (%)"
+msgstr "Descuento (%)"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders

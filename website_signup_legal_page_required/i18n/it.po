@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-12 15:56+0000\n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-19 09:29+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -23,22 +24,22 @@ msgstr ""
 msgid ""
 ",\n"
 "                the"
-msgstr ""
+msgstr ", l'"
 
 #. module: website_signup_legal_page_required
 #: field:res.users,accepted_legal_terms:0
 msgid "Accepted legal terms"
-msgstr ""
+msgstr "Accetta i Termini legali"
 
 #. module: website_signup_legal_page_required
 #: help:res.users,accepted_legal_terms:0
 msgid "Did the user accept our legal terms when opening the account?"
-msgstr ""
+msgstr "L'utente ha accettato i Termini legali creando l'account?"
 
 #. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "I accept the"
-msgstr ""
+msgstr "Accetto le"
 
 #. module: website_signup_legal_page_required
 #: model:ir.model,name:website_signup_legal_page_required.model_res_users
@@ -49,22 +50,22 @@ msgstr "Utenti"
 #: code:addons/website_signup_legal_page_required/exceptions.py:10
 #, python-format
 msgid "You must accept our legal terms."
-msgstr ""
+msgstr "Devi accettare i Termini legali."
 
 #. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "and the"
-msgstr ""
+msgstr "e le "
 
 #. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "legal advice"
-msgstr ""
+msgstr "informazioni legali"
 
 #. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "of this website."
-msgstr ""
+msgstr "di questo sito."
 
 #. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields

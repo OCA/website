@@ -1,0 +1,100 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_event_register_free
+# 
+# Translators:
+# Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-15 10:11+0000\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>\n"
+"Language-Team: Finnish (http://www.transifex.com/oca/OCA-website-8-0/language/fi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Email"
+msgstr "Sähköposti"
+
+#. module: website_event_register_free
+#: model:ir.model,name:website_event_register_free.model_event_registration
+msgid "Event Registration"
+msgstr "Tapahtuman rekisteröinti"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+msgid "Free"
+msgstr "Ilmainen"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+msgid "No seats available"
+msgstr "Ei paikkoja vapaana"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Phone"
+msgstr "Puhelin"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.partner_register_form
+msgid "Quantity"
+msgstr "Määrä"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Register"
+msgstr "Rekisteröidy"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+msgid "Register Now"
+msgstr "Rekisteröidy nyt"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Review the amount of tickets to register"
+msgstr "Tarkista rekisteröitävien lippujen määrä"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_confirm
+msgid "Thank you"
+msgstr "Kiitos"
+
+#. module: website_event_register_free
+#: view:website:website_event.event_description_full
+msgid "Ticket Type"
+msgstr "Lipun tyyppi"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Your Details"
+msgstr "Tiedot"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Your Name"
+msgstr "Nimi"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Your company / organisation"
+msgstr "Yritys / organisaatio"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_confirm
+msgid "Your registration for"
+msgstr "Rekisteröityminen tapahtumaan"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_confirm
+msgid "succeeded!"
+msgstr "onnistui!"

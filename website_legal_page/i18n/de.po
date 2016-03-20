@@ -8,15 +8,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-25 14:25+0000\n"
-"PO-Revision-Date: 2016-02-23 14:00+0000\n"
-"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-15 09:39+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_legal_page
+#: view:website:website_legal_page.acceptance_full
+msgid ", and the"
+msgstr ""
+
+#. module: website_legal_page
+#: view:website:website_legal_page.acceptance_full
+msgid ", the"
+msgstr ""
 
 #. module: website_legal_page
 #: view:website:website.layout
@@ -31,4 +41,24 @@ msgstr "Datenschutzerklärung"
 #. module: website_legal_page
 #: view:website:website.layout
 msgid "Terms of use"
+msgstr "Nutzungsbedingungen"
+
+#. module: website_legal_page
+#: view:website:website_legal_page.acceptance_full
+msgid "legal advice"
+msgstr "Nutzungshinweise"
+
+#. module: website_legal_page
+#: view:website:website_legal_page.acceptance_full
+msgid "of this website."
+msgstr "der Webseite."
+
+#. module: website_legal_page
+#: view:website:website_legal_page.acceptance_full
+msgid "privacy policy"
+msgstr "Datenschutzbestimmungen"
+
+#. module: website_legal_page
+#: view:website:website_legal_page.acceptance_full
+msgid "terms of use"
 msgstr "Nutzungsbedingungen"

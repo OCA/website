@@ -3,236 +3,235 @@
 # * website_portal_sale
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2016-03-15 05:54+0000\n"
-"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
-"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
+"PO-Revision-Date: 2016-03-15 10:09+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: Finnish (http://www.transifex.com/oca/OCA-website-8-0/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Access the complete Sale application"
-msgstr "Dostop do celotne prodajne aplikacije"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Cancelled"
-msgstr "Preklicano"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Confirmation Date"
-msgstr "Datum potrditve"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Contact"
-msgstr "Stik"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Date:"
-msgstr "Datum:"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Discount (%)"
-msgstr "Popust (%)"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Done"
-msgstr "Opravljeno"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Due Date"
-msgstr "Datum zapadlosti"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid ""
 "If you wish to access the complete application to manage your orders, you "
 "can follow"
-msgstr "Če želite dostop do celotne aplikacije za upravljanje nalogov, lahko sledite"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "In preparation"
-msgstr "V pripravi"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice #"
-msgstr "Račun #"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice Date"
-msgstr "Datum računa"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Invoices"
-msgstr "Računi"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Invoicing Address"
-msgstr "Obračunski naslov"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "My Account"
-msgstr "Moj račun"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Order"
-msgstr "Nalog"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.orders_followup
 msgid "Paid"
-msgstr "Plačano"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Problem"
-msgstr "Težava"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Product"
-msgstr "Proizvod"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Quantity"
-msgstr "Količina"
+msgstr "Määrä"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Quotation"
-msgstr "Predračun"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Quotation #"
-msgstr "Predračun #"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Sale Order #"
-msgstr "Prodajni nalog #"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal.account
 msgid "Sales"
-msgstr "Prodaje"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Shipping Address"
-msgstr "Naslov za odpremo"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Show less"
-msgstr "Prikaži manj"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Show more"
-msgstr "Prikaži več"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Subtotal"
-msgstr "Vmesni seštevek"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Taxes:"
-msgstr "Davki:"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "There are currently no invoices for your account."
-msgstr "Trenutno ni računov za vaš konto."
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "There are currently no orders for your account."
-msgstr "Trenutno ni nalogov za vaš konto."
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "There are currently no quotes for your account."
-msgstr "Trenutno ni preračunov za vaš konto."
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Total"
-msgstr "Skupaj"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Total:"
-msgstr "Skupaj:"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Unit Price"
-msgstr "Cena enote"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Untaxed Amount:"
-msgstr "Neobdavčeni znesek"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Waiting"
-msgstr "Čakanje"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Waiting for Payment"
-msgstr "Čakanje na plačilo"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Your Invoices and Payments"
-msgstr "Vaši računi in plačila"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Your Orders"
-msgstr "Vaši nalogi"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Your Quotes"
-msgstr "Vaši predračuni"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "this link"
-msgstr "tej povezavi"
+msgstr ""
