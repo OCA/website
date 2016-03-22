@@ -5,17 +5,17 @@
 <!-- Layout add nav and footer -->
 <template id="footer_supplier_page" inherit_id="website.footer_default" name="Footer Supplier Link">
     <xpath expr="//div[@id='info']/ul" position="inside">
-        <li><a href="/suppliers">Our Supplier</a></li>
+        <li><a href="/suppliers">Our Suppliers</a></li>
     </xpath>
 </template>
 
-<template id="index" name="Our Supplier">
+<template id="index" name="Our Suppliers">
     <t t-call="website.layout">
         <div id="wrap">
             <div class="oe_structure">
                 <section data-snippet-id="title">
                     <h1 class="text-center">
-                        Our Supplier
+                        Our Suppliers
                     </h1><h2 class="text-center text-muted">
                         Trusted by millions worldwide
                     </h2>

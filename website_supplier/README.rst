@@ -3,11 +3,11 @@
    :alt: License: AGPL-3
     
 ================
-Website Supplier
+Website Suppliers
 ================
 
 This module was written to extend the functionality of the website 
-to allow user to publish supplier on the website.
+to allow users to publish his suppliers on a new page.
 
 Installation
 ============
