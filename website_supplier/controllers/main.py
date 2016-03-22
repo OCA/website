@@ -41,11 +41,11 @@ class WebsiteSupplier(http.Controller):
 
         # group by country, based on suppliers found with the search(domain)
         countries = partner_obj.read_group(
-            cr, openerp.SUPERUSER_ID, domain, ["id", "country_id"],
+            cr, SUPERUSER_ID, domain, ["id", "country_id"],
             groupby="country_id", orderby="country_id",
             context=request.context)
         country_count = partner_obj.search(
-            cr, openerp.SUPERUSER_ID, domain, count=True,
+            cr, SUPERUSER_ID, domain, count=True,
             context=request.context)
 
         if country_id:
@@ -70,7 +70,7 @@ class WebsiteSupplier(http.Controller):
 
         # search suppliers to display
         partner_count = partner_obj.search_count(
-            cr, openerp.SUPERUSER_ID, domain, context=request.context)
+            cr, SUPERUSER_ID, domain, context=request.context)
 
         # pager
         url = '/suppliers'
@@ -83,12 +83,12 @@ class WebsiteSupplier(http.Controller):
         )
 
         partner_ids = partner_obj.search(
-            request.cr, openerp.SUPERUSER_ID, domain,
+            request.cr, SUPERUSER_ID, domain,
             offset=pager['offset'], limit=self._references_per_page,
             context=request.context)
         google_map_partner_ids = ','.join(map(str, partner_ids))
         partners = partner_obj.browse(
-            request.cr, openerp.SUPERUSER_ID, partner_ids, request.context)
+            request.cr, SUPERUSER_ID, partner_ids, request.context)
 
         values = {
             'countries': countries,
