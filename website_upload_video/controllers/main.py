@@ -10,16 +10,13 @@ class WebsiteUploadVideo(http.Controller):
     @http.route('/website_upload_video/attach', type='http', auth='user', methods=['POST'], website=True)
     def attach(self, upload=None):
         attachments = request.registry['ir.attachment']
-
         video_data = upload.read()
-
         attachment_id = attachments.create(request.cr, request.uid, {
             'name': upload.filename,
             'datas': video_data.encode('base64'),
             'datas_fname': upload.filename,
             'res_model': 'ir.ui.view',
         }, request.context)
-
         return """<script type='text/javascript'>
             window.parent['video_upload_callback'](%s);
         </script>""" % (attachment_id)
