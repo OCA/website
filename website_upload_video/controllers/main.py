@@ -5,9 +5,10 @@
 from openerp.addons.web import http
 from openerp.addons.web.http import request
 
-class WebsiteUploadVideo(http.Controller):
 
-    @http.route('/website_upload_video/attach', type='http', auth='user', methods=['POST'], website=True)
+class WebsiteUploadVideo(http.Controller):
+    @http.route('/website_upload_video/attach',
+                type='http', auth='user', methods=['POST'], website=True)
     def attach(self, upload=None):
         attachments = request.registry['ir.attachment']
         video_data = upload.read()
