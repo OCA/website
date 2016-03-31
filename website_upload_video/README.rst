@@ -9,7 +9,7 @@ Upload video on website
 This module adds a "Upload video" option to the "Select a Media / Video" 
 dialog. It uploads the video to the filesystem of the Odoo server so 
 enough diskspace is requisite. This is useful when your Odoo server 
-is located inside an intranet and therefor doesn't have a connection 
+is located inside an intranet and therefore doesn't have a connection 
 to the internet.
 
 Usage
