@@ -17,7 +17,7 @@
     ],
     "depends": [
         "website_blog",
-        "html_imgs",
+        "html_image_url_extractor",
         "html_text",
     ],
     "data": [
