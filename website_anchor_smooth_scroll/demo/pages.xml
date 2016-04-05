@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+<template id="demo_page" page="True" name="Anchor smooth scroll demo">
+    <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty">
+            <section class="jumbotron mt16 mb16" id="top">
+                <div class="container">
+                    <h1>Try smooth scrolling. Easily.</h1>
+                    <p>
+                        Press the button below and enjoy a smooth experience.
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#bottom">
+                            Scroll to bottom
+                        </a>
+                    </p>
+                </div>
+            </section>
+            <section class="oe_dark mt16 mb16">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center mt32 mb32">
+                            <h2>This is dummy content</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <img
+                                alt="Odoo CMS - a big picture"
+                                class="img img-responsive"
+                                src="/website/static/src/img/big_picture.png"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="oe_dark mt16 mb16">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center mt32 mb32">
+                            <h2>More dummy content</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <img
+                                alt="Odoo CMS - a big picture"
+                                class="img img-responsive"
+                                src="/website/static/src/img/big_picture.png"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="jumbotron mt16 mb16" id="bottom">
+                <div class="container">
+                    <h1>Smooth? Nice.</h1>
+                    <p>
+                        It works for any links to #anchors in your website!
+                    </p>
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#top">
+                            Scroll to top
+                        </a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </t>
+</template>
+
+<record id="demo_page_link" model="website.menu">
+    <field name="name">Anchor smooth scroll demo</field>
+    <field name="url">/page/website_anchor_smooth_scroll.demo_page</field>
+    <field name="parent_id" ref="website.main_menu" />
+    <field name="sequence" type="int">50</field>
+</record>
+
+</data>
+</openerp>
