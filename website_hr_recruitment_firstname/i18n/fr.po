@@ -23,5 +23,5 @@ msgstr "Votre prénom"
 #. module: website_hr_recruitment_firstname
 #: view:website:website_hr_recruitment.apply
 msgid "Your Lastname"
-msgstr "Your nom"
+msgstr "Votre nom"
 
