@@ -6,7 +6,7 @@ Display blog post on website
 ============================
 
 Offers a widget to display and select a blog entry on your website.
-The snippet allows seveal selection options such as:
+The snippet allows several selection options such as:
 * Visualize latest blog entry 
 * Visualize the N-th blog entry
 * Visualize one specific fixed entry
@@ -53,7 +53,7 @@ USAGE
 -----
 
 To use this module, please click on the snippet menu in website edit mode.
-There will be available a new snippet called "Show Blog Post"
+There will be available a new snippet called "Blog Entry".
 
 Once selected the snippet and placed in the website, the options of the 
 snippet itself will allow you to select wich Blog post to display.
