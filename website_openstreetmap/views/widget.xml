@@ -27,9 +27,6 @@
                     </section>
                 </div>
             </xpath>
-            <xpath expr="//div[@id='snippet_options']" position='inside'>
-                <!-- can edit several options from here -->             
-            </xpath>
         </template>
 
 
