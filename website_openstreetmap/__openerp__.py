@@ -25,10 +25,10 @@
     "category": "Website",
     "summary": "Replaces Google maps on website, adds OpenStreetMap widget",
     "depends": [
-        'website'
+        'website',
+        'base_geolocalize'
     ],
     "data": [
-        "views/view.xml",
         "views/widget.xml",
     ],
     "auto_install": False,
