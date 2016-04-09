@@ -3,21 +3,19 @@
 # * website_slides
 # 
 # Translators:
-# Matus Krnac <matus.krnac@gmail.com>, 2015
-# Pavol Krnáč <pavol.krnac@ekoenergo.sk>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-21 09:20+0000\n"
-"PO-Revision-Date: 2016-04-07 05:46+0000\n"
-"Last-Translator: Pavol Krnáč <pavol.krnac@ekoenergo.sk>\n"
-"Language-Team: Slovak (http://www.transifex.com/odoo/odoo-9/language/sk/)\n"
+"PO-Revision-Date: 2016-03-31 14:30+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Albanian (http://www.transifex.com/odoo/odoo-9/language/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sk\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Language: sq\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_slides
 #: model:mail.template,body_html:website_slides.slide_template_shared
@@ -323,12 +321,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_needaction
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_needaction
 msgid "Action Needed"
-msgstr "Potrebná akcia"
+msgstr "Veprimet e nevojshme"
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slide_detail_view
 msgid "Actions"
-msgstr "Akcie"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.slide,download_security:0
@@ -351,7 +349,7 @@ msgstr ""
 #: model:ir.ui.menu,name:website_slides.menu_action_ir_slide_category
 #: model:ir.ui.view,arch_db:website_slides.view_slide_channel_form
 msgid "Categories"
-msgstr "Kategórie"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -363,7 +361,7 @@ msgstr "Kategórie"
 #: model:ir.ui.view,arch_db:website_slides.view_slides_category_tree
 #, python-format
 msgid "Category"
-msgstr "Kategória"
+msgstr "Kategori"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_category_channel_id
@@ -371,7 +369,7 @@ msgstr "Kategória"
 #: model:ir.ui.view,arch_db:website_slides.view_slide_channel_tree
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_search
 msgid "Channel"
-msgstr "Kanál"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_group_ids
@@ -407,12 +405,12 @@ msgstr ""
 #: model:ir.ui.menu,name:website_slides.menu_action_slide_channels
 #: model:ir.ui.view,arch_db:website_slides.view_slide_channel_form
 msgid "Channels"
-msgstr "Kanály"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_datas
 msgid "Content"
-msgstr "Obsah"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -461,7 +459,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_create_uid
 #: model:ir.model.fields,field_description:website_slides.field_slide_tag_create_uid
 msgid "Created by"
-msgstr "Vytvoril"
+msgstr "Krijuar nga"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_category_create_date
@@ -470,13 +468,13 @@ msgstr "Vytvoril"
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_create_date
 #: model:ir.model.fields,field_description:website_slides.field_slide_tag_create_date
 msgid "Created on"
-msgstr "Vytvorené"
+msgstr "Krijuar me"
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel_message_last_post
 #: model:ir.model.fields,help:website_slides.field_slide_slide_message_last_post
 msgid "Date of the last message posted on the record."
-msgstr "Dátum poslednej správy zaslanej záznamu."
+msgstr "Data e mesazhit të fundit të postuar në regjistër"
 
 #. module: website_slides
 #: model:slide.channel,description:website_slides.channel_public
@@ -494,14 +492,14 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_form
 #, python-format
 msgid "Description"
-msgstr "Popis"
+msgstr "Përshkrimi"
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:72
 #, python-format
 msgid "Discard"
-msgstr "Zrušiť"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_dislikes
@@ -515,24 +513,24 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_display_name
 #: model:ir.model.fields,field_description:website_slides.field_slide_tag_display_name
 msgid "Display Name"
-msgstr "Zobraziť meno"
+msgstr "Emri i paraqitur"
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_category_sequence
 #: model:ir.model.fields,help:website_slides.field_slide_channel_sequence
 msgid "Display order"
-msgstr "Zobraziť objednávku"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_form
 #: selection:slide.slide,slide_type:0
 msgid "Document"
-msgstr "Dokument"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_document_id
 msgid "Document ID"
-msgstr "ID dokumentu"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_url
@@ -549,12 +547,12 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slides_channel_header
 msgid "Documents"
-msgstr "Dokumenty"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.embed_slide
 msgid "Download"
-msgstr "Stiahnuť"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_download_security
@@ -564,7 +562,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slide_detail_view
 msgid "Email Address"
-msgstr "Emailová adresa"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel_publish_template_id
@@ -610,12 +608,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_access_error_msg
 #: model:ir.ui.view,arch_db:website_slides.view_slide_channel_form
 msgid "Error Message"
-msgstr "Chybová správa"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.slide,download_security:0
 msgid "Everyone"
-msgstr "Každý"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
@@ -649,29 +647,29 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_follower_ids
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_follower_ids
 msgid "Followers"
-msgstr "Odberatelia"
+msgstr "Ndjekesit"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_channel_ids
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_channel_ids
 msgid "Followers (Channels)"
-msgstr "Odberatelia (Kanály)"
+msgstr "Ndjekesit (Kanalet)"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_partner_ids
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_partner_ids
 msgid "Followers (Partners)"
-msgstr "Odberatelia (Partneri)"
+msgstr "Ndjekesit (Partnerët)"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_can_see_full
 msgid "Full Access"
-msgstr "Plný prístup"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_channel_form
 msgid "General"
-msgstr "Všeobecný"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_website_config_settings_website_slide_google_app_key
@@ -686,7 +684,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_search
 msgid "Group By"
-msgstr "Zoskupiť podľa"
+msgstr "Grupo Nga"
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel_group_ids
@@ -713,18 +711,18 @@ msgstr "ID"
 #: model:ir.model.fields,help:website_slides.field_slide_channel_message_unread
 #: model:ir.model.fields,help:website_slides.field_slide_slide_message_unread
 msgid "If checked new messages require your attention."
-msgstr "Ak zaškrtnuté, nové správy vyžadujú vašu pozornosť."
+msgstr "Nëqoftëse është e çekuar mesazhet e reja kërkojnë vëmëndjen tuaj."
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel_message_needaction
 #: model:ir.model.fields,help:website_slides.field_slide_slide_message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Ak zaškrtnuté, nové správy vyžadujú vašu pozornosť."
+msgstr "Nëqoftëse është e çekuar,\n mesazhet e reja kërkojnë vëmëndjen tuaj."
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_image
 msgid "Image"
-msgstr "Obrázok"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.slide,slide_type:0
@@ -762,13 +760,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_is_follower
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_is_follower
 msgid "Is Follower"
-msgstr "Je odberateľ"
+msgstr "Eshte Ndjekës"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_last_post
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_last_post
 msgid "Last Message Date"
-msgstr "Dátum poslednej správy"
+msgstr "Data e Mesazhit të Fundit"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_category___last_update
@@ -777,7 +775,7 @@ msgstr "Dátum poslednej správy"
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide___last_update
 #: model:ir.model.fields,field_description:website_slides.field_slide_tag___last_update
 msgid "Last Modified on"
-msgstr "Posledná modifikácia"
+msgstr "Modifikimi i fundit në"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_category_write_uid
@@ -786,7 +784,7 @@ msgstr "Posledná modifikácia"
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_write_uid
 #: model:ir.model.fields,field_description:website_slides.field_slide_tag_write_uid
 msgid "Last Updated by"
-msgstr "Naposledy upravoval"
+msgstr "Modifikuar per here te fundit nga"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_category_write_date
@@ -795,7 +793,7 @@ msgstr "Naposledy upravoval"
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_write_date
 #: model:ir.model.fields,field_description:website_slides.field_slide_tag_write_date
 msgid "Last Updated on"
-msgstr "Naposledy upravované"
+msgstr "Modifikuar per here te fundit me"
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
@@ -811,7 +809,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_image_medium
 msgid "Medium"
-msgstr "Stredné"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel_access_error_msg
@@ -822,13 +820,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_ids
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_ids
 msgid "Messages"
-msgstr "Správy"
+msgstr "Mesazhet"
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel_message_ids
 #: model:ir.model.fields,help:website_slides.field_slide_slide_message_ids
 msgid "Messages and communication history"
-msgstr "Správa a história komunikácie"
+msgstr "Historiku i mesazheve dhe komunikimeve"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_mime_type
@@ -855,7 +853,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_slides.view_slide_channel_form
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_form
 msgid "Name"
-msgstr "Meno"
+msgstr "Emri"
 
 #. module: website_slides
 #: model:mail.template,subject:website_slides.slide_template_published
@@ -895,13 +893,13 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slides_grid_view
 msgid "Not Published"
-msgstr "Nepublikované"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_needaction_counter
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_needaction_counter
 msgid "Number of Actions"
-msgstr "Počet akcií"
+msgstr "Numri i Veprimeve"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_category_nbr_documents
@@ -931,13 +929,13 @@ msgstr ""
 #: model:ir.model.fields,help:website_slides.field_slide_channel_message_needaction_counter
 #: model:ir.model.fields,help:website_slides.field_slide_slide_message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr "Počet správ ktoré vyžadujú akciu"
+msgstr "Numri i mesazheve që kërkojnë një veprim"
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel_message_unread_counter
 #: model:ir.model.fields,help:website_slides.field_slide_slide_message_unread_counter
 msgid "Number of unread messages"
-msgstr "Počet neprečítaných správ"
+msgstr "Numri i mesazheve të palexuara"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_3
@@ -1058,7 +1056,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slide_detail_view
 msgid "Post"
-msgstr "Zverejniť"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slide_detail_view
@@ -1099,7 +1097,7 @@ msgstr ""
 #. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Public"
-msgstr "Verejný"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.channel,name:website_slides.channel_public
@@ -1114,7 +1112,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_search
 msgid "Published"
-msgstr "Publikovaný"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_publish_template_id
@@ -1168,7 +1166,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_channel_form
 msgid "Security"
-msgstr "Bezpečnosť"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.channels
@@ -1184,7 +1182,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_category_sequence
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_sequence
 msgid "Sequence"
-msgstr "Postupnosť"
+msgstr "Sekuencë"
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slide_social_media
@@ -1240,7 +1238,7 @@ msgstr ""
 #: model:ir.ui.menu,name:website_slides.submenu_action_slides_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_tree
 msgid "Slides"
-msgstr "Strany prezentácie"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_category
@@ -1255,7 +1253,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_tag_form
 msgid "Tag"
-msgstr "Menovka"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -1267,23 +1265,23 @@ msgstr "Menovka"
 #: model:ir.ui.view,arch_db:website_slides.view_slide_tag_tree
 #, python-format
 msgid "Tags"
-msgstr "Popisky"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_form
 msgid "Tags..."
-msgstr "Menovky..."
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.home
 msgid "The"
-msgstr " "
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel_website_url
 #: model:ir.model.fields,help:website_slides.field_slide_slide_website_url
 msgid "The full URL to access the document through the website."
-msgstr "Plné URL pre prístup do dokumentu cez webstránku."
+msgstr ""
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_4
@@ -1329,7 +1327,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_image_thumb
 msgid "Thumbnail"
-msgstr "MIniatúra"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -1338,13 +1336,13 @@ msgstr "MIniatúra"
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_name
 #, python-format
 msgid "Title"
-msgstr "Titul"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_category_total
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_total
 msgid "Total"
-msgstr "Celkom"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_total_views
@@ -1360,13 +1358,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_slide_type
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_search
 msgid "Type"
-msgstr "Typ"
+msgstr "Tipi"
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:140
 #, python-format
 msgid "Uncategorized"
-msgstr "Nekategorizované"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.home
@@ -1383,13 +1381,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_unread
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_unread
 msgid "Unread Messages"
-msgstr "Neprečítané správy"
+msgstr "Mesazhe të Palexuara"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_message_unread_counter
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_message_unread_counter
 msgid "Unread Messages Counter"
-msgstr "Počítadlo neprečítaných správ"
+msgstr "Numëruesi i Mesazheve të Palexuara"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_upload_group_ids
@@ -1431,7 +1429,7 @@ msgstr ""
 #. module: website_slides
 #: selection:slide.slide,slide_type:0
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slides_channel_header
@@ -1442,7 +1440,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_slides.slide_detail_view
 #: model:ir.ui.view,arch_db:website_slides.slides_grid_view
 msgid "Views"
-msgstr "Pohľady"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.related_slides
@@ -1452,13 +1450,13 @@ msgstr ""
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_visibility
 msgid "Visibility"
-msgstr "Viditeľnosť"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_website_published
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_website_published
 msgid "Visible in Website"
-msgstr "Viditeľné na webstránke"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_search
@@ -1468,13 +1466,13 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_slide_slide_form
 msgid "Website"
-msgstr "Webová stránka"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_website_message_ids
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_website_message_ids
 msgid "Website Messages"
-msgstr "Správy webovej stránky"
+msgstr "Mesazhe të Website-it"
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.view_website_config_settings
@@ -1485,31 +1483,31 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_website_url
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_website_url
 msgid "Website URL"
-msgstr "URL webstránky"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel_website_message_ids
 #: model:ir.model.fields,help:website_slides.field_slide_slide_website_message_ids
 msgid "Website communication history"
-msgstr "História komunikácie webovej stránky"
+msgstr "Historiku i Komunikimeve të Website-it"
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_website_meta_description
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_website_meta_description
 msgid "Website meta description"
-msgstr "Website meta popis"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_website_meta_keywords
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_website_meta_keywords
 msgid "Website meta keywords"
-msgstr "Website meta kľúčové slová"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model.fields,field_description:website_slides.field_slide_channel_website_meta_title
 #: model:ir.model.fields,field_description:website_slides.field_slide_slide_website_meta_title
 msgid "Website meta title"
-msgstr "Website meta názov"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slide_detail_view
@@ -1533,7 +1531,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slide_detail_view
 msgid "Your Name"
-msgstr "Vaše meno"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -1589,14 +1587,14 @@ msgstr ""
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slide_detail_view
 msgid "on"
-msgstr "na"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:70
 #, python-format
 msgid "or"
-msgstr "alebo"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slides_search
@@ -1621,7 +1619,7 @@ msgstr ""
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_website_config_settings
 msgid "website.config.settings"
-msgstr "website.config.settings"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.ui.view,arch_db:website_slides.slide_social_email
