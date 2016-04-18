@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Antiun Ingenieria S.L. - Antonio Espinosa
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+
+<record id="view_company_form" model="ir.ui.view">
+    <field name="name">Add partner_ref_unique field</field>
+    <field name="model">res.company</field>
+    <field name="inherit_id" ref="base.view_company_form"/>
+    <field name="arch" type="xml">
+        <page string="Configuration" position="inside">
+            <group>
+                <group name="partner" string="Partners">
+                    <field name="partner_ref_unique"/>
+                </group>
+            </group>
+        </page>
+    </field>
+</record>
+
+</data>
+</openerp>
