@@ -80,6 +80,7 @@ Contributors
 * Rafael Blasco <rafabn@antiun.com>
 * Antonio Espinosa <antonioea@antiun.com>
 * Igor Pastor <igorpg@antiun.com>
+* Dave Lasley <dave@laslabs.com>
 
 Maintainer
 ----------
