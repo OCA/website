@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+<odoo>
 
 <!-- Add legal advice after copyright and company name -->
 <template id="legal_advice_link"
@@ -85,5 +84,4 @@
   </t>
 </template>
 
-</data>
-</openerp>
+</odoo>
