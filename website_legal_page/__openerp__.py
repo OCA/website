@@ -23,7 +23,7 @@
 {
     'name': "Website legal page",
     'category': 'Website',
-    'version': '8.0.1.0.0',
+    'version': '9.0.1.0.0',
     'depends': [
         'website',
     ],
@@ -38,5 +38,5 @@
     'license': 'AGPL-3',
     'demo': [],
     'test': [],
-    'installable': False,
+    'installable': True,
 }
