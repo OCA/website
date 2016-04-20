@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+<odoo>
 
 <!-- Base templates for submodules -->
 <template id="acceptance_full">
@@ -9,5 +8,4 @@
     <a href="/page/terms">terms of use</a> of this website.
 </template>
 
-</data>
-</openerp>
+</odoo>
