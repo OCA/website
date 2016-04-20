@@ -38,6 +38,7 @@ Contributors
 ------------
 
 * Lorenzo Battistini <lorenzo.battistini@agilebg.com>
+* Dave Lasley <dave@laslabs.com>
 
 Maintainer
 ----------
