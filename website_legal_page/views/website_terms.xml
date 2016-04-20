@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+<odoo>
 
 <!-- Add terms of use after copyright and company name -->
 <template id="terms_of_use_link"
@@ -211,5 +210,4 @@
   </t>
 </template>
 
-</data>
-</openerp>
+</odoo>
