@@ -11,7 +11,7 @@ from ..utils import validate_phonenumber
 
 
 FIELDS_LABELS = {
-    'name': _(u'Name'),
+    'name': _(u'Fullname'),
     'phone': _(u'Phone'),
     'email': _(u'Email'),
     'street2': _(u'Street'),
@@ -22,7 +22,7 @@ FIELDS_LABELS = {
     'state_id': _(u'State / Province'),
     'vat': _(u'VAT Number'),
     # shipping
-    'shipping_name': _(u'Name (Shipping)'),
+    'shipping_name': _(u'Fullname (Shipping)'),
     'shipping_phone': _(u'Phone'),
     'shipping_email': _(u'Email'),
     'shipping_street2': _(u'Street'),

@@ -142,14 +142,14 @@ msgstr "I Miei Ordini"
 #. module: website_sale_customer
 #: code:addons/website_sale_customer/controllers/account.py:13
 #, python-format
-msgid "Name"
-msgstr "Nome"
+msgid "Fullname"
+msgstr "Nome e Cognome"
 
 #. module: website_sale_customer
 #: code:addons/website_sale_customer/controllers/account.py:24
 #, python-format
-msgid "Name (Shipping)"
-msgstr "Nome (Spedizione)"
+msgid "Fullname (Shipping)"
+msgstr "Nome e Cognome (Spedizione)"
 
 #. module: website_sale_customer
 #: view:website:website_sale_customer.orders_followup
