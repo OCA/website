@@ -66,7 +66,7 @@
 </template>
 
 <!-- Option: left column: World Map -->
-<template id="opt_country" inherit_id="website_supplier.index" customize_show="True" name="Show Map">
+<template id="opt_country" inherit_id="website_supplier_list.index" customize_show="True" name="Show Map">
     <xpath expr="//div[@id='ref_left_column']" position="inside">
         <!-- modal for large map -->
         <div class="modal fade customer_map_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -90,7 +90,7 @@
     </xpath>
 </template>
 
-<template id="opt_country_list" inherit_id="website_supplier.index" customize_show="True" name="Filter on Countries">
+<template id="opt_country_list" inherit_id="website_supplier_list.index" customize_show="True" name="Filter on Countries">
     <xpath expr="//div[@id='ref_left_column']" position="inside">
         <h3>References by Country</h3>
         <ul class="nav nav-pills nav-stacked mt16 mb32">
@@ -123,10 +123,10 @@
                 </div>
                 <t t-call="website_partner.partner_detail">
                     <t t-set="left_column">
-                        <div id="left_column"><t t-call="website_supplier.implemented_by_block"/></div>
+                        <div id="left_column"><t t-call="website_supplier_list.implemented_by_block"/></div>
                     </t>
                     <t t-set="right_column">
-                        <div id="right_column"><t t-call="website_supplier.references_block"/></div>
+                        <div id="right_column"><t t-call="website_supplier_list.references_block"/></div>
                     </t>
                 </t>
             </div>
@@ -138,8 +138,8 @@
 
 <template id="partner_details" inherit_id="website_partner.partner_page" name="Partner Detail Columns">
  <xpath expr="//t[@t-call='website_partner.partner_detail']" position="inside">
-    <t t-set="left_column"><div id="left_column"><t t-call="website_supplier.implemented_by_block"/></div></t>
-    <t t-set="right_column"><div id="right_column"><t t-call="website_supplier.references_block"/></div></t>
+    <t t-set="left_column"><div id="left_column"><t t-call="website_supplier_list.implemented_by_block"/></div></t>
+    <t t-set="right_column"><div id="right_column"><t t-call="website_supplier_list.references_block"/></div></t>
  </xpath>
 </template>
 
