@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2016-03-19 09:33+0000\n"
+"POT-Creation-Date: 2016-04-14 08:43+0000\n"
+"PO-Revision-Date: 2016-04-30 19:54+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -60,12 +60,12 @@ msgstr "Lorem ipsum"
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna."
-msgstr ""
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets
 msgid "Marginless Gallery"
-msgstr ""
+msgstr "Galleria senza margini"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets
@@ -79,4 +79,4 @@ msgid ""
 "            .carousel,\n"
 "            .parallax,\n"
 "            .marginless-gallery .img"
-msgstr ""
+msgstr "section,\n.carousel,\n.parallax,\n.marginless-gallery .img"

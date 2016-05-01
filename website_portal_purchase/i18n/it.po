@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2016-03-13 17:15+0000\n"
+"POT-Creation-Date: 2016-04-14 08:43+0000\n"
+"PO-Revision-Date: 2016-04-27 19:57+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -227,7 +227,7 @@ msgstr "I tuoi Ordini"
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations
 msgid "Your Request Quotations"
-msgstr ""
+msgstr "Le tue Richieste di Preventivo"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup

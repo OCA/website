@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2016-03-19 12:44+0000\n"
+"POT-Creation-Date: 2016-04-14 08:43+0000\n"
+"PO-Revision-Date: 2016-04-27 19:51+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -152,7 +152,7 @@ msgstr ""
 #: model:slide.channel,access_error_msg:website_slides.channel_public
 msgid ""
 "<p>This channel is private and its content is restricted to some users.</p>"
-msgstr ""
+msgstr "<p>Questo canale è privato e l'accesso ai contenuti è consentito ad alcuni utenti soltanto.</p>"
 
 #. module: website_slides
 #: model:slide.channel,description:website_slides.channel_private
@@ -1288,7 +1288,7 @@ msgstr "Messaggi non letti"
 #: view:website:website_slides.home
 #: view:website:website_slides.slides_channel_header
 msgid "Upload"
-msgstr ""
+msgstr "Carica"
 
 #. module: website_slides
 #: field:slide.channel,upload_group_ids:0

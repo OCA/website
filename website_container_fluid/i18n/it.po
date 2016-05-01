@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-12 16:06+0000\n"
+"POT-Creation-Date: 2016-04-14 08:43+0000\n"
+"PO-Revision-Date: 2016-04-30 19:54+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +67,7 @@ msgstr "Tipo di larghezza del contenitore"
 #. module: website_container_fluid
 #: model:website.menu,name:website_container_fluid.demo_page_link
 msgid "Container width type demo"
-msgstr ""
+msgstr "Demo tipo di larghezza del contenitore"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -143,7 +144,7 @@ msgstr "Le nostre referenze"
 #. module: website_container_fluid
 #: view:website:website.snippet_options
 msgid "Responsive"
-msgstr ""
+msgstr "Responsive"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -158,12 +159,12 @@ msgstr ""
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "These are responsive containers"
-msgstr ""
+msgstr "Questi sono container responsive"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "They have a fixed width depending on the screen size"
-msgstr ""
+msgstr "Hanno una larghezza fissa in base alla dimensione dello schermo"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page

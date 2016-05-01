@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2016-03-19 09:39+0000\n"
+"POT-Creation-Date: 2016-04-14 08:43+0000\n"
+"PO-Revision-Date: 2016-04-27 19:52+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -49,4 +50,4 @@ msgstr "Sito"
 #: view:website:website_analytics_piwik.view_website_form
 #: view:website.config.settings:website_analytics_piwik.view_website_config_settings
 msgid "host.name/piwik"
-msgstr ""
+msgstr "host.name/piwik"
