@@ -17,4 +17,7 @@
     "data": [
         "views/assets.xml",
     ],
+    "demo": [
+        "demo/pages.xml",
+    ],
 }
