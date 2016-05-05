@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Antiun Ingeniería S.L. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+<template id="assets_frontend"
+          name="Module name frontend assets"
+          inherit_id="website.assets_frontend">
+    <xpath expr=".">
+        <script type="text/javascript"
+                src="/website_anchor_smooth_scroll/static/src/js/website_anchor_smooth_scroll.js"/>
+    </xpath>
+</template>
+
+</data>
+</openerp>
