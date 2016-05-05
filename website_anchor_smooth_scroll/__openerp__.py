@@ -7,7 +7,9 @@
     "version": "8.0.1.0.0",
     "category": "Website",
     "website": "http://www.antiun.com",
-    "author": "Antiun Ingeniería S.L., Odoo Community Association (OCA)",
+    "author": "Antiun Ingeniería S.L., "
+              "Tecnativa, "
+              "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
