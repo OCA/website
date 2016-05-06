@@ -18,6 +18,7 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [website_analytics_piwik](website_analytics_piwik/) | 8.0.1.0.0 | Track website users using piwik
+[website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 8.0.1.0.0 | When user clicks a link to scroll, the scroll is animated
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 | Add Facebook comments on blog posts
 [website_blog_mgmt](website_blog_mgmt/) | 8.0.1.0.0 | Website blog Management
