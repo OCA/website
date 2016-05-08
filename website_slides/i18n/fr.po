@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 10:22+0000\n"
-"PO-Revision-Date: 2015-11-13 14:53+0000\n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"PO-Revision-Date: 2016-05-06 08:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -183,6 +183,16 @@ msgid "Authentified Users Only"
 msgstr ""
 
 #. module: website_slides
+#: field:slide.channel,can_see:0
+msgid "Can See"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,can_upload:0
+msgid "Can Upload"
+msgstr ""
+
+#. module: website_slides
 #: model:ir.actions.act_window,name:website_slides.action_ir_slide_category
 #: model:ir.ui.menu,name:website_slides.menu_action_ir_slide_category
 #: view:slide.channel:website_slides.view_slide_channel_form
@@ -301,14 +311,14 @@ msgstr ""
 #: field:slide.embed,create_uid:0 field:slide.slide,create_uid:0
 #: field:slide.tag,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Créer par"
 
 #. module: website_slides
 #: field:slide.category,create_date:0 field:slide.channel,create_date:0
 #: field:slide.embed,create_date:0 field:slide.slide,create_date:0
 #: field:slide.tag,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
 
 #. module: website_slides
 #: help:slide.channel,message_last_post:0 help:slide.slide,message_last_post:0
@@ -334,9 +344,21 @@ msgid "Discard"
 msgstr ""
 
 #. module: website_slides
+#: model:slide.slide,name:website_slides.slide_5
+msgid "Discover Odoo Point Of Sale - For Shops and Restaurants"
+msgstr ""
+
+#. module: website_slides
 #: field:slide.slide,dislikes:0 view:website:website_slides.slide_detail_view
 msgid "Dislikes"
 msgstr ""
+
+#. module: website_slides
+#: field:slide.category,display_name:0 field:slide.channel,display_name:0
+#: field:slide.embed,display_name:0 field:slide.slide,display_name:0
+#: field:slide.tag,display_name:0 field:website.published.mixin,display_name:0
+msgid "Display Name"
+msgstr "Nom affiché"
 
 #. module: website_slides
 #: help:slide.category,sequence:0 help:slide.channel,sequence:0
@@ -404,6 +426,11 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Embed"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,embed_code:0
+msgid "Embed Code"
 msgstr ""
 
 #. module: website_slides
@@ -497,6 +524,11 @@ msgid "Followers"
 msgstr ""
 
 #. module: website_slides
+#: field:slide.channel,can_see_full:0
+msgid "Full Access"
+msgstr ""
+
+#. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "General"
 msgstr ""
@@ -550,7 +582,7 @@ msgstr ""
 #: field:slide.slide,id:0 field:slide.tag,id:0
 #: field:website.published.mixin,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: website_slides
 #: help:slide.channel,message_unread:0 help:slide.slide,message_unread:0
@@ -612,18 +644,26 @@ msgid "Last Message Date"
 msgstr ""
 
 #. module: website_slides
+#: field:slide.category,__last_update:0 field:slide.channel,__last_update:0
+#: field:slide.embed,__last_update:0 field:slide.slide,__last_update:0
+#: field:slide.tag,__last_update:0
+#: field:website.published.mixin,__last_update:0
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: website_slides
 #: field:slide.category,write_uid:0 field:slide.channel,write_uid:0
 #: field:slide.embed,write_uid:0 field:slide.slide,write_uid:0
 #: field:slide.tag,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Dernière modification par"
 
 #. module: website_slides
 #: field:slide.category,write_date:0 field:slide.channel,write_date:0
 #: field:slide.embed,write_date:0 field:slide.slide,write_date:0
 #: field:slide.tag,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Dernière modification le"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
@@ -829,6 +869,14 @@ msgid ""
 msgstr ""
 
 #. module: website_slides
+#: model:slide.slide,description:website_slides.slide_5
+msgid ""
+"Odoo's online Point of Sale software for restaurants and shops is based on a smart interface that any retail company can use without difficulty. The POS can be used online or offline and iPads, Android tablets or laptops. \n"
+"\n"
+"More info - https://www.odoo.com/page/point-of-sale"
+msgstr ""
+
+#. module: website_slides
 #: model:slide.slide,name:website_slides.slide_9
 msgid "Open Days 2014 Infographic"
 msgstr ""
@@ -836,11 +884,6 @@ msgstr ""
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_1
 msgid "Open Source Website Builder and eCommerce: OpenERP"
-msgstr ""
-
-#. module: website_slides
-#: model:slide.slide,name:website_slides.slide_5
-msgid "OpenERP POS Indiegogo Campaign"
 msgstr ""
 
 #. module: website_slides
@@ -1179,14 +1222,6 @@ msgid ""
 "The open source OpenERP Promote tool suggests keywords according to Google most searched terms. Search Engine Optimization tools are ready to use, with no configuration required.\n"
 "\n"
 "Online demo and download: http://openerp.com"
-msgstr ""
-
-#. module: website_slides
-#: model:slide.slide,description:website_slides.slide_5
-msgid ""
-"The presentation video for our OpenSource Pos Hardware  campaign at indiegogo: \n"
-"\n"
-"https://www.indiegogo.com/projects/opensource-your-shop/"
 msgstr ""
 
 #. module: website_slides

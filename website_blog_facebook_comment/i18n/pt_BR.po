@@ -4,11 +4,12 @@
 # 
 # Translators:
 # danimaribeiro <danimaribeiro@gmail.com>, 2016
+# danimaribeiro <danimaribeiro@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
 "PO-Revision-Date: 2016-03-05 18:12+0000\n"
 "Last-Translator: danimaribeiro <danimaribeiro@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-website-8-0/language/pt_BR/)\n"
@@ -20,6 +21,7 @@ msgstr ""
 
 #. module: website_blog_facebook_comment
 #: field:website,facebook_appid:0
+#: field:website.config.settings,facebook_appid:0
 msgid "Facebook AppID"
 msgstr "Id de App Facebook"
 
@@ -30,6 +32,7 @@ msgstr "Api de comentários do facebook"
 
 #. module: website_blog_facebook_comment
 #: field:website,facebook_numposts:0
+#: field:website.config.settings,facebook_numposts:0
 msgid "Number of Posts"
 msgstr "Número de posts"
 
