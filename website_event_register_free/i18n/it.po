@@ -4,11 +4,12 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
 "PO-Revision-Date: 2016-03-11 09:09+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
@@ -29,12 +30,12 @@ msgid "Event Registration"
 msgstr "Registrazione evento"
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 msgid "Free"
 msgstr "Gratis"
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 msgid "No seats available"
 msgstr "Non ci sono posti disponibili"
 
@@ -44,7 +45,7 @@ msgid "Phone"
 msgstr "Telefono"
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 #: view:website:website_event_register_free.partner_register_form
 msgid "Quantity"
 msgstr "Quantità"
@@ -55,7 +56,7 @@ msgid "Register"
 msgstr "Registra"
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 msgid "Register Now"
 msgstr "Registra Ora"
 
@@ -70,7 +71,7 @@ msgid "Thank you"
 msgstr "Grazie"
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 msgid "Ticket Type"
 msgstr "Tipo di biglietto"
 

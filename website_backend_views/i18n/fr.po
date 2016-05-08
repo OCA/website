@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-03 23:14+0000\n"
-"PO-Revision-Date: 2015-10-01 21:52+0000\n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"PO-Revision-Date: 2016-05-06 08:55+0000\n"
 "Last-Translator: Loic <loic.richard2@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -33,22 +33,22 @@ msgstr "En dessous vous devrez voir un formulaire de modification pour votre par
 #. module: website_backend_views
 #: field:website.qweb,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Créer par"
 
 #. module: website_backend_views
 #: field:website.qweb,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
 
 #. module: website_backend_views
 #: field:website.qweb,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Dernière modification par"
 
 #. module: website_backend_views
 #: field:website.qweb,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Dernière modification le"
 
 #. module: website_backend_views
 #: code:addons/website_backend_views/controllers/demo.py:29

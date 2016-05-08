@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-05 01:59+0000\n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
 "PO-Revision-Date: 2015-09-25 08:27+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/oca/OCA-website-8-0/language/nl_NL/)\n"
@@ -28,12 +28,12 @@ msgid "Event Registration"
 msgstr ""
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 msgid "Free"
 msgstr ""
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 msgid "No seats available"
 msgstr ""
 
@@ -43,7 +43,7 @@ msgid "Phone"
 msgstr "Telefoon"
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 #: view:website:website_event_register_free.partner_register_form
 msgid "Quantity"
 msgstr "Aantal"
@@ -54,7 +54,7 @@ msgid "Register"
 msgstr ""
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 msgid "Register Now"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgid "Thank you"
 msgstr ""
 
 #. module: website_event_register_free
-#: view:website:website_event.event_description_full
+#: view:website:website_event_register_free.free_registration_form
 msgid "Ticket Type"
 msgstr ""
 
