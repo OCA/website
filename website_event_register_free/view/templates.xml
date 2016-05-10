@@ -11,6 +11,7 @@
             <form
                 t-attf-action="/event/#{event.id}/register/register_free"
                 method="post"
+                class="table-responsive"
                 t-if="not hasattr(event, 'event_ticket_ids') or
                       not event.event_ticket_ids">
                 <table class="table table-striped">
