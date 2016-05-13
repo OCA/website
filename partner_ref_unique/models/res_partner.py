@@ -25,7 +25,10 @@ class ResPartner(models.Model):
                 if mode == 'companies':
                     domain.append(('is_company', '=', True))
                 other = self.search(domain)
-                if other:
+
+                # active_test is False when called from
+                # base.partner.merge.automatic.wizard
+                if other and self.env.context.get("active_test", True):
                     raise ValidationError(
                         _("This reference is equal to partner '%s'") %
                         other[0].display_name)
