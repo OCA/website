@@ -28,6 +28,12 @@ env:
   - TESTS="1" ODOO_REPO="OCA/OCB" INCLUDE="website_signup_legal_page_required"
   - TRANSIFEX="1"
 
+  # Module website_seo_redirection intercepts any HTTP request, so if you see
+  # some abnormal behavior in your controllers and suspect this is the guilty
+  # module, just enable these 2 lines below to check that.
+  # - TESTS="1" ODOO_REPO="odoo/odoo" EXCLUDE="website_seo_redirection"
+  # - TESTS="1" ODOO_REPO="OCA/OCB" EXCLUDE="website_seo_redirection"
+
 virtualenv:
   system_site_packages: true
 
