@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_seo_redirection
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-23 12:19+0200\n"
+"PO-Revision-Date: 2016-05-23 12:22+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: \n"
+"Language: es_ES\n"
+
+#. module: website_seo_redirection
+#: view:website:website_seo_redirection.sample_page
+msgid ", but"
+msgstr ", pero"
+
+#. module: website_seo_redirection
+#: view:website:website_seo_redirection.sample_page
+msgid "/page/website_seo_redirection.sample_page"
+msgstr "/page/website_seo_redirection.sample_page"
+
+#. module: website_seo_redirection
+#: view:website:website_seo_redirection.sample_page
+msgid "/seo/sample"
+msgstr "/seo/sample"
+
+#. module: website_seo_redirection
+#: field:website.seo.redirection,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: website_seo_redirection
+#: field:website.seo.redirection,create_date:0
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: website_seo_redirection
+#: field:website.seo.redirection,display_name:0
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: website_seo_redirection
+#: sql_constraint:website.seo.redirection:0
+msgid "Duplicated new URL"
+msgstr "Nueva URL duplicada"
+
+#. module: website_seo_redirection
+#: sql_constraint:website.seo.redirection:0
+msgid "Duplicated original URL"
+msgstr "URL original duplicada"
+
+#. module: website_seo_redirection
+#: model:ir.model,name:website_seo_redirection.model_ir_http
+msgid "HTTP routing"
+msgstr "Enrutamiento HTTP"
+
+#. module: website_seo_redirection
+#: field:website.seo.redirection,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: website_seo_redirection
+#: field:website.seo.redirection,__last_update:0
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: website_seo_redirection
+#: field:website.seo.redirection,write_uid:0
+msgid "Last Updated by"
+msgstr "Última modificación por"
+
+#. module: website_seo_redirection
+#: field:website.seo.redirection,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: website_seo_redirection
+#: model:ir.model,name:website_seo_redirection.model_ir_module_module
+msgid "Module"
+msgstr "Módulo"
+
+#. module: website_seo_redirection
+#: model:website.menu,name:website_seo_redirection.sample_origin_menu
+#: field:website.seo.redirection,origin:0
+msgid "Original URL"
+msgstr "URL original"
+
+#. module: website_seo_redirection
+#: help:website.seo.redirection,destination:0
+msgid "Path where the controller will be found now."
+msgstr "Ruta donde el controlador se encontrará ahora."
+
+#. module: website_seo_redirection
+#: help:website.seo.redirection,origin:0
+msgid "Path where the original controller was found."
+msgstr "Ruta donde se encontraba el controlador original."
+
+#. module: website_seo_redirection
+#: model:website.menu,name:website_seo_redirection.sample_destination_menu
+#: field:website.seo.redirection,destination:0
+msgid "Redirected URL"
+msgstr "URL redireccionada"
+
+#. module: website_seo_redirection
+#: model:ir.actions.act_window,name:website_seo_redirection.website_seo_redirection_action_open
+#: model:ir.ui.menu,name:website_seo_redirection.website_seo_redirection_menu
+msgid "SEO Redirections"
+msgstr "Redirecciones SEO"
+
+#. module: website_seo_redirection
+#: model:website.menu,name:website_seo_redirection.sample_menu
+msgid "SEO Sample"
+msgstr "Muestra SEO"
+
+#. module: website_seo_redirection
+#: model:ir.model,name:website_seo_redirection.model_website_seo_redirection
+msgid "SEO controller redirections"
+msgstr "Redirecciones de controladores SEO"
+
+#. module: website_seo_redirection
+#: view:website:website_seo_redirection.sample_page
+msgid "The original URL for this page is"
+msgstr "La URL original para esta página es"
+
+#. module: website_seo_redirection
+#: view:website:website_seo_redirection.sample_page
+msgid "Welcome, this is SEO."
+msgstr "Bienvenido, esto es SEO."
+
+#. module: website_seo_redirection
+#: view:website:website_seo_redirection.sample_page
+msgid "is beautier, right?"
+msgstr "es más bonita, ¿verdad?"
