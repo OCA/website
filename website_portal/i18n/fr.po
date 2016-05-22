@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"POT-Creation-Date: 2016-05-15 21:08+0000\n"
 "PO-Revision-Date: 2015-09-30 14:33+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
@@ -86,7 +86,7 @@ msgstr ""
 #. module: website_portal
 #: view:website:website.layout view:website:website_portal.details
 msgid "My Account"
-msgstr ""
+msgstr "Mon compte"
 
 #. module: website_portal
 #: view:website:website_portal.details
