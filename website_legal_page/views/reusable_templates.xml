@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Base templates for submodules -->
+<template id="acceptance_full">
+    I accept the <a href="/page/legal">legal advice</a>, the
+    <a href="/page/privacy">privacy policy</a>, and the
+    <a href="/page/terms">terms of use</a> of this website.
+</template>
+
+</odoo>
