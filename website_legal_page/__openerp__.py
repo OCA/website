@@ -18,6 +18,7 @@
         'views/website_terms.xml',
     ],
     'author': 'Antiun Ingeniería S.L., '
+              'Tecnativa, '
               'LasLabs Inc, '
               'Odoo Community Association (OCA)',
     'website': 'http://www.antiun.com',
