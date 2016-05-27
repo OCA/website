@@ -6,11 +6,8 @@
 {
     'name': 'Website Portal for Purchases',
     'category': 'Website',
-    'summary': (
-        'Add your purchase document in the frontend portal (purchase order'
-        ', request for quotations, supplier invoices)'
-    ),
-    'version': '8.0.1.0.0',
+    'summary': "Add your supplier's purchase documents in the frontend portal",
+    'version': '9.0.1.0.0',
     'depends': [
         'auth_supplier',
         'purchase',
