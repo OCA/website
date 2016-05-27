@@ -18,6 +18,7 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 | Website blog Management
+[website_legal_page](website_legal_page/) | 9.0.1.0.0 | Website Legal Page
 
 Unported addons
 ---------------
@@ -32,7 +33,6 @@ addon | version | summary
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 (unported) | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 (unported) | Combine free and paid tickets on events
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
-[website_legal_page](website_legal_page/) | 8.0.1.0.0 (unported) | Website legal page
 [website_logo](website_logo/) | 8.0.1.0.0 (unported) | Website company logo
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 (unported) | Website Menu Multilanguage
