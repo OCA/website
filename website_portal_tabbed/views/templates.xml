@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+<template id="account" inherit_id="website_portal.account" primary="True" priority="10">
+    <xpath expr="//div[@class='oe_structure'][1]" position="after">
+        <ul name="account-content-nav" class="nav nav-tabs">
+            <li t-att-class="not request.env.user.partner_id.supplier and 'active'">
+                <a href="#home_sale" data-toggle="tab">
+                    Customer Documents
+                </a>
+            </li>
+            <li t-att-class="not request.env.user.partner_id.supplier and 'active'">
+                <a href="#home_purchase" data-toggle="tab">
+                    Supplier Documents
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content" name="account-content">
+            <!-- These t-calls were defined in website_portal_sale.account -->
+            <div id="home_sale" class="tab-pane fade">
+                <t t-call="website_portal_sale.quotations" />
+                <t t-call="website_portal_sale.sale_orders" />
+                <t t-call="website_portal_sale.invoices" />
+            </div>
+
+            <!-- Module website_portal_purchase requires this id somewhere -->
+            <div id="home_purchase" class="tab-pane fade"/>
+        </div>
+    </xpath>
+</template>
+
+<template id="account_sale"
+          inherit_id="website_portal_sale.account"
+          primary="True"/>
+
+<template id="account_purchase"
+          inherit_id="website_portal_purchase.account"
+          primary="True"/>
+
+</odoo>
