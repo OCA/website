@@ -10,27 +10,11 @@ class MassMailingPartner(MassMailController):
     @route()
     def subscribe(self, list_id, email, **post):
         """Handle name if provided."""
-        result = super(MassMailingPartner, self).subscribe(
-            list_id, email, **post)
+        Partner = request.env["res.partner"].sudo()
         name = post.get("name")
-        if name:
-            Contact = request.env["mail.mass_mailing.contact"].sudo()
-            Partner = request.env["res.partner"].sudo()
-            contacts = Contact.search([
-                ("email", "=ilike", email),
-                ("list_id", "=", int(list_id)),
-                ("opt_out", "=", False),
-            ])
-            partner = Partner.search(
-                [("email", "=ilike", email), ("name", "=ilike", name)],
-                limit=1)
-            if not partner:
-                partner = Partner.create({
-                    "name": name,
-                    "email": email,
-                })
-            partner.opt_out = True
-            contacts.write({
-                "partner_id": partner.id,
-            })
-        return result
+
+        # Update partner's name, to make it get updated in contact list later
+        Partner.search([("email", "=", email)], limit=1).write({"name": name})
+
+        return super(MassMailingPartner, self).subscribe(
+            list_id, email, **post)
