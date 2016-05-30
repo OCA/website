@@ -4,7 +4,7 @@ from openerp.http import request
 from openerp import tools
 from openerp.tools.translate import _
 
-from odoo.fields import Date
+from openerp.fields import Date
 
 
 class website_account(http.Controller):
@@ -26,7 +26,8 @@ class website_account(http.Controller):
         }
         return values
 
-    def _get_archive_groups(self, model, domain=None, fields=None, groupby="create_date", order="create_date desc"):
+    def _get_archive_groups(self, model, domain=None, fields=None,
+                            groupby="create_date", order="create_date desc"):
         if not model:
             return []
         if domain is None:
@@ -34,7 +35,8 @@ class website_account(http.Controller):
         if fields is None:
             fields = ['name', 'create_date']
         groups = []
-        for group in request.env[model]._read_group_raw(domain, fields=fields, groupby=groupby, orderby=order):
+        for group in request.env[model]._read_group_raw(
+                domain, fields=fields, groupby=groupby, orderby=order):
             dates, label = group[groupby]
             date_begin, date_end = dates.split('/')
             groups.append({
@@ -48,7 +50,8 @@ class website_account(http.Controller):
     @http.route(['/my', '/my/home'], type='http', auth="public", website=True)
     def account(self):
         values = self._prepare_portal_layout_values()
-        return request.website.render("website_portal.portal_my_home", values)
+        return request.website.render(
+            "website_portal_v10.portal_my_home", values)
 
     @http.route(['/my/account'], type='http', auth='user', website=True)
     def details(self, redirect=None, **post):
@@ -80,13 +83,14 @@ class website_account(http.Controller):
             'redirect': redirect,
         })
 
-        return request.website.render("website_portal.details", values)
+        return request.website.render("website_portal_v10.details", values)
 
     def details_form_validate(self, data):
         error = dict()
         error_message = []
 
-        mandatory_billing_fields = ["name", "phone", "email", "street2", "city", "country_id"]
+        mandatory_billing_fields = [
+            "name", "phone", "email", "street2", "city", "country_id"]
 
         # Validation
         for field_name in mandatory_billing_fields:
@@ -94,19 +98,23 @@ class website_account(http.Controller):
                 error[field_name] = 'missing'
 
         # email validation
-        if data.get('email') and not tools.single_email_re.match(data.get('email')):
+        if data.get('email') and not tools.single_email_re.match(
+                data.get('email')):
             error["email"] = 'error'
-            error_message.append(_('Invalid Email! Please enter a valid email address.'))
+            error_message.append(
+                _('Invalid Email! Please enter a valid email address.'))
 
         # vat validation
-        if data.get("vat") and hasattr(request.env["res.partner"], "check_vat"):
+        if data.get("vat") and hasattr(request.env["res.partner"],
+                                       "check_vat"):
             if request.website.company_id.vat_check_vies:
                 # force full VIES online check
                 check_func = request.env["res.partner"].vies_vat_check
             else:
                 # quick and partial off-line checksum validation
                 check_func = request.env["res.partner"].simple_vat_check
-            vat_country, vat_number = request.env["res.partner"]._split_vat(data.get("vat"))
+            vat_country, vat_number = request.env["res.partner"]._split_vat(
+                data.get("vat"))
             if not check_func(vat_country, vat_number):  # simple_vat_check
                 error["vat"] = 'error'
         # error message for empty required fields

@@ -53,14 +53,14 @@
                     </div>
                     <div id="o_my_sidebar" class="col-md-3 col-md-offset-1 o_my_sidebar">
                         <div class="o_my_contact" t-if="sales_rep">
-                            <t t-call="website_portal.contact"/>
+                            <t t-call="website_portal_v10.contact"/>
                         </div>
                         <div class="o_my_details">
                             <h3 class="page-header">Your Details <a href="/my/account" class="btn btn-default btn-xs">Change</a></h3>
                             <div t-field="user.partner_id" t-field-options='{"widget": "contact", "fields": ["email", "phone", "address", "name"]}'/>
                         </div>
                         <div class="o_my_archives" t-if="archive_groups">
-                            <t t-call="website_portal.portal_archive_groups"/>
+                            <t t-call="website_portal_v10.portal_archive_groups"/>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
     </template>
 
     <template id="portal_my_home" name="My Portal">
-        <t t-call="website_portal.portal_layout">
+        <t t-call="website_portal_v10.portal_layout">
             <div class="o_my_home_content">
                 <div class="oe_structure"></div>
             </div>
@@ -77,7 +77,7 @@
         </t>
     </template>
 
-    <template id="website_portal.custom_panel" inherit_id='website_portal.portal_layout' customize_show="True" name="Editable Panel" active="False">
+    <template id="custom_panel" inherit_id='portal_layout' customize_show="True" name="Editable Panel" active="False">
         <xpath expr="//div[@id='o_my_sidebar']" position="inside">
             <div class="oe_structure">
               <h3 class="page-header">Custom Panel</h3>
