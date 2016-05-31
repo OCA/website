@@ -38,10 +38,16 @@ class WebsiteAccount(http.Controller):
         if fields is None:
             fields = ['name', 'create_date']
         groups = []
-        for group in request.env[model]._read_group_raw(
+        for group in request.env[model].read_group(
                 domain, fields=fields, groupby=groupby, orderby=order):
-            dates, label = group[groupby]
-            date_begin, date_end = dates.split('/')
+            label = group[groupby]
+            date_begin = date_end = None
+            for leaf in group["__domain"]:
+                if leaf[0] == groupby:
+                    if leaf[1] == ">=":
+                        date_begin = leaf[2]
+                    elif leaf[1] == "<":
+                        date_end = leaf[2]
             groups.append({
                 'date_begin': Date.to_string(Date.from_string(date_begin)),
                 'date_end': Date.to_string(Date.from_string(date_end)),
