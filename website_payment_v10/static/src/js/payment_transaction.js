@@ -1,4 +1,8 @@
-odoo.define('website_payment.website_payment', function (require) {
+/* © 2013-2016 Odoo S.A.
+ * © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). */
+
+odoo.define('website_payment_v10.website_payment', function (require) {
 "use strict";
 
 var website = require('website.website');

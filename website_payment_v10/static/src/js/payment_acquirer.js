@@ -1,3 +1,7 @@
+/* © 2013-2016 Odoo S.A.
+ * © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). */
+
 $(document).ready(function () {
 
     $('input#cc_number').payment('formatCardNumber');

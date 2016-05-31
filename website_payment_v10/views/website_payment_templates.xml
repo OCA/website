@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- © 2013-2016 Odoo S.A.
+     © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
 <openerp>
     <data>
-        <template id="header_footer_custom_payment" inherit_id="website_portal.portal_layout" customize_show="True" active="False" name="Payment Methods">
+        <template id="header_footer_custom_payment" inherit_id="website_portal_v10.portal_layout" customize_show="True" active="False" name="Payment Methods">
             <xpath expr="//div[@class='o_my_details']" position="inside">
                 <h4 class="payment_method_title">Payment Method</h4>
                 <ul class="payment_method_list list-inline">
@@ -78,7 +82,7 @@
         </t>
     </template>
 
-    <template id="pay_meth_link" inherit_id="website_portal.portal_layout">
+    <template id="pay_meth_link" inherit_id="website_portal_v10.portal_layout">
         <xpath expr="//div[@class='o_my_details']" position="inside">
             <a href="/my/payment_method">Manage your payment methods</a>
         </xpath>

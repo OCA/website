@@ -1,20 +1,29 @@
+# -*- coding: utf-8 -*-
+# © 2013-2016 Odoo S.A.
+# © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+
 from openerp import api, fields, models
 
 
 class PaymentConfigSettings(models.TransientModel):
     _inherit = 'account.config.settings'
 
-    default_acquirer = fields.Many2one("payment.acquirer",
-                                       string="Default Acquirer",
-                                       help="Default payment acquirer for website payments; your provider needs to be visible in the website.",
-                                       domain="[('website_published','=',True)]"
-                                       )
+    default_acquirer = fields.Many2one(
+        "payment.acquirer",
+        string="Default Acquirer",
+        help="Default payment acquirer for website payments; your provider "
+             "needs to be visible in the website.",
+        domain="[('website_published','=',True)]"
+    )
 
     @api.model
     def get_default_acquirer(self, fields):
         default_acquirer = False
         if 'default_acquirer' in fields:
-            default_acquirer = self.env['ir.values'].get_default('payment.transaction', 'acquirer_id', company_id=self.env.user.company_id.id)
+            default_acquirer = self.env['ir.values'].get_default(
+                'payment.transaction', 'acquirer_id',
+                company_id=self.env.user.company_id.id)
         return {
             'default_acquirer': default_acquirer
         }
@@ -25,4 +34,7 @@ class PaymentConfigSettings(models.TransientModel):
             ir_values = self.env['ir.values']
             if self.user_has_groups('base.group_configuration'):
                 ir_values = ir_values.sudo()
-            ir_values.set_default('payment.transaction', 'acquirer_id', wizard.default_acquirer.id, company_id=self.env.user.company_id.id)
+            ir_values.set_default(
+                'payment.transaction', 'acquirer_id',
+                wizard.default_acquirer.id,
+                company_id=self.env.user.company_id.id)
