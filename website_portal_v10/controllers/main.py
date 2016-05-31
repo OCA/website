@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+# © 2015-2016 Odoo S.A.
+# © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 from openerp import http
 from openerp.http import request
 from openerp import tools
@@ -7,7 +10,7 @@ from openerp.tools.translate import _
 from openerp.fields import Date
 
 
-class website_account(http.Controller):
+class WebsiteAccount(http.Controller):
 
     _items_per_page = 10
 

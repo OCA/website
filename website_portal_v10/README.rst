@@ -7,10 +7,10 @@ Website Portal (Backported From v10)
 ====================================
 
 This module replaces the functionality of ``website_portal`` to support sane
-layout and extensibility and allow you to have a special layout just for portal
-pages, have custom controllers for pages, have a menu indicating all sections
-for the portal features, inherit everything without problems, and prepare for
-forward compatibility.
+layout and extensibility and to allow you to have a special layout just for
+portal pages, to have custom controllers for pages, to have a menu indicating
+all sections for the portal features, to inherit everything without problems,
+and to prepare for forward compatibility.
 
 .. warning::
     This module is intended to **replace** ``website_portal``, and is **not
