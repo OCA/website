@@ -1,33 +1,40 @@
 # -*- coding: utf-8 -*-
+# © 2015-2016 Odoo S.A.
+# © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+
 import datetime
 
 from openerp import http
 from openerp.exceptions import AccessError
 from openerp.http import request
 
-from openerp.addons.website_portal.controllers.main import website_account
+from openerp.addons.website_portal_v10.controllers.main import WebsiteAccount
 
 
-class website_account(website_account):
+class WebsiteAccount(WebsiteAccount):
 
     @http.route()
     def account(self):
         """ Add sales documents to main account page """
-        response = super(website_account, self).account()
+        response = super(WebsiteAccount, self).account()
         partner = request.env.user.partner_id
 
         SaleOrder = request.env['sale.order']
         Invoice = request.env['account.invoice']
         quotation_count = SaleOrder.search_count([
-            ('message_partner_ids', 'child_of', [partner.commercial_partner_id.id]),
+            ('message_partner_ids', 'child_of',
+             [partner.commercial_partner_id.id]),
             ('state', 'in', ['sent', 'cancel'])
         ])
         order_count = SaleOrder.search_count([
-            ('message_partner_ids', 'child_of', [partner.commercial_partner_id.id]),
+            ('message_partner_ids', 'child_of',
+             [partner.commercial_partner_id.id]),
             ('state', 'in', ['sale', 'done'])
         ])
         invoice_count = Invoice.search_count([
-            ('message_partner_ids', 'child_of', [partner.commercial_partner_id.id]),
+            ('message_partner_ids', 'child_of',
+             [partner.commercial_partner_id.id]),
             ('state', 'in', ['open', 'paid', 'cancelled'])
         ])
 
@@ -42,20 +49,23 @@ class website_account(website_account):
     # Quotations and Sale Orders
     #
 
-    @http.route(['/my/quotes', '/my/quotes/page/<int:page>'], type='http', auth="user", website=True)
+    @http.route(['/my/quotes', '/my/quotes/page/<int:page>'], type='http',
+                auth="user", website=True)
     def portal_my_quotes(self, page=1, date_begin=None, date_end=None, **kw):
         values = self._prepare_portal_layout_values()
         partner = request.env.user.partner_id
         SaleOrder = request.env['sale.order']
 
         domain = [
-            ('message_partner_ids', 'child_of', [partner.commercial_partner_id.id]),
+            ('message_partner_ids', 'child_of',
+             [partner.commercial_partner_id.id]),
             ('state', 'in', ['sent', 'cancel'])
         ]
 
         archive_groups = self._get_archive_groups('sale.order', domain)
         if date_begin and date_end:
-            domain += [('create_date', '>=', date_begin), ('create_date', '<', date_end)]
+            domain += [('create_date', '>=', date_begin),
+                       ('create_date', '<', date_end)]
 
         # count for pager
         quotation_count = SaleOrder.search_count(domain)
@@ -68,7 +78,8 @@ class website_account(website_account):
             step=self._items_per_page
         )
         # search the count to display, according to the pager data
-        quotations = SaleOrder.search(domain, limit=self._items_per_page, offset=pager['offset'])
+        quotations = SaleOrder.search(
+            domain, limit=self._items_per_page, offset=pager['offset'])
 
         values.update({
             'date': date_begin,
@@ -77,21 +88,25 @@ class website_account(website_account):
             'archive_groups': archive_groups,
             'default_url': '/my/quotes',
         })
-        return request.website.render("website_portal_sale.portal_my_quotations", values)
+        return request.website.render(
+            "website_portal_sale_v10.portal_my_quotations", values)
 
-    @http.route(['/my/orders', '/my/orders/page/<int:page>'], type='http', auth="user", website=True)
+    @http.route(['/my/orders', '/my/orders/page/<int:page>'], type='http',
+                auth="user", website=True)
     def portal_my_orders(self, page=1, date_begin=None, date_end=None, **kw):
         values = self._prepare_portal_layout_values()
         partner = request.env.user.partner_id
         SaleOrder = request.env['sale.order']
 
         domain = [
-            ('message_partner_ids', 'child_of', [partner.commercial_partner_id.id]),
+            ('message_partner_ids', 'child_of',
+             [partner.commercial_partner_id.id]),
             ('state', 'in', ['sale', 'done'])
         ]
         archive_groups = self._get_archive_groups('sale.order', domain)
         if date_begin and date_end:
-            domain += [('create_date', '>=', date_begin), ('create_date', '<', date_end)]
+            domain += [('create_date', '>=', date_begin),
+                       ('create_date', '<', date_end)]
 
         # count for pager
         order_count = SaleOrder.search_count(domain)
@@ -104,7 +119,8 @@ class website_account(website_account):
             step=self._items_per_page
         )
         # content according to pager and archive selected
-        orders = SaleOrder.search(domain, limit=self._items_per_page, offset=pager['offset'])
+        orders = SaleOrder.search(
+            domain, limit=self._items_per_page, offset=pager['offset'])
 
         values.update({
             'date': date_begin,
@@ -114,9 +130,11 @@ class website_account(website_account):
             'archive_groups': archive_groups,
             'default_url': '/my/orders',
         })
-        return request.website.render("website_portal_sale.portal_my_orders", values)
+        return request.website.render(
+            "website_portal_sale_v10.portal_my_orders", values)
 
-    @http.route(['/my/orders/<int:order>'], type='http', auth="user", website=True)
+    @http.route(['/my/orders/<int:order>'], type='http', auth="user",
+                website=True)
     def orders_followup(self, order=None, **kw):
         order = request.env['sale.order'].browse([order])
         try:
@@ -124,29 +142,36 @@ class website_account(website_account):
             order.check_access_rule('read')
         except AccessError:
             return request.website.render("website.403")
-        order_invoice_lines = {il.product_id.id: il.invoice_id for il in order.invoice_ids.mapped('invoice_line_ids')}
-        return request.website.render("website_portal_sale.orders_followup", {
-            'order': order.sudo(),
-            'order_invoice_lines': order_invoice_lines,
-        })
+        order_invoice_lines = {
+            il.product_id.id: il.invoice_id
+            for il in order.invoice_ids.mapped('invoice_line_ids')}
+        return request.website.render(
+            "website_portal_sale_v10.orders_followup",
+            {
+                'order': order.sudo(),
+                'order_invoice_lines': order_invoice_lines,
+            })
 
     #
     # Invoices
     #
 
-    @http.route(['/my/invoices', '/my/invoices/page/<int:page>'], type='http', auth="user", website=True)
+    @http.route(['/my/invoices', '/my/invoices/page/<int:page>'], type='http',
+                auth="user", website=True)
     def portal_my_invoices(self, page=1, date_begin=None, date_end=None, **kw):
         values = self._prepare_portal_layout_values()
         partner = request.env.user.partner_id
         AccountInvoice = request.env['account.invoice']
 
         domain = [
-            ('message_partner_ids', 'child_of', [partner.commercial_partner_id.id]),
+            ('message_partner_ids', 'child_of',
+             [partner.commercial_partner_id.id]),
             ('state', 'in', ['open', 'paid', 'cancelled'])
         ]
         archive_groups = self._get_archive_groups('account.invoice', domain)
         if date_begin and date_end:
-            domain += [('create_date', '>=', date_begin), ('create_date', '<', date_end)]
+            domain += [('create_date', '>=', date_begin),
+                       ('create_date', '<', date_end)]
 
         # count for pager
         invoice_count = AccountInvoice.search_count(domain)
@@ -159,7 +184,8 @@ class website_account(website_account):
             step=self._items_per_page
         )
         # content according to pager and archive selected
-        invoices = AccountInvoice.search(domain, limit=self._items_per_page, offset=pager['offset'])
+        invoices = AccountInvoice.search(
+            domain, limit=self._items_per_page, offset=pager['offset'])
         values.update({
             'date': date_begin,
             'invoices': invoices,
@@ -168,4 +194,5 @@ class website_account(website_account):
             'archive_groups': archive_groups,
             'default_url': '/my/invoices',
         })
-        return request.website.render("website_portal_sale.portal_my_invoices", values)
+        return request.website.render(
+            "website_portal_sale_v10.portal_my_invoices", values)

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# © 2015-2016 Odoo S.A.
+# © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-import controllers
-import models
+from . import models, controllers
