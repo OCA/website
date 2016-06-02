@@ -1,29 +1,31 @@
 # -*- coding: utf-8 -*-
 # (c) 2015 Antiun Ingeniería S.L. - Sergio Teruel
 # (c) 2015 Antiun Ingeniería S.L. - Carlos Dauden
-# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+# License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
 
 {
     'name': 'Website Portal for Purchases',
     'category': 'Website',
-    'summary': "Add your supplier's purchase documents in the frontend portal",
+    'summary': "Add purchase orders and quotation in the frontend portal",
     'version': '9.0.1.0.0',
     'depends': [
         'auth_supplier',
         'purchase',
-        'website_portal',
+        'website_portal_v10',
     ],
     'data': [
         'security/ir.model.access.csv',
-        'security/website_portal_purchase_security.xml',
-        'views/website_portal_purchase.xml',
-        'views/website_portal.xml',
-        'views/website.xml',
+        'security/portal_security.xml',
+        'views/assets.xml',
+        'views/layout.xml',
+        'views/quotes.xml',
+        'views/orders.xml',
     ],
     'author': 'Antiun Ingeniería S.L., '
               'Incaser Informatica S.L., '
+              "Tecnativa, "
               'Odoo Community Association (OCA)',
-    'website': 'http://www.incaser.es',
-    'license': 'AGPL-3',
+    'website': 'http://www.tecnativa.com',
+    'license': 'LGPL-3',
     'installable': True,
 }

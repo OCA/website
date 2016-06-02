@@ -1,6 +1,6 @@
-.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
-    :alt: License: AGPL-3
+.. image:: https://img.shields.io/badge/licence-LGPL--3-blue.svg
+    :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
+    :alt: License: LGPL-3
 
 ============================
 Website Portal for Purchases
@@ -32,7 +32,14 @@ To use this module, you need to:
 Known issues / Roadmap
 ======================
 
-* Tests
+* Tests.
+* When migrating to v10, we will have to base this module on ``website_portal``
+  directly.
+* If you want to display invoices, you will have to install
+  ``website_portal_sale_v10``, which displays both customer and supplier
+  invoices merged in the same place.
+  * If you do not want both kinds of invoices merged in the same controller,
+    install ``website_portal_invoice_separated``.
 
 Bug Tracker
 ===========

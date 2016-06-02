@@ -6,229 +6,361 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-22 20:00+0000\n"
-"PO-Revision-Date: 2015-12-22 21:09+0100\n"
+"POT-Creation-Date: 2016-07-07 17:08+0200\n"
+"PO-Revision-Date: 2016-07-07 17:12+0200\n"
 "Last-Translator: Sergio <sergio@incaser.es>\n"
 "Language-Team: \n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_ES\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
+#: model:ir.ui.view,arch_db:website_portal_purchase.order_list
+msgid ""
+"<span class=\"label label-default\">\n"
+"                                        <i class=\"fa fa-fw fa-check\"/>\n"
+"                                        Done\n"
+"                                    </span>"
+msgstr ""
+"<span class=\"label label-default\">\n"
+"                                        <i class=\"fa fa-fw fa-check\"/>\n"
+"                                        Hecho\n"
+"                                    </span>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid ""
+"<span class=\"label label-info supplier_orders_label_text_align\">\n"
+"                                                                <i class="
+"\"fa fa-fw fa-clock-o\"/>\n"
+"                                                                Waiting\n"
+"                                                            </span>"
+msgstr ""
+"<span class=\"label label-info supplier_orders_label_text_align\">\n"
+"                                                                <i class="
+"\"fa fa-fw fa-clock-o\"/>\n"
+"                                                                En espera\n"
+"                                                            </span>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.order_list
+msgid ""
+"<span class=\"label label-info\">\n"
+"                                        <i class=\"fa fa-fw fa-pencil-square-"
+"o\"/>\n"
+"                                        Invoiced\n"
+"                                    </span>"
+msgstr ""
+"<span class=\"label label-info\">\n"
+"                                        <i class=\"fa fa-fw fa-pencil-square-"
+"o\"/>\n"
+"                                        Facturado\n"
+"                                    </span>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid ""
+"<span class=\"label label-success supplier_orders_label_text_align\">\n"
+"                                                                <i class="
+"\"fa fa-fw fa-check\"/>\n"
+"                                                                Paid\n"
+"                                                            </span>"
+msgstr ""
+"<span class=\"label label-success supplier_orders_label_text_align\">\n"
+"                                                                <i class="
+"\"fa fa-fw fa-check\"/>\n"
+"                                                                Pagado\n"
+"                                                            </span>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid ""
+"<span class=\"label label-warning supplier_orders_label_text_align\">\n"
+"                                                    <i class=\"fa fa-fw fa-"
+"pencil-square-o\"/>\n"
+"                                                    Not invoiced yet\n"
+"                                                </span>"
+msgstr ""
+"<span class=\"label label-warning supplier_orders_label_text_align\">\n"
+"                                                    <i class=\"fa fa-fw fa-"
+"pencil-square-o\"/>\n"
+"                                                    Sin facturar todavía\n"
+"                                                </span>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid ""
+"<span class=\"label label-warning supplier_orders_label_text_align\">\n"
+"                                                    <i class=\"fa fa-fw fa-"
+"truck\"/>\n"
+"                                                    Not received yet\n"
+"                                                </span>"
+msgstr ""
+"<span class=\"label label-warning supplier_orders_label_text_align\">\n"
+"                                                    <i class=\"fa fa-fw fa-"
+"truck\"/>\n"
+"                                                    Sin recibir todavía\n"
+"                                                </span>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Contact</strong>"
+msgstr "<strong>Contacto</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Fecha:</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Invoices</strong>"
+msgstr "<strong>Facturas</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Invoicing Address</strong>"
+msgstr "<strong>Dirección de facturación</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Product</strong>"
+msgstr "<strong>Producto</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>Cantidad</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Shipping Address</strong>"
+msgstr "<strong>Dirección de envío</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>Subtotal</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Total:</strong>"
+msgstr "<strong>Total:</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>Precio unitario</strong>"
+
+#. module: website_portal_purchase
+#: model:ir.ui.view,arch_db:website_portal_purchase.purchase_backend_link
 msgid "Access the complete Purchase application"
 msgstr "Acceso al portal de compras"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-msgid "Approved"
-msgstr "Aprobado"
+#: model:ir.ui.view,arch_db:website_portal_purchase.order_list
+msgid "Date"
+msgstr "Fecha"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "Cancelled"
-msgstr "Cancelado"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-msgid "Confirmation Date"
-msgstr "Fecha de confirmación"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Date:"
-msgstr "Fecha:"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-msgid "Done"
-msgstr "Realizado"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "Due Date"
-msgstr "Fecha de vencimiento"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
+#: model:ir.ui.view,arch_db:website_portal_purchase.purchases_backend_access
 msgid ""
-"If you wish to access the complete application to manage your orders, you "
-"can follow"
+"If you wish to access the complete application to manage your supplier "
+"orders, you can follow"
 msgstr ""
-"Si desea acceder a la aplicación completa para gestionar sus pedidos, puede "
-"continuar"
+"Si desea acceder a la aplicación completa para gestionar sus pedidos de "
+"compra, puede seguir"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "Invoice #"
-msgstr "Factura #"
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "My Orders"
+msgstr "Mis pedidos"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "Invoice Date"
-msgstr "Fecha factura"
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "My Quotes"
+msgstr "Mis presupuestos"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Invoices"
-msgstr "Facturas"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Invoicing Address"
-msgstr "Dirección de facturación"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "My Account"
-msgstr "Mi cuenta"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "Order"
 msgstr "Pedido"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "Paid"
-msgstr "Pagado"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-#: view:website:website_portal_purchase.request_quotations
-msgid "Print"
-msgstr "Imprimir"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-msgid "Problem"
-msgstr "Problema"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Product"
-msgstr "Producto"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
+#: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_orders
 msgid "Purchase Order #"
 msgstr "Pedido de compra"
 
 #. module: website_portal_purchase
-#: view:website:website_portal.account
-msgid "Purchases"
-msgstr "Compras"
+#: model:ir.actions.act_window,name:website_portal_purchase.action_orders_portal
+msgid "Purchase Orders"
+msgstr "Pedidos de compra"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Quantity"
-msgstr "Cantidad"
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
+msgid "Quotation"
+msgstr "Presupuesto"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.request_quotations
+#: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_quotations
 msgid "Quotation #"
 msgstr "Presupuesto"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Request for Quotation"
-msgstr "Solicitud de presupuesto"
+#: model:ir.ui.view,arch_db:website_portal_purchase.layout_orders
+msgid "Supplier Orders"
+msgstr "Pedidos de proveedor"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Shipping Address"
-msgstr "Dirección de envío"
+#: model:ir.ui.view,arch_db:website_portal_purchase.layout_quotes
+msgid "Supplier Quotes"
+msgstr "Presupuestos de proveedor"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-#: view:website:website_portal_purchase.request_quotations
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "Show less"
-msgstr "Mostrar menos"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-#: view:website:website_portal_purchase.request_quotations
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "Show more"
-msgstr "Mostrar más"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Subtotal"
-msgstr "Subtotal"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "Taxes:"
 msgstr "Impuestos:"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "There are currently no invoices for your account."
-msgstr "Actualmente no hay facturas en su cuenta"
+#: model:ir.ui.view,arch_db:website_portal_purchase.home_orders
+#: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_orders
+msgid "There are currently no supplier orders for your account."
+msgstr "Ahora mismo no hay pedidos de proveedor en su cuenta."
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-msgid "There are currently no orders for your account."
-msgstr "Actualmente no hay pedidos en su cuenta"
+#: model:ir.ui.view,arch_db:website_portal_purchase.home_quotes
+#: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_quotations
+msgid "There are currently no supplier quotes for your account."
+msgstr "Ahora mismo no hay presupuestos de proveedor en su cuenta."
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.request_quotations
-msgid "There are currently no quotes for your account."
-msgstr "Actualmente no hay solicitudes de presupuesto en su cuenta"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-#: view:website:website_portal_purchase.request_quotations
-#: view:website:website_portal_purchase.supplier_invoices
+#: model:ir.ui.view,arch_db:website_portal_purchase.order_list
 msgid "Total"
 msgstr "Total"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Total:"
-msgstr "Total:"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Unit Price"
-msgstr "Precio unitario"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
+#: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "Untaxed Amount:"
 msgstr "Base imponible:"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
-msgid "Waiting"
-msgstr "En espera"
+#: model:ir.ui.view,arch_db:website_portal_purchase.home_orders
+#: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_orders
+msgid "Your Supplier Orders"
+msgstr "Sus pedidos de proveedor"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "Waiting for Payment"
-msgstr "A la espera de pago"
+#: model:ir.ui.view,arch_db:website_portal_purchase.home_quotes
+#: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_quotations
+msgid "Your Supplier Quotes"
+msgstr "Sus presupuestos de proveedor"
 
 #. module: website_portal_purchase
-#: view:website:website_portal_purchase.supplier_invoices
-msgid "Your Invoices and Payments"
-msgstr "Sus facturas y pagos"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.purchase_orders
-msgid "Your Orders"
-msgstr "Sus pedidos"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.request_quotations
-msgid "Your Request Quotations"
-msgstr "Sus solicitudes de presupuesto"
-
-#. module: website_portal_purchase
-#: view:website:website_portal_purchase.orders_followup
+#: model:ir.ui.view,arch_db:website_portal_purchase.purchases_backend_access
 msgid "this link"
 msgstr "Este enlace"
+
+#~ msgid "Approved"
+#~ msgstr "Aprobado"
+
+#~ msgid "Cancelled"
+#~ msgstr "Cancelado"
+
+#~ msgid "Confirmation Date"
+#~ msgstr "Fecha de confirmación"
+
+#~ msgid "Date:"
+#~ msgstr "Fecha:"
+
+#~ msgid "Done"
+#~ msgstr "Realizado"
+
+#~ msgid "Due Date"
+#~ msgstr "Fecha de vencimiento"
+
+#~ msgid ""
+#~ "If you wish to access the complete application to manage your orders, you "
+#~ "can follow"
+#~ msgstr ""
+#~ "Si desea acceder a la aplicación completa para gestionar sus pedidos, "
+#~ "puede continuar"
+
+#~ msgid "Invoice #"
+#~ msgstr "Factura #"
+
+#~ msgid "Invoice Date"
+#~ msgstr "Fecha factura"
+
+#~ msgid "Invoices"
+#~ msgstr "Facturas"
+
+#~ msgid "Invoicing Address"
+#~ msgstr "Dirección de facturación"
+
+#~ msgid "My Account"
+#~ msgstr "Mi cuenta"
+
+#~ msgid "Paid"
+#~ msgstr "Pagado"
+
+#~ msgid "Print"
+#~ msgstr "Imprimir"
+
+#~ msgid "Problem"
+#~ msgstr "Problema"
+
+#~ msgid "Product"
+#~ msgstr "Producto"
+
+#~ msgid "Purchases"
+#~ msgstr "Compras"
+
+#~ msgid "Quantity"
+#~ msgstr "Cantidad"
+
+#~ msgid "Request for Quotation"
+#~ msgstr "Solicitud de presupuesto"
+
+#~ msgid "Shipping Address"
+#~ msgstr "Dirección de envío"
+
+#~ msgid "Show less"
+#~ msgstr "Mostrar menos"
+
+#~ msgid "Show more"
+#~ msgstr "Mostrar más"
+
+#~ msgid "Subtotal"
+#~ msgstr "Subtotal"
+
+#~ msgid "There are currently no invoices for your account."
+#~ msgstr "Actualmente no hay facturas en su cuenta"
+
+#~ msgid "There are currently no orders for your account."
+#~ msgstr "Actualmente no hay pedidos en su cuenta"
+
+#~ msgid "There are currently no quotes for your account."
+#~ msgstr "Actualmente no hay solicitudes de presupuesto en su cuenta"
+
+#~ msgid "Total:"
+#~ msgstr "Total:"
+
+#~ msgid "Unit Price"
+#~ msgstr "Precio unitario"
+
+#~ msgid "Waiting"
+#~ msgstr "En espera"
+
+#~ msgid "Waiting for Payment"
+#~ msgstr "A la espera de pago"
+
+#~ msgid "Your Invoices and Payments"
+#~ msgstr "Sus facturas y pagos"
+
+#~ msgid "Your Orders"
+#~ msgstr "Sus pedidos"
+
+#~ msgid "Your Request Quotations"
+#~ msgstr "Sus solicitudes de presupuesto"

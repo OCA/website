@@ -1,10 +1,18 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_auth_supplier_purchase_order,auth_supplier_purchase_order,purchase.model_purchase_order,auth_supplier.group_auth_supplier,1,0,0,0
-access_auth_supplier_purchase_order_line,auth_supplier_purchase_order_line,purchase.model_purchase_order_line,auth_supplier.group_auth_supplier,1,0,0,0
-access_auth_supplier_account_invoice,auth_supplier_account_invoice,account.model_account_invoice,auth_supplier.group_auth_supplier,1,0,0,0
-access_auth_supplier_account_invoice_line,auth_supplier_account_invoice_line,account.model_account_invoice_line,auth_supplier.group_auth_supplier,1,0,0,0
-access_product_product_purchase,website.portal.purchase.product.product,product.model_product_product,auth_supplier.group_auth_supplier,1,0,0,0
-access_product_template_purchase,website.portal.purchase.product.template,product.model_product_template,auth_supplier.group_auth_supplier,1,0,0,0
-access_account_payment_term_purchase,website.portal.purchase.account.payment.term,account.model_account_payment_term,auth_supplier.group_auth_supplier,1,0,0,0
-access_stock_picking_type_purchase,website.portal.purchase.stock.picking.type,stock.model_stock_picking_type,auth_supplier.group_auth_supplier,1,0,0,0
-access_stock_stock_warehouse_purchase,website.portal.purchase.stock.warehouse,stock.model_stock_warehouse,auth_supplier.group_auth_supplier,1,0,0,0
+access_purchase_order,purchase.order,purchase.model_purchase_order,base.group_portal,1,0,0,0
+access_purchase_order_line,purchase.order.line,purchase.model_purchase_order_line,base.group_portal,1,0,0,0
+access_account_invoice,account.invoice,account.model_account_invoice,base.group_portal,1,0,0,0
+access_account_invoice_tax,account.invoice.tax,account.model_account_invoice_tax,base.group_portal,1,0,0,0
+access_account_invoice_line,account.invoice.line,account.model_account_invoice_line,base.group_portal,1,0,0,0
+access_account_journal,account.journal,account.model_account_journal,base.group_portal,1,0,0,0
+access_product_list,product.pricelist,product.model_product_pricelist,base.group_portal,1,0,0,0
+access_res_partner,res.partner,base.model_res_partner,base.group_portal,1,0,0,0
+access_account_tax,account.tax,account.model_account_tax,base.group_portal,1,0,0,0
+access_account_tax_group,account.tax.group,account.model_account_tax_group,base.group_portal,1,0,0,0
+access_res_partner_category,res.partner.category,base.model_res_partner_category,base.group_portal,1,0,0,0
+access_product_attribute_portal,product.attribute portal,product.model_product_attribute,base.group_portal,1,0,0,0
+access_product_attribute_value_portal,product.attribute value portal,product.model_product_attribute_value,base.group_portal,1,0,0,0
+access_product_attribute_price_portal,product.attribute price portal,product.model_product_attribute_price,base.group_portal,1,0,0,0
+access_product_attribute_line_portal,product.attribute line portal,product.model_product_attribute_line,base.group_portal,1,0,0,0
+access_product_template,Read product template,product.model_product_template,base.group_portal,1,0,0,0
+access_product_product,Read product product,product.model_product_product,base.group_portal,1,0,0,0

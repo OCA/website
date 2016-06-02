@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+<data noupdate="1">
+
+<!-- Purchase Portal Access Rules -->
+<record id="portal_purchase_order_user_rule" model="ir.rule">
+    <field name="name">Portal Personal Quotations/Purchases Orders</field>
+    <field name="model_id" ref="purchase.model_purchase_order"/>
+    <field name="domain_force">[('message_partner_ids', 'child_of', user.commercial_partner_id.ids)]</field>
+    <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+    <field eval="1" name="perm_unlink"/>
+    <field eval="1" name="perm_write"/>
+    <field eval="1" name="perm_read"/>
+    <field eval="0" name="perm_create"/>
+</record>
+
+<record id="portal_purchase_order_line_rule" model="ir.rule">
+    <field name="name">Portal Purchases Orders Line</field>
+    <field name="model_id" ref="purchase.model_purchase_order_line"/>
+    <field name="domain_force">[('order_id.message_partner_ids', 'child_of', user.commercial_partner_id.ids)]</field>
+    <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+</record>
+
+<record id="portal_account_invoice_user_rule" model="ir.rule">
+    <field name="name">Portal Personal Account Invoices</field>
+    <field name="model_id" ref="account.model_account_invoice"/>
+    <field name="domain_force">[('message_partner_ids', 'child_of', user.commercial_partner_id.ids)]</field>
+    <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+</record>
+
+<record id="portal_account_invoice_line_rule" model="ir.rule">
+    <field name="name">Portal Invoice Lines</field>
+    <field name="model_id" ref="account.model_account_invoice_line"/>
+    <field name="domain_force">[('invoice_id.message_partner_ids', 'child_of', user.commercial_partner_id.ids)]</field>
+    <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+</record>
+
+<record id="portal_personal_contact" model="ir.rule">
+    <field name="name">Portal Personal Contacts</field>
+    <field name="model_id" ref="base.model_res_partner"/>
+    <field name="domain_force">[('message_partner_ids', 'in', user.commercial_partner_id.ids), ('active', '=', True)]</field>
+    <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+</record>
+
+<record id="portal_product_template_rule" model="ir.rule">
+    <field name="name">Portal Product Templates I Supply</field>
+    <field name="model_id" ref="product.model_product_template"/>
+    <field name="domain_force">[('seller_ids.name', 'child_of', user.commercial_partner_id.ids), ('active', '=', True)]</field>
+    <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+</record>
+
+</data>
+</odoo>
