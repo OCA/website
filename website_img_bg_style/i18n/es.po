@@ -1,0 +1,108 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_img_bg_style
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-13 13:11+0100\n"
+"PO-Revision-Date: 2015-11-13 13:13+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.5\n"
+"Last-Translator: Jairo Llopis <j.llopis@grupoesoc.es>\n"
+"Language: es_ES\n"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Auto"
+msgstr "Automático"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Background style"
+msgstr "Estilo de la imagen de fondo"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Bottom"
+msgstr "Abajo"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Center"
+msgstr "Centro"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Clipped"
+msgstr "Recortado"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Contain"
+msgstr "Contenido"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Cover"
+msgstr "Cubierta"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Left"
+msgstr "Izquierda"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "None"
+msgstr "Ninguno"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Position"
+msgstr "Posición"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Repeat"
+msgstr "Repetir"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Right"
+msgstr "Derecha"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Rounded"
+msgstr "Redondeado"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Size"
+msgstr "Tamaño"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Spaced"
+msgstr "Espaciado"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Top"
+msgstr "Arriba"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Vertical"
+msgstr "Vertical"
