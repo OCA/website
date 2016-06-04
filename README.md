@@ -35,6 +35,7 @@ addon | version | summary
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 | Combine free and paid tickets on events
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 | Display the structure of your departments and their members.
+[website_img_bg_style](website_img_bg_style/) | 8.0.1.0.0 | Let you change styles of snippets background images
 [website_legal_page](website_legal_page/) | 8.0.1.0.0 | Website legal page
 [website_logo](website_logo/) | 8.0.2.0.0 | Website company logo
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 | Allow to manage the display of website.menus
@@ -47,6 +48,7 @@ addon | version | summary
 [website_product_supplier](website_product_supplier/) | 8.0.1.0.0 | Website Product Supplier
 [website_sale_collapse_categories](website_sale_collapse_categories/) | 8.0.1.0.0 | Collapsible product categories in website shop
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 | Set order company according to products company
+[website_sale_product_category_seo](website_sale_product_category_seo/) | 1.0 | add Public Product Categories CMS Blocks
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 | Prevent optional products to be sold singularly
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 | VAT number required in checkout form
 [website_signup_legal_page_required](website_signup_legal_page_required/) | 8.0.1.0.0 | Force the user to accept the legal terms to open an account
