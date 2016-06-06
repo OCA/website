@@ -98,7 +98,7 @@ class WebsiteSupplier(http.Controller):
             'post': post,
             'search_path': "?%s" % werkzeug.url_encode(post),
         }
-        return request.website.render("website_supplier.index", values)
+        return request.website.render("website_supplier_list.index", values)
 
     # Do not use semantic controller due to SUPERUSER_ID
     @http.route(
@@ -115,5 +115,5 @@ class WebsiteSupplier(http.Controller):
                 values = {}
                 values['main_object'] = values['partner'] = partner
                 return request.website.render(
-                    "website_supplier.details", values)
+                    "website_supplier_list.details", values)
         return self.suppliers(**post)
