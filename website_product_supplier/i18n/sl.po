@@ -1,0 +1,187 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_product_supplier
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-27 16:56+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Add Product"
+msgstr "Dodaj proizvod"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.actions
+msgid "Add new product"
+msgstr "Dodaj nov proizvod"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Add your product. You can update later in this section"
+msgstr "Dodaj svoj proizvod. To polje lahko posodobite tudi kasneje"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Code"
+msgstr "Koda"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Delay"
+msgstr "Zamik"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Delay..."
+msgstr "Zamik..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Delete"
+msgstr "Izbris"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Edit"
+msgstr "Urejanje"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Edit Product"
+msgstr "Uredi proizvod"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "General Data"
+msgstr "Splošni podatki"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_supplier_breadcrumb
+msgid "Home"
+msgstr "Domov"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Load Picture"
+msgstr "Naloži sliko"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Min Quantity"
+msgstr "Min. količina"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Min Quantity..."
+msgstr "Min. količina..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+#: view:website:website_product_supplier.product_supplier_breadcrumb
+msgid "My Products"
+msgstr "Moji proizvodi"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+#: view:website:website_product_supplier.product_table
+msgid "Name"
+msgstr "Naziv"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Picture"
+msgstr "Slika"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+#: view:website:website_product_supplier.product_table
+msgid "Price"
+msgstr "Cena"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price Min Quantity"
+msgstr "Cena min. količine"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price and stock"
+msgstr "Cena in zaloga"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price..."
+msgstr "Cena..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Product Code..."
+msgstr "Koda proizvoda..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Product name..."
+msgstr "Naziv proizvoda..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Published"
+msgstr "Objavljeno"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Save Product"
+msgstr "Shrani proizvod"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.search
+msgid "Search..."
+msgstr "Iskanje..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Stock"
+msgstr "Zaloga"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_list
+msgid "There are currently no products for your account."
+msgstr "Za vaš račun trenutno ni proizvodov."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_list
+msgid "Your Products"
+msgstr "Vaši proizvodi"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "back to list"
+msgstr "nazaj na seznam"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "or"
+msgstr "ali"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_supplier_container
+msgid "website_product_supplier.product_supplier_container"
+msgstr "website_product_supplier.product_supplier_container"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_supplier_container_form
+msgid "website_product_supplier.product_supplier_container_form"
+msgstr "website_product_supplier.product_supplier_container_form"

@@ -3,14 +3,14 @@
 # * website_portal
 # 
 # Translators:
-# Carles Antolí <carlesantoli@hotmail.com>, 2015
+# Carles Antolí <carlesantoli@hotmail.com>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 10:22+0000\n"
-"PO-Revision-Date: 2015-10-22 16:02+0000\n"
-"Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-24 22:57+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -74,7 +74,7 @@ msgid "Email"
 msgstr "Correu Electrònic"
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:77
+#: code:addons/website_portal/controllers/main.py:79
 #, python-format
 msgid "Invalid Email! Please enter a valid email address."
 msgstr "Correu electrònic incorrecte! Siusplau, introdueixi una adreça de correu electrònic vàlida."
@@ -100,7 +100,7 @@ msgid "Place your content here."
 msgstr "Col·loca el contingut aquí."
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:94
+#: code:addons/website_portal/controllers/main.py:96
 #, python-format
 msgid "Some required fields are empty."
 msgstr "Alguns camps obligatoris estan buits."

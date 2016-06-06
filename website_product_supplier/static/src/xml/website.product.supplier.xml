@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+
+    <t t-name="website.product.supplier.list.error">
+        <div class="alert alert-warning">
+            <i class="fa fa-exclamation-triangle"/>
+            <span name="error_description" t-raw="error_name"/>
+        </div>
+    </t>
+
+    <t t-name="website.product.supplier.image.preview">
+        <img id="image_preview"
+             class="img img-responsive product_detail_img"
+             t-att-src="src"
+             t-att-title="title"/>
+    </t>
+
+</templates>

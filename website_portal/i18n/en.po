@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 10:22+0000\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
 "PO-Revision-Date: 2015-09-30 14:33+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
@@ -73,7 +73,7 @@ msgid "Email"
 msgstr "Email"
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:77
+#: code:addons/website_portal/controllers/main.py:79
 #, python-format
 msgid "Invalid Email! Please enter a valid email address."
 msgstr "Invalid Email! Please enter a valid email address."
@@ -99,7 +99,7 @@ msgid "Place your content here."
 msgstr "Place your content here."
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:94
+#: code:addons/website_portal/controllers/main.py:96
 #, python-format
 msgid "Some required fields are empty."
 msgstr "Some required fields are empty."

@@ -16,5 +16,7 @@
     ],
     "data": [
         "views/snippets.xml",
+        "views/assets.xml",
+        "views/pages.xml",
     ],
 }

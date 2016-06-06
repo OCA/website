@@ -3,13 +3,14 @@
 # * website_snippet_contact_form
 # 
 # Translators:
+# Rudolf Schnapka <rs@techno-flex.de>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 10:22+0000\n"
-"PO-Revision-Date: 2015-11-18 10:33+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-24 22:30+0000\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +21,7 @@ msgstr ""
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Contact Form"
-msgstr ""
+msgstr "Kontaktformular"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -30,37 +31,37 @@ msgstr "Email"
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "I have read and accept the"
-msgstr ""
+msgstr "Ich habe gelesen und stimme zu den"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Phone Number"
-msgstr ""
+msgstr "Telefonnummer"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Datenschutzbestimmungen"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Send"
-msgstr ""
+msgstr "Senden"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Subject"
-msgstr ""
+msgstr "Betreff"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Tell us something!"
-msgstr ""
+msgstr "Erzählen Sie uns etwas."
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Your Company"
-msgstr ""
+msgstr "Ihr Unternehmen"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -70,4 +71,4 @@ msgstr "Ihr Name"
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Your Question"
-msgstr ""
+msgstr "Ihre Frage"

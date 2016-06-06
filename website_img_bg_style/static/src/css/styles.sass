@@ -1,0 +1,29 @@
+@charset "UTF-8"
+/* © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). */
+
+=mix($attribute, $map1, $map2: null, $other: null)
+    @each $key, $value in $map1
+        &.#{$key}
+            #{$attribute}: $other $value
+            @if $map2
+                +mix($attribute, $map2, $other: $value)
+
+*
+    // Position
+    $h: (bg-left: left, bg-center-h: center, bg-right: right)
+    $v: (bg-top: top, bg-center-v: center, bg-bottom: bottom)
+    +mix("background-position", $h, $v)
+    +mix("background-position", $v, $h)
+
+    // Repeat
+    $h: (bg-repeat-h: repeat, bg-space-h: space, bg-round-h: round, bg-no-repeat-h: no-repeat)
+    $v: (bg-repeat-v: repeat, bg-space-v: space, bg-round-v: round, bg-no-repeat-v: no-repeat)
+    +mix("background-repeat", $h, $v)
+    +mix("background-repeat", $v, $h)
+
+    // Size
+    $h: (bg-size-auto-h: auto, bg-size-contain-h: contain, bg-size-cover-h: cover, bg-size-25-h: 25%, bg-size-50-h: 50%, bg-size-75-h: 75%, bg-size-100-h: 100%)
+    $v: (bg-size-auto-v: auto, bg-size-contain-v: contain, bg-size-cover-v: cover, bg-size-25-v: 25%, bg-size-50-v: 50%, bg-size-75-v: 75%, bg-size-100-v: 100%)
+    +mix("background-size", $h, $v)
+    +mix("background-size", $v, $h)

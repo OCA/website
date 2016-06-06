@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_event_filter_organizer
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-05 19:41+0000\n"
+"PO-Revision-Date: 2015-12-28 10:17+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_event_filter_organizer
+#: view:website:website_event.index
+msgid ""
+"/event?{{ keep_query('country', 'date', 'organizer', type=type['type'][0]) "
+"}}"
+msgstr "/event?{{ keep_query('country', 'date', 'organizer', type=type['type'][0]) }}"
+
+#. module: website_event_filter_organizer
+#: view:website:website_event.index
+msgid "/event?{{ keep_query('country', 'type', 'organizer', date=date[0]) }}"
+msgstr "/event?{{ keep_query('country', 'type', 'organizer', date=date[0]) }}"
+
+#. module: website_event_filter_organizer
+#: view:website:website_event.index
+msgid ""
+"/event?{{ keep_query('date', 'type', 'organizer', "
+"country=country['country_id'][0]) }}"
+msgstr "/event?{{ keep_query('date', 'type', 'organizer', country=country['country_id'][0]) }}"
+
+#. module: website_event_filter_organizer
+#: code:addons/website_event_filter_organizer/controllers/main.py:32
+#, python-format
+msgid "All Organizers"
+msgstr "All Organizers"

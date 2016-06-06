@@ -6,12 +6,11 @@ from openerp.osv import osv, fields
 class WebsitePublishedMixin(osv.AbstractModel):
     _name = "website.published.mixin"
 
-    _website_url_proxy = lambda self, *a, **kw: self._website_url(*a, **kw)
-
     _columns = {
         'website_published': fields.boolean('Visible in Website', copy=False),
         'website_url': fields.function(
-            _website_url_proxy, type='char', string='Website URL',
+            lambda self, *a, **kw: self._website_url(*a, **kw),
+            type='char', string='Website URL',
             help='The full URL to access the document through the website.'),
     }
 

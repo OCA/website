@@ -10,7 +10,7 @@
     'version': '8.0.1.0.0',
     'author': 'Odoo SA, '
               'MONK Software, '
-              'Antiun Ingenieria SA, '
+              'Antiun Ingenieria S.L., '
               'Odoo Community Association (OCA) ',
     'website': 'https://www.odoo.com/, '
                'http://www.wearemonk.com, '

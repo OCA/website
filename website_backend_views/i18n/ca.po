@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-28 02:04+0000\n"
+"POT-Creation-Date: 2016-01-19 11:34+0000\n"
 "PO-Revision-Date: 2015-09-25 08:26+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
@@ -37,17 +37,17 @@ msgstr "Creat per"
 #. module: website_backend_views
 #: field:website.qweb,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Creat en"
 
 #. module: website_backend_views
 #: field:website.qweb,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Darrera actualització per"
 
 #. module: website_backend_views
 #: field:website.qweb,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Darrera actualització de"
 
 #. module: website_backend_views
 #: code:addons/website_backend_views/controllers/demo.py:29

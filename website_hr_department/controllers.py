@@ -28,6 +28,27 @@ from openerp.addons.website_hr.controllers.main import website_hr
 
 class WebsiteHr(website_hr):
 
+    def __get_parent_department(self, department):
+        """Return the parent department. The method perform a search
+        on the parent_id to enforce the security rules since on a manytoone
+        field, the id of the related object is always available on the record
+        but can raise an exception if it's accessed using the orm if you
+        don't have the sufficient privileges
+        """
+        parent_id_id = department.parent_id.id
+        if not parent_id_id:
+            return False
+        secure_department_env = department
+        sudo_parent = department.parent_id.sudo()
+        parent = secure_department_env.search([('id', '=', parent_id_id)])
+        while not parent and sudo_parent.id:
+            # this level in the department hierarchy is not published
+            # skip this level
+            parent = secure_department_env.search(
+                [('id', '=', sudo_parent.id)])
+            sudo_parent = sudo_parent.parent_id
+        return parent
+
     @http.route(['/page/departments',
                  '/page/departments/<model("hr.department"):department>'
                  ], type='http', auth="public", website=True)
@@ -43,10 +64,10 @@ class WebsiteHr(website_hr):
             employees = hr_employee.search(
                 [('department_id', '=', department.id)])
             breadcrumb.append(department)
-            parent = department.parent_id
+            parent = self.__get_parent_department(department)
             while parent:
                 breadcrumb.append(parent)
-                parent = parent.parent_id
+                parent = self.__get_parent_department(parent)
             breadcrumb.reverse()
         values = {
             'employees': employees,
