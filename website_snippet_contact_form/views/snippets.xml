@@ -48,7 +48,9 @@
                     <div class="col-md-7 col-sm-8">
                         <input class="form-control"
                                name="phone"
-                               type="text"/>
+                               pattern="(\+|00)[\d\s]+"
+                               placeholder="+1 541 754 3010"
+                               type="tel"/>
                     </div>
                 </div>
 
@@ -102,6 +104,16 @@
                     </div>
                 </div>
 
+                <div id="allow_attach" class="form-group">
+                    <label class="col-md-3 col-sm-4 control-label"
+                           for="filename">
+                        File Upload
+                    </label>
+                    <div class="col-md-7 col-sm-8">
+                        <input id="filename" type="file" name="filename" />
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label class="col-md-3 col-sm-4 control-label" for="terms"></label>
                     <div class="col-md-7 col-sm-8">
@@ -137,8 +149,16 @@
             data-selector-siblings="p, h1, h2, h3, blockquote, .well, .panel"
             data-selector-children=".content"
            >
+            <li class="dropdown-submenu" data-required="true">
+                <a tabindex="-1" href="#">Upload file</a>
+                <ul class="dropdown-menu">
+                    <li data-value=""><a>Not Allow</a></li>
+                    <li data-value="allow-attach"><a>Allow</a></li>
+                </ul>
+            </li>
         </div>
     </xpath>
+
 </template>
 
 </data>

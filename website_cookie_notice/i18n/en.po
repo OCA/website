@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_cookie_notice
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
@@ -18,19 +18,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_cookie_notice
-#: view:website:website.layout
-msgid ""
-".\n"
-"                        To disable them, configure your browser properly.\n"
-"                        If you keep using this website, you are accepting those."
-msgstr ".\n                        To disable them, configure your browser properly.\n                        If you keep using this website, you are accepting those."
+#: view:website:website_cookie_notice.message
+msgid ". To disable them, configure your browser properly. If you keep using this website, you are accepting those."
+msgstr ". To disable them, configure your browser properly. If you keep using this website, you are accepting those."
 
 #. module: website_cookie_notice
-#: view:website:website.layout
+#: view:website:website_cookie_notice.message
 msgid "We use cookies in this website. Read about them in our"
 msgstr "We use cookies in this website. Read about them in our"
 
 #. module: website_cookie_notice
-#: view:website:website.layout
+#: view:website:website_cookie_notice.message
 msgid "privacy policy"
 msgstr "privacy policy"

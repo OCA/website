@@ -1,0 +1,234 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_portal_purchase
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-05 19:41+0000\n"
+"PO-Revision-Date: 2015-12-30 06:29+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Access the complete Purchase application"
+msgstr "Dostop do celotne nabavne aplikacije"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Approved"
+msgstr "Odobreno"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Cancelled"
+msgstr "Preklicano"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Confirmation Date"
+msgstr "Datum potrditve"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Date:"
+msgstr "Datum:"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Done"
+msgstr "Opravljeno"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Due Date"
+msgstr "Datum zapadlosti"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid ""
+"If you wish to access the complete application to manage your orders, you "
+"can follow"
+msgstr "Če želite dostop do celotne aplikacije za upravljanje nalogov, lahko sledite"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Invoice #"
+msgstr "Račun #"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Invoice Date"
+msgstr "Datum računa"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Invoices"
+msgstr "Računi"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Invoicing Address"
+msgstr "Obračunski naslov"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "My Account"
+msgstr "Moj račun"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Order"
+msgstr "Nalog"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Paid"
+msgstr "Plačano"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+#: view:website:website_portal_purchase.request_quotations
+msgid "Print"
+msgstr "Natisni"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Problem"
+msgstr "Težava"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Purchase Order #"
+msgstr "Nabavni nalog #"
+
+#. module: website_portal_purchase
+#: view:website:website_portal.account
+msgid "Purchases"
+msgstr "Nabave"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.request_quotations
+msgid "Quotation #"
+msgstr "Predračun #"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Request for Quotation"
+msgstr "Predračunski zahtevek"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Shipping Address"
+msgstr "Naslov za odpremo"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+#: view:website:website_portal_purchase.request_quotations
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Show less"
+msgstr "Prikaži manj"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+#: view:website:website_portal_purchase.request_quotations
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Show more"
+msgstr "Prikaži več"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Subtotal"
+msgstr "Vmesni seštevek"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Taxes:"
+msgstr "Davki:"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "There are currently no invoices for your account."
+msgstr "Trenutno ni računov za vaš konto."
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "There are currently no orders for your account."
+msgstr "Trenutno ni nalogov za vaš konto."
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.request_quotations
+msgid "There are currently no quotes for your account."
+msgstr "Trenutno ni preračunov za vaš konto."
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+#: view:website:website_portal_purchase.request_quotations
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Total"
+msgstr "Skupaj"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Total:"
+msgstr "Skupaj:"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Unit Price"
+msgstr "Cena enote"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Untaxed Amount:"
+msgstr "Neobdavčeni znesek"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Waiting"
+msgstr "Čakanje"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Waiting for Payment"
+msgstr "Čakanje na plačilo"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Your Invoices and Payments"
+msgstr "Vaši računi in plačila"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Your Orders"
+msgstr "Vaši nalogi"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.request_quotations
+msgid "Your Request Quotations"
+msgstr "Vaši predračunski zahtevki"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "this link"
+msgstr "tej povezavi"

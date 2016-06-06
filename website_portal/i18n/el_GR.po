@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-28 02:04+0000\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
 "PO-Revision-Date: 2015-11-24 15:31+0000\n"
 "Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
 "Language-Team: Greek (Greece) (http://www.transifex.com/oca/OCA-website-8-0/language/el_GR/)\n"
@@ -73,7 +73,7 @@ msgid "Email"
 msgstr "Email"
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:77
+#: code:addons/website_portal/controllers/main.py:79
 #, python-format
 msgid "Invalid Email! Please enter a valid email address."
 msgstr "Μη έγκυρο Email! Παρακαλώ εισάγετε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου."
@@ -99,7 +99,7 @@ msgid "Place your content here."
 msgstr "Εισάγετε εδώ το περιεχόμενό σας."
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:94
+#: code:addons/website_portal/controllers/main.py:96
 #, python-format
 msgid "Some required fields are empty."
 msgstr "Ορισμένα απαιτούμενα πεδία είναι κενά."

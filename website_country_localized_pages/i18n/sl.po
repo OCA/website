@@ -3,13 +3,13 @@
 # * website_country_localized_pages
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-28 02:04+0000\n"
-"PO-Revision-Date: 2015-11-28 06:25+0000\n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"PO-Revision-Date: 2016-05-02 04:11+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -44,9 +44,19 @@ msgid "Current view used for country"
 msgstr "Trenutni prikaz za državo"
 
 #. module: website_country_localized_pages
+#: field:ir.ui.view.country.line,display_name:0
+msgid "Display Name"
+msgstr "Prikazni naziv"
+
+#. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,id:0
 msgid "ID"
 msgstr "ID"
+
+#. module: website_country_localized_pages
+#: field:ir.ui.view.country.line,__last_update:0
+msgid "Last Modified on"
+msgstr "Zadnjič spremenjeno"
 
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,write_uid:0

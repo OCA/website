@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+
+<template id="product_supplier_breadcrumb" name="Product Supplier Breadcrumb">
+    <div class="row">
+        <div class="col-md-6">
+            <ol id="supplier_breadcrumb" class="breadcrumb">
+                <li><a href="/my/home">Home</a></li>
+                <li t-if="main_obj">
+                    <a href="/my/supplier/product/list_only">
+                        My Products</a>
+                </li>
+                <li>
+                    <span t-esc="supplierinfo.get('product_name', False) or 'New product'"/>
+                </li>
+            </ol>
+        </div>
+    </div>
+</template>
+
+<!-- Product view for create and edit -->
+<template id="product" name="Supplier Product">
+    <t t-call="website.layout">
+        <div class="container">
+            <div class="row">
+                <div id="product_title" class="col-md-12">
+                    <h1 t-if="main_obj">Edit Product</h1>
+                    <h1 t-if="not main_obj">Add Product</h1>
+                </div>
+            </div>
+            <t t-call="website_product_supplier.product_supplier_breadcrumb"/>
+            <div id="product_help" class="row mb8">
+                <div id="add_product_help" t-if="not main_obj" class="col-md-12">
+                    <p>Add your product. You can update later in this section <a href="/my/supplier/product/list_only">My Products</a>.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Show error information -->
+                    <div class="alert alert-warning" t-if="error">
+                        <i class="fa fa-exclamation-triangle"/><span t-esc="error.get('error_name', '')"/>
+                    </div>
+                    <form id="supplier_product"
+                          t-attf-action="/my/supplier/product/save/#{main_obj and slug(main_obj) or ''}"
+                          method="post" enctype="multipart/form-data">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span t-esc="supplierinfo.get('product_name', False) or 'New product'"/></h3>
+                            </div>
+                            <div class="panel-body">
+                                <hr/>
+                                <section id="general_data">
+                                    <div class="row">
+                                        <div class="col-md-12 mb16">
+                                            <h2><span class="number-circle">1</span> General Data</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="product_image" class="col-md-3">
+                                            <span id="image"
+                                                  t-field="product.image"
+                                                  t-field-options='{"widget": "image", "class": "product_detail_img", "alt-field": "name"}'
+                                                  class="oe_form_field_image_controls"/>
+                                            <div class="text-center">
+                                                <label class="custom-file-input">
+                                                    <div class="btn btn-primary">Load Picture</div>
+                                                    <input id="file_input" class="input-file"
+                                                           type="file" name="ufile"
+                                                           accept="image/*"/>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="product_fields" class="col-md-7">
+                                            <section id="product_fields_base">
+                                                <div id="product_name" class="row">
+                                                    <div t-attf-class="col-md-8 form-group #{error.get('product_name') and 'has-error' or ''}">
+                                                        <label class="control-label">Name</label>
+                                                            <input id="product_name" class="form-control" name="product_name" placeholder="Product name..."
+                                                                   t-att-value="supplierinfo.get('product_name')"/>
+                                                    </div>
+                                                    <div t-attf-class="col-md-4 form-group #{error.get('product_code') and 'has-error' or ''}">
+                                                        <label class="control-label">Code</label>
+                                                            <input id="product_code" class="form-control" name="product_code" placeholder="Product Code..."
+                                                                   t-att-value="supplierinfo.get('product_code')"/>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </section>
+                                <hr/>
+                                <section id="price_stock">
+                                    <div class="row">
+                                        <div class="col-md-12 mb16">
+                                            <h2><span class="number-circle">2</span> Price and stock</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4"/>
+                                        <div class="col-md-8">
+                                            <div id="supplier_info" class="row">
+                                                <div t-attf-class="col-md-4 form-group #{error.get('min_qty') and 'has-error' or ''}">
+                                                    <label class="control-label">Min Quantity</label>
+                                                    <div class="controls">
+                                                        <input id="min_qty" class="form-control" name="min_qty" placeholder="Min Quantity..."
+                                                               t-att-value="supplierinfo.get('min_qty')"/>
+                                                    </div>
+                                                </div>
+                                                <div t-attf-class="col-md-4 form-group #{error.get('delay') and 'has-error' or ''}">
+                                                    <label class="control-label">Delay</label>
+                                                    <div class="controls">
+                                                        <input id="delay" class="form-control" name="delay" placeholder="Delay..."
+                                                               t-att-value="supplierinfo.get('delay')"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="price_list" class="row">
+                                                <div class="col-md-4 form-group">
+                                                    <label class="control-label">Price Min Quantity</label>
+                                                    <div class="controls">
+                                                        <input id="min_quantity" class="form-control" name="min_quantity" placeholder="Min Quantity..."
+                                                               t-att-value="pricelist and pricelist[0].min_quantity"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 form-group">
+                                                    <label class="control-label">Price</label>
+                                                    <div class="controls">
+                                                        <input id="price" class="form-control" name="price" placeholder="Price..."
+                                                               t-att-value="pricelist and pricelist[0].price"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row form-group mb64">
+                            <div class="col-md-12">
+                                <button  type="submit"
+                                         class="btn btn-primary">Save Product</button>
+                                or <a id="back_product_list"
+                                      href="/my/home">back to list</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+<template id="product_list" name="Supplier Products">
+    <h1>Your Products</h1>
+    <div class="info"/>
+    <div t-if="not suppliersinfo">
+        <p>There are currently no products for your account.</p>
+    </div>
+    <div t-if="pager" class="row">
+        <div class="products_pager">
+            <t t-call="website.pager"/>
+        </div>
+    </div>
+    <div class="row mt16 mb16">
+        <div class="col-md-6 col-md-push-6">
+            <div class="row mt16 mb16">
+                <div id="actions" class="col-md-8 pull-right">
+                    <t t-call="website_product_supplier.actions"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-6">
+            <div class="row mt16 mb16">
+                <div class="col-md-10">
+                    <t t-call="website_product_supplier.search"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="table-responsive mt8">
+                <t t-call="website_product_supplier.product_table"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div t-if="pager" class="products_pager">
+          <t t-call="website.pager"/>
+        </div>
+    </div>
+</template>
+
+<template id="product_table">
+    <table id="product_supplier" class="table table-striped ">
+        <thead>
+            <tr>
+                <th id="product_image">Picture</th>
+                <th id="product_name">Name</th>
+                <th id="price_list" class="text-right">Price</th>
+                <th id="virtual_available" class="text-right">Stock</th>
+                <th id="website_published" class="text-center">Published</th>
+                <th id="product_edit" class="text-center">Edit</th>
+                <th id="actions" class="text-center">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <t t-foreach="suppliersinfo" t-as="supplierinfo">
+                <t t-call="website_product_supplier.product_item_table"/>
+            </t>
+        </tbody>
+    </table>
+</template>
+
+<template id="product_item_table">
+    <t t-set="product" t-value="supplierinfo.product_tmpl_id"/>
+    <tr>
+        <td id="product_image">
+          <div class="oe_product_image">
+              <a itemprop="url" t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)">
+                  <img itemprop="image" class="img img-responsive"
+                       t-att-src="website.image_url(product, 'image', None if product_image_big else '90x90')"
+                       t-att-alt="supplierinfo.product_name"/>
+              </a>
+          </div>
+        </td>
+        <td id="product_name">
+            <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)" t-att-alt="supplierinfo.product_name">
+                <span t-field="supplierinfo.product_name"></span>
+            </a>
+        </td>
+        <td id="price_list" class="text-right">
+            <span t-field="supplierinfo.pricelist_ids and supplierinfo.pricelist_ids[0].price"
+                t-field-options='{"widget": "monetary", "display_currency": "user.company_id.currency_id"}'/>
+        </td>
+        <td id="virtual_available" class="text-right">
+            <span t-field="supplierinfo.product_tmpl_id.sudo().virtual_available"/>
+        </td>
+        <td id="website_published" class="text-center">
+            <span t-if="product.website_published">
+                <i class="fa fa-check"/>
+            </span>
+            <span t-if="not product.website_published">
+                <i class="fa fa-close"/>
+            </span>
+        </td>
+        <td id="product_edit" class="text-center">
+            <a t-att-href="'/my/supplier/product/%s' % slug(supplierinfo)"
+               t-att-alt="supplierinfo.product_name">
+                <span><i class="fa fa-pencil"/></span>
+            </a>
+        </td>
+        <td class="text-center">
+            <a href="" class="btn-del-product"
+               t-att-oe_model_id="supplierinfo.id"
+               t-att-alt="supplierinfo.product_name">
+                <span><i class="fa fa-trash"/></span>
+            </a>
+        </td>
+    </tr>
+</template>
+
+<template id="product_supplier_container" name="Products"
+          inherit_id="website_portal.account" primary="True">
+    <xpath expr="//div[contains(@class,'o_my_documents')]" position="replace">
+        <div class="col-md-8 o_my_documents">
+            <t t-call="website_product_supplier.product_list"/>
+            <div class="oe_structure"/>
+        </div>
+    </xpath>
+</template>
+
+<template id="product_supplier_container_form" name="Product Form"
+          inherit_id="website_portal.account" primary="True">
+    <xpath expr="//div[contains(@class,'o_my_documents')]" position="replace">
+        <div class="col-md-8 o_my_documents">
+            <t t-call="website_product_supplier.product"/>
+            <div class="oe_structure"/>
+        </div>
+    </xpath>
+</template>
+
+<template id="supplier_product_list">
+    <t t-call="website.layout">
+        <t t-call="website_product_supplier.product_list"/>
+    </t>
+</template>
+
+<template id="search" name="Search hidden fields">
+    <form t-attf-action="/my/supplier/product/list_only/" method="get" t-att-class="search_class">
+        <div class="input-group">
+            <input type="text" name="search" class="search-query form-control" placeholder="Search..." t-att-value="search"/>
+            <span class="input-group-btn">
+                <a class="btn btn-primary a-submit"><i class="fa fa-search"/></a>
+            </span>
+        </div>
+    </form>
+</template>
+
+<template id="actions" name="Website Product Supplier Actions">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Add new product" disabled="disabled"/>
+      <span class="input-group-btn">
+        <a href="/my/supplier/product/new" class="btn btn-primary pull-right">
+            <i class="fa fa-plus"></i>
+        </a>
+      </span>
+    </div>
+</template>
+
+</data>
+</openerp>

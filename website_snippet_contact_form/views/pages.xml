@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+<data>
+
+<template id="validation_error_page">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div class="oe_structure oe_empty">
+                <div class="container text-center">
+                    <h1 class="mt32">Validation Error!</h1>
+                    <h3>
+                        <span t-esc="error"/>
+                    </h3>
+                    <button class="btn btn-primary"
+                            onclick="history.back()">Go Back</button>
+                </div>
+            </div>
+            <t t-if="request.debug">
+                <t t-call="website.http_error_debug"/>
+            </t>
+        </div>
+    </t>
+</template>
+
+</data>
+</openerp>

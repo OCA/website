@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="account_supplier_products" name="Account Supplier Products"
+              inherit_id="website_portal_purchase.account" customize_show="True" active="True">
+        <xpath expr="//div[@id='home_supplier']" position="inside">
+            <t t-call="website_product_supplier.product_list" />
+        </xpath>
+    </template>
+
+</data>
+</openerp>

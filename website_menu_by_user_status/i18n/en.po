@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-03 23:14+0000\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
 "PO-Revision-Date: 2015-09-25 08:30+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
@@ -18,14 +18,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_menu_by_user_status
-#: code:addons/website_menu_by_user_status/models/website_menu.py:36
+#: code:addons/website_menu_by_user_status/models/website_menu.py:34
 #: help:website.menu,user_logged:0
 #, python-format
 msgid "If checked, the menu will be displayed when the user is logged."
 msgstr "If checked, the menu will be displayed when the user is logged."
 
 #. module: website_menu_by_user_status
-#: code:addons/website_menu_by_user_status/models/website_menu.py:43
+#: code:addons/website_menu_by_user_status/models/website_menu.py:41
 #: help:website.menu,user_not_logged:0
 #, python-format
 msgid "If checked, the menu will be displayed when the user is not logged."

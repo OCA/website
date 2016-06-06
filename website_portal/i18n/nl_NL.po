@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-05 01:59+0000\n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
 "PO-Revision-Date: 2015-12-05 21:10+0000\n"
 "Last-Translator: Mario Gielissen <mario@openworx.nl>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/oca/OCA-website-8-0/language/nl_NL/)\n"
@@ -74,7 +74,7 @@ msgid "Email"
 msgstr "E-mail"
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:77
+#: code:addons/website_portal/controllers/main.py:79
 #, python-format
 msgid "Invalid Email! Please enter a valid email address."
 msgstr "Foutieve e-mail! Gelieve een geldig e-mailadres in te geven."
@@ -100,7 +100,7 @@ msgid "Place your content here."
 msgstr "Plaats uw inhoud hier."
 
 #. module: website_portal
-#: code:addons/website_portal/controllers/main.py:94
+#: code:addons/website_portal/controllers/main.py:96
 #, python-format
 msgid "Some required fields are empty."
 msgstr "Sommige verplichte velden zijn leeg."

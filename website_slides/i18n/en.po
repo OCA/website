@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 10:22+0000\n"
-"PO-Revision-Date: 2015-11-13 14:53+0000\n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"PO-Revision-Date: 2016-05-01 20:00+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: English (http://www.transifex.com/oca/OCA-website-8-0/language/en/)\n"
 "MIME-Version: 1.0\n"
@@ -183,6 +183,16 @@ msgid "Authentified Users Only"
 msgstr "Authentified Users Only"
 
 #. module: website_slides
+#: field:slide.channel,can_see:0
+msgid "Can See"
+msgstr "Can See"
+
+#. module: website_slides
+#: field:slide.channel,can_upload:0
+msgid "Can Upload"
+msgstr "Can Upload"
+
+#. module: website_slides
 #: model:ir.actions.act_window,name:website_slides.action_ir_slide_category
 #: model:ir.ui.menu,name:website_slides.menu_action_ir_slide_category
 #: view:slide.channel:website_slides.view_slide_channel_form
@@ -334,9 +344,21 @@ msgid "Discard"
 msgstr "Discard"
 
 #. module: website_slides
+#: model:slide.slide,name:website_slides.slide_5
+msgid "Discover Odoo Point Of Sale - For Shops and Restaurants"
+msgstr "Discover Odoo Point Of Sale - For Shops and Restaurants"
+
+#. module: website_slides
 #: field:slide.slide,dislikes:0 view:website:website_slides.slide_detail_view
 msgid "Dislikes"
 msgstr "Dislikes"
+
+#. module: website_slides
+#: field:slide.category,display_name:0 field:slide.channel,display_name:0
+#: field:slide.embed,display_name:0 field:slide.slide,display_name:0
+#: field:slide.tag,display_name:0 field:website.published.mixin,display_name:0
+msgid "Display Name"
+msgstr "Display Name"
 
 #. module: website_slides
 #: help:slide.category,sequence:0 help:slide.channel,sequence:0
@@ -405,6 +427,11 @@ msgstr "Email template used when sharing a slide"
 #: view:website:website_slides.embed_slide
 msgid "Embed"
 msgstr "Embed"
+
+#. module: website_slides
+#: field:slide.slide,embed_code:0
+msgid "Embed Code"
+msgstr "Embed Code"
 
 #. module: website_slides
 #: field:slide.slide,embedcount_ids:0
@@ -495,6 +522,11 @@ msgstr "First slide"
 #: field:slide.slide,message_follower_ids:0
 msgid "Followers"
 msgstr "Followers"
+
+#. module: website_slides
+#: field:slide.channel,can_see_full:0
+msgid "Full Access"
+msgstr "Full Access"
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
@@ -610,6 +642,14 @@ msgstr "Is a Follower"
 #: field:slide.slide,message_last_post:0
 msgid "Last Message Date"
 msgstr "Last Message Date"
+
+#. module: website_slides
+#: field:slide.category,__last_update:0 field:slide.channel,__last_update:0
+#: field:slide.embed,__last_update:0 field:slide.slide,__last_update:0
+#: field:slide.tag,__last_update:0
+#: field:website.published.mixin,__last_update:0
+msgid "Last Modified on"
+msgstr "Last Modified on"
 
 #. module: website_slides
 #: field:slide.category,write_uid:0 field:slide.channel,write_uid:0
@@ -829,6 +869,14 @@ msgid ""
 msgstr "Odoo's fully-integrated marketing app will help you to attract, convert and close new leads. Check out our three-part video and discover more at www.odoo.com\n\nVideo made by Miroslava Ganzarcikova and Sophia Eribo."
 
 #. module: website_slides
+#: model:slide.slide,description:website_slides.slide_5
+msgid ""
+"Odoo's online Point of Sale software for restaurants and shops is based on a smart interface that any retail company can use without difficulty. The POS can be used online or offline and iPads, Android tablets or laptops. \n"
+"\n"
+"More info - https://www.odoo.com/page/point-of-sale"
+msgstr "Odoo's online Point of Sale software for restaurants and shops is based on a smart interface that any retail company can use without difficulty. The POS can be used online or offline and iPads, Android tablets or laptops. \n\nMore info - https://www.odoo.com/page/point-of-sale"
+
+#. module: website_slides
 #: model:slide.slide,name:website_slides.slide_9
 msgid "Open Days 2014 Infographic"
 msgstr "Open Days 2014 Infographic"
@@ -837,11 +885,6 @@ msgstr "Open Days 2014 Infographic"
 #: model:slide.slide,name:website_slides.slide_1
 msgid "Open Source Website Builder and eCommerce: OpenERP"
 msgstr "Open Source Website Builder and eCommerce: OpenERP"
-
-#. module: website_slides
-#: model:slide.slide,name:website_slides.slide_5
-msgid "OpenERP POS Indiegogo Campaign"
-msgstr "OpenERP POS Indiegogo Campaign"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_4
@@ -1180,14 +1223,6 @@ msgid ""
 "\n"
 "Online demo and download: http://openerp.com"
 msgstr "The open source OpenERP Promote tool suggests keywords according to Google most searched terms. Search Engine Optimization tools are ready to use, with no configuration required.\n\nOnline demo and download: http://openerp.com"
-
-#. module: website_slides
-#: model:slide.slide,description:website_slides.slide_5
-msgid ""
-"The presentation video for our OpenSource Pos Hardware  campaign at indiegogo: \n"
-"\n"
-"https://www.indiegogo.com/projects/opensource-your-shop/"
-msgstr "The presentation video for our OpenSource Pos Hardware  campaign at indiegogo: \n\nhttps://www.indiegogo.com/projects/opensource-your-shop/"
 
 #. module: website_slides
 #: sql_constraint:slide.slide:0

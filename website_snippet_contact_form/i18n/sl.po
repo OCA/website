@@ -3,13 +3,13 @@
 # * website_snippet_contact_form
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 10:22+0000\n"
-"PO-Revision-Date: 2015-11-19 06:07+0000\n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-16 05:28+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,16 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "+1 541 754 3010"
+msgstr "+1 541 754 3010"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Allow"
+msgstr "Dovoli"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -30,8 +40,23 @@ msgstr "E-pošta"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
+msgid "File Upload"
+msgstr "Nalaganje datoteke"
+
+#. module: website_snippet_contact_form
+#: view:website:website_snippet_contact_form.validation_error_page
+msgid "Go Back"
+msgstr "Nazaj"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
 msgid "I have read and accept the"
 msgstr "Prebral sem in sprejemam"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Not Allow"
+msgstr "Ne dovoli"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -57,6 +82,16 @@ msgstr "Predmet"
 #: view:website:website.snippets
 msgid "Tell us something!"
 msgstr "Vaša vsebina."
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Upload file"
+msgstr "Naloži datoteko"
+
+#. module: website_snippet_contact_form
+#: view:website:website_snippet_contact_form.validation_error_page
+msgid "Validation Error!"
+msgstr "Napaka overjanja!"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
