@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_product_supplier
+# * website_portal_purchase_product
 # 
 # Translators:
 # Matjaž Mozetič <m.mozetic@matmoz.si>, 2016
@@ -18,170 +18,170 @@ msgstr ""
 "Language: sl\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Add Product"
 msgstr "Dodaj proizvod"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.actions
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.actions
 msgid "Add new product"
 msgstr "Dodaj nov proizvod"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Add your product. You can update later in this section"
 msgstr "Dodaj svoj proizvod. To polje lahko posodobite tudi kasneje"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Code"
 msgstr "Koda"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Delay"
 msgstr "Zamik"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Delay..."
 msgstr "Zamik..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Delete"
 msgstr "Izbris"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Edit"
 msgstr "Urejanje"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Edit Product"
 msgstr "Uredi proizvod"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "General Data"
 msgstr "Splošni podatki"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_supplier_breadcrumb
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_supplier_breadcrumb
 msgid "Home"
 msgstr "Domov"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Load Picture"
 msgstr "Naloži sliko"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Min Quantity"
 msgstr "Min. količina"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Min Quantity..."
 msgstr "Min. količina..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
-#: view:website:website_product_supplier.product_supplier_breadcrumb
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
+#: view:website:website_portal_purchase_product.product_supplier_breadcrumb
 msgid "My Products"
 msgstr "Moji proizvodi"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Name"
 msgstr "Naziv"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Picture"
 msgstr "Slika"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Price"
 msgstr "Cena"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Price Min Quantity"
 msgstr "Cena min. količine"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Price and stock"
 msgstr "Cena in zaloga"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Price..."
 msgstr "Cena..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Product Code..."
 msgstr "Koda proizvoda..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Product name..."
 msgstr "Naziv proizvoda..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Published"
 msgstr "Objavljeno"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Save Product"
 msgstr "Shrani proizvod"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.search
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.search
 msgid "Search..."
 msgstr "Iskanje..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Stock"
 msgstr "Zaloga"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_list
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_list
 msgid "There are currently no products for your account."
 msgstr "Za vaš račun trenutno ni proizvodov."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_list
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_list
 msgid "Your Products"
 msgstr "Vaši proizvodi"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "back to list"
 msgstr "nazaj na seznam"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "or"
 msgstr "ali"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_supplier_container
-msgid "website_product_supplier.product_supplier_container"
-msgstr "website_product_supplier.product_supplier_container"
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_supplier_container
+msgid "website_portal_purchase_product.product_supplier_container"
+msgstr "website_portal_purchase_product.product_supplier_container"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_supplier_container_form
-msgid "website_product_supplier.product_supplier_container_form"
-msgstr "website_product_supplier.product_supplier_container_form"
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_supplier_container_form
+msgid "website_portal_purchase_product.product_supplier_container_form"
+msgstr "website_portal_purchase_product.product_supplier_container_form"

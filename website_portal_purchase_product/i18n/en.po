@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_product_supplier
+# * website_portal_purchase_product
 # 
 # Translators:
 msgid ""
@@ -17,170 +17,170 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Add Product"
 msgstr "Add Product"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.actions
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.actions
 msgid "Add new product"
 msgstr "Add new product"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Add your product. You can update later in this section"
 msgstr "Add your product. You can update later in this section"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Code"
 msgstr "Code"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Delay"
 msgstr "Delay"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Delay..."
 msgstr "Delay..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Delete"
 msgstr "Delete"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Edit"
 msgstr "Edit"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Edit Product"
 msgstr "Edit Product"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "General Data"
 msgstr "General Data"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_supplier_breadcrumb
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_supplier_breadcrumb
 msgid "Home"
 msgstr "Home"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Load Picture"
 msgstr "Load Picture"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Min Quantity"
 msgstr "Min Quantity"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Min Quantity..."
 msgstr "Min Quantity..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
-#: view:website:website_product_supplier.product_supplier_breadcrumb
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
+#: view:website:website_portal_purchase_product.product_supplier_breadcrumb
 msgid "My Products"
 msgstr "My Products"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Name"
 msgstr "Name"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Picture"
 msgstr "Picture"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Price"
 msgstr "Price"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Price Min Quantity"
 msgstr "Price Min Quantity"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Price and stock"
 msgstr "Price and stock"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Price..."
 msgstr "Price..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Product Code..."
 msgstr "Product Code..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Product name..."
 msgstr "Product name..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Published"
 msgstr "Published"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "Save Product"
 msgstr "Save Product"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.search
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.search
 msgid "Search..."
 msgstr "Search..."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_table
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_table
 msgid "Stock"
 msgstr "Stock"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_list
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_list
 msgid "There are currently no products for your account."
 msgstr "There are currently no products for your account."
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_list
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_list
 msgid "Your Products"
 msgstr "Your Products"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "back to list"
 msgstr "back to list"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product
 msgid "or"
 msgstr "or"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_supplier_container
-msgid "website_product_supplier.product_supplier_container"
-msgstr "website_product_supplier.product_supplier_container"
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_supplier_container
+msgid "website_portal_purchase_product.product_supplier_container"
+msgstr "website_portal_purchase_product.product_supplier_container"
 
-#. module: website_product_supplier
-#: view:website:website_product_supplier.product_supplier_container_form
-msgid "website_product_supplier.product_supplier_container_form"
-msgstr "website_product_supplier.product_supplier_container_form"
+#. module: website_portal_purchase_product
+#: view:website:website_portal_purchase_product.product_supplier_container_form
+msgid "website_portal_purchase_product.product_supplier_container_form"
+msgstr "website_portal_purchase_product.product_supplier_container_form"

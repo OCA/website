@@ -1,0 +1,6 @@
+id,name,model_id:id,groups:id,domain_force
+rule_stock_warehouse,Only portal suppliers should read warehouses,stock.model_stock_warehouse,base.group_portal,"[(user.commercial_partner_id.supplier, '=', True)]"
+rule_stock_location,Only portal suppliers should read locations,stock.model_stock_location,base.group_portal,"[(user.commercial_partner_id.supplier, '=', True)]"
+rule_stock_quant,Only portal suppliers should read quants,stock.model_stock_quant,base.group_portal,"[(user.commercial_partner_id.supplier, '=', True)]"
+rule_product_uom,Only portal suppliers should read product UOM,product.model_product_uom,base.group_portal,"[(user.commercial_partner_id.supplier, '=', True), ('active', '=', True)]"
+rule_product_supplierinfo,Portal suppliers should access only to their supplier info,product.model_product_supplierinfo,base.group_portal,"[(user.commercial_partner_id.supplier, '=', True), ('name', 'child_of', user.commercial_partner_id.ids), ('name.active', '=', True)]"

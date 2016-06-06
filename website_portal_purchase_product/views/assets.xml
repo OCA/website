@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+<odoo>
 
 <template id="assets_frontend" inherit_id="website.assets_frontend"
-          name="website_product_supplier assets">
+          name="website_portal_purchase_product assets">
     <xpath expr="." position="inside">
-        <script type="text/javascript"
-                src="/website_product_supplier/static/src/js/website_product_supplier.js"></script>
-        <link rel="stylesheet" href="/website_product_supplier/static/src/css/theme.css"/>
+        <link rel="stylesheet"
+              href="/website_portal_purchase_product/static/src/sass/website_portal_purchase_product.sass"/>
     </xpath>
 </template>
 
-</data>
-</openerp>
+</odoo>

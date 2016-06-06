@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+<!-- Product view for create and edit -->
+<template id="products_followup" name="Supplier Product">
+    <t t-call="website_portal_v10.portal_layout">
+        <div id="wrap" class="o_my_purchase_product_form container">
+            <section id="product_title" class="row">
+                <div class="col-md-12">
+                    <h1>
+                        <t t-if="product">
+                            Edit Product
+                            <span t-esc="product.name"/>
+                        </t>
+                        <t t-if="not product">Add Product</t>
+                    </h1>
+                </div>
+            </section>
+            <t t-call="website_portal_purchase_product.form_breadcrumb"/>
+            <div class="oe_structure"/>
+            <t t-call="website_portal_purchase_product.form_actions"/>
+            <form id="supplier_product"
+                  action=""
+                  method="post"
+                  enctype="multipart/form-data"
+                  class="container">
+                <input type="hidden"
+                       name="csrf_token"
+                       t-att-value="request.csrf_token()"/>
+
+                <t t-call="website_portal_purchase_product.form_basic"/>
+                <t t-call="website_portal_purchase_product.form_conditions"/>
+                <t t-call="website_portal_purchase_product.form_extra"/>
+                <t t-if="errors">
+                    <t t-call="website_portal_purchase_product.form_errors"/>
+                </t>
+
+                <section class="row o_submit">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-floppy-o"/>
+                            Save
+                        </button>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </t>
+</template>
+
+<template id="form_breadcrumb" name="Purchase Portal Product Breadcrumb">
+    <div class="row">
+        <div class="col-md-12">
+            <ol class="breadcrumb mt8">
+                <li>
+                    <a href="/my/home">
+                        <i class="fa fa-home"/>
+                    </a>
+                </li>
+                <li>
+                    <a t-attf-href="/my/purchase/products?#{keep_query()}">
+                        My Products
+                    </a>
+                </li>
+                <li>
+                    <t t-if="product">
+                        <t t-esc="product.name"/>
+                    </t>
+                    <t t-if="not product">
+                        New Product
+                    </t>
+                </li>
+            </ol>
+        </div>
+    </div>
+</template>
+
+<template id="form_actions" name="Purchase Portal Product Form Actions">
+    <div class="row mt8 mb8">
+        <div class="col-md-12">
+            <t t-call="website_portal_purchase_product.publish_management">
+                <t t-set="style" t-value="'display: inline-block'"/>
+                <t t-set="object" t-value="product"/>
+            </t>
+            <t t-if="product.id">
+                <a class="btn btn-default"
+                   target="_blank"
+                   t-attf-href="/shop/product/#{slug(product)}">
+                    <i class="fa fa-eye"/>
+                    Preview
+                </a>
+                <a class="btn btn-danger"
+                   t-attf-href="/my/purchase/products/#{slug(product)}/disable">
+                    <i class="fa fa-trash"/>
+                    Delete
+                </a>
+            </t>
+        </div>
+    </div>
+</template>
+
+<template id="form_panel" name="Purchase Portal Product Base Panel Layout">
+    <section class="row">
+        <div class="col-md-12">
+            <div t-attf-class="panel #{panel_class or 'panel-default'}">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <t t-esc="section_title"/>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <t t-raw="0"/>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template id="form_errors" name="Purchase Portal Product Error">
+    <t t-call="website_portal_purchase_product.form_panel">
+        <t t-set="panel_class" t-value="'panel-danger'"/>
+        <t t-set="section_title">
+            <t>Error(s) found</t>
+        </t>
+        <t t-foreach="errors.values()" t-as="error">
+            <p>
+                <b t-esc="error['human']"/>:
+                <span t-esc="'; '.join(error['errors'])"/>
+            </p>
+        </t>
+    </t>
+</template>
+
+<template id="form_basic" name="Purchase Portal Product Basic Data">
+    <t t-call="website_portal_purchase_product.form_panel">
+        <t t-set="section_title">
+            <t>General Data</t>
+        </t>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="image"
+                              t-field="product.image"
+                              t-field-options='{"widget": "image"}'/>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="image">
+                                Change Picture
+                                <input id="image"
+                                       class="input-file"
+                                       type="file"
+                                       name="image"
+                                       accept="image/*"/>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div t-attf-class="col-md-12 form-group #{errors.get('name') and 'has-error'}">
+                        <label for="name">Name</label>
+                        <input class="form-control"
+                               name="name"
+                               id="name"
+                               required="required"
+                               placeholder="Product name..."
+                               t-att-value="product.name"/>
+                    </div>
+                    <div t-attf-class="col-md-6 form-group #{errors.get('type') and 'has-error'}">
+                        <label for="type">Type</label>
+                        <select class="form-control"
+                                name="type"
+                                required="required"
+                                id="type">
+                            <t t-foreach="product._fields['type'].get_description(env)['selection']"
+                               t-as="option">
+                                <option
+                                    t-att-selected="option[0] == product.type and 'selected'"
+                                    t-att-value="option[0]"
+                                    t-esc="option[1]"/>
+                            </t>
+                        </select>
+                    </div>
+                    <div t-attf-class="col-md-6 form-group #{errors.get('price') and 'has-error'}">
+                        <label for="price">Sale price</label>
+                        <div class="input-group">
+                            <t t-if="website.currency_id.position == 'before'">
+                                <span class="input-group-addon"
+                                      t-esc="website.currency_id.symbol"/>
+                            </t>
+                            <input id="price"
+                                   class="form-control"
+                                   name="price"
+                                   placeholder="E.g. 1.55"
+                                   required="required"
+                                   type="number"
+                                   min="0"
+                                   step="0.01"
+                                   t-att-value="product.price"/>
+                            <t t-if="website.currency_id.position == 'after'">
+                                <span class="input-group-addon"
+                                      t-esc="website.currency_id.symbol"/>
+                            </t>
+                        </div>
+                    </div>
+                    <div t-attf-class="col-md-12 form-group #{errors.get('description_sale') and 'has-error'}">
+                        <label for="description_sale">Description</label>
+                        <textarea class="form-control"
+                                  name="description_sale"
+                                  id="description_sale"
+                                  rows="6"
+                                  placeholder="Product description for sales..."
+                                  t-esc="product.description_sale"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+<template id="form_conditions" name="Purchase Portal Product Prices Data">
+    <t t-call="website_portal_purchase_product.form_panel">
+        <t t-set="section_title">
+            <t>Purchase Conditions</t>
+        </t>
+        <t t-set="supplierinfo_ids"
+           t-value="env['product.supplierinfo'].search(
+            [('id', 'in', product.seller_ids.ids),
+             ('name', 'child_of', user_id.commercial_partner_id.ids)])">
+        </t>
+        <t t-foreach="supplierinfo_ids" t-as="supplierinfo">
+            <t t-if="supplierinfo.name == user_id.commercial_partner_id">
+                <t t-call="website_portal_purchase_product.supplierinfo_conditions"/>
+            </t>
+        </t>
+
+        <!-- Add one empty supplierinfo at least -->
+        <t t-if="not supplierinfo_ids">
+            <t t-call="website_portal_purchase_product.supplierinfo_conditions">
+                <t t-set="supplierinfo" t-value="supplierinfo_ids"/>
+            </t>
+        </t>
+    </t>
+</template>
+
+<template id="form_extra">
+    <t t-call="website_portal_purchase_product.form_panel">
+        <t t-set="section_title">
+            <t>Additional Data</t>
+        </t>
+        <div class="row">
+            <div t-attf-class="col-md-4 form-group #{errors.get('weight') and 'has-error'}">
+                <label>
+                    Weight per unit (not including packaging)
+                </label>
+                <div class="input-group">
+                    <input id="weight"
+                           class="form-control"
+                           name="weight"
+                           placeholder="E.g. 1"
+                           type="number"
+                           min="0"
+                           t-att-value="product.weight"/>
+                    <span class="input-group-addon">
+                        kg.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+<template id="supplierinfo_conditions">
+    <div class="row">
+        <t t-set="field_name"
+           t-value="'supplierinfo_{:d}_min_qty'.format(supplierinfo.id)"/>
+        <div t-attf-class="col-md-4 form-group #{errors.get(field_name) and 'has-error'}">
+            <label t-att-for="field_name">Minimal quantity per order</label>
+            <div class="input-group">
+                <input t-att-id="field_name"
+                       class="form-control"
+                       t-att-name="field_name"
+                       placeholder="E.g. 1"
+                       type="number"
+                       min="1"
+                       t-att-value="supplierinfo.min_qty"/>
+                <span class="input-group-addon">
+                    units
+                </span>
+            </div>
+        </div>
+
+        <t t-set="field_name"
+           t-value="'supplierinfo_{:d}_delay'.format(supplierinfo.id)"/>
+        <div t-attf-class="col-md-4 form-group #{errors.get(field_name) and 'has-error'}">
+            <label t-att-for="field_name">Delivery delay</label>
+            <div class="input-group">
+                <input t-att-id="field_name"
+                       class="form-control"
+                       t-att-name="field_name"
+                       placeholder="E.g. 1"
+                       type="number"
+                       min="0"
+                       t-att-value="supplierinfo.delay"/>
+                <span class="input-group-addon">
+                    days
+                </span>
+            </div>
+        </div>
+
+        <t t-set="field_name"
+           t-value="'supplierinfo_{:d}_price'.format(supplierinfo.id)"/>
+        <div t-attf-class="col-md-4 form-group #{errors.get(field_name) and 'has-error'}">
+            <label t-att-for="field_name">Purchase price</label>
+            <div class="input-group">
+                <t t-if="website.currency_id.position == 'before'">
+                    <span class="input-group-addon"
+                          t-esc="website.currency_id.symbol"/>
+                </t>
+                <input t-att-id="field_name"
+                       class="form-control"
+                       t-att-name="field_name"
+                       placeholder="E.g. 1.15"
+                       type="number"
+                       min="0"
+                       t-att-value="supplierinfo.price"/>
+                <t t-if="website.currency_id.position == 'after'">
+                    <span class="input-group-addon"
+                          t-esc="website.currency_id.symbol"/>
+                </t>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="publish_management"
+          inherit_id="website.publish_management"
+          primary="True">
+    <xpath expr="//div[@groups]" position="attributes">
+        <attribute name="groups">base.group_portal</attribute>
+        <attribute name="class">css_editable_mode_hidden</attribute>
+    </xpath>
+    <xpath expr="//div[contains(@t-attf-class, 'js_publish_management')]"
+           position="attributes">
+        <attribute name="t-attf-class">js_publish_management #{object.website_published and 'css_published' or 'css_unpublished'}</attribute>
+    </xpath>
+    <xpath expr="//button[@data-toggle='dropdown']" position="replace"/>
+    <xpath expr="//ul" position="replace"/>
+</template>
+
+</odoo>

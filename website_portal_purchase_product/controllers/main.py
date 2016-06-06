@@ -1,239 +1,272 @@
 # -*- coding: utf-8 -*-
 # (c) 2015 Antiun Ingeniería S.L. - Sergio Teruel
 # (c) 2015 Antiun Ingeniería S.L. - Carlos Dauden
-# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+# © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+
 import base64
+from contextlib import contextmanager
+from werkzeug.exceptions import Forbidden
+from openerp import _
+from openerp.http import local_redirect, request, route
+from openerp.addons.website_portal_purchase.controllers.main import (
+    PortalPurchaseWebsiteAccount,
+)
+from openerp.addons.website_form.controllers.main import WebsiteForm
+from ..exceptions import FormSaveError
 
-from openerp import http
-from openerp.http import request
 
-from openerp.addons.website_portal.controllers.main import WebsiteAccount
+class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
+    def _purchase_product_domain(self, query=None):
+        """Domain to find products or product templates.
 
-
-PPG = 10  # Products Per Page
-
-
-class WebsiteProductSupplier(http.Controller):
-
-    mandatory_product_fields = ['product_name']
-    optional_product_fields = ['product_code', 'min_qty', 'delay']
-
-    def _get_mandatory_product_fields(self):
-        return self.mandatory_product_fields
-
-    def _get_optional_product_fields(self):
-        return self.optional_product_fields
-
-    def check_product_form_validate(self, data):
-        error = dict()
-        for field_name in self._get_mandatory_product_fields():
-            if not data.get(field_name):
-                error[field_name] = 'missing'
-        return error
-
-    def _post_prepare_supplierinfo_query(self, supplierinfo_dic, data):
-        return supplierinfo_dic
-
-    def supplierinfo_field_parse(self, data):
-        # set mandatory and optional fields
-        all_fields = (
-            self._get_mandatory_product_fields() +
-            self._get_optional_product_fields())
-        # set data
-        if isinstance(data, dict):
-            supplierinfo_dic = dict(
-                (field_name, data[field_name]) for field_name in
-                all_fields if field_name in data)
-        else:
-            supplierinfo_dic = dict(
-                (field_name, getattr(data, field_name)) for field_name in
-                all_fields)
-        supplierinfo_dic = self._post_prepare_supplierinfo_query(
-            supplierinfo_dic, data)
-        return supplierinfo_dic
-
-    @http.route([
-        '/my/supplier/product/<model("product.supplierinfo"):supplierinfo>',
-        '/my/supplier/product/new'
-    ], type='http', auth="user", website=True)
-    def supplier_info(self, supplierinfo=None, category='', search='', **post):
-        if supplierinfo and supplierinfo.name != request.env.user.partner_id:
-            return request.website.render('website.404')
-
-        values = {
-            'search': search,
-            'category': category,
-            'error': {},
-            'user': request.env.user,
-        }
-        if supplierinfo is None:
-            supplierinfo = request.env['product.supplierinfo']
-        supplierinfo = supplierinfo.sudo()
-        form_vals = self.supplierinfo_field_parse(supplierinfo)
-        values.update(self._prepare_render_values(supplierinfo, form_vals))
-        return request.website.render(
-            "website_product_supplier.product", values)
-
-    def _prepare_render_values(self, supplierinfo, form_vals):
-        values = {
-            'main_obj': supplierinfo,
-            'supplierinfo': form_vals,
-            'product': supplierinfo.product_tmpl_id,
-            'user': request.env.user,
-            'pricelist': supplierinfo.pricelist_ids,
-        }
-        return values
-
-    @http.route('/my/supplier/product/save/', type='http', auth="user",
-                website=True)
-    def supplier_info_create(self, **post):
-        supplierinfo = request.env['product.supplierinfo'].sudo()
-        form_vals = self.supplierinfo_field_parse(post)
-        values = self._prepare_render_values(supplierinfo, form_vals)
-        values['error'] = self.check_product_form_validate(form_vals)
-        if values["error"]:
-            return request.website.render(
-                "website_product_supplier.product",
-                values)
-
-        product_vals = {'name': form_vals.get('product_name')}
-        if post.get('ufile', False):
-            product_vals.update(
-                image=base64.encodestring(post['ufile'].read()))
-        product = supplierinfo.product_tmpl_id.create(
-            self._prepare_product_values(product_vals))
-        form_vals.update({
-            'name': request.env.user.partner_id.id,
-            'product_tmpl_id': product.id,
-            'pricelist_ids': [(0, 0, {
-                'min_quantity': post.get('min_quantity', 0.0),
-                'price': post.get('price', 0.0)})]
-        })
-        values['product'] = product
-        try:
-            supplierinfo = supplierinfo.create(
-                self._prepare_supplierinfo_values(
-                    supplierinfo, product, form_vals, post))
-            values.update({
-                'product': product,
-                'main_obj': supplierinfo,
-                'pricelist': supplierinfo.pricelist_ids
-            })
-        except:
-            values.update(error={'error_name': 'Invalid fields'})
-            return request.website.render(
-                "website_product_supplier.product",
-                values)
-        return http.redirect_with_hash(
-            '/my/supplier/product/%s' % supplierinfo.id)
-
-    @http.route('/my/supplier/product/save/<model("product.supplierinfo"):supp'
-                'lierinfo>', type='http', auth="user", website=True)
-    def supplier_info_save(self, supplierinfo=None, **post):
-        if supplierinfo.name != request.env.user.partner_id:
-            return request.website.render('website.404')
-        supplierinfo = supplierinfo.sudo()
-        form_vals = self.supplierinfo_field_parse(post)
-        values = self._prepare_render_values(supplierinfo, form_vals)
-        values['error'] = self.check_product_form_validate(form_vals)
-        if values["error"]:
-            return request.website.render(
-                "website_product_supplier.product",
-                values)
-        try:
-            form_vals.update({
-                'pricelist_ids': [(1, supplierinfo.pricelist_ids[0].id, {
-                    'min_quantity': post.get('min_quantity', 0.0),
-                    'price': post.get('price', 0.0)})]})
-            supplierinfo.write(self._prepare_supplierinfo_values(
-                supplierinfo, supplierinfo.product_tmpl_id, form_vals, post))
-        except:
-            values.update(error={'error_name': 'Invalid fields'})
-            return request.website.render(
-                "website_product_supplier.product",
-                values)
-        return http.redirect_with_hash(
-            '/my/supplier/product/%s' % supplierinfo.id)
-
-    def _prepare_supplierinfo_values(self, supplierinfo, product, vals, post):
-        # Hook to rewrite
-        return vals
-
-    def _prepare_product_values(self, vals):
-        # Hook to rewrite
-        return vals
-
-    def _prepare_supplierinfo_list(self, supplierinfo, pager):
-        values = {
-            'suppliersinfo': supplierinfo,
-            'pager': pager,
-            'user': request.env.user,
-        }
-        return values
-
-    def _get_search_domain(self, search=None):
-        domain = [('name', '=', request.env.user.partner_id.id)]
-        if search:
-            for srch in search.split(" "):
-                domain += [
-                    ('product_name', 'ilike', srch),
-                ]
+        :param str query:
+            Text filter applied by the user.
+        """
+        domain = [
+            ("seller_ids.name", "child_of",
+             request.env.user.commercial_partner_id.ids),
+        ]
+        if query:
+            terms = query.split()
+            if terms:
+                for term in terms:
+                    domain += [
+                        "|",
+                        ("name", "ilike", term),
+                        ("description_sale", "ilike", term)
+                    ]
         return domain
 
-    @http.route(['/my/supplier/product/list',
-                 '/my/supplier/product/list/page/<int:page>'],
-                type='http', auth="user", website=True)
-    def supplierinfo_list(self, page=0, **post):
-        supplierinfo_obj = request.env['product.supplierinfo']
-        domain = self._get_search_domain(post.get('search', ''))
-        url = "/my/supplier/product/list_only"
-        supplierinfo_count = supplierinfo_obj.search_count(domain)
+    def _purchase_product_update(self, product, post):
+        """Update the product with the received form values.
 
+        :param product.template product:
+            Product record to update.
+
+        :param dict post:
+            Values as they came from the form.
+
+        :return dict:
+            Mapping of form::
+
+                {
+                    'field_name': {
+                        'human': 'human-readable field name',
+                        'errors': [
+                            'Error message',
+                            ...
+                        ],
+                    },
+                    ...
+                }
+        """
+        errors = dict()
+        supplierinfo_found = dict()
+        SupplierInfo = request.env["product.supplierinfo"]
+        required = self._purchase_product_required_fields()
+
+        try:
+            with request.env.cr.savepoint():
+                for form_field, value in post.iteritems():
+                    # Select the right supplierinfo record
+                    if form_field.startswith("supplierinfo_"):
+                        id_, db_field = form_field.split("_", 2)[1:]
+                        id_ = int(id_)
+                        try:
+                            record = supplierinfo_found[id_]
+                        except KeyError:
+                            supplierinfo_found[id_] = record = (
+                                SupplierInfo.browse(id_) if id_
+                                else SupplierInfo.new({
+                                    "product_id": product.id,
+                                    "name": (request.env.user
+                                             .commercial_partner_id),
+                                }))
+
+                    # Select the product record
+                    else:
+                        record, db_field = product, form_field
+
+                    # Required fields cannot be empty
+                    if form_field in required:
+                        required.discard(form_field)
+                        if not value:
+                            self._purchase_product_add_error(
+                                errors, product, form_field, db_field,
+                                _("Required field"))
+                            continue
+
+                    # Try to save the converted received value
+                    try:
+                        with request.env.cr.savepoint():
+                            self._set_field(record, db_field, value)
+
+                    # If it fails, log the error
+                    except Exception as error:
+                        self._purchase_product_add_error(
+                            errors, record, form_field, db_field,
+                            ": ".join(a or "" for a in error.args))
+
+                # No more required fields should remain now
+                for form_field in required:
+                    self._purchase_product_add_error(
+                        errors, product, form_field, db_field,
+                        _("Required field"))
+
+                # Rollback if there were errors
+                if errors:
+                    raise FormSaveError()
+
+        # This is just to force rollback to first savepoint
+        except FormSaveError:
+            pass
+
+        return errors
+
+    def _purchase_product_required_fields(self):
+        """These fields must be filled."""
+        return {"name", "type", "price"}
+
+    def _purchase_product_add_error(self, errors, record, form_field, db_field,
+                                    message):
+        """Save an error while processing the form.
+
+        :param dict errors:
+            Errors dict to be modified.
+
+        :param models.Model record:
+            Will extract the human-readable field name from this record.
+
+        :param str form_field:
+            Name of the field in the form that produced the error.
+
+        :param str db_field:
+            Name of the field in the :param:`record`.
+
+        :param str message:
+            Error message.
+
+        :return dict:
+            Returns the modified :param:`errors` dict.
+        """
+        if form_field not in errors:
+            errors[form_field] = {
+                "human":
+                    record._fields[db_field]
+                    .get_description(request.env)["string"],
+                "errors": list(),
+            }
+        errors[form_field]["errors"].append(message)
+        return errors
+
+    def _set_field(self, record, field_name, value):
+        """Set a field's value."""
+        if value == "":
+            value = False
+        else:
+            website_form = WebsiteForm()
+            converter = website_form._input_filters[
+                record._fields[field_name].get_description(request.env)
+                ["type"]]
+            value = converter(website_form, field_name, value)
+        record[field_name] = value
+
+    @route(["/my/purchase/products",
+            "/my/purchase/products/page/<int:page>"],
+           type='http', auth="user", website=True)
+    def portal_my_purchase_products(self, page=1, date_begin=None,
+                                    date_end=None, search=None, **post):
+        values = self._prepare_portal_layout_values()
+        url = "/my/purchase/products"
+        ProductTemplate = request.env["product.template"].with_context(
+            pricelist=request.website.get_current_pricelist().id)
+        domain = self._purchase_product_domain(search)
+        archive_groups = self._get_archive_groups(
+            ProductTemplate._name, domain)
+        if date_begin and date_end:
+            domain += [("create_date", ">=", date_begin),
+                       ("create_date", "<", date_end)]
+
+        # Make pager
+        count = ProductTemplate.search_count(domain)
+        url_args = post.copy()
+        url_args.update({
+            "date_begin": date_begin,
+            "date_end": date_end,
+            "search": search,
+        })
         pager = request.website.pager(
-            url=url, total=supplierinfo_count, page=page, step=PPG, scope=7,
-            url_args=post)
-        supplierinfo = supplierinfo_obj.search(
-            domain, limit=PPG, offset=pager['offset'])
+            url=url,
+            url_args=url_args,
+            total=count,
+            page=page,
+            step=self._items_per_page,
+        )
 
-        values = self._prepare_supplierinfo_list(supplierinfo, pager)
+        # Sarch the count to display, according to the pager data
+        products = ProductTemplate.search(
+            domain, limit=self._items_per_page, offset=pager["offset"])
+
+        values.update({
+            "archive_groups": archive_groups,
+            "date": date_begin,
+            "default_url": url,
+            "pager": pager,
+            "products": products,
+            "search": search,
+        })
 
         return request.website.render(
-            "website_product_supplier.product", values)
+            "website_portal_purchase_product.portal_my_products", values)
 
-    @http.route(['/my/supplier/product/list_only',
-                 '/my/supplier/product/list_only/page/<int:page>'],
-                type='http', auth="user", website=True)
-    def supplier_product_list(self, page=0, **post):
-        res = self.supplierinfo_list(page, **post)
-        res.template = "website_product_supplier.supplier_product_list"
-        return res
+    @route(
+        ['/my/purchase/products/<model("product.template"):product>',
+         '/my/purchase/products/new'],
+        type='http', auth="user", website=True)
+    def my_purchase_product_form(self, product=None, **kwargs):
+        """Display a form to edit or create a product.
 
-    @http.route(['/my/supplier/product/delete'], type='json',
-                auth="user", website=True)
-    def delete_product(self, supplierinfo_id):
-        supplierinfo = request.env['product.supplierinfo'].browse(
-            int(supplierinfo_id))
-        if len(supplierinfo.product_tmpl_id.seller_ids) == 1:
-            res = supplierinfo.product_tmpl_id.unlink()
+        :param "new"/product.template prodcut:
+            Product we are editing. If the user has no access, this will
+            automatically raise a ``403 Forbidden`` error.
+        """
+        # Only show forms for those that can edit or create their products
+        if product:
+            product.check_access_rule("write")
         else:
-            res = supplierinfo.unlink()
-        return res
+            product = request.env["product.template"]
+            product.check_access_rights("create")
 
+        # Prepare form
+        values = self._prepare_portal_layout_values()
+        values["product"] = (
+            product or product.new()).with_context(
+                pricelist=request.website.get_current_pricelist().id)
 
-class ProductSupplierWebsiteAccount(WebsiteAccount):
+        values["errors"] = (self._purchase_product_update(product, kwargs)
+                            if kwargs else dict())
+        return request.website.render(
+            "website_portal_purchase_product.products_followup", values)
 
-    @http.route(['/my/home'], type='http', auth="user", website=True)
-    def account(self, **kw):
-        response = super(ProductSupplierWebsiteAccount, self).account(**kw)
-        if not request.env.user.partner_id.supplier:
-            return response
-        supplierinfo_obj = request.env['product.supplierinfo']
-        domain = [('name', '=', request.env.user.partner_id.id)]
-        supplierinfo = supplierinfo_obj.search(domain, limit=PPG)
-        values = {
-            'suppliersinfo': supplierinfo,
-            'pager': False,
-            'user': request.env.user,
-        }
-        response.qcontext.update(values)
+    @route(
+        ["/my/purchase/products/<model('product.template'):product>/disable"],
+        type="http", auth="user", website=True)
+    def my_purchase_product_disable(self, product,
+                                    redirect="/my/purchase/products"):
+        """This product will disappear from the supplier's panel.
+
+        They will think it was deleted, but it was just disabled.
+        """
+        product.website_published = product.active = False
+        return local_redirect(redirect, kwargs)
+
+    @route()
+    def account(self):
+        """Display product count in account summary for suppliers."""
+        response = super(ProductPortalPurchaseWebsiteAccount, self).account()
+        if "supplier_order_count" in response.qcontext:
+            response.qcontext["supplier_product_count"] = (
+                request.env['product.template']
+                .search_count(self._purchase_product_domain()))
         return response
