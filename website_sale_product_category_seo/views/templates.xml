@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="products_categories_cms" inherit_id="website_sale.products" name="Public Category CMS Block">
+        <xpath expr="//div[@id='products_grid']//*[1]" position="before">
+            <div t-if="category">
+                <div t-field="category.cms_top" id="category_cms_top"/>
+            </div>
+        </xpath>
+        <xpath expr="//div[@class='products_pager'][2]" position="after">
+            <div t-if="category">
+                <div t-field="category.cms_bottom" id="category_cms_bottom"/>
+            </div>
+        </xpath>
+    </template>
+
+</data>
+</openerp>

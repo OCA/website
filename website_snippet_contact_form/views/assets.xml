@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<template id="assets_frontend" inherit_id="website.assets_frontend"
+          name="website_snippet_contact_form assets">
+    <xpath expr="." position="inside">
+        <link rel="stylesheet" href="/website_snippet_contact_form/static/src/css/style.css"/>
+    </xpath>
+</template>
+
+</data>
+</openerp>

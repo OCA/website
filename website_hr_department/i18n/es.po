@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_hr_department
+# 
+# Translators:
+# Carles Antolí <carlesantoli@hotmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-23 10:22+0000\n"
+"PO-Revision-Date: 2015-11-12 17:49+0000\n"
+"Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_hr_department
+#: field:hr.department,website_published:0
+msgid "Available in the website"
+msgstr "Disponible en la página web"
+
+#. module: website_hr_department
+#: view:website:website_hr_department.departments
+#: model:website.menu,name:website_hr_department.menu_departments
+msgid "Departments"
+msgstr "Departamentos"
+
+#. module: website_hr_department
+#: view:website:website_hr_department.department_info
+#: view:website:website_hr_department.departments
+msgid "Our Team"
+msgstr "Nuestro Equipo"
+
+#. module: website_hr_department
+#: view:website:website_hr_department.departments
+msgid "Our departments"
+msgstr "Nuestros Departamentos"
+
+#. module: website_hr_department
+#: view:website:website_hr_department.departments
+msgid ""
+"Our products are designed for small to medium size companies willing to optimize\n"
+"                                        their performance."
+msgstr "Nuestros productos están diseñados para pequeñas y medianas empresas que deseen optimizar su rendimiento."
+
+#. module: website_hr_department
+#: field:hr.department,public_info:0
+msgid "Public Info"
+msgstr "Información Pública"
+
+#. module: website_hr_department
+#: view:website:website_hr_department.departments
+msgid ""
+"We are a team of passionate people whose goal is to improve everyone's\n"
+"                                        life through disruptive products. We build great products to solve your\n"
+"                                        business problems."
+msgstr "Somos un equipo de personas apasionadas cuyo objetivo es mejorar la vida de todos a través de productos disruptivos. Construimos grandes productos para resolver sus problemas de negocio."
+
+#. module: website_hr_department
+#: model:ir.actions.act_url,name:website_hr_department.action_open_website
+msgid "Website Departments"
+msgstr "Departamentos del Sitio Web"
+
+#. module: website_hr_department
+#: view:website:website_hr_department.departments
+msgid "col-md-9"
+msgstr "col-md-9"

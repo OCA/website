@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Antiun Ingeniería S.L. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+<data>
+
+<!-- Call this template in your owner's website page to get a carousel.
+     It needs a `multi_image_owner` variable set. -->
+<template id="carousel">
+    <div id="multi_image_carousel"
+         t-if="multi_image_owner.image_ids"
+         class="carousel slide mb32">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <t t-foreach="multi_image_owner.image_ids" t-as="image">
+                <li data-target="#multi_image_carousel"
+                    data-slide-to="0"
+                    t-att-class="'active' if image_first else None"/>
+            </t>
+        </ol>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <t t-foreach="multi_image_owner.image_ids" t-as="image">
+                <div
+                    t-attf-class="item #{'active' if image_first else ''}"
+                    t-attf-style="background-image: url('#{website.image_url(image, 'image_main')}')">
+                    <div class="carousel-caption">
+                        <h3 t-esc="image.display_name"/>
+                    </div>
+                </div>
+            </t>
+        </div>
+
+        <!-- Controls -->
+        <div
+            class="carousel-control left"
+            data-target="#multi_image_carousel"
+            data-slide="prev">
+            <i class="fa fa-chevron-left"/>
+        </div>
+        <div
+            class="carousel-control right"
+            data-target="#multi_image_carousel"
+            data-slide="next">
+            <i class="fa fa-chevron-right"/>
+        </div>
+    </div>
+</template>
+
+</data>
+</openerp>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;AAKI,2BAAK;EACD,MAAM,EAAE,KAAK;EACb,mBAAmB,EAAE,MAAM",
+"sources": ["website_multi_image.sass"],
+"names": [],
+"file": "website_multi_image.css"
+}

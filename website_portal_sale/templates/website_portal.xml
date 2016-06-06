@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <template id="account" name="Account" inherit_id="website_portal.account">
+        <xpath expr="//ul[contains(@name,'account-content-nav')]" position="inside">
+            <t t-if="user_id.partner_id.customer">
+                <li class="active"><a data-toggle="tab" href="#home_customer">Sales</a></li>
+            </t>
+        </xpath>
+        <xpath expr="//div[contains(@name,'account-content')]" position="inside">
+            <t t-if="user_id.partner_id.customer">
+                <div id="home_customer" class="tab-pane fade in active">
+                </div>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="account_quotations" name="Account Quotations"
+              inherit_id="website_portal_sale.account" customize_show="True"
+              active="True" priority="5">
+        <xpath expr="//div[@id='home_customer']" position="inside">
+            <t t-call="website_portal_sale.quotations" />
+        </xpath>
+    </template>
+
+    <template id="account_orders" name="Account Orders"
+              inherit_id="website_portal_sale.account" customize_show="True"
+              active="True" priority="10">
+        <xpath expr="//div[@id='home_customer']" position="inside">
+            <t t-call="website_portal_sale.sale_orders" />
+        </xpath>
+    </template>
+
+    <template id="account_invoices" name="Account Invoices"
+              inherit_id="website_portal_sale.account" customize_show="True"
+              active="True" priority="15">
+        <xpath expr="//div[@id='home_customer']" position="inside">
+            <t t-call="website_portal_sale.invoices" />
+        </xpath>
+    </template>
+
+</data>
+</openerp>

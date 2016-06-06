@@ -1,0 +1,1404 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_slides
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-19 07:26+0000\n"
+"PO-Revision-Date: 2015-06-19 07:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_slides
+#: model:email.template,body_html:website_slides.slide_template_shared
+msgid "\n"
+"<div style=\"padding:0px; margin:0px;\">\n"
+"<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n"
+"    <tbody><tr>\n"
+"        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n"
+"            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n"
+"                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n"
+"            </a>\n"
+"        </td>\n"
+"    </tr></tbody>\n"
+"</table>\n"
+"</div>\n"
+"<div style=\"padding:0px; margin:0px;\">\n"
+"<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n"
+"    <tbody><tr>\n"
+"        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n"
+"            <h2 style=\"margin:0px;\">\n"
+"                ${user.name} shared the ${object.slide_type} ${object.name} with you!\n"
+"            </h2>\n"
+"        </td>\n"
+"    </tr><tr>\n"
+"        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n"
+"            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n"
+"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\"\n"
+"                    style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n"
+"            </a>\n"
+"            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n"
+"            <p style=\"color: #ccc;\">Published on ${object.write_date}</p>\n"
+"            <p><a href=\"${object.website_url}\">Click here to open the ${object.slide_type}</a></p>\n"
+"        </td>\n"
+"    </tr></tbody>\n"
+"</table>\n"
+"</div>\n"
+"<div style=\"padding:0px; margin:0px;\">\n"
+"<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n"
+"    <tbody><tr>\n"
+"        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n"
+"            <a href=\"${object.website_url}\" style=\"color:#a24689\">View in browser</a> |\n"
+"            <a href=\"/page/contactus\" style=\"color:#a24689\">Contact</a>\n"
+"        </td>\n"
+"    </tr></tbody>\n"
+"</table>\n"
+"</div>"
+msgstr ""
+
+#. module: website_slides
+#: model:email.template,body_html:website_slides.slide_template_published
+msgid "\n"
+"<div style=\"padding:0px; margin:0px;\">\n"
+"<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n"
+"    <tbody><tr>\n"
+"        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n"
+"            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n"
+"                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n"
+"            </a>\n"
+"        </td>\n"
+"    </tr></tbody>\n"
+"</table>\n"
+"</div>\n"
+"<div style=\"padding:0px; margin:0px;\">\n"
+"<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n"
+"    <tbody><tr>\n"
+"        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n"
+"            <h2 style=\"margin:0px;\">\n"
+"                New ${object.slide_type} published on ${object.channel_id.name}\n"
+"            </h2>\n"
+"        </td>\n"
+"    </tr><tr>\n"
+"        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n"
+"            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n"
+"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\" style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n"
+"            </a>\n"
+"            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n"
+"            <p style=\"color: #ccc;\">Published on ${object.write_date}</p>\n"
+"            <p><a href=\"${object.website_url}\">Click here to open the ${object.slide_type}</a></p>\n"
+"        </td>\n"
+"    </tr></tbody>\n"
+"</table>\n"
+"</div>\n"
+"<div style=\"padding:0px; margin:0px;\">\n"
+"<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n"
+"    <tbody><tr>\n"
+"        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n"
+"            <a href=\"${object.website_url}\" style=\"color:#a24689\">View in browser</a> |\n"
+"            <a href=\"/page/contactus\" style=\"color:#a24689\">Contact</a>\n"
+"        </td>\n"
+"    </tr></tbody>\n"
+"</table>\n"
+"</div>"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.embed,count_views:0
+msgid "# Views"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,embed_views:0
+msgid "# of Embedded Views"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,slide_views:0
+msgid "# of Website Views"
+msgstr ""
+
+#. module: website_slides
+#: model:email.template,subject:website_slides.slide_template_shared
+msgid "${user.name} shared a ${object.slide_type} with you!"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_search
+msgid ". Please try again with different keywords."
+msgstr ""
+
+#. module: website_slides
+#: model:slide.channel,description:website_slides.channel_public
+msgid "<p>Default channel for slides, all public users can access content of this channel.</p>"
+msgstr ""
+
+#. module: website_slides
+#: model:slide.channel,access_error_msg:website_slides.channel_partial
+#: model:slide.channel,access_error_msg:website_slides.channel_private
+#: model:slide.channel,access_error_msg:website_slides.channel_public
+msgid "<p>This channel is private and its content is restricted to some users.</p>"
+msgstr ""
+
+#. module: website_slides
+#: model:slide.channel,description:website_slides.channel_private
+msgid "<p>Used to publish internal slides of company.</p>"
+msgstr ""
+
+#. module: website_slides
+#: model:slide.channel,description:website_slides.channel_partial
+msgid "<p>Used to publish slides in partner network privately.</p>"
+msgstr ""
+
+#. module: website_slides
+#: sql_constraint:slide.tag:0
+msgid "A tag must be unique!"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "About"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Actions"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.slide,download_security:0
+msgid "Authentified Users Only"
+msgstr ""
+
+#. module: website_slides
+#: model:ir.actions.act_window,name:website_slides.action_ir_slide_category
+#: model:ir.ui.menu,name:website_slides.menu_action_ir_slide_category
+#: view:slide.channel:website_slides.view_slide_channel_form
+#: field:slide.channel,category_ids:0
+msgid "Categories"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:240
+#: code:addons/website_slides/static/src/xml/website_slides.xml:50
+#: view:slide.category:website_slides.view_slides_category_form
+#: view:slide.category:website_slides.view_slides_category_tree
+#: view:slide.slide:website_slides.view_slide_slide_search
+#: field:slide.slide,category_id:0
+#, python-format
+msgid "Category"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,channel_id:0
+#: view:slide.channel:website_slides.view_slide_channel_tree
+#: view:slide.slide:website_slides.view_slide_slide_search
+#: field:slide.slide,channel_id:0
+msgid "Channel"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,group_ids:0
+msgid "Channel Groups"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+msgid "Channel Settings"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:165
+#, python-format
+msgid "Channel contains the given title, please change before Save or Publish."
+msgstr ""
+
+#. module: website_slides
+#: model:ir.model,name:website_slides.model_slide_channel
+msgid "Channel for Slides"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.channel:website_slides.view_slide_channel_form
+msgid "Channel visibility"
+msgstr ""
+
+#. module: website_slides
+#: model:ir.actions.act_url,name:website_slides.action_open_channels
+#: model:ir.actions.act_window,name:website_slides.action_slide_channels
+#: model:ir.ui.menu,name:website_slides.menu_action_slide_channels
+#: view:slide.channel:website_slides.view_slide_channel_form
+msgid "Channels"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Comments"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,datas:0
+msgid "Content"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:18
+#, python-format
+msgid "Content Preview"
+msgstr ""
+
+#. module: website_slides
+#: code:addons/website_slides/controllers/main.py:289
+#, python-format
+msgid "Could not fetch data from url. Document or access right not available.\n"
+"Here is the received response: %serror"
+msgstr ""
+
+#. module: website_slides
+#: code:addons/website_slides/models/slides.py:272
+#, python-format
+msgid "Could not fetch data from url. Document or access right not available:\n"
+"%s"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:210
+#, python-format
+msgid "Create New %s '%s'"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,create_uid:0
+#: field:slide.channel,create_uid:0
+#: field:slide.embed,create_uid:0
+#: field:slide.slide,create_uid:0
+#: field:slide.tag,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,create_date:0
+#: field:slide.channel,create_date:0
+#: field:slide.embed,create_date:0
+#: field:slide.slide,create_date:0
+#: field:slide.tag,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,message_last_post:0
+#: help:slide.slide,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:56
+#: code:addons/website_slides/static/src/xml/website_slides.xml:58
+#: field:slide.channel,description:0
+#: view:slide.slide:website_slides.view_slide_slide_form
+#: field:slide.slide,description:0
+#, python-format
+msgid "Description"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:68
+#, python-format
+msgid "Discard"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,dislikes:0
+#: view:website:website_slides.slide_detail_view
+msgid "Dislikes"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.category,sequence:0
+#: help:slide.channel,sequence:0
+msgid "Display order"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_form
+#: selection:slide.slide,slide_type:0
+msgid "Document"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,document_id:0
+msgid "Document ID"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,url:0
+msgid "Document URL"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.slide,slide_type:0
+msgid "Document type will be set automatically depending on file type, height and width."
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_channel_header
+msgid "Documents"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "Download"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,download_security:0
+msgid "Download Security"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "Email"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Email Address"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,publish_template_id:0
+msgid "Email template to send slide publication through email"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,share_template_id:0
+msgid "Email template used when sharing a slide"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "Embed"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,embedcount_ids:0
+msgid "Embed Count"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_embed
+msgid "Embed in your website"
+msgstr ""
+
+#. module: website_slides
+#: model:ir.model,name:website_slides.model_slide_embed
+msgid "Embedded Slides View Counter"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Embeded Views"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Embeds"
+msgstr ""
+
+#. module: website_slides
+#: model:slide.channel,name:website_slides.channel_private
+msgid "Employee Channel"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.channel:website_slides.view_slide_channel_form
+#: field:slide.channel,access_error_msg:0
+msgid "Error Message"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.slide,download_security:0
+msgid "Everyone"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Facebook"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.channel,promote_strategy:0
+msgid "Featured Presentation"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,promoted_slide_id:0
+msgid "Featured Slide"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,promote_strategy:0
+msgid "Featuring Policy"
+msgstr ""
+
+#. module: website_slides
+#: code:addons/website_slides/controllers/main.py:299
+#, python-format
+msgid "File is too big."
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:84
+#, python-format
+msgid "File is too big. Please select file upto 15MB"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "First slide"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,message_follower_ids:0
+#: field:slide.slide,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.channel:website_slides.view_slide_channel_form
+msgid "General"
+msgstr ""
+
+#. module: website_slides
+#: field:website.config.settings,website_slide_google_app_key:0
+msgid "Google Doc Key"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Google+"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_graph
+msgid "Graph of Slides"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_search
+msgid "Group By"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,group_ids:0
+msgid "Groups allowed to see presentations in this channel"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,upload_group_ids:0
+msgid "Groups allowed to upload presentations in this channel. If void, every user can upload."
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,message_summary:0
+#: help:slide.slide,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_channel_header
+msgid "Home"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,id:0
+#: field:slide.channel,id:0
+#: field:slide.embed,id:0
+#: field:slide.slide,id:0
+#: field:slide.tag,id:0
+#: field:website.published.mixin,id:0
+msgid "ID"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,message_unread:0
+#: help:slide.slide,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,image:0
+msgid "Image"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.channel:website_slides.view_slide_channel_form
+msgid "Image size: 330px x 240px"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.slide,slide_type:0
+msgid "Infographic"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_channel_header
+msgid "Infographics"
+msgstr ""
+
+#. module: website_slides
+#: code:addons/website_slides/controllers/main.py:321
+#, python-format
+msgid "Internal server error, please try again later or contact administrator.\n"
+"Here is the error message: %s"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:79
+#, python-format
+msgid "Invalid file type. Please select pdf or image file"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,message_is_follower:0
+#: field:slide.slide,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,message_last_post:0
+#: field:slide.slide,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,write_uid:0
+#: field:slide.channel,write_uid:0
+#: field:slide.embed,write_uid:0
+#: field:slide.slide,write_uid:0
+#: field:slide.tag,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,write_date:0
+#: field:slide.channel,write_date:0
+#: field:slide.embed,write_date:0
+#: field:slide.slide,write_date:0
+#: field:slide.tag,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "Last slide"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.channel,promote_strategy:0
+msgid "Latest Published"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,likes:0
+#: view:website:website_slides.slide_detail_view
+msgid "Likes"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "LinkedIn"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "Loading ..."
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,image_medium:0
+msgid "Medium"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,access_error_msg:0
+msgid "Message to display when not accessible due to access rights"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,message_ids:0
+#: field:slide.slide,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,message_ids:0
+#: help:slide.slide,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,mime_type:0
+msgid "Mime-type"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.channel,promote_strategy:0
+#: view:website:website_slides.slide_detail_view
+#: view:website:website_slides.slides_channel_header
+msgid "Most Viewed"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.channel,promote_strategy:0
+#: view:website:website_slides.slides_channel_header
+msgid "Most Voted"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,name:0
+#: view:slide.channel:website_slides.view_slide_channel_form
+#: field:slide.channel,name:0
+#: view:slide.slide:website_slides.view_slide_slide_form
+#: field:slide.tag,name:0
+msgid "Name"
+msgstr ""
+
+#. module: website_slides
+#: model:email.template,subject:website_slides.slide_template_published
+msgid "New ${object.slide_type} published on ${object.channel_id.name}"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_channel_header
+msgid "Newest"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "Next slide"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.channel,promote_strategy:0
+msgid "No Featured Presentation"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.slide,download_security:0
+msgid "No One"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.channel_not_found
+msgid "No channel created or published yet."
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:195
+#, python-format
+msgid "No matches found. Type to create new %s"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+msgid "No presentation published yet."
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_grid_view
+msgid "Not Published"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,nbr_documents:0
+#: field:slide.channel,nbr_documents:0
+msgid "Number of Documents"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,nbr_infographics:0
+#: field:slide.channel,nbr_infographics:0
+msgid "Number of Infographics"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,nbr_presentations:0
+#: field:slide.channel,nbr_presentations:0
+msgid "Number of Presentations"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,nbr_videos:0
+#: field:slide.channel,nbr_videos:0
+msgid "Number of Videos"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:24
+#, python-format
+msgid "PDF or Image File"
+msgstr ""
+
+#. module: website_slides
+#: model:slide.channel,name:website_slides.channel_partial
+msgid "Partner Channel"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_email
+msgid "Please"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides.js:50
+#, python-format
+msgid "Please <a href=\"/web?redirect=%s\">login</a> to vote this slide"
+msgstr ""
+
+#. module: website_slides
+#: code:addons/website_slides/models/slides.py:275
+#, python-format
+msgid "Please enter valid Youtube or Google Doc URL"
+msgstr ""
+
+#. module: website_slides
+#: code:addons/website_slides/controllers/main.py:281
+#, python-format
+msgid "Please enter valid youtube or google doc url"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Post"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Post comment with email address (confirmation of email is required in order to publish comment on website) or please"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.embed,slide_id:0
+#: selection:slide.slide,slide_type:0
+msgid "Presentation"
+msgstr ""
+
+#. module: website_slides
+#: model:mail.message.subtype,description:website_slides.mt_channel_slide_published
+#: model:mail.message.subtype,name:website_slides.mt_channel_slide_published
+msgid "Presentation Published"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website.layout
+#: view:website:website_slides.slides_channel_header
+#: model:website.menu,name:website_slides.website_menu_slides
+msgid "Presentations"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "Previous slide"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.channel,visibility:0
+msgid "Private"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.channels
+msgid "Private channel"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,promoted_image:0
+msgid "Promoted image"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.channel,visibility:0
+msgid "Public"
+msgstr ""
+
+#. module: website_slides
+#: model:slide.channel,name:website_slides.channel_public
+msgid "Public Channel"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,date_published:0
+msgid "Publish Date"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Publish a presentation to enable social sharing feature"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_search
+msgid "Published"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,publish_template_id:0
+msgid "Published Template"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Related"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+msgid "Review your channel settings to promote your most viewed or recent published presentation"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:66
+#, python-format
+msgid "Save and Publish"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:65
+#, python-format
+msgid "Save as Draft"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_search
+msgid "Search Slides"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.channel:website_slides.view_slide_channel_form
+msgid "Security"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+msgid "See all"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_embed
+msgid "Select page to start with"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_email
+msgid "Send Email"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_email
+msgid "Send presentation through email"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,sequence:0
+#: field:slide.channel,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+#: view:website:website_slides.slide_detail_view
+msgid "Share"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_media
+msgid "Share Link"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Share count"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_media
+msgid "Share on Social Networks"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_email
+msgid "Share with a friend"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+msgid "Share:"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,share_template_id:0
+msgid "Shared Template"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.channel,visibility:0
+msgid "Show channel but restrict presentations"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.channel:website_slides.view_slide_channel_form
+#: view:slide.slide:website_slides.view_slide_slide_form
+msgid "Show in website"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_form
+msgid "Slide"
+msgstr ""
+
+#. module: website_slides
+#: model:ir.model,name:website_slides.model_slide_tag
+msgid "Slide Tag"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,custom_slide_id:0
+msgid "Slide to Promote"
+msgstr ""
+
+#. module: website_slides
+#: model:ir.actions.act_window,name:website_slides.action_slides_slides
+#: model:ir.model,name:website_slides.model_slide_slide
+#: model:ir.ui.menu,name:website_slides.menu_slides
+#: model:ir.ui.menu,name:website_slides.submenu_action_slides_slides
+#: field:slide.category,slide_ids:0
+#: field:slide.channel,slide_ids:0
+#: view:slide.slide:website_slides.view_slide_slide_tree
+msgid "Slides"
+msgstr ""
+
+#. module: website_slides
+#: model:ir.model,name:website_slides.model_slide_category
+msgid "Slides Category"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Social Shares"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_search
+msgid "Sorry, but nothing matches your search criteria"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_channel_header
+msgid "Sort by:"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Statistics"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,message_summary:0
+#: field:slide.slide,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.tag:website_slides.view_slide_tag_form
+msgid "Tag"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:263
+#: code:addons/website_slides/static/src/xml/website_slides.xml:44
+#: model:ir.actions.act_window,name:website_slides.action_slide_tag
+#: model:ir.ui.menu,name:website_slides.menu_slide_tag
+#: field:slide.slide,tag_ids:0
+#: view:slide.tag:website_slides.view_slide_tag_tree
+#, python-format
+msgid "Tags"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_form
+msgid "Tags..."
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+msgid "The"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,website_url:0
+#: help:slide.slide,website_url:0
+#: help:website.published.mixin,website_url:0
+msgid "The full URL to access the document through the website."
+msgstr ""
+
+#. module: website_slides
+#: sql_constraint:slide.slide:0
+msgid "The slide name must be unique within a channel"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.embed,url:0
+msgid "Third Party Website URL"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+#: view:website:website_slides.embed_slide_forbidden
+#: view:website:website_slides.slide_detail_view
+msgid "This"
+msgstr ""
+
+#. module: website_slides
+#: code:addons/website_slides/controllers/main.py:285
+#, python-format
+msgid "This video already exists in this channel <a target=\"_blank\" href=\"/slides/slide/%s\">click here to view it </a>"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,image_thumb:0
+msgid "Thumbnail"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:38
+#: code:addons/website_slides/static/src/xml/website_slides.xml:40
+#: field:slide.slide,name:0
+#, python-format
+msgid "Title"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.category,total:0
+#: field:slide.channel,total:0
+msgid "Total"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,total_views:0
+msgid "Total # Views"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Total Views"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.slide,index_content:0
+#: view:website:website_slides.slide_detail_view
+msgid "Transcript"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Twitter"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_search
+#: field:slide.slide,slide_type:0
+msgid "Type"
+msgstr ""
+
+#. module: website_slides
+#: code:addons/website_slides/controllers/main.py:139
+#, python-format
+msgid "Uncategorized"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+msgid "Uncategorized presentation"
+msgstr ""
+
+#. module: website_slides
+#: code:addons/website_slides/models/slides.py:459
+#, python-format
+msgid "Unknown document"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,message_unread:0
+#: field:slide.slide,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+#: view:website:website_slides.slides_channel_header
+msgid "Upload"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,upload_group_ids:0
+msgid "Upload Groups"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+msgid "Upload PDF presentations, documents, videos or infographic using the button below."
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:9
+#: view:website:website_slides.slides_channel_header
+#, python-format
+msgid "Upload Presentation"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:12
+#, python-format
+msgid "Uploading presentation..."
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_media
+msgid "Use permanent link to share in social media"
+msgstr ""
+
+#. module: website_slides
+#: selection:slide.slide,slide_type:0
+msgid "Video"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_channel_header
+msgid "Videos"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "View fullscreen"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+#: view:website:website_slides.slides_grid_view
+msgid "Views"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.related_slides
+msgid "Views ."
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,visibility:0
+msgid "Visibility"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,website_published:0
+#: field:slide.slide,website_published:0
+#: field:website.published.mixin,website_published:0
+msgid "Visible in Website"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_search
+msgid "Waiting for validation"
+msgstr ""
+
+#. module: website_slides
+#: view:slide.slide:website_slides.view_slide_slide_form
+msgid "Website"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,website_message_ids:0
+#: field:slide.slide,website_message_ids:0
+msgid "Website Messages"
+msgstr ""
+
+#. module: website_slides
+#: view:website.config.settings:website_slides.view_website_config_settings
+msgid "Website Slides"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,website_url:0
+#: field:slide.slide,website_url:0
+#: field:website.published.mixin,website_url:0
+msgid "Website URL"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Website Views"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.channel,website_message_ids:0
+#: help:slide.slide,website_message_ids:0
+msgid "Website communication history"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,website_meta_description:0
+#: field:slide.slide,website_meta_description:0
+msgid "Website meta description"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,website_meta_keywords:0
+#: field:slide.slide,website_meta_keywords:0
+msgid "Website meta keywords"
+msgstr ""
+
+#. module: website_slides
+#: field:slide.channel,website_meta_title:0
+#: field:slide.slide,website_meta_title:0
+msgid "Website meta title"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Write a comment..."
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:109
+#, python-format
+msgid "You can not upload password protected file."
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides.js:59
+#, python-format
+msgid "You have already voted for this slide"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "Your Name"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:32
+#, python-format
+msgid "Youtube Video URL"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:30
+#, python-format
+msgid "Youtube or Google Doc URL"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.slide,document_id:0
+msgid "Youtube or Google Document ID"
+msgstr ""
+
+#. module: website_slides
+#: help:slide.slide,url:0
+msgid "Youtube or Google Document URL"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_email
+msgid "by email!"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
+msgid "is empty."
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "is private"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+#: view:website:website_slides.embed_slide_forbidden
+msgid "is private."
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+#: view:website:website_slides.slide_social_email
+msgid "login"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "on"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides.xml:66
+#, python-format
+msgid "or"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slides_search
+msgid "results found for the given criteria"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.embed_slide
+msgid "suggest_slide.name"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "to post comment"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_email
+msgid "to send this"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid "views"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.slide_social_email
+msgid "your-friend@domain.com"
+msgstr ""
+

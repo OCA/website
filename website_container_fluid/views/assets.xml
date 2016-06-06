@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+<data>
+    <template id="styles"
+              inherit_id="website.theme"
+              name="Website container fluid styles">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/website_container_fluid/static/src/css/styles.css"
+                  rel="stylesheet"
+                  t-ignore="True"
+                  type="text/css"/>
+        </xpath>
+    </template>
+</data>
+</openerp>

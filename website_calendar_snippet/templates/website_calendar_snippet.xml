@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template inherit_id="website.snippets" id="snippets_custom">
+            <xpath expr="//div[@id='snippet_feature']" position="inside">
+                <div>
+                    <div class="oe_snippet_thumbnail">
+                        <img class="oe_snippet_thumbnail_img" src="/website_calendar_snippet/static/src/img/blocks/calendar.png"/>
+                        <span class="oe_snippet_thumbnail_title">Calendar</span>
+                    </div>
+                    <div class="oe_snippet_body calendar_block panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Calendar</h3>
+						</div>
+						<div class="panel-body"> 
+                            <div class="calendar"></div>
+						</div>
+                    </div>
+                </div>
+            </xpath>
+        </template>    
+
+        <template id="website_calendar_block_assets_frontend" inherit_id="website.assets_frontend" name="Calendar block assets">
+            <xpath expr="." position="inside">      
+                <script type="text/javascript" src="/website_calendar_snippet/static/lib/date/js/date.js"></script>          
+                <script type="text/javascript" src="/website_calendar_snippet/static/src/js/website_calendar_block.js"></script>
+                <script type="text/javascript" src="/website_calendar_snippet/static/lib/fullcalendar/js/fullcalendar.js"></script>
+            </xpath>
+        </template>
+
+        <template id="website_calendar_block_theme_assets" name="website assets for Calender Block" inherit_id="website.theme">
+            <xpath expr="." position="inside">
+                <link href="/website_calendar_snippet/static/src/css/website_calendar_block.css" type="text/css" rel="stylesheet" />
+                <link href="/website_calendar_snippet/static/lib/fullcalendar/css/fullcalendar.css" type="text/css" rel="stylesheet" />
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

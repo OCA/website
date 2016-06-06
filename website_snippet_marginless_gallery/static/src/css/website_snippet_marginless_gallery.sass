@@ -1,0 +1,31 @@
+@charset "utf-8"
+/* © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+   License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
+@import "compass/css3/flexbox"
+
+.row .img
+    .marginless-gallery &
+        // As the name of the module says...
+        margin: 0px
+
+        // Background changes depending on div and layout size
+        background:
+            size: cover
+            position: center
+            repeat: no-repeat
+
+        // Center inner text
+        display: table
+        text-align: center
+        > div
+            display: table-cell
+            vertical-align: middle
+
+        // Ensure images get displayed if content is removed
+        &:empty
+            display: block
+
+    // Do not trim images
+    .marginless-gallery-contain &
+        background-size: contain

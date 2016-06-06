@@ -6,36 +6,66 @@
                 <link rel="stylesheet" href="/website_event_register_free/static/src/css/website_event_register_free.css"/>
             </xpath>
         </template>
+
+        <template id="free_registration_form">
+            <form
+                t-attf-action="/event/#{event.id}/register/register_free"
+                method="post"
+                class="table-responsive"
+                t-if="not hasattr(event, 'event_ticket_ids') or
+                      not event.event_ticket_ids">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Ticket Type</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Free</td>
+                            <td>
+                                <select
+                                    name="tickets"
+                                    class="form-control"
+                                    t-if="event.seats_available or
+                                          not event.seats_max">
+                                    <t
+                                        t-foreach="range(
+                                            1,
+                                            min(event.seats_available or 10,
+                                                10) + 1)"
+                                        t-as="nb">
+                                        <option t-esc="nb"/>
+                                    </t>
+                                </select>
+                                <span
+                                    t-if="not event.seats_available and
+                                          event.seats_max">
+                                    No seats available
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-lg pull-right"
+                    t-if="event.seats_available or not event.seats_max">
+                    Register Now
+                    <span class="fa fa-long-arrow-right"/>
+                </button>
+                <div class="clearfix"/>
+                <hr/>
+            </form>
+        </template>
+
         <template id="event_description_full" inherit_id="website_event.event_description_full">
             <xpath expr="//div[@t-field='event.description']" position="before">
-                <form t-attf-action="/event/#{event.id}/register/register_free" method="post" t-if="not hasattr(event, 'event_ticket_ids') or not event.event_ticket_ids">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Ticket Type</th>
-                                <th>Quantity</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Free</td>
-                                <td>
-                                    <select name="tickets" class="form-control" t-if="event.seats_available > 0">
-                                        <t t-foreach="range(1, event.seats_available > 9 and 11 or event.seats_available + 1)" t-as="nb">
-                                            <option t-esc="nb"/>
-                                        </t>
-                                    </select>
-                                    <span t-if="event.seats_available &lt;= 0">No seats available</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button type="submit" class="btn btn-primary btn-lg pull-right" t-if="event.seats_available > 0">Register Now <span class="fa fa-long-arrow-right"/></button>
-                    <div class="clearfix"/>
-                    <hr/>
-                </form>
+                <t t-call="website_event_register_free.free_registration_form"/>
             </xpath>
         </template>
+
         <!-- it might be a good idea to move this to an own module so that not
              every module dealing with whatever kind of subscription has to
              reinvent the wheel.
@@ -81,6 +111,7 @@
                 </div>
             </t>
         </template>
+
         <template id="partner_register_confirm" name="Confirmation">
             <t t-call="website.layout">
                 <div id="wrap" class="container">

@@ -20,7 +20,7 @@
 ##############################################################################
 {
     "name": "Register for free events",
-    "version": "1.0",
+    "version": "8.0.1.0.0",
     "author": "Therp BV,"
               "Serv. Tecnol. Avanzados - Pedro M. Baeza,"
               "Antiun Ingeniería S.L.,"

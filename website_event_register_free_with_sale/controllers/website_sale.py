@@ -30,7 +30,7 @@ class WebsiteSale(website_sale):
     # TODO: Not used yet
     optional_free_registration_fields = ["street", "city", "country_id", "zip"]
 
-    def checkout_form_validate(self, data):
+    def checkout_form_validate_free(self, data):
         errors = dict()
         if request.session.get('free_tickets'):
             # Make validation for free tickets
@@ -40,10 +40,6 @@ class WebsiteSale(website_sale):
                 elif not WebsiteEvent()._validate(field_name, data, True):
                     # Patch for current free registration implementation
                     errors[field_name] = 'error'
-        if request.session.get('has_paid_tickets'):
-            # Make validation for paid tickets
-            errors.update(super(WebsiteSale, self).checkout_form_validate(
-                data))
         return errors
 
     @http.route(['/shop/checkout'], type='http', auth="public", website=True)
@@ -65,21 +61,21 @@ class WebsiteSale(website_sale):
             return super(WebsiteSale, self).confirm_order(**post)
         if request.session.get('free_tickets'):
             values = self.checkout_values(post)
-            values['error'] = self.checkout_form_validate(post)
+            values['error'] = self.checkout_form_validate_free(post)
             if values["error"]:
                 return request.website.render("website_sale.checkout", values)
             post['tickets'] = request.session['free_tickets']
             event = request.env['event.event'].browse(
-                request.session['event_id'])
+                int(request.session['event_id']))
             if (http.request.env.ref('base.public_user') !=
                     http.request.env.user):
-                partner_id = http.request.env.user.partner_id.id
+                partner = http.request.env.user.partner_id
             else:
-                partner_id = False
+                partner = False
             # Use same hook as without website_sale
             reg_obj = http.request.env['event.registration']
             registration_vals = reg_obj._prepare_registration(
-                event, post, http.request.env.user.id, partner_id=partner_id)
+                event, post, http.request.env.user.id, partner=partner)
             registration = reg_obj.sudo().create(registration_vals)
             if registration.partner_id:
                 registration._onchange_partner()
