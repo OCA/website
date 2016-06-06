@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_contact_form
+# 
+# Translators:
+# Goutoudis Kostas <goutoudis@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-28 02:04+0000\n"
+"PO-Revision-Date: 2015-11-24 15:40+0000\n"
+"Last-Translator: Goutoudis Kostas <goutoudis@gmail.com>\n"
+"Language-Team: Greek (Greece) (http://www.transifex.com/oca/OCA-website-8-0/language/el_GR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: el_GR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Contact Form"
+msgstr "Φόρμα Επικοινωνίας"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Email"
+msgstr "Email"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "I have read and accept the"
+msgstr "Έχω διαβάσει και αποδέχομαι τους"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Phone Number"
+msgstr "Αριθμός τηλεφώνου"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Privacy Policy"
+msgstr "Πολιτική Απορρήτου"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Send"
+msgstr "Αποστολή"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Subject"
+msgstr "Θέμα"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Tell us something!"
+msgstr "Πείτε μας κάτι!"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Company"
+msgstr "Η εταιρεία σας"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Name"
+msgstr "Το Όνομά σας"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Question"
+msgstr "Η ερώτησή σας"

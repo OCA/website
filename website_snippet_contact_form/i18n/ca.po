@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_contact_form
+# 
+# Translators:
+# Carles Antolí <carlesantoli@hotmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-23 10:22+0000\n"
+"PO-Revision-Date: 2015-11-18 21:18+0000\n"
+"Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Contact Form"
+msgstr "Formulari de Contacte"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Email"
+msgstr "Correu Electrònic"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "I have read and accept the"
+msgstr "He llegit i accepto la"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Phone Number"
+msgstr "Número de Telèfon"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Privacy Policy"
+msgstr "Política de Privacitat"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Send"
+msgstr "Enviar"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Subject"
+msgstr "Assumpte"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Tell us something!"
+msgstr "Explica'ns alguna cosa!"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Company"
+msgstr "La seva Companyia"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Name"
+msgstr "El Seu Nom"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Your Question"
+msgstr "La teva pregunta"

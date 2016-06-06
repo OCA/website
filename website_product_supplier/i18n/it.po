@@ -1,0 +1,188 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_product_supplier
+# 
+# Translators:
+# Paolo Valier, 2016
+# Paolo Valier, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-14 08:43+0000\n"
+"PO-Revision-Date: 2016-04-27 19:55+0000\n"
+"Last-Translator: Paolo Valier\n"
+"Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Add Product"
+msgstr "Aggiungi Prodotto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.actions
+msgid "Add new product"
+msgstr "Aggiungi nuovo prodotto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Add your product. You can update later in this section"
+msgstr "Aggiungi il tuo prodotto. Lo potrai modificare in un secondo momento in questa sezione"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Code"
+msgstr "Codice"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Delay"
+msgstr "Ritardo"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Delay..."
+msgstr "Ritardo..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Delete"
+msgstr "Elimina"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Edit"
+msgstr "Modifica"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Edit Product"
+msgstr "Modifica Prodotto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "General Data"
+msgstr "Dati generali"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_supplier_breadcrumb
+msgid "Home"
+msgstr "Home"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Load Picture"
+msgstr "Carica Immagine"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Min Quantity"
+msgstr "Quantità minima"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Min Quantity..."
+msgstr "Quantità minima..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+#: view:website:website_product_supplier.product_supplier_breadcrumb
+msgid "My Products"
+msgstr "I miei prodotti"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+#: view:website:website_product_supplier.product_table
+msgid "Name"
+msgstr "Nome"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Picture"
+msgstr "Immagine"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+#: view:website:website_product_supplier.product_table
+msgid "Price"
+msgstr "Prezzo"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price Min Quantity"
+msgstr "Prezzo quantità minima"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price and stock"
+msgstr "Prezzo e disponibilità"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Price..."
+msgstr "Prezzo..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Product Code..."
+msgstr "Codice Prodotto..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Product name..."
+msgstr "Nome prodotto..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Published"
+msgstr "Pubblicato"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "Save Product"
+msgstr "Salva Prodotto"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.search
+msgid "Search..."
+msgstr "Cerca..."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_table
+msgid "Stock"
+msgstr "Disponibilità"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_list
+msgid "There are currently no products for your account."
+msgstr "Al momento non ci sono prodotti per il tuo account."
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_list
+msgid "Your Products"
+msgstr "I tuoi Prodotti"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "back to list"
+msgstr "indietro alla lista"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product
+msgid "or"
+msgstr "o"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_supplier_container
+msgid "website_product_supplier.product_supplier_container"
+msgstr "website_product_supplier.product_supplier_container"
+
+#. module: website_product_supplier
+#: view:website:website_product_supplier.product_supplier_container_form
+msgid "website_product_supplier.product_supplier_container_form"
+msgstr "website_product_supplier.product_supplier_container_form"

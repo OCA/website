@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="website_form_leads_filter" model="ir.filters">
+    <field name="name">Coming from the website contact form</field>
+    <field name="user_id" eval="False"/>
+    <field name="model_id">crm.lead</field>
+    <field name="domain"
+           eval="[('section_id', '=', ref('website.salesteam_website_sales')),
+                  ('medium_id', '=', ref('crm.crm_medium_website'))]"/>
+</record>
+
+<record id="email_template" model="email.template">
+    <field name="name">Quick response to website contact form</field>
+    <field name="model_id" ref="crm.model_crm_lead"/>
+    <field name="use_default_to" eval="True"/>
+    <field name="email_from">${object.company_id.email}</field>
+    <field name="lang">${object.env.context.get("lang")}</field>
+    <field name="subject">Thanks for your request</field>
+    <field name="body_html" type="html">
+        <p>
+            Dear
+            <b>${object.partner_id and object.partner_id.name or
+                 object.contact_name}</b>,
+          </p>
+        <h3>Thanks for contacting us!</h3>
+        <p>
+            We have received your request and will answer you as soon as
+            possible.
+        </p>
+        <p>Please, be patient. Best regards.</p>
+    </field>
+</record>
+
+<record id="server_action" model="ir.actions.server">
+    <field name="name">Quick response to website contact form</field>
+    <field name="model_id" ref="crm.model_crm_lead"/>
+    <field name="state">email</field>
+    <field name="template_id" ref="email_template"/>
+</record>
+
+<record id="automated_action" model="base.action.rule">
+    <field name="name">Quick response to website contact form</field>
+    <field name="model_id" ref="crm.model_crm_lead"/>
+    <field name="filter_id" ref="website_form_leads_filter"/>
+    <field name="kind">on_create</field>
+    <field name="server_action_ids"
+           eval="[(4, ref('website_crm_quick_answer.server_action'), False)]"/>
+</record>
+
+</data>
+</openerp>

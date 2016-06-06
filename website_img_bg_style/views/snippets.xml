@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+
+<template id="snippet_options"
+          inherit_id="website.snippet_options"
+          name="Container width type chooser">
+    <xpath expr=".">
+        <div data-snippet-option-id='background-style'
+             data-selector=".oe_img_bg">
+            <li class="dropdown-submenu">
+                <a href="#">Background style</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                        <a href="#">Position</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#">Vertical</a>
+                                <ul class="dropdown-menu">
+                                    <li data-value="bg-top">
+                                        <a>Top</a>
+                                    </li>
+                                    <li data-value="bg-center-h">
+                                        <a>Center</a>
+                                    </li>
+                                    <li data-value="bg-bottom">
+                                        <a>Bottom</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#">Horizontal</a>
+                                <ul class="dropdown-menu">
+                                    <li data-value="bg-left">
+                                        <a>Left</a>
+                                    </li>
+                                    <li data-value="bg-center-v">
+                                        <a>Center</a>
+                                    </li>
+                                    <li data-value="bg-right">
+                                        <a>Right</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a href="#">Repeat</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#">Vertical</a>
+                                <ul class="dropdown-menu">
+                                    <li data-value="bg-repeat-v">
+                                        <a>Clipped</a>
+                                    </li>
+                                    <li data-value="bg-space-v">
+                                        <a>Spaced</a>
+                                    </li>
+                                    <li data-value="bg-round-v">
+                                        <a>Rounded</a>
+                                    </li>
+                                    <li data-value="bg-no-repeat-v">
+                                        <a>None</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#">Horizontal</a>
+                                <ul class="dropdown-menu">
+                                    <li data-value="bg-repeat-h">
+                                        <a>Clipped</a>
+                                    </li>
+                                    <li data-value="bg-space-h">
+                                        <a>Spaced</a>
+                                    </li>
+                                    <li data-value="bg-round-h">
+                                        <a>Rounded</a>
+                                    </li>
+                                    <li data-value="bg-no-repeat-h">
+                                        <a>None</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a href="#">Size</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#">Vertical</a>
+                                <ul class="dropdown-menu">
+                                    <li data-value="bg-size-auto-v">
+                                        <a>Auto</a>
+                                    </li>
+                                    <li data-value="bg-size-contain-v">
+                                        <a>Contain</a>
+                                    </li>
+                                    <li data-value="bg-size-cover-v">
+                                        <a>Cover</a>
+                                    </li>
+                                    <li data-value="bg-size-25-v">
+                                        <a>25%</a>
+                                    </li>
+                                    <li data-value="bg-size-50-v">
+                                        <a>50%</a>
+                                    </li>
+                                    <li data-value="bg-size-75-v">
+                                        <a>75%</a>
+                                    </li>
+                                    <li data-value="bg-size-100-v">
+                                        <a>100%</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#">Horizontal</a>
+                                <ul class="dropdown-menu">
+                                    <li data-value="bg-size-auto-h">
+                                        <a>Auto</a>
+                                    </li>
+                                    <li data-value="bg-size-contain-h">
+                                        <a>Contain</a>
+                                    </li>
+                                    <li data-value="bg-size-cover-h">
+                                        <a>Cover</a>
+                                    </li>
+                                    <li data-value="bg-size-25-h">
+                                        <a>25%</a>
+                                    </li>
+                                    <li data-value="bg-size-50-h">
+                                        <a>50%</a>
+                                    </li>
+                                    <li data-value="bg-size-75-h">
+                                        <a>75%</a>
+                                    </li>
+                                    <li data-value="bg-size-100-h">
+                                        <a>100%</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </div>
+    </xpath>
+</template>
+
+</data>
+</openerp>

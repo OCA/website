@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Account Manager">
+      <xpath expr="." position="inside">
+          <link rel='stylesheet' href='/website_portal/static/src/less/website_portal.less'/>
+          <script type="text/javascript" src="/website_portal/static/src/js/website_portal.js"></script>
+      </xpath>
+    </template>
+
+    <template id="my_account_link" name="Link to frontend portal" inherit_id="website.layout">
+        <xpath expr="//ul[@class='dropdown-menu js_usermenu']" position="replace">
+            <ul class="dropdown-menu js_usermenu" role="menu">
+                <li><a href="/my/home" role="menuitem">My Account</a></li>
+                <li id="o_logout"><a t-attf-href="/web/session/logout?redirect=/" role="menuitem">Logout</a></li>
+            </ul>
+        </xpath>
+    </template>
+
+  </data>
+</openerp>

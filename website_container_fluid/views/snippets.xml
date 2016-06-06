@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+<data>
+
+<template id="snippet_options"
+          inherit_id="website.snippet_options"
+          name="Container width type chooser">
+    <xpath expr=".">
+        <div data-snippet-option-id="container-type"
+            data-selector=".container, .container-fluid,
+                           .carousel, .carousel .item">
+            <li class="dropdown-submenu" data-required="true">
+                <a tabindex="-1" href="#">Container width type</a>
+                <ul class="dropdown-menu">
+                    <li data-value="container"
+                        title="Fixed, based on screen size">
+                        <a>Responsive</a>
+                    </li>
+                    <li data-value="container-fluid"
+                        title="Always 100% of available space">
+                        <a>Fluid</a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+    </xpath>
+</template>
+
+</data>
+</openerp>

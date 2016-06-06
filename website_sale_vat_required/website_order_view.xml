@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 <data>
-    <template id="saas_users" inherit_id="website_sale.checkout">
-        <label class="control-label" for="vat" position="attributes">
-            <attribute name="style"></attribute>
-        </label>
+    <template id="checkout" inherit_id="website_sale.checkout">
+        <xpath expr="//label[@for='vat']" position="attributes">
+            <attribute name="style"/>
+        </xpath>
     </template>
 </data>
 </openerp>

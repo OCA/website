@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<!-- Add legal advice after copyright and company name -->
+<template id="legal_advice_link"
+          inherit_id="website.layout_footer_copyright"
+          name="Legal advice Link">
+    <xpath expr="//footer//div/span[@t-field='res_company.name']" position="after">
+        <span>- <a href="/page/legal">Legal advice</a></span>
+    </xpath>
+</template>
+
+<template id="website.legal" name="Legal advice" page="True">
+  <t t-call="website.layout">
+    <div id="wrap">
+      <div class="oe_structure">
+        <section data-snippet-id="title">
+          <h1 class="text-center">
+            Legal advice
+          </h1>
+        </section>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb16 mt16">
+            <div>
+              <p>
+                The owner of this website is <span t-field="res_company.name" />
+              </p>
+            </div>
+            <div>
+              <p>
+                <t t-if="res_company.street">
+                  <span t-field="res_company.street"/><br/>
+                  <t t-if="res_company.city">
+                    <span t-field="res_company.city"/><br/>
+                  </t>
+                  <t t-if="res_company.zip">
+                    <span t-field="res_company.zip"/>
+                  </t>
+                  <t t-if="res_company.state_id">
+                    <span t-field="res_company.state_id.name"/><br/>
+                  </t>
+                  <t t-if="res_company.country_id">
+                    <span t-field="res_company.country_id.name"/>
+                  </t>
+                </t>
+              </p>
+            </div>
+            <div>
+              <t t-if="res_company.vat">
+                <p>
+                  VAT number: <span t-field="res_company.vat"/>
+                </p>
+              </t>
+            </div>
+            <div>
+              <t t-if="res_company.phone or res_company.email or res_company.fax">
+                <p>
+                  You can contact us at:
+                </p>
+                <ul>
+                  <t t-if="res_company.phone">
+                    <li>Phone number: <span t-field="res_company.phone"/></li>
+                  </t>
+                  <t t-if="res_company.email">
+                    <li>Email address:
+                      <a t-attf-href="mailto:#{res_company.email}">
+                        <span t-field="res_company.email"/>
+                      </a>
+                    </li>
+                  </t>
+                  <t t-if="res_company.fax">
+                    <li>Fax number: <span t-field="res_company.fax"/></li>
+                  </t>
+                </ul>
+              </t>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="oe_structure"/>
+    </div>
+  </t>
+</template>
+
+</data>
+</openerp>

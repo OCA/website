@@ -1,0 +1,239 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_portal_sale
+# 
+# Translators:
+# Carles Antolí <carlesantoli@hotmail.com>, 2015-2016
+# Eric Antones <eantones@users.noreply.github.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-15 18:42+0000\n"
+"PO-Revision-Date: 2016-03-15 15:00+0000\n"
+"Last-Translator: Eric Antones <eantones@users.noreply.github.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "Access the complete Sale application"
+msgstr "Accedeixi a l'aplicació de vendes sensera"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+msgid "Cancelled"
+msgstr "Cancel·lat"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "Confirmation Date"
+msgstr "Data Confirmació"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Contact"
+msgstr "Contacte"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Date:"
+msgstr "Data:"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Discount (%)"
+msgstr "Descompte  (%)"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "Done"
+msgstr "Realitzat"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+msgid "Due Date"
+msgstr "Data de venciment"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid ""
+"If you wish to access the complete application to manage your orders, you "
+"can follow"
+msgstr "Si desitja accedir a l'aplicació complerta per gestionar les seves comandes, pot seguir"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "In preparation"
+msgstr "En preparació"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+msgid "Invoice #"
+msgstr "Factura #"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+msgid "Invoice Date"
+msgstr "Data de la factura:"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Invoicing Address"
+msgstr "Adreça de facturació"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "My Account"
+msgstr "El Meu Compte"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Order"
+msgstr "Comanda"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+#: view:website:website_portal_sale.orders_followup
+msgid "Paid"
+msgstr "Pagat"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "Problem"
+msgstr "Problema"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Product"
+msgstr "Producte"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Quantity"
+msgstr "Quantitat"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Quotation"
+msgstr "Pressupost"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.quotations
+msgid "Quotation #"
+msgstr "Pressupost #"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "Sale Order #"
+msgstr "Comanda Venda #"
+
+#. module: website_portal_sale
+#: view:website:website_portal.account
+msgid "Sales"
+msgstr "Venda"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Shipping Address"
+msgstr "Adreça d'enviament"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+#: view:website:website_portal_sale.quotations
+#: view:website:website_portal_sale.sale_orders
+msgid "Show less"
+msgstr "Mostrar menys"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+#: view:website:website_portal_sale.quotations
+#: view:website:website_portal_sale.sale_orders
+msgid "Show more"
+msgstr "Mostrar mes"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Taxes:"
+msgstr "Impostos:"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+msgid "There are currently no invoices for your account."
+msgstr "Actualment no hi ha factures al seu compte."
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "There are currently no orders for your account."
+msgstr "Actualment no hi ha comandes al seu compte."
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.quotations
+msgid "There are currently no quotes for your account."
+msgstr "Actualment no hi ha pressupostos al seu compte."
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+#: view:website:website_portal_sale.quotations
+#: view:website:website_portal_sale.sale_orders
+msgid "Total"
+msgstr "Total"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Total:"
+msgstr "Total:"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Unit Price"
+msgstr "Preu unitari"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Untaxed Amount:"
+msgstr "Base imposable"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Waiting"
+msgstr "Esperant"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+msgid "Waiting for Payment"
+msgstr "A l'espera de pagament"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.invoices
+msgid "Your Invoices and Payments"
+msgstr "Les seves factures i pagaments"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.sale_orders
+msgid "Your Orders"
+msgstr "Les seves comandes"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.quotations
+msgid "Your Quotes"
+msgstr "Els seus pressupostos"
+
+#. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "this link"
+msgstr "aquest link"

@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_menu_multilang
+# 
+# Translators:
+# Rudolf Schnapka <rs@techno-flex.de>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-25 14:25+0000\n"
+"PO-Revision-Date: 2016-02-23 14:29+0000\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
+"Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_menu_multilang
+#: field:website.menu,lang_ids:0
+msgid "Allowed Languages"
+msgstr "Zugelassene Sprachen"
+
+#. module: website_menu_multilang
+#: model:ir.model,name:website_menu_multilang.model_website_menu
+msgid "Website Menu"
+msgstr "Webseitenmenü"
+
+#. module: website_menu_multilang
+#: help:website.menu,lang_ids:0
+msgid ""
+"Website languages this menu should be available for. If kept empty, it will "
+"be available for all languages"
+msgstr "Webseitensprachen, in denen dieses Menü verfügbar sein soll. Wenn leer gelassen, wird es in allen Sprachen verfügbar sein"
