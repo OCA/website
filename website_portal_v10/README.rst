@@ -13,11 +13,11 @@ all sections for the portal features, to inherit everything without problems,
 and to prepare for forward compatibility.
 
 .. warning::
-    This module is intended to **replace** ``website_portal``, and is **not
-    compatible** with it. If you install both modules, expect bad things to
-    happen. If you are developing a new module based on ``website_portal``, we
-    recommend you to do it based on this one instead, and get those extra
-    benefits.
+    This module depends on ``website_portal``, but it **replaces** it. If you
+    install other module based on ``website_portal`` that is not adapted to
+    this version, it could work, but there is no guarantee. If you are
+    developing a website portal module, we recommend you to do it based on this
+    one instead, and get those extra benefits.
 
 .. warning::
     If you want to patch any bug or improvement on this module, remember **this
@@ -58,6 +58,11 @@ Known issues / Roadmap
   but we want it all, and we want it now.
 * This module should be getting updates from time to time, given that at
   backporting time, Odoo 10.0 is not yet even in the beta phase.
+* To avoid some incompatibilities between ``website_portal`` and
+  ``website_portal_v10``, this module depends on ``website_portal`` and tries
+  to replace just the bits that are new or different in v10. As such, a plain
+  backport without 3-way diffing between this, core v9 and core v10 modules
+  is quite hard.
 * Any module you base on this will need to be updated to be based on
   ``website_portal`` when you migrate it to Odoo 10.0, because this module is
   only intended to replace that during the 9.0 lifespan.

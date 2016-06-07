@@ -8,7 +8,7 @@
     'summary': 'Account Management Frontend for your Customers',
     'version': '9.0.1.0.0',
     'depends': [
-        'website',
+        'website_portal',
     ],
     'data': [
         'views/templates.xml',
