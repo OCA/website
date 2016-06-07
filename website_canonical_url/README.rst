@@ -6,10 +6,6 @@ Website Canoncial URL
 
 This module adds a HTML tag in the header that contains a canoncial URL for the current page.
 
-Usage
-=====
-
-* go to ...
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
    :target:  https://runbot.odoo-community.org/runbot/186/8.0
