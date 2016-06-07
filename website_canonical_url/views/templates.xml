@@ -9,6 +9,10 @@
                     <t t-if="canonical_url">
                         <link rel="canonical" t-att-href="canonical_url"/>
                     </t>
+                    <t t-if="pager and pager.get('page_count', 0) > 1">
+                        <link t-if="pager['page']['num'] != 1" rel="prev" t-att-href="url_for(pager['page_previous']['url'])"/>
+                        <link t-if="pager['page']['num'] != pager['page_count']" rel="next" t-att-href="url_for(pager['page_next']['url'])"/>
+                    </t>
                 </t>
             </xpath>
         </template>
