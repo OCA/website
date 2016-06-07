@@ -6,23 +6,10 @@
 Payment: Website Integration (Backported From v10)
 ==================================================
 
-This module replaces the functionality of ``website_payment`` to support
+This module updates the functionality of ``website_payment`` to support
 changes introduced in ``website_portal_v10``. See README of
 ``website_portal_v10`` about rationale for this module and some useful
 warnings.
-
-.. warning::
-    This module is intended to **replace** ``website_payment``, and is **not
-    compatible** with it. If you install both modules, expect bad things to
-    happen. If you are developing a new module based on ``website_payment``, we
-    recommend you to do it based on this one instead, and get those extra
-    benefits.
-
-.. warning::
-    If you want to patch any bug or improvement on this module, remember **this
-    is a backport**. We should not have any custom fixes or improvements here.
-    Rather than that, try to get your patch merged in Odoo v10 and update this
-    backport when done.
 
 Installation
 ============
@@ -51,8 +38,6 @@ To use this module, you need to:
 Known issues / Roadmap
 ======================
 
-* This module should be getting updates from time to time, given that at
-  backporting time, Odoo 10.0 is not yet even in the beta phase.
 * Any module you base on this will need to be updated to be based on
   ``website_payment`` when you migrate it to Odoo 10.0, because this module is
   only intended to replace that during the 9.0 lifespan.
