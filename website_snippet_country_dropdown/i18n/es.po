@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_snippet_country_dropdown
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-25 16:18+0000\n"
+"PO-Revision-Date: 2016-06-25 18:21+0100\n"
+"Last-Translator: Sergio Teruel <sergio.teruel@tecnativa.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_ES\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: website_snippet_country_dropdown
+#: view:website:website.snippets
+msgid "Country Dropdown"
+msgstr "Selector de país desplegable"
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:17
+#, python-format
+msgid "Country Dropdown Options"
+msgstr "Opciones del desplegable"
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:18
+#, python-format
+msgid "Field name value"
+msgstr "Nombre del campo"
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:10
+#, python-format
+msgid "Helper!"
+msgstr "¡Ayuda!"
+
+#. module: website_snippet_country_dropdown
+#: view:website:website.snippets
+msgid "Set input options"
+msgstr "Opciones"
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:12
+#, python-format
+msgid "Write de attribute name for the input what will be sent with a form."
+msgstr "Escribe el attributo name del campo que será enviado por POST"
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:13
+#, python-format
+msgid "You can modify the label directly with website editor."
+msgstr "La etiqueta la puedes modificar directamente en el editor del website"
+
+#. module: website_snippet_country_dropdown
+#: view:website:website_snippet_country_dropdown.dropdown_element_form
+msgid "Your Label"
+msgstr "Tu etiqueta"
