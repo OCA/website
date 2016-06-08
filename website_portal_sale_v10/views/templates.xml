@@ -5,12 +5,6 @@
 
 <odoo>
 
-    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Website Portal Sale">
-      <xpath expr="." position="inside">
-          <link rel='stylesheet' href='/website_portal_sale_v10/static/src/less/website_portal_sale.less'/>
-      </xpath>
-    </template>
-
     <template id="portal_my_home_menu_sale" name="Portal layout : sales menu entries" inherit_id="website_portal_v10.portal_layout" priority="25">
         <xpath expr="//ul[contains(@class,'o_portal_submenu')]" position="inside">
             <li>
@@ -202,7 +196,7 @@
       </t>
     </template>
 
-    <template id="orders_followup" name="Sales Order">
+    <template id="website_portal_sale.orders_followup" name="Sales Order">
       <t t-call="website.layout">
         <div id="wrap">
             <div class="container">
@@ -386,19 +380,8 @@
       </t>
     </template>
 
-    <template id="sale_backend_link" inherit_id='website_portal_sale_v10.portal_my_orders' customize_show="True" name="Link to Sales Backend" active="False">
-        <xpath expr="//h3[@class='page-header']" position="inside">
-            <a href="/web#action=portal_sale.action_orders_portal" target="_blank" class="btn btn-default btn-xs pull-right"> Access the complete Sale application</a>
-        </xpath>
-    </template>
-
-    <template id="sales_backend_access" inherit_id='website_portal_sale_v10.orders_followup' customize_show="True" name="Backend Access" active="False">
-        <xpath expr="//div[@id='optional_placeholder']" position="inside">
-            <h4 class="text-muted text-center mt64 mb64">
-                If you wish to access the complete application to manage your orders, you can follow
-                <a href="/web#action=portal_sale.action_orders_portal">this link</a>.
-            </h4>
-        </xpath>
-    </template>
+    <record id="website_portal_sale.sale_backend_link" model="ir.ui.view">
+        <field name="inherit_id" ref="website_portal_sale_v10.portal_my_orders"/>
+    </record>
 
 </odoo>

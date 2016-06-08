@@ -6,31 +6,16 @@
 Website Portal for Sales (Backported From v10)
 ==============================================
 
-This module replaces the functionality of ``website_portal_sale`` to support
+This module replaces some functionality of ``website_portal_sale`` to support
 changes introduced in ``website_portal_v10``. See README of
 ``website_portal_v10`` about rationale for this module and some useful
 warnings.
 
-.. warning::
-    This module is intended to **replace** ``website_portal_sale``, and is
-    **not compatible** with it. If you install both modules, expect bad things
-    to happen. If you are developing a new module based on
-    ``website_portal_sale``, we recommend you to do it based on this one
-    instead, and get those extra benefits.
-
-.. warning::
-    If you want to patch any bug or improvement on this module, remember **this
-    is a backport**. We should not have any custom fixes or improvements here.
-    Rather than that, try to get your patch merged in Odoo v10 and update this
-    backport when done.
-
 Installation
 ============
 
-To install this module, you need to:
-
-#. Uninstall ``website_portal``, if it was installed, and don't install it
-   again as long as this module is installed.
+This will be automatically installed when both ``website_portal_sale`` and
+``website_portal_v10`` are found in your system.
 
 Usage
 =====
@@ -53,8 +38,10 @@ Known issues / Roadmap
 * This module should be getting updates from time to time, given that at
   backporting time, Odoo 10.0 is not yet even in the beta phase.
 * Any module you base on this will need to be updated to be based on
-  ``website_portal_sale`` when you migrate it to Odoo 10.0, because this module is
-  only intended to replace that during the 9.0 lifespan.
+  ``website_portal_sale`` when you migrate it to Odoo 10.0, because this module
+  is only intended to replace that during the 9.0 lifespan.
+* Backport had to be modified to avoid conflicts betweeen current and v10
+  versions of modules, so backport updates would be a bit harder than expected.
 
 Bug Tracker
 ===========

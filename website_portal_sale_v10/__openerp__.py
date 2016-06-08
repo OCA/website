@@ -9,15 +9,13 @@
                'quotations, invoices)',
     'version': '9.0.1.0.0',
     'depends': [
-        'sale',
+        'website_portal_sale',
         'website_portal_v10',
         'website_payment_v10',
     ],
     'data': [
         'views/templates.xml',
     ],
-    'demo': [
-        'data/demo.xml'
-    ],
     'installable': True,
+    'auto_install': True,
 }

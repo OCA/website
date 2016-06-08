@@ -133,25 +133,6 @@ class WebsiteAccount(WebsiteAccount):
         return request.website.render(
             "website_portal_sale_v10.portal_my_orders", values)
 
-    @http.route(['/my/orders/<int:order>'], type='http', auth="user",
-                website=True)
-    def orders_followup(self, order=None, **kw):
-        order = request.env['sale.order'].browse([order])
-        try:
-            order.check_access_rights('read')
-            order.check_access_rule('read')
-        except AccessError:
-            return request.website.render("website.403")
-        order_invoice_lines = {
-            il.product_id.id: il.invoice_id
-            for il in order.invoice_ids.mapped('invoice_line_ids')}
-        return request.website.render(
-            "website_portal_sale_v10.orders_followup",
-            {
-                'order': order.sudo(),
-                'order_invoice_lines': order_invoice_lines,
-            })
-
     #
     # Invoices
     #
