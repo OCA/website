@@ -66,6 +66,10 @@ Known issues / Roadmap
 * Any module you base on this will need to be updated to be based on
   ``website_portal`` when you migrate it to Odoo 10.0, because this module is
   only intended to replace that during the 9.0 lifespan.
+* If you install ``website_portal_v10`` and then uninstall it, you need to
+  reinstall ``website_portal`` to restore some of this module's changes. Then,
+  you can safely remove any ``ir.ui.view`` object belonging to
+  ``website_portal_v10``.
 
 Bug Tracker
 ===========

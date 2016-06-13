@@ -4,11 +4,15 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
 
-    <template id="website_portal.assets_frontend" inherit_id="website.assets_frontend" name="Account Manager">
-      <xpath expr="." position="inside">
-          <link rel='stylesheet' href='/website_portal_v10/static/src/less/website_portal.less'/>
-          <script type="text/javascript" src="/website_portal_v10/static/src/js/website_portal.js"></script>
-      </xpath>
+    <template id="assets_frontend" inherit_id="website_portal.assets_frontend">
+        <xpath expr="//link[@href='/website_portal/static/src/less/website_portal.less']"
+               position="attributes">
+            <attribute name="href">/website_portal_v10/static/src/less/website_portal.less</attribute>
+        </xpath>
+        <xpath expr="//script[@src='/website_portal/static/src/js/website_portal.js']"
+               position="attributes">
+            <attribute name="src">/website_portal_v10/static/src/js/website_portal.js</attribute>
+        </xpath>
     </template>
 
     <template id="portal_archive_groups" name="Portal Archive Groups">
