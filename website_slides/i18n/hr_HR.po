@@ -3,21 +3,19 @@
 # * website_slides
 # 
 # Translators:
-# Paolo Valier, 2016
-# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-04 02:48+0000\n"
-"PO-Revision-Date: 2016-06-05 07:12+0000\n"
-"Last-Translator: Paolo Valier\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
+"PO-Revision-Date: 2016-05-31 20:34+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: Croatian (Croatia) (http://www.transifex.com/oca/OCA-website-8-0/language/hr_HR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: hr_HR\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_shared
@@ -117,17 +115,17 @@ msgstr ""
 #. module: website_slides
 #: field:slide.embed,count_views:0
 msgid "# Views"
-msgstr "# Viste"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,embed_views:0
 msgid "# of Embedded Views"
-msgstr "# di Viste incorporate"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,slide_views:0
 msgid "# of Website Views"
-msgstr "# di Viste del sito"
+msgstr ""
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_shared
@@ -137,7 +135,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_search
 msgid ". Please try again with different keywords."
-msgstr ". Prova ancora con delle parole chiave differente."
+msgstr ""
 
 #. module: website_slides
 #: model:slide.channel,description:website_slides.channel_public
@@ -152,7 +150,7 @@ msgstr ""
 #: model:slide.channel,access_error_msg:website_slides.channel_public
 msgid ""
 "<p>This channel is private and its content is restricted to some users.</p>"
-msgstr "<p>Questo canale è privato e l'accesso ai contenuti è consentito ad alcuni utenti soltanto.</p>"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.channel,description:website_slides.channel_private
@@ -167,32 +165,32 @@ msgstr ""
 #. module: website_slides
 #: sql_constraint:slide.tag:0
 msgid "A tag must be unique!"
-msgstr "Un tag deve essere unico!"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "About"
-msgstr "Infromazioni"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Actions"
-msgstr "Azioni"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.slide,download_security:0
 msgid "Authentified Users Only"
-msgstr "Solo Utenti autenticati"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,can_see:0
 msgid "Can See"
-msgstr "Può Vedere"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,can_upload:0
 msgid "Can Upload"
-msgstr "Può Caricare"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.actions.act_window,name:website_slides.action_ir_slide_category
@@ -200,7 +198,7 @@ msgstr "Può Caricare"
 #: view:slide.channel:website_slides.view_slide_channel_form
 #: field:slide.channel,category_ids:0
 msgid "Categories"
-msgstr "Categorie"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -212,7 +210,7 @@ msgstr "Categorie"
 #: field:slide.slide,category_id:0
 #, python-format
 msgid "Category"
-msgstr "Categoria"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,channel_id:0
@@ -220,17 +218,17 @@ msgstr "Categoria"
 #: view:slide.slide:website_slides.view_slide_slide_search
 #: field:slide.slide,channel_id:0
 msgid "Channel"
-msgstr "Canale"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,group_ids:0
 msgid "Channel Groups"
-msgstr "Gruppi del Canale"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "Channel Settings"
-msgstr "Impostazioni Canale"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -243,12 +241,12 @@ msgstr ""
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_channel
 msgid "Channel for Slides"
-msgstr "Canale per Presentazioni"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Channel visibility"
-msgstr "Visibilità Canale"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.actions.act_url,name:website_slides.action_open_channels
@@ -256,24 +254,24 @@ msgstr "Visibilità Canale"
 #: model:ir.ui.menu,name:website_slides.menu_action_slide_channels
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Channels"
-msgstr "Canali"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Comments"
-msgstr "Commenti"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,datas:0
 msgid "Content"
-msgstr "Contenuto"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:18
 #, python-format
 msgid "Content Preview"
-msgstr "Anteprima Contenuto"
+msgstr ""
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:344
@@ -313,19 +311,19 @@ msgstr ""
 #: field:slide.embed,create_uid:0 field:slide.slide,create_uid:0
 #: field:slide.tag,create_uid:0
 msgid "Created by"
-msgstr "Creato da"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,create_date:0 field:slide.channel,create_date:0
 #: field:slide.embed,create_date:0 field:slide.slide,create_date:0
 #: field:slide.tag,create_date:0
 msgid "Created on"
-msgstr "Creato il"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,message_last_post:0 help:slide.slide,message_last_post:0
 msgid "Date of the last message posted on the record."
-msgstr "Data dell'ultimo messaggio pubblicato sul post."
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -336,19 +334,19 @@ msgstr "Data dell'ultimo messaggio pubblicato sul post."
 #: field:slide.slide,description:0
 #, python-format
 msgid "Description"
-msgstr "Descrizione"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:68
 #, python-format
 msgid "Discard"
-msgstr "Scarta"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_5
 msgid "Discover Odoo Point Of Sale - For Shops and Restaurants"
-msgstr "Scopri il Punto Vendita Odoo - Per Negozi e Ristoranti"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,dislikes:0 view:website:website_slides.slide_detail_view
@@ -360,28 +358,28 @@ msgstr ""
 #: field:slide.embed,display_name:0 field:slide.slide,display_name:0
 #: field:slide.tag,display_name:0 field:website.published.mixin,display_name:0
 msgid "Display Name"
-msgstr "Nome da visualizzare"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.category,sequence:0 help:slide.channel,sequence:0
 msgid "Display order"
-msgstr "Mostra ordine"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: selection:slide.slide,slide_type:0
 msgid "Document"
-msgstr "Documento"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,document_id:0
 msgid "Document ID"
-msgstr "ID Documento"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,url:0
 msgid "Document URL"
-msgstr "URL Documento"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.slide,slide_type:0
@@ -393,12 +391,12 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Documents"
-msgstr "cumenti"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Download"
-msgstr "Scarica"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,download_security:0
@@ -408,12 +406,12 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Email Address"
-msgstr "Indirizzo Email"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,publish_template_id:0
@@ -469,7 +467,7 @@ msgstr ""
 #: view:slide.channel:website_slides.view_slide_channel_form
 #: field:slide.channel,access_error_msg:0
 msgid "Error Message"
-msgstr "Messaggio di errore"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.slide,download_security:0
@@ -479,7 +477,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
@@ -505,14 +503,14 @@ msgstr ""
 #: code:addons/website_slides/controllers/main.py:357
 #, python-format
 msgid "File is too big."
-msgstr "Il file è troppo grande."
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/js/slides_upload.js:84
 #, python-format
 msgid "File is too big. Please select file upto 15MB"
-msgstr "Il file è troppo grande. Seleziona un file di dimensioni fino a 15MB"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
@@ -523,7 +521,7 @@ msgstr ""
 #: field:slide.channel,message_follower_ids:0
 #: field:slide.slide,message_follower_ids:0
 msgid "Followers"
-msgstr "Follower"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,can_see_full:0
@@ -533,17 +531,17 @@ msgstr ""
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "General"
-msgstr "Generale"
+msgstr ""
 
 #. module: website_slides
 #: field:website.config.settings,website_slide_google_app_key:0
 msgid "Google Doc Key"
-msgstr "Chiave Google Doc"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Google+"
-msgstr "Google+"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_graph
@@ -553,7 +551,7 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Group By"
-msgstr "Raggruppa per"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,group_ids:0
@@ -577,29 +575,29 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Home"
-msgstr "Home"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,id:0 field:slide.channel,id:0 field:slide.embed,id:0
 #: field:slide.slide,id:0 field:slide.tag,id:0
 #: field:website.published.mixin,id:0
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,message_unread:0 help:slide.slide,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr "Se selezionato i nuovi messaggi richiedono la tua attenzione."
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,image:0
 msgid "Image"
-msgstr "Immagine"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Image size: 330px x 240px"
-msgstr "Dimensione immagine: 330px x240px"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.slide,slide_type:0
@@ -637,13 +635,13 @@ msgstr ""
 #: field:slide.channel,message_is_follower:0
 #: field:slide.slide,message_is_follower:0
 msgid "Is a Follower"
-msgstr "E' un follower"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,message_last_post:0
 #: field:slide.slide,message_last_post:0
 msgid "Last Message Date"
-msgstr "Data ultimo messaggio"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,__last_update:0 field:slide.channel,__last_update:0
@@ -651,31 +649,31 @@ msgstr "Data ultimo messaggio"
 #: field:slide.tag,__last_update:0
 #: field:website.published.mixin,__last_update:0
 msgid "Last Modified on"
-msgstr "Ultima modifica il"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,write_uid:0 field:slide.channel,write_uid:0
 #: field:slide.embed,write_uid:0 field:slide.slide,write_uid:0
 #: field:slide.tag,write_uid:0
 msgid "Last Updated by"
-msgstr "Ultima modifica di"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,write_date:0 field:slide.channel,write_date:0
 #: field:slide.embed,write_date:0 field:slide.slide,write_date:0
 #: field:slide.tag,write_date:0
 msgid "Last Updated on"
-msgstr "Ultima modifica il"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Last slide"
-msgstr "Ultima diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
 msgid "Latest Published"
-msgstr "Ultimo pubblicato"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,likes:0 view:website:website_slides.slide_detail_view
@@ -690,7 +688,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Loading ..."
-msgstr "Caricamento ..."
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,image_medium:0
@@ -705,12 +703,12 @@ msgstr ""
 #. module: website_slides
 #: field:slide.channel,message_ids:0 field:slide.slide,message_ids:0
 msgid "Messages"
-msgstr "Messaggi"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,message_ids:0 help:slide.slide,message_ids:0
 msgid "Messages and communication history"
-msgstr "Messaggi e storico comunicazioni"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,mime_type:0
@@ -722,13 +720,13 @@ msgstr ""
 #: view:website:website_slides.slide_detail_view
 #: view:website:website_slides.slides_channel_header
 msgid "Most Viewed"
-msgstr "Più visto"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
 #: view:website:website_slides.slides_channel_header
 msgid "Most Voted"
-msgstr "Più votato"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,name:0
@@ -737,7 +735,7 @@ msgstr "Più votato"
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: field:slide.tag,name:0
 msgid "Name"
-msgstr "Nome"
+msgstr ""
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_published
@@ -747,12 +745,12 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Newest"
-msgstr "Più recente"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Next slide"
-msgstr "Prossima diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
@@ -784,12 +782,12 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_grid_view
 msgid "Not Published"
-msgstr "Non pubblicato"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,nbr_documents:0 field:slide.channel,nbr_documents:0
 msgid "Number of Documents"
-msgstr "Numero di Documenti"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,nbr_infographics:0
@@ -801,12 +799,12 @@ msgstr ""
 #: field:slide.category,nbr_presentations:0
 #: field:slide.channel,nbr_presentations:0
 msgid "Number of Presentations"
-msgstr "Numero di Presentazioni"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,nbr_videos:0 field:slide.channel,nbr_videos:0
 msgid "Number of Videos"
-msgstr "Numero di Video"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_3
@@ -903,12 +901,12 @@ msgstr ""
 #: code:addons/website_slides/static/src/xml/website_slides.xml:24
 #, python-format
 msgid "PDF or Image File"
-msgstr "PDF o File Immagine"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.channel,name:website_slides.channel_partial
 msgid "Partner Channel"
-msgstr "Canale Partner"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
@@ -949,35 +947,35 @@ msgstr ""
 #. module: website_slides
 #: field:slide.embed,slide_id:0 selection:slide.slide,slide_type:0
 msgid "Presentation"
-msgstr "Presentazione"
+msgstr ""
 
 #. module: website_slides
 #: model:mail.message.subtype,description:website_slides.mt_channel_slide_published
 #: model:mail.message.subtype,name:website_slides.mt_channel_slide_published
 msgid "Presentation Published"
-msgstr "Presentazione Pubblicata"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website.layout
 #: view:website:website_slides.slides_channel_header
 #: model:website.menu,name:website_slides.website_menu_slides
 msgid "Presentations"
-msgstr "Presentazioni"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Previous slide"
-msgstr "Diapositiva precende"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Private"
-msgstr "Privato"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.channels
 msgid "Private channel"
-msgstr "Canale privato"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,promoted_image:0
@@ -987,17 +985,17 @@ msgstr ""
 #. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Public"
-msgstr "Pubblico"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.channel,name:website_slides.channel_public
 msgid "Public Channel"
-msgstr "Canale Pubblico"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,date_published:0
 msgid "Publish Date"
-msgstr "Data Pubblicazione"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -1007,7 +1005,7 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Published"
-msgstr "Pubblicato"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,publish_template_id:0
@@ -1039,60 +1037,60 @@ msgstr ""
 #: code:addons/website_slides/static/src/xml/website_slides.xml:66
 #, python-format
 msgid "Save and Publish"
-msgstr "Salva e pubblica"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides.xml:65
 #, python-format
 msgid "Save as Draft"
-msgstr "Salva come Bozza"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Search Slides"
-msgstr "Cerca Diapositive"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Security"
-msgstr "Sicurezza"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "See all"
-msgstr "Vedi tutti"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_embed
 msgid "Select page to start with"
-msgstr "Seleziona pagina da cui iniziare"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Send Email"
-msgstr "Invia Email"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Send presentation through email"
-msgstr "Invia presentazione via email"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,sequence:0 field:slide.channel,sequence:0
 msgid "Sequence"
-msgstr "Sequenza"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 #: view:website:website_slides.slide_detail_view
 msgid "Share"
-msgstr "Condividi"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_media
 msgid "Share Link"
-msgstr "Condividi Link"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -1102,17 +1100,17 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_social_media
 msgid "Share on Social Networks"
-msgstr "Condividi sui Social Networks"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Share with a friend"
-msgstr "Condividi con un amico"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "Share:"
-msgstr "Condividi:"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,share_template_id:0
@@ -1133,12 +1131,12 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Slide"
-msgstr "Diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_tag
 msgid "Slide Tag"
-msgstr "Tag diapositiva"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,custom_slide_id:0
@@ -1153,12 +1151,12 @@ msgstr ""
 #: field:slide.category,slide_ids:0 field:slide.channel,slide_ids:0
 #: view:slide.slide:website_slides.view_slide_slide_tree
 msgid "Slides"
-msgstr "Diapositive"
+msgstr ""
 
 #. module: website_slides
 #: model:ir.model,name:website_slides.model_slide_category
 msgid "Slides Category"
-msgstr "Categoria Diapositive"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -1173,22 +1171,22 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Sort by:"
-msgstr "Ordina per:"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Statistics"
-msgstr "Statistiche"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,message_summary:0 field:slide.slide,message_summary:0
 msgid "Summary"
-msgstr "Riassunto"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.tag:website_slides.view_slide_tag_form
 msgid "Tag"
-msgstr "Tag"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -1263,12 +1261,12 @@ msgstr ""
 #: field:slide.slide,name:0
 #, python-format
 msgid "Title"
-msgstr "Titolo"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,total:0 field:slide.channel,total:0
 msgid "Total"
-msgstr "Totale"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,total_views:0
@@ -1278,7 +1276,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Total Views"
-msgstr "Viste totali"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,index_content:0
@@ -1295,35 +1293,35 @@ msgstr ""
 #: view:slide.slide:website_slides.view_slide_slide_search
 #: field:slide.slide,slide_type:0
 msgid "Type"
-msgstr "Tipo"
+msgstr ""
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:158
 #, python-format
 msgid "Uncategorized"
-msgstr "Non categorizzato"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
 msgid "Uncategorized presentation"
-msgstr "Presentazione non categorizzata"
+msgstr ""
 
 #. module: website_slides
 #: code:addons/website_slides/models/slides.py:582
 #, python-format
 msgid "Unknown document"
-msgstr "Documento sconosciuto"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,message_unread:0 field:slide.slide,message_unread:0
 msgid "Unread Messages"
-msgstr "Messaggi non letti"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
 #: view:website:website_slides.slides_channel_header
 msgid "Upload"
-msgstr "Carica"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,upload_group_ids:0
@@ -1360,12 +1358,12 @@ msgstr ""
 #. module: website_slides
 #: selection:slide.slide,slide_type:0
 msgid "Video"
-msgstr "Video"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
 msgid "Videos"
-msgstr "Video"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
@@ -1376,40 +1374,40 @@ msgstr ""
 #: view:website:website_slides.slide_detail_view
 #: view:website:website_slides.slides_grid_view
 msgid "Views"
-msgstr "Viste"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.related_slides
 msgid "Views ."
-msgstr "Viste"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,visibility:0
 msgid "Visibility"
-msgstr "Visibilità"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,website_published:0
 #: field:slide.slide,website_published:0
 #: field:website.published.mixin,website_published:0
 msgid "Visible in Website"
-msgstr "Visibile nel sito web"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Waiting for validation"
-msgstr "In attesa di validazione"
+msgstr ""
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Website"
-msgstr "Sito"
+msgstr "Webstranice"
 
 #. module: website_slides
 #: field:slide.channel,website_message_ids:0
 #: field:slide.slide,website_message_ids:0
 msgid "Website Messages"
-msgstr "Messaggi del sito web"
+msgstr ""
 
 #. module: website_slides
 #: view:website.config.settings:website_slides.view_website_config_settings
@@ -1425,7 +1423,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Website Views"
-msgstr "Viste del sito web"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,website_message_ids:0
@@ -1437,24 +1435,24 @@ msgstr ""
 #: field:slide.channel,website_meta_description:0
 #: field:slide.slide,website_meta_description:0
 msgid "Website meta description"
-msgstr "Meta descrizione sito web"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,website_meta_keywords:0
 #: field:slide.slide,website_meta_keywords:0
 msgid "Website meta keywords"
-msgstr "Keywords sto web"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,website_meta_title:0
 #: field:slide.slide,website_meta_title:0
 msgid "Website meta title"
-msgstr "Meta titolo sito web"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Write a comment..."
-msgstr "Scrivi un commento"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -1473,7 +1471,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Your Name"
-msgstr "Il tuo nome"
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -1536,7 +1534,7 @@ msgstr ""
 #: code:addons/website_slides/static/src/xml/website_slides.xml:66
 #, python-format
 msgid "or"
-msgstr "o"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slides_search
@@ -1561,7 +1559,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "views"
-msgstr "viste"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
