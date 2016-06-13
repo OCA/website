@@ -8,9 +8,7 @@
 <record id="view_event_registration_form" model="ir.ui.view">
     <field name="name">Fair fields</field>
     <field name="model">event.registration</field>
-    <field
-        name="inherit_id"
-        ref="event_sale_extra_info.view_event_registration_form"/>
+    <field name="inherit_id" ref="event_sale_extra_info.view_event_registration_form"/>
     <field name="arch" type="xml">
         <xpath expr="//sheet[@string='Registration']/group">
             <group string="Fair" name="fair">
@@ -20,6 +18,17 @@
         </xpath>
     </field>
 </record>
+
+    <record id="view_event_registration_tree" model="ir.ui.view">
+        <field name="model">event.registration</field>
+        <field name="inherit_id" ref="event.view_event_registration_tree"/>
+        <field name="arch" type="xml">
+            <field name="event_id" position="after">
+                <field name="square_meters" sum="Total"/>
+                <field name="location_id"/>
+            </field>
+        </field>
+    </record>
 
 <record id="view_registration_search" model="ir.ui.view">
     <field name="name">Fair fields</field>

@@ -4,7 +4,7 @@
 {
     "name": "Fair Data for Events",
     "summary": "New fields needed to work with fairs",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.1.0",
     "category": "Event Management",
     "website": "http://www.antiun.com",
     "author": "Antiun Ingeniería S.L., Odoo Community Association (OCA)",
