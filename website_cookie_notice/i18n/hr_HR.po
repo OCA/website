@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
-"PO-Revision-Date: 2016-05-06 13:15+0000\n"
+"POT-Creation-Date: 2016-06-04 02:47+0000\n"
+"PO-Revision-Date: 2016-05-31 20:31+0000\n"
 "Last-Translator: Bole <bole@dajmi5.com>\n"
 "Language-Team: Croatian (Croatia) (http://www.transifex.com/oca/OCA-website-8-0/language/hr_HR/)\n"
 "MIME-Version: 1.0\n"
@@ -28,9 +28,9 @@ msgstr "Za onemogućavanje, potrebno je podesiti vaš pretraživač. Ukoliko nas
 #. module: website_cookie_notice
 #: view:website:website_cookie_notice.message
 msgid "We use cookies in this website. Read about them in our"
-msgstr ""
+msgstr "Na ovim stranicama koristimo kolačiće, o kojima možete više saznati u našoj "
 
 #. module: website_cookie_notice
 #: view:website:website_cookie_notice.message
 msgid "privacy policy"
-msgstr ""
+msgstr "izjavi o privatnosti"
