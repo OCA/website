@@ -255,7 +255,7 @@
         </t>
         <div class="row">
             <div t-attf-class="col-md-4 form-group #{errors.get('weight') and 'has-error'}">
-                <label>
+                <label for="weight">
                     Weight per unit (not including packaging)
                 </label>
                 <div class="input-group">
@@ -270,6 +270,29 @@
                         kg.
                     </span>
                 </div>
+            </div>
+            <div t-attf-class="col-md-4 form-group #{errors.get('public_categ_ids') and 'has-error'}">
+                <t t-set="multiselect" t-value="True"/>
+                <label for="public_categ_ids">
+                    <t t-if="multiselect">
+                        Categories
+                    </t>
+                    <t t-if="not (multiselect)">
+                        Category
+                    </t>
+                </label>
+                <select id="public_categ_ids"
+                        class="form-control"
+                        t-att-multiple="multiselect and 'multiple'"
+                        name="public_categ_ids">
+                    <t t-foreach="env['product.public.category'].search([])"
+                       t-as="option">
+                        <option
+                            t-att-selected="option in product.public_categ_ids and 'selected'"
+                            t-att-value="option.id"
+                            t-esc="option.display_name"/>
+                    </t>
+                </select>
             </div>
         </div>
     </t>

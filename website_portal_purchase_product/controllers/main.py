@@ -65,10 +65,17 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
         supplierinfo_found = dict()
         SupplierInfo = request.env["product.supplierinfo"]
         required = self._purchase_product_required_fields()
+        ignored = self._purchase_product_ignored_fields()
 
         try:
             with request.env.cr.savepoint():
-                for form_field, value in post.iteritems():
+                for form_field, value in post.iterlists():
+                    if form_field in ignored:
+                        continue
+
+                    # Support multiselect fields
+                    value = ",".join(value)
+
                     # Select the right supplierinfo record
                     if form_field.startswith("supplierinfo_"):
                         id_, db_field = form_field.split("_", 2)[1:]
@@ -78,7 +85,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
                         except KeyError:
                             supplierinfo_found[id_] = record = (
                                 SupplierInfo.browse(id_) if id_
-                                else SupplierInfo.new({
+                                else SupplierInfo.create({
                                     "product_id": product.id,
                                     "name": (request.env.user
                                              .commercial_partner_id),
@@ -123,6 +130,10 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
             pass
 
         return errors
+
+    def _purchase_product_ignored_fields(self):
+        """These fields will be ignored when recieving form data."""
+        return {"csrf_token"}
 
     def _purchase_product_required_fields(self):
         """These fields must be filled."""
@@ -244,8 +255,9 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
             product or product.new()).with_context(
                 pricelist=request.website.get_current_pricelist().id)
 
-        values["errors"] = (self._purchase_product_update(product, kwargs)
-                            if kwargs else dict())
+        values["errors"] = (
+            self._purchase_product_update(product, request.httprequest.form)
+            if kwargs else dict())
         return request.website.render(
             "website_portal_purchase_product.products_followup", values)
 
