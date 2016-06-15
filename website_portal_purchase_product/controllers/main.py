@@ -68,6 +68,10 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
         required = self._purchase_product_required_fields()
         ignored = self._purchase_product_ignored_fields()
 
+        # Fill in false boolean fields
+        for form_field in self._purchase_product_bool_fields():
+            post.setdefault(form_field, "")
+
         try:
             with request.env.cr.savepoint():
                 for form_field, value in post.iteritems():
@@ -136,6 +140,10 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
             pass
 
         return errors
+
+    def _purchase_product_bool_fields(self):
+        """Booleans get a default value of False if not received."""
+        return set()
 
     def _purchase_product_ignored_fields(self):
         """These fields will be ignored when recieving form data."""
