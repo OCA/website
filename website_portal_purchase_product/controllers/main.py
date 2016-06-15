@@ -118,7 +118,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
                 # No more required fields should remain now
                 for form_field in required:
                     self._purchase_product_add_error(
-                        errors, product, form_field, db_field,
+                        errors, product, form_field, form_field,
                         _("Required field"))
 
                 # Rollback if there were errors
@@ -162,10 +162,14 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
             Returns the modified :param:`errors` dict.
         """
         if form_field not in errors:
+            try:
+                human = (record._fields[db_field]
+                         .get_description(request.env)["string"])
+            except KeyError:
+                human = db_field
+
             errors[form_field] = {
-                "human":
-                    record._fields[db_field]
-                    .get_description(request.env)["string"],
+                "human": human,
                 "errors": list(),
             }
         errors[form_field]["errors"].append(message)
