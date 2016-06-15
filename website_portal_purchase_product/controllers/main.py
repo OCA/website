@@ -6,6 +6,7 @@
 
 import base64
 from contextlib import contextmanager
+from werkzeug.datastructures import CombinedMultiDict, FileStorage
 from werkzeug.exceptions import Forbidden
 from openerp import _
 from openerp.http import local_redirect, request, route
@@ -69,12 +70,17 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
 
         try:
             with request.env.cr.savepoint():
-                for form_field, value in post.iterlists():
+                for form_field, value in post.iteritems():
                     if form_field in ignored:
                         continue
 
-                    # Support multiselect fields
-                    value = ",".join(value)
+                    try:
+                        # Support multiselect fields
+                        value = ",".join(value)
+                    except TypeError:
+                        # Support file fields
+                        # TODO Add multi images support
+                        value = value[0]
 
                     # Select the right supplierinfo record
                     if form_field.startswith("supplierinfo_"):
@@ -133,7 +139,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
 
     def _purchase_product_ignored_fields(self):
         """These fields will be ignored when recieving form data."""
-        return {"csrf_token"}
+        return set()
 
     def _purchase_product_required_fields(self):
         """These fields must be filled."""
@@ -259,8 +265,15 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
             product or product.new()).with_context(
                 pricelist=request.website.get_current_pricelist().id)
 
+        # TODO Replace with `@route(multi=True)` in v10 if Odoo merges
+        # https://github.com/odoo/odoo/pull/12428
+        post = CombinedMultiDict((
+            request.httprequest.files,
+            request.httprequest.values)).to_dict(False)
+        post.pop("csrf_token", None)
+
         values["errors"] = (
-            self._purchase_product_update(product, request.httprequest.form)
+            self._purchase_product_update(product, post)
             if kwargs else dict())
         return request.website.render(
             "website_portal_purchase_product.products_followup", values)
