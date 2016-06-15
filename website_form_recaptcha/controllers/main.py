@@ -21,17 +21,14 @@ class WebsiteForm(WebsiteForm):
         website=True,
     )
     def recaptcha_public(self):
-        # @TODO: Figure out a better way to hand the site key to client
         return json.dumps({
-            'site_key': request.env.ref(
-                'website_form_recaptcha.recaptcha_key_site'
+            'site_key': request.env['ir.config.parameter'].get_param(
+                'recaptcha.key.site'
             ).value,
         })
 
     def extract_data(self, model, **kwargs):
-        """ Inject ReCaptcha validation into pre-existing data extraction
-        @TODO: Verify that this is actually the central point for form data
-        """
+        """ Inject ReCaptcha validation into pre-existing data extraction """
         res = super(WebsiteForm, self).extract_data(model, **kwargs)
         if model.website_form_recaptcha:
             captcha_obj = request.env['website.form.recaptcha']

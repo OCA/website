@@ -12,7 +12,7 @@ Adds a ReCaptcha field widget for website forms
 Configuration
 =============
 
-* Obtain ReCaptcha key
+* Obtain ReCaptcha key from `Google <http://www.google.com/recaptcha/admin>`_
 * Add site key to `recaptcha.key.site` system parameter
 * Add secret key to `recaptcha.key.secret` system parameter
 
@@ -30,11 +30,7 @@ Look at `website_crm_recaptcha` module for example implementation
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/{repo_id}/{branch}
-
-.. repo_id is available in https://github.com/OCA/maintainer-tools/blob/master/tools/repos_with_ids.txt
-.. branch is "8.0" for example
-
+   :target: https://runbot.odoo-community.org/runbot/186/9.0
 
 
 Known Issues / Road Map
