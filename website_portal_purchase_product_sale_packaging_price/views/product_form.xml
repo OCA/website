@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+<template id="products_followup"
+          inherit_id="website_portal_purchase_product.products_followup">
+    <xpath expr="//t[@t-call='website_portal_purchase_product.form_conditions']"
+           position="after">
+        <t t-call="website_portal_purchase_product_sale_packaging_price.form_packaging_price"/>
+    </xpath>
+</template>
+
+<template id="form_packaging_price">
+    <t t-call="website_portal_purchase_product.form_panel">
+        <t t-set="section_title">
+            <t>Packaging &amp; Prices</t>
+        </t>
+
+        <!-- Filled by JavaScript -->
+        <div class="js_packaging_placeholder"
+             t-att-data-product="product.id"
+             t-att-data-currency-position="product.currency_id.position"
+             t-att-data-currency-symbol="product.currency_id.symbol"/>
+
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-8">
+                <button type="button"
+                        class="btn btn-default btn-wide js_packaging_add">
+                    <i class="fa fa-plus"/>
+                    <span>Add packaging</span>
+                </button>
+            </div>
+        </div>
+    </t>
+</template>
+
+</odoo>

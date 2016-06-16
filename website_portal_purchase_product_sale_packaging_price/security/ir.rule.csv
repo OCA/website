@@ -1,0 +1,2 @@
+id,name,model_id:id,groups:id,domain_force
+rule_product_packaging,Only allow to read own product packagings,product.model_product_packaging,base.group_portal,"[(user.commercial_partner_id.supplier, '=', True), ('product_tmpl_id.seller_ids.name', 'child_of', user.commercial_partner_id.ids), ('product_tmpl_id.active', '=', True)]"

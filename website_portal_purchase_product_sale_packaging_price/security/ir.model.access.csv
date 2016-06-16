@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+write_packaging,Portal users can write packagings,product.model_product_packaging,base.group_portal,1,1,1,1
+read_packaging_material,Portal users can read packaging materials,sale_packaging_price.model_product_packaging_material,base.group_portal,1,0,0,0
