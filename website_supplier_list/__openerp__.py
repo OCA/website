@@ -15,6 +15,7 @@
         'website_google_map'
         ],
     'data': [
+        'views/assets.xml',
         'views/website_supplier.xml',
         'views/res_partner_view.xml'
     ],

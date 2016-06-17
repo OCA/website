@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <template id="assets_frontend" inherit_id="website.assets_frontend">
+            <xpath expr="." position="inside">
+				<link type="text/css"
+		              href="/website_supplier_list/static/src/css/website_supplier_list.css"
+		              rel="stylesheet"/>
+            </xpath>
+        </template>
+    </data>
+</openerp>
