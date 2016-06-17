@@ -265,6 +265,7 @@
                            placeholder="E.g. 1"
                            type="number"
                            min="0"
+                           step="0.01"
                            t-att-value="product.weight"/>
                     <span class="input-group-addon">
                         kg.
