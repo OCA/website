@@ -101,16 +101,11 @@
 </template>
 
 <template id="tree_actions" name="Website Product Supplier Tree Actions">
-    <div class="input-group o_my_purchase_product_new"
-         title="Add new product">
-        <span class="input-group-addon">Add new product</span>
-        <span class="input-group-btn">
-            <a href="/my/purchase/products/new"
-               class="btn btn-primary">
-                <i class="fa fa-plus"/>
-            </a>
-        </span>
-    </div>
+    <a href="/my/purchase/products/new"
+       class="btn btn-primary btn-wide">
+        <i class="fa fa-plus"/>
+        <span>Add new product</span>
+    </a>
 </template>
 
 </odoo>
