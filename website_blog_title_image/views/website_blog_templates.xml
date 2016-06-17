@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Blog Post Complete Extended -->
+        <template id="blog_post_complete_extended" inherit_id="website_blog.blog_post_complete">
+            <xpath expr="//a[@id='change_cover']" position="before">
+                <a id="change_title_image" class="btn btn-primary">
+                    Change Title Image
+                </a>
+            </xpath>
+            <xpath expr="//div[hasclass('cover-storage')]" position="after">
+                <div class="title-image-storage oe_hidden"></div>
+            </xpath>
+        </template>
+        
+        <template id="blog_post_short_extended" inherit_id="website_blog.blog_post_short">
+            <xpath expr="//h4" position="after">
+                <img class="img img-responsive" t-att-src="blog_post.title_image" />
+            </xpath>
+        </template>
+
+    </data>
+</openerp>
