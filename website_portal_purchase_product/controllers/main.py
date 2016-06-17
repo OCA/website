@@ -279,6 +279,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
             request.httprequest.files,
             request.httprequest.values)).to_dict(False)
         post.pop("csrf_token", None)
+        post.pop("debug", None)
 
         values["errors"] = (
             self._purchase_product_update(product, post)
