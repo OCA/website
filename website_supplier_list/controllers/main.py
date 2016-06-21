@@ -81,13 +81,11 @@ class WebsiteSupplier(http.Controller):
         partner_ids = partner_obj.search(
             domain, offset=pager['offset'],
             limit=self._references_per_page)
-        google_map_partner_ids = ','.join(map(str, partner_ids))
 
         values = {
             'countries': country_ids,
             'current_country_id': country_id or 0,
             'partners': partner_ids,
-            'google_map_partner_ids': google_map_partner_ids,
             'pager': pager,
             'post': post,
             'search_path': "?%s" % werkzeug.url_encode(post),
