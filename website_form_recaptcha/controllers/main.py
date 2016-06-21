@@ -22,9 +22,9 @@ class WebsiteForm(WebsiteForm):
     )
     def recaptcha_public(self):
         return json.dumps({
-            'site_key': request.env['ir.config.parameter'].get_param(
+            'site_key': request.env['ir.config_parameter'].get_param(
                 'recaptcha.key.site'
-            ).value,
+            ),
         })
 
     def extract_data(self, model, **kwargs):
