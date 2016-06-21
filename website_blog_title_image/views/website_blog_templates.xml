@@ -4,7 +4,7 @@
         <template id="blog_post_short" inherit_id="website_blog.blog_post_short">
             <xpath expr="//span[@t-field='blog_post.author_avatar']" position="before">
                 <a t-attf-href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post) }">
-                    <span t-field="blog_post.title_image" t-field-options='{"widget": "image", "class": "mt16 media-object"}' />
+                    <span t-field="blog_post.title_image" t-field-options='{"widget": "image", "class": "media-object"}' />
                 </a>
             </xpath>
         </template>
