@@ -3,20 +3,20 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
-    'name': 'Blog Title Image',
+    'name': 'Blog Post Title Image',
+    'images': [],
     'category': 'Website',
-    'summary': 'Enables adding title image to blogpost.',
     'version': '8.0.1.0.0',
+    'author': 'ONESTEiN BV,Odoo Community Association (OCA)',
     'license': 'AGPL-3',
-    'description': """
-        """,
-    'author': 'Onestein',
-    'depends': [
-        'website_blog'
-    ],
+    'website': 'http://www.onestein.eu',
+    'depends': ['website_blog'],
     'data': [
         'views/website_blog_templates.xml',
         'views/blog_post_view.xml'
     ],
+    'summary': 'Enables adding title image to blogpost.',
     'installable': True,
+    'auto_install': False,
+    'application': False,
 }
