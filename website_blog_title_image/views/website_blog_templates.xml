@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <!-- Blog Post Complete Extended -->
-        <template id="blog_post_complete_extended" inherit_id="website_blog.blog_post_complete">
-            <xpath expr="//a[@id='change_cover']" position="before">
-                <a id="change_title_image" class="btn btn-primary">
-                    Change Title Image
+        <template id="blog_post_short" inherit_id="website_blog.blog_post_short">
+            <xpath expr="//span[@t-field='blog_post.author_avatar']" position="before">
+                <a t-attf-href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post) }">
+                    <span t-field="blog_post.title_image" t-field-options='{"widget": "image", "class": "mt16 media-object"}' />
                 </a>
             </xpath>
-            <xpath expr="//div[hasclass('cover-storage')]" position="after">
-                <div class="title-image-storage oe_hidden"></div>
-            </xpath>
         </template>
-        
-        <template id="blog_post_short_extended" inherit_id="website_blog.blog_post_short">
-            <xpath expr="//h4" position="after">
-                <img class="img img-responsive" t-att-src="blog_post.title_image" />
-            </xpath>
-        </template>
-
     </data>
 </openerp>

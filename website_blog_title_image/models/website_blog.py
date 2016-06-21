@@ -1,8 +1,11 @@
-from openerp.osv import osv, fields
+# -*- coding: utf-8 -*-
+# © 2016 ONESTEiN BV (<http://www.onestein.eu>)
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-class BlogPost(osv.Model):
-    _name = "blog.post"
-    _inherit = ['blog.post']
-    _columns = {
-        'title_image': fields.binary('Title Image')
-        }
+from openerp import models, fields
+
+
+class BlogPost(models.Model):
+    _inherit = 'blog.post'
+
+    title_image = fields.Binary('Title Image')
