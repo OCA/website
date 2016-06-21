@@ -74,41 +74,6 @@
             </t>
         </template>
 
-        <!-- Option: left column: World Map -->
-        <template id="opt_country" inherit_id="website_supplier_list.index" customize_show="True" name="Show Map">
-            <xpath expr="//div[@id='ref_left_column']" position="inside">
-                <!-- modal for large map -->
-                <div class="modal fade supplier_map_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4 class="modal-title">World Map</h4>
-                        </div>
-                        <iframe 
-                            class="oe_google_maps"
-                            t-attf-src="/google_map/?width=898&amp;height=485&amp;partner_ids=#{ google_map_partner_ids }&amp;partner_url=/suppliers/"
-                        />
-                    </div>
-                  </div>
-                </div>
-                <!-- modal end -->
-                <h3>
-                    World Map
-                    <button class="btn btn-link" data-toggle="modal" data-target=".supplier_map_modal">
-                        <span class="fa fa-external-link" />
-                    </button>
-                </h3>
-                <ul class="nav">
-                    <iframe
-                        class="oe_supplier_google_maps"
-                        t-attf-src="/google_map?width=260&amp;height=240&amp;partner_ids=#{ google_map_partner_ids }&amp;partner_url=/suppliers/"
-                        scrolling="no"
-                    />
-                </ul>
-            </xpath>
-        </template>
-
         <template id="opt_country_list" inherit_id="website_supplier_list.index" customize_show="True" name="Filter on Countries">
             <xpath expr="//div[@id='ref_left_column']" position="inside">
                 <h3>References by Country</h3>
