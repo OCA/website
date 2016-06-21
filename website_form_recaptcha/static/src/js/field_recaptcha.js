@@ -6,6 +6,7 @@ odoo.define('website_form_recaptcha.recaptcha', function(require){
   "use strict";
   
   var snippet_animation = require('web_editor.snippets.animation');
+  var $ = require("$");
   
   snippet_animation.registry.form_builder_send = snippet_animation.registry.form_builder_send.extend({
     
@@ -18,10 +19,10 @@ odoo.define('website_form_recaptcha.recaptcha', function(require){
         method: 'GET',
         success: function(data){
           data = JSON.parse(data);
-          this.$captchas.append($(
+          self.$captchas.append($(
             '<div class="g-recaptcha" data-sitekey="' + data.site_key + '"></div>'
           ));
-          if (this.$captchas.length) {
+          if (self.$captchas.length) {
             $.getScript('https://www.google.com/recaptcha/api.js');
           }
         },
