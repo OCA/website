@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+<data>
+
+<template id="assets_frontend" inherit_id="website_blog.assets_frontend">
+    <xpath expr=".">
+        <link
+            rel="stylesheet"
+            href="/website_blog_excerpt_img/static/src/css/website_blog_excerpt_img.css"/>
+    </xpath>
+</template>
+
+</data>
+</openerp>
