@@ -26,7 +26,7 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
       if (add_domain) {
         domain = domain.concat(add_domain);
       }
-      QueryModel.call('search_read', [domain, [displayField]], {limit: limit})
+      return QueryModel.call('search_read', [domain, [displayField]], {limit: limit})
         .then(function(records) {
           var data = records.reduce(function(a, b) {
             a.push(b[displayField]);
