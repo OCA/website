@@ -19,27 +19,27 @@ To use this module, you need to add an input field with the
 
     <input type="text"
            class="s_website_autocomplete"
-           data-queryField="name"
-           data-displayField="name"
+           data-query-field="name"
+           data-display-field="name"
            data-limit="5"
            data-domain='[["website_published", "=", true]]'
            data-model="product.template"
            />
 
 
-+-------------------+--------------------------------------------+------------+----------+
-|  Attribute        |  Description                               |  Default   | Required |
-+===================+============================================+============+==========+
-| data-model        | Model name to query                        |            | True     |
-+-------------------+--------------------------------------------+------------+----------+
-| data-queryField   | Field to query when searching              | name       | False    |
-+-------------------+--------------------------------------------+------------+----------+
-| data-displayField | Field to display (defaults to queryField)  | queryField | False    |
-+-------------------+--------------------------------------------+------------+----------+
-| data-limit        | Limit results to this many                 | 10         | False    |
-+-------------------+--------------------------------------------+------------+----------+
-| data-domain       | Additional domain for query                | []         | False    |
-+-------------------+--------------------------------------------+------------+----------+
++--------------------+---------------------------------------------+------------+----------+
+|  Attribute         |  Description                                |  Default   | Required |
++====================+=============================================+============+==========+
+| data-model         | Model name to query                         |            | True     |
++--------------------+---------------------------------------------+------------+----------+
+| data-query-field   | Field to query when searching               | name       | False    |
++--------------------+---------------------------------------------+------------+----------+
+| data-display-field | Field to display (defaults to query-field)  | query-field | False   |
++--------------------+---------------------------------------------+------------+----------+
+| data-limit         | Limit results to this many                  | 10         | False    |
++--------------------+---------------------------------------------+------------+----------+
+| data-domain        | Additional domain for query                 | []         | False    |
++--------------------+---------------------------------------------+------------+----------+
 
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
