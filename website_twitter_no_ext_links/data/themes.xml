@@ -1,0 +1,32 @@
+<openerp>
+	<data noupdate="1">
+
+		<record id="twitter_theme_dark" model="twitter.theme">
+			<field name="name">Dark theme</field>
+            <field name="twitter_feed_background">#000000</field>
+            <field name="twitter_tweet_header_background">#2F4F4F</field>
+            <field name="twitter_tweet_text_background">#000000</field>
+            <field name="twitter_text_color">#FFFFFF</field> 
+            <field name="twitter_hashtag_color">#FF8C00</field> 
+            <field name="twitter_at_color">#7FFF00</field>
+            <field name="twitter_show_date" eval="True"/>
+            <field name="twitter_show_author" eval="True"/>
+            <field name="twitter_show_title" eval="True"/>
+
+        </record>
+
+        
+		<record id="twitter_theme_light_blue" model="twitter.theme">
+			<field name="name">Light blue</field>
+            <field name="twitter_feed_background">#F0F8FF</field>
+            <field name="twitter_tweet_header_background">#ADD8E6</field>
+            <field name="twitter_tweet_text_background">#F0F8FF</field>
+            <field name="twitter_text_color">#4B0082</field>
+            <field name="twitter_show_date" eval="True"/>
+            <field name="twitter_hashtag_color">#FF8C00</field> 
+            <field name="twitter_at_color">#7FFF00</field>
+            <field name="twitter_show_author" eval="True"/>
+            <field name="twitter_show_title" eval="True"/>
+        </record>
+    </data>
+</openerp>
