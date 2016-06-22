@@ -6,7 +6,7 @@
 -->
 
 <odoo>
-    <template id="assets_recaptcha" name="website_form_recaptcha Assets" inherit_id="website.assets_frontend">
+    <template id="assets_autocomplete" name="website_field_autocomplete Assets" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
             <script src="/website_field_autocomplete/static/src/js/field_autocomplete.js" />
         </xpath>
