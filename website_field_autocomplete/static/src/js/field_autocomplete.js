@@ -10,44 +10,39 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
 
   snippet_animation.registry.field_autocomplete = snippet_animation.Class.extend({
 
-    selector: '.s_website_autocomplete',
+    selector: '.js_website_autocomplete',
 
+    /* Query remote server for autocomplete suggestions
+     * @param request object Request from jQueryUI Autocomplete
+     * @param response function Callback for response, accepts array of str
+     */
+    autocomplete: function(self, request, response) {
+      var QueryModel = new Model(self.$target.data('model'));
+      var queryField = self.$target.data('query-field') || 'name';
+      var displayField = self.$target.data('display-field') || queryField;
+      var limit = self.$target.data('limit') || 10;
+      var domain = [[queryField, 'ilike', request.term]];
+      var add_domain = self.$target.data('domain');
+      if (add_domain) {
+        domain = domain.concat(add_domain);
+      }
+      QueryModel.call('search_read', [domain, [displayField]], {limit: limit})
+        .then(function(records) {
+          var data = records.reduce(function(a, b) {
+            a.push(b[displayField]);
+            return a;
+          }, []);
+          response(data);
+        });
+    },
+    
     start: function() {
-
-      let self = this;
-
+      var self = this;
       this.$target.autocomplete({
         source: function(request, response) {
-          // Must use var, let yields undefined
-          var QueryModel = new Model(self.$target.data('model'));
-          let queryField = self.$target.data('queryField');
-          if (!queryField) {
-            queryField = 'name';
-          }
-          let displayField = self.$target.data('displayField');
-          if (!displayField) {
-            displayField = queryField;
-          }
-          let limit = self.$target.data('limit');
-          if (!limit) {
-            limit = 10;
-          }
-          let domain = [[queryField, 'ilike', request.term]];
-          let add_domain = self.$target.data('domain');
-          if (add_domain) {
-            domain = domain.concat(add_domain);
-          }
-          QueryModel.call('search_read', [domain, [displayField]], {limit: limit})
-            .then(function(records) {
-              let data = records.reduce(function(a, b) {
-                a.push(b[displayField]);
-                return a;
-              }, []);
-              response(data);
-            });
-        }
+          self.autocomplete(self, request, response);
+        },
       });
-      
     },
     
   });
