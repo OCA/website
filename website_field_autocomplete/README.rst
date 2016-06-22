@@ -15,7 +15,7 @@ Usage
 =====
 
 To use this module, you need to add an input field with the
-``s_website_autocomplete`` class, such as in the below format:
+``js_website_autocomplete`` class, such as in the below format:
 
     <input type="text"
            class="s_website_autocomplete"
