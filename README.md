@@ -20,9 +20,11 @@ addon | version | summary
 [website_analytics_piwik](website_analytics_piwik/) | 8.0.1.0.0 | Track website users using piwik
 [website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 8.0.1.0.0 | When user clicks a link to scroll, the scroll is animated
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 | Hook backend views into your website frontend
+[website_blog_excerpt_img](website_blog_excerpt_img/) | 8.0.1.0.0 | New layout for blog summary, including an excerpt and image
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 | Add Facebook comments on blog posts
 [website_blog_mgmt](website_blog_mgmt/) | 8.0.1.0.0 | Website blog Management
 [website_blog_share](website_blog_share/) | 8.0.1.0.0 | Blog Share
+[website_blog_title_image](website_blog_title_image/) | 8.0.1.0.0 | Enables adding title image to blogpost.
 [website_breadcrumb](website_breadcrumb/) | 8.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_calendar_snippet](website_calendar_snippet/) | 8.0.1.0.0 | Calendar (based on Messaging -> Calendar) on website.
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 | Let you choose between fixed or fluid containers
@@ -55,6 +57,7 @@ addon | version | summary
 [website_signup_legal_page_required](website_signup_legal_page_required/) | 8.0.1.0.0 | Force the user to accept the legal terms to open an account
 [website_slides](website_slides/) | 8.0.1.0.0 | Share and Publish Videos, Presentations and Documents
 [website_snippet_anchor](website_snippet_anchor/) | 8.0.1.0.0 | Allow to reach a concrete section in the page
+[website_snippet_big_button](website_snippet_big_button/) | 8.0.1.0.0 | A snippet that adds two big buttons
 [website_snippet_contact_form](website_snippet_contact_form/) | 8.0.1.0.0 | Put a contact form anywhere you want
 [website_snippet_marginless_gallery](website_snippet_marginless_gallery/) | 8.0.1.0.1 | Add a snippet to have a marginless image gallery
 [website_supplier_list](website_supplier_list/) | 8.0.1.0.0 | Publish Your Suppliers References
