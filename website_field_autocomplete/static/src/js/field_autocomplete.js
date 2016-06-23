@@ -16,20 +16,17 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
      * @param request object Request from jQueryUI Autocomplete
      * @param response function Callback for response, accepts array of str
      */
-    autocomplete: function(self, request, response) {
-      var QueryModel = new Model(self.$target.data('model'));
-      var queryField = self.$target.data('query-field') || 'name';
-      var displayField = self.$target.data('display-field') || queryField;
-      var limit = self.$target.data('limit') || 10;
-      var domain = [[queryField, 'ilike', request.term]];
-      var add_domain = self.$target.data('domain');
-      if (add_domain) {
-        domain = domain.concat(add_domain);
+    autocomplete: function(request, response) {
+      var self = this;
+      var domain = [[this.queryField, 'ilike', request.term]];
+      if (this.add_domain) {
+        domain = domain.concat(this.add_domain);
       }
-      return QueryModel.call('search_read', [domain, [displayField]], {limit: limit})
+      var args = [domain, [this.displayField]];
+      return this.QueryModel.call('search_read', args, {limit: this.limit})
         .then(function(records) {
           var data = records.reduce(function(a, b) {
-            a.push(b[displayField]);
+            a.push(b[self.displayField]);
             return a;
           }, []);
           response(data);
@@ -38,9 +35,14 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
     
     start: function() {
       var self = this;
+      this.QueryModel = new Model(this.$target.data('model'));
+      this.queryField = this.$target.data('query-field') || 'name';
+      this.displayField = this.$target.data('display-field') || this.queryField;
+      this.limit = this.$target.data('limit') || 10;
+      this.add_domain = this.$target.data('domain');
       this.$target.autocomplete({
         source: function(request, response) {
-          self.autocomplete(self, request, response);
+          self.autocomplete(request, response);
         },
       });
     },
