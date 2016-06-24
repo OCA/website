@@ -18,4 +18,7 @@
     "data": [
         'views/assets.xml',
     ],
+    'demo': [
+        'demo/field_autocomplete_demo.xml',
+    ]
 }
