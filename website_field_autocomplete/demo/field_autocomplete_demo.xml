@@ -7,14 +7,16 @@
 
 <odoo>
     <template id="field_autocomplete_demo" name="Field Autocomplete Demo" inherit_id="website.homepage">
-        <xpath expr="//div" position="inside">
-            <div class="row">
+        <xpath expr="//div[@id='wrap']" position="inside">
+            <div class="container">
                 <h1>Partner Autocomplete:</h1>
                 <div class="row">
+                    <label for="name">Name</label>
                     <input type="text"
                            class="js_website_autocomplete"
                            data-query-field="name"
                            data-display-field="name"
+                           data-value-field="id"
                            data-limit="10"
                            data-domain='[["customer", "=", true]]'
                            data-model="res.partner"
