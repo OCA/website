@@ -53,7 +53,8 @@ Following is a breakdown of the available attributes & their defaults:
 Known Issues / Road Map
 =======================
 
-* Use of Model/jsonRPC requires a user session.
+* Replace jQuery UI Autocomplete w/ HTML5 Datalist when `ready for production
+<http://caniuse.com/#feat=datalist>`_.
 
 
 Bug Tracker
