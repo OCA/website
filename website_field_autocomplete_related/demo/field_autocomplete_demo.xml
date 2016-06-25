@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2016 LasLabs Inc.
+    @license AGPL-3 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+
+<odoo>
+    <template id="field_autocomplete_demo" name="Field Autocomplete Demo" inherit_id="website_field_autocomplete.field_autocomplete_demo">
+        <xpath expr="//div[@class='row']" position="after">
+            <div class="row">
+                <h1>Partner Autocomplete Related:</h1>
+                <div class="row">
+                    <label for="name">Name</label>
+                    <input type="text"
+                           name="name"
+                           class="js_website_autocomplete"
+                           data-query-field="name"
+                           data-relate-recv="res_partner"
+                           data-model="res.partner"
+                           />
+                </div>
+                <div class="row">
+                    <label for="company">Company</label>
+                    <input type="text"
+                           name="company"
+                           class="js_website_autocomplete"
+                           data-query-field="name"
+                           data-recv-field="company_id.name"
+                           data-relate-recv="res_partner"
+                           data-relate-send="_"
+                           data-model="res.company"
+                           />
+                </div>
+                <div class="row">
+                    <label for="phone">Phone</label>
+                    <input type="text"
+                           name="phone"
+                           class="js_website_autocomplete"
+                           data-query-field="phone"
+                           data-relate-recv="res_partner"
+                           data-model="res.partner"
+                           />
+                </div>
+                <div class="row">
+                    <label for="street">Street</label>
+                    <input type="text"
+                           name="street"
+                           data-query-field="street"
+                           data-relate-recv="res_partner"
+                           />
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
