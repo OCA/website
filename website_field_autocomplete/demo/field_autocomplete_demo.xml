@@ -6,23 +6,31 @@
 -->
 
 <odoo>
-    <template id="field_autocomplete_demo" name="Field Autocomplete Demo" inherit_id="website.homepage">
-        <xpath expr="//div[@id='wrap']" position="inside">
-            <div class="container">
-                <h1>Partner Autocomplete:</h1>
-                <div class="row">
-                    <label for="name">Name</label>
-                    <input type="text"
-                           class="js_website_autocomplete"
-                           data-query-field="name"
-                           data-display-field="name"
-                           data-value-field="id"
-                           data-limit="10"
-                           data-domain='[["customer", "=", true]]'
-                           data-model="res.partner"
-                           />
+    <template id="field_autocomplete_demo" name="Field Autocomplete Demo"  page="True">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container">
+                    <h1>Partner Autocomplete:</h1>
+                    <div class="row">
+                        <label for="name">Name</label>
+                        <input type="text"
+                               class="js_website_autocomplete"
+                               data-query-field="name"
+                               data-display-field="name"
+                               data-value-field="id"
+                               data-limit="10"
+                               data-domain='[["customer", "=", true]]'
+                               data-model="res.partner"
+                               />
+                    </div>
                 </div>
             </div>
-        </xpath>
+        </t>
     </template>
+    <record id="field_autocomplete_demo_link" model="website.menu">
+        <field name="name">AutoComplete</field>
+        <field name="url">/page/website_field_autocomplete.field_autocomplete_demo</field>
+        <field name="parent_id" ref="website.main_menu" />
+        <field name="sequence" type="int">50</field>
+    </record>
 </odoo>
