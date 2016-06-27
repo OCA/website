@@ -18,22 +18,26 @@
             <t>Packaging &amp; Prices</t>
         </t>
 
-        <!-- Filled by JavaScript -->
-        <div class="js_packaging_placeholder"
-             t-att-data-product="product.id"
-             t-att-data-currency-position="product.currency_id.position"
-             t-att-data-currency-symbol="product.currency_id.symbol"/>
-
-        <div class="row">
-            <div class="col-sm-4 col-sm-offset-8">
-                <button type="button"
-                        class="btn btn-default btn-wide js_packaging_add">
-                    <i class="fa fa-plus"/>
-                    <span>Add packaging</span>
-                </button>
-            </div>
-        </div>
+        <t t-call="website_portal_purchase_product_sale_packaging_price.packaging_placeholder"/>
     </t>
+</template>
+
+<template id="packaging_placeholder">
+    <!-- Filled by JavaScript -->
+    <div class="js_packaging_placeholder"
+         t-att-data-product="product.id"
+         t-att-data-currency-position="product.currency_id.position"
+         t-att-data-currency-symbol="product.currency_id.symbol"/>
+
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-8">
+            <button type="button"
+                    class="btn btn-default btn-wide js_packaging_add">
+                <i class="fa fa-plus"/>
+                <span>Add packaging</span>
+            </button>
+        </div>
+    </div>
 </template>
 
 </odoo>
