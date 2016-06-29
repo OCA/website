@@ -39,13 +39,41 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
                     ]
         return domain
 
+    def _purchase_product_create(self, post):
+        """Create a new product.
+
+        :param CombinedMultiDict post:
+            Values as they came from the form.
+
+        :return (product, errors):
+            Tuple with product ORM record and errors as they come out from
+            :meth:`~._purchase_product_update`.
+        """
+        product = request.env["product.template"]
+        product.check_access_rights("create")
+
+        # Create product as admin
+        product = product.sudo().create({
+            "name": post.get("name", False),
+        })
+
+        # Continue edition as supplier user
+        seller = request.env["product.supplierinfo"].create({
+            "product_tmpl_id": product.id,
+            "name": request.env.user.commercial_partner_id.id,
+        })
+        product = seller.product_tmpl_id
+        errors = self._purchase_product_update(product, post)
+
+        return product, errors
+
     def _purchase_product_update(self, product, post):
         """Update the product with the received form values.
 
         :param product.template product:
             Product record to update.
 
-        :param dict post:
+        :param CombinedMultiDict post:
             Values as they came from the form.
 
         :return dict:
@@ -93,13 +121,18 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
                         try:
                             record = supplierinfo_found[id_]
                         except KeyError:
-                            supplierinfo_found[id_] = record = (
-                                SupplierInfo.browse(id_) if id_
-                                else SupplierInfo.create({
-                                    "product_id": product.id,
-                                    "name": (request.env.user
-                                             .commercial_partner_id),
-                                }))
+                            record = False
+                            if id_:
+                                record = SupplierInfo.browse(id_).exists()
+                            if not record:
+                                record = SupplierInfo.search(
+                                    [("product_tmpl_id", "=", product.id),
+                                     ("name", "=",
+                                      request.env.user
+                                      .commercial_partner_id.id)],
+                                    limit=1,
+                                )
+                            supplierinfo_found[id_] = record
 
                     # Select the product record
                     else:
@@ -246,7 +279,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
             "search": search,
         })
 
-        return request.website.render(
+        return request.render(
             "website_portal_purchase_product.portal_my_products", values)
 
     @route(
@@ -267,25 +300,49 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
             product = request.env["product.template"]
             product.check_access_rights("create")
 
-        # Prepare form
         values = self._prepare_portal_layout_values()
-        values["product"] = (
-            product or product.new()).with_context(
-                pricelist=request.website.get_current_pricelist().id)
+        view = "website_portal_purchase_product.products_followup"
 
-        # TODO Replace with `@route(multi=True)` in v10 if Odoo merges
-        # https://github.com/odoo/odoo/pull/12428
-        post = CombinedMultiDict((
-            request.httprequest.files,
-            request.httprequest.values)).to_dict(False)
-        post.pop("csrf_token", None)
-        post.pop("debug", None)
+        # Edit mode, get POST data as multidict
+        if kwargs:
+            post = CombinedMultiDict((
+                request.httprequest.files,
+                request.httprequest.values)).to_dict(False)
+            post.pop("csrf_token", None)
+            post.pop("debug", None)
 
-        values["errors"] = (
-            self._purchase_product_update(product, post)
-            if kwargs else dict())
-        return request.website.render(
-            "website_portal_purchase_product.products_followup", values)
+            # Create or edit product
+            try:
+                with request.env.cr.savepoint():
+                    values["product"], values["errors"] = (
+                        (product, self._purchase_product_update(product, post))
+                        if product else self._purchase_product_create(post))
+
+                    ok = not values["errors"]
+
+                    # Redirect to the new product URL
+                    if ok and not product:
+                        return local_redirect(
+                            "/my/purchase/products/{}".format(
+                                values["product"].id))
+
+                    # The edited form, if there were no errors
+                    result = request.render(view, values, ok)
+                    if ok:
+                        return result
+
+                    # Rollback product edition or creation
+                    raise FormSaveError()
+
+            except FormSaveError:
+                # Form was rendered, transaction was rolled back, so return it
+                return result
+
+        values.update({
+            "product": product or product.new(),
+            "errors": dict(),
+        })
+        return request.render(view, values)
 
     @route(
         ["/my/purchase/products/<model('product.template'):product>/disable"],
