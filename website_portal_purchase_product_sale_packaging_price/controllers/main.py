@@ -51,7 +51,7 @@ class PackagingPurchaseWebsiteAccount(ProductPortalPurchaseWebsiteAccount):
         """Drop removed packagings."""
         result = (super(PackagingPurchaseWebsiteAccount, self)
                   ._purchase_product_update(product, post))
-        (result[0].packaging_ids.filtered(
+        (product.packaging_ids.filtered(
             lambda r: r not in request.context["packagings_cached"].values())
             .unlink())
         return result
