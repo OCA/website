@@ -353,8 +353,9 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
 
         They will think it was deleted, but it was just disabled.
         """
+        product = product.sudo()
         product.website_published = product.active = False
-        return local_redirect(redirect, kwargs)
+        return local_redirect(redirect)
 
     @route()
     def account(self):
