@@ -19,6 +19,7 @@ addon | version | summary
 --- | --- | ---
 [website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 | Website blog Management
 [website_crm_recaptcha](website_crm_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
+[website_field_autocomplete](website_field_autocomplete/) | 9.0.1.0.0 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha field for Website Forms
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 | Website Legal Page
 [website_no_crawler](website_no_crawler/) | 9.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
