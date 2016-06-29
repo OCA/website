@@ -99,7 +99,8 @@ animation.Class.extend({
         );
     },
     add_packaging_empty: function (event) {
-        return this.add_packaging(this.empty_packaging());
+        this.add_packaging(this.empty_packaging());
+        this.$placeholder.find(".row:last :input:first").focus()
     },
     delete_packaging: function (event) {
         return this.$(event.target).closest(".row").remove();
