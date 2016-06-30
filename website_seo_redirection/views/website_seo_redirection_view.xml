@@ -50,6 +50,7 @@
     id="website_seo_redirection_menu"
     action="website_seo_redirection_action_open"
     groups="base.group_website_designer"
-    parent="base.menu_custom"/>
+    parent="website.menu_website_configuration"
+    sequence="110"/>
 
 </odoo>

@@ -17,8 +17,7 @@ want a fixed and beautiful URL for it. That entry is posted in
 ``https://example.com/blog/our-news-1/post/amazing-post-23``, but you want it
 at ``https://example.com/amazing``. You need to:
 
-#. Enable Developer Mode 
-#. Go to *Settings > Technical > SEO Redirections > Create*.
+#. Go to *Website Admin > SEO Redirections > Create*.
 #. Set ``/blog/our-news-1/post/amazing-post-23`` as *Original URL*.
 #. Set ``/amazing`` as *Redirected URL*.
 
