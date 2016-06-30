@@ -17,7 +17,8 @@ want a fixed and beautiful URL for it. That entry is posted in
 ``https://example.com/blog/our-news-1/post/amazing-post-23``, but you want it
 at ``https://example.com/amazing``. You need to:
 
-#. Go to *Settings > Configuration > SEO Redirections > Create*.
+#. Enable Developer Mode 
+#. Go to *Settings > Technical > SEO Redirections > Create*.
 #. Set ``/blog/our-news-1/post/amazing-post-23`` as *Original URL*.
 #. Set ``/amazing`` as *Redirected URL*.
 
@@ -26,7 +27,7 @@ the URL you wanted.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/8.0
+   :target: https://runbot.odoo-community.org/runbot/186/9.0
 
 Known issues / Roadmap
 ======================
@@ -56,6 +57,7 @@ Contributors
 ------------
 
 * Jairo Llopis <jairo.llopis@tecnativa.com>
+* Dave Lasley <dave@laslabs.com>
 
 Maintainer
 ----------
