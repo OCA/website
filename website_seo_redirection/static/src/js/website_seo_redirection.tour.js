@@ -2,9 +2,12 @@
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
 
-"use strict";
-(function ($) {
-    openerp.Tour.register({
+odoo.define('website_seo_redirection.tour', function(require) {
+    'use strict';
+    
+    var Tour = require('web.Tour');
+    
+    Tour.register({
         id: "website_seo_redirection",
         name: "Check SEO redirections functionality",
         path: "/",
@@ -41,4 +44,4 @@
             },
         ],
     });
-})(jQuery);
+});

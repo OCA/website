@@ -2,8 +2,7 @@
 <!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
-<openerp>
-<data>
+<odoo>
 
 <template id="sample_page" page="True">
     <t t-call="website.layout">
@@ -48,5 +47,4 @@
     <field name="destination">/seo/sample</field>
 </record>
 
-</data>
-</openerp>
+</odoo>

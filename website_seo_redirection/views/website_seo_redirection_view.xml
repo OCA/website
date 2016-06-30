@@ -2,8 +2,7 @@
 <!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
-<openerp>
-<data>
+<odoo>
 
 <record id="website_seo_redirection_form_view" model="ir.ui.view">
     <field name="name">Website SEO Redirection Form</field>
@@ -51,7 +50,6 @@
     id="website_seo_redirection_menu"
     action="website_seo_redirection_action_open"
     groups="base.group_website_designer"
-    parent="base.menu_config"/>
+    parent="base.menu_custom"/>
 
-</data>
-</openerp>
+</odoo>

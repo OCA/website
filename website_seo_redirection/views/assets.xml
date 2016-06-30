@@ -2,8 +2,7 @@
 <!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 
-<openerp>
-<data>
+<odoo>
 
 <template id="assets_editor" inherit_id="website.assets_editor">
     <xpath expr=".">
@@ -12,5 +11,4 @@
     </xpath>
 </template>
 
-</data>
-</openerp>
+</odoo>
