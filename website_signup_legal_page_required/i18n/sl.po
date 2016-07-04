@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
-"PO-Revision-Date: 2016-05-02 04:14+0000\n"
+"POT-Creation-Date: 2016-06-23 03:09+0000\n"
+"PO-Revision-Date: 2016-06-22 06:06+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,16 @@ msgid "Accepted legal terms"
 msgstr "Sprejeti pravni pogoji"
 
 #. module: website_signup_legal_page_required
+#: field:res.users,activation:0
+msgid "Activation"
+msgstr "Aktivacija"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,opportunity_assigned_ids:0
+msgid "Assigned Opportunities"
+msgstr "Dodeljene priložnosti"
+
+#. module: website_signup_legal_page_required
 #: field:res.users,property_stock_customer:0
 msgid "Customer Location"
 msgstr "Lokacija kupca"
@@ -46,9 +56,41 @@ msgid "Did the user accept our legal terms when opening the account?"
 msgstr "Ali je uporabnik ob odprtju računa sprejel naše pravne pogoje?"
 
 #. module: website_signup_legal_page_required
+#: help:res.users,partner_weight:0
+msgid ""
+"Gives the probability to assign a lead to this partner. (0 means no "
+"assignation.)"
+msgstr "Poda verjetnost dodelitve indica temu partnerju. (0 pomeni brez dodelitve.)"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,grade_id:0
+msgid "Grade"
+msgstr "Ocena"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,partner_weight:0
+msgid "Grade Weight"
+msgstr "Teža ocene"
+
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "I accept the"
 msgstr "Sprejemam"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,implemented_partner_ids:0
+msgid "Implementation References"
+msgstr "Sklici implementacije"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,assigned_partner_id:0
+msgid "Implemented by"
+msgstr "Implementiral"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,date_review:0
+msgid "Latest Partner Review"
+msgstr "Zadnja presoja partnerja"
 
 #. module: website_signup_legal_page_required
 #: field:res.users,opportunity_ids:0
@@ -61,9 +103,19 @@ msgid "Meetings"
 msgstr "Sestanki"
 
 #. module: website_signup_legal_page_required
+#: field:res.users,date_review_next:0
+msgid "Next Partner Review"
+msgstr "Naslednja presoja partnerja"
+
+#. module: website_signup_legal_page_required
 #: field:res.users,opportunity_count:0
 msgid "Opportunity"
 msgstr "Priložnost"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,date_partnership:0
+msgid "Partnership Date"
+msgstr "Datum partnerstva"
 
 #. module: website_signup_legal_page_required
 #: field:res.users,phonecall_count:0 field:res.users,phonecall_ids:0
