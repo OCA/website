@@ -20,5 +20,3 @@
 ##############################################################################
 import controllers
 import models
-
-#import partner_comments
