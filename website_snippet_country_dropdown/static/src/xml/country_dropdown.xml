@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- © 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
+     © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <templates id="website_snippet_country_dropdown_templates" xml:space="preserve">
 
@@ -9,8 +10,8 @@
             <div class="alert alert-info">
                 <strong>Helper!</strong>
                 <ul>
-                    <li><span>Write de attribute name for the input what will be sent with a form.</span></li>
-                    <li><span>You can modify the label directly with website editor.</span></li>
+                    <li>Write the "name" attribute for the input what will be sent with the form.</li>
+                    <li>You can modify the label directly with the website editor.</li>
                 </ul>
             </div>
         </div>

@@ -5,7 +5,7 @@
 {
     "name": "Website Snippet Country Dropdown Code",
     "summary": "Allow to select country in a dropdown",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.1.0",
     "category": "Website",
     "website": "http://www.tecnativa.com",
     "author": "Tecnativa, "
@@ -20,5 +20,8 @@
     "data": [
         "views/assets.xml",
         "views/snippets.xml",
+    ],
+    "demo": [
+        "demo/pages.xml",
     ],
 }
