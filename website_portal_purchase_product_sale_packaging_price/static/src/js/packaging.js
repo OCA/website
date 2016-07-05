@@ -17,7 +17,7 @@ animation.Class.extend({
               ":has(.js_packaging_placeholder, .js_packaging_add)",
     start: function (editable_mode) {
         if (editable_mode) {
-            return;
+            return $.Deferred().reject();
         }
 
         this.new_count = 0;
