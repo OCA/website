@@ -21,4 +21,7 @@
         "views/assets.xml",
         "views/snippets.xml",
     ],
+    "demo": [
+        "demo/pages.xml",
+    ],
 }
