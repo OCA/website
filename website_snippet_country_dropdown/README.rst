@@ -26,7 +26,7 @@ The template have three input text:
 The name of the complete field is customizable when user insert the snippet
 into a form element with the website editor.
 
-You can view an example in e-commerce/website_sale_checkout_country_vat.
+You can view an example in https://github.com/OCA/e-commerce/tree/8.0/website_sale_checkout_country_vat.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
