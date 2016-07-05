@@ -52,6 +52,7 @@ class PackagingPurchaseWebsiteAccount(ProductPortalPurchaseWebsiteAccount):
         result = (super(PackagingPurchaseWebsiteAccount, self)
                   ._purchase_product_update(product, post))
         (product.packaging_ids.filtered(
-            lambda r: r not in request.context["packagings_cached"].values())
+            lambda r: r not in request.context.get(
+                "packagings_cached", dict()).values())
             .unlink())
         return result
