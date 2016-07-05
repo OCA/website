@@ -30,7 +30,8 @@ animation.Class.extend({
         };
         this.Packaging = new Model("product.packaging");
         this.Packaging._fields =
-            ["id", "name", "list_price", "qty", "package_material_id"];
+            ["id", "name", "list_price", "qty", "package_material_id",
+             "weight"];
         this.Packaging._domain =
             [["product_tmpl_id", "=", this.product_tmpl_id]];
         this.PackagingMaterial = new Model("product.packaging.material");
