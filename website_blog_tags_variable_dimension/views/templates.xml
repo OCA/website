@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="website_blog_tags_variable_dimension assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/website_blog_tags_variable_dimension/static/src/js/website_blog_tags_variable_dimension.js"></script>
+                <link rel="stylesheet" href="/website_blog_tags_variable_dimension/static/src/css/website_blog_tags_variable_dimension.css"/>
+            </xpath>
+        </template>
+    </data>
+</openerp>
