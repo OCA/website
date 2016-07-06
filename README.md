@@ -27,6 +27,7 @@ addon | version | summary
 [website_blog_title_image](website_blog_title_image/) | 8.0.1.0.0 | Enables adding title image to blogpost.
 [website_breadcrumb](website_breadcrumb/) | 8.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_calendar_snippet](website_calendar_snippet/) | 8.0.1.0.0 | Calendar (based on Messaging -> Calendar) on website.
+[website_canonical_url](website_canonical_url/) | 8.0.1.0.0 | Canonical URL in Website Headers
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 8.0.2.1.0 | Show cookie notice according to cookie law
 [website_country_localized_pages](website_country_localized_pages/) | 1.0 | Show website pages localized according to country's visitor
@@ -59,6 +60,7 @@ addon | version | summary
 [website_snippet_anchor](website_snippet_anchor/) | 8.0.1.0.0 | Allow to reach a concrete section in the page
 [website_snippet_big_button](website_snippet_big_button/) | 8.0.1.0.0 | A snippet that adds two big buttons
 [website_snippet_contact_form](website_snippet_contact_form/) | 8.0.1.0.0 | Put a contact form anywhere you want
+[website_snippet_country_dropdown](website_snippet_country_dropdown/) | 8.0.1.0.0 | Allow to select country in a dropdown
 [website_snippet_marginless_gallery](website_snippet_marginless_gallery/) | 8.0.1.0.1 | Add a snippet to have a marginless image gallery
 [website_supplier_list](website_supplier_list/) | 8.0.1.0.0 | Publish Your Suppliers References
 [website_upload_video](website_upload_video/) | 8.0.1.0.0 | Upload video on website
