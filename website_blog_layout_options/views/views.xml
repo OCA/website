@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="blog_configuration" model="ir.ui.view">
+            <field name="model">blog.blog</field>
+            <field name="inherit_id" ref="website_blog.view_blog_blog_form"/>
+            <field name="arch" type="xml">
+                <field name="description" position="after">
+                    <field name="thumbnail_width"/>
+                    <field name="display_type"/>
+                    <button name="set_all_posts" string="Set all posts to the same display type" type="object"/>
+                </field>
+
+                <field name="name" position="before">
+                    <field name="background_image_show"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="blog_post_configuration" model="ir.ui.view">
+            <field name="name">blog_post_extended_types</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+            <field name="arch" type="xml">
+                <field name="subtitle" position="after">
+                    <field name="thumbnail"/>
+                    <field name="display_type"/>
+                    <p/>
+                    <group name="teaser" attrs="{'invisible': [('display_type', '!=', 'teaser')]}" colspan="4">
+                        <field name="teaser_input" attrs="{'invisible': [('extract_auto','=', True)]}"/>
+                        <field name="extract_auto"/>
+                    </group>
+                </field>
+
+                <field name="name" position="before">
+                    <field name="background_image_show"/>
+                    <field name="background_image" attrs=" {'invisible': [('background_image_show', '=', 'no_image')]}"/>
+                </field>
+
+                <sheet position="inside">
+                    <h2>Content</h2>
+                    <field name="content" widget="html"/>
+                </sheet>
+            </field>
+        </record>
+    </data>
+</openerp>

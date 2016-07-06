@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="website_blog_layout_options assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/website_blog_layout_options/static/src/css/website_blog_layout_options.css"/>
+            </xpath>
+        </template>
+
+
+        <template id="show_post_complete_layout_options" inherit_id="website_blog.blog_post_complete">
+            <xpath expr="//div[@id='blog_content']" position="before">
+                <t t-if="blog_post.thumbnail">
+                    <div class="pull-left" style = "margin: 5px 12px 5px 5px;"  
+                       t-field="blog_post.thumbnail.datas"  
+                       t-attf-t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : {{blog_post.blog_id.thumbnail_width}} }'/>
+                </t>
+            </xpath>
+            
+            <xpath expr="//h2[@t-field='blog_post.subtitle']" position="after">
+                <!--TODO editing types and teaser in the frontend-->
+            </xpath>
+
+            <xpath expr="//div[@id='title']" position="attributes">    
+                <attribute name="t-attf-style" />
+                <!-- todo reuse the full height calculator in js and divide it by four or five to have a small header (instead of the lazy 300px) -->
+                <attribute name="t-att-style"> 'background-image: ' + (' none;height: 300px;' if blog_post.background_image_show == 'no_image' else 'url(#'+ blog_post.background_image + '); height: 300px;' if blog_post.background_image_show == 'small_image' else 'url(#' + blog_post.background_image + ')' if blog_post.background_image_show == 'big_image' else '')
+                </attribute> 
+                <attribute name="class" />
+                <attribute name="t-att-class">'cover' + (' cover_js_small container' if (blog_post.background_image_show == 'small_image' or blog_post.background_image_show == 'no_image') else ' js_fullheight' if blog_post.background_image_show == 'big_image' else '' )</attribute>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>
