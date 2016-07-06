@@ -11,12 +11,46 @@
         <template id="show_post_complete_layout_options" inherit_id="website_blog.blog_post_complete">
             <xpath expr="//div[@id='blog_content']" position="before">
                 <t t-if="blog_post.thumbnail">
-                    <div class="pull-left" style = "margin: 5px 12px 5px 5px;"  
-                       t-field="blog_post.thumbnail.datas"  
-                       t-attf-t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : {{blog_post.blog_id.thumbnail_width}} }'/>
+                    <t t-if="blog_post.blog_id.thumbnail_width == '64'">
+                        <div  class="pull-left"    
+                              style = "margin: 5px 12px 5px 5px;"   
+                              t-field="blog_post.thumbnail.datas" 
+                              t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 64 }'
+                            />
+                    </t>
+                    <t t-if="blog_post.blog_id.thumbnail_width == '128'">
+                        <div  class="pull-left"    
+                              style = "margin: 5px 12px 5px 5px;"   
+                              t-field="blog_post.thumbnail.datas" 
+                              t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 128 }'
+                            />
+                    </t>
+                    <t t-if="blog_post.blog_id.thumbnail_width == '192'">
+                        <div  class="pull-left"    
+                              style = "margin: 5px 12px 5px 5px;"   
+                              t-field="blog_post.thumbnail.datas" 
+                              t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 192 }'
+                            />
+                    </t>
+                    <t t-if="blog_post.blog_id.thumbnail_width == '256'">
+                        
+                        <div  class="pull-left"    
+                              style = "margin: 5px 12px 5px 5px;"   
+                              t-field="blog_post.thumbnail.datas" 
+                              t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 256 }'
+                            />
+                    </t>
+
+                    <t t-if="blog_post.blog_id.thumbnail_width == '320'">
+                        <div  class="pull-left"    
+                              style = "margin: 5px 12px 5px 5px;"   
+                              t-field="blog_post.thumbnail.datas" 
+                              t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 320 }'
+                            />
+                    </t>
                 </t>
             </xpath>
-            
+
             <xpath expr="//h2[@t-field='blog_post.subtitle']" position="after">
                 <!--TODO editing types and teaser in the frontend-->
             </xpath>

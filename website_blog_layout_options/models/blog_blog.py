@@ -44,7 +44,7 @@ class WebsiteBlog(models.Model):
 
     thumbnail_width = fields.Selection(selection=[
         ('64', 'Small'),  ('128', 'Medium'), 
-        ('256', 'Big'), ('384', 'Gigantic')],
+        ('256', 'Big'), ('320', 'Gigantic')],
         string="Thumbnail Size",
         help="Allows to choose thumbnail size in blog teaser and also" 
              "in content \n will be used in all blogposts of this blog",

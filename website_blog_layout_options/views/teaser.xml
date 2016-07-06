@@ -4,10 +4,47 @@
         <template id="blog_teaser" inherit_id="website_blog.blog_post_short" name="blogTeaser">
             <xpath expr="//div[@name='blog_post_data']" position="before">
                 <t t-if="blog_post.display_type == 'complete'"> 
+                    <t t-if="not blog_post.thumbnail">
+                        <div class="pull-left" />
+                    </t>
                     <t t-if="blog_post.thumbnail">
-                        <div class="pull-left"  style= "margin: 5px 12px 5px 5px;"  
-                            t-field="blog_post.thumbnail.datas"  
-                            t-attf-t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : {{blog_post.blog_id.thumbnail_width}} }'/>
+                        <t t-if="blog_post.blog_id.thumbnail_width == '64'">
+                            <div  class="pull-left"    
+                                style = "margin: 5px 12px 5px 5px;"   
+                                t-field="blog_post.thumbnail.datas" 
+                                t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 64 }'
+                                />
+                        </t>
+                        <t t-if="blog_post.blog_id.thumbnail_width == '128'">
+                            <div  class="pull-left"    
+                                style = "margin: 5px 12px 5px 5px;"   
+                                t-field="blog_post.thumbnail.datas" 
+                                t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 128 }'
+                                />
+                        </t>
+                        <t t-if="blog_post.blog_id.thumbnail_width == '192'">
+                            <div  class="pull-left"    
+                                style = "margin: 5px 12px 5px 5px;"   
+                                t-field="blog_post.thumbnail.datas" 
+                                t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 192 }'
+                                />
+                        </t>
+                        <t t-if="blog_post.blog_id.thumbnail_width == '256'">
+
+                            <div  class="pull-left"    
+                                style = "margin: 5px 12px 5px 5px;"   
+                                t-field="blog_post.thumbnail.datas" 
+                                t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 256 }'
+                                />
+                        </t>
+
+                        <t t-if="blog_post.blog_id.thumbnail_width == '320'">
+                            <div  class="pull-left"    
+                                style = "margin: 5px 12px 5px 5px;"   
+                                t-field="blog_post.thumbnail.datas" 
+                                t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 320 }'
+                                />
+                        </t>
                     </t>
                     <div t-field="blog_post.content"/>
                 </t>
@@ -15,10 +52,44 @@
                     <p/>
                     <div>
                         <t t-if="blog_post.thumbnail">
-                            <div class="pull-left"    
-                                style = "margin: 5px 12px 5px 5px;"   
-                                t-field="blog_post.thumbnail.datas"  
-                                t-attf-t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : {{blog_post.blog_id.thumbnail_width}} }'/>
+
+                            <t t-if="blog_post.blog_id.thumbnail_width == '64'">
+                                <div  class="pull-left"    
+                                    style = "margin: 5px 12px 5px 5px;"   
+                                    t-field="blog_post.thumbnail.datas" 
+                                    t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 64 }'
+                                    />
+                            </t>
+                            <t t-if="blog_post.blog_id.thumbnail_width == '128'">
+                                <div  class="pull-left"    
+                                    style = "margin: 5px 12px 5px 5px;"   
+                                    t-field="blog_post.thumbnail.datas" 
+                                    t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 128 }'
+                                    />
+                            </t>
+                            <t t-if="blog_post.blog_id.thumbnail_width == '192'">
+                                <div  class="pull-left"    
+                                    style = "margin: 5px 12px 5px 5px;"   
+                                    t-field="blog_post.thumbnail.datas" 
+                                    t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 192 }'
+                                    />
+                            </t>
+                            <t t-if="blog_post.blog_id.thumbnail_width == '256'">
+
+                                <div  class="pull-left"    
+                                    style = "margin: 5px 12px 5px 5px;"   
+                                    t-field="blog_post.thumbnail.datas" 
+                                    t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 256 }'
+                                    />
+                            </t>
+
+                            <t t-if="blog_post.blog_id.thumbnail_width == '320'">
+                                <div  class="pull-left"    
+                                    style = "margin: 5px 12px 5px 5px;"   
+                                    t-field="blog_post.thumbnail.datas" 
+                                    t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 320 }'
+                                    />
+                            </t>
                         </t>
                         <p t-esc="blog_post.teaser"/>
                     </div>
