@@ -18,5 +18,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
 ##############################################################################
-import mail_message
-import partner
+
+from . import mail_message
+from . import partner
+

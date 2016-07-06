@@ -25,15 +25,13 @@
     'version': '9.0.1.0.0',
     'category': 'Website',
     'website': 'www.browseinfo.in',
+    'license': 'AGPL-3',
     'author': 'BrowseInfo, Odoo Community Association (OCA)',
     'application': True,
     'installable': True,
-    'depends': ['website','website_crm_partner_assign','website_partner'],
+    'depends': ['website', 'website_crm_partner_assign', 'website_partner'],
     'data': [
         'views/template.xml',
         'views/mail_message_view.xml',
     ],
 }
-
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

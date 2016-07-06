@@ -18,11 +18,12 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
 ##############################################################################
-from openerp import models, fields, api, _
+from openerp import models, fields
 
-class mailmessage( models.Model ):
+
+class mailmessage(models.Model):
     _inherit = 'mail.message'
 
-    message_rate = fields.Integer( 'Message Rating' )
-    short_description = fields.Char( 'Short Description' )
-    website_message = fields.Boolean( 'Is Website Message', default=False )
+    message_rate = fields.Integer('Message Rating')
+    short_description = fields.Char('Short Description')
+    website_message = fields.Boolean('Is Website Message', default=False)
