@@ -54,7 +54,7 @@
 <template id="country_dropdown" name="Country Dropdown">
     <t t-set="default_value" t-value="default_value or ''"/>
     <t t-set="countries" t-value="request.env['res.country'].search([])"/>
-    <t t-set="default_country" t-value="default_country or countries.search([('code', '=', default_value[:2])]) or website.company_id.country_id or countries[:1]"/>
+    <t t-set="default_country" t-value="default_country or countries.search([('code', '=', default_value[:2])]) or request.env.user.country_id or website.company_id.country_id or countries[:1]"/>
     <div class="input-group col-md-12 js_country_dropdown" t-ignore="true">
         <div class="input-group-btn flag-button">
             <button type="button" id="btn_vat_code"
