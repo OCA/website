@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_portal_purchase_product
-# 
+#
 # Translators:
 # Antonio Trueba, 2016
 # Antonio Trueba, 2016
@@ -10,180 +10,333 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-06 10:11+0000\n"
+"POT-Creation-Date: 2016-07-07 17:27+0200\n"
+"PO-Revision-Date: 2016-07-07 17:30+0200\n"
 "Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/"
+"language/es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: es\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_actions
+msgid ""
+"<i class=\"fa fa-eye\"/>\n"
+"                    Preview"
+msgstr ""
+"<i class=\"fa fa-eye\"/>\n"
+"                    Vista previa"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.products_followup
+msgid ""
+"<i class=\"fa fa-floppy-o\"/>\n"
+"                            Save"
+msgstr ""
+"<i class=\"fa fa-floppy-o\"/>\n"
+"                            Guardar"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.tree_actions
+msgid ""
+"<i class=\"fa fa-plus\"/>\n"
+"        <span>Add new product</span>"
+msgstr ""
+"<i class=\"fa fa-plus\"/>\n"
+"        <span>Añadir nuevo producto</span>"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_actions
+msgid ""
+"<i class=\"fa fa-trash\"/>\n"
+"                    Delete"
+msgstr ""
+"<i class=\"fa fa-trash\"/>\n"
+"                    Borrar"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_extra
+msgid ""
+"<span class=\"input-group-addon\">\n"
+"                        kg.\n"
+"                    </span>"
+msgstr ""
+"<span class=\"input-group-addon\">\n"
+"                        kg.\n"
+"                    </span>"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.supplierinfo_conditions
+msgid ""
+"<span class=\"input-group-addon\">\n"
+"                    days\n"
+"                </span>"
+msgstr ""
+"<span class=\"input-group-addon\">\n"
+"                    días\n"
+"                </span>"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.supplierinfo_conditions
+msgid ""
+"<span class=\"input-group-addon\">\n"
+"                    units\n"
+"                </span>"
+msgstr ""
+"<span class=\"input-group-addon\">\n"
+"                    unidades\n"
+"                </span>"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.products_followup
 msgid "Add Product"
 msgstr "Añadir producto"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.actions
-msgid "Add new product"
-msgstr "Añadir nuevo producto"
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_extra
+msgid "Additional Data"
+msgstr "Información adicional"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Add your product. You can update later in this section"
-msgstr "Añada su producto. Usted puede modificarlo más tarde en esta sección"
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_extra
+msgid "Categories"
+msgstr "Categorías"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Code"
-msgstr "Código"
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_extra
+msgid "Category"
+msgstr "Categoría"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Delay"
-msgstr "Retraso"
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_basic
+msgid "Change Picture"
+msgstr "Cambiar foto"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Delay..."
-msgstr "Retraso"
-
-#. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_table
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.product_table
 msgid "Delete"
 msgstr "Borrar"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_table
-msgid "Edit"
-msgstr "Editar"
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.supplierinfo_conditions
+msgid "Delivery delay"
+msgstr "Plazo de envío"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_basic
+msgid "Description"
+msgstr "Descripción"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_extra
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.supplierinfo_conditions
+msgid "E.g. 1"
+msgstr "Ej.: 1"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.supplierinfo_conditions
+msgid "E.g. 1.15"
+msgstr "Ej.: 1.15"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_basic
+msgid "E.g. 1.55"
+msgstr "Ej.: 1.55"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.products_followup
 msgid "Edit Product"
 msgstr "Modificar producto"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.product
+msgid "Edit in website portal"
+msgstr "Editar en el portal del sitio web"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_errors
+msgid "Error(s) found"
+msgstr "Error(es) encontrado(s)"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_basic
 msgid "General Data"
 msgstr "Datos generales"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_supplier_breadcrumb
-msgid "Home"
-msgstr "Inicio"
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.supplierinfo_conditions
+msgid "Minimal quantity per order"
+msgstr "Cantidad mínima por pedido"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Load Picture"
-msgstr "Cargar Imagen"
-
-#. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Min Quantity"
-msgstr "Cantidad mínima"
-
-#. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Min Quantity..."
-msgstr "Cantidad mín."
-
-#. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-#: view:website:website_portal_purchase_product.product_supplier_breadcrumb
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_breadcrumb
 msgid "My Products"
 msgstr "Mis productos"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-#: view:website:website_portal_purchase_product.product_table
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_basic
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.product_table
 msgid "Name"
 msgstr "Nombre"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_table
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_breadcrumb
+msgid "New Product"
+msgstr "Nuevo producto"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.product_table
 msgid "Picture"
 msgstr "Imagen"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-#: view:website:website_portal_purchase_product.product_table
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.product_table
 msgid "Price"
 msgstr "Precio"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Price Min Quantity"
-msgstr "Precio"
+#: model:ir.model,name:website_portal_purchase_product.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Price and stock"
-msgstr "Precio y stock"
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_basic
+msgid "Product description for sales..."
+msgstr "Descripción del producto para las ventas..."
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Price..."
-msgstr "Precio..."
-
-#. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Product Code..."
-msgstr "Código producto"
-
-#. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_basic
 msgid "Product name..."
 msgstr "Nombre del producto"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_table
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.product_table
 msgid "Published"
 msgstr "Publicado"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "Save Product"
-msgstr "Guardar cambios"
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_conditions
+msgid "Purchase Conditions"
+msgstr "Condiciones de compra"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.search
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.supplierinfo_conditions
+msgid "Purchase price"
+msgstr "Precio de compra"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_basic
+msgid "Sale price"
+msgstr "Precio de venta"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.search
+msgid "Search"
+msgstr "Buscar"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.search
 msgid "Search..."
 msgstr "Buscar"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_table
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.product_table
 msgid "Stock"
 msgstr "Stock"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_list
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.layout_products
+msgid "Supplier Products"
+msgstr "Productos de proveedor"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.portal_my_products
 msgid "There are currently no products for your account."
 msgstr "Actualmente no hay productos para su cuenta"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_list
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.home_products
+msgid "There are currently no supplier products for your account."
+msgstr "Actualmente no hay productos de proveedor en su cuenta."
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_basic
+msgid "Type"
+msgstr "Tipo"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.form_extra
+msgid "Weight per unit (not including packaging)"
+msgstr "Peso unitario (sin incluir el empaquetado)"
+
+#. module: website_portal_purchase_product
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.portal_my_products
 msgid "Your Products"
 msgstr "Sus productos"
 
 #. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "back to list"
-msgstr "Volver a la lista"
+#: model:ir.ui.view,arch_db:website_portal_purchase_product.home_products
+msgid "Your Supplier Products"
+msgstr "Sus productos de proveedor"
 
-#. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product
-msgid "or"
-msgstr "o"
+#~ msgid "Add new product"
+#~ msgstr "Añadir nuevo producto"
 
-#. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_supplier_container
-msgid "website_portal_purchase_product.product_supplier_container"
-msgstr "website_portal_purchase_product.product_supplier_container"
+#~ msgid "Add your product. You can update later in this section"
+#~ msgstr ""
+#~ "Añada su producto. Usted puede modificarlo más tarde en esta sección"
 
-#. module: website_portal_purchase_product
-#: view:website:website_portal_purchase_product.product_supplier_container_form
-msgid "website_portal_purchase_product.product_supplier_container_form"
-msgstr "website_portal_purchase_product.product_supplier_container_form"
+#~ msgid "Code"
+#~ msgstr "Código"
+
+#~ msgid "Delay"
+#~ msgstr "Retraso"
+
+#~ msgid "Delay..."
+#~ msgstr "Retraso"
+
+#~ msgid "Edit"
+#~ msgstr "Editar"
+
+#~ msgid "Home"
+#~ msgstr "Inicio"
+
+#~ msgid "Load Picture"
+#~ msgstr "Cargar Imagen"
+
+#~ msgid "Min Quantity"
+#~ msgstr "Cantidad mínima"
+
+#~ msgid "Min Quantity..."
+#~ msgstr "Cantidad mín."
+
+#~ msgid "Price Min Quantity"
+#~ msgstr "Precio"
+
+#~ msgid "Price and stock"
+#~ msgstr "Precio y stock"
+
+#~ msgid "Price..."
+#~ msgstr "Precio..."
+
+#~ msgid "Product Code..."
+#~ msgstr "Código producto"
+
+#~ msgid "Save Product"
+#~ msgstr "Guardar cambios"
+
+#~ msgid "back to list"
+#~ msgstr "Volver a la lista"
+
+#~ msgid "or"
+#~ msgstr "o"
+
+#~ msgid "website_portal_purchase_product.product_supplier_container"
+#~ msgstr "website_portal_purchase_product.product_supplier_container"
+
+#~ msgid "website_portal_purchase_product.product_supplier_container_form"
+#~ msgstr "website_portal_purchase_product.product_supplier_container_form"
