@@ -9,6 +9,7 @@
     "category": "Website",
     "summary": "",
     "depends": [
+        'website_blog',
     ],
     "data": [
         'views/templates.xml',
