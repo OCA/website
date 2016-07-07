@@ -5,7 +5,31 @@
             <xpath expr="." position="inside">
                 <script type="text/javascript" src="/website_blog_tags_variable_dimension/static/src/js/website_blog_tags_variable_dimension.js"></script>
                 <link rel="stylesheet" href="/website_blog_tags_variable_dimension/static/src/css/website_blog_tags_variable_dimension.css"/>
-            </xpath>
+            </xpath>  
         </template>
+
+
+
+            <template id="opt_blog_rc_tags_var_dim" name="Variable Dimension Tag Cloud"
+                inherit_id="website_blog.index_right" active="False" customize_show="True">
+                <!-- first we give the element an Id in order to identify it in the next xpath in a future-proof way -->
+                <xpath expr="//div[@id='blog_right_column']" position="inside">
+                    <section class="mt32">
+                        <h4>Tags</h4>
+                        <ul class="nav nav-pills nav-stacked">
+                            <t t-foreach="tags" t-as="nav_tag">
+                                <li t-att-class="tag and tag.id == nav_tag.id and 'active' or None" 
+                                    t-attf-style="display: inline-block; font-size: {{tag.font_size_in_cloud}}px;">
+                                    <a t-attf-href="#{blog_url(tag=nav_tag)}"><span t-field="nav_tag.name"/></a>
+                                </li>
+                            </t>
+                        </ul>
+                    </section>
+                </xpath>
+            </template>
+
+
+
+
     </data>
 </openerp>

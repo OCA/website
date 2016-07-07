@@ -18,7 +18,8 @@ class BlogTag(models.Model):
         max_ranking = 0
         for tag in tags:
             max_ranking = max(
-                len(posts.filtered(lambda x: tag.id in x.tag_ids)), max_ranking
+                len(posts.filtered(lambda x: tag.id in x.tag_ids)), 
+                    tag.max_ranking
             )
         return max_ranking
     
@@ -40,11 +41,10 @@ class BlogTag(models.Model):
         )
 
 
-
     font_size_in_cloud = fields.Integer(
-        string="Font Size of tag in cloud"
+        string="Font Size of tag in cloud",
         help="size of tag font from 8 to 24 px relative"
-             "to the most used tag, that will be allways displayed at 24px"
-        compute = get_font_size
+             "to the most used tag, that will be allways displayed at 24px",
+        compute=get_font_size
     )
 
