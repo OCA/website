@@ -23,6 +23,7 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
         domain = domain.concat(this.add_domain);
       }
       return $.ajax({
+        dataType: 'json',
         url: '/website/field_autocomplete/' + self.model,
         method: 'GET',
         data: {
@@ -31,7 +32,6 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
           limit: self.limit,
         },
       }).then(function(records) {
-          records = JSON.parse(records);
           var data = records.reduce(function(a, b) {
             a.push({label: b[self.displayField], value: b[self.valueField]});
             return a;
@@ -41,8 +41,16 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
         });
     },
     
+    /* Return arguments that are used to initialize autocomplete */
+    autocompleteArgs: function() {
+      return {
+        source: function(request, response) {
+          this.autocomplete(request, response);
+        },
+      };
+    },
+    
     start: function() {
-      var self = this;
       this.model = this.$target.data('model');
       this.queryField = this.$target.data('query-field') || 'name';
       this.displayField = this.$target.data('display-field') || this.queryField;
@@ -53,11 +61,7 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
       if (this.valueField != this.displayField) {
         this.fields.push(this.valueField);
       }
-      this.$target.autocomplete({
-        source: function(request, response) {
-          self.autocomplete(request, response);
-        },
-      });
+      this.$target.autocomplete(this.autocompleteArgs());
     },
     
   });
