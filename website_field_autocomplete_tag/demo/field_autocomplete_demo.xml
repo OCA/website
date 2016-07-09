@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2016 LasLabs Inc.
+    @license AGPL-3 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+
+<odoo>
+    <template id="field_autocomplete_demo" name="Field Autocomplete Demo" inherit_id="website_field_autocomplete.field_autocomplete_demo">
+        <xpath expr="//div[@class='row']" position="after">
+            <div class="row">
+                <h1>Partner Autocomplete Tag:</h1>
+                <div class="row">
+                    <label for="name">Name</label>
+                    <input type="text"
+                           name="name"
+                           class="js_website_autocomplete"
+                           data-query-field="name"
+                           data-relate-recv="res_partner"
+                           data-model="res.partner"
+                           data-is-tag=""
+                           />
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
