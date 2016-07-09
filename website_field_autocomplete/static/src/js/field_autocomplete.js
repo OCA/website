@@ -43,10 +43,11 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
     
     /* Return arguments that are used to initialize autocomplete */
     autocompleteArgs: function() {
+      var self = this;
       return {
         source: function(request, response) {
-          this.autocomplete(request, response);
-        },
+          self.autocomplete(request, response);
+        }
       };
     },
     
