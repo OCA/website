@@ -1,0 +1,90 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_country_dropdown
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-07 01:09+0000\n"
+"PO-Revision-Date: 2016-07-07 01:09+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>, 2016\n"
+"Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: website_snippet_country_dropdown
+#: view:website:website.snippets
+msgid "Country Dropdown"
+msgstr "Spustni seznam držav"
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:17
+#, python-format
+msgid "Country Dropdown Options"
+msgstr "Opcije spustnega seznama držav"
+
+#. module: website_snippet_country_dropdown
+#: model:website.menu,name:website_snippet_country_dropdown.demo_page_link
+msgid "Country dropdown demo"
+msgstr "Demo spustnega seznama držav"
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:18
+#, python-format
+msgid "Field name value"
+msgstr "Vrednost polja naziva"
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:11
+#, python-format
+msgid "Helper!"
+msgstr "Pomočnik"
+
+#. module: website_snippet_country_dropdown
+#: view:website:website_snippet_country_dropdown.demo_page
+msgid "Other label"
+msgstr "Druga oznaka"
+
+#. module: website_snippet_country_dropdown
+#: view:website:website.snippet_options
+msgid "Set input options"
+msgstr "Nastavi vnosne opcije"
+
+#. module: website_snippet_country_dropdown
+#: view:website:website_snippet_country_dropdown.demo_page
+msgid "Test here the country dropdown snippet behavior"
+msgstr "Tu testirajte obnašanje spustnega odseka"
+
+#. module: website_snippet_country_dropdown
+#: view:website:website_snippet_country_dropdown.demo_page
+msgid "This is a form"
+msgstr "To je obrazec"
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:13
+#, python-format
+msgid ""
+"Write the \"name\" attribute for the input what will be sent with the form."
+msgstr "Zapišite atribut \"naziva\" za vnos vsebine, ki bo poslana z obrazcem."
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:14
+#, python-format
+msgid "You can modify the label directly with the website editor."
+msgstr "Oznako lahko spremenite neposredno z urejevalnikom spletne strani."
+
+#. module: website_snippet_country_dropdown
+#: view:website:website_snippet_country_dropdown.dropdown_element_form
+msgid "Your Label"
+msgstr "Vaša oznaka"
