@@ -21,4 +21,7 @@
         "views/assets.xml",
         "views/product_form.xml",
     ],
+    "qweb": [
+        "static/src/xml/packaging.xml",
+    ],
 }

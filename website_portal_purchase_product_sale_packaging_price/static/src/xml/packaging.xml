@@ -46,7 +46,7 @@
                            placeholder="E.g. 3"
                            t-att-value="packaging.qty"/>
                     <span class="input-group-addon">
-                        units
+                        <t>units</t>
                     </span>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                            step="0.01"
                            t-att-value="packaging.weight"/>
                     <span class="input-group-addon">
-                        kg.
+                        <t>kg.</t>
                     </span>
                 </div>
             </div>
@@ -97,8 +97,12 @@
                 <label class="hidden-xs">&#160;</label>
                 <button type="button"
                         class="btn btn-danger btn-wide js_packaging_delete">
-                    <i class="fa fa-trash"/>
-                    <span class="visible-xs-inline">Remove above packaging</span>
+                    <div class="fa fa-trash"/>
+                    <span class="visible-xs-inline">
+                        <t>
+                            Remove above packaging
+                        </t>
+                    </span>
                 </button>
             </div>
         </div>

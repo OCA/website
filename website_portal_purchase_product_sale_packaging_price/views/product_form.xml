@@ -33,8 +33,12 @@
         <div class="col-sm-4 col-sm-offset-8">
             <button type="button"
                     class="btn btn-default btn-wide js_packaging_add">
-                <i class="fa fa-plus"/>
-                <span>Add packaging</span>
+                <div class="fa fa-plus"/>
+                <span>
+                    <t>
+                        Add packaging
+                    </t>
+                </span>
             </button>
         </div>
     </div>
