@@ -282,6 +282,12 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
         return request.render(
             "website_portal_purchase_product.portal_my_products", values)
 
+    def _get_supplierinfo(self, product):
+        return request.env['product.supplierinfo'].search([
+            ('id', 'in', product.seller_ids.ids),
+            ('name', 'child_of', request.env.user.commercial_partner_id.ids),
+        ])
+
     @route(
         ['/my/purchase/products/<model("product.template"):product>',
          '/my/purchase/products/new'],
@@ -317,6 +323,8 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
                     values["product"], values["errors"] = (
                         (product, self._purchase_product_update(product, post))
                         if product else self._purchase_product_create(post))
+                    values["supplierinfo_ids"] = self._get_supplierinfo(
+                        product)
 
                     ok = not values["errors"]
 
@@ -340,6 +348,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
 
         values.update({
             "product": product or product.new(),
+            "supplierinfo_ids": self._get_supplierinfo(product),
             "errors": dict(),
         })
         return request.render(view, values)

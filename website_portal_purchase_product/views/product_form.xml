@@ -228,22 +228,19 @@
         <t t-set="section_title">
             <t>Purchase Conditions</t>
         </t>
-        <t t-set="supplierinfo_ids"
-           t-value="env['product.supplierinfo'].search(
-            [('id', 'in', product.seller_ids.ids),
-             ('name', 'child_of', user_id.commercial_partner_id.ids)])">
-        </t>
-        <t t-foreach="supplierinfo_ids" t-as="supplierinfo">
-            <t t-if="supplierinfo.name == user_id.commercial_partner_id">
-                <t t-call="website_portal_purchase_product.supplierinfo_conditions"/>
-            </t>
-        </t>
+        <t t-call="website_portal_purchase_product.supplierinfo_caller"/>
+    </t>
+</template>
 
-        <!-- Add one empty supplierinfo at least -->
-        <t t-if="not supplierinfo_ids">
-            <t t-call="website_portal_purchase_product.supplierinfo_conditions">
-                <t t-set="supplierinfo" t-value="supplierinfo_ids"/>
-            </t>
+<template id="supplierinfo_caller" name="Supplierinfo Caller">
+    <t t-foreach="supplierinfo_ids" t-as="supplierinfo">
+        <t t-call="website_portal_purchase_product.supplierinfo_conditions"/>
+    </t>
+
+    <!-- Add one empty supplierinfo at least -->
+    <t t-if="not supplierinfo_ids">
+        <t t-call="website_portal_purchase_product.supplierinfo_conditions">
+            <t t-set="supplierinfo" t-value="supplierinfo_ids"/>
         </t>
     </t>
 </template>
