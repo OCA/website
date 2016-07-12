@@ -6,6 +6,8 @@
     'name': 'Website Portal (Backported From v10)',
     'category': 'Website',
     'summary': 'Account Management Frontend for your Customers',
+    'author': 'Odoo S.A., Tecnativa, Odoo Community Association (OCA)',
+    'license': 'LGPL-3',
     'version': '9.0.1.0.0',
     'depends': [
         'website_portal',

@@ -4,9 +4,6 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 from openerp import http
 from openerp.http import request
-from openerp import tools
-from openerp.tools.translate import _
-
 from openerp.fields import Date
 from openerp.addons.website_portal.controllers.main import website_account
 
