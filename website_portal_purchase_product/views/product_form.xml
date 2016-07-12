@@ -141,15 +141,18 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="row">
-                    <div class="col-md-12" t-if="product.id">
-                        <div id="image"
+                    <div class="col-md-12 mt8 mb8" t-if="product.id">
+                        <div id="main_image"
                               t-field="product.image"
                               t-field-options='{"widget": "image"}'/>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-center">
                         <div class="form-group">
-                            <label for="image">
-                                Change Picture
+                            <label class="custom-file-input">
+                                <div class="btn btn-primary">
+                                    <div class="fa fa-camera"/>
+                                    Picture
+                                </div>
                                 <input id="image"
                                        class="input-file"
                                        type="file"
