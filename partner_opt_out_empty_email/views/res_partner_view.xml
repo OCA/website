@@ -4,10 +4,10 @@
 <openerp>
 <data>
 
-<record id="view_res_partner_filter" model="ir.ui.view">
+<record id="res_partner_opt_out_search" model="ir.ui.view">
     <field name="name">Exclude partners with empty emails</field>
     <field name="model">res.partner</field>
-    <field name="inherit_id" ref="base.view_res_partner_filter"/>
+    <field name="inherit_id" ref="email_template.res_partner_opt_out_search"/>
     <field name="priority">20</field>
     <field name="arch" type="xml">
         <filter name='not_opt_out' position="attributes">

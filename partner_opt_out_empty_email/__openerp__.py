@@ -14,7 +14,7 @@
     "application": False,
     "installable": True,
     "depends": [
-        "base",
+        "email_template",
     ],
     "data": [
         "views/res_partner_view.xml",
