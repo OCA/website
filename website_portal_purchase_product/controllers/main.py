@@ -54,7 +54,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
 
         # Create product as admin
         product = product.sudo().create({
-            "name": post.get("name", False),
+            "name": ",".join(post.get("name")) or False,
         })
 
         # Continue edition as supplier user
