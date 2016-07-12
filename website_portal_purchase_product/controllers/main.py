@@ -95,6 +95,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
         SupplierInfo = request.env["product.supplierinfo"]
         required = self._purchase_product_required_fields()
         ignored = self._purchase_product_ignored_fields()
+        ignored_if_empty = self._purchase_product_ignored_if_empty_fields()
 
         # Fill in false boolean fields
         for form_field in self._purchase_product_bool_fields():
@@ -113,6 +114,9 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
                         # Support file fields
                         # TODO Add multi images support
                         value = value[0]
+
+                    if not value and form_field in ignored_if_empty:
+                        continue
 
                     # Select the right supplierinfo record
                     if form_field.startswith("supplierinfo_"):
@@ -181,6 +185,10 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
     def _purchase_product_ignored_fields(self):
         """These fields will be ignored when recieving form data."""
         return set()
+
+    def _purchase_product_ignored_if_empty_fields(self):
+        """These fields will be ignored if they are found with no value."""
+        return {"image"}
 
     def _purchase_product_required_fields(self):
         """These fields must be filled."""
