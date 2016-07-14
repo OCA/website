@@ -10,17 +10,17 @@
         <t t-call="website.layout">
             <div id="wrap" class="oe_structure oe_empty">
                 <div class="container">
-                    <h1>Partner Autocomplete:</h1>
+                    <h1>Website Menu Autocomplete:</h1>
                     <div class="row">
-                        <label for="name">Name</label>
+                        <label for="url">URL</label>
                         <input type="text"
+                               name="url"
                                class="js_website_autocomplete"
                                data-query-field="name"
                                data-display-field="name"
-                               data-value-field="id"
+                               data-value-field="url"
                                data-limit="10"
-                               data-domain='[["customer", "=", true]]'
-                               data-model="res.partner"
+                               data-model="website.menu"
                                />
                     </div>
                 </div>
