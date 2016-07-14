@@ -8,60 +8,26 @@
                         <div class="pull-left" />
                     </t>
                     <t t-if="blog_post.thumbnail">
-                        <t t-if="blog_post.blog_id.thumbnail_width == '64'">
+                        <div  class="pull-left"    
+                            style = "margin: 5px 12px 5px 5px;"   
+                            t-field="blog_post.thumbnail.datas" 
+                            t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 64 }'
+                            />
+                    </t>
+                    <div t-field="blog_post.content"/>
+                </t>
+                <t t-if="blog_post.display_type == 'teaser'">
+                    <div>
+                        <t t-if="blog_post.thumbnail">
                             <div  class="pull-left"    
                                 style = "margin: 5px 12px 5px 5px;"   
                                 t-field="blog_post.thumbnail.datas" 
                                 t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 64 }'
                                 />
                         </t>
-                        <t t-if="blog_post.blog_id.thumbnail_width == '128'">
-                            <div  class="pull-left"    
-                                style = "margin: 5px 12px 5px 5px;"   
-                                t-field="blog_post.thumbnail.datas" 
-                                t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 128 }'
-                                />
-                        </t>
-                        <t t-if="blog_post.blog_id.thumbnail_width == '192'">
-                            <div  class="pull-left"    
-                                style = "margin: 5px 12px 5px 5px;"   
-                                t-field="blog_post.thumbnail.datas" 
-                                t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 192 }'
-                                />
-                        </t>
-                    </t>
-                    <div t-field="blog_post.content"/>
-                </t>
-                <t t-if="blog_post.display_type == 'teaser'">
-                    <p/>
-                    <div>
-                        <t t-if="blog_post.thumbnail">
-
-                            <t t-if="blog_post.blog_id.thumbnail_width == '64'">
-                                <div  class="pull-left"    
-                                    style = "margin: 5px 12px 5px 5px;"   
-                                    t-field="blog_post.thumbnail.datas" 
-                                    t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 64 }'
-                                    />
-                            </t>
-                            <t t-if="blog_post.blog_id.thumbnail_width == '128'">
-                                <div  class="pull-left"    
-                                    style = "margin: 5px 12px 5px 5px;"   
-                                    t-field="blog_post.thumbnail.datas" 
-                                    t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 128 }'
-                                    />
-                            </t>
-                            <t t-if="blog_post.blog_id.thumbnail_width == '192'">
-                                <div  class="pull-left"    
-                                    style = "margin: 5px 12px 5px 5px;"   
-                                    t-field="blog_post.thumbnail.datas" 
-                                    t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 192 }'
-                                    />
-                            </t>
-                        </t>
-                        <p t-esc="blog_post.teaser"/>
                     </div>
-                    <div class="pull-right">
+                    <div class="pull-right"> 
+                        <p t-esc="blog_post.teaser"/>
                         <a t-attf-href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post)}">
                             <span>Read More ...</span>
                         </a>
