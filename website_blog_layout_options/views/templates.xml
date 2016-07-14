@@ -7,7 +7,6 @@
             </xpath>
         </template>
 
-
         <template id="show_post_complete_layout_options" inherit_id="website_blog.blog_post_complete">
             <xpath expr="//div[@id='blog_content']" position="before">
                 <t t-if="blog_post.thumbnail">

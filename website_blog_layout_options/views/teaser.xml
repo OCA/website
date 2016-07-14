@@ -2,7 +2,7 @@
 <openerp>
     <data>
         <template id="blog_teaser" inherit_id="website_blog.blog_post_short" name="blogTeaser">
-            <xpath expr="//div[@name='blog_post_data']" position="before">
+            <xpath expr="//div[@name='blog_post_data']" position="after">
                 <t t-if="blog_post.display_type == 'complete'"> 
                     <t t-if="not blog_post.thumbnail">
                         <div class="pull-left" />
