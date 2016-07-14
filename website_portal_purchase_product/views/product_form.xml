@@ -139,7 +139,7 @@
             <t>General Data</t>
         </t>
         <div class="row">
-            <div class="col-md-3">
+            <div id="main_image_container" class="col-md-3">
                 <div class="row">
                     <div class="col-md-12 mt8 mb8" t-if="product.id">
                         <div id="main_image"
@@ -163,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div id="main_product_container" class="col-md-9">
                 <div class="row">
                     <div t-attf-class="col-md-12 form-group #{errors.get('name') and 'has-error'}">
                         <label for="name">Name</label>
