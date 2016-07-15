@@ -41,6 +41,14 @@ The default country will be the first match among:
 #. The current website's company's country.
 #. The first country in the list.
 
+All variables you can use to modify its behavior:
+
+* ``complete_field`` to give it a name. Usually it will match the field name.
+* ``default_value`` for the ``complete_field``.
+* ``countries`` as a ``res.country`` ORM recordset.
+* ``default_country`` as a ``res.country`` record.
+* ``no_country_placeholder``.
+
 You can view an example in
 https://github.com/OCA/e-commerce/tree/8.0/website_sale_checkout_country_vat.
 

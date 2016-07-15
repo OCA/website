@@ -80,6 +80,7 @@
                type="text"
                class="form-control js_no_country_field"
                name="no_country_field"
+               t-att-placeholder="no_country_placeholder"
                t-att-value="default_value[2:] if default_country.code == default_value[:2].upper() else default_value"/>
     </div>
 </template>

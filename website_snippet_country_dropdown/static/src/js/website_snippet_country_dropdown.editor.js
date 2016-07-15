@@ -23,7 +23,7 @@ odoo.define("website_snippet_country_dropdown.editor", function (require) {
             return website.prompt({
                 id: "editor_website_snippet_country_dropdown",
                 window_title: core._t("Country Dropdown Options"),
-                input: core._t("Field name value"),
+                input: core._t("Complete field name"),
                 init: $.proxy(this.prompt_render, this),
             }).done($.proxy(this.change_name, this));
         },
