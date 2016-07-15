@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015-2016 Odoo S.A.
+     © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+    <template id="assets_frontend" inherit_id="website_portal.assets_frontend">
+        <xpath expr="//link[@href='/website_portal/static/src/less/website_portal.less']"
+               position="attributes">
+            <attribute name="href">/website_portal_v10/static/src/less/website_portal.less</attribute>
+        </xpath>
+        <xpath expr="//script[@src='/website_portal/static/src/js/website_portal.js']"
+               position="attributes">
+            <attribute name="src">/website_portal_v10/static/src/js/website_portal.js</attribute>
+        </xpath>
+    </template>
+
+    <template id="portal_archive_groups" name="Portal Archive Groups">
+        <h3 class="page-header">Archives</h3>
+        <ul class="nav nav-pills nav-stacked">
+            <t t-foreach="archive_groups" t-as="group">
+                <t t-if="group['date_begin'] == date">
+                    <li class="active">
+                        <a t-att-href="default_url" t-ignore="True"><t t-esc="group['name']"/><span class="pull-right badge" t-esc="group['item_count']"/></a>
+                    </li>
+                </t>
+                <t t-if="group['date_begin'] != date">
+                    <li>
+                        <a t-ignore="True" t-attf-href="#{default_url}?date_begin=#{group['date_begin']}&amp;date_end=#{group['date_end']}"><t t-esc="group['name']"/><span class="pull-right badge" t-esc="group['item_count']"/></a>
+                    </li>
+                </t>
+            </t>
+        </ul>
+    </template>
+
+    <template id="portal_layout" name="Portal Layout">
+        <t t-call="website.layout">
+            <div class="container mt16">
+                <div class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#oe-help-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/my/home">
+                            My Account
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="oe-help-navbar-collapse">
+                        <ul class="nav navbar-nav o_portal_submenu">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="wrap">
+                <div class="container mb64">
+                    <div class="col-md-8">
+                        <t t-raw="0"/>
+                    </div>
+                    <div id="o_my_sidebar" class="col-md-3 col-md-offset-1 o_my_sidebar">
+                        <div class="o_my_contact" t-if="sales_rep">
+                            <t t-call="website_portal_v10.contact"/>
+                        </div>
+                        <div class="o_my_details">
+                            <h3 class="page-header">Your Details <a href="/my/account" class="btn btn-default btn-xs">Change</a></h3>
+                            <div t-field="user.partner_id" t-field-options='{"widget": "contact", "fields": ["email", "phone", "address", "name"]}'/>
+                        </div>
+                        <div class="o_my_archives" t-if="archive_groups">
+                            <t t-call="website_portal_v10.portal_archive_groups"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_my_home" name="My Portal">
+        <t t-call="website_portal_v10.portal_layout">
+            <div class="o_my_home_content">
+                <div class="oe_structure"></div>
+            </div>
+            <div class="col-md-12 oe_structure"/>
+        </t>
+    </template>
+
+    <record id="website_portal.custom_panel" model="ir.ui.view">
+        <field name="inherit_id" ref="portal_layout"/>
+    </record>
+
+</odoo>
