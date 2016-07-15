@@ -44,7 +44,7 @@
                 <td>
                     <a itemprop="url"
                        t-attf-href="/my/purchase/products/#{slug(product)}">
-                        <span t-field="product.image_small"
+                        <span t-field="product.image"
                               t-field-options='{"widget": "image", "class": "img-thumbnail"}'/>
                     </a>
                 </td>
