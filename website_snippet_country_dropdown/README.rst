@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
    :alt: License: LGPL-3
 
-===============================
-Snippet's dropdown country code
-===============================
+=====================================
+Website Snippet Country Code Dropdown
+=====================================
 
 This module adds a snippet with a dropdown and an input text field, is a base
 for be inherited by others modules into an HTML form.
@@ -14,14 +14,14 @@ This can be inserted into form elements.
 Usage
 =====
 
-To extend this template you need to inherit *country_dropdown* template and to
-add you personal code.
+To extend this template you need to inherit ``country_dropdown`` template and
+add your personal code.
 
 The template have three input text:
 
-#. no_country_field: Field without code country.
-#. country_code_field: Field with only country code (read only)
-#. complete_field: Field with the previous two joined (hidden)
+#. ``no_country_field``: Field without code country.
+#. ``country_code_field``: Field with only country code (read only)
+#. ``complete_field``: Field with the previous two joined (hidden)
 
 The name of the complete field is customizable when user insert the snippet
 into a form element with the website editor.
@@ -41,17 +41,30 @@ The default country will be the first match among:
 #. The current website's company's country.
 #. The first country in the list.
 
-You can view an example in
-https://github.com/OCA/e-commerce/tree/8.0/website_sale_checkout_country_vat.
+All variables you can use to modify its behavior:
+
+* ``complete_field`` to give it a name. Usually it will match the field name.
+* ``default_value`` for the ``complete_field``.
+* ``countries`` as a ``res.country`` ORM recordset.
+* ``default_country`` as a ``res.country`` record.
+* ``no_country_placeholder``.
+
+You can view an example in ``website_sale_checkout_country_vat`` in
+OCA/e-commerce.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/8.0
+   :target: https://runbot.odoo-community.org/runbot/186/9.0
 
 Known issues / Roadmap
 ======================
 
 * Add tests.
+* Flag images should be lazy-loaded to optimize loading.
+* Snippet drag and drop `seems to be blocked by Odoo for some unknown reason.
+  <https://github.com/OCA/website/pull/230#issuecomment-236681777>`_.
+  Given the main purpose of this module is to provide a reusable template for
+  other modules to use, did not take the time to fix that use case.
 
 Bug Tracker
 ===========
@@ -59,11 +72,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues
 <https://github.com/OCA/website/issues>`_. In case of trouble, please
 check there if your issue has already been reported. If you spotted it first,
-help us smashing it by providing a detailed and welcomed `feedback
-<https://github.com/OCA/
-website/issues/new?body=module:%20
-website_snippet_country_dropdown%0Aversion:%20
-8.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+help us smashing it by providing a detailed and welcomed feedback.
 
 Credits
 =======
@@ -77,6 +86,7 @@ Contributors
 ------------
 
 * Sergio Teruel <sergio.teruel@tecnativa.com>
+* Jairo Llopis <jairo.llopis@tecnativa.com>
 
 Maintainer
 ----------
@@ -91,4 +101,4 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-To contribute to this module, please visit http://odoo-community.org.
+To contribute to this module, please visit https://odoo-community.org.
