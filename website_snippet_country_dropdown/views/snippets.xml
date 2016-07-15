@@ -2,43 +2,33 @@
 <!-- © 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
      © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
-<openerp>
-<data>
+<odoo>
 
-<template id="website_snippet_country_dropdown"
+<template id="snippets"
           inherit_id="website.snippets"
           name="Country Dropdown">
-    <xpath expr="//div[@id='snippet_content']">
-        <div>
-            <div class="oe_snippet_thumbnail">
-                <img src="/website_snippet_country_dropdown/static/src/img/dropdown.png"
-                     class="oe_snippet_thumbnail_img"/>
-                <span class="oe_snippet_thumbnail_title">
-                    Country Dropdown
-                </span>
-            </div>
-            <div class="oe_snippet_body website_snippet_country_dropdown">
-                <t t-call="website_snippet_country_dropdown.dropdown_element_form"/>
-            </div>
-        </div>
+    <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
+        <t t-snippet="website_snippet_country_dropdown.dropdown_element_form"
+           t-thumbnail="/website_snippet_country_dropdown/static/description/icon.png"/>
     </xpath>
 </template>
 
 <template id="snippet_options" inherit_id="website.snippet_options">
     <xpath expr="." position="inside">
-        <div data-snippet-option-id='website_snippet_country_dropdown'
-            data-selector=".website_snippet_country_dropdown"
-            data-selector-siblings=""
-            data-selector-children="form">
-            <li>
-                <a href="#" class="button js_dropdown_fields">Set input options</a>
+        <div data-js='country_dropdown'
+             data-selector=".o_country_dropdown"
+             data-drop-in="form, .form-horizontal">
+            <li data-ask_field_name="" data-only="click">
+                <a>Set input options</a>
             </li>
         </div>
     </xpath>
 </template>
 
-<template id="dropdown_element_form">
-    <div t-attf-class="form-group #{extra_class or ''}" t-ignore="true">
+<template id="dropdown_element_form"
+          name="Country Dropdown Input">
+    <div t-attf-class="form-group #{extra_class or ''} o_country_dropdown"
+         t-ignore="true">
         <label class="col-md-3 col-sm-4 control-label" for="complete_field">
             <span t-if="label_country_dropdown" t-esc="label_country_dropdown"/>
             <span t-if="not label_country_dropdown">Your Label</span>
@@ -90,9 +80,9 @@
                type="text"
                class="form-control js_no_country_field"
                name="no_country_field"
+               t-att-placeholder="no_country_placeholder"
                t-att-value="default_value[2:] if default_country.code == default_value[:2].upper() else default_value"/>
     </div>
 </template>
 
-</data>
-</openerp>
+</odoo>
