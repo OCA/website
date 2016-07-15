@@ -3,65 +3,65 @@
 # * website_snippet_country_dropdown
 # 
 # Translators:
-# Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Pascal ZIMMERMANN <pascalpci@hotmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2016-11-29 03:55+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
-"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
+"POT-Creation-Date: 2017-02-25 04:20+0000\n"
+"PO-Revision-Date: 2017-02-25 04:20+0000\n"
+"Last-Translator: Pascal ZIMMERMANN <pascalpci@hotmail.com>, 2017\n"
+"Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_snippet_country_dropdown
 #. openerp-web
 #: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:26
 #, python-format
 msgid "Complete field name"
-msgstr "Nombre completo del campo"
+msgstr "Nom complet du champ"
 
 #. module: website_snippet_country_dropdown
 #. openerp-web
 #: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:25
 #, python-format
 msgid "Country Dropdown Options"
-msgstr "Opciones del desplegable de países"
+msgstr ""
 
 #. module: website_snippet_country_dropdown
 #: model:website.menu,name:website_snippet_country_dropdown.demo_page_link
 msgid "Country dropdown demo"
-msgstr "Demo del desplegable de países"
+msgstr ""
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
 msgid "Other label"
-msgstr "Otra etiqueta"
+msgstr "Autre label"
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.snippet_options
 msgid "Set input options"
-msgstr "Establezca las opciones del campo"
+msgstr ""
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
 msgid "Submit (you will see the GET parameters in the URL)"
-msgstr "Enviar (verá los parámetros GET en la URL)"
+msgstr ""
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
 msgid "Test here the country dropdown snippet behavior"
-msgstr "Pruebe aquí el comportamiento del snippet desplegable de países"
+msgstr ""
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
 msgid "This is a form"
-msgstr "Esto es un formulario"
+msgstr "C'est un formulaire"
 
 #. module: website_snippet_country_dropdown
 #. openerp-web
@@ -69,16 +69,16 @@ msgstr "Esto es un formulario"
 #, python-format
 msgid ""
 "Write the \"name\" attribute for the input what will be sent with the form."
-msgstr "Escriba el atributo \"name\" para el campo que se mandará al formulario."
+msgstr ""
 
 #. module: website_snippet_country_dropdown
 #. openerp-web
 #: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:12
 #, python-format
 msgid "You can modify the label directly with the website editor."
-msgstr "Puede modificar la etiqueta directamente desde el editor web."
+msgstr ""
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
 msgid "Your Label"
-msgstr "Su etiqueta"
+msgstr ""
