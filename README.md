@@ -23,6 +23,7 @@ addon | version | summary
 [website_form_recaptcha](website_form_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha field for Website Forms
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 | Website Legal Page
 [website_no_crawler](website_no_crawler/) | 9.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
+[website_portal_v10](website_portal_v10/) | 9.0.1.0.0 | Account Management Frontend for your Customers
 
 Unported addons
 ---------------
