@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+<template id="assets_frontend" inherit_id="website.assets_frontend">
+    <xpath expr=".">
+        <link rel="stylesheet"
+              href="/website_base_multi_image/static/src/css/theme.css"/>
+        <script type="text/javascript"
+                src="/website_base_multi_image/static/src/js/website_multi_image.js"/>
+    </xpath>
+</template>
+
+</odoo>

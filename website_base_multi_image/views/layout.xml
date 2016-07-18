@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+<template id="base_multi_image_fields">
+    <t t-set="owner_model" t-value="owner_model or 'product.template'"/>
+    <t t-set="owner_id" t-value="owner_id or False"/>
+    <t t-set="images" t-value="request.env['base_multi_image.image'].search([
+            ('owner_model', '=', owner_model),
+            ('owner_id', '=', owner_id),
+        ])"/>
+    <section id="base_multi_image">
+        <div id="images_container" class="js_image_container row">
+            <div class="col-md-6">
+                <label>Main Image</label>
+                <div id="main_image pull-left"
+                      t-field="images[:1].image_main"
+                      t-field-options='{"widget": "image", "class":"image_main"}'/>
+                <div class="form-group mt16">
+                    <label class="custom-file-input image_upload">
+                        <div class="btn btn-primary">
+                            <div class="fa fa-camera"/>
+                             Add Pictures
+                        </div>
+                        <input id="file_input" class="input-file"
+                               name="image"
+                               type="file"
+                               accept="image/*"/>
+                    </label>
+                    <div id="file_input_multi"/>
+                </div>
+            </div>
+            <div class="col-md-6 thumbnail-images">
+                <label class="col-md-12">More Images</label>
+                <t t-foreach="images" t-as="image">
+                    <t t-if="not image_first">
+                        <div class="col-md-3 mt8 mb8">
+                            <div id="image_more"
+                                 t-att-data-image_name="image.name"
+                                 t-field="image.image_small"
+                                 t-field-options='{"widget": "image"}'/>
+                        </div>
+                        <t t-if="image_index % 3 == 0">
+                            <div class="row"/>
+                        </t>
+                    </t>
+                </t>
+            </div>
+        </div>
+    </section>
+</template>
+
+</odoo>

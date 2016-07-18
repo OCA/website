@@ -1,0 +1,39 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_base_multi_image
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-15 12:15+0000\n"
+"PO-Revision-Date: 2016-07-15 14:16+0100\n"
+"Last-Translator: Sergio Teruel <sergio@incaser.es>\n"
+"Language-Team:  <sergio.teruel@tecnativa.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: website_base_multi_image
+#: model:ir.ui.view,arch_db:website_base_multi_image.base_multi_image_fields
+msgid "Add Pictures"
+msgstr "Añadir fotos"
+
+#. module: website_base_multi_image
+#: model:ir.ui.view,arch_db:website_base_multi_image.base_multi_image_fields
+msgid "Main Image"
+msgstr "Imágen principal"
+
+#. module: website_base_multi_image
+#: model:ir.ui.view,arch_db:website_base_multi_image.base_multi_image_fields
+msgid "More Images"
+msgstr "Más imágenes"
+
+#. module: website_base_multi_image
+#. openerp-web
+#: code:addons/website_base_multi_image/static/src/js/website_multi_image.js:48
+#, python-format
+msgid "This image already exists"
+msgstr "Esta imágen ya existe."

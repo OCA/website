@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+
+    <t t-name="website_base_multi_image.image_preview">
+        <img id="image_preview"
+             class="img img-responsive product_detail_img"
+             t-att-src="src"
+             t-att-title="title"/>
+    </t>
+
+    <t t-name="website_base_multi_image.image_preview_thumb">
+        <div class="col-md-3 mt8 mb8">
+            <img class="img img-responsive winery-image-thumb"
+                 t-att-src="src"
+                 t-att-title="title"/>
+        </div>
+    </t>
+
+    <t t-name="website_base_multi_image.image_upload">
+        <input id="file_input"
+               class="input-file"
+               name="image"
+               type="file"
+               accept="image/*"/>
+    </t>
+
+    <t t-name="website_base_multi_image.notify">
+        <div class="notify alert alert-warning">
+            <strong>Warning!</strong> <span t-esc="description"/>
+        </div>
+    </t>
+
+</templates>

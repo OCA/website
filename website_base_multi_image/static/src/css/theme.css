@@ -1,0 +1,19 @@
+/* Theme css */
+
+.custom-file-input input {
+    visibility: hidden;
+    width: 100%;
+}
+
+#file_input_multi{
+    display: none;
+}
+
+.winery-image-thumb {
+    max-width: 90px;
+}
+
+.image_main{
+    max-width: 600px;
+}
+
