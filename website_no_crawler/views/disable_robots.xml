@@ -4,7 +4,7 @@
         <template id="website.robots">
 User-agent: *
 Disallow: /
-Sitemap:<t t-esc="url_root"/>sitemap.xml
+Sitemap: <t t-esc="url_root"/>sitemap.xml
         </template>
     </data>
 </openerp>

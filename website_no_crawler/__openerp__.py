@@ -23,7 +23,7 @@
     'name': 'Alter robots.txt disallow indexing',
     'summary': 'Disables robots.txt for indexing by webcrawlers like Google',
     'license': 'AGPL-3',
-    'version': '8.0.1.0.0',
+    'version': '9.0.1.0.0',
     'author': "B-Informed B.V.,Odoo Community Association (OCA)",
     'category': 'Website',
     'depends': [
@@ -34,5 +34,5 @@
     ],
     'demo': [],
     'test': [],
-    'installable': False,
+    'installable': True,
 }
