@@ -23,17 +23,11 @@ Usage
 To use this module, you need to:
 
 * Go to the Contact form on Website
+* You will need to pass the Recaptcha challenge to submit the form.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
    :target: https://runbot.odoo-community.org/runbot/186/8.0
-
-
-
-Known Issues / Road Map
-=======================
-
-
 
 Bug Tracker
 ===========
