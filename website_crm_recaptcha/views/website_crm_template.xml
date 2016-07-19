@@ -10,17 +10,17 @@
         <template id="contactus_form"
                   inherit_id="website_crm.contactus_form"
                   name="Contact Form Captcha">
-            
-            <xpath expr="//div[contains(@class, 'form-field')][last()]" position="after">
-                <div class="form-group form-field o_website_form_required_custom">
+
+            <xpath expr="//t[@t-as='kwarg']" position="before">
+                <div t-attf-class="form-group form-field o_website_form_required_custom #{error and 'recaptcha' in error and 'has-error' or ''}">
                     <label class="col-md-3 col-sm-4 control-label" for="g-recaptcha-response">Human?</label>
                     <div class="col-md-7 col-sm-8">
                         <span class="o_website_form_recaptcha" />
                     </div>
                 </div>
             </xpath>
-            
+
         </template>
-        
+
     </data>
 </openerp>
