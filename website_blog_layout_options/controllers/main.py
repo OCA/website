@@ -12,7 +12,7 @@ class WebsiteBlog(WebsiteBlog):
 
     @http.route([
             '/blog/<model("blog.blog"):blog>/cat/<model("blog.category"):cat>',
-
+            '/blog/<model("blog.blog"):blog>/cat/<model("blog.category"):cat>/page/<int:page>',
             '/cat/<model("blog.category"):cat>',
             '/cat/<model("blog.category"):cat>/page/<int:page>',
         ], type='http', auth="public", website=True)    
@@ -24,18 +24,18 @@ class WebsiteBlog(WebsiteBlog):
         allcat_ids = blog_cat_object.search(cr, uid, [], context=context) 
         domain = [] 
         # comment out for now categories span thoughout all blogs. a semantic choice.
-        """
         if blog:
             domain += [('blog_id', '=', blog.id)]
-        """
         if cat:
             date_begin, date_end = opt.get('date_begin'), opt.get('date_end')
             if date_begin and date_end:
                 domain += [("create_date", ">=", date_begin), ("create_date", "<=", date_end)]
-            blog_url = QueryURL('', ['blog', 'cat'], blog=blog, cat=cat, date_begin=date_begin, date_end=date_end)
-            post_url = QueryURL('', ['blogpost'], cat=cat and cat.id or None, date_begin=date_begin, date_end=date_end)
+            blog_url = QueryURL(
+                    '', ['blog', 'cat', 'tag'], blog=None, tag=None, 
+                    cat=cat, date_begin=date_begin, date_end=date_end
+                )
             domain += [('category_id', '=', cat.id)]
-            blog_post_obj = request.registry['blog.category']
+            blog_post_obj = request.registry['blog.post']
             blog_post_ids = blog_post_obj.search(cr, uid, domain, order="create_date desc", context=context)
             blog_posts = blog_post_obj.browse(cr, uid, blog_post_ids, context=context)
             pager = request.website.pager(
@@ -48,11 +48,9 @@ class WebsiteBlog(WebsiteBlog):
             pager_end = page * self._blog_post_per_page
             blog_posts = blog_posts[pager_begin:pager_end]
             result.qcontext['blog'] = blog
-            result.qcontext['blogs'] = blogs
             result.qcontext['blog_posts'] = blog_posts
             result.qcontext['pager'] = pager
-            result.qcontext['blog_url'] = blog_url
-            result.qcontext['post_url'] = post_url
+            result.qcontext['current_category'] = cat
         result.qcontext['categories'] = blog_cat_object.browse(
             cr, uid, allcat_ids, context=context)
         return result
@@ -69,6 +67,7 @@ class WebsiteBlog(WebsiteBlog):
         allcat_ids = blog_cat_object.search(cr, uid, [], context=context) 
         result.qcontext['categories'] = blog_cat_object.browse(
             cr, uid, allcat_ids, context=context)
+        result.qcontext['current_category'] = False
         return result
 
 

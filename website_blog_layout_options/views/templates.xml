@@ -29,21 +29,34 @@
 			</xpath>
 		</template>
 
-
-		<template id="opt_blog_rc_categories" name="Blog category list"
+        <template id="blog_show_cat_title" name="Blog category title show"
+            inherit_id="website_blog.blog_post_short">
+            <xpath expr="//h1[@t-field='blog.subtitle']" position="replace">
+                <t t-if="current_category">
+                    <h1>Posts for Category: <t t-esc="current_category.name" /> </h1>
+                </t>
+                <t t-if="not current_category">
+                    <h1 t-field="blog.subtitle"/>
+                </t>
+            </xpath>
+        </template>
+        
+        
+        
+        <template id="opt_blog_rc_categories" name="Blog category list"
 			inherit_id="website_blog.index_right" active="False" customize_show="True">
 			<!-- first we give the element an Id in order to identify it in the next xpath in a future-proof way -->
 			<xpath expr="//div[@id='blog_right_column']" position="inside">
 				<section class="mt32">
-					<h4>Categories</h4>
+                    <h4>Categories  (<t t-esc="len(categories)"/> )</h4>
                     <ul class="nav nav-pills nav-stacked">
 						<t t-foreach="categories" t-as="nav_cat">
                             <li t-attf-style="display: list-item;">
-                                <p><t t-esc="blog_url"/> </p>
-                                <a t-attf-href="#{blog_url('',['cat'],  cat=nav_cat)}">
-                                    <span t-field="nav_cat.name"/>
-                                </a>
-							</li>
+                                <a t-attf-href="#{blog_url('',['tag', 'cat'], tag=None, cat=nav_cat)}">
+                                    <b><span t-field="nav_cat.name"/></b>
+                                    - <t t-esc="len(nav_cat.post_ids)" /> posts 
+                            </a>
+                            </li>
                         </t>
 					</ul>
 				</section>

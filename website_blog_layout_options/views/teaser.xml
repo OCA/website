@@ -17,17 +17,19 @@
                     <div t-field="blog_post.content"/>
                 </t>
                 <t t-if="blog_post.display_type == 'teaser'">
-                    <div>
-                        <t t-if="blog_post.thumbnail">
-                            <div  class="pull-left"    
-                                style = "margin: 5px 12px 5px 5px;"   
-                                t-field="blog_post.thumbnail.datas" 
-                                t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 64 }'
-                                />
-                        </t>
-                    </div>
-                    <div class="pull-right"> 
-                        <p t-esc="blog_post.teaser"/>
+                    <t t-if="blog_post.thumbnail">
+                        <div  class="pull-left"    
+                            style = "margin: 5px 12px 5px 5px;"   
+                            t-field="blog_post.thumbnail.datas" 
+                            t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 64 }'
+                            />
+                    </t>
+                    <t t-if="not blog_post.thumbnail">
+                        <div class="pull-left">
+                        </div>
+                    </t>
+                    <p t-esc="blog_post.teaser"/>
+                    <div class="pull-right">
                         <a t-attf-href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post)}">
                             <span>Read More ...</span>
                         </a>
