@@ -31,12 +31,12 @@
 
         <template id="blog_show_cat_title" name="Blog category title show"
             inherit_id="website_blog.blog_post_short">
-            <xpath expr="//h1[@t-field='blog.subtitle']" position="replace">
+            <xpath expr="//h3[@t-field='blog.subtitle']" position="replace">
                 <t t-if="current_category">
                     <h1>Posts for Category: <t t-esc="current_category.name" /> </h1>
                 </t>
                 <t t-if="not current_category">
-                    <h1 t-field="blog.subtitle"/>
+                    <h3 t-field="blog.subtitle"/>
                 </t>
             </xpath>
         </template>
