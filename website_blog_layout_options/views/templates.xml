@@ -1,33 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
-    <data>
-        <template id="assets_backend" name="website_blog_layout_options assets" inherit_id="web.assets_backend">
-            <xpath expr="." position="inside">
-                <link rel="stylesheet" href="/website_blog_layout_options/static/src/css/website_blog_layout_options.css"/>
-            </xpath>
-        </template>
+	<data>
+		<template id="assets_backend" name="website_blog_layout_options assets" inherit_id="web.assets_backend">
+			<xpath expr="." position="inside">
+				<link rel="stylesheet" href="/website_blog_layout_options/static/src/css/website_blog_layout_options.css"/>
+			</xpath>
+		</template>
 
-        <template id="show_post_complete_layout_options" inherit_id="website_blog.blog_post_complete">
-            <xpath expr="//div[@id='blog_content']" position="before">
-                <t t-if="blog_post.thumbnail">
-                        <div  class="pull-left"    
-                              style = "margin: 5px 12px 5px 5px;"   
-                              t-field="blog_post.thumbnail.datas" 
-                              t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 192 }'
-                            />
-                </t>
-            </xpath>
+		<template id="show_post_complete_layout_options" inherit_id="website_blog.blog_post_complete">
+			<xpath expr="//div[@id='blog_content']" position="before">
+				<t t-if="blog_post.thumbnail">
+					<div  class="pull-left"    
+						style = "margin: 5px 12px 5px 5px;"   
+						t-field="blog_post.thumbnail.datas" 
+						t-field-options = '{"widget": "image", "class" : "pull-left mt-16 media-object", "max_width" : 192 }'
+						/>
+				</t>
+			</xpath>
 
 
-            <xpath expr="//div[@id='title']" position="attributes">    
-                <attribute name="t-attf-style" />
-                <!-- todo reuse the full height calculator in js and divide it by four or five to have a small header (instead of the lazy 300px) -->
-                <attribute name="t-att-style"> 'background-image: ' + (' none;height: 300px;' if blog_post.background_image_show == 'no_image' else 'url(#'+ blog_post.background_image + '); height: 300px;' if blog_post.background_image_show == 'small_image' else 'url(#' + blog_post.background_image + ')' if blog_post.background_image_show == 'big_image' else '')
-                </attribute> 
-                <attribute name="class" />
-                <attribute name="t-att-class">'cover' + (' cover_js_small container' if (blog_post.background_image_show == 'small_image' or blog_post.background_image_show == 'no_image') else ' js_fullheight' if blog_post.background_image_show == 'big_image' else '' )</attribute>
-            </xpath>
-        </template>
+			<xpath expr="//div[@id='title']" position="attributes">    
+				<attribute name="t-attf-style" />
+				<!-- todo reuse the full height calculator in js and divide it by four or five to have a small header (instead of the lazy 300px) -->
+				<attribute name="t-att-style"> 'background-image: ' + (' none;height: 300px;' if blog_post.background_image_show == 'no_image' else 'url(#'+ blog_post.background_image + '); height: 300px;' if blog_post.background_image_show == 'small_image' else 'url(#' + blog_post.background_image + ')' if blog_post.background_image_show == 'big_image' else '')
+				</attribute> 
+				<attribute name="class" />
+				<attribute name="t-att-class">'cover' + (' cover_js_small container' if (blog_post.background_image_show == 'small_image' or blog_post.background_image_show == 'no_image') else ' js_fullheight' if blog_post.background_image_show == 'big_image' else '' )</attribute>
+			</xpath>
+		</template>
 
-    </data>
+
+		<template id="opt_blog_rc_categories" name="Blog category list"
+			inherit_id="website_blog.index_right" active="False" customize_show="True">
+			<!-- first we give the element an Id in order to identify it in the next xpath in a future-proof way -->
+			<xpath expr="//div[@id='blog_right_column']" position="inside">
+				<section class="mt32">
+					<h4>Categories</h4>
+                    <ul class="nav nav-pills nav-stacked">
+						<t t-foreach="categories" t-as="nav_cat">
+                            <li t-attf-style="display: list-item;">
+                                <p><t t-esc="blog_url"/> </p>
+                                <a t-attf-href="#{blog_url('',['cat'],  cat=nav_cat)}">
+                                    <span t-field="nav_cat.name"/>
+                                </a>
+							</li>
+                        </t>
+					</ul>
+				</section>
+			</xpath>
+		</template>
+
+
+	</data>
 </openerp>
