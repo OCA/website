@@ -37,6 +37,15 @@ The user can override the default on the single blog post.
 In the same blog the user can mix posts with the large header
 image and without.
 
+* Blogposts now have categories, and there is a filter to see a category
+
+  Categories are not tags, they are another form of classification possible 
+  for the blog posts.
+
+  A widget is availiable to show the category list in the right column.
+
+
+
 
 Contributors
 ------------

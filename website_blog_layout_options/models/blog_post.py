@@ -92,3 +92,9 @@ class BlogPost(models.Model):
     teaser_input = fields.Text(string="Teaser text")
     extract_auto = fields.Boolean(
         string="Create teaser from content", default=False)
+
+    category_id = fields.Many2many(
+        string="Categories",
+        comodel_name='blog.category',
+        help='Blog post category, categories are a different type of classification, other than tags')
+

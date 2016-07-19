@@ -34,6 +34,7 @@
 
                 <field name="name" position="before">
                     <field name="background_image_show"/>
+                    <field name="category_id"/>
                     <field name="background_image" attrs=" {'invisible': [('background_image_show', '=', 'no_image')]}"/>
                 </field>
 
@@ -43,5 +44,44 @@
                 </sheet>
             </field>
         </record>
+
+
+        <record model="ir.ui.view" id="blog_cat_tree">
+            <field name="name">blog_cat_tree</field>
+            <field name="model">blog.category</field>
+            <field name="arch" type="xml">
+                <tree string="Category List" create="false">
+                    <field name="name"/>
+                    <field name="post_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="blog_cat_form">
+            <field name="name">blog_cat_form</field>
+            <field name="model">blog.category</field>
+            <field name="arch" type="xml">
+                <form string="Category Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <label for="post_ids" string="Used in: "/>
+                        <field name="post_ids"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_category">
+            <field name="name">Blog Categories</field>
+            <field name="res_model">blog.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="view_id" ref="blog_cat_tree"/>
+        </record>
+
+        <menuitem id="menu_blog_cat" parent="website_blog.menu_wiki" name="Blog Categories" action="action_category" sequence="41" />
+
     </data>
 </openerp>
