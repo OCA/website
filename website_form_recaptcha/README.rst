@@ -21,16 +21,14 @@ Usage
 
 To use this module, you need to:
 
-* Already have a form-enabled model
-* Set `website_form_recaptcha` to `True` on that model (similar to enabling forms)
-* Add an element with the `o_website_form_recaptcha` class anywhere in the form
+* Add an element with the `o_website_form_recaptcha` class anywhere in a form
 
 Look at `website_crm_recaptcha` module for example implementation
 
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/9.0
+   :target: https://runbot.odoo-community.org/runbot/186/8.0
 
 
 Known Issues / Road Map

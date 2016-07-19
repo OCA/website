@@ -5,15 +5,15 @@
 {
     "name": "Website Form - ReCaptcha",
     "summary": 'Provides a ReCaptcha field for Website Forms',
-    "version": "9.0.1.0.0",
+    "version": "8.0.1.0.0",
     "category": "Website",
     "website": "https://laslabs.com/",
-    "author": "LasLabs, Odoo Community Association",
+    "author": "LasLabs, Tecnativa, Odoo Community Association",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": [
-        "website_form",
+        "website",
     ],
     "data": [
         "data/ir_config_parameter_data.xml",
