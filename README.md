@@ -24,6 +24,7 @@ addon | version | summary
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 | Website Legal Page
 [website_no_crawler](website_no_crawler/) | 9.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
 [website_portal_v10](website_portal_v10/) | 9.0.1.0.0 | Account Management Frontend for your Customers
+[website_seo_redirection](website_seo_redirection/) | 9.0.1.0.0 | Redirect any controller to the URL of your dreams
 
 Unported addons
 ---------------
