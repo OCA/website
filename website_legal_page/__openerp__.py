@@ -23,7 +23,7 @@
 {
     'name': "Website legal page",
     'category': 'Website',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.1.0',
     'depends': [
         'website',
     ],
@@ -34,8 +34,9 @@
         'views/website_terms.xml',
     ],
     'author': 'Antiun Ingeniería S.L., '
+              'Tecnativa, '
               'Odoo Community Association (OCA)',
-    'website': 'http://www.antiun.com',
+    'website': 'http://www.tecnativa.com',
     'license': 'AGPL-3',
     'demo': [],
     'test': [],

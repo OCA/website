@@ -4,9 +4,13 @@
 
 <!-- Base templates for submodules -->
 <template id="acceptance_full">
-    I accept the <a href="/page/legal">legal advice</a>, the
-    <a href="/page/privacy">privacy policy</a>, and the
-    <a href="/page/terms">terms of use</a> of this website.
+    <t name="root">
+        <t name="accept">I accept the</t>
+        <a href="/page/legal">legal advice</a><t name="the1">, the</t>
+        <a href="/page/privacy">privacy policy</a><t name="the2">, and the</t>
+        <a href="/page/terms">terms of use</a>
+        <t name="website">of this website.</t>
+    </t>
 </template>
 
 </data>
