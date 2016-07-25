@@ -64,7 +64,7 @@ class TestCaptcha(TransactionCase):
             self.model_obj.action_validate(*self.validate_vars)
         except ValidationError as e:
             self.assertEqual(
-                e[0], self.model_obj.ERROR_MAP[expect['error-codes'][0]]
+                e[1], self.model_obj.ERROR_MAP[expect['error-codes'][0]]
             )
 
     @mock.patch(imp_requests)
@@ -77,7 +77,7 @@ class TestCaptcha(TransactionCase):
             self.model_obj.action_validate(*self.validate_vars)
         except ValidationError as e:
             self.assertEqual(
-                e[0], self.model_obj.ERROR_MAP[None]
+                e[1], self.model_obj.ERROR_MAP[None]
             )
 
     @mock.patch(imp_requests)
