@@ -17,15 +17,27 @@ class Website(Website):
         methods=['GET'],
         website=True,
     )
-    def _get_autocomplete_data(self, model, **kwargs):
-        res = []
+    def _get_field_autocomplete(self, model, **kwargs):
+        """ Return json autocomplete data """
         domain = json.loads(kwargs.get('domain', "[]"))
         fields = json.loads(kwargs.get('fields', "[]"))
         limit = kwargs.get('limit', None)
+        res = self._get_autocomplete_data(model, domain, fields, limit)
+        return json.dumps(res.values())
+
+    def _get_autocomplete_data(self, model, domain, fields, limit=None):
+        """ Gets and returns raw record data
+        Params:
+            model: Model name to query on
+            domain: Search domain
+            fields: List of fields to get
+            limit: Limit results to
+        Returns:
+            Dict of record dicts, keyed by ID
+        """
         if limit:
             limit = int(limit)
-        for rec_id in request.env[model].search(domain, limit=limit):
-            res.append({
-                k: getattr(rec_id, k, None) for k in fields
-            })
-        return json.dumps(res)
+        res = request.env[model].search_read(
+            domain, fields, limit=limit
+        )
+        return {r['id']: r for r in res}
