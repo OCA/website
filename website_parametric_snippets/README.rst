@@ -40,10 +40,10 @@ Creating a Parametric Snippet:
 
 
 
-    **Minimal working parametric snippet
+    ** Minimal working parametric snippet
         
-        ***snippets.xml
-
+        ** snippets.xml
+        '''
         <template id="snippet_content_tmpl">
             <t t-set="variable" t-value="request.env['model'].model_function(myparameter)/>
             <div t-if="variable">
@@ -51,7 +51,7 @@ Creating a Parametric Snippet:
                 <!--supposing that model_function returns a record with an attribute "name" -->
             </div>
         </template>
-
+        
 
         <template id="my_parametric_widget" inherit_id="website.snippets" 
              name="my_param_widget">
@@ -91,58 +91,58 @@ Creating a Parametric Snippet:
                  </div>
               </xpath>
           </template>
-
+        '''
       ** mymodule.js
-      
-    (function() {
-        "use strict";
-        var website = openerp.website;
+        '''
+        (function() {
+            "use strict";
+            var website = openerp.website;
 
-        website.snippet.options["param_entry"]= openerp.website.snippet.Option.extend(
-        {   
-            select: function (event, np)
-            {  
-                var selection = event.$next.first().attr('data-value').split("_");
-                var content = this.$target; 
-                content.attr('data-parameter_id', selection[0])
-                       .attr('data-record_id', selection[1]);
-            },
-            start: function()
+            website.snippet.options["param_entry"]= openerp.website.snippet.Option.extend(
             {   
-                this.$target.find('.parametricTemplate').html("click here to select");
-            },
-            onFocus: function()
-            {  
-                this.$target.find('.parametricTemplate').html("Select record to display from options");
-            },
-            clean_for_save: function() 
-            {
-                this.$target.find('.parametricTemplate')
-                    .empty()
-                    .append(
-                        jQuery('<t />')
-                            .attr('t-call', 'my_module_name.snippet_content_tmpl')
-                            .attr('t-ignore-branding', '1')
-                            .append(
-                                jQuery('<t />')
-                                   .attr('t-value', this.$target.attr('data-record_id'))
-                                   .attr('t-set', 'record_id')
-                                   .attr('t-ignore-branding', '1'),
-                                 )
-                           
-                    );
-            
-            }
+                select: function (event, np)
+                {  
+                    var selection = event.$next.first().attr('data-value').split("_");
+                    var content = this.$target; 
+                    content.attr('data-parameter_id', selection[0])
+                           .attr('data-record_id', selection[1]);
+                },
+                start: function()
+                {   
+                    this.$target.find('.parametricTemplate').html("click here to select");
+                },
+                onFocus: function()
+                {  
+                    this.$target.find('.parametricTemplate').html("Select record to display from options");
+                },
+                clean_for_save: function() 
+                {
+                    this.$target.find('.parametricTemplate')
+                        .empty()
+                        .append(
+                            jQuery('<t />')
+                                .attr('t-call', 'my_module_name.snippet_content_tmpl')
+                                .attr('t-ignore-branding', '1')
+                                .append(
+                                    jQuery('<t />')
+                                       .attr('t-value', this.$target.attr('data-record_id'))
+                                       .attr('t-set', 'record_id')
+                                       .attr('t-ignore-branding', '1'),
+                                     )
+                               
+                        );
+                
+                }
 
-        });
-    })();
-
+            });
+        })();
+        '''
 
 
     **Examples of modules that use this tag (will be updated)
 
-        -website_snippet_blog_display_post
-        -website_twitter_no_ext_links
+        - website_snippet_blog_display_post
+        - website_twitter_no_ext_links
 
 
 
