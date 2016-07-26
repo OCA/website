@@ -6,12 +6,17 @@
 website_parametric_snippets
 ===========================
 
-This module adds extensions to view_view in order to render available 
+This module adds extensions in order to render available 
 to the programmer a new tag in qweb views: "t-ignore-branding".
 Everything inside this tag will be ignored by the qweb evaluator, 
 allowing the code to be evaluated on the fly.
 
 The final result of this will be dynamic parameters in your widgets.
+This would allow widgets to be defined as "Show the last 5 entries of
+this model"  or "Show all the data that has an attribute corrisponding
+to the selected attibute". 
+Widgets therefore will display parameter-dependant (1,2, or n parameters) 
+information, and most importantly keep it updated on every pageload.
 
 
 Usage
@@ -48,9 +53,8 @@ a basic example of usage for this module.
 
 Examples of modules that use this tag (will be updated)
 =======================================================
-website_snippet_blog_display_post
-website_twitter_no_ext_links
-
+'website_snippet_blog_display_post <https://github.com/gfcapalbo/website/tree/8.0-website_snippet_blog_display_post>'.
+'website_twitter_no_ext_links  <https://github.com/gfcapalbo/website/tree/8.0-website_twitter_no_ext_links>' .
 
 
 For further information, please visit:
@@ -69,7 +73,7 @@ If you spotted it first, help us smashing it by providing a detailed and welcome
 Credits
 =======
 
-Thanks to Hbrunn <hbrunn@therp.nl> for the parametric t tag idea
+Thanks to Holger Brunn <hbrunn@therp.nl> for the parametric t tag idea
 
 
 Images
@@ -80,8 +84,8 @@ Images
 Contributors
 ------------
 
-* gfcapalbo <giovanni@therp.nl>  
-* hbrunn <hbrunn@therp.nl>
+* Giovanni Francesco Capalbo <giovanni@therp.nl>  
+* Holger Brunn <hbrunn@therp.nl>
 
 Do not contact contributors directly about help with questions or problems concerning this addon, but use the `community mailing list <mailto:community@mail.odoo.com>`_ or the `appropriate specialized mailinglist <https://odoo-community.org/groups>`_ for help, and the bug tracker linked in `Bug Tracker`_ above for technical issues.
 
