@@ -53,8 +53,8 @@ a basic example of usage for this module.
 
 Examples of modules that use this tag (will be updated)
 =======================================================
-'website_snippet_blog_display_post <https://github.com/gfcapalbo/website/tree/8.0-website_snippet_blog_display_post>'.
-'website_twitter_no_ext_links  <https://github.com/gfcapalbo/website/tree/8.0-website_twitter_no_ext_links>' .
+website_snippet_blog_display_post <https://github.com/gfcapalbo/website/tree/8.0-website_snippet_blog_display_post>.
+website_twitter_no_ext_links  <https://github.com/gfcapalbo/website/tree/8.0-website_twitter_no_ext_links> .
 
 
 For further information, please visit:
@@ -78,11 +78,6 @@ Thanks to Holger Brunn <hbrunn@therp.nl> for the parametric t tag idea.
 Thanks to Laurent Mignon <laurent.mignon@acsone.eu> for extending also website.qweb.field.html to render 
 t-call elements inserted by snippets using the parametic approach and stored on the related model itself. 
 
-
-Images
-------
-
-* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
 Contributors
 ------------
