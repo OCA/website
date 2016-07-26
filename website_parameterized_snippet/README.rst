@@ -13,7 +13,7 @@ allowing the code to be evaluated on the fly.
 
 The final result of this will be dynamic parameters in your widgets.
 This would allow widgets to be defined as "Show the last 5 entries of
-this model"  or "Show all the data that has an attribute corrisponding
+this model"  or "Show all the data that has an attribute corresponding
 to the selected attibute". 
 Widgets therefore will display parameter-dependant (1,2, or n parameters) 
 information, and most importantly keep it updated on every pageload.
