@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright (C) 2016-TODAY LasLabs [https://laslabs.com]
+    @license AGPL-3
+-->
+
+
+<openerp>
+    <data noupdate="1">
+        <record id="recaptcha_key_site" model="ir.config_parameter">
+            <field name="display_name">ReCaptcha Site Key</field>
+			<field name="key">recaptcha.key.site</field>
+			<field name="value">Obtain from Google</field>
+        </record>
+		<record id="recaptcha_key_secret" model="ir.config_parameter">
+            <field name="display_name">ReCaptcha Secret Key</field>
+			<field name="key">recaptcha.key.secret</field>
+			<field name="value">Obtain from Google</field>
+			<field name="group_ids" eval="[(4, ref('base.group_system'))]" />
+        </record>
+    </data>
+</openerp>
