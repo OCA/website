@@ -104,5 +104,6 @@ class WebsiteSupplier(http.Controller):
             if partner.exists() and partner.website_published:
                 values = {}
                 values['main_object'] = values['partner'] = partner
-                return request.website.render("website_supplier_list.details", values)
+                return request.website.render(
+                    "website_supplier_list.details", values)
         return self.suppliers(**post)
