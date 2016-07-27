@@ -12,7 +12,7 @@ class WebsiteSupplier(http.Controller):
     _references_per_page = 20
 
     def _get_country_ids(self, country_id, country_ids):
-        country_obj = request.env['res.country']
+        country_obj = request.env['res.country'].sudo()
 
         if not any(
             x['country_id'][0] == country_id
@@ -36,7 +36,7 @@ class WebsiteSupplier(http.Controller):
         '/suppliers/country/<model("res.country"):countries>/page/<int:page>',
     ], type='http', auth="public", website=True)
     def suppliers(self, countries=None, page=0, **post):
-        partner_obj = request.env['res.partner']
+        partner_obj = request.env['res.partner'].sudo()
         partner_name = post.get('search', '')
         url = '/suppliers'
         country_ids = []
@@ -93,15 +93,16 @@ class WebsiteSupplier(http.Controller):
         return request.website.render("website_supplier_list.index", values)
 
     @http.route(
-        ['/suppliers/<model("res.partner"):partner>'],
+        ['/suppliers/<int:partner_id>'],
         type='http',
         auth="public",
         website=True)
-    def partners_detail(self, partner, **post):
-        if partner:
-            if partner.exists() and partner.website_supplier_published:
+    def partners_detail(self, partner_id, **post):
+        obj_partner = request.env['res.partner'].sudo()
+        if partner_id:
+            partner = obj_partner.browse(partner_id)
+            if partner.exists() and partner.website_published:
                 values = {}
                 values['main_object'] = values['partner'] = partner
-                return request.website.render(
-                    "website_supplier_list.details", values)
+                return request.website.render("website_supplier_list.details", values)
         return self.suppliers(**post)
