@@ -10,24 +10,28 @@
 
 
 
-            <template id="opt_blog_rc_tags_var_dim" name="Variable Dimension Tag Cloud"
-                inherit_id="website_blog.index_right" active="False" customize_show="True">
-                <!-- first we give the element an Id in order to identify it in the next xpath in a future-proof way -->
-                <xpath expr="//div[@id='blog_right_column']" position="inside">
-                    <section class="mt32">
-                        <h4>Tags</h4>
-                        <ul class="nav nav-pills nav-stacked">
-                            <t t-foreach="tags" t-as="nav_tag">
-                                <li t-att-class="tag and tag.id == nav_tag.id and 'active' or None" 
-                                    t-attf-style="display: inline-block; font-size: {{nav_tag.font_size_in_cloud}}px;">
-                                    <a t-attf-href="#{blog_url(tag=nav_tag)}"><span t-field="nav_tag.name"/>(<t t-esc="nav_tag.tag_cardinality"/>)</a>
+        <template id="opt_blog_rc_tags_var_dim" name="Variable Dimension Tag Cloud"
+            inherit_id="website_blog.index_right" active="False" customize_show="True">
+            <!-- first we give the element an Id in order to identify it in the next xpath in a future-proof way -->
+            <!-- note keep this tag cloud allways on top , to cover the case of empty column-->
+            <xpath expr="//div[@id='blog_right_column'] " position="before">
 
-                                </li>
-                            </t>
-                        </ul>
-                    </section>
-                </xpath>
-            </template>
+                <div class="col-lg-3 col-lg-offset-1 col-sm-4" id="blog_right_top_column"/>
+                <section class="mt32">
+                    <h4>Tags</h4>
+                    <ul class="nav nav-pills nav-stacked">
+                        <t t-foreach="tags" t-as="nav_tag">
+                            <li t-att-class="tag and tag.id == nav_tag.id and 'active' or None" 
+                                t-attf-style="display: inline-block; font-size: {{nav_tag.font_size_in_cloud}}px;">
+                                <a t-attf-href="#{blog_url(tag=nav_tag)}"><span t-field="nav_tag.name"/>(<t t-esc="nav_tag.tag_cardinality"/>)</a>
+
+                            </li>
+                        </t>
+                    </ul>
+                </section>
+            </div>
+        </xpath>
+    </template>
 
 
 
