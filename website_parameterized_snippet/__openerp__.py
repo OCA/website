@@ -6,8 +6,9 @@
     "version": "8.0.1.0.0",
     "author": "Therp BV,"
               "Acsone SA/NV,"
-              "Odoo Community Association (OCA)",
+              "Odoo Community Association (OCA).",
     "license": "AGPL-3",
+    "depends": ['website'],
     "category": "Website",
     "installable": True,
     "application": False,
