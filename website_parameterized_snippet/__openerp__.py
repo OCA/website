@@ -4,7 +4,9 @@
 {
     "name": "Parameterize snippets",
     "version": "8.0.1.0.0",
-    "author": "Therp BV,Odoo Community Association (OCA)",
+    "author": "Therp BV,"
+              "Acsone SA/NV,"
+              "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
     "installable": True,
