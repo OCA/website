@@ -34,9 +34,11 @@ addon | version | summary
 [website_crm_address](website_crm_address/) | 8.0.1.0.0 | Lets visitors fill in their address in the contact form
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 | Website CRM privacy policy
 [website_crm_quick_answer](website_crm_quick_answer/) | 8.0.1.0.0 | Add an automatic answer for contacts asking for info
+[website_crm_recaptcha](website_crm_recaptcha/) | 8.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_event_filter_organizer](website_event_filter_organizer/) | 8.0.1.0.0 | Filter events by organizer in frontend
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 | Combine free and paid tickets on events
+[website_form_recaptcha](website_form_recaptcha/) | 8.0.1.0.0 | Provides a ReCaptcha field for Website Forms
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 | Display the structure of your departments and their members.
 [website_img_bg_style](website_img_bg_style/) | 8.0.1.0.0 | Let you change styles of snippets background images
 [website_legal_page](website_legal_page/) | 8.0.1.1.0 | Website legal page
