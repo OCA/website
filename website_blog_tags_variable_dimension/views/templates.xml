@@ -16,7 +16,7 @@
             <!-- note keep this tag cloud allways on top , to cover the case of empty column-->
             <xpath expr="//div[@id='blog_right_column'] " position="before">
 
-                <div class="col-lg-3 col-lg-offset-1 col-sm-4" id="blog_right_top_column"/>
+                <div class="col-lg-3 col-lg-offset-1 col-sm-4" id="blog_right_top_column">
                 <section class="mt32">
                     <h4>Tags</h4>
                     <ul class="nav nav-pills nav-stacked">
