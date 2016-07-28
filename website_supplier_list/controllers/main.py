@@ -12,7 +12,7 @@ class WebsiteSupplier(http.Controller):
     _references_per_page = 20
 
     def _get_country_ids(self, country_id, country_ids):
-        country_obj = request.env['res.country'].sudo()
+        country_obj = request.env['res.country']
 
         if not any(
             x['country_id'][0] == country_id
@@ -36,7 +36,7 @@ class WebsiteSupplier(http.Controller):
         '/suppliers/country/<model("res.country"):countries>/page/<int:page>',
     ], type='http', auth="public", website=True)
     def suppliers(self, countries=None, page=0, **post):
-        partner_obj = request.env['res.partner'].sudo()
+        partner_obj = request.env['res.partner']
         partner_name = post.get('search', '')
         url = '/suppliers'
         country_ids = []
@@ -98,7 +98,7 @@ class WebsiteSupplier(http.Controller):
         auth="public",
         website=True)
     def partners_detail(self, partner_id, **post):
-        obj_partner = request.env['res.partner'].sudo()
+        obj_partner = request.env['res.partner']
         if partner_id:
             partner = obj_partner.browse(partner_id)
             if partner.exists() and partner.website_published:
