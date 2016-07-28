@@ -10,13 +10,8 @@ Extends the tag cloud availiable in website_blog to support
 variable dimensions of the tags, based on the number of blogs they 
 are contained in.
 
+The tag cloud is allways placed on the top of the right column.
 
-#. go to ...
-.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
-    :alt: Try me on Runbot
-    :target: https://runbot.odoo-community.org/runbot/{repo_id}/8.0
-
-.. repo_id is available in https://github.com/OCA/maintainer-tools/blob/master/tools/repos_with_ids.txt
 
 For further information, please visit:
 
