@@ -7,9 +7,6 @@
     "author": "Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
-    "data": [
-        'views/templates.xml',
-    ],
     "installable": True,
     "application": False,
 }
