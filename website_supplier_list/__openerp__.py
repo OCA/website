@@ -15,6 +15,7 @@
         'website_partner'
         ],
     'data': [
+        'security/website_supplier_list.xml',
         'views/assets.xml',
         'views/website_supplier.xml',
         'views/res_partner_view.xml'
