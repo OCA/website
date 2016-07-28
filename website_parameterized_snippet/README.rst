@@ -44,13 +44,7 @@ Creating a Parametric Snippet:
     ('t-ignore-branding, '1') appended.
 
 
-Minimal working parametric snippet
-==================================
-
-File minimal.xml and minimal.js in subdirectory docs contain 
-a basic example of usage for this module.
-
-
+    
 Examples of modules that use this tag (will be updated)
 =======================================================
 website_snippet_blog_display_post <https://github.com/gfcapalbo/website/tree/8.0-website_snippet_blog_display_post>.
