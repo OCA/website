@@ -18,7 +18,7 @@ odoo.define('website_field_autocomplete_related.field_autocomplete', function(re
   
     autocompleteArgs: function() {
       var res = this._super();
-      if (this.$target.data('is-tag') !== undefined) {
+      if (this.$target.data('is-tag') == "1") {
         res.select = function(event, ui) {
           var terms = this.value.split( /,\s*/ );
           terms.pop();

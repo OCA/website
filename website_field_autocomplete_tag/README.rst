@@ -29,7 +29,7 @@ attribute. Following is an example:
            data-query-field="name"
            data-relate-recv="res_partner"
            data-model="res.partner"
-           data-is-tag=""
+           data-is-tag="1"
            />
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas

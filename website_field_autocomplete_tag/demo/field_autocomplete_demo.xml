@@ -6,10 +6,10 @@
 -->
 
 <odoo>
-    <template id="field_autocomplete_demo" name="Field Autocomplete Demo" inherit_id="website_field_autocomplete.field_autocomplete_demo">
+    <template id="field_autocomplete_demo" name="Field Autocomplete Tag Demo" inherit_id="website_field_autocomplete.field_autocomplete_demo">
         <xpath expr="//div[@class='row']" position="after">
             <div class="row">
-                <h1>Partner Autocomplete Tag:</h1>
+                <h1>Autocomplete Tag:</h1>
                 <div class="row">
                     <label for="name">Name</label>
                     <input type="text"
@@ -17,8 +17,8 @@
                            class="js_website_autocomplete"
                            data-query-field="name"
                            data-relate-recv="res_partner"
-                           data-model="res.partner"
-                           data-is-tag=""
+                           data-model="website.menu"
+                           data-is-tag="1"
                            />
                 </div>
             </div>
