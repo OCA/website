@@ -38,6 +38,7 @@ Known issues / Roadmap
 * If you want to display invoices, you will have to install
   ``website_portal_sale_v10``, which displays both customer and supplier
   invoices merged in the same place.
+
   * If you do not want both kinds of invoices merged in the same controller,
     install ``website_portal_invoice_separated``.
 
