@@ -11,14 +11,6 @@ changes introduced in ``website_portal_v10``. See README of
 ``website_portal_v10`` about rationale for this module and some useful
 warnings.
 
-Installation
-============
-
-To install this module, you need to:
-
-#. Uninstall ``website_portal``, if it was installed, and don't install it
-   again as long as this module is installed.
-
 Usage
 =====
 
