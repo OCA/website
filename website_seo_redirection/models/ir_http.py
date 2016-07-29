@@ -16,6 +16,10 @@ class IrHttp(models.AbstractModel):
         if not hasattr(request, "jsonrequest"):
             wsr = request.env["website.seo.redirection"]
 
+            # Requests at this point have no user, must remove `env` to force
+            # Odoo recompute it next time a controller needs it, with its user
+            del request.env
+
             try:
                 # Redirect user to SEO version of this URL if possible
                 return wsr.redirect_auto()
