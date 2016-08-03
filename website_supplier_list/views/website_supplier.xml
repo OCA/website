@@ -60,12 +60,12 @@
         <template id="partner_details" name="Partner Details">
             <t t-foreach="partners" t-as="partner">
                 <div class="media">
-                    <a class="pull-left" t-attf-href="/suppliers/#{slug(partner)}"
+                    <a class="pull-left" t-attf-href="/suppliers/{{partner.id}}"
                        t-field="partner.image_small"
                        t-field-options='{"widget": "image", "class": "media-object"}'
                     ></a>
                     <div class="media-body" style="min-height: 64px;">
-                        <a class="media-heading" t-attf-href="/suppliers/#{slug(partner)}">
+                        <a class="media-heading" t-attf-href="/suppliers/{{partner.id}}">
                             <span t-field="partner.display_name"/>
                         </a>
                         <div t-field="partner.website_short_description"/>
