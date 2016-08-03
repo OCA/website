@@ -20,7 +20,8 @@
                 <section class="mt32">
                     <h4>Tags</h4>
                     <ul class="nav nav-pills nav-stacked">
-                        <t t-foreach="tags" t-as="nav_tag">
+                        <t t-set="random_tags" t-value="tags.randomize_recordset()"/>
+                        <t t-foreach="random_tags" t-as="nav_tag">
                             <li t-att-class="tag and tag.id == nav_tag.id and 'active' or None" 
                                 t-attf-style="display: inline-block; font-size: {{nav_tag.font_size_in_cloud}}px;">
                                 <a t-attf-href="#{blog_url(tag=nav_tag)}"><span t-field="nav_tag.name"/>(<t t-esc="nav_tag.tag_cardinality"/>)</a>

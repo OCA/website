@@ -2,12 +2,13 @@
 # © 2016 Therp BV <http://therp.nl>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 from openerp import api, fields, models
+import random
 
 class BlogTag(models.Model):
     _inherit = 'blog.tag'
 
     # doing it for all blogs. need to make it per-blog.
-    min_font = 8.0
+    min_font = 11.0
     max_font = 24.0
 
     @api.multi
@@ -58,3 +59,17 @@ class BlogTag(models.Model):
              "to the most used tag, that will be allways displayed at 24px",
         compute=get_font_size
     )
+    
+    random_placement = fields.Integer(
+        string="Random Placement of tag",
+        compute=lambda x: random.choice([x for x in range(0, 4000)])
+    )
+
+    random_color = fields.Integer(
+        string="random color of tag in cloud",
+        compute=lambda x: random.choice(['#7b7655', '#000000', '#FF0000'])
+    )
+
+    def randomize_recordset(self):
+        return sorted(self, key=lambda x: x.random_placement)
+
