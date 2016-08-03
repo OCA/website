@@ -10,17 +10,16 @@ Extends the tag cloud availiable in website_blog to support
 variable dimensions of the tags, based on the number of blogs they 
 are contained in.
 
-The tag cloud is allways placed on the top of the right column.
+The tag cloud is always placed on the top of the right column.
+The position of the tags are randomized, of random colors (selected by
+a subset of colors) , the minimum font is 12 , max 24.
+
 
 
 For further information, please visit:
 
 * https://www.odoo.com/forum/help-1
 
-Known issues / Roadmap
-======================
-
-* ...
 
 Bug Tracker
 ===========
