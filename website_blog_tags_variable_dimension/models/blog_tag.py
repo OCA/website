@@ -65,7 +65,7 @@ class BlogTag(models.Model):
         compute=lambda x: random.choice([x for x in range(0, 4000)])
     )
 
-    random_color = fields.Integer(
+    random_color = fields.Char(
         string="random color of tag in cloud",
         compute=lambda x: random.choice(['#7b7655', '#000000', '#FF0000'])
     )
