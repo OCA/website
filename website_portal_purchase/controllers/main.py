@@ -3,7 +3,6 @@
 # (c) 2015 Antiun Ingeniería S.L. - Carlos Dauden
 # License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
 
-import datetime
 from openerp.http import request, route
 from openerp.exceptions import AccessError
 from openerp.addons.website_portal_v10.controllers.main import WebsiteAccount
