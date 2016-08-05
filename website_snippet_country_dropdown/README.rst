@@ -49,8 +49,8 @@ All variables you can use to modify its behavior:
 * ``default_country`` as a ``res.country`` record.
 * ``no_country_placeholder``.
 
-You can view an example in
-https://github.com/OCA/e-commerce/tree/8.0/website_sale_checkout_country_vat.
+You can view an example in ``website_sale_checkout_country_vat`` in
+OCA/e-commerce.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
