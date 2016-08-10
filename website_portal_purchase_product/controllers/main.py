@@ -318,6 +318,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
         view = "website_portal_purchase_product.products_followup"
 
         # Edit mode, get POST data as multidict
+        kwargs.pop("debug", None)
         if kwargs:
             post = CombinedMultiDict((
                 request.httprequest.files,
