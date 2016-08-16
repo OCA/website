@@ -6,6 +6,7 @@
     <xpath expr="." position="inside">
         <link rel="stylesheet"
               href="/website_portal_purchase_product/static/src/sass/website_portal_purchase_product.sass"/>
+        <script src="/website_portal_purchase_product/static/src/js/tour.js"/>
     </xpath>
 </template>
 
