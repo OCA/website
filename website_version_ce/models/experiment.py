@@ -77,7 +77,8 @@ class Experiment(models.Model):
                 if not exp_ver.version_id.website_id.id == exp.website_id.id:
                     raise ValidationError('This experiment must have versions which are in the same website')
 
-    def read_group(self, cr, uid, domain, fields, groupby,
+    @api.model
+    def read_group(self, domain, fields, groupby,
                    offset=0, limit=None, context=None, orderby=False, lazy=True):
         """ Override read_group to always display all states. """
         if groupby and groupby[0] == "state":
@@ -91,7 +92,7 @@ class Experiment(models.Model):
                 'state_count': 0,
             } for state_value, state_name in states]
             # Get standard results
-            read_group_res = super(Experiment, self).read_group(cr, uid, domain, fields, groupby,
+            read_group_res = super(Experiment, self).read_group(domain, fields, groupby,
                                                                 offset=offset, limit=limit, context=context,
                                                                 orderby=orderby, lazy=lazy)
             # Update standard results with default results
@@ -104,7 +105,7 @@ class Experiment(models.Model):
                 result.append(res[0])
             return result
         else:
-            return super(Experiment, self).read_group(cr, uid, domain, fields, groupby,
+            return super(Experiment, self).read_group(domain, fields, groupby,
                                                       offset=offset, limit=limit, context=context,
                                                       orderby=orderby, lazy=lazy)
 
