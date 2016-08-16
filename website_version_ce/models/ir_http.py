@@ -14,6 +14,8 @@ class IrHttp(orm.AbstractModel):
     def _dispatch(self):
         x = super(IrHttp, self)._dispatch()
         if request.context.get('website_version_ce_experiment'):
-            data = json.dumps(request.context['website_version_ce_experiment'], ensure_ascii=False)
+            data = json.dumps(
+                request.context['website_version_ce_experiment'],
+                ensure_ascii=False)
             x.set_cookie('website_version_ce_experiment', data)
         return x
