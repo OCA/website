@@ -4,7 +4,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from openerp import fields, models, api
-from openerp.exceptions import Warning
+from openerp.exceptions import Warning as UserError
 from openerp.http import request
 from openerp.tools.translate import _
 
@@ -39,7 +39,7 @@ class Version(models.Model):
                 ('experiment_version_ids.version_id', '=', version_id)
             ])
             if result:
-                raise Warning(_("You cannot delete a version which is " +
+                raise UserError(_("You cannot delete a version which is " +
                                 "in a running or paused experiment."))
         # To avoid problem when we delete versions in Backend
         if request:
@@ -51,8 +51,9 @@ class Version(models.Model):
         for version in self:
             version.view_ids.publish()
 
-    @api.one
+    @api.multi
     def publish_version(self, save_master, copy_master_name):
+        self.ensure_one()
         del_l = self.env['ir.ui.view']
         copy_l = self.env['ir.ui.view']
         ir_ui_view = self.env['ir.ui.view']
@@ -92,7 +93,8 @@ class Version(models.Model):
         return self.name
 
     # To make a version of a version
-    @api.one
+    @api.multi
     def copy_version(self, new_version_id):
+        self.ensure_one()
         for view in self.view_ids:
             view.copy({'version_id': new_version_id})

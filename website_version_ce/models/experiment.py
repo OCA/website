@@ -3,7 +3,7 @@
 # © 2016, TODAY Odoo S.A
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp.exceptions import Warning
+from openerp.exceptions import Warning as UserError
 from openerp import models, fields, api
 from openerp.exceptions import ValidationError
 from openerp.tools.translate import _
@@ -33,11 +33,9 @@ class ExperimentVersion(models.Model):
         required=True,
         ondelete='cascade'
     )
-    frequency = fields.Selection([
-            ('10', 'Less'),
-            ('50', 'Medium'),
-            ('80', 'More')
-        ], string='Frequency', default='50')
+    frequency = fields.Selection(
+        [('10', 'Less'), ('50', 'Medium'), ('80', 'More')],
+        string='Frequency', default='50')
     google_index = fields.Integer(string='Google index')
 
 
@@ -76,9 +74,9 @@ class Experiment(models.Model):
                          exp_ver.experiment_id.website_id.id),
                         ('experiment_id.state', '=', 'running')
                     ]):
-                        raise ValidationError(
+                        raise ValidationError(_(
                             'This experiment contains a view which ' +
-                            'is already used in another running experience')
+                            'is already used in another running experience'))
         return True
 
     @api.multi
@@ -87,9 +85,9 @@ class Experiment(models.Model):
         for exp in self:
             for exp_ver in exp.experiment_version_ids:
                 if not exp_ver.version_id.website_id.id == exp.website_id.id:
-                    raise ValidationError(
+                    raise ValidationError(_(
                         'This experiment must have versions which ' +
-                        'are in the same website')
+                        'are in the same website'))
 
     @api.model
     def read_group(self, domain, fields, groupby, offset=0, limit=None,
@@ -126,7 +124,7 @@ class Experiment(models.Model):
                 domain, fields, groupby, offset=offset, limit=limit,
                 context=context, orderby=orderby, lazy=lazy)
 
-    @api.one
+    @api.multi
     def _get_version_number(self):
         for exp in self:
             exp.version_number = len(exp.experiment_version_ids) + 1
@@ -173,10 +171,10 @@ class Experiment(models.Model):
                 exp['variations'].append(
                     {'name': name, 'url': 'http://localhost/' + name})
             else:
-                raise Warning(_("The experiment you try to create has " +
+                raise UserError(_("The experiment you try to create has " +
                                 "a bad format."))
         if not version_list:
-            raise Warning(_("You must select at least one version in " +
+            raise UserError(_("You must select at least one version in " +
                             "your experiment."))
         vals['google_id'] = self.env['google.management'].create_an_experiment(
             exp, vals['website_id'])
@@ -187,7 +185,7 @@ class Experiment(models.Model):
         state = vals.get('state')
         for exp in self:
             if state and exp.state == 'ended':
-                raise Warning(_("You cannot modify an ended experiment."))
+                raise UserError(_("You cannot modify an ended experiment."))
             elif state == 'ended':
                 # google_data is the data to send to Googe
                 google_data = {
@@ -219,7 +217,7 @@ class Experiment(models.Model):
         goals_obj = self.env['website_version_ce.goals']
         website_id = self.env.context.get('website_id')
         if not website_id:
-            raise Warning("You must specify the website.")
+            raise UserError(_("You must specify the website."))
         for goal in gm_obj.get_goal_info(website_id)[1]['items']:
             if not goals_obj.search([('name', '=', goal['name'])]):
                 vals = {'name': goal['name'],

@@ -37,11 +37,11 @@ var EditorVersion = Widget.extend({
                     self.$el.find(".create_experiment").after(qweb.render("website_version_ce.experiment_menu"));
                 }
             });
-            
+
         });
         return this._super();
     },
-    
+
     duplicate_version: function(event) {
         var version_id = base.get_context().version_id;
         var wizardA = $(qweb.render("website_version_ce.new_version",{'default_name': moment().format('L')}));
@@ -49,7 +49,7 @@ var EditorVersion = Widget.extend({
         wizardA.on('click','.o_create', function(){
             wizardA.find('.o_message').remove();
             var version_name = wizardA.find('.o_version_name').val();
-            if(version_name.length == 0){
+            if(version_name.length === 0){
                 wizardA.find(".o_version_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
             }
             else{
@@ -73,7 +73,7 @@ var EditorVersion = Widget.extend({
         });
         wizardA.on('hidden.bs.modal', function () {$(this).remove();});
     },
-    
+
     change_version: function(event) {
         var version_id = parseInt($(event.target).closest("li").data("version_id"));
         if(! version_id){
@@ -122,7 +122,7 @@ var EditorVersion = Widget.extend({
                 var check = wizardA.find('.o_check').is(':checked');
                 var copy_master_name = wizardA.find('.o_name').val();
                 if(check){
-                    if(copy_master_name.length == 0){
+                    if(copy_master_name.length === 0){
                         wizardA.find(".o_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
                     }
                     else{
@@ -177,13 +177,12 @@ var EditorVersion = Widget.extend({
         ajax.jsonRpc( '/website_version_ce/all_versions_all_goals', 'call', { 'view_id': view_id }).then(function (result) {
             var wizardA = $(qweb.render("website_version_ce.create_experiment",{versions:result.tab_version, goals:result.tab_goal, config:result.check_conf}));
             wizardA.appendTo($('body')).modal({"keyboard" :true});
-        
+
             wizardA.on('click','.o_launch', function(){
                 wizardA.find('.o_message').remove();
                 var name = wizardA.find('.o_name').val();
                 var tab = wizardA.find('.o_version');
                 var result = [];
-                var i;
                 for (var i = 0; i < tab.length; i++){
                     if ($(tab[i]).is(':checked')) {
                         result.push(parseInt($(tab[i]).attr('data-version_id')));
@@ -191,17 +190,17 @@ var EditorVersion = Widget.extend({
                 }
                 var goal_id = wizardA.find('.box').val();
                 var check = true;
-                if (name.length == 0){
+                if (name.length === 0){
                     wizardA.find(".o_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
                     check = false;
                 }
-                if (result.length == 0 && check){
+                if (result.length === 0 && check){
                     wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_t("You must select at least one version which is not Master.")+"</p>");
                     check = false;
                 }
                 if(check){
                     ajax.jsonRpc( '/website_version_ce/launch_experiment', 'call', { 'name':name, 'version_ids':result, 'goal_id':goal_id }).then(function (existing_experiment) {
-                        if (!existing_experiment['existing']){
+                        if (!existing_experiment.existing){
                             var wizardB = $(qweb.render("website_version_ce.dialogue",{message:_.str.sprintf("Your %s experiment is created.", name), dialogue:_t(" Now you can manage this experiment by clicking on Manage A/B tests.")}));
                             wizardB.appendTo($('body')).modal({"keyboard" :true});
                             wizardB.on('click','.o_confirm', function(){
@@ -211,8 +210,8 @@ var EditorVersion = Widget.extend({
 
                         }
                         else{
-                            if(existing_experiment['existing'] == 1){
-                                wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_.str.sprintf("Your %s experiment cannot be launched because this experiment contains a view which is already used in the running %s experiment.", name, existing_experiment['name'])+"</p>");
+                            if(existing_experiment.existing == 1){
+                                wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_.str.sprintf("Your %s experiment cannot be launched because this experiment contains a view which is already used in the running %s experiment.", name, existing_experiment.name)+"</p>");
                             }
                             else{
                                 wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_.str.sprintf("You cannot have more then 24 running/paused experiments.")+"</p>");
@@ -232,7 +231,7 @@ var EditorVersion = Widget.extend({
                 var view_id = wizardA.find('.o_view_id').val();
                 var client_id = wizardA.find('.o_client_id').val();
                 var client_secret = wizardA.find('.o_client_secret').val();
-                if(ga_key.length == 0 || view_id.length == 0 || client_id.length == 0 || client_secret.length == 0){
+                if(ga_key.length === 0 || view_id.length === 0 || client_id.length === 0 || client_secret.length === 0){
                     wizardA.find(".o_configure_ab").after("<p class='o_message' style='color : red'> *"+_t("You must fill all the fields.")+"</p>");
                 }
                 else{
@@ -263,7 +262,7 @@ var EditorVersion = Widget.extend({
                 var website_id = $('html').attr('data-website-id');
                 var ga_key = wizardA.find('.o_ga_key').val();
                 var view_id = wizardA.find('.o_view_id').val();
-                if(ga_key.length == 0 || view_id.length == 0){
+                if(ga_key.length === 0 || view_id.length === 0){
                     wizardA.find(".o_configure_ab").after("<p class='o_message' style='color : red'> *"+_t("You must fill all the fields.")+"</p>");
                 }
                 else{
@@ -281,7 +280,7 @@ var EditorVersion = Widget.extend({
     statistics: function() {
         window.open('https://www.google.com/analytics/web/?authuser=0#report/siteopt-experiments/','_blank');
     }
-    
+
 });
 
 $(document).ready(function() {

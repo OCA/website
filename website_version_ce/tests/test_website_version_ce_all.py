@@ -3,10 +3,10 @@
 # © 2016, TODAY Odoo S.A
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from . import test_website_version_ce_base
+from . import test_website_version_ce_base as test_wvb
 
 
-class TestWebsiteVersionAll(test_website_version_ce_base.TestWebsiteVersionBase):
+class TestWebsiteVersionAll(test_wvb.TestWebsiteVersionBase):
 
     def test_copy_version(self):
         """ Testing version_copy"""

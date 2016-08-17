@@ -6,7 +6,7 @@
 from datetime import datetime, timedelta
 import logging
 from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
-from openerp.exceptions import Warning
+from openerp.exceptions import Warning as UserError
 from openerp import models, exceptions, api
 from openerp.tools.translate import _
 import simplejson
@@ -22,7 +22,6 @@ class GoogleManagement(models.AbstractModel):
 
     @api.model
     def generate_data(self, experiment):
-        
         return {
             'name': experiment['name'],
             'status': experiment['status'],
@@ -37,28 +36,27 @@ class GoogleManagement(models.AbstractModel):
         action_id = self.env['ir.model.data'].xmlid_to_res_id(
             'website_version_ce.action_website_view')
         if not web_property_id:
-            raise exceptions.RedirectWarning(
+            raise exceptions.RedirectWarning(_(
                 'Click on the website you want to make A/B testing and ' +
-                'configure the Google Analytics Key and View ID',
+                'configure the Google Analytics Key and View ID'),
                 action_id,
-                'go to the websites menu'
+                _('go to the websites menu')
             )
         account_id = web_property_id.split('-')[1]
         profile_id = website.google_analytics_view_id
         if not profile_id:
-            raise exceptions.RedirectWarning(
+            raise exceptions.RedirectWarning(_(
                 'Click on the website you want to make A/B testing and ' +
-                'configure the Google Analytics Key and View ID',
+                'configure the Google Analytics Key and View ID'),
                 action_id,
-                'go to the websites menu'
+                _('go to the websites menu')
             )
         url = ('/analytics/v3/management/accounts/%s/webproperties' +
                '/%s/profiles/%s/experiments?access_token=%s') % (
                    account_id,
                    web_property_id,
                    profile_id,
-                   self.get_token()
-               )
+                   self.get_token())
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         data_json = simplejson.dumps(data)
         try:
@@ -102,7 +100,7 @@ class GoogleManagement(models.AbstractModel):
         params = {
             'access_token': self.get_token(),
         }
-        
+
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         url = ('/analytics/v3/management/accounts/%s/webproperties' +
                '/%s/profiles/%s/experiments/%s') % (
@@ -124,7 +122,7 @@ class GoogleManagement(models.AbstractModel):
         params = {
             'access_token': self.get_token(),
         }
-        
+
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 
         url = ('/analytics/v3/management/accounts/%s/' +
@@ -162,7 +160,7 @@ class GoogleManagement(models.AbstractModel):
         validity = icp.get_param('google_%s_token_validity' % self.STR_SERVICE)
         token = icp.get_param('google_%s_token' % self.STR_SERVICE)
         if not (validity and token):
-            raise Warning(_("You must configure your account."))
+            raise UserError(_("You must configure your account."))
         if datetime.strptime(
                 validity.split('.')[0], DEFAULT_SERVER_DATETIME_FORMAT) < \
                 (datetime.now() + timedelta(minutes=3)):
@@ -189,7 +187,7 @@ class GoogleManagement(models.AbstractModel):
     def get_management_scope(self):
         return 'https://www.googleapis.com/auth/analytics ' +\
                'https://www.googleapis.com/auth/analytics.edit'
-        
+
     @api.model
     def authorize_google_uri(self, from_url='http://www.odoo.com',
                              context=None):

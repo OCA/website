@@ -10,7 +10,7 @@
             <field name="view_mode">kanban,tree,form</field>
             <field name="context">{}</field>
         </record>
-        
+
         <record model="ir.ui.view" id="view_experiment_kanban">
             <field name="name">Experiment Kanban</field>
             <field name="model">website_version_ce.experiment</field>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="oe_clear"></div>
                           </div>
-                        </t> 
+                        </t>
                     </templates>
                 </kanban>
             </field>
@@ -62,17 +62,17 @@
             <field name="url">https://www.google.com/analytics/web/?authuser=0#report/siteopt-experiments/</field>
             <field name="target">self</field>
         </record>
-        
+
         <record model="ir.ui.view" id="experiment_form_view">
             <field name="name">experiment.form</field>
-            <field name="model">website_version_ce.experiment</field> 
+            <field name="model">website_version_ce.experiment</field>
             <field name="arch" type="xml">
                 <form string="Experiment Form">
                     <header>
                         <field name="state" widget="statusbar" statusbar_visible="running,paused,ended" clickable="True"/>
                     </header>
                     <sheet string="Exp">
-                        <button icon="fa-line-chart" name="website_version_ce.action_analytic" String="Statistics" action="action" 
+                        <button icon="fa-line-chart" name="website_version_ce.action_analytic" String="Statistics" action="action"
                             type="action" class="pull-right" />
                         <div class="oe_title">
                             <field name="google_id" invisible="1"/>
@@ -94,22 +94,22 @@
                             <page string="Versions in experiment" colspan="4" >
                                 <field name="experiment_version_ids" colspan="4" context="{'website_id': website_id,
                                     'google_id': google_id}" attrs="{'readonly' : [('google_id', '!=', False)] }">
-                                    <tree string="PPP" editable="bottom"> 
+                                    <tree string="PPP" editable="bottom">
                                         <field name="version_id" string="Versions" domain="[('website_id','=',context.get('website_id'))]" colspan="4"/>
                                         <field name="frequency" colspan="4"/>
                                     </tree>
                                 </field>
-                               
+
                             </page>
                         </notebook>
                     </sheet>
                 </form>
             </field>
         </record>
-        
+
         <record model="ir.ui.view" id="experiment_tree_view">
             <field name="name">experiment.tree</field>
-            <field name="model">website_version_ce.experiment</field> 
+            <field name="model">website_version_ce.experiment</field>
             <field name="arch" type="xml">
                 <tree string="Experiment tree">
                     <field name="name" />
@@ -144,7 +144,7 @@
 
         <record model="ir.ui.view" id="experiment_version_form_view">
             <field name="name">experiment_version.form</field>
-            <field name="model">website_version_ce.experiment.version</field> 
+            <field name="model">website_version_ce.experiment.version</field>
             <field name="arch" type="xml">
                 <form string="Experiment_page Form">
                     <notebook colspan="4">
@@ -156,7 +156,7 @@
                 </form>
             </field>
         </record>
-            
+
         <record id="action_version" model="ir.actions.act_window">
             <field name="name">Versions</field>
             <field name="res_model">website_version_ce.version</field>
@@ -167,7 +167,7 @@
 
         <record model="ir.ui.view" id="version_form_view">
             <field name="name">version.form</field>
-            <field name="model">website_version_ce.version</field> 
+            <field name="model">website_version_ce.version</field>
             <field name="arch" type="xml">
                 <form string="version Form">
                     <sheet string="Snap">
@@ -193,7 +193,7 @@
 
         <record model="ir.ui.view" id="version_tree_view">
             <field name="name">version.tree</field>
-            <field name="model">website_version_ce.version</field> 
+            <field name="model">website_version_ce.version</field>
             <field name="arch" type="xml">
                 <tree string="version tree">
                     <field name="name" />
@@ -216,7 +216,7 @@
             </field>
         </record>
 
-        <record id="action_website_view" model="ir.actions.act_window">
+        <record id="action_website_domain_view" model="ir.actions.act_window">
             <field name="name">Website Domain</field>
             <field name="res_model">website</field>
             <field name="view_type">form</field>
@@ -224,7 +224,7 @@
         </record>
 
         <menuitem name="Versionning" id="menu_website_version_ce_root" sequence="30" groups="base.group_website_designer" parent="website.menu_website_configuration" web_icon="website_version_ce,static/description/icon.png"/>
-        <menuitem action="action_website_view" id="menu_website_view" parent="menu_website_version_ce_root"/>
+        <menuitem action="action_website_domain_view" id="menu_website_view" parent="menu_website_version_ce_root"/>
         <menuitem action="action_version" id="menu_action_version" parent="menu_website_version_ce_root" groups="base.group_no_one"/>
         <menuitem action="action_experiment" id="menu_action_experiment" parent="menu_website_version_ce_root"/>
 

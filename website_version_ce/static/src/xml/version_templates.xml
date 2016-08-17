@@ -22,18 +22,18 @@
                     <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li class="o_first_choice"><a href="#" id="save_as_new_version" data-action="save_as_new_version" 
+                    <li class="o_first_choice"><a href="#" id="save_as_new_version" data-action="save_as_new_version"
                         class="btn btn-link btn-xs o_version">Save as New Version</a>
                     </li>
                 </ul>
             </div>
-            
+
         </t>
     </t>
 
-    <t t-name="website_version_ce.all_options">    
+    <t t-name="website_version_ce.all_options">
         <li class="o_second_choice">
-            <a href="#" id="save_and_publish" data-action="save_and_publish" 
+            <a href="#" id="save_and_publish" data-action="save_and_publish"
                 class="btn btn-link btn-xs o_version"><t t-esc="version"></t></a>
         </li>
     </t>
@@ -58,7 +58,7 @@
                 <h4 class="modal-title">Launch A/B Tests</h4>
               </div>
                 <div class="modal-body">
-                    <t t-if="versions.length != 0 and config == 1">  
+                    <t t-if="versions.length != 0 and config == 1">
                         <form id="productForm" class="form-horizontal" role="form">
                             <div class="form-group form-group">
                                 <label class="col-sm-3 control-label">Experiment Name</label>
@@ -87,14 +87,14 @@
                                     </label>
                                 </div>
                             </div>
-                            
+
                             <div class="o_versions">
-                                <t t-foreach="versions" t-as="item">  
-                                    <div class="form-group form-group-lg"> 
-                                        <div class="col-sm-3"></div>    
+                                <t t-foreach="versions" t-as="item">
+                                    <div class="form-group form-group-lg">
+                                        <div class="col-sm-3"></div>
                                         <div class="checkbox col-sm-8">
                                             <label>
-                                                <input type="checkbox" class="o_version" t-att-data-version_id="item.id"/> <t t-esc="item.name"></t> 
+                                                <input type="checkbox" class="o_version" t-att-data-version_id="item.id"/> <t t-esc="item.name"></t>
                                             </label>
                                         </div>
                                     </div>
@@ -112,7 +112,7 @@
                         <div class="o_configure_ab">
                             <p>Odoo uses Google Analytics to track the performances of an A/B testing experiment comparing several versions.</p>
                         </div>
-                        <form id="productForm" class="form-horizontal" role="form"> 
+                        <form id="productForm" class="form-horizontal" role="form">
                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                               <div class="panel panel-default">
                                 <div class="panel-heading" role="tab" id="headingOne">
@@ -138,21 +138,21 @@
                                             </li>
                                             <li>
                                                 Click on <b>"Tracking Code"</b>.
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_tracking_code.png' class='analytics_img_tuto'/>   
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_tracking_code.png' class='analytics_img_tuto'/>
                                             </li>
                                             <li>
                                                 Copy the <b>"Tracking ID"</b> and paste it in the field Google Analytics key.
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_tracking_id.png' class='analytics_img_tuto'/>   
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_tracking_id.png' class='analytics_img_tuto'/>
                                             </li>
                                             <li>
                                                 Click on <b>"Admin"</b> and click on <b>"View Settings"</b>.
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_view_settings.png' class='analytics_img_tuto'/>  
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_view_settings.png' class='analytics_img_tuto'/>
                                             </li>
                                             <li>
                                                 Copy the <b>"View ID"</b> and paste it in the field View ID.
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_view_id.png' class='analytics_img_tuto'/>  
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_view_id.png' class='analytics_img_tuto'/>
                                             </li>
-                                        </ul> 
+                                        </ul>
                                     </div>
                                 </div>
                               </div>
@@ -185,36 +185,36 @@
                                             <li> Connect on your google account and go to <a href='https://console.developers.google.com' target='_blank'>https://console.developers.google.com</a> </li>
                                             <li>
                                                 Click on <b>"Create Project"</b> and enter a project name.
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_create_project.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_create_project.png'
                                                 class='analytics_img_tuto'/>
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_new_project.png' 
-                                                class='analytics_img_tuto'/> 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_new_project.png'
+                                                class='analytics_img_tuto'/>
                                             </li>
                                             <li> In the menu on left side, select the sub menu APIs (from menu APIs and auth) and activate <b>"Analytics API"</b> by clicking on button "OFF".
                                                 <br/> When it's done, check that the button of <b>"Calendar API"</b> is well in green and with text "ON"
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_API.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_API.png'
                                                 class='analytics_img_tuto'/>
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_off_api.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_off_api.png'
                                                 class='analytics_img_tuto'/>
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_on_api.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_on_api.png'
                                                 class='analytics_img_tuto'/>
-                                            </li> 
+                                            </li>
                                             <li>
                                                 In the menu on left side, select the sub menu <b>'Credentials'</b> (from menu APIs and auth) and click on button <b>'Create New Client ID'</b>
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_credentials.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_credentials.png'
                                                 class='analytics_img_tuto'/>
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_create_new_client_id.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_create_new_client_id.png'
                                                 class='analytics_img_tuto'/>
                                             </li>
                                             <li> Fill in the Name of application and check that the platform is well on <b>'Web Application'</b>.<br/>
                                                 <br/> You should now configure the allowed pages on which you will be redirected. To do it, you need to complete the field <b>"Redirect RI"</b>
                                                 and set as value  (your own domain followed by <i>"/google_account/authentication"</i>) :
                                                 <br/> You can now click on <b>'Create Client ID'</b>
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_client_id.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_client_id.png'
                                                 class='analytics_img_tuto'/>
-                                            </li> 
+                                            </li>
                                             <li>Once done, you will have the both informations (<b>Client ID</b> and <b>Client Secret</b>) that you need to insert in the 2 fields below !
-                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_copy.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_copy.png'
                                                 class='analytics_img_tuto'/>
                                             </li>
                                         </ul>
@@ -241,7 +241,7 @@
                         <div class="o_configure_ab">
                             <p>Odoo uses Google Analytics to track the performances of an A/B testing experiment comparing several versions.</p>
                         </div>
-                        <form id="productForm" class="form-horizontal" role="form">              
+                        <form id="productForm" class="form-horizontal" role="form">
                             <div class="form-group form-group">
                                 <label class="col-sm-3 control-label">GA Key</label>
                                 <div class="col-sm-8">
@@ -259,7 +259,7 @@
 
                 </div>
               <div class="modal-footer">
-                <t t-if="versions.length != 0 and config == 1"> 
+                <t t-if="versions.length != 0 and config == 1">
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary o_launch">Launch</button>
                     </div>
@@ -295,7 +295,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
                 <h4 class="modal-title"><t t-esc="message"></t></h4>
-              </div>  
+              </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary o_confirm" data-dismiss="modal">Ok</button>
               </div>
@@ -310,7 +310,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
                 <h4 class="modal-title"><t t-esc="message"></t></h4>
-              </div>  
+              </div>
                 <div class="modal-body">
                     <p><t t-esc="dialogue"></t></p>
                 </div>
@@ -329,19 +329,19 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
                 <h4 class="modal-title">Version: <t t-esc="version_name"></t></h4>
-              </div>  
+              </div>
                 <div class="modal-body">
-                    <t t-if="list.length != 0"> 
+                    <t t-if="list.length != 0">
                         <ul>
                             <t t-foreach="list" t-as="item">
                                 <li><a t-att-href="item.url"> <b><t t-esc="item.name"></t></b> </a></li>
                             </t>
                         </ul>
-                        <p>List of pages that have been modified in version <t t-esc="version_name"></t> 
+                        <p>List of pages that have been modified in version <t t-esc="version_name"></t>
                             compared to master. If you publish this version, all pages will be updated at once.
                         </p>
                     </t>
-                    <t t-if="list.length == 0"> 
+                    <t t-if="list.length == 0">
                         <p>There is no difference with Master</p>
                     </t>
                 </div>
@@ -360,7 +360,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
                 <h4 class="modal-title"><t t-esc="message"></t></h4>
-              </div>  
+              </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary o_confirm" data-dismiss="modal">Delete Version</button>
                 or
@@ -378,7 +378,7 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&amp;times;</button>
                 <h4 class="modal-title"><t t-esc="message"></t></h4>
-              </div>  
+              </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary o_confirm" data-dismiss="modal">Publish</button>
                 or
@@ -398,14 +398,14 @@
               </div>
               <div class="modal-body">
                 <p>By publishing this version, you will overwrite the following master pages:</p>
-                <t t-if="list.length != 0"> 
+                <t t-if="list.length != 0">
                     <ul>
-                        <t t-foreach="list" t-as="item">      
-                            <li><t t-esc="item.name"></t> </li>            
+                        <t t-foreach="list" t-as="item">
+                            <li><t t-esc="item.name"></t> </li>
                         </t>
                     </ul>
                 </t>
-                <t t-if="list.length == 0"> 
+                <t t-if="list.length == 0">
                     <p>There is no difference with Master</p>
                 </t>
                 <form id="productForm" class="form-horizontal" role="form">
@@ -415,7 +415,7 @@
                             <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="checked"/>
                             Publish version
                         </label>
-                    </div>              
+                    </div>
                     <div class="radio">
                         <label>
                           <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" class="o_check"/>
@@ -452,7 +452,7 @@
                         <div class="col-sm-8">
                             <input type="text" class="form-control form-field-label o_version_name o_required_field" t-attf-value="{{default_name}}"/>
                         </div>
-                    </div>             
+                    </div>
 
                 </form>
               </div>

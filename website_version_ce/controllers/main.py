@@ -209,14 +209,14 @@ class VersioningController(Website):
                 'state': 'running',
                 'website_id': request.context.get('website_id'),
                 'experiment_version_ids': [[
-                                        0,
-                                        False,
-                                        {
-                                            'frequency': '50',
-                                            'version_id': int(version_ids[i]),
-                                            'google_index': i+1
-                                        }
-                                   ] for i in range(len(version_ids))],
+                    0,
+                    False,
+                    {
+                        'frequency': '50',
+                        'version_id': int(version_ids[i]),
+                        'google_index': i+1
+                    }
+                    ] for i in range(len(version_ids))],
                 'goal_id': int(goal_id)
             }
             exp_obj.create(vals)

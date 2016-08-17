@@ -20,8 +20,9 @@ class View(models.Model):
             self.env.context = {}
 
         version_id = self.env.context.get('version_id')
-        if version_id and not self.env.context.get('write_on_view') and \
-                        'active' not in vals:
+        if version_id and \
+                not self.env.context.get('write_on_view') and \
+                'active' not in vals:
             self.env.context = dict(self.env.context, write_on_view=True)
             version = self.env['website_version_ce.version'].browse(version_id)
             website_id = version.website_id.id
@@ -47,11 +48,12 @@ class View(models.Model):
             self.env.context = dict(self.env.context, write_on_view=True)
             super(View, self).write(vals)
 
-    @api.one
+    @api.multi
     def publish(self):
         """To delete and replace views which are in the website
         (in fact with website_id)
         """
+        self.ensure_one()
         master_record = self.search([
             ('key', '=', self.key),
             ('version_id', '=', False),
@@ -143,8 +145,9 @@ class View(models.Model):
                         priority[k.key] = 1
             else:
                 # priority:1 take the view which is just in the same website
-                if k.version_id.id is False and k.website_id.id and \
-                                k.website_id.id == context_website_id:
+                if k.version_id.id is False and \
+                        k.website_id.id and \
+                        k.website_id.id == context_website_id:
                     right_ids[k.key] = k.id
                     priority[k.key] = 2
                 # priority:2 take the original view
@@ -153,7 +156,7 @@ class View(models.Model):
                         right_ids[k.key] = k.id
                         priority[k.key] = 1
         return [x for x in arch if x[1] in right_ids.values()]
-        
+
     # To active or desactive the right views according to the key
     def toggle(self, cr, uid, ids, context=None):
         """ Switches between enabled and disabled statuses

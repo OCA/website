@@ -13,13 +13,13 @@ editor.Class.include({
     start: function() {
         var self = this;
         this.$el.on('click', '#save_as_new_version', function() {
-            
+
             var wizardA = $(qweb.render("website_version_ce.new_version",{'default_name': moment().format('L')}));
             wizardA.appendTo($('body')).modal({"keyboard" :true});
             wizardA.on('click','.o_create', function(){
                 wizardA.find('.o_message').remove();
                 var version_name = wizardA.find('.o_version_name').val();
-                if(version_name.length == 0){
+                if(version_name.length === 0){
                     wizardA.find(".o_version_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
                 }
                 else{
@@ -42,7 +42,7 @@ editor.Class.include({
                 }
             });
             wizardA.on('hidden.bs.modal', function () {$(this).remove();});
-        
+
         });
         var ver_name = $('#version-menu-button').data('version_name');
         if(ver_name){

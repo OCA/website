@@ -6,15 +6,11 @@
 {
     'name': 'Website Versioning',
     'category': 'Website',
-    'summary': 'Allow to save all the versions of your website and allow to perform AB testing.',
+    'summary': 'Allow webpages versions and A/B testing.',
     'version': '9.0.1.0.0',
-    'description': """
-OpenERP Website CMS
-===================
-
-        """,
     'depends': ['website', 'marketing', 'google_account', 'mail'],
     'author': 'Odoo S.A., Clouder SASU, Odoo Community Association (OCA)',
+    "license": "LGPL-3",
     'installable': True,
     'data': [
         'security/ir.model.access.csv',
