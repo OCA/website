@@ -4,11 +4,11 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from openerp.http import request
-from openerp import model
+from openerp import models
 import json
 
 
-class IrHttp(model.AbstractModel):
+class IrHttp(models.AbstractModel):
     _inherit = 'ir.http'
 
     def _dispatch(self):
