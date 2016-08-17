@@ -47,6 +47,7 @@ addon | version | summary
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 | Website Menu Multilanguage
 [website_multi_image](website_multi_image/) | 8.0.1.0.0 | Templates to display multiple images in website views
 [website_no_crawler](website_no_crawler/) | 8.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
+[website_parameterized_snippet](website_parameterized_snippet/) | 8.0.1.0.0 | Parameterize snippets
 [website_portal](website_portal/) | 8.0.1.0.0 | Account Management Frontend for your Customers
 [website_portal_purchase](website_portal_purchase/) | 8.0.1.0.0 | Add your purchase document in the frontend portal (purchase order, request for quotations, supplier invoices)
 [website_portal_sale](website_portal_sale/) | 8.0.1.0.0 | Add your sales document in the frontend portal (sales order, quotations, invoices)
