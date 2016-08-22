@@ -1,23 +1,7 @@
-# -*- coding: utf-8 -*-
-##############################################################################
-#
-# Authors: Odoo S.A., Nicolas Petit (Clouder)
-# Copyright 2016, TODAY Odoo S.A. Clouder SASU
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Lesser General Public License as published by
-# the Free Software Foundation, either version 3 of the License,
-# or (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU Lesser General Public License for more details.
-#
-# You should have received a copy of the GNU Lesser General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# -*- coding: utf-8 -*-#
+# © 2016 Nicolas Petit <nicolas.petit@vivre-d-internet.fr>
+# © 2016, TODAY Odoo S.A
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from openerp.exceptions import Warning
 from openerp import models, fields, api
@@ -35,12 +19,12 @@ class ExperimentVersion(models.Model):
     The googe_index is the index of a version in an experiment, used to send data to Google Analytics.
     """
 
-    _name = "website_version.experiment.version"
+    _name = "website_version_ce.experiment.version"
     _rec_name = "version_id"
 
-    version_id = fields.Many2one('website_version.version', string="Version", required=True, ondelete='cascade')
+    version_id = fields.Many2one('website_version_ce.version', string="Version", required=True, ondelete='cascade')
     experiment_id = fields.Many2one(
-        'website_version.experiment',
+        'website_version_ce.experiment',
         string="Experiment",
         required=True,
         ondelete='cascade'
@@ -53,7 +37,7 @@ class Goals(models.Model):
     """ Allow to define the goal of an experiment.
     The goals are defined in the Google Analytics account and can be synchronised in backend.
     """
-    _name = "website_version.goals"
+    _name = "website_version_ce.goals"
 
     name = fields.Char(string="Name", required=True)
     google_ref = fields.Char(string="Google Reference", required=True)
@@ -63,7 +47,7 @@ class Experiment(models.Model):
     """An experiment pointed to some experiment_versions and dispatch each website visitor to a version.
     """
 
-    _name = "website_version.experiment"
+    _name = "website_version_ce.experiment"
     _inherit = ['mail.thread']
     _order = 'sequence'
 
@@ -131,7 +115,7 @@ class Experiment(models.Model):
 
     name = fields.Char(string="Title", required=True)
     experiment_version_ids = fields.One2many(
-        'website_version.experiment.version',
+        'website_version_ce.experiment.version',
         'experiment_id',
         string="Experiment Version"
     )
@@ -143,7 +127,7 @@ class Experiment(models.Model):
             ('ended', 'Ended')
         ],
         'Status', required=True, copy=False, track_visibility='onchange', default='running')
-    goal_id = fields.Many2one('website_version.goals', string="Objective", required=True)
+    goal_id = fields.Many2one('website_version_ce.goals', string="Objective", required=True)
     color = fields.Integer('Color Index')
     version_number = fields.Integer(compute=_get_version_number, string='Version Number')
     sequence = fields.Integer('Sequence', required=True, default=1)
@@ -153,14 +137,14 @@ class Experiment(models.Model):
     def create(self, vals):
         exp = {
             'name': vals['name'],
-            'objectiveMetric': self.env['website_version.goals'].browse([vals['goal_id']])[0].google_ref,
+            'objectiveMetric': self.env['website_version_ce.goals'].browse([vals['goal_id']])[0].google_ref,
             'status': vals['state'],
             'variations': [{'name': 'master', 'url': 'http://localhost/master'}]
         }
         version_list = vals.get('experiment_version_ids', [])
         for version in version_list:
             if version[0] == 0:
-                name = self.env['website_version.version'].browse([version[2]['version_id']])[0].name
+                name = self.env['website_version_ce.version'].browse([version[2]['version_id']])[0].name
                 # We must give a URL for each version in the experiment
                 exp['variations'].append({'name': name, 'url': 'http://localhost/' + name})
             else:
@@ -201,7 +185,7 @@ class Experiment(models.Model):
     @api.multi
     def update_goals(self):
         gm_obj = self.env['google.management']
-        goals_obj = self.env['website_version.goals']
+        goals_obj = self.env['website_version_ce.goals']
         website_id = self.env.context.get('website_id')
         if not website_id:
             raise Warning("You must specify the website.")
@@ -216,7 +200,7 @@ class Experiment(models.Model):
 
         # Check if version_ids don't overlap with running experiments
         version_keys = set([v['key'] for v in self.env['ir.ui.view'].search_read([('version_id', 'in', version_ids)], ['key'])])
-        exp_mod = self.env['website_version.experiment']
+        exp_mod = self.env['website_version_ce.experiment']
         exps = exp_mod.search([('state', '=', 'running'), ('website_id', '=', self.env.context.get('website_id'))])
         for exp in exps:
             for exp_ver in exp.experiment_version_ids:

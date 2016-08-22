@@ -1,23 +1,7 @@
-# -*- coding: utf-8 -*-
-##############################################################################
-#
-# Authors: Odoo S.A., Nicolas Petit (Clouder)
-# Copyright 2016, TODAY Odoo S.A. Clouder SASU
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Lesser General Public License as published by
-# the Free Software Foundation, either version 3 of the License,
-# or (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU Lesser General Public License for more details.
-#
-# You should have received a copy of the GNU Lesser General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# -*- coding: utf-8 -*-#
+# © 2016 Nicolas Petit <nicolas.petit@vivre-d-internet.fr>
+# © 2016, TODAY Odoo S.A
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from lxml import etree
 from openerp import tools, fields, models, api
@@ -27,7 +11,7 @@ class View(models.Model):
 
     _inherit = "ir.ui.view"
 
-    version_id = fields.Many2one('website_version.version', ondelete='cascade', string="Version")
+    version_id = fields.Many2one('website_version_ce.version', ondelete='cascade', string="Version")
 
     @api.multi
     def write(self, vals):
@@ -39,7 +23,7 @@ class View(models.Model):
         # To dedicate a view for a specific website, you must create a version and publish these version.
         if version_id and not self.env.context.get('write_on_view') and 'active' not in vals:
             self.env.context = dict(self.env.context, write_on_view=True)
-            version = self.env['website_version.version'].browse(version_id)
+            version = self.env['website_version_ce.version'].browse(version_id)
             website_id = version.website_id.id
             version_view_ids = self.env['ir.ui.view']
             for current in self:

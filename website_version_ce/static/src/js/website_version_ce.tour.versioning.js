@@ -1,4 +1,4 @@
-odoo.define('website_version.tour', function (require) {
+odoo.define('website_version_ce.tour', function (require) {
 'use strict';
 
 var core = require('web.core');

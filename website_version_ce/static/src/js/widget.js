@@ -1,4 +1,4 @@
-odoo.define('website_version.widget', function (require) {
+odoo.define('website_version_ce.widget', function (require) {
 "use strict";
 
 var core = require('web.core');
@@ -9,7 +9,7 @@ var pyeval = require('web.pyeval');
 var _t = core._t;
 
 var rtoken = form_common.AbstractField.extend({
-    template: 'website_version.GoogleAccess',
+    template: 'website_version_ce.GoogleAccess',
     start: function() {
       var self = this;
       this.$el.on('click', 'button.GoogleAccess', function() {
@@ -20,7 +20,7 @@ var rtoken = form_common.AbstractField.extend({
     var self = this;
     $('button.GoogleAccess').prop('disabled', true);
     var context = pyeval.eval('context');
-    self.rpc('/website_version/google_access', {
+    self.rpc('/website_version_ce/google_access', {
         fromurl: window.location.href,
         local_context: context
     }).done(function(o) {

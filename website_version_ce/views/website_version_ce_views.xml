@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<openerp>
+<odoo>
     <data>
         <record model="ir.ui.view" id="view_website_form_extend"> 
             <field name="name">website.form</field>
@@ -18,35 +18,35 @@
                             <ul> 
                                 <li> Go to <a href='https://www.google.com/analytics/' target='_blank'>https://www.google.com/analytics/</a>
                                 and connect you.
-                                    <br/><br/><img src='/website_version/static/src/img/GA/GA_login.png' class='analytics_img_tuto'/> 
+                                    <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_login.png' class='analytics_img_tuto'/> 
                                 </li>
                                 <li> 
                                     Click on <b>"Admin"</b>.
-                                    <br/><br/><img src='/website_version/static/src/img/GA/GA_admin.png' class='analytics_img_tuto'/>    
+                                    <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_admin.png' class='analytics_img_tuto'/>    
                                 </li>
                                 <li> 
                                     Click on <b>"Tracking Code"</b>.
-                                    <br/><br/><img src='/website_version/static/src/img/GA/GA_tracking_code.png' class='analytics_img_tuto'/>   
+                                    <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_tracking_code.png' class='analytics_img_tuto'/>   
                                 </li>
                                 <li> 
                                     Copy the <b>"Tracking ID"</b> and paste it in the field Google Analytics key.
-                                    <br/><br/><img src='/website_version/static/src/img/GA/GA_tracking_id.png' class='analytics_img_tuto'/>   
+                                    <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_tracking_id.png' class='analytics_img_tuto'/>   
                                 </li>
                                 <li> 
                                     Click on <b>"Admin"</b> and click on <b>"View Settings"</b>.
-                                    <br/><br/><img src='/website_version/static/src/img/GA/GA_view_settings.png' class='analytics_img_tuto'/>  
+                                    <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_view_settings.png' class='analytics_img_tuto'/>  
                                 </li>
                                 <li> 
                                     Copy the <b>"View ID"</b> and paste it in the field View ID.
-                                    <br/><br/><img src='/website_version/static/src/img/GA/GA_view_id.png' class='analytics_img_tuto'/>  
+                                    <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_view_id.png' class='analytics_img_tuto'/>  
                                 </li>
                                 <li> 
                                     Click on Save.
-                                    <br/><br/><img src='/website_version/static/src/img/GA/GA_save.png' class='analytics_img_tuto' />  
+                                    <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_save.png' class='analytics_img_tuto' />  
                                 </li>
                                 <li> 
                                     Click on Authorize google.
-                                    <br/><br/><img src='/website_version/static/src/img/GA/GA_authorize.png' class='analytics_img_tuto' />  
+                                    <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_authorize.png' class='analytics_img_tuto' />  
                                 </li>
                                 <a href="#" class="oe_link">Return at Top</a>                                             
                             </ul>                                
@@ -95,4 +95,4 @@
             </field>
         </record>
     </data>
-</openerp>
+</odoo>

@@ -1,23 +1,7 @@
-# -*- coding: utf-8 -*-
-##############################################################################
-#
-# Authors: Odoo S.A., Nicolas Petit (Clouder)
-# Copyright 2016, TODAY Odoo S.A. Clouder SASU
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Lesser General Public License as published by
-# the Free Software Foundation, either version 3 of the License,
-# or (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# GNU Lesser General Public License for more details.
-#
-# You should have received a copy of the GNU Lesser General Public License
-# along with this program. If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# -*- coding: utf-8 -*-#
+# © 2016 Nicolas Petit <nicolas.petit@vivre-d-internet.fr>
+# © 2016, TODAY Odoo S.A
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from datetime import datetime, timedelta
 import logging
@@ -50,7 +34,7 @@ class GoogleManagement(models.AbstractModel):
         gs_pool = self.env['google.service']
         website = self.env['website'].browse(website_id)[0]
         web_property_id = website.google_analytics_key
-        action_id = self.env['ir.model.data'].xmlid_to_res_id('website_version.action_website_view')
+        action_id = self.env['ir.model.data'].xmlid_to_res_id('website_version_ce.action_website_view')
         if not web_property_id:
             raise exceptions.RedirectWarning(
                 'Click on the website you want to make A/B testing and configure the Google Analytics Key and View ID',

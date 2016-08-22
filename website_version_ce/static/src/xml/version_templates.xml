@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
 
-    <t t-name="website_version.all_versions">
+    <t t-name="website_version_ce.all_versions">
         <t t-foreach="versions" t-as="item">
             <li class="o_version_choice" t-att-data-version_id="item.id">
                 <a href="#" data-action="delete_version" style="position: absolute; right: 0px;" class="pull-right"><i class="fa fa-trash-o fa-fw"></i></a>
@@ -31,25 +31,25 @@
         </t>
     </t>
 
-    <t t-name="website_version.all_options">    
+    <t t-name="website_version_ce.all_options">    
         <li class="o_second_choice">
             <a href="#" id="save_and_publish" data-action="save_and_publish" 
                 class="btn btn-link btn-xs o_version"><t t-esc="version"></t></a>
         </li>
     </t>
 
-    <t t-name="website_version.experiment_menu">
+    <t t-name="website_version_ce.experiment_menu">
         <li class="o_experiment"><a href="#" data-action="manage_experiment">Manage A/B tests</a></li>
         <li class="o_experiment"><a href="#" data-action="statistics">Statistics</a></li>
     </t>
 
-    <t t-name="website_version.GoogleAccess">
+    <t t-name="website_version_ce.GoogleAccess">
         <div id="CheckGoogleAccess" class="odoo_google_token" >
                 <button class="GoogleAccess"> Authorize google </button>
         </div>
     </t>
 
-    <t t-name="website_version.create_experiment">
+    <t t-name="website_version_ce.create_experiment">
         <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -129,28 +129,28 @@
                                             <li> Go to <a href='https://www.google.com/analytics/' target='_blank'>https://www.google.com/analytics/</a>
                                             and connect you.
                                                 <br/><br/><img src=
-                                                '/website_version/static/src/img/GA/GA_login.png'
+                                                '/website_version_ce/static/src/img/GA/GA_login.png'
                                                 class='analytics_img_tuto'/>
                                             </li>
                                             <li>
                                                 Click on <b>"Admin"</b>.
-                                                <br/><br/><img src='/website_version/static/src/img/GA/GA_admin.png' class='analytics_img_tuto'/>
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_admin.png' class='analytics_img_tuto'/>
                                             </li>
                                             <li>
                                                 Click on <b>"Tracking Code"</b>.
-                                                <br/><br/><img src='/website_version/static/src/img/GA/GA_tracking_code.png' class='analytics_img_tuto'/>   
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_tracking_code.png' class='analytics_img_tuto'/>   
                                             </li>
                                             <li>
                                                 Copy the <b>"Tracking ID"</b> and paste it in the field Google Analytics key.
-                                                <br/><br/><img src='/website_version/static/src/img/GA/GA_tracking_id.png' class='analytics_img_tuto'/>   
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_tracking_id.png' class='analytics_img_tuto'/>   
                                             </li>
                                             <li>
                                                 Click on <b>"Admin"</b> and click on <b>"View Settings"</b>.
-                                                <br/><br/><img src='/website_version/static/src/img/GA/GA_view_settings.png' class='analytics_img_tuto'/>  
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_view_settings.png' class='analytics_img_tuto'/>  
                                             </li>
                                             <li>
                                                 Copy the <b>"View ID"</b> and paste it in the field View ID.
-                                                <br/><br/><img src='/website_version/static/src/img/GA/GA_view_id.png' class='analytics_img_tuto'/>  
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GA/GA_view_id.png' class='analytics_img_tuto'/>  
                                             </li>
                                         </ul> 
                                     </div>
@@ -185,36 +185,36 @@
                                             <li> Connect on your google account and go to <a href='https://console.developers.google.com' target='_blank'>https://console.developers.google.com</a> </li>
                                             <li>
                                                 Click on <b>"Create Project"</b> and enter a project name.
-                                                <br/><br/><img src='/website_version/static/src/img/GC/GC_create_project.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_create_project.png' 
                                                 class='analytics_img_tuto'/>
-                                                <br/><br/><img src='/website_version/static/src/img/GC/GC_new_project.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_new_project.png' 
                                                 class='analytics_img_tuto'/> 
                                             </li>
                                             <li> In the menu on left side, select the sub menu APIs (from menu APIs and auth) and activate <b>"Analytics API"</b> by clicking on button "OFF".
                                                 <br/> When it's done, check that the button of <b>"Calendar API"</b> is well in green and with text "ON"
-                                                <br/><br/><img src='/website_version/static/src/img/GC/GC_API.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_API.png' 
                                                 class='analytics_img_tuto'/>
-                                                <br/><br/><img src='/website_version/static/src/img/GC/GC_off_api.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_off_api.png' 
                                                 class='analytics_img_tuto'/>
-                                                <br/><br/><img src='/website_version/static/src/img/GC/GC_on_api.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_on_api.png' 
                                                 class='analytics_img_tuto'/>
                                             </li> 
                                             <li>
                                                 In the menu on left side, select the sub menu <b>'Credentials'</b> (from menu APIs and auth) and click on button <b>'Create New Client ID'</b>
-                                                <br/><br/><img src='/website_version/static/src/img/GC/GC_credentials.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_credentials.png' 
                                                 class='analytics_img_tuto'/>
-                                                <br/><br/><img src='/website_version/static/src/img/GC/GC_create_new_client_id.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_create_new_client_id.png' 
                                                 class='analytics_img_tuto'/>
                                             </li>
                                             <li> Fill in the Name of application and check that the platform is well on <b>'Web Application'</b>.<br/>
                                                 <br/> You should now configure the allowed pages on which you will be redirected. To do it, you need to complete the field <b>"Redirect RI"</b>
                                                 and set as value  (your own domain followed by <i>"/google_account/authentication"</i>) :
                                                 <br/> You can now click on <b>'Create Client ID'</b>
-                                                <br/><br/><img src='/website_version/static/src/img/GC/GC_client_id.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_client_id.png' 
                                                 class='analytics_img_tuto'/>
                                             </li> 
                                             <li>Once done, you will have the both informations (<b>Client ID</b> and <b>Client Secret</b>) that you need to insert in the 2 fields below !
-                                                <br/><br/><img src='/website_version/static/src/img/GC/GC_copy.png' 
+                                                <br/><br/><img src='/website_version_ce/static/src/img/GC/GC_copy.png' 
                                                 class='analytics_img_tuto'/>
                                             </li>
                                         </ul>
@@ -288,7 +288,7 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </t>
-    <t t-name="website_version.message">
+    <t t-name="website_version_ce.message">
         <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -303,7 +303,7 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </t>
-    <t t-name="website_version.dialogue">
+    <t t-name="website_version_ce.dialogue">
         <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -322,7 +322,7 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </t>
-    <t t-name="website_version.diff">
+    <t t-name="website_version_ce.diff">
         <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -353,7 +353,7 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </t>
-    <t t-name="website_version.delete_message">
+    <t t-name="website_version_ce.delete_message">
         <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -371,7 +371,7 @@
         </div><!-- /.modal -->
     </t>
 
-    <t t-name="website_version.publish">
+    <t t-name="website_version_ce.publish">
         <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -388,7 +388,7 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </t>
-    <t t-name="website_version.publish_message">
+    <t t-name="website_version_ce.publish_message">
         <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -433,7 +433,7 @@
           </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </t>
-    <t t-name="website_version.new_version">
+    <t t-name="website_version_ce.new_version">
         <div class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">

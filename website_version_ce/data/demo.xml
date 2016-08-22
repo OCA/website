@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
 
-        <record id="default_1" model="website_version.version">
+        <record id="default_1" model="website_version_ce.version">
             <field name="name">Default_1</field>
             <field name="website_id" ref="website.default_website"/>
         </record>
 
-        <record id="default_2" model="website_version.version">
+        <record id="default_2" model="website_version_ce.version">
             <field name="name">Default_2</field>
             <field name="website_id" ref="website.website2"/>
         </record>
 
-        <record id="version_localhost" model="website_version.version">
+        <record id="version_localhost" model="website_version_ce.version">
             <field name="name">version localhost</field>
             <field name="website_id" ref="website.default_website"/>
         </record>
 
-        <record id="version_0_0_0_0" model="website_version.version">
+        <record id="version_0_0_0_0" model="website_version_ce.version">
             <field name="name">version 0.0.0.0</field>
             <field name="website_id" ref="website.website2"/>
         </record>
@@ -155,4 +155,4 @@
         </record>
 
     </data>
-</openerp>
+</odoo>
