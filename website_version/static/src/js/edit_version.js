@@ -26,6 +26,7 @@ editor.Class.include({
                     wizardA.modal("hide");
                     ajax.jsonRpc( '/website_version/create_version', 'call', { 'name': version_name, 'version_id': 0}).then(function (result) {
                         $('html').data('version_id', result);
+                        $('#version-menu-button').data('version_id', result);
                         var wizard = $(qweb.render("website_version.dialogue",{message:_.str.sprintf("You are now working on version: %s.", version_name),
                                                                                    dialogue:_.str.sprintf("If you edit this page or others, all changes will be recorded in the version. It will not be visible by visitors until you publish the version.")}));
                         wizard.appendTo($('body')).modal({"keyboard" :true});

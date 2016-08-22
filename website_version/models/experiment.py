@@ -1,4 +1,23 @@
 # -*- coding: utf-8 -*-
+##############################################################################
+#
+# Authors: Odoo S.A., Nicolas Petit (Clouder)
+# Copyright 2016, TODAY Odoo S.A. Clouder SASU
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation, either version 3 of the License,
+# or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
 
 from openerp.exceptions import Warning
 from openerp import models, fields, api
@@ -10,7 +29,7 @@ OVERLAP_EXPERIMENT = 1
 CREATE_EXPERIMENT = 0
 
 
-class Experiment_version(models.Model):
+class ExperimentVersion(models.Model):
     """ Allow to define the versions contained in an experiment.
     The frequency is a ponderation to determine the probability to visit a version in an experiment.
     The googe_index is the index of a version in an experiment, used to send data to Google Analytics.
@@ -20,7 +39,12 @@ class Experiment_version(models.Model):
     _rec_name = "version_id"
 
     version_id = fields.Many2one('website_version.version', string="Version", required=True, ondelete='cascade')
-    experiment_id = fields.Many2one('website_version.experiment', string="Experiment", required=True, ondelete='cascade')
+    experiment_id = fields.Many2one(
+        'website_version.experiment',
+        string="Experiment",
+        required=True,
+        ondelete='cascade'
+    )
     frequency = fields.Selection([('10', 'Less'), ('50', 'Medium'), ('80', 'More')], string='Frequency', default='50')
     google_index = fields.Integer(string='Google index')
 
@@ -46,12 +70,19 @@ class Experiment(models.Model):
     @api.multi
     @api.constrains('state')
     def _check_view(self):
-        #No overlap for running experiments
+        # No overlap for running experiments
         for exp in self:
             if exp.state == 'running':
                 for exp_ver in exp.experiment_version_ids:
-                    if exp_ver.search([('version_id.view_ids.key', 'in', [v.key for v in exp_ver.version_id.view_ids]), ('experiment_id', '!=', exp_ver.experiment_id.id), ('experiment_id.website_id', '=', exp_ver.experiment_id.website_id.id), ('experiment_id.state', '=', 'running')]):
-                        raise ValidationError('This experiment contains a view which is already used in another running experience')
+                    if exp_ver.search([
+                        ('version_id.view_ids.key', 'in', [v.key for v in exp_ver.version_id.view_ids]),
+                        ('experiment_id', '!=', exp_ver.experiment_id.id),
+                        ('experiment_id.website_id', '=', exp_ver.experiment_id.website_id.id),
+                        ('experiment_id.state', '=', 'running')
+                    ]):
+                        raise ValidationError(
+                            'This experiment contains a view which is already used in another running experience'
+                        )
         return True
 
     @api.multi
@@ -62,7 +93,8 @@ class Experiment(models.Model):
                 if not exp_ver.version_id.website_id.id == exp.website_id.id:
                     raise ValidationError('This experiment must have versions which are in the same website')
 
-    def read_group(self, cr, uid, domain, fields, groupby, offset=0, limit=None, context=None, orderby=False, lazy=True):
+    def read_group(self, cr, uid, domain, fields, groupby,
+                   offset=0, limit=None, context=None, orderby=False, lazy=True):
         """ Override read_group to always display all states. """
         if groupby and groupby[0] == "state":
             # Default result structure
@@ -75,7 +107,9 @@ class Experiment(models.Model):
                 'state_count': 0,
             } for state_value, state_name in states]
             # Get standard results
-            read_group_res = super(Experiment, self).read_group(cr, uid, domain, fields, groupby, offset=offset, limit=limit, context=context, orderby=orderby)
+            read_group_res = super(Experiment, self).read_group(cr, uid, domain, fields, groupby,
+                                                                offset=offset, limit=limit, context=context,
+                                                                orderby=orderby, lazy=lazy)
             # Update standard results with default results
             result = []
             for state_value, state_name in states:
@@ -86,7 +120,9 @@ class Experiment(models.Model):
                 result.append(res[0])
             return result
         else:
-            return super(Experiment, self).read_group(cr, uid, domain, fields, groupby, offset=offset, limit=limit, context=context, orderby=orderby)
+            return super(Experiment, self).read_group(cr, uid, domain, fields, groupby,
+                                                      offset=offset, limit=limit, context=context,
+                                                      orderby=orderby, lazy=lazy)
 
     @api.one
     def _get_version_number(self):
@@ -94,9 +130,19 @@ class Experiment(models.Model):
             exp.version_number = len(exp.experiment_version_ids) + 1
 
     name = fields.Char(string="Title", required=True)
-    experiment_version_ids = fields.One2many('website_version.experiment.version', 'experiment_id', string="Experiment Version")
+    experiment_version_ids = fields.One2many(
+        'website_version.experiment.version',
+        'experiment_id',
+        string="Experiment Version"
+    )
     website_id = fields.Many2one('website', string="Website", required=True)
-    state = fields.Selection([('running', 'Running'), ('paused', 'Paused'), ('ended', 'Ended')], 'Status', required=True, copy=False, track_visibility='onchange', default='running')
+    state = fields.Selection(
+        [
+            ('running', 'Running'),
+            ('paused', 'Paused'),
+            ('ended', 'Ended')
+        ],
+        'Status', required=True, copy=False, track_visibility='onchange', default='running')
     goal_id = fields.Many2one('website_version.goals', string="Objective", required=True)
     color = fields.Integer('Color Index')
     version_number = fields.Integer(compute=_get_version_number, string='Version Number')
@@ -115,7 +161,7 @@ class Experiment(models.Model):
         for version in version_list:
             if version[0] == 0:
                 name = self.env['website_version.version'].browse([version[2]['version_id']])[0].name
-                #We must give a URL for each version in the experiment
+                # We must give a URL for each version in the experiment
                 exp['variations'].append({'name': name, 'url': 'http://localhost/' + name})
             else:
                 raise Warning(_("The experiment you try to create has a bad format."))
@@ -131,15 +177,18 @@ class Experiment(models.Model):
             if state and exp.state == 'ended':
                 raise Warning(_("You cannot modify an ended experiment."))
             elif state == 'ended':
-                #google_data is the data to send to Googe
+                # google_data is the data to send to Googe
                 google_data = {
                     'name': exp.name,
                     'status': state,
                     'variations': [{'name': 'master', 'url': 'http://localhost/master'}],
                 }
                 for exp_v in exp.experiment_version_ids:
-                    google_data['variations'].append({'name': exp_v.version_id.name, 'url': 'http://localhost/'+exp_v.version_id.name})
-                #to check the constraints before to write on the google analytics account
+                    google_data['variations'].append({
+                        'name': exp_v.version_id.name,
+                        'url': 'http://localhost/'+exp_v.version_id.name
+                    })
+                # to check the constraints before to write on the google analytics account
                 self.env['google.management'].update_an_experiment(google_data, exp.google_id, exp.website_id.id)
         return super(Experiment, self).write(vals)
 
@@ -164,7 +213,8 @@ class Experiment(models.Model):
     def check_no_overlap(self, version_ids):
         if self.search_count(['|', ('state', '=', 'running'), ('state', '=', 'paused')]) >= 24:
             return {'existing': TOO_MUCH_EXPERIMENTS, 'name': ""}
-        #Check if version_ids don't overlap with running experiments and return the name of the experiment if there 's an overlap
+
+        # Check if version_ids don't overlap with running experiments
         version_keys = set([v['key'] for v in self.env['ir.ui.view'].search_read([('version_id', 'in', version_ids)], ['key'])])
         exp_mod = self.env['website_version.experiment']
         exps = exp_mod.search([('state', '=', 'running'), ('website_id', '=', self.env.context.get('website_id'))])
@@ -172,5 +222,6 @@ class Experiment(models.Model):
             for exp_ver in exp.experiment_version_ids:
                 for view in exp_ver.version_id.view_ids:
                     if view.key in version_keys:
+                        # return the name of the experiment if there 's an overlap
                         return {'existing': OVERLAP_EXPERIMENT, 'name': exp.name}
         return {'existing': CREATE_EXPERIMENT, 'name': ""}

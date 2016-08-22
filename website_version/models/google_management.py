@@ -1,4 +1,24 @@
 # -*- coding: utf-8 -*-
+##############################################################################
+#
+# Authors: Odoo S.A., Nicolas Petit (Clouder)
+# Copyright 2016, TODAY Odoo S.A. Clouder SASU
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation, either version 3 of the License,
+# or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+
 from datetime import datetime, timedelta
 import logging
 from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
@@ -10,14 +30,14 @@ import simplejson
 _logger = logging.getLogger(__name__)
 
 
-class google_management(models.AbstractModel):
+class GoogleManagement(models.AbstractModel):
 
     STR_SERVICE = 'management'
 
     _name = 'google.%s' % STR_SERVICE
 
     @api.model
-    def generate_data(self, experiment, isCreating=False):
+    def generate_data(self, experiment):
         
         return {
             'name': experiment['name'],
@@ -29,15 +49,28 @@ class google_management(models.AbstractModel):
     def create_an_experiment(self, data, website_id):
         gs_pool = self.env['google.service']
         website = self.env['website'].browse(website_id)[0]
-        webPropertyId = website.google_analytics_key
+        web_property_id = website.google_analytics_key
         action_id = self.env['ir.model.data'].xmlid_to_res_id('website_version.action_website_view')
-        if not webPropertyId:
-            raise exceptions.RedirectWarning('Click on the website you want to make A/B testing and configure the Google Analytics Key and View ID', action_id, 'go to the websites menu')
-        accountId = webPropertyId.split('-')[1]
-        profileId = website.google_analytics_view_id
-        if not profileId:
-            raise exceptions.RedirectWarning('Click on the website you want to make A/B testing and configure the Google Analytics Key and View ID', action_id, 'go to the websites menu')
-        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/experiments?access_token=%s' % (accountId, webPropertyId, profileId, self.get_token())
+        if not web_property_id:
+            raise exceptions.RedirectWarning(
+                'Click on the website you want to make A/B testing and configure the Google Analytics Key and View ID',
+                action_id,
+                'go to the websites menu'
+            )
+        account_id = web_property_id.split('-')[1]
+        profile_id = website.google_analytics_view_id
+        if not profile_id:
+            raise exceptions.RedirectWarning(
+                'Click on the website you want to make A/B testing and configure the Google Analytics Key and View ID',
+                action_id,
+                'go to the websites menu'
+            )
+        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/experiments?access_token=%s' % (
+            account_id,
+            web_property_id,
+            profile_id,
+            self.get_token()
+        )
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         data_json = simplejson.dumps(data)
         try:
@@ -52,11 +85,17 @@ class google_management(models.AbstractModel):
     def update_an_experiment(self, data, google_id, website_id):
         gs_pool = self.env['google.service']
         website = self.env['website'].browse(website_id)[0]
-        webPropertyId = website.google_analytics_key
-        accountId = webPropertyId.split('-')[1]
-        profileId = website.google_analytics_view_id
+        web_property_id = website.google_analytics_key
+        account_id = web_property_id.split('-')[1]
+        profile_id = website.google_analytics_view_id
 
-        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/experiments/%s?access_token=%s' % (accountId, webPropertyId, profileId, google_id, self.get_token())
+        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/experiments/%s?access_token=%s' % (
+            account_id,
+            web_property_id,
+            profile_id,
+            google_id,
+            self.get_token()
+        )
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
         data_json = simplejson.dumps(data)
 
@@ -66,25 +105,30 @@ class google_management(models.AbstractModel):
     def get_experiment_info(self, google_id, website_id):
         gs_pool = self.env['google.service']
         website = self.env['website'].browse(website_id)[0]
-        webPropertyId = website.google_analytics_key
-        accountId = webPropertyId.split('-')[1]
-        profileId = website.google_analytics_view_id
+        web_property_id = website.google_analytics_key
+        account_id = web_property_id.split('-')[1]
+        profile_id = website.google_analytics_view_id
 
         params = {
             'access_token': self.get_token(),
         }
         
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/experiments/%s' % (accountId, webPropertyId, profileId, google_id)
+        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/experiments/%s' % (
+            account_id,
+            web_property_id,
+            profile_id,
+            google_id
+        )
         return gs_pool._do_request(url, params, headers, type='GET')
 
     @api.model
     def get_goal_info(self, website_id):
         gs_pool = self.env['google.service']
         website = self.env['website'].browse(website_id)[0]
-        webPropertyId = website.google_analytics_key
-        accountId = webPropertyId.split('-')[1]
-        profileId = website.google_analytics_view_id
+        web_property_id = website.google_analytics_key
+        account_id = web_property_id.split('-')[1]
+        profile_id = website.google_analytics_view_id
 
         params = {
             'access_token': self.get_token(),
@@ -92,21 +136,30 @@ class google_management(models.AbstractModel):
         
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
 
-        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/goals' % (accountId, webPropertyId, profileId)
+        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/goals' % (
+            account_id,
+            web_property_id,
+            profile_id
+        )
         return gs_pool._do_request(url, params, headers, type='GET')
 
     @api.model
     def delete_an_experiment(self, google_id, website_id):
         gs_pool = self.env['google.service']
         website = self.env['website'].browse(website_id)[0]
-        webPropertyId = website.google_analytics_key
-        accountId = webPropertyId.split('-')[1]
-        profileId = website.google_analytics_view_id
+        web_property_id = website.google_analytics_key
+        account_id = web_property_id.split('-')[1]
+        profile_id = website.google_analytics_view_id
         params = {
             'access_token': self.get_token()
         }
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/experiments/%s' % (accountId, webPropertyId, profileId, google_id)
+        url = '/analytics/v3/management/accounts/%s/webproperties/%s/profiles/%s/experiments/%s' % (
+            account_id,
+            web_property_id,
+            profile_id,
+            google_id
+        )
 
         return gs_pool._do_request(url, params, headers, type='DELETE')
 
@@ -117,7 +170,8 @@ class google_management(models.AbstractModel):
         token = icp.get_param('google_%s_token' % self.STR_SERVICE)
         if not (validity and token):
             raise Warning(_("You must configure your account."))
-        if datetime.strptime(validity.split('.')[0], DEFAULT_SERVER_DATETIME_FORMAT) < (datetime.now() + timedelta(minutes=3)):
+        if datetime.strptime(validity.split('.')[0], DEFAULT_SERVER_DATETIME_FORMAT) < \
+                (datetime.now() + timedelta(minutes=3)):
             token = self.do_refresh_token()
         return token
 
@@ -129,7 +183,9 @@ class google_management(models.AbstractModel):
         rtoken = icp.get_param('google_%s_rtoken' % self.STR_SERVICE)
         all_token = gs_pool._refresh_google_token_json(rtoken, self.STR_SERVICE)
 
-        icp.set_param('google_%s_token_validity' % self.STR_SERVICE, datetime.now() + timedelta(seconds=all_token.get('expires_in')))
+        icp.set_param('google_%s_token_validity' %
+                      self.STR_SERVICE, datetime.now() + timedelta(seconds=all_token.get('expires_in'))
+                      )
         icp.set_param('google_%s_token' % self.STR_SERVICE, all_token.get('access_token'))
         return all_token.get('access_token')
 
@@ -139,7 +195,9 @@ class google_management(models.AbstractModel):
         
     @api.model
     def authorize_google_uri(self, from_url='http://www.odoo.com', context=None):
-        url = self.pool['google.service']._get_authorize_uri(self.env.cr, self.env.uid, from_url, self.STR_SERVICE, scope=self.get_management_scope(), context=self.env.context)
+        url = self.pool['google.service']._get_authorize_uri(self.env.cr, self.env.uid, from_url, self.STR_SERVICE,
+                                                             scope=self.get_management_scope(),
+                                                             context=self.env.context)
         return url
 
     # convert code from authorize into token
@@ -147,11 +205,14 @@ class google_management(models.AbstractModel):
     def set_all_tokens(self, authorization_code):
         gs_pool = self.env['google.service']
         all_token = gs_pool._get_google_token_json(authorization_code, self.STR_SERVICE)
-        vals = {}
+        vals = dict()
         vals['google_%s_rtoken' % self.STR_SERVICE] = all_token.get('refresh_token')
-        vals['google_%s_token_validity' % self.STR_SERVICE] = datetime.now() + timedelta(seconds=all_token.get('expires_in'))
+        vals['google_%s_token_validity' % self.STR_SERVICE] = datetime.now() + \
+            timedelta(seconds=all_token.get('expires_in'))
         vals['google_%s_token' % self.STR_SERVICE] = all_token.get('access_token')
         icp = self.env['ir.config_parameter'].sudo()
         icp.set_param('google_%s_rtoken' % self.STR_SERVICE, all_token.get('refresh_token'))
-        icp.set_param('google_%s_token_validity' % self.STR_SERVICE, datetime.now() + timedelta(seconds=all_token.get('expires_in')))
+        icp.set_param('google_%s_token_validity' %
+                      self.STR_SERVICE, datetime.now() + timedelta(seconds=all_token.get('expires_in'))
+                      )
         icp.set_param('google_%s_token' % self.STR_SERVICE, all_token.get('access_token'))
