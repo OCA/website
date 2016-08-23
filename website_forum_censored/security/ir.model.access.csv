@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_forum_censored_phrase_everyone,access_forum_censored_phrase_everyone,model_forum_censored_phrase,,1,0,0,0
+access_forum_censored_phrase_configuration,access_forum_censored_phrase_configuration,model_forum_censored_phrase,base.group_configuration,1,1,1,1
