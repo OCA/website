@@ -24,8 +24,10 @@
                         <t t-foreach="random_tags" t-as="nav_tag">
                             <li t-att-class="tag and tag.id == nav_tag.id and 'active' or None" 
                                 t-attf-style="display: inline-block; font-size: {{nav_tag.font_size_in_cloud}}px;">
-                                <a t-attf-href="#{blog_url(tag=nav_tag)}"><span t-attf-style="color:{{nav_tag.random_color}};" t-field="nav_tag.name"/>(<t t-esc="nav_tag.tag_cardinality"/>)</a>
-
+                                <a t-attf-href="#{blog_url(tag=nav_tag)}">
+                                  <span t-attf-style="color:{{nav_tag.random_color}};" t-field="nav_tag.name"/>
+                                  (<t t-attf-style="color:{{nav_tag.random_color}};" t-esc="nav_tag.tag_cardinality"/>)
+                               </a>
                             </li>
                         </t>
                     </ul>
