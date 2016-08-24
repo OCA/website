@@ -48,6 +48,16 @@ class BlogTag(models.Model):
         for this in self:
             this.tag_cardinality = len(this.post_ids.ids)
 
+    @api.multi
+    def compute_placement(self):
+        for this in self:
+            this.random_placement = random.choice([x for x in range(0, 4000)])
+
+    @api.multi
+    def compute_color(self):
+        for this in self:
+            this.random_color = random.choice(['#7b7655', '#000000', '#FF0000'])
+
     tag_cardinality = fields.Integer(
             string="In how many posts is the tag used", 
             compute=get_tag_cardinality
@@ -57,17 +67,18 @@ class BlogTag(models.Model):
         string="Font Size of tag in cloud",
         help="size of tag font from 8 to 24 px relative"
              "to the most used tag, that will be allways displayed at 24px",
-        compute=get_font_size
+        compute=get_font_size,
+        
     )
     
     random_placement = fields.Integer(
         string="Random Placement of tag",
-        compute=lambda x: random.choice([x for x in range(0, 4000)])
+        compute=compute_placement,      
     )
 
     random_color = fields.Char(
         string="random color of tag in cloud",
-        compute=lambda x: random.choice(['#7b7655', '#000000', '#FF0000'])
+        compute=compute_color, 
     )
 
     def randomize_recordset(self):
