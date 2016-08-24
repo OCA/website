@@ -10,9 +10,7 @@
         </template>
 
 
-        <template id="opt_blog_rc_history_group_oldchives"                                                                   
-            inherit_id="website_blog.opt_blog_rc_history" active="False" 
-            customize_show="True">                                  
+        <template id="opt_blog_rc_history_group_old_archive"                                                        inherit_id="website_blog.opt_blog_rc_history">                                  
             <xpath expr="//section[@class='mt32']" position="replace">                                                  
                 <section class="mt32">                                                                                       
                     <h4>Archives grouped</h4>                                                                                            
