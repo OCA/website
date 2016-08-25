@@ -2,21 +2,14 @@
 <openerp>
     <data>
 
-        <template id="assets_backend" name="website_blog_group_old_archives assets" inherit_id="web.assets_backend">
-            <xpath expr="." position="inside">
-                <script type="text/javascript" src="/website_blog_group_old_archives/static/src/js/website_blog_group_old_archives.js"></script>
-                <link rel="stylesheet" href="/website_blog_group_old_archives/static/src/css/website_blog_group_old_archives.css"/>
-            </xpath>
-        </template>
 
 
         <template id="opt_blog_rc_history_group_old_archive"                                                        inherit_id="website_blog.opt_blog_rc_history">                                  
             <xpath expr="//section[@class='mt32']" position="replace">                                                  
                 <section class="mt32">                                                                                       
-                    <h4>Archives grouped</h4>                                                                                            
+                    <h4>Archives</h4>                                                                                            
                     <ul class="nav nav-pills nav-stacked">                                                                       
-                        <t t-foreach="nav_list" t-as="months">         
-                            <t t-esc="nav_list" />
+                        <t t-foreach="nav_list_old_grouped" t-as="months">         
                             <li t-att-class="months['date_begin'] == date and 'active' or None">                                     
                                 <a t-ignore="True" 
                                     t-attf-href="#{blog_url(date_begin=months['date_begin'], date_end=months['date_end'])}">

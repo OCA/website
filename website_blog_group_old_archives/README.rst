@@ -11,11 +11,6 @@ by year, while the entries of the current year are grouped by month.
 This module allows for a shorter archive list for blogs with many years of archives.
 
 
-Images
-------
-
-* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
-
 Contributors
 ------------
 
