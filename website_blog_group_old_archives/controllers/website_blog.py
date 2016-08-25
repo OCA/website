@@ -18,8 +18,6 @@ class website_blog(WebsiteBlog):
             datetime.date(datetime.date.today().year, 1, 1),
             tools.DEFAULT_SERVER_DATE_FORMAT
         )
-        import pudb
-        pudb.set_trace()
         old_groups = blog_post_obj.read_group(
             request.cr, request.uid, 
             [['create_date', '<', beginning_of_year]],
