@@ -71,8 +71,6 @@ class website_blog(WebsiteBlog):
         result = super(website_blog, self).blog(
                 blog=blog, tag=tag, page=page, **opt
             )
-        import pudb
-        pudb.set_trace()
         result.qcontext['nav_list_old_grouped'] = self.nav_list_grouped()['old_groups']
         result.qcontext['nav_list_new_grouped'] = self.nav_list_grouped()['new_groups']
 	return result
