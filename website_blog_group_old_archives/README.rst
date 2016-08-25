@@ -10,6 +10,11 @@ Changes layout of archive area of blog. All entries of previous years are groupe
 by year, while the entries of the current year are grouped by month.
 This module allows for a shorter archive list for blogs with many years of archives.
 
+Archive layout before and after module installation:
+
+.. figure:: static/description/before_and_after.jpg
+   :scale: 80 %
+   :alt: Archive layout before and after
 
 Contributors
 ------------
