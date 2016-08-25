@@ -12,8 +12,8 @@ This module allows for a shorter archive list for blogs with many years of archi
 
 Archive layout before and after module installation:
 
-.. figure:: static/description/before_and_after.jpg
-   :scale: 80 %
+.. figure:: static/description/before_and_after.png
+   :scale: 50 %
    :alt: Archive layout before and after
 
 Contributors
