@@ -6,11 +6,11 @@
             <field name="model">res.company</field>
             <field name="inherit_id" ref="base.view_company_form"></field>
             <field name="arch" type="xml">
-                <page string="Configuration" position="inside">
+                <xpath expr="//page[@name='configuration']/group" position="inside">
                     <group string="Website logo">
                         <field name="website_logo" widget="image" nolabel="1"/>
                     </group>
-                </page>
+                </xpath>
             </field>
         </record>
     </data>
