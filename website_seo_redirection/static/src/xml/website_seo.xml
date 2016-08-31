@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<templates>
+    <t t-extend="website.seo_configuration">
+        <t t-jquery=".modal-body">
+            <section>
+                <h3 class="page-header">
+                    Change the URL
+                </h3>
+                <p>
+                    If you need a special URL for this page, set it here.
+                </p>
+                <div class="form-group">
+                    <label class="control-label">
+                        Destination URL for this page:
+                        <input
+                            type="url"
+                            class="form-control js_website_seo_redirection"
+                            name="destination"
+                            title="URL without domain name, all lower case, hyphenated."
+                            placeholder="E.g.: /some/good-url"
+                            pattern="^/[a-z0-9/-]+$"/>
+                    </label>
+                </div>
+            </section>
+        </t>
+    </t>
+</templates>

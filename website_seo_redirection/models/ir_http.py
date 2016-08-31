@@ -4,6 +4,7 @@
 
 from openerp import models
 from openerp.http import request
+
 from ..exceptions import NoOriginError, NoRedirectionError
 
 

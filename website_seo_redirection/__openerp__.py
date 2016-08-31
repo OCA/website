@@ -4,7 +4,7 @@
 {
     "name": "Website SEO Redirection",
     "summary": "Redirect any controller to the URL of your dreams",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.1.0",
     "category": "Website",
     "website": "https://tecnativa.com/",
     "author": "Tecnativa, Odoo Community Association (OCA)",
