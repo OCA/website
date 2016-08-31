@@ -34,9 +34,11 @@ class WebsiteCase(HttpCase):
                 "args": [self.env["website"].get_current_website().id, query],
             }
         }
-        response = self.url_open("/web/dataset/call", json.dumps(params))
-        result = [page["loc"] for page in json.load(response)["result"]]
-        _logger.debug(result)
+        response = json.load(
+            self.url_open("/web/dataset/call", json.dumps(params)))
+        _logger.info("JSON Response:\n%s", response)
+        result = [page["loc"] for page in response["result"]]
+        _logger.info("URLs found:\n%s", result)
         return result
 
     def test_url_found_no_query(self):
