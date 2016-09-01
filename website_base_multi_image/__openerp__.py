@@ -12,6 +12,7 @@
         'base_multi_image',
     ],
     'data': [
+        'security/ir.model.access.csv',
         'views/assets.xml',
         'views/layout.xml',
     ],
