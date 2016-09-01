@@ -52,6 +52,8 @@ original URL untouched.
 Known issues / Roadmap
 ======================
 
+* Redirections are cached. If you hit one once, and then change it, you will
+  mostly have to clear your browser's cache to avoid hitting a 404 error.
 * Make it multiwebsite-compatible.
 
 Notes for migration to v10:
