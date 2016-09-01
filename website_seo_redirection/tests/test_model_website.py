@@ -43,7 +43,7 @@ class WebsiteCase(HttpCase):
 
     def test_url_found_no_query(self):
         """``/seo/sample`` should be found."""
-        found = self.search_page(False)
+        found = self.search_page("")
         self.assertIn("/seo/sample", found)
         self.assertIn("/seo/sample/no-relocate", found)
         self.assertIn("/page/website_seo_redirection.sample_page", found)
