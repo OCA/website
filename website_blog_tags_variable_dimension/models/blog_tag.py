@@ -8,8 +8,8 @@ class BlogTag(models.Model):
     _inherit = 'blog.tag'
 
     # doing it for all blogs. need to make it per-blog.
-    min_font = 11.0
-    max_font = 24.0
+    min_font = 10.0
+    max_font = 19.0
 
     @api.multi
     def get_blog_most_used_tag_cardinality(self):
