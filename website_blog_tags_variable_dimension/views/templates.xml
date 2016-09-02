@@ -26,7 +26,9 @@
                                 t-attf-style="display: inline-block; font-size: {{nav_tag.font_size_in_cloud}}px;">
                                 <a t-attf-href="#{blog_url(tag=nav_tag)}">
                                   <span t-attf-style="color:{{nav_tag.random_color}};" t-field="nav_tag.name"/>
-                                  (<span t-attf-style="color:{{nav_tag.random_color}};" t-esc="nav_tag.tag_cardinality"/>)
+                                  <span t-attf-style="color:{{nav_tag.random_color}};"> (</span>
+                                  <span t-attf-style="color:{{nav_tag.random_color}};" t-esc="nav_tag.tag_cardinality"/> 
+                                  <span t-attf-style="color:{{nav_tag.random_color}};"> )</span>
                                </a>
                             </li>
                         </t>

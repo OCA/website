@@ -56,7 +56,8 @@ class BlogTag(models.Model):
     @api.multi
     def compute_color(self):
         for this in self:
-            this.random_color = random.choice(['#7b7655', '#000000', '#FF0000'])
+            # green therp, darkyellow, blue.
+            this.random_color = random.choice(['#7b7655', '#F0E68C', '#4682B4'])
 
     tag_cardinality = fields.Integer(
             string="In how many posts is the tag used", 
