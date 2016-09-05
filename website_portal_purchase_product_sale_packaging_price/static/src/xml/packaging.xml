@@ -52,7 +52,7 @@
             </div>
             <div class="col-sm-5 mt4 mb4">
                 <label t-attf-for="packaging_#{packaging.id}_weight">
-                    Packaging weight
+                    Package weight
                 </label>
                 <div class="input-group">
                     <input t-attf-id="packaging_#{packaging.id}_weight"
