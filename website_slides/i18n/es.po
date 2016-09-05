@@ -529,7 +529,7 @@ msgstr "Seguidores"
 #. module: website_slides
 #: field:slide.channel,can_see_full:0
 msgid "Full Access"
-msgstr ""
+msgstr "Acceso completo"
 
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
