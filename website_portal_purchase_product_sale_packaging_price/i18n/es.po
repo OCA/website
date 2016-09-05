@@ -67,8 +67,8 @@ msgstr "Empaquetado y precios"
 #. openerp-web
 #: code:addons/website_portal_purchase_product_sale_packaging_price/static/src/xml/packaging.xml:54
 #, python-format
-msgid "Packaging weight (without products)"
-msgstr "Peso del empaquetado (sin productos)"
+msgid "Package weight"
+msgstr "Peso del paquete"
 
 #. module: website_portal_purchase_product_sale_packaging_price
 #. openerp-web
