@@ -9,7 +9,6 @@
     "category": "Website",
     "depends": [
         'website_blog',
-        'website_blog_layout_options',
     ],
     "data": [
         'views/templates.xml',
