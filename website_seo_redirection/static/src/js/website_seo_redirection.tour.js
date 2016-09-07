@@ -1,9 +1,7 @@
 /* © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
-
-
-"use strict";
 (function ($) {
+    "use strict";
     openerp.Tour.register({
         id: "website_seo_redirection",
         name: "Check SEO redirections functionality",

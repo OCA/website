@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
-
 <openerp>
 <data>
 
@@ -46,6 +45,12 @@
 <record id="sample_redirection" model="website.seo.redirection">
     <field name="origin">/page/website_seo_redirection.sample_page</field>
     <field name="destination">/seo/sample</field>
+</record>
+
+<record id="sample_redirection_no_relocate" model="website.seo.redirection">
+    <field name="origin">/seo/sample/no-relocate</field>
+    <field name="destination">/seo/sample</field>
+    <field name="relocate_controller" eval="False"/>
 </record>
 
 </data>
