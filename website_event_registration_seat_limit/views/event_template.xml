@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+
+        <template id="event_description_full" inherit_id="website_event_sale.event_description_full" name="Event's Ticket limit">
+            <xpath expr="//select[@class='form-control']" position="replace">
+                <select t-if="ticket.seats_available or not ticket.seats_max" t-attf-name="ticket-#{ ticket.id }" class="form-control">
+                    <t t-foreach="range(ticket.event_id.registration_seats_min, min(min(ticket.event_id.registration_seats_max,ticket.seats_available or 9) + 1, 10))" t-as="nb"><option t-esc="nb"/></t>
+                </select>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>
