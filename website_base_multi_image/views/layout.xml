@@ -14,9 +14,11 @@
         <div id="images_container" class="js_image_container row">
             <div class="col-md-6">
                 <label>Main Image</label>
-                <div id="main_image pull-left"
-                      t-field="images[:1].image_main"
-                      t-field-options='{"widget": "image", "class":"image_main"}'/>
+                <t t-if="images">
+                    <div id="main_image pull-left"
+                          t-field="images[:1].image_main"
+                          t-field-options='{"widget": "image", "class":"image_main"}'/>
+                </t>
                 <div class="form-group mt16">
                     <label class="custom-file-input image_upload">
                         <div class="btn btn-primary">
