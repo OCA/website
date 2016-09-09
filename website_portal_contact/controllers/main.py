@@ -157,6 +157,6 @@ class WebsiteAccount(PortalController):
            auth="user", website=True)
     def portal_my_contacts_disable(self, contact, redirect="/my/contacts"):
         """Disable a contact."""
-        _logger.debug("Disabilng %r", contact)
+        _logger.debug("Disabling %r", contact)
         contact.sudo().active = False
         return local_redirect(redirect)

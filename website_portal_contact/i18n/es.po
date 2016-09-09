@@ -46,7 +46,7 @@ msgstr "Editar contacto"
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
 msgid "Email"
-msgstr "Email"
+msgstr "Correo electrónico"
 
 #. module: website_portal_contact
 #: code:addons/website_portal_contact/controllers/main.py:89
