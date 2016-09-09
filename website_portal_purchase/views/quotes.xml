@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <template id="layout_quotes"
+              name="Quotes"
+              inherit_id="portal_layout"
+              customize_show="True"
+              active="True">
+        <xpath expr="//t[@name='supplier_menu']">
+            <li>
+                <a href="/my/purchase/quotes">Supplier Quotes</a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="home_quotes"
+              name="Quotes"
+              inherit_id="portal_my_home"
+              customize_show="True"
+              active="True">
+        <xpath expr="//t[@name='supplier_home']">
+            <h3 class="page-header">
+                <a href="/my/purchase/quotes">
+                    Your Supplier Quotes
+                    <small class="ml8">
+                        <t t-if="supplier_quotation_count">
+                            <span class='badge'>
+                                <t t-esc="supplier_quotation_count"/>
+                            </span>
+                        </t>
+                        <t t-if="not supplier_quotation_count">
+                            There are currently no supplier quotes for your account.
+                        </t>
+                    </small>
+                </a>
+            </h3>
+        </xpath>
+    </template>
+
+    <template id="portal_my_quotations"
+              name="My Supplier Quotations">
+        <t t-call="website_portal_purchase.order_list">
+            <t t-set="page_header">
+                Your Supplier Quotes
+            </t>
+            <t t-set="no_orders_msg">
+                There are currently no supplier quotes for your account.
+            </t>
+            <t t-set="order_title">
+                Quotation #
+            </t>
+        </t>
+    </template>
+</odoo>

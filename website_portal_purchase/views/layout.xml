@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <template id="portal_layout"
+              name="Supplier Documents In Menu"
+              inherit_id="website_portal_v10.portal_layout">
+        <xpath expr="//ul[contains(@class,'o_portal_submenu')]">
+            <t name="supplier_menu"/>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home"
+              name="Supplier Documents In Portal Home"
+              inherit_id="website_portal_v10.portal_my_home">
+        <xpath expr="//div[contains(@class,'o_my_home_content')]">
+            <t name="supplier_home"/>
+        </xpath>
+    </template>
+
+    <template id="order_list">
+        <t t-call="website_portal_v10.portal_layout">
+            <h3 class="page-header">
+                <t t-esc="page_header"/>
+            </h3>
+            <t t-if="not orders">
+                <p>
+                    <t t-esc="no_orders_msg"/>
+                </p>
+            </t>
+            <t t-if="orders">
+                <table class="table table-hover o_my_status_table">
+                    <thead>
+                        <tr class="active">
+                            <th><t t-esc="order_title"/></th>
+                            <th>Date</th>
+                            <th></th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <t t-foreach="orders" t-as="order">
+                        <tr>
+                            <td>
+                                <a t-attf-href="/my/purchase/orders/{{order.id}}?{{keep_query()}}">
+                                    <t t-esc="order.name"/>
+                                </a>
+                            </td>
+                            <td><span t-field="order.date_order"/></td>
+                            <td>
+                                <t t-if="order.invoice_status == 'invoiced'">
+                                    <span class="label label-info">
+                                        <i class="fa fa-fw fa-pencil-square-o"/>
+                                        Invoiced
+                                    </span>
+                                </t>
+                                <t t-if="order.state == 'done'">
+                                    <span class="label label-default">
+                                        <i class="fa fa-fw fa-check"/>
+                                        Done
+                                    </span>
+                                </t>
+                            </td>
+                            <td>
+                                <span t-field="order.amount_total"
+                                      t-field-options='{"widget": "monetary", "display_currency": "order.currency_id"}'/>
+                                </td>
+                        </tr>
+                    </t>
+                </table>
+                <div t-if="pager" class="o_portal_pager text-center">
+                    <t t-call="website.pager"/>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
