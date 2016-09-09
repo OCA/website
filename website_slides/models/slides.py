@@ -10,9 +10,10 @@ import urllib2
 from urlparse import urlparse
 
 from openerp import api, fields, models, SUPERUSER_ID, _
-from openerp.tools import image
 from openerp.exceptions import Warning
 from openerp.addons.website.models.website import slug
+
+from . import image
 
 
 class Channel(models.Model):
