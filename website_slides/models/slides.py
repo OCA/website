@@ -151,9 +151,10 @@ class Channel(models.Model):
                     INNER JOIN res_groups g on g.id = rg.group_id
                     INNER JOIN res_groups_users_rel u on g.id = u.gid and uid = %s
         """
-        op = operator == "=" and "inselect" or "not inselect"
+        op = operator == "=" and "in" or "not in"
+        self.env.cr.execute(req, (self._uid,))
         # don't use param named because orm will add other param (test_active, ...)
-        return [('id', op, (req, (self._uid)))]
+        return [('id', op, [row[0] for row in self.env.cr.fetchall()])]
 
     @api.one
     @api.depends('visibility', 'group_ids', 'upload_group_ids')
