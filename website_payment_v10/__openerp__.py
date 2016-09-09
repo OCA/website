@@ -8,6 +8,9 @@
     'category': 'Website',
     'summary': 'Payment: Website Integration',
     'version': '9.0.1.0.0',
+    'author': 'Odoo S.A.,'
+              'Tecnativa,'
+              'Odoo Community Association (OCA)',
     'depends': [
         'website_payment',
         'website_portal_v10',
