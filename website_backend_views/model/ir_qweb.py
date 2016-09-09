@@ -10,8 +10,8 @@ from lxml import etree
 from openerp import models, _
 
 
-class WebsiteQweb(models.Model):
-    _inherit = 'website.qweb'
+class IrQweb(models.Model):
+    _inherit = 'ir.qweb'
 
     def render_tag_website_backend_view(
             self, element, template_attributes, generated_attributes,
