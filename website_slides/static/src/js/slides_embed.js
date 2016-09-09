@@ -1,3 +1,4 @@
+// jshint ignore: start
 /*global $, _, PDFSlidesViewer*/
 
 /**
@@ -205,5 +206,3 @@ $(document).ready(function () {
         });
     }
 });
-
-

@@ -1,3 +1,4 @@
+// jshint ignore: start
 /*global $, openerp, _, PDFJS */
 $(document).ready(function () {
     "use strict";

@@ -1,3 +1,4 @@
+// jshint ignore: start
 /*global $, _, PDFJS */
 
 openerp.slides = function () {
@@ -228,5 +229,3 @@ return {
 };
 
 };
-
-
