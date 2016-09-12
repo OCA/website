@@ -1,0 +1,2 @@
+id,name,model_id:id,groups:id,domain_force,perm_read,perm_write,perm_create,perm_unlink
+rule_edit_own_contacts,Portal users can edit only their company’s contacts,base.model_res_partner,base.group_portal,"[(""id"", ""child_of"", user.commercial_partner_id.ids), (""type"", ""="", ""contact""), (""active"", ""="", True)]",1,1,1,0
