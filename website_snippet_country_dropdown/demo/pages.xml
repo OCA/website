@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+<template id="demo_page" page="True" name="Country dropdown snippet test">
+    <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty">
+            <section>
+                <div class="container readable mt32 mb32">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">This is a form</h1>
+                            <h3 class="text-muted text-center">
+                                Test here the country dropdown snippet behavior
+                            </h3>
+                            <form action="" class="form-horizontal">
+                                <t t-call="website_snippet_country_dropdown.dropdown_element_form">
+                                    <t t-set="label_country_dropdown">
+                                        Other label
+                                    </t>
+                                </t>
+                                <button type="submit" class="btn btn-default">
+                                    Submit (you will see the GET parameters in the URL)
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </t>
+</template>
+
+<record id="demo_page_link" model="website.menu">
+    <field name="name">Country dropdown demo</field>
+    <field name="url">/page/website_snippet_country_dropdown.demo_page</field>
+    <field name="parent_id" ref="website.main_menu" />
+    <field name="sequence" type="int">50</field>
+</record>
+
+</odoo>
