@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+<template id="portal_my_contacts" name="My Contacts">
+    <t t-call="website_portal_v10.portal_layout">
+        <t name="placeholder1"/>
+        <h3 class="page-header">Your Contacts</h3>
+        <t name="placeholder2"/>
+        <t t-if="not contacts">
+            <p>No contacts found.</p>
+        </t>
+        <div class="row mt16 mb16">
+            <div class="col-md-4 mt8">
+                <t t-if="contacts or search">
+                    <t t-call="website_portal_contact.search"/>
+                </t>
+            </div>
+            <div class="col-md-4 col-md-offset-4 mt8">
+                <t t-call="website_portal_contact.tree_actions"/>
+            </div>
+            <t t-if="contacts">
+                <div class="col-xs-12 table-responsive mt8">
+                    <t t-call="website_portal_contact.contacts_table"/>
+                </div>
+            </t>
+        </div>
+        <t name="placeholder3"/>
+    </t>
+</template>
+
+<template id="contacts_table" name="Contacts table">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr class="active">
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th class="text-center">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <t t-foreach="contacts" t-as="contact">
+                <tr>
+                    <td>
+                        <a t-attf-href="/my/contacts/#{slug(contact)}?#{keep_query()}">
+                            <span t-field="contact.name"/>
+                        </a>
+                    </td>
+                    <td>
+                        <a t-attf-href="tel://#{contact.mobile}">
+                            <span t-field="contact.mobile"/>
+                        </a>
+                    </td>
+                    <td>
+                        <a t-attf-href="mailto://#{contact.email}">
+                            <span t-field="contact.email"/>
+                        </a>
+                    </td>
+                    <td class="text-center">
+                        <a class="btn btn-danger"
+                           t-attf-href="/my/contacts/#{slug(contact)}/disable?redirect=#{quote_plus(request.httprequest.url)}"
+                           title="Delete">
+                            <div class="fa fa-trash"/>
+                        </a>
+                    </td>
+                </tr>
+            </t>
+        </tbody>
+    </table>
+
+    <div t-if="pager" class="o_portal_pager text-center">
+        <t t-call="website.pager"/>
+    </div>
+</template>
+
+<template id="search" name="Search In Contacts">
+    <form action="/my/contacts" method="get">
+        <div class="input-group">
+            <input
+                type="search"
+                name="search"
+                class="form-control"
+                placeholder="Search..."
+                t-att-value="search"/>
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary" title="Search">
+                    <div class="fa fa-search"/>
+                </button>
+            </span>
+        </div>
+    </form>
+</template>
+
+<template id="tree_actions" name="Website Portal Contact Tree Actions">
+    <a href="/my/contacts/new" class="btn btn-primary btn-wide">
+        <div class="fa fa-plus"/>
+        <span>
+            <t>Add new contact</t>
+        </span>
+    </a>
+</template>
+
+<!-- Store customizations in separate template to avoid breaking updates -->
+<template id="tree_custom"
+          inherit_id="portal_my_contacts"
+          name="Portal Contact List Customizations">
+    <xpath expr="//t[@name='placeholder1']">
+        <div class="oe_structure oe_empty"/>
+    </xpath>
+    <xpath expr="//t[@name='placeholder2']">
+        <div class="oe_structure oe_empty"/>
+    </xpath>
+    <xpath expr="//t[@name='placeholder3']">
+        <div class="oe_structure oe_empty"/>
+    </xpath>
+</template>
+
+</odoo>

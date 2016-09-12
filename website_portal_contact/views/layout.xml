@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+<template id="portal_my_home_menu_contacts"
+          name="Portal layout: contacts menu entries"
+          inherit_id="website_portal_v10.portal_layout">
+    <xpath expr="//ul[contains(@class,'o_portal_submenu')]">
+        <li>
+            <a href="/my/contacts">Contacts</a>
+        </li>
+    </xpath>
+</template>
+
+<template id="portal_my_home_contacts"
+          name="Portal My Home: contacts entries"
+          inherit_id="website_portal_v10.portal_my_home">
+    <xpath expr="//div[contains(@class,'o_my_home_content')]">
+        <h3 class="page-header">
+            <a href="/my/contacts">
+                Your Contacts
+                <small class="ml8">
+                    <t t-if="contact_count">
+                        <span class='badge'>
+                            <t t-esc="contact_count"/>
+                        </span>
+                    </t>
+                    <t t-if="not contact_count">
+                        There are currently no contacts for your account.
+                    </t>
+                </small>
+            </a>
+        </h3>
+    </xpath>
+</template>
+
+</odoo>
