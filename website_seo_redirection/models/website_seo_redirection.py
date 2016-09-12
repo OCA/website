@@ -157,7 +157,6 @@ class WebsiteSeoRedirection(models.Model):
         return local_redirect(
             destination,
             dict(request.httprequest.args),
-            True,
             code=code)
 
     @api.model
