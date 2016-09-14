@@ -69,31 +69,36 @@ class TwitterFeed(models.Model):
         return str(response_dict['access_token'])
 
     @api.model
+    def get_userposts(self, feed):
+        self.ensure_one()
+        token = self.get_token(
+            feed.twitter_api_key,
+            feed.twitter_api_secret
+        )
+        args = {
+            'screen_name': feed.twitter_screen_name,
+            'count': feed.feed_length,
+            }
+        url = feed.base_twitter_api_path + \
+            "statuses/user_timeline.json?%s" % urllib.urlencode(
+                args
+            )
+        request = urllib2.Request(url)
+        request.add_header(
+          "Authorization",  "Bearer %s" % token
+        )
+        request.add_header(
+            'content-type',
+            'application/x-www-form-urlencoded;charset=UTF-8'
+        )
+        response = urllib2.urlopen(request)
+        return response.read()
+
+    @api.model
     def get_all_twitter_feeds(self):
         feeds = self.env['twitter.feed'].search([])
         for feed in feeds:
-            token = self.get_token(
-                feed.twitter_api_key,
-                feed.twitter_api_secret
-            )
-            args = {
-                'screen_name': feed.twitter_screen_name,
-                'count': feed.feed_length,
-                }
-            url = feed.base_twitter_api_path + \
-                "statuses/user_timeline.json?%s" % urllib.urlencode(
-                    args
-                )
-            request = urllib2.Request(url)
-            request.add_header(
-              "Authorization",  "Bearer %s" % token
-            )
-            request.add_header(
-                'content-type',
-                'application/x-www-form-urlencoded;charset=UTF-8'
-            )
-            response = urllib2.urlopen(request)
-            userposts = response.read()
+            userposts = self.get_userposts(feed)
             userposts_dict = json.loads(userposts)
             if userposts_dict:
                 feed.clear_tweets()

@@ -8,10 +8,10 @@ Twitter Feeds and user stats with widget support and no external links
 
 A twitter extension that includes:
 
-    Multiple Twitter Accounts and Feeds.
-    Customized theming of every twitter Account.
-    Widget that allows multiple twitter accounts on the same page.
-    Statistics on most mentioned users in every account.
+    * Multiple Twitter Accounts and Feeds.
+    * Customized theming of every twitter Account.
+    * Widget that allows multiple twitter accounts on the same page.
+    * Statistics on most mentioned users in every account.
 
 
 Configuration
@@ -22,7 +22,7 @@ To configure this module, you need to:
 
 # Go to Knowledge>Collaborative Content>Configure Twitter Account 
 create a new Account (API Key and secret needed).
-    the account Needs to have:
+    the account needs to have:
         1) a name
         2) a default theme
         3) a user to fetch from
