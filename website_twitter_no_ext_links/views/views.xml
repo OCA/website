@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_twusers" model="ir.ui.view">
+            <field name="name">My mentioned twitter users </field>
+            <field name="model">twitter.user</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="feed_id"/>
+                    <field name="twitter_user_id"/>
+                    <field name="twitter_user_screen_name"/>
+                    <field name="twitter_user_name"/>
+                    <field name="mentions"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_tweets" model="ir.ui.view">
+            <field name="name"> Latest Tweets </field>
+            <field name="model">twitter.tweet</field>
+            <field name="arch" type="xml">
+                <tree >
+                    <field name="feed_id"/>
+                    <field name="tweet_id"/>
+                    <field name="text"/>
+                    <field name="author"/>
+                    <field name="tweet_create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_twitter_config" model="ir.ui.view">
+            <field name="name"> Twitter configuration </field>
+            <field name="model">twitter.feed</field>
+            <field name="arch" type="xml">
+                <tree string="website twitter config" editable="top">
+                    <field name="name" />
+                    <field name="twitter_api_key" password="True" />
+                    <field name="twitter_api_secret" password="True" />
+                    <field name="twitter_screen_name"/>
+                    <field name="feed_length"/>
+                    <field name="theme"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_twitter_themes" model="ir.ui.view">
+            <field name="name"> Twitterwebsitewidgetthemes </field>
+            <field name="model">twitter.theme</field>
+            <field name="arch" type="xml">
+                <form string="website twitter widget theme">
+                    <header>
+                    </header>
+                    <sheet>
+                        <h3>
+                            <span>
+                                You will be able to select these themes from the widget
+                                the elements  hashtag_color and at_color will be
+                                updated after the next feed download. All other elements 
+                                will be updated immediately.
+                            </span>
+                        </h3>
+                        <separator/>
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <separator/>
+                        <group string="Background">
+                            <field name="twitter_feed_background"/> 
+                            <field name="twitter_tweet_header_background" />
+                            <field name="twitter_tweet_text_background"/>
+                        </group>
+                        <separator/>
+                        <group string="Text">
+                            <field name="twitter_text_color" />
+                            <field name="twitter_hashtag_color" />
+                            <field name="twitter_at_color" />
+                        </group>
+                        <separator/>
+                        <group string="Elements">
+                            <field name="twitter_show_date" />
+                            <field name="twitter_show_author" />
+                            <field name="twitter_show_title" />
+                        </group>                
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_twitter_themes_tree" model="ir.ui.view">
+            <field name="name"> Twitter website widget themes </field>
+            <field name="model">twitter.theme</field>
+            <field name="arch" type="xml">
+                <tree string="website twitter widget theme" >
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="search_tweets" model="ir.ui.view">
+            <field name="model">twitter.tweet</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="feed_id"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="search_users" model="ir.ui.view">
+            <field name="model">twitter.user</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="feed_id"/>
+                </search>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
