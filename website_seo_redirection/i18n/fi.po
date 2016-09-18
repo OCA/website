@@ -3,106 +3,106 @@
 # * website_seo_redirection
 # 
 # Translators:
+# Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2016
 # OCA Transbot <transbot@odoo-community.org>, 2016
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-16 20:38+0000\n"
 "PO-Revision-Date: 2016-09-16 20:38+0000\n"
-"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>, 2016\n"
-"Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"Language-Team: Finnish (https://www.transifex.com/oca/teams/23907/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:77
 #, python-format
 msgid "%s must start with `/`"
-msgstr "%s mora začeti z `/`"
+msgstr ""
 
 #. module: website_seo_redirection
 #: view:website:website_seo_redirection.sample_page
 msgid ", but"
-msgstr ", a"
+msgstr ""
 
 #. module: website_seo_redirection
 #: view:website:website_seo_redirection.sample_page
 msgid "/page/website_seo_redirection.sample_page"
-msgstr "/page/website_seo_redirection.sample_page"
+msgstr ""
 
 #. module: website_seo_redirection
 #: view:website:website_seo_redirection.sample_page
 msgid "/seo/sample"
-msgstr "/seo/sample"
+msgstr ""
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:13
 #, python-format
 msgid "BEWARE!"
-msgstr "POZOR!"
+msgstr ""
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:8
 #, python-format
 msgid "Change the URL"
-msgstr "Spremeni URL"
+msgstr ""
 
 #. module: website_seo_redirection
 #: field:website.seo.redirection,create_uid:0
 msgid "Created by"
-msgstr "Ustvaril"
+msgstr "Luonut"
 
 #. module: website_seo_redirection
 #: field:website.seo.redirection,create_date:0
 msgid "Created on"
-msgstr "Ustvarjeno"
+msgstr "Luotu"
 
 #. module: website_seo_redirection
 #: field:website.seo.redirection,destination:0
 msgid "Destination URL"
-msgstr "Ciljni URL"
+msgstr ""
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:22
 #, python-format
 msgid "Destination URL:"
-msgstr "Ciljni URL:"
+msgstr ""
 
 #. module: website_seo_redirection
 #: field:website.seo.redirection,display_name:0
 msgid "Display Name"
-msgstr "Prikazni naziv"
+msgstr "Nimi"
 
 #. module: website_seo_redirection
 #: sql_constraint:website.seo.redirection:0
 msgid "Duplicated original URL"
-msgstr "Podvojena izvorna URL"
+msgstr ""
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:149
 #, python-format
 msgid "Duplicated redirection."
-msgstr "Podvojena preusmeritev"
+msgstr ""
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:33
 #, python-format
 msgid "E.g.: /some/good-url"
-msgstr "Npr. /katerikoli/dober-url"
+msgstr ""
 
 #. module: website_seo_redirection
 #: model:ir.model,name:website_seo_redirection.model_ir_http
 msgid "HTTP routing"
-msgstr "HTTP preusmerjanje"
+msgstr ""
 
 #. module: website_seo_redirection
 #: field:website.seo.redirection,id:0
@@ -118,9 +118,6 @@ msgid ""
 " some URL that is already in use, could be interferring with other page and "
 "bad things could happen..."
 msgstr ""
-"Če za to stran potrebujete poseben URL, ga lahko nastavite tukaj, a če "
-"nastavite URL povezavo, ki je že v uporabi, bi se lahko prekrivali in "
-"zgodilo bi se lahko marsikaj..."
 
 #. module: website_seo_redirection
 #: help:website.seo.redirection,relocate_controller:0
@@ -130,126 +127,122 @@ msgid ""
 "requests be redirected, but a new controller should be available in the "
 "destination URL if you do not want a 404 error."
 msgstr ""
-"Če prestavite kontrolnik, bo stran, ki je bila najdena na izvorni URL "
-"povezavi, postala nova ciljna stran. Drugače bo to le preusmerjalo zahtevke,"
-" a če ne želite napake 404, mora biti nov kontrolnik na ciljni URL povezavi "
-"dosegljiv."
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:81
 #, python-format
 msgid "Invalid character found in %s: `%s`"
-msgstr "Neveljaven znak v %s: `%s`"
+msgstr ""
 
 #. module: website_seo_redirection
 #: field:website.seo.redirection,__last_update:0
 msgid "Last Modified on"
-msgstr "Zadnjič spremenjeno"
+msgstr "Viimeksi muokattu"
 
 #. module: website_seo_redirection
 #: field:website.seo.redirection,write_uid:0
 msgid "Last Updated by"
-msgstr "Zadnji posodobil"
+msgstr "Viimeksi päivittänyt"
 
 #. module: website_seo_redirection
 #: field:website.seo.redirection,write_date:0
 msgid "Last Updated on"
-msgstr "Zadnjič posodobljeno"
+msgstr "Viimeksi päivitetty"
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:109
 #, python-format
 msgid "No origin found for this redirection."
-msgstr "Izvor te preusmeritve ni najden."
+msgstr ""
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:147
 #, python-format
 msgid "No redirection target found."
-msgstr "Cilj te preusmeritve ni najden."
+msgstr ""
 
 #. module: website_seo_redirection
 #: model:website.menu,name:website_seo_redirection.sample_origin_menu
 #: field:website.seo.redirection,origin:0
 msgid "Original URL"
-msgstr "Izvorna URL"
+msgstr ""
 
 #. module: website_seo_redirection
 #: help:website.seo.redirection,destination:0
 msgid "Path where the controller will be found now."
-msgstr "Pot, kjer se zdaj nahaja krmilnik."
+msgstr ""
 
 #. module: website_seo_redirection
 #: help:website.seo.redirection,origin:0
 msgid "Path where the original controller was found."
-msgstr "Pot, kjer se je nahajal izvorni krmilnik."
+msgstr ""
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:68
 #, python-format
 msgid "Recursive redirection is forbidden."
-msgstr "Rekurzivno preusmerjanje ni dovoljeno."
+msgstr ""
 
 #. module: website_seo_redirection
 #: sql_constraint:website.seo.redirection:0
 msgid "Recursive redirection."
-msgstr "Rekurzivno preusmerjanje."
+msgstr ""
 
 #. module: website_seo_redirection
 #: model:website.menu,name:website_seo_redirection.sample_destination_menu
 msgid "Redirected URL"
-msgstr "Preusmerjena URL"
+msgstr ""
 
 #. module: website_seo_redirection
 #: field:website.seo.redirection,relocate_controller:0
 msgid "Relocate controller"
-msgstr "Prestavi kontrolnik"
+msgstr ""
 
 #. module: website_seo_redirection
 #: model:ir.actions.act_window,name:website_seo_redirection.website_seo_redirection_action_open
 #: model:ir.ui.menu,name:website_seo_redirection.website_seo_redirection_menu
 msgid "SEO Redirections"
-msgstr "SEO preusmeritve"
+msgstr ""
 
 #. module: website_seo_redirection
 #: model:website.menu,name:website_seo_redirection.sample_menu
 msgid "SEO Sample"
-msgstr "SEO vzorec"
+msgstr ""
 
 #. module: website_seo_redirection
 #: model:ir.model,name:website_seo_redirection.model_website_seo_redirection
 msgid "SEO controller redirections"
-msgstr "SEO preusmeritve krmilnika"
+msgstr ""
 
 #. module: website_seo_redirection
 #: view:website:website_seo_redirection.sample_page
 msgid "The original URL for this page is"
-msgstr "Izvorna URL za to stran je"
+msgstr ""
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:33
 #, python-format
 msgid "URL without domain name, all lower case, hyphenated."
-msgstr "URL brez domenskega imena, vse z majhnimi črkami, vezaji."
+msgstr ""
 
 #. module: website_seo_redirection
 #: model:ir.model,name:website_seo_redirection.model_website
 msgid "Website"
-msgstr "Spletna stran"
+msgstr "Verkkosivut"
 
 #. module: website_seo_redirection
 #: view:website:website_seo_redirection.sample_page
 msgid "Welcome, this is SEO."
-msgstr "Dobrodošli, to je SEO."
+msgstr ""
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:85
 #, python-format
 msgid "You cannot redirect an URL to itself."
-msgstr "URL povezave ne morete preusmeriti same vase."
+msgstr ""
 
 #. module: website_seo_redirection
 #: view:website:website_seo_redirection.sample_page
 msgid "is beautier, right?"
-msgstr "je lepše, kajne?"
+msgstr ""
