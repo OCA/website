@@ -8,8 +8,7 @@ function(require){
 var animation = require("web_editor.snippets.animation");
 var core = require("web.core");
 var Model = require("web.Model");
-var Session = require("web.Session");
-var ajax = require('web.ajax');
+var session = require("web.session");
 
 var _t = core._t;
 var $ = require("$");
@@ -22,7 +21,6 @@ animation.Class.extend({
             return;
         };
         this.$image_preview_thumb = this.$(".thumbnail-images");
-        this.$main_image = this.$("#main_image");
         this.$file_input = this.$("#file_input");
         this.$label_input = this.$(".image_upload");
         this.$file_input_multi = this.$("#file_input_multi");
@@ -44,35 +42,34 @@ animation.Class.extend({
         this.$el.on("click", ".make-main-image", function (event) {
             return this_.image_make_main(event);
         });
-
     },
-    image_preview: function(e){
-        var image = e.target.files[0];
+    image_preview: function (event) {
+        var image = event.target.files[0];
         var reader = new FileReader();
-        var self = this;
-        reader.onload = (function(file) {
-           return function(e) {
-                self.image_added_id++;
-                self.notify_clear();
-                if (self.image_duplicate(file.name)){
-                    self.user_notify(_t('This image already exists'));
-                    return false;
-                };
-                var $img = $(core.qweb.render(
-                "website_base_multi_image.image_preview", {
-                    'src': e.target.result,
-                    'title': escape(file.name),
-                }));
-                var $img_thumb = $(core.qweb.render(
-                "website_base_multi_image.image_preview_thumb", {
-                    'src': e.target.result,
-                    'title': escape(file.name),
-                }));
-                self.$image_preview_thumb.append($img_thumb);
-                self.render_image_upload();
-           };
-        })(image);
+        reader.fileName = image.name;
+        reader.onload = $.proxy(this.reader_load, this);
         reader.readAsDataURL(image);
+    },
+    reader_load: function (event) {
+        var filename = event.target.fileName;
+        this.image_added_id++;
+        this.notify_clear();
+        if (this.image_duplicate(filename)){
+            this.user_notify(_t('This image already exists'));
+            return false;
+        };
+        var $img = $(core.qweb.render(
+        "website_base_multi_image.image_preview", {
+            'src': event.target.result,
+            'title': escape(filename),
+        }));
+        var $img_thumb = $(core.qweb.render(
+        "website_base_multi_image.image_preview_thumb", {
+            'src': event.target.result,
+            'title': escape(filename),
+        }));
+        this.$image_preview_thumb.append($img_thumb);
+        this.render_image_upload();
     },
     render_image_upload: function(){
         this.$file_input_multi.append(this.$file_input);
@@ -87,37 +84,49 @@ animation.Class.extend({
         self.notify_clear();
         var $a = $(e.target);
         var id = parseInt($a.data('id'), 10);
-        var owner_model = $a.data('owner_model');
-        var owner_id = $a.data('owner_id');
-        return ajax.jsonRpc('/website/image/remove', 'call', {
-            "image_id": id}).then(function (prevented) {
-                if (_.isEmpty(prevented)) {
-                    var $image_li = $a.parent().parent();
-                    self.$carousel_container.find("div[slide-to=" + $image_li.data('slide-to') +"]").empty();
-                    $image_li.remove();
-                    return;
-                }
-                self.user_notify(prevented['error']);
-        });
+        var Images = new Model('base_multi_image.image');
+        Images.call('unlink', [id]).then(function(result){
+            if (result){
+                var $image_li = $a.closest('li');
+                self.$carousel_container.find("div[slide-to=" + $image_li.data('slide-to') +"]").empty();
+                $image_li.remove();
+                return;
+            } else {
+                self.user_notify({'error': _t('Failed to remove image')});
+            };
+        })
     },
     image_make_main: function(e){
         var self = this;
         self.notify_clear();
         var $a = $(e.target);
         var id = parseInt($a.data('id'), 10);
-        var owner_model = $a.data('owner_model');
-        var owner_id = $a.data('owner_id');
-        return ajax.jsonRpc('/website/image/main', 'call', {
-            "image_id": id}).then(function (prevented) {
-                if (_.isEmpty(prevented)) {
-                    var $main_image_thumb = self.$('a.fa-star');
-                    $main_image_thumb.removeClass('fa-star');
-                    $main_image_thumb.addClass('fa-star-o');
-                    $a.removeClass('fa-star-o');
-                    $a.addClass('fa-star');
-                    return;
-                }
-                self.user_notify(prevented['error']);
+        var Images = new Model('base_multi_image.image');
+        Images.call('search', [[
+            ['owner_model', '=', $a.data('owner_model')],
+            ['owner_id', '=', $a.data('owner_id')]]])
+        .then(function (images) {
+            var order_images = [id];
+            _.each(images, function (image) {
+                if (!order_images.includes(image)){
+                    order_images.push(image);
+                };
+            });
+            self.reorder_images(order_images, $a);
+        });
+    },
+    reorder_images: function(image_ids, target){
+        session.rpc('/web/dataset/resequence', {
+            model: 'base_multi_image.image',
+            ids: image_ids,
+            }).then(function (result) {
+                var $main_image_thumb = self.$('a.fa-star');
+                $main_image_thumb.removeClass('fa-star');
+                $main_image_thumb.addClass('fa-star-o');
+                target.removeClass('fa-star-o');
+                target.addClass('fa-star');
+        }, function () {
+            self.user_notify({'error': _t('Failed to set main image')});
         });
     },
     image_duplicate: function(image_name){

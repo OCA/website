@@ -11,7 +11,8 @@
                 <div class="fa fa-camera"/>
                  Add Pictures
             </div>
-            <input id="file_input" class="input-file"
+            <input id="file_input"
+                   class="input-file"
                    name="image"
                    type="file"
                    accept="image/*"/>
@@ -43,9 +44,13 @@
                     <div class="existing-attachment-cell mt4">
                         <a class="fa fa-trash fa-lg remove-image pull-left"
                            data-model="base_multi_image.image"
+                           t-att-data-owner_model="owner_model"
+                           t-att-data-owner_id="owner_id"
                            t-att-data-id="src[0]"/>
                         <a t-attf-class="fa fa-lg make-main-image #{'fa-star' if src_index == 0 else 'fa-star-o'} pull-right"
                            data-model="base_multi_image.image"
+                           t-att-data-owner_model="owner_model"
+                           t-att-data-owner_id="owner_id"
                            t-att-data-id="src[0]"/>
                     </div>
                 </t>
