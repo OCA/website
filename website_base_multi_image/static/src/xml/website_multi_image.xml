@@ -4,14 +4,15 @@
 
     <t t-name="website_base_multi_image.image_preview">
         <img id="image_preview"
-             class="img img-responsive product_detail_img"
+             class="img img-responsive detail_img"
              t-att-src="src"
              t-att-title="title"/>
     </t>
 
     <t t-name="website_base_multi_image.image_preview_thumb">
-        <div class="col-md-3 mt8 mb8">
-            <img class="img img-responsive winery-image-thumb"
+        <div class="col-md-3 mt8 mb8"
+             t-att-data-image_name="title">
+            <img class="img img-responsive image-thumb"
                  t-att-src="src"
                  t-att-title="title"/>
         </div>
@@ -26,8 +27,14 @@
     </t>
 
     <t t-name="website_base_multi_image.notify">
-        <div class="notify alert alert-warning">
-            <strong>Warning!</strong> <span t-esc="description"/>
+        <div class="row text-center">
+            <div class="alert alert-warning alert-dismissible col-md-6 col-md-offset-3"
+                 role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true" class="fa fa-times fa-lg pull-right"/>
+              </button>
+              <strong>Warning!</strong> <span t-esc="description"/>
+            </div>
         </div>
     </t>
 

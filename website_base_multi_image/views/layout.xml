@@ -3,54 +3,92 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
 
-<template id="base_multi_image_fields">
-    <t t-set="owner_model" t-value="owner_model or 'product.template'"/>
-    <t t-set="owner_id" t-value="owner_id or False"/>
-    <t t-set="images" t-value="request.env['base_multi_image.image'].search([
-            ('owner_model', '=', owner_model),
-            ('owner_id', '=', owner_id),
-        ])"/>
-    <section id="base_multi_image">
-        <div id="images_container" class="js_image_container row">
-            <div class="col-md-6">
-                <label>Main Image</label>
-                <t t-if="images">
-                    <div id="main_image pull-left"
-                          t-field="images[:1].image_main"
-                          t-field-options='{"widget": "image", "class":"image_main"}'/>
+<template id="upload_image_action">
+    <!-- Action to upload an image -->
+    <div class="form-group mt16">
+        <label class="custom-file-input image_upload">
+            <div class="btn btn-primary">
+                <div class="fa fa-camera"/>
+                 Add Pictures
+            </div>
+            <input id="file_input" class="input-file"
+                   name="image"
+                   type="file"
+                   accept="image/*"/>
+        </label>
+        <div id="file_input_multi"/>
+    </div>
+</template>
+
+<template id="image_main">
+    <label>Image</label>
+    <div class="carousel-inner container" style="padding: 0;">
+        <t t-foreach="srcs" t-as="src">
+            <div t-attf-class="item #{src_index == index and 'active' or ''}"
+                 t-attf-data-slide-to="#{src_index}">
+                <img class="img" t-att-src="src[1]"/>
+            </div>
+        </t>
+    </div>
+</template>
+
+<template id="image_thumbnails">
+    <label>More Images</label>
+    <ul class="carousel-indicators">
+        <t t-foreach="srcs" t-as="src">
+            <li t-attf-data-target="##{id}" t-attf-data-slide-to="#{src_index}"
+                t-att-class="src_index == index and 'active'"
+                t-attf-style="background-image: url(#{src[1]})">
+                <t t-if="edit_action">
+                    <div class="existing-attachment-cell mt4">
+                        <a class="fa fa-trash fa-lg remove-image pull-left"
+                           data-model="base_multi_image.image"
+                           t-att-data-id="src[0]"/>
+                        <a t-attf-class="fa fa-lg make-main-image #{'fa-star' if src_index == 0 else 'fa-star-o'} pull-right"
+                           data-model="base_multi_image.image"
+                           t-att-data-id="src[0]"/>
+                    </div>
                 </t>
-                <div class="form-group mt16">
-                    <label class="custom-file-input image_upload">
-                        <div class="btn btn-primary">
-                            <div class="fa fa-camera"/>
-                             Add Pictures
-                        </div>
-                        <input id="file_input" class="input-file"
-                               name="image"
-                               type="file"
-                               accept="image/*"/>
-                    </label>
-                    <div id="file_input_multi"/>
+            </li>
+        </t>
+    </ul>
+</template>
+
+<template id="base_multi_image_carousel">
+    <t t-call="website_base_multi_image.carousel">
+        <t t-set="owner_model" t-value="owner_model"/>
+        <t t-set="owner_id" t-value="owner_id"/>
+        <t t-set="images" t-value="request.env['base_multi_image.image'].search([
+            ('owner_model', '=', owner_model),
+            ('owner_id', '=', owner_id),])"/>
+        <t t-set="x" t-value="width or 400"/>
+        <t t-set="y" t-value="height or 400"/>
+        <t t-set="srcs"
+           t-value="[(image.id, '/web/image/base_multi_image.image/%s/image_main' % (image.id)) for image in images]"/>
+        <t t-set="index" t-value="0"/>
+        <t t-set="title" t-value="''"/>
+        <t t-set="interval" t-value="0"/>
+        <t t-set="id" t-value="'slideshow_%s' % int(time.time())"/>
+        <t t-set="edit_action" t-value="edit_action or False"/>
+    </t>
+</template>
+
+<template id="carousel">
+    <div id="base_multi_image" class="row mt8 mb32">
+        <div id="images_container" class="js_image_container">
+            <div t-attf-id="#{id}" class="carousel slide"
+                 data-ride="carousel"
+                 t-attf-data-interval="#{interval}">
+                <div class="col-md-6">
+                    <t t-call="website_base_multi_image.image_main"/>
+                    <t t-call="website_base_multi_image.upload_image_action"/>
+                </div>
+                <div class="col-md-6 thumbnail-images">
+                    <t t-call="website_base_multi_image.image_thumbnails"/>
                 </div>
             </div>
-            <div class="col-md-6 thumbnail-images">
-                <label class="col-md-12">More Images</label>
-                <t t-foreach="images" t-as="image">
-                    <t t-if="not image_first">
-                        <div class="col-md-3 mt8 mb8">
-                            <div id="image_more"
-                                 t-att-data-image_name="image.name"
-                                 t-field="image.image_small"
-                                 t-field-options='{"widget": "image"}'/>
-                        </div>
-                        <t t-if="image_index % 3 == 0">
-                            <div class="row"/>
-                        </t>
-                    </t>
-                </t>
-            </div>
         </div>
-    </section>
+    </div>
 </template>
 
 </odoo>
