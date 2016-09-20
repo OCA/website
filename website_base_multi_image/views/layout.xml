@@ -5,7 +5,7 @@
 
 <template id="upload_image_action">
     <!-- Action to upload an image -->
-    <div class="form-group mt16">
+    <div t-if="edit_action" class="form-group mt16">
         <label class="custom-file-input image_upload">
             <div class="btn btn-primary">
                 <div class="fa fa-camera"/>
@@ -61,6 +61,7 @@
 
 <template id="base_multi_image_carousel">
     <t t-call="website_base_multi_image.carousel">
+        <t t-set="thumbnails_position" t-value="thumbnails_position or 'right'"/>
         <t t-set="owner_model" t-value="owner_model"/>
         <t t-set="owner_id" t-value="owner_id"/>
         <t t-set="images" t-value="request.env['base_multi_image.image'].search([
@@ -79,6 +80,15 @@
 </template>
 
 <template id="carousel">
+    <t t-if="thumbnails_position == 'right'">
+        <t t-call="website_base_multi_image.carousel_right"/>
+    </t>
+    <t t-if="thumbnails_position == 'bottom'">
+        <t t-call="website_base_multi_image.carousel_bottom"/>
+    </t>
+</template>
+
+<template id="carousel_right">
     <div id="base_multi_image" class="row mt8 mb32">
         <div id="images_container" class="js_image_container">
             <div t-attf-id="#{id}" class="carousel slide"
@@ -89,6 +99,24 @@
                     <t t-call="website_base_multi_image.upload_image_action"/>
                 </div>
                 <div class="col-md-6 thumbnail-images">
+                    <t t-call="website_base_multi_image.image_thumbnails"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="carousel_bottom">
+    <div id="base_multi_image" class="row mt8 mb32">
+        <div id="images_container" class="js_image_container">
+            <div t-attf-id="#{id}" class="carousel slide"
+                 data-ride="carousel"
+                 t-attf-data-interval="#{interval}">
+                <div class="col-md-12">
+                    <t t-call="website_base_multi_image.image_main"/>
+                    <t t-call="website_base_multi_image.upload_image_action"/>
+                </div>
+                <div class="col-md-12 thumbnail-images">
                     <t t-call="website_base_multi_image.image_thumbnails"/>
                 </div>
             </div>
