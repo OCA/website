@@ -55,7 +55,7 @@ class BlogTag(models.Model):
         for this in self:
             # green therp, darkgreen, blue. 
             # hastable allows me to use better performing randint here too.
-            hashtable= {1:'#7b7655',2: '#006400',3: '#4682B4'})
+            hashtable = {1:'#7b7655', 2: '#006400', 3: '#4682B4'}
             this.random_color = hashtable[random.randint(1,3)]
 
     tag_cardinality = fields.Integer(
