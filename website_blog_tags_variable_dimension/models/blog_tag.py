@@ -31,10 +31,10 @@ class BlogTag(models.Model):
     max_ranking = fields.Float( 
         string="Higest tag cardinality in this blog", 
         compute=get_blog_most_used_tag_cardinality,
-        store=True,
+        required=True,
         help="The number of times the most used tag is used in this blog"
     )
-
+ 
     @api.multi
     def get_font_size(self):
         for this in self:
@@ -61,7 +61,7 @@ class BlogTag(models.Model):
     tag_cardinality = fields.Integer(
             string="In how many posts is the tag used", 
             compute=get_tag_cardinality,
-            store=True
+            required=True,
         )
 
     font_size_in_cloud = fields.Integer(
@@ -69,7 +69,7 @@ class BlogTag(models.Model):
         help="size of tag font from 8 to 24 px relative"
              "to the most used tag, that will be allways displayed at 24px",
         compute=get_font_size,
-        
+        required=True,
     )
     
     random_color = fields.Char(
