@@ -303,7 +303,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
     def my_purchase_product_form(self, product=None, **kwargs):
         """Display a form to edit or create a product.
 
-        :param "new"/product.template prodcut:
+        :param None/product.template prodcut:
             Product we are editing. If the user has no access, this will
             automatically raise a ``403 Forbidden`` error.
         """
