@@ -44,19 +44,8 @@
     background-size: cover;
 }
 
-#base_multi_image .carousel-indicators .active {
-   /*display: none;*/
-
-}
-
 #base_multi_image .existing-attachment-cell{
     height: 0px;
     width: 110px;
     margin-left: 5px;
 }
-
-/*#base_multi_image .thumb-container{
-    width: 130px;
-    float: left;
-    margin-top: 5px;
-}*/

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!--
+        Resource: base_multi_image.image
+        -->
+
+        <record id="partner_image_1" model="base_multi_image.image">
+            <field name="name">Partner Image 1</field>
+            <field name="owner_id">1</field>
+            <field name="owner_model">res.partner</field>
+            <field name="storage">db</field>
+            <field name="file_db_store"
+                   type="base64"
+                   file="website_base_multi_image/static/src/img/partner_image_1.jpg"/>
+        </record>
+
+        <record id="partner_image_2" model="base_multi_image.image">
+            <field name="name">Partner Image 2</field>
+            <field name="owner_id">1</field>
+            <field name="owner_model">res.partner</field>
+            <field name="storage">db</field>
+            <field name="file_db_store"
+                   type="base64"
+                   file="website_base_multi_image/static/src/img/partner_image_2.jpg"/>
+        </record>
+
+    </data>
+</odoo>

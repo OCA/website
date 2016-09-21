@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-# © 2014 Serv. Tecnol. Avanzados (http://www.serviciosbaeza.com)
-#        Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
-# © 2015 Antiun Ingeniería S.L. - Jairo Llopis
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# © 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 import base64
 from openerp import api, models
@@ -19,12 +17,12 @@ class Image(models.Model):
         @return: List of images to add
         """
         images_to_add = []
-        for key in post.keys():
-            if 'new_image_' in key:
-                if isinstance(post[key], list):
-                    new_image = post[key][0]
+        for key, image in post.iteritems():
+            if key.startswith('new_image_'):
+                if isinstance(image, list):
+                    new_image = image[0]
                 else:
-                    new_image = post[key]
+                    new_image = image
                 images_to_add.append((0, 0, {
                     'storage': 'db',
                     'file_db_store': base64.encodestring(new_image.read()),

@@ -5,8 +5,13 @@
 {
     'name': "Website Base Multi Image",
     'summary': "Show multi images data in frontend",
-    'category': 'Website',
     'version': '9.0.1.0.0',
+    'category': 'Website',
+    "website": "https://tecnativa.com/",
+    "author": "Tecnativa, Odoo Community Association (OCA)",
+    "license": "LGPL-3",
+    "application": False,
+    'installable': True,
     'depends': [
         'website',
         'base_multi_image',
@@ -16,9 +21,9 @@
         'views/assets.xml',
         'views/layout.xml',
     ],
+    'demo': [
+        'demo/website_base_multi_image_demo.xml',
+        'demo/pages.xml',
+    ],
     'qweb': ['static/src/xml/*.xml'],
-    'author': 'Tecnativa',
-    'website': 'http://www.tecnativa.com',
-    'license': 'LGPL-3',
-    'installable': True,
 }

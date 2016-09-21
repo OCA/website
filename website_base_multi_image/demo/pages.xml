@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- © 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+<template id="demo_page" page="True" name="Website Base Multi Image">
+    <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty">
+            <section>
+                <div class="container readable mt32 mb32">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">Image Gallery</h1>
+                            <h3 class="text-muted text-center">
+                                Test here the image gallery
+                            </h3>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <t t-call="website_base_multi_image.base_multi_image_carousel">
+                                        <t t-set="owner_model" t-value="'res.partner'"/>
+                                        <t t-set="owner_id" t-value="1"/>
+                                        <t t-set="edit_action" t-value="False"/>
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </t>
+</template>
+
+<record id="demo_page_link" model="website.menu">
+    <field name="name">Website multi image demo</field>
+    <field name="url">/page/website_base_multi_image.demo_page</field>
+    <field name="parent_id" ref="website.main_menu" />
+    <field name="sequence" type="int">50</field>
+</record>
+
+</odoo>
