@@ -9,9 +9,8 @@ from openerp.addons.website_blog.controllers.main import WebsiteBlog
 
 class website_blog(WebsiteBlog):
 
-
     def nav_list_grouped(self):
-        blog_post_obj = request.registry['blog.post']
+        blog_post_obj = request.env['blog.post']
         beginning_of_year = datetime.date.strftime(
             datetime.date(datetime.date.today().year, 1, 1),
             tools.DEFAULT_SERVER_DATE_FORMAT
