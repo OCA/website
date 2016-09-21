@@ -9,8 +9,6 @@ from openerp.addons.website_blog.controllers.main import WebsiteBlog
 
 class website_blog(WebsiteBlog):
 
-    _blog_post_per_page = 20
-    _post_comment_per_page = 10
 
     def nav_list_grouped(self):
         blog_post_obj = request.registry['blog.post']
