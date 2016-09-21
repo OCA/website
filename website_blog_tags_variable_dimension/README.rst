@@ -17,10 +17,6 @@ For further information, please visit:
 
 * https://www.odoo.com/forum/help-1
 
-Known issues / Roadmap
-======================
-
-* ...
 
 Bug Tracker
 ===========
@@ -30,8 +26,6 @@ In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us smashing it by providing a detailed and welcomed feedback
 `here <https://github.com/OCA/website/issues/new?body=module:%20website_blog_tags_variable_dimension%0Aversion:%208.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
-Credits
-=======
 
 Images
 ------
@@ -41,7 +35,7 @@ Images
 Contributors
 ------------
 
-* gfcapalbo <giovanni@therp.nl>  
+* Giovanni Francesco Capalbo <giovanni@therp.nl>  
 
 Do not contact contributors directly about help with questions or problems concerning this addon, but use the `community mailing list <mailto:community@mail.odoo.com>`_ or the `appropriate specialized mailinglist <https://odoo-community.org/groups>`_ for help, and the bug tracker linked in `Bug Tracker`_ above for technical issues.
 
