@@ -31,6 +31,7 @@ class BlogTag(models.Model):
     max_ranking = fields.Float( 
         string="Higest tag cardinality in this blog", 
         compute=get_blog_most_used_tag_cardinality,
+        store=True,
         help="The number of times the most used tag is used in this blog"
     )
 
@@ -42,26 +43,25 @@ class BlogTag(models.Model):
                 (hits)/(this.max_ranking) * (
                     this.max_font - this.min_font
                 ) + this.min_font
-            ) 
+            )
+
     @api.multi
     def get_tag_cardinality(self):
         for this in self:
             this.tag_cardinality = len(this.post_ids.ids)
 
     @api.multi
-    def compute_placement(self):
-        for this in self:
-            this.random_placement = random.choice([x for x in range(0, 4000)])
-
-    @api.multi
     def compute_color(self):
         for this in self:
-            # green therp, darkgreen, blue.
-            this.random_color = random.choice(['#7b7655', '#006400', '#4682B4'])
+            # green therp, darkgreen, blue. 
+            # hastable allows me to use better performing randint here too.
+            hashtable= {1:'#7b7655',2: '#006400',3: '#4682B4'})
+            this.random_color = hashtable[random.randint(1,3)]
 
     tag_cardinality = fields.Integer(
             string="In how many posts is the tag used", 
-            compute=get_tag_cardinality
+            compute=get_tag_cardinality,
+            store=True
         )
 
     font_size_in_cloud = fields.Integer(
@@ -72,16 +72,11 @@ class BlogTag(models.Model):
         
     )
     
-    random_placement = fields.Integer(
-        string="Random Placement of tag",
-        compute=compute_placement,      
-    )
-
     random_color = fields.Char(
         string="random color of tag in cloud",
         compute=compute_color, 
     )
 
     def randomize_recordset(self):
-        return sorted(self, key=lambda x: x.random_placement)
+        return random.sample(self, len(self))
 

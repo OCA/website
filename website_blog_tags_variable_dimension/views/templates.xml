@@ -8,34 +8,28 @@
             </xpath>  
         </template>
 
-
-
         <template id="opt_blog_rc_tags_var_dim" name="Variable Dimension Tag Cloud"
             inherit_id="website_blog.index_right" active="False" customize_show="True">
             <!-- note keep this tag cloud allways on top  -->
             <xpath expr="//div[@id='blog_right_column']/section[1]" position="before">
-                        <section class="mt32">
-                            <h4>Tags</h4>
-                            <ul class="nav nav-pills nav-stacked">
-                                <t t-set="random_tags" t-value="tags.randomize_recordset()"/>
-                                <t t-foreach="random_tags" t-as="nav_tag">
-                                    <li t-att-class="tag and tag.id == nav_tag.id and 'active' or None" 
-                                        t-attf-style="display: inline-block; font-size: {{nav_tag.font_size_in_cloud}}px;">
-                                        <a t-attf-href="#{blog_url(tag=nav_tag)}">
-                                            <span t-attf-style="color:{{nav_tag.random_color}};" t-field="nav_tag.name"/>
-                                            <span t-attf-style="color:{{nav_tag.random_color}};"> (</span>
-                                            <span t-attf-style="color:{{nav_tag.random_color}};" t-esc="nav_tag.tag_cardinality"/> 
-                                            <span t-attf-style="color:{{nav_tag.random_color}};"> )</span>
-                                        </a>
-                                    </li>
-                                </t>
-                            </ul>
-                        </section>
-        </xpath>
-    </template>
-
-
-
-
+                <section class="mt32">
+                    <h4>Tags</h4>
+                    <ul class="nav nav-pills nav-stacked">
+                        <t t-set="random_tags" t-value="tags.randomize_recordset()"/>
+                        <t t-foreach="random_tags" t-as="nav_tag">
+                            <li t-att-class="tag and tag.id == nav_tag.id and 'active' or None" 
+                                t-attf-style="display: inline-block; font-size: {{nav_tag.font_size_in_cloud}}px;">
+                                <a t-attf-href="#{blog_url(tag=nav_tag)}">
+                                    <span t-attf-style="color:{{nav_tag.random_color}};" t-field="nav_tag.name"/>
+                                    <span t-attf-style="color:{{nav_tag.random_color}};"> (</span>
+                                    <span t-attf-style="color:{{nav_tag.random_color}};" t-esc="nav_tag.tag_cardinality"/> 
+                                    <span t-attf-style="color:{{nav_tag.random_color}};"> )</span>
+                                </a>
+                            </li>
+                        </t>
+                    </ul>
+                </section>
+            </xpath>
+        </template>
     </data>
 </openerp>
