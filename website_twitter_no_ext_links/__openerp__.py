@@ -8,7 +8,6 @@
     "author": "Therp BV, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
-    "summary": "",
     "depends": [
         'website',
         'knowledge',
