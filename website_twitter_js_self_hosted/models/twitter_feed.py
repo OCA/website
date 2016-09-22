@@ -103,8 +103,12 @@ class TwitterFeed(models.Model):
                 feed.clear_tweets()
                 for item in userposts_dict:
                     tweet_formatted_text = item['text']
-                    at_users = re.findall('(?<=@)\w+', tweet_formatted_text)
-                    hashtags = re.findall('(?<=#)\w+', tweet_formatted_text)
+                    at_users = list(set(re.findall(
+                        '(?<=@)\w+', tweet_formatted_text
+                    )))
+                    hashtags = list(set(re.findall(
+                        '(?<=#)\w+', tweet_formatted_text
+                    )))
                     for at_user in at_users:
                         tweet_formatted_text = tweet_formatted_text.replace(
                             '@'+at_user,
