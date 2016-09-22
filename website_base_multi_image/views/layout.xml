@@ -22,7 +22,7 @@
 </template>
 
 <template id="image_main">
-    <label>Image</label>
+    <label t-if="show_label">Image</label>
     <div class="carousel-inner container" style="padding: 0;">
         <t t-foreach="srcs" t-as="src">
             <div t-attf-class="item #{src_index == index and 'active' or ''}"
@@ -34,7 +34,7 @@
 </template>
 
 <template id="image_thumbnails">
-    <label>More Images</label>
+    <label t-if="show_label">More Images</label>
     <ul class="carousel-indicators">
         <t t-foreach="srcs" t-as="src">
             <li t-attf-data-target="##{id}" t-attf-data-slide-to="#{src_index}"
@@ -116,7 +116,8 @@
                     <t t-call="website_base_multi_image.image_main"/>
                     <t t-call="website_base_multi_image.upload_image_action"/>
                 </div>
-                <div class="col-md-12 thumbnail-images">
+                <hr/>
+                <div class="col-md-12 thumbnail-images mt16">
                     <t t-call="website_base_multi_image.image_thumbnails"/>
                 </div>
             </div>
