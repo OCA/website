@@ -70,7 +70,6 @@ class TwitterFeed(models.Model):
 
     @api.model
     def get_userposts(self, feed):
-        self.ensure_one()
         token = self.get_token(
             feed.twitter_api_key,
             feed.twitter_api_secret
@@ -149,7 +148,7 @@ class TwitterFeed(models.Model):
         old_tweets = self.env['twitter.tweet'].search(
             [('feed_id', '=', self.id)]
         )
-        old_tweets.sudo().unlink()
+        old_tweets.unlink()
         return True
 
     def get_tweets(self):
