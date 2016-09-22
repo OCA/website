@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-
-
-
-        <template id="opt_blog_rc_history_group_old_archive"                                                        inherit_id="website_blog.opt_blog_rc_history">                                  
+        <template id="opt_blog_rc_history_group_old_archive"                                                        
+            inherit_id="website_blog.opt_blog_rc_history">                                  
             <xpath expr="//section[@class='mt32']" position="replace">                                                  
                 <section class="mt32">                                                                                       
                     <h4>Archives</h4>                                                                                            
@@ -13,7 +11,7 @@
                             <li t-att-class="months['date_begin'] == date and 'active' or None">                                     
                                 <a t-ignore="True" 
                                     t-attf-href="#{blog_url(date_begin=months['date_begin'], date_end=months['date_end'])}">
-                                        <t t-esc="months['create_date']" /><span class="pull-right badge" t-esc="months['create_date_count']"/>
+                                    <t t-esc="months['create_date']" /><span class="pull-right badge" t-esc="months['create_date_count']"/>
                                 </a>     
                             </li>                                                                                                    
                         </t>                                                                                                     
@@ -21,7 +19,7 @@
                             <li t-att-class="years['date_begin'] == date and 'active' or None">                                     
                                 <a t-ignore="True" 
                                     t-attf-href="#{blog_url(date_begin=years['date_begin'], date_end=years['date_end'])}">
-                                        <t t-esc="years['create_date:year']" /><span class="pull-right badge" t-esc="years['create_date_count']"/>
+                                    <t t-esc="years['create_date:year']" /><span class="pull-right badge" t-esc="years['create_date_count']"/>
                                 </a>     
                             </li>                                                                                                    
                         </t>                                                                                                     
@@ -29,6 +27,5 @@
                 </section>                                                                                                   
             </xpath>       
         </template>
-
     </data>
 </openerp>

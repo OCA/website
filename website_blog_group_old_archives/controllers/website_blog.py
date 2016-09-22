@@ -16,24 +16,20 @@ class website_blog(WebsiteBlog):
             tools.DEFAULT_SERVER_DATE_FORMAT
         )
         old_groups = blog_post_obj.read_group(
-            request.cr, request.uid, 
             [['create_date', '<', beginning_of_year]],
             ['name', 'create_date'],
             groupby="create_date:year", 
             orderby="create_date:year desc", 
-            context=request.context
         )       
         # the standard orderby is just a comma separated list of fields
         # optionally followed by desc or asc.
         # UNDOCUMENTED FEATURE, the time :year, :month, :day work also 
         # for orderby.
         new_groups = blog_post_obj.read_group(
-            request.cr, request.uid,
             [['create_date', '>=', beginning_of_year]],
             ['name', 'create_date'],
             groupby="create_date", 
             orderby="create_date desc", 
-            context=request.context
         )
         for group in new_groups:
             begin_date = datetime.datetime.strptime(
