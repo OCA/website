@@ -248,7 +248,6 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
     def portal_my_purchase_products(self, page=1, date_begin=None,
                                     date_end=None, search=None, **post):
         values = self._prepare_portal_layout_values()
-        url = "/my/purchase/products"
         ProductTemplate = request.env["product.template"].with_context(
             pricelist=request.website.get_current_pricelist().id)
         domain = self._purchase_product_domain(search)
@@ -267,7 +266,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
             "search": search,
         })
         pager = request.website.pager(
-            url=url,
+            url=request.httprequest.path,
             url_args=url_args,
             total=count,
             page=page,
@@ -281,7 +280,7 @@ class ProductPortalPurchaseWebsiteAccount(PortalPurchaseWebsiteAccount):
         values.update({
             "archive_groups": archive_groups,
             "date": date_begin,
-            "default_url": url,
+            "default_url": request.httprequest.path,
             "pager": pager,
             "products": products,
             "search": search,
