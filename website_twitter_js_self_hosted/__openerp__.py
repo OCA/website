@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "Multiple Twitter Feeds and user stats with widget support"
-            "and no external links",
+            "and no external javascript",
     "version": "8.0.1.0.0",
     "author": "Therp BV, Odoo Community Association (OCA)",
     "license": "AGPL-3",

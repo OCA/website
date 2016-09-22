@@ -3,7 +3,7 @@
     <data>
         <template id = "twitter_noext_js" inherit_id="website.assets_editor" name="Twitternoextjsinclude">
             <xpath expr="script[last()]" position="after">
-                <script type="text/javascript" src="/website_twitter_no_ext_links/static/src/js/website_twitter_no_ext_links.js"> </script>
+                <script type="text/javascript" src="/website_twitter_js_self_hosted/static/src/js/website_twitter_js_self_hosted.js"> </script>
             </xpath>
         </template>
 
@@ -14,7 +14,7 @@
                     <div class="oe_snippet_thumbnail">
                         <img 
                             class="oe_snippet_thumbnail_img" 
-                            src="/website_twitter_no_ext_links/static/src/img/blocks/block_show_twitter_no_ext_link.png"/>
+                            src="/website_twitter_js_self_hosted/static/src/img/blocks/block_show_twitter_js_self_hosted.png"/>
                         <span class="oe_snippet_thumbnail_title">Twitter Feed </span>
                     </div>
                     <!-- note very important the jq_tweet_feed_entry class

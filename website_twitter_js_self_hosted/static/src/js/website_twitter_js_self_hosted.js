@@ -25,7 +25,7 @@
                 .empty()
                 .append(
                     jQuery('<t />')
-                        .attr('t-call', 'website_twitter_no_ext_links.twitter_feed_content')
+                        .attr('t-call', 'website_twitter_js_self_hosted.twitter_feed_content')
                         .attr('t-ignore-branding', '1')
                         .append(
                             jQuery('<t />')

@@ -1,6 +1,6 @@
 <openerp>
     <data noupdate="1">
-        <record id="ir_cron_fetch_tweets_no_ext_links" model="ir.cron">
+        <record id="ir_cron_fetch_tweets_js_self_hosted" model="ir.cron">
             <field name="name">Fetch tweets</field>
             <field name="user_id" ref="base.user_root"/>
             <field eval="True" name="active"/>

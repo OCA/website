@@ -5,8 +5,8 @@
             <field name="name">Mentioned Twitter Users</field>
             <field name="res_model">twitter.user</field>
             <field name="view_mode">tree</field>
-            <field name="search_view_id" ref="website_twitter_no_ext_links.search_users"></field>
-            <field name="view_id" ref="website_twitter_no_ext_links.view_twusers"/>
+            <field name="search_view_id" ref="website_twitter_js_self_hosted.search_users"></field>
+            <field name="view_id" ref="website_twitter_js_self_hosted.view_twusers"/>
         </record>
 
         <record model="ir.actions.act_window" id="act_view_twthemes">
@@ -20,14 +20,14 @@
             <field name="res_model">twitter.tweet</field>
             <field name="view_mode">tree</field> 
             <field name="view_id" ref="view_tweets"/>
-            <field name="search_view_id" ref="website_twitter_no_ext_links.search_tweets"></field>
+            <field name="search_view_id" ref="website_twitter_js_self_hosted.search_tweets"></field>
         </record>
 
         <record model="ir.actions.act_window" id="act_view_twitter_config">
             <field name="name">Latest Tweets</field>
             <field name="res_model">twitter.feed</field>
             <field name="view_mode">tree</field>
-            <field name="view_id" ref="website_twitter_no_ext_links.view_twitter_config"/>
+            <field name="view_id" ref="website_twitter_js_self_hosted.view_twitter_config"/>
         </record>
 
         <menuitem
@@ -39,25 +39,25 @@
 
         <menuitem 
             id="menu_twuser" 
-            parent="website_twitter_no_ext_links.twitter_knowledge"
+            parent="website_twitter_js_self_hosted.twitter_knowledge"
             name="Twitter user stats" 
             action="act_view_twusers" sequence="80"/>
 
         <menuitem 
             id="menu_tweets" 
-            parent="website_twitter_no_ext_links.twitter_knowledge"
+            parent="website_twitter_js_self_hosted.twitter_knowledge"
             name="Latest Tweets" 
             action="act_view_tweets" sequence="90"/>
 
         <menuitem 
             id="configure_twitter_account" 
-            parent="website_twitter_no_ext_links.twitter_knowledge"
+            parent="website_twitter_js_self_hosted.twitter_knowledge"
             name="Configure Twitter Account" 
             action="act_view_twitter_config" sequence="98"/>
 
         <menuitem 
             id="menu_twthemes" 
-            parent="website_twitter_no_ext_links.twitter_knowledge"
+            parent="website_twitter_js_self_hosted.twitter_knowledge"
             name="Twitter Website widget themes" 
             action="act_view_twthemes" sequence="99"/>
 

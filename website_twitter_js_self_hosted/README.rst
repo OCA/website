@@ -2,15 +2,17 @@
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 
-======================================================================
-Twitter Feeds and user stats with widget support and no external links
-======================================================================
+===========================================================================
+Twitter Feeds and user stats with widget support and no external javascript
+===========================================================================
 
 A twitter extension that includes:
 
-    * Multiple Twitter Accounts and Feeds.
-    * Customized theming of every twitter Account.
+    * No js that pulls third party code form the net.
+    * Manage Multiple Twitter Accounts and Feeds.
+    * Customized theming of every widget.
     * Widget that allows multiple twitter accounts on the same page.
+    * Can create your own twitter widget color scheme (theme)
     * Statistics on most mentioned users in every account.
 
 
