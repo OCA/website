@@ -93,13 +93,15 @@ class WebsiteSupplier(http.Controller):
         return request.website.render("website_supplier_list.index", values)
 
     @http.route(
-        ['/suppliers/<model("res.partner"):partner>'],
+        ['/suppliers/<int:partner_id>'],
         type='http',
         auth="public",
         website=True)
-    def partners_detail(self, partner, **post):
-        if partner:
-            if partner.exists() and partner.website_supplier_published:
+    def partners_detail(self, partner_id, **post):
+        obj_partner = request.env['res.partner']
+        if partner_id:
+            partner = obj_partner.browse(partner_id)
+            if partner.exists() and partner.website_published:
                 values = {}
                 values['main_object'] = values['partner'] = partner
                 return request.website.render(

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2016-03-16 05:29+0000\n"
+"POT-Creation-Date: 2016-07-29 17:03+0000\n"
+"PO-Revision-Date: 2016-07-28 05:41+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -27,6 +27,11 @@ msgstr ", in"
 #: view:website:website_legal_page.acceptance_full
 msgid ", the"
 msgstr ", "
+
+#. module: website_legal_page
+#: view:website:website_legal_page.acceptance_full
+msgid "I accept the"
+msgstr "Sprejemam"
 
 #. module: website_legal_page
 #: view:website:website.layout

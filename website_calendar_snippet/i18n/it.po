@@ -4,11 +4,12 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
+"POT-Creation-Date: 2016-08-29 12:59+0000\n"
 "PO-Revision-Date: 2016-03-11 08:54+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #. module: website_calendar_snippet
 #. openerp-web
-#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:65
+#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:70
 #, python-format
 msgid "All day"
 msgstr "Tutto il giorno"
@@ -32,28 +33,28 @@ msgstr "Calendario"
 
 #. module: website_calendar_snippet
 #. openerp-web
-#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:70
+#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:75
 #, python-format
 msgid "Day"
 msgstr "Giorno"
 
 #. module: website_calendar_snippet
 #. openerp-web
-#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:68
+#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:73
 #, python-format
 msgid "Month"
 msgstr "Mese"
 
 #. module: website_calendar_snippet
 #. openerp-web
-#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:67
+#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:72
 #, python-format
 msgid "Today"
 msgstr "Oggi"
 
 #. module: website_calendar_snippet
 #. openerp-web
-#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:69
+#: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:74
 #, python-format
 msgid "Week"
 msgstr "Settimana"

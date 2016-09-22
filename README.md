@@ -34,17 +34,20 @@ addon | version | summary
 [website_crm_address](website_crm_address/) | 8.0.1.0.0 | Lets visitors fill in their address in the contact form
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 | Website CRM privacy policy
 [website_crm_quick_answer](website_crm_quick_answer/) | 8.0.1.0.0 | Add an automatic answer for contacts asking for info
+[website_crm_recaptcha](website_crm_recaptcha/) | 8.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_event_filter_organizer](website_event_filter_organizer/) | 8.0.1.0.0 | Filter events by organizer in frontend
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 | Combine free and paid tickets on events
+[website_form_recaptcha](website_form_recaptcha/) | 8.0.1.0.0 | Provides a ReCaptcha field for Website Forms
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 | Display the structure of your departments and their members.
 [website_img_bg_style](website_img_bg_style/) | 8.0.1.0.0 | Let you change styles of snippets background images
-[website_legal_page](website_legal_page/) | 8.0.1.0.0 | Website legal page
+[website_legal_page](website_legal_page/) | 8.0.1.1.0 | Website legal page
 [website_logo](website_logo/) | 8.0.2.0.0 | Website company logo
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 | Website Menu Multilanguage
 [website_multi_image](website_multi_image/) | 8.0.1.0.0 | Templates to display multiple images in website views
 [website_no_crawler](website_no_crawler/) | 8.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
+[website_parameterized_snippet](website_parameterized_snippet/) | 8.0.1.0.0 | Parameterize snippets
 [website_portal](website_portal/) | 8.0.1.0.0 | Account Management Frontend for your Customers
 [website_portal_purchase](website_portal_purchase/) | 8.0.1.0.0 | Add your purchase document in the frontend portal (purchase order, request for quotations, supplier invoices)
 [website_portal_sale](website_portal_sale/) | 8.0.1.0.0 | Add your sales document in the frontend portal (sales order, quotations, invoices)
@@ -54,7 +57,7 @@ addon | version | summary
 [website_sale_product_category_seo](website_sale_product_category_seo/) | 1.0 | add Public Product Categories CMS Blocks
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 | Prevent optional products to be sold singularly
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 | VAT number required in checkout form
-[website_seo_redirection](website_seo_redirection/) | 8.0.1.0.0 | Redirect any controller to the URL of your dreams
+[website_seo_redirection](website_seo_redirection/) | 8.0.1.1.0 | Redirect any controller to the URL of your dreams
 [website_signup_legal_page_required](website_signup_legal_page_required/) | 8.0.1.0.0 | Force the user to accept the legal terms to open an account
 [website_slides](website_slides/) | 8.0.1.0.0 | Share and Publish Videos, Presentations and Documents
 [website_snippet_anchor](website_snippet_anchor/) | 8.0.1.0.0 | Allow to reach a concrete section in the page
