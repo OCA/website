@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+       
+        <template id="products_add_to_cart" inherit_id="website_sale.products_add_to_cart">
+            <xpath expr="//a[@class='btn btn-default btn-xs fa fa-shopping-cart a-submit']" position="replace">
+                <t t-if="product.website_btn_addtocart_published == True">
+                    <a class="btn btn-default btn-xs fa fa-shopping-cart a-submit"/>
+                </t>
+            </xpath>
+            <xpath expr="//a[@class='btn btn-default btn-xs fa fa-shopping-cart']" position="replace">
+                <t t-if="product.website_btn_addtocart_published == True">
+                    <a class="btn btn-default btn-xs fa fa-shopping-cart" t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']>1 else None))"/>
+                </t>
+            </xpath>
+        </template>
+
+        <template id="product" inherit_id="website_sale.product">
+            <xpath expr="//a[@class='btn btn-primary btn-lg mt8 js_check_product a-submit']" position="replace">
+                <t t-if="product.website_btn_addtocart_published == True">
+                    <a id="add_to_cart" class="btn btn-primary btn-lg mt8 js_check_product a-submit" href="#">Add to Cart</a>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>
