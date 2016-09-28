@@ -55,6 +55,7 @@ class BlogTag(models.Model):
         for this in self:
             # green therp, darkgreen, blue. 
             # hastable allows me to use better performing randint here too.
+            # TODO EXTEND THE THREE COLORS , TO BE SELECTE<F5><F6>D
             hashtable = {1:'#7b7655', 2: '#006400', 3: '#4682B4'}
             this.random_color = hashtable[random.randint(1,3)]
 

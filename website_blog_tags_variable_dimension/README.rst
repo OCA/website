@@ -2,15 +2,15 @@
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 
-=================================================
-Website Tag cloud with tags of variable dimension
-=================================================
+=====================================================================
+Website tag cloud with tags of variable dimension, position and color
+=====================================================================
 
 Extends the tag cloud availiable in website_blog to support 
 variable dimensions of the tags, based on the number of blogs they 
 are contained in.
 
-The tag cloud is allways placed on the top of the right column.
+The tag cloud is always placed on the top of the right column.
 
 
 For further information, please visit:
