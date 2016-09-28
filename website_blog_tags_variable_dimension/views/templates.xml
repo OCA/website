@@ -8,6 +8,16 @@
             </xpath>  
         </template>
 
+       
+        <template id="opt_blog_rc_tags_var_dim_strucure" 
+            inherit_id="website_blog.index_right" customize_show="False" active="True">
+            <!-- note empty to keep cloud allways on top  -->
+            <xpath expr="//div[@id='blog_right_column']" position="inside">
+                <section>
+                </section>
+            </xpath>
+        </template>
+
         <template id="opt_blog_rc_tags_var_dim" name="Variable Dimension Tag Cloud"
             inherit_id="website_blog.index_right" active="False" customize_show="True">
             <!-- note keep this tag cloud allways on top  -->
