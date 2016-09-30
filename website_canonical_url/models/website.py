@@ -25,4 +25,11 @@ class website(models.Model):
                 # change the path of the url
                 url_parts[2] = lang + url_parts[2]
                 canonical_url = urlunparse(url_parts)
+        # Special case for rerouted requests to root path
+        try:
+            if (canonical_url.startswith("/page/") and
+                    self.menu_id.child_id[0].url == canonical_url):
+                canonical_url = "/"
+        except:
+            pass
         return canonical_url
