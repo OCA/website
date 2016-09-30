@@ -16,7 +16,7 @@ class website(models.Model):
         if req is None:
             req = request
         if req and req.httprequest.base_url:
-            lang = self._context['lang']
+            lang = self.env.lang
             if lang == request.website.default_lang_code:
                 canonical_url = req.httprequest.base_url
             else:
