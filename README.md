@@ -57,7 +57,7 @@ addon | version | summary
 [website_sale_product_category_seo](website_sale_product_category_seo/) | 1.0 | add Public Product Categories CMS Blocks
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 | Prevent optional products to be sold singularly
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 | VAT number required in checkout form
-[website_seo_redirection](website_seo_redirection/) | 8.0.1.0.0 | Redirect any controller to the URL of your dreams
+[website_seo_redirection](website_seo_redirection/) | 8.0.1.1.0 | Redirect any controller to the URL of your dreams
 [website_signup_legal_page_required](website_signup_legal_page_required/) | 8.0.1.0.0 | Force the user to accept the legal terms to open an account
 [website_slides](website_slides/) | 8.0.1.0.0 | Share and Publish Videos, Presentations and Documents
 [website_snippet_anchor](website_snippet_anchor/) | 8.0.1.0.0 | Allow to reach a concrete section in the page

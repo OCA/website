@@ -12,6 +12,9 @@ URLs and allow you to improve the SEO.
 Usage
 =====
 
+Moving a page to another URL
+----------------------------
+
 Let's assume you created a blog post entry that is absolutely amazing and you
 want a fixed and beautiful URL for it. That entry is posted in
 ``https://example.com/blog/our-news-1/post/amazing-post-23``, but you want it
@@ -19,10 +22,28 @@ at ``https://example.com/amazing``. You need to:
 
 #. Go to *Settings > Configuration > SEO Redirections > Create*.
 #. Set ``/blog/our-news-1/post/amazing-post-23`` as *Original URL*.
-#. Set ``/amazing`` as *Redirected URL*.
+#. Set ``/amazing`` as *Destination URL*.
+#. Enable *Relocate controller*.
 
 Now navigate to any of both URLs, and you will get to the blog post, but with
 the URL you wanted.
+
+Setting a URL as a redirection to another one
+---------------------------------------------
+
+Let's assume you created a blog post entry that is absolutely amazing and you
+want a shortened URL that redirects to it. That entry is posted in
+``https://example.com/blog/our-news-1/post/amazing-post-23``, but you want that
+``https://example.com/amazing`` redirects to it. You need to:
+
+#. Go to *Settings > Configuration > SEO Redirections > Create*.
+#. Set ``/amazing`` as *Original URL*.
+#. Set ``/blog/our-news-1/post/amazing-post-23`` as *Destination URL*.
+#. Disable *Relocate controller*.
+
+Now navigate to any of both URLs, and you will get to the blog post, with its
+original URL untouched.
+
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
@@ -31,10 +52,15 @@ the URL you wanted.
 Known issues / Roadmap
 ======================
 
-* The frontend *Promote* view should be extended to display and modify this
-  information more easily.
-* Add ability to have several redirected URLs for a single original URL.
+* Redirections are cached. If you hit one once, and then change it, you will
+  mostly have to clear your browser's cache to avoid hitting a 404 error.
 * Make it multiwebsite-compatible.
+
+Notes for migration to v10:
+
+* `#4146 <https://github.com/odoo/odoo/issues/4146>`_ was fixed, so we could
+  make the *Promote* panel load data from an extended ``website.seo.metadata``
+  class.
 
 Bug Tracker
 ===========

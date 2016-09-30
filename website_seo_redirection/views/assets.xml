@@ -9,6 +9,8 @@
     <xpath expr=".">
         <script type="text/javascript"
                 src="/website_seo_redirection/static/src/js/website_seo_redirection.tour.js"/>
+        <script type="text/javascript"
+                src="/website_seo_redirection/static/src/js/website_seo.js"/>
     </xpath>
 </template>
 
