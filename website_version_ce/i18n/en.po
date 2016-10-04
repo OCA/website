@@ -1316,8 +1316,8 @@ msgstr "Version:"
 
 #. module: website_version_ce
 #: model:ir.ui.menu,name:website_version_ce.menu_website_version_ce_root
-msgid "Versionning"
-msgstr "Versionning"
+msgid "Versioning"
+msgstr "Versioning"
 
 #. module: website_version_ce
 #: model:ir.actions.act_window,name:website_version_ce.action_version

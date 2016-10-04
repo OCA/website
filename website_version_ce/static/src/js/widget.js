@@ -21,7 +21,7 @@ var rtoken = form_common.AbstractField.extend({
     $('button.GoogleAccess').prop('disabled', true);
     var context = pyeval.eval('context');
     self.rpc('/website_version_ce/google_access', {
-        fromurl: window.location.href,
+        from_url: window.location.href,
         local_context: context
     }).done(function(o) {
         if (o.status === "need_auth") {

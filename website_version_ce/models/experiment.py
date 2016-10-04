@@ -57,6 +57,29 @@ class Experiment(models.Model):
     _inherit = ['mail.thread']
     _order = 'sequence'
 
+    name = fields.Char(string="Title", required=True)
+    experiment_version_ids = fields.One2many(
+        'website_version_ce.experiment.version',
+        'experiment_id',
+        string="Experiment Version"
+    )
+    website_id = fields.Many2one('website', string="Website", required=True)
+    state = fields.Selection(
+        [
+            ('running', 'Running'),
+            ('paused', 'Paused'),
+            ('ended', 'Ended')
+        ],
+        'Status', required=True, copy=False, track_visibility='onchange',
+        default='running')
+    goal_id = fields.Many2one('website_version_ce.goals', string="Objective",
+                              required=True)
+    color = fields.Integer('Color Index')
+    version_number = fields.Integer(compute='_get_version_number',
+                                    string='Version Number')
+    sequence = fields.Integer(required=True, default=1)
+    google_id = fields.Char(string="Google id")
+
     @api.multi
     @api.constrains('state')
     def _check_view(self):
@@ -73,7 +96,7 @@ class Experiment(models.Model):
                         ('experiment_id.state', '=', 'running')
                     ]):
                         raise ValidationError(_(
-                            'This experiment contains a view which ' +
+                            'This experiment contains a view which '
                             'is already used in another running experience'))
         return True
 
@@ -84,7 +107,7 @@ class Experiment(models.Model):
             for exp_ver in exp.experiment_version_ids:
                 if not exp_ver.version_id.website_id.id == exp.website_id.id:
                     raise ValidationError(_(
-                        'This experiment must have versions which ' +
+                        'This experiment must have versions which '
                         'are in the same website'))
 
     @api.model
@@ -93,7 +116,6 @@ class Experiment(models.Model):
         """ Override read_group to always display all states. """
         if groupby and groupby[0] == "state":
             # Default result structure
-            # states = self._get_state_list(cr, uid, context=context)
             states = [('running', 'Running'), ('paused', 'Paused'),
                       ('ended', 'Ended')]
             read_group_all_states = [{
@@ -127,42 +149,19 @@ class Experiment(models.Model):
         for exp in self:
             exp.version_number = len(exp.experiment_version_ids) + 1
 
-    name = fields.Char(string="Title", required=True)
-    experiment_version_ids = fields.One2many(
-        'website_version_ce.experiment.version',
-        'experiment_id',
-        string="Experiment Version"
-    )
-    website_id = fields.Many2one('website', string="Website", required=True)
-    state = fields.Selection(
-        [
-            ('running', 'Running'),
-            ('paused', 'Paused'),
-            ('ended', 'Ended')
-        ],
-        'Status', required=True, copy=False, track_visibility='onchange',
-        default='running')
-    goal_id = fields.Many2one('website_version_ce.goals', string="Objective",
-                              required=True)
-    color = fields.Integer('Color Index')
-    version_number = fields.Integer(compute=_get_version_number,
-                                    string='Version Number')
-    sequence = fields.Integer('Sequence', required=True, default=1)
-    google_id = fields.Char(string="Google id")
-
     @api.model
     def create(self, vals):
         exp = {
             'name': vals['name'],
             'objectiveMetric': self.env['website_version_ce.goals'].browse(
-                [vals['goal_id']])[0].google_ref,
+                [vals['goal_id']]).google_ref,
             'status': vals['state'],
             'variations': [
                 {'name': 'master', 'url': 'http://localhost/master'}]
         }
         version_list = vals.get('experiment_version_ids', [])
         for version in version_list:
-            if version[0] == 0:
+            if version == 0:
                 name = self.env['website_version_ce.version'].browse(
                     [version[2]['version_id']])[0].name
                 # We must give a URL for each version in the experiment

@@ -9,7 +9,7 @@
 Website Version
 ===============
 
-This module extends the functionality of the website by adding versionning
+This module extends the functionality of the website by adding versioning
 of pages and A/B testing.
 
 Usage

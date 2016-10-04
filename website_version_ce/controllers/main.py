@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-#
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-import datetime
-from openerp import http
+from openerp import http, fields
 from openerp.http import request
 from openerp.addons.website.controllers.main import Website
 from openerp.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
@@ -24,7 +23,7 @@ class VersioningController(Website):
                 website=True)
     def create_version(self, name, version_id=None):
         if not name:
-            name = datetime.datetime.now().strftime(
+            name = fields.Datetime.now().strftime(
                 DEFAULT_SERVER_DATETIME_FORMAT)
         new_version = request.env['website_version_ce.version'].create(
             {'name': name, 'website_id': request.website.id}
@@ -129,8 +128,7 @@ class VersioningController(Website):
         client_secret = gs_obj.get_client_secret(
             'management', context=kw.get('local_context'))
         if not client_id or not client_secret:
-            dummy, action = request.registry.get(
-                'ir.model.data').get_object_reference(
+            dummy, action = request.env['ir.model.data'].get_object_reference(
                     request.cr,
                     request.uid,
                     'website_version_ce',
@@ -141,7 +139,7 @@ class VersioningController(Website):
                 "url": '',
                 "action": action
             }
-        url = gm_obj.authorize_google_uri(from_url=kw.get('fromurl'),
+        url = gm_obj.authorize_google_uri(from_url=kw.get('from_url'),
                                           context=kw.get('local_context'))
         return {
             "status": "need_auth",

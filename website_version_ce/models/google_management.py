@@ -27,21 +27,32 @@ class GoogleManagement(models.AbstractModel):
         }
 
     @api.model
-    def create_an_experiment(self, data, website_id):
+    def _setup_exp_variables(self, website_id, check=False):
         gs_pool = self.env['google.service']
-        website = self.env['website'].browse(website_id)[0]
+        website = self.env['website'].browse(website_id)
         web_property_id = website.google_analytics_key
         action_id = self.env['ir.model.data'].xmlid_to_res_id(
             'website_version_ce.action_website_view')
-        if not web_property_id:
+
+        if check and not web_property_id:
             raise exceptions.RedirectWarning(_(
-                'Click on the website you want to make A/B testing and ' +
+                'Click on the website you want to make A/B testing and '
                 'configure the Google Analytics Key and View ID'),
                 action_id,
                 _('go to the websites menu')
             )
+
         account_id = web_property_id.split('-')[1]
         profile_id = website.google_analytics_view_id
+
+        return (gs_pool, website, web_property_id,
+                action_id, account_id, profile_id)
+
+    @api.model
+    def create_an_experiment(self, data, website_id):
+        (gs_pool, website, web_property_id, action_id, account_id,
+         profile_id) = self._setup_exp_variables(website_id, True)
+
         if not profile_id:
             raise exceptions.RedirectWarning(_(
                 'Click on the website you want to make A/B testing and ' +
@@ -61,18 +72,15 @@ class GoogleManagement(models.AbstractModel):
             x = gs_pool._do_request(url, data_json, headers, type='POST')
             result = x[1]['id']
         except Exception, e:
-            _logger.info(_('An exception occured during the google ' +
-                           'analytics rquest: %s') % e)
+            _logger.exception(_('An exception occured during the google '
+                                'analytics request: %s') % e)
             raise
         return result
 
     @api.model
     def update_an_experiment(self, data, google_id, website_id):
-        gs_pool = self.env['google.service']
-        website = self.env['website'].browse(website_id)[0]
-        web_property_id = website.google_analytics_key
-        account_id = web_property_id.split('-')[1]
-        profile_id = website.google_analytics_view_id
+        (gs_pool, website, web_property_id, action_id, account_id,
+         profile_id) = self._setup_exp_variables(website_id)
 
         url = ('/analytics/v3/management/accounts/%s/webproperties' +
                '/%s/profiles/%s/experiments/%s?access_token=%s') % (
@@ -89,11 +97,8 @@ class GoogleManagement(models.AbstractModel):
 
     @api.model
     def get_experiment_info(self, google_id, website_id):
-        gs_pool = self.env['google.service']
-        website = self.env['website'].browse(website_id)[0]
-        web_property_id = website.google_analytics_key
-        account_id = web_property_id.split('-')[1]
-        profile_id = website.google_analytics_view_id
+        (gs_pool, website, web_property_id, action_id, account_id,
+         profile_id) = self._setup_exp_variables(website_id)
 
         params = {
             'access_token': self.get_token(),
@@ -111,11 +116,8 @@ class GoogleManagement(models.AbstractModel):
 
     @api.model
     def get_goal_info(self, website_id):
-        gs_pool = self.env['google.service']
-        website = self.env['website'].browse(website_id)[0]
-        web_property_id = website.google_analytics_key
-        account_id = web_property_id.split('-')[1]
-        profile_id = website.google_analytics_view_id
+        (gs_pool, website, web_property_id, action_id, account_id,
+         profile_id) = self._setup_exp_variables(website_id)
 
         params = {
             'access_token': self.get_token(),
@@ -133,11 +135,8 @@ class GoogleManagement(models.AbstractModel):
 
     @api.model
     def delete_an_experiment(self, google_id, website_id):
-        gs_pool = self.env['google.service']
-        website = self.env['website'].browse(website_id)[0]
-        web_property_id = website.google_analytics_key
-        account_id = web_property_id.split('-')[1]
-        profile_id = website.google_analytics_view_id
+        (gs_pool, website, web_property_id, action_id, account_id,
+         profile_id) = self._setup_exp_variables(website_id)
         params = {
             'access_token': self.get_token()
         }

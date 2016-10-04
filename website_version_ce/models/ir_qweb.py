@@ -11,7 +11,7 @@ Also, adds methods to convert values back to openerp models.
 from openerp import models
 
 
-class QWeb(models.AbstractModel):
+class IrQweb(models.AbstractModel):
     """ QWeb object for rendering stuff in the website context
     """
     _inherit = 'ir.qweb'
@@ -59,5 +59,5 @@ class QWeb(models.AbstractModel):
                 cr, uid, domain, order='website_id, version_id',
                 limit=1, context=context)[0]
 
-        return super(QWeb, self).render(
+        return super(IrQweb, self).render(
             cr, uid, id_or_xml_id, qwebcontext, loader=loader, context=context)

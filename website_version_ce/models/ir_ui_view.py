@@ -5,7 +5,7 @@ from lxml import etree
 from openerp import tools, fields, models, api
 
 
-class View(models.Model):
+class IrUiView(models.Model):
 
     _inherit = "ir.ui.view"
 
@@ -41,10 +41,10 @@ class View(models.Model):
                         copy_v = current.copy({'version_id': version_id,
                                                'website_id': website_id})
                         version_view_ids += copy_v
-            super(View, version_view_ids).write(vals)
+            super(IrUiView, version_view_ids).write(vals)
         else:
             self.env.context = dict(self.env.context, write_on_view=True)
-            super(View, self).write(vals)
+            super(IrUiView, self).write(vals)
 
     @api.multi
     def publish(self):
@@ -55,7 +55,8 @@ class View(models.Model):
         master_record = self.search([
             ('key', '=', self.key),
             ('version_id', '=', False),
-            ('website_id', '=', self.website_id.id)
+            ('website_id', '=', self.website_id.id),
+            ('limit', "=", 1)
         ])
         if master_record:
             master_record.unlink()
@@ -83,7 +84,7 @@ class View(models.Model):
             xml_id = self.search(
                 domain, order='website_id,version_id', limit=1).id
         else:
-            xml_id = super(View, self).get_view_id(xml_id)
+            xml_id = super(IrUiView, self).get_view_id(xml_id)
         return xml_id
 
     @tools.ormcache_context(
@@ -110,7 +111,7 @@ class View(models.Model):
     # To take the right inheriting views
     @api.model
     def get_inheriting_views_arch(self, view_id, model):
-        arch = super(View, self).get_inheriting_views_arch(view_id, model)
+        arch = super(IrUiView, self).get_inheriting_views_arch(view_id, model)
         vw = self.browse(view_id)
         if not (self.env.context and self.env.context.get('website_id') and
                 vw.type == 'qweb'):
@@ -155,23 +156,20 @@ class View(models.Model):
                         priority[k.key] = 1
         return [x for x in arch if x[1] in right_ids.values()]
 
-    # To active or desactive the right views according to the key
-    def toggle(self, cr, uid, ids, context=None):
+    # Activate or deactivate the right views according to the key
+    @api.multi
+    def toggle(self):
         """ Switches between enabled and disabled statuses
         """
-        for view in self.browse(
-                cr, uid, ids, context=dict(context or {}, active_test=False)):
-            all_id = self.search(
-                cr, uid, [('key', '=', view.key)],
-                context=dict(context or {}, active_test=False))
-            for v in self.browse(
-                    cr, uid, all_id,
-                    context=dict(context or {}, active_test=False)):
+        recs = self.with_context(active_test=False)
+        for view in recs.browse(self.ids):
+            all_id = recs.search([('key', '=', view.key)])
+            for v in recs.browse(all_id):
                 v.write({'active': not v.active})
 
     @api.model
     def customize_template_get(self, key, full=False, bundles=False, **kw):
-        result = super(View, self).customize_template_get(
+        result = super(IrUiView, self).customize_template_get(
             key, full=full, bundles=bundles, **kw)
         check = []
         res = []

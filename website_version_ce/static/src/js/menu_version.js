@@ -238,7 +238,7 @@ var EditorVersion = Widget.extend({
                     ajax.jsonRpc( '/website_version_ce/set_google_access', 'call', {'ga_key':ga_key, 'view_id':view_id, 'client_id':client_id, 'client_secret':client_secret}).then(function (result) {
                         var context = base.get_context();
                         ajax.jsonRpc( '/website_version_ce/google_access', 'call', {
-                            fromurl: window.location.href,
+                            from_url: window.location.href,
                             local_context: context
                         }).done(function(o) {
                             if (o.status === "need_auth") {
