@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
     
-========================
-Website Sale Add To Cart
-========================
+======================================
+Website Add To Chart Button Visibility
+======================================
 
 This module was written to extend the functionality of the website to control
 button add to cart. Button add to cart can now be set to be published or not.
