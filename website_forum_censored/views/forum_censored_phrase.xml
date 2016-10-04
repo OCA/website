@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="forum_censored_phrase_tree" model="ir.ui.view">
+        <field name="name">forum.censored.phrase.tree</field>
+        <field name="model">forum.censored.phrase</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="phrase" />
+                <field name="replacement" />
+            </tree>
+        </field>
+    </record>
+    
+    <record id="forum_censored_phrase_action" model="ir.actions.act_window">
+        <field name="name">Censorship</field>
+        <field name="res_model">forum.censored.phrase</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>
