@@ -4,6 +4,7 @@
 from . import ir_ui_view
 from . import version
 from . import website
+from . import experiment_version
 from . import experiment
 from . import ir_qweb
 from . import analytics_config_settings
