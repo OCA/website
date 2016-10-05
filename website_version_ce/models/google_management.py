@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import logging
 from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from openerp.exceptions import Warning as UserError
-from openerp import models, exceptions, api
+from openerp import models, exceptions, api, fields
 from openerp.tools.translate import _
 import simplejson
 
@@ -160,7 +160,7 @@ class GoogleManagement(models.AbstractModel):
             raise UserError(_("You must configure your account."))
         if datetime.strptime(
                 validity.split('.')[0], DEFAULT_SERVER_DATETIME_FORMAT) < \
-                (datetime.now() + timedelta(minutes=3)):
+                (fields.Datetime.now() + timedelta(minutes=3)):
             token = self.do_refresh_token()
         return token
 
@@ -174,7 +174,7 @@ class GoogleManagement(models.AbstractModel):
             rtoken, self.STR_SERVICE)
 
         icp.set_param('google_%s_token_validity' % self.STR_SERVICE,
-                      datetime.now() +
+                      fields.Datetime.now() +
                       timedelta(seconds=all_token.get('expires_in')))
         icp.set_param('google_%s_token' % self.STR_SERVICE,
                       all_token.get('access_token'))
@@ -202,15 +202,16 @@ class GoogleManagement(models.AbstractModel):
         vals = dict()
         vals['google_%s_rtoken' % self.STR_SERVICE] = all_token.get(
             'refresh_token')
-        vals['google_%s_token_validity' % self.STR_SERVICE] = datetime.now(
-            ) + timedelta(seconds=all_token.get('expires_in'))
+        vals['google_%s_token_validity' % self.STR_SERVICE] = \
+            fields.Datetime.now() + \
+            timedelta(seconds=all_token.get('expires_in'))
         vals['google_%s_token' % self.STR_SERVICE] = all_token.get(
             'access_token')
         icp = self.env['ir.config_parameter'].sudo()
         icp.set_param('google_%s_rtoken' % self.STR_SERVICE, all_token.get(
             'refresh_token'))
         icp.set_param('google_%s_token_validity' % self.STR_SERVICE,
-                      datetime.now() + timedelta(
+                      fields.Datetime.now() + timedelta(
                           seconds=all_token.get('expires_in')))
         icp.set_param('google_%s_token' % self.STR_SERVICE, all_token.get(
             'access_token'))

@@ -6,6 +6,6 @@ from . import version
 from . import website
 from . import experiment
 from . import ir_qweb
-from . import res_config
+from . import analytics_config_settings
 from . import ir_http
 from . import google_management
