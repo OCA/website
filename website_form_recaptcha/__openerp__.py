@@ -11,7 +11,7 @@
     "author": "LasLabs, Odoo Community Association",
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    'installable': False,
     "depends": [
         "website_form",
     ],
