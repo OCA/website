@@ -3,68 +3,66 @@
 # * website_legal_page
 # 
 # Translators:
-# Christophe CHAUVET <christophe.chauvet@gmail.com>, 2016
-# Sébastien Alix <seb@usr-src.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (9.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2016-11-10 14:06+0000\n"
-"Last-Translator: Sébastien Alix <seb@usr-src.org>\n"
-"Language-Team: French (http://www.transifex.com/oca/OCA-website-9-0/language/fr/)\n"
+"PO-Revision-Date: 2016-05-26 15:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Bulgarian (http://www.transifex.com/oca/OCA-website-9-0/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid ", and the"
-msgstr ", et les"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid ", the"
-msgstr ", la"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "I accept the"
-msgstr "J'accepte les"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.legal_advice_link
 msgid "Legal advice"
-msgstr "Mentions légales"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy_policy_link
 msgid "Privacy policy"
-msgstr "Politique de vie privée"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.terms_of_use_link
 msgid "Terms of use"
-msgstr "Conditions d'utilisation"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "legal advice"
-msgstr "mentions légales"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "of this website."
-msgstr "du site web"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "privacy policy"
-msgstr "politique de vie privée"
+msgstr "политика за личните данни"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "terms of use"
-msgstr "conditions d'utilisation"
+msgstr ""
