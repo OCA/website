@@ -4,7 +4,7 @@
 from openerp import fields, models, api
 
 
-class AnalyticsConfigSettings(models.TransientModel):
+class BaseConfigSettings(models.TransientModel):
 
     _inherit = 'base.config.settings'
 
