@@ -15,5 +15,6 @@
         'views/forum_censored_phrase.xml',
         'menuitems.xml'
     ],
-    'summary': "Block phrases entered in forum posts and comments."
+    'summary': "Block phrases entered in forum posts and comments.",
+    'installable': False,
 }
