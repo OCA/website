@@ -18,7 +18,7 @@ class Version(models.Model):
     view_ids = fields.One2many('ir.ui.view', 'version_id', string="View",
                                copy=True)
     website_id = fields.Many2one('website', ondelete='cascade',
-                                 string="Website")
+                                 string="Website", required=True)
     create_date = fields.Datetime('Create Date')
 
     _sql_constraints = [

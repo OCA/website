@@ -25,7 +25,7 @@ var EditorVersion = Widget.extend({
         });
 
         this.$el.find('#version-menu-button').click(function() {
-            var view_id = parseInt($('html').attr('data-view-xmlid'));
+            var view_id = parseInt($('html').data('view-xmlid'));
             ajax.jsonRpc( '/website_version_ce/all_versions', 'call', {'view_id': view_id}).then(function (result) {
                 self.$el.find(".o_version_choice").remove();
                 self.$el.find(".first_divider").before(qweb.render("website_version_ce.all_versions", {versions:result}));
@@ -44,34 +44,34 @@ var EditorVersion = Widget.extend({
 
     duplicate_version: function(event) {
         var version_id = base.get_context().version_id;
-        var wizardA = $(qweb.render("website_version_ce.new_version",{'default_name': moment().format('L')}));
-        wizardA.appendTo($('body')).modal({"keyboard" :true});
-        wizardA.on('click','.o_create', function(){
-            wizardA.find('.o_message').remove();
-            var version_name = wizardA.find('.o_version_name').val();
+        var $wizardA = $(qweb.render("website_version_ce.new_version",{'default_name': moment().format('L')}));
+        $wizardA.appendTo($('body')).modal({"keyboard" :true});
+        $wizardA.on('click','.o_create', function(){
+            $wizardA.find('.o_message').remove();
+            var version_name = $wizardA.find('.o_version_name').val();
             if(version_name.length === 0){
-                wizardA.find(".o_version_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
+                $wizardA.find(".o_version_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
             }
             else{
-                wizardA.modal("hide");
+                $wizardA.modal("hide");
                 ajax.jsonRpc( '/website_version_ce/create_version', 'call', { 'name': version_name, 'version_id': version_id}).then(function (result) {
 
-                    var wizard = $(qweb.render("website_version_ce.dialogue",{message:_.str.sprintf("You are now working on version: %s.", version_name),
+                    var $wizard = $(qweb.render("website_version_ce.dialogue",{message:_.str.sprintf("You are now working on version: %s.", version_name),
                                                                                    dialogue:_.str.sprintf("If you edit this page or others, all changes will be recorded in the version. It will not be visible by visitors until you publish the version.")}));
-                    wizard.appendTo($('body')).modal({"keyboard" :true});
-                    wizard.on('click','.o_confirm', function(){
+                    $wizard.appendTo($('body')).modal({"keyboard" :true});
+                    $wizard.on('click','.o_confirm', function(){
                         window.location.href = '\?enable_editor';
                     });
-                    wizard.on('hidden.bs.modal', function () {$(this).remove();});
+                    $wizard.on('hidden.bs.modal', function () {$(this).remove();});
                 }).fail(function(){
-                    var wizard = $(qweb.render("website_version_ce.message",{message:_t("This name already exists.")}));
-                    wizard.addClass("o_error");
-                    wizard.appendTo($('body')).modal({"keyboard" :true});
-                    wizard.on('hidden.bs.modal', function () {$(this).remove();});
+                    var $wizard = $(qweb.render("website_version_ce.message",{message:_t("This name already exists.")}));
+                    $wizard.addClass("o_error");
+                    $wizard.appendTo($('body')).modal({"keyboard" :true});
+                    $wizard.on('hidden.bs.modal', function () {$(this).remove();});
                 });
             }
         });
-        wizardA.on('hidden.bs.modal', function () {$(this).remove();});
+        $wizardA.on('hidden.bs.modal', function () {$(this).remove();});
     },
 
     change_version: function(event) {
@@ -89,69 +89,69 @@ var EditorVersion = Widget.extend({
         var name = $(event.currentTarget).parent().children(':last-child').text();
         ajax.jsonRpc( '/website_version_ce/check_version', 'call', { 'version_id':version_id }).then(function (result) {
                 if (result){
-                    var wizard = $(qweb.render("website_version_ce.message",{message:_.str.sprintf("You cannot delete the %s version because it is in a running or paused experiment", name)}));
-                    wizard.appendTo($('body')).modal({"keyboard" :true});
-                    wizard.on('hidden.bs.modal', function () {$(this).remove();});
+                    var $wizard = $(qweb.render("website_version_ce.message",{message:_.str.sprintf("You cannot delete the %s version because it is in a running or paused experiment", name)}));
+                    $wizard.appendTo($('body')).modal({"keyboard" :true});
+                    $wizard.on('hidden.bs.modal', function () {$(this).remove();});
                 }
                 else{
-                    var wizardA = $(qweb.render("website_version_ce.delete_message",{message:_.str.sprintf("Are you sure you want to delete the %s version ?", name)}));
-                    wizardA.appendTo($('body')).modal({"keyboard" :true});
-                    wizardA.on('click','.o_confirm', function(){
+                    var $wizardA = $(qweb.render("website_version_ce.delete_message",{message:_.str.sprintf("Are you sure you want to delete the %s version ?", name)}));
+                    $wizardA.appendTo($('body')).modal({"keyboard" :true});
+                    $wizardA.on('click','.o_confirm', function(){
                         ajax.jsonRpc( '/website_version_ce/delete_version', 'call', { 'version_id':version_id }).then(function (result) {
-                            var wizardB = $(qweb.render("website_version_ce.message",{message:_.str.sprintf("The %s version has been deleted.", result)}));
-                            wizardB.appendTo($('body')).modal({"keyboard" :true});
-                            wizardB.on('click','.o_confirm', function(){
+                            var $wizardB = $(qweb.render("website_version_ce.message",{message:_.str.sprintf("The %s version has been deleted.", result)}));
+                            $wizardB.appendTo($('body')).modal({"keyboard" :true});
+                            $wizardB.on('click','.o_confirm', function(){
                                 location.reload();
-                            wizardB.on('hidden.bs.modal', function () {$(this).remove();});
+                            $wizardB.on('hidden.bs.modal', function () {$(this).remove();});
                             });
                         });
                     });
-                    wizardA.on('hidden.bs.modal', function () {$(this).remove();});
+                    $wizardA.on('hidden.bs.modal', function () {$(this).remove();});
                 }
             });
     },
 
     publish_version: function(event) {
         var version_id = base.get_context().version_id;
-        var name = $('#version-menu-button').attr('data-version_name');
+        var name = $('#version-menu-button').data('version_name');
         ajax.jsonRpc( '/website_version_ce/diff_version', 'call', { 'version_id':version_id}).then(function (result) {
-            var wizardA = $(qweb.render("website_version_ce.publish_message",{message:_.str.sprintf("Publish Version %s", name), list:result}));
-            wizardA.appendTo($('body')).modal({"keyboard" :true});
-            wizardA.on('click','.o_confirm', function(){
-                wizardA.find('.o_message').remove();
-                var check = wizardA.find('.o_check').is(':checked');
-                var copy_master_name = wizardA.find('.o_name').val();
+            var $wizardA = $(qweb.render("website_version_ce.publish_message",{message:_.str.sprintf("Publish Version %s", name), list:result}));
+            $wizardA.appendTo($('body')).modal({"keyboard" :true});
+            $wizardA.on('click','.o_confirm', function(){
+                $wizardA.find('.o_message').remove();
+                var check = $wizardA.find('.o_check').is(':checked');
+                var copy_master_name = $wizardA.find('.o_name').val();
                 if(check){
                     if(copy_master_name.length === 0){
-                        wizardA.find(".o_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
+                        $wizardA.find(".o_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
                     }
                     else{
                         ajax.jsonRpc( '/website_version_ce/publish_version', 'call', { 'version_id':version_id, 'save_master':true, 'copy_master_name':copy_master_name}).then(function (result) {
-                            var wizardB = $(qweb.render("website_version_ce.dialogue",{message:_.str.sprintf("The %s version has been published", result), dialogue:_.str.sprintf("The master has been saved on a new version called %s.",copy_master_name)}));
-                            wizardB.appendTo($('body')).modal({"keyboard" :true});
-                            wizardB.on('click','.o_confirm', function(){
+                            var $wizardB = $(qweb.render("website_version_ce.dialogue",{message:_.str.sprintf("The %s version has been published", result), dialogue:_.str.sprintf("The master has been saved on a new version called %s.",copy_master_name)}));
+                            $wizardB.appendTo($('body')).modal({"keyboard" :true});
+                            $wizardB.on('click','.o_confirm', function(){
                                 location.reload();
                             });
-                            wizardB.on('hidden.bs.modal', function () {$(this).remove();});
+                            $wizardB.on('hidden.bs.modal', function () {$(this).remove();});
                         });
                     }
                 }
                 else{
                     ajax.jsonRpc( '/website_version_ce/publish_version', 'call', { 'version_id':version_id, 'save_master':false, 'copy_master_name':""}).then(function (result) {
-                        var wizardC = $(qweb.render("website_version_ce.message",{message:_.str.sprintf("The %s version has been published.", result)}));
-                        wizardC.appendTo($('body')).modal({"keyboard" :true});
-                        wizardC.on('click','.o_confirm', function(){
+                        var $wizardC = $(qweb.render("website_version_ce.message",{message:_.str.sprintf("The %s version has been published.", result)}));
+                        $wizardC.appendTo($('body')).modal({"keyboard" :true});
+                        $wizardC.on('click','.o_confirm', function(){
                             location.reload();
                         });
-                        wizardC.on('hidden.bs.modal', function () {$(this).remove();});
+                        $wizardC.on('hidden.bs.modal', function () {$(this).remove();});
                     });
                 }
             });
-            wizardA.on('click','input[name="optionsRadios"]', function(){
-                wizardA.find('.o_message').remove();
-                wizardA.find('.o_name').toggle( wizardA.find('.o_check').is(':checked') );
+            $wizardA.on('click','input[name="optionsRadios"]', function(){
+                $wizardA.find('.o_message').remove();
+                $wizardA.find('.o_name').toggle( $wizardA.find('.o_check').is(':checked') );
             });
-            wizardA.on('hidden.bs.modal', function () {$(this).remove();});
+            $wizardA.on('hidden.bs.modal', function () {$(this).remove();});
         });
     },
 
@@ -159,10 +159,10 @@ var EditorVersion = Widget.extend({
         var version_id = base.get_context().version_id;
         var name = $('#version-menu-button').data('version_name');
         ajax.jsonRpc( '/website_version_ce/diff_version', 'call', { 'version_id':version_id}).then(function (result) {
-            var wizard = $(qweb.render("website_version_ce.diff",{list:result, version_name:name}));
-            wizard.appendTo($('body')).modal({"keyboard" :true});
-            wizard.on('click','.o_confirm', function(){});
-            wizard.on('hidden.bs.modal', function () {$(this).remove();});
+            var $wizard = $(qweb.render("website_version_ce.diff",{list:result, version_name:name}));
+            $wizard.appendTo($('body')).modal({"keyboard" :true});
+            $wizard.on('click','.o_confirm', function(){});
+            $wizard.on('hidden.bs.modal', function () {$(this).remove();});
         });
     },
 
@@ -173,66 +173,66 @@ var EditorVersion = Widget.extend({
 
     create_experiment: function() {
         var self = this;
-        var view_id = parseInt($('html').attr('data-view-xmlid'));
+        var view_id = parseInt($('html').data('view-xmlid'));
         ajax.jsonRpc( '/website_version_ce/all_versions_all_goals', 'call', { 'view_id': view_id }).then(function (result) {
-            var wizardA = $(qweb.render("website_version_ce.create_experiment",{versions:result.tab_version, goals:result.tab_goal, config:result.check_conf}));
-            wizardA.appendTo($('body')).modal({"keyboard" :true});
+            var $wizardA = $(qweb.render("website_version_ce.create_experiment",{versions:result.tab_version, goals:result.tab_goal, config:result.check_conf}));
+            $wizardA.appendTo($('body')).modal({"keyboard" :true});
 
-            wizardA.on('click','.o_launch', function(){
-                wizardA.find('.o_message').remove();
-                var name = wizardA.find('.o_name').val();
-                var tab = wizardA.find('.o_version');
+            $wizardA.on('click','.o_launch', function(){
+                $wizardA.find('.o_message').remove();
+                var name = $wizardA.find('.o_name').val();
+                var $tab = $wizardA.find('.o_version');
                 var result = [];
-                for (var i = 0; i < tab.length; i++){
-                    if ($(tab[i]).is(':checked')) {
-                        result.push(parseInt($(tab[i]).attr('data-version_id')));
+                for (var i = 0; i < $tab.length; i++){
+                    if ($($tab[i]).is(':checked')) {
+                        result.push(parseInt($($tab[i]).data('version_id')));
                     }
                 }
-                var goal_id = wizardA.find('.box').val();
+                var goal_id = $wizardA.find('.box').val();
                 var check = true;
                 if (name.length === 0){
-                    wizardA.find(".o_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
+                    $wizardA.find(".o_name").after("<p class='o_message' style='color : red'> *"+_t("This field is required")+"</p>");
                     check = false;
                 }
                 if (result.length === 0 && check){
-                    wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_t("You must select at least one version which is not Master.")+"</p>");
+                    $wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_t("You must select at least one version which is not Master.")+"</p>");
                     check = false;
                 }
                 if(check){
                     ajax.jsonRpc( '/website_version_ce/launch_experiment', 'call', { 'name':name, 'version_ids':result, 'goal_id':goal_id }).then(function (existing_experiment) {
                         if (!existing_experiment.existing){
-                            var wizardB = $(qweb.render("website_version_ce.dialogue",{message:_.str.sprintf("Your %s experiment is created.", name), dialogue:_t(" Now you can manage this experiment by clicking on Manage A/B tests.")}));
-                            wizardB.appendTo($('body')).modal({"keyboard" :true});
-                            wizardB.on('click','.o_confirm', function(){
+                            var $wizardB = $(qweb.render("website_version_ce.dialogue",{message:_.str.sprintf("Your %s experiment is created.", name), dialogue:_t(" Now you can manage this experiment by clicking on Manage A/B tests.")}));
+                            $wizardB.appendTo($('body')).modal({"keyboard" :true});
+                            $wizardB.on('click','.o_confirm', function(){
                                 location.reload();
                             });
-                            wizardB.on('hidden.bs.modal', function () {$(this).remove();});
+                            $wizardB.on('hidden.bs.modal', function () {$(this).remove();});
 
                         }
                         else{
                             if(existing_experiment.existing == 1){
-                                wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_.str.sprintf("Your %s experiment cannot be launched because this experiment contains a view which is already used in the running %s experiment.", name, existing_experiment.name)+"</p>");
+                                $wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_.str.sprintf("Your %s experiment cannot be launched because this experiment contains a view which is already used in the running %s experiment.", name, existing_experiment.name)+"</p>");
                             }
                             else{
-                                wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_.str.sprintf("You cannot have more then 24 running/paused experiments.")+"</p>");
+                                $wizardA.find(".o_versions").after("<p class='o_message' style='color : red'> *"+_.str.sprintf("You cannot have more then 24 running/paused experiments.")+"</p>");
                             }
                         }
                     });
                 }
             });
-            wizardA.on('click','.o_configure', function(){
-                var website_id = $('html').attr('data-website-id');
+            $wizardA.on('click','.o_configure', function(){
+                var website_id = $('html').data('website-id');
                 window.location.href ='/web#id='+website_id+'&view_type=form&model=website&action=website_version_ce.action_website_view';
             });
-            wizardA.on('click','.o_validate_0', function(){
-                wizardA.find('.o_message').remove();
-                var website_id = $('html').attr('data-website-id');
-                var ga_key = wizardA.find('.o_ga_key').val();
-                var view_id = wizardA.find('.o_view_id').val();
-                var client_id = wizardA.find('.o_client_id').val();
-                var client_secret = wizardA.find('.o_client_secret').val();
+            $wizardA.on('click','.o_validate_0', function(){
+                $wizardA.find('.o_message').remove();
+                var website_id = $('html').data('website-id');
+                var ga_key = $wizardA.find('.o_ga_key').val();
+                var view_id = $wizardA.find('.o_view_id').val();
+                var client_id = $wizardA.find('.o_client_id').val();
+                var client_secret = $wizardA.find('.o_client_secret').val();
                 if(ga_key.length === 0 || view_id.length === 0 || client_id.length === 0 || client_secret.length === 0){
-                    wizardA.find(".o_configure_ab").after("<p class='o_message' style='color : red'> *"+_t("You must fill all the fields.")+"</p>");
+                    $wizardA.find(".o_configure_ab").after("<p class='o_message' style='color : red'> *"+_t("You must fill all the fields.")+"</p>");
                 }
                 else{
                     ajax.jsonRpc( '/website_version_ce/set_google_access', 'call', {'ga_key':ga_key, 'view_id':view_id, 'client_id':client_id, 'client_secret':client_secret}).then(function (result) {
@@ -242,12 +242,12 @@ var EditorVersion = Widget.extend({
                             local_context: context
                         }).done(function(o) {
                             if (o.status === "need_auth") {
-                                var wizardC = $(qweb.render("website_version_ce.message",{message:_t("You will be redirected to Google to authorize access to your Analytics Account!")}));
-                                wizardC.appendTo($('body')).modal({"keyboard" :true});
-                                wizardC.on('click','.o_confirm', function(){
+                                var $wizardC = $(qweb.render("website_version_ce.message",{message:_t("You will be redirected to Google to authorize access to your Analytics Account!")}));
+                                $wizardC.appendTo($('body')).modal({"keyboard" :true});
+                                $wizardC.on('click','.o_confirm', function(){
                                     window.location.href = o.url;
                                 });
-                                wizardC.on('hidden.bs.modal', function () {$(this).remove();});
+                                $wizardC.on('hidden.bs.modal', function () {$(this).remove();});
                             }
                             else if (o.status === "need_config_from_admin"){
                               if (confirm(_t("The Google Management API key needs to be configured before you can use it, do you want to do it now?"))) {
@@ -258,18 +258,18 @@ var EditorVersion = Widget.extend({
                     });
                 }
             });
-            wizardA.on('click','.o_validate_2', function(){
-                var website_id = $('html').attr('data-website-id');
-                var ga_key = wizardA.find('.o_ga_key').val();
-                var view_id = wizardA.find('.o_view_id').val();
+            $wizardA.on('click','.o_validate_2', function(){
+                var website_id = $('html').data('website-id');
+                var ga_key = $wizardA.find('.o_ga_key').val();
+                var view_id = $wizardA.find('.o_view_id').val();
                 if(ga_key.length === 0 || view_id.length === 0){
-                    wizardA.find(".o_configure_ab").after("<p class='o_message' style='color : red'> *"+_t("You must fill all the fields.")+"</p>");
+                    $wizardA.find(".o_configure_ab").after("<p class='o_message' style='color : red'> *"+_t("You must fill all the fields.")+"</p>");
                 }
                 else{
                     ajax.jsonRpc( '/website_version_ce/set_google_access', 'call', {'ga_key':ga_key, 'view_id':view_id, 'client_id':0, 'client_secret':0});
                 }
             });
-            wizardA.on('hidden.bs.modal', function () {$(this).remove();});
+            $wizardA.on('hidden.bs.modal', function () {$(this).remove();});
         });
     },
 

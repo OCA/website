@@ -7,7 +7,7 @@ from openerp.http import request
 import random
 
 
-class NewWebsite(models.Model):
+class Website(models.Model):
 
     _inherit = "website"
 
@@ -16,7 +16,7 @@ class NewWebsite(models.Model):
     google_management_authorization = fields.Char('Google authorization')
 
     @api.model
-    def get_current_version(self, context=None):
+    def get_current_version(self):
         version = request.env['website_version_ce.version']
         version_id = request.context.get('version_id')
 
@@ -27,7 +27,7 @@ class NewWebsite(models.Model):
 
     @api.model
     def get_current_website(self):
-        website = super(NewWebsite, self).get_current_website()
+        website = super(Website, self).get_current_website()
         # We just set the cookie for the first visit
         if 'website_version_ce_experiment' in request.httprequest.cookies:
             main_experiment = json.loads(request.httprequest.cookies.get(
@@ -51,7 +51,7 @@ class NewWebsite(models.Model):
                     # Setting master default frequency at 50
                     pond_sum += 50
                     # Setting cookie to avoid problems when db restarts
-                    main_experiment[exp.google_id] = str(0)
+                    main_experiment[exp.google_id] = "0"
                 x = random.randint(0, pond_sum-1)
                 for res in result:
                     if x < res[0]:
