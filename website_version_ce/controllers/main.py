@@ -129,11 +129,11 @@ class VersioningController(Website):
             'management', context=kw.get('local_context'))
         if not client_id or not client_secret:
             dummy, action = request.env['ir.model.data'].get_object_reference(
-                    request.cr,
-                    request.uid,
-                    'website_version_ce',
-                    'action_config_settings_google_management'
-                )
+                request.cr,
+                request.uid,
+                'website_version_ce',
+                'action_config_settings_google_management'
+            )
             return {
                 "status": "need_config_from_admin",
                 "url": '',
