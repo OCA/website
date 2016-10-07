@@ -1,6 +1,6 @@
 [![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat/186/9.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-website-186)
 [![Build Status](https://travis-ci.org/OCA/website.svg?branch=9.0)](https://travis-ci.org/OCA/website)
-[![Coverage Status](https://coveralls.io/repos/OCA/website/badge.png?branch=9.0)](https://coveralls.io/r/OCA/website?branch=9.0)
+[![Coverage Status](https://codecov.io/gh/OCA/website/branch/9.0/graph/badge.svg)](https://codecov.io/gh/OCA/website)
 
 Odoo modules for website builder
 ================================
@@ -17,14 +17,20 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 9.0.1.0.0 | Replace default behavior for internal links (anchor only) with smooth scroll
 [website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 | Website blog Management
 [website_crm_recaptcha](website_crm_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 9.0.1.0.1 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha field for Website Forms
+[website_forum_censored](website_forum_censored/) | 9.0.1.0.0 | Block phrases entered in forum posts and comments.
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 | Website Legal Page
 [website_no_crawler](website_no_crawler/) | 9.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
+[website_payment_v10](website_payment_v10/) | 9.0.1.0.0 | Payment: Website Integration
+[website_portal_contact](website_portal_contact/) | 9.0.1.0.0 | Allows logged in portal users to manage their contacts
+[website_portal_purchase](website_portal_purchase/) | 9.0.1.0.0 | Add purchase orders and quotation in the frontend portal
 [website_portal_v10](website_portal_v10/) | 9.0.1.0.0 | Account Management Frontend for your Customers
 [website_seo_redirection](website_seo_redirection/) | 9.0.1.0.0 | Redirect any controller to the URL of your dreams
+[website_snippet_country_dropdown](website_snippet_country_dropdown/) | 9.0.1.0.0 | Allow to select country in a dropdown
 
 Unported addons
 ---------------

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="forum_censored_phrase_menu" action="forum_censored_phrase_action"
+              parent="website_forum.menu_website_forum" />
+</odoo>

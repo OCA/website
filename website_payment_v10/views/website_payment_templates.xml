@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2013-2016 Odoo S.A.
+     © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+    <record id="website_payment.header_footer_custom_payment" model="ir.ui.view">
+        <field name="inherit_id" ref="website_portal_v10.portal_layout"/>
+    </record>
+
+    <record id="website_payment.pay_meth_link" model="ir.ui.view">
+        <field name="inherit_id" ref="website_portal_v10.portal_layout"/>
+    </record>
+
+</odoo>
