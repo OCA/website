@@ -29,8 +29,8 @@ To use this module, you need to:
 1.  Go to menu *Sales -> Products -> Products*
 2.  Edit or create one.
 3.  Within the *Sales* tab, there will be a new field named *Button Add To Cart*
-4.  If you want the button add to cart visible on the website, just klik into *Published*.
-    If you dont want the button add to cart visible on the website, just klik into *Not Published*  
+4.  If you want the button add to cart visible on the website, just click into *Published*.
+    If you dont want the button add to cart visible on the website, just click into *Not Published*  
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
