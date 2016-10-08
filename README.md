@@ -30,7 +30,7 @@ addon | version | summary
 [website_canonical_url](website_canonical_url/) | 8.0.1.0.0 | Canonical URL in Website Headers
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 8.0.2.1.0 | Show cookie notice according to cookie law
-[website_country_localized_pages](website_country_localized_pages/) | 1.0 | Show website pages localized according to country's visitor
+[website_country_localized_pages](website_country_localized_pages/) | 8.0.1.0.0 | Show website pages localized according to country's visitor
 [website_crm_address](website_crm_address/) | 8.0.1.0.0 | Lets visitors fill in their address in the contact form
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 | Website CRM privacy policy
 [website_crm_quick_answer](website_crm_quick_answer/) | 8.0.1.0.0 | Add an automatic answer for contacts asking for info
@@ -54,7 +54,7 @@ addon | version | summary
 [website_product_supplier](website_product_supplier/) | 8.0.1.0.0 | Website Product Supplier
 [website_sale_collapse_categories](website_sale_collapse_categories/) | 8.0.1.0.0 | Collapsible product categories in website shop
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 | Set order company according to products company
-[website_sale_product_category_seo](website_sale_product_category_seo/) | 1.0 | add Public Product Categories CMS Blocks
+[website_sale_product_category_seo](website_sale_product_category_seo/) | 8.0.1.0.0 | add Public Product Categories CMS Blocks
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 | Prevent optional products to be sold singularly
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 | VAT number required in checkout form
 [website_seo_redirection](website_seo_redirection/) | 8.0.1.1.0 | Redirect any controller to the URL of your dreams
