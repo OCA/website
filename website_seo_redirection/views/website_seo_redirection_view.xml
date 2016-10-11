@@ -13,6 +13,7 @@
                 <group>
                     <field name="origin"/>
                     <field name="destination"/>
+                    <field name="relocate_controller"/>
                 </group>
             </sheet>
         </form>
@@ -26,6 +27,7 @@
         <tree editable="top">
             <field name="origin"/>
             <field name="destination"/>
+            <field name="relocate_controller"/>
         </tree>
     </field>
 </record>
