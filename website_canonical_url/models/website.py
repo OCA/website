@@ -15,14 +15,21 @@ class website(models.Model):
         canonical_url = None
         if req is None:
             req = request
-        if req and req.httprequest.base_url:
-            lang = self._context['lang']
+        if req and req.httprequest.path:
+            lang = self.env.lang
             if lang == request.website.default_lang_code:
-                canonical_url = req.httprequest.base_url
+                canonical_url = req.httprequest.path
             else:
-                url_parts = urlparse(req.httprequest.base_url)
+                url_parts = urlparse(req.httprequest.path)
                 url_parts = list(url_parts)
                 # change the path of the url
                 url_parts[2] = lang + url_parts[2]
                 canonical_url = urlunparse(url_parts)
+        # Special case for rerouted requests to root path
+        try:
+            if (canonical_url.startswith("/page/") and
+                    self.menu_id.child_id[0].url == canonical_url):
+                canonical_url = "/"
+        except:
+            pass
         return canonical_url

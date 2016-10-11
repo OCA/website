@@ -27,6 +27,7 @@ Contributors
 
 * Thomas Rehn <thomas.rehn@initos.com>
 * Rami Alwafaie <rami.alwafaie@initos.com>
+* Jairo Llopis <jairo.llopis@tecnativa.com>
 
 Maintainer
 ----------
