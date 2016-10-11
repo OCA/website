@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# flake8: noqa
 
 import datetime
 import io
@@ -10,9 +11,10 @@ import urllib2
 from urlparse import urlparse
 
 from openerp import api, fields, models, SUPERUSER_ID, _
-from . import image
 from openerp.exceptions import Warning
 from openerp.addons.website.models.website import slug
+
+from . import image
 
 
 class Channel(models.Model):
@@ -48,7 +50,6 @@ class Channel(models.Model):
     promoted_slide_id = fields.Many2one(
         'slide.slide', string='Featured Slide',
         compute='_compute_promoted_slide_id', store=True)
-    promoted_image = fields.Binary('Promoted image')
 
     @api.depends('custom_slide_id', 'promote_strategy', 'slide_ids.likes',
                  'slide_ids.total_views', "slide_ids.date_published")
@@ -118,19 +119,42 @@ class Channel(models.Model):
     access_error_msg = fields.Html(
         'Error Message',
         help="Message to display when not accessible due to access rights",
-        default=""
-                "<p>This channel is private and its content "
-                "is restricted to some users.</p>""", translate=True)
+        default="<p>This channel is private and its content "
+                "is restricted to some users.</p>", translate=True)
     upload_group_ids = fields.Many2many(
         'res.groups', 'rel_upload_groups', 'channel_id', 'group_id',
         string='Upload Groups',
-        help=""
-             "Groups allowed to upload presentations in this channel."
-             " If void, every user can upload.")
+        help="Groups allowed to upload presentations in this channel. "
+             "If void, every user can upload.")
     # not stored access fields, depending on each user
-    can_see = fields.Boolean('Can See', compute='_compute_access')
+    can_see = fields.Boolean('Can See', compute='_compute_access', search='_search_can_see')
     can_see_full = fields.Boolean('Full Access', compute='_compute_access')
     can_upload = fields.Boolean('Can Upload', compute='_compute_access')
+
+    def _search_can_see(self, operator, value):
+        if operator not in ('=', '!=', '<>'):
+            raise ValueError('Invalid operator: %s' % (operator,))
+
+        if not value:
+            operator = operator == "=" and '!=' or '='
+
+        if self._uid == SUPERUSER_ID:
+            return [(1, '=', 1)]
+
+        # Better perfs to split request and use inner join that left join
+        req = """
+            SELECT id FROM slide_channel WHERE visibility='public'
+                UNION
+            SELECT c.id
+                FROM slide_channel c
+                    INNER JOIN rel_channel_groups rg on c.id = rg.channel_id
+                    INNER JOIN res_groups g on g.id = rg.group_id
+                    INNER JOIN res_groups_users_rel u on g.id = u.gid and uid = %s
+        """
+        op = operator == "=" and "in" or "not in"
+        self.env.cr.execute(req, (self._uid,))
+        # don't use param named because orm will add other param (test_active, ...)
+        return [('id', op, [row[0] for row in self.env.cr.fetchall()])]
 
     @api.one
     @api.depends('visibility', 'group_ids', 'upload_group_ids')
@@ -165,7 +189,8 @@ class Category(models.Model):
 
     name = fields.Char('Name', translate=True, required=True)
     channel_id = fields.Many2one(
-        'slide.channel', string="Channel", required=True)
+        'slide.channel', string="Channel", required=True,
+        ondelete='cascade')
     sequence = fields.Integer(default=10, help='Display order')
     slide_ids = fields.One2many(
         'slide.slide', 'category_id', string="Slides")
@@ -203,15 +228,17 @@ class Category(models.Model):
 
 
 class EmbeddedSlide(models.Model):
-    """ Embedding in third party websites. Track view count,
-    generate statistics. """
+    """Embedding in third party websites.
+
+    Track view count, generate statistics.
+    """
     _name = 'slide.embed'
     _description = 'Embedded Slides View Counter'
     _rec_name = 'slide_id'
 
     slide_id = fields.Many2one(
         'slide.slide', string="Presentation", required=True,
-        select=1, ondelete="cascade")
+        index=True)
     url = fields.Char('Third Party Website URL', required=True)
     count_views = fields.Integer('# Views', default=1)
 
@@ -252,7 +279,8 @@ class Slide(models.Model):
      - Video
 
     Slide has various statistics like view count, embed count,
-    like, dislikes"""
+    like, dislikes
+    """
 
     _name = 'slide.slide'
     _inherit = ['mail.thread',
@@ -261,11 +289,9 @@ class Slide(models.Model):
     _description = 'Slides'
 
     _PROMOTIONAL_FIELDS = [
-        '__last_update', 'name', 'image_thumb', 'slide_type', 'total_views',
-        'category_id', 'channel_id', 'description', 'tag_ids', 'write_date',
-        'create_date', 'website_published', 'website_url',
-        'website_meta_title', 'website_meta_description',
-        'website_meta_keywords']
+        '__last_update', 'name', 'image_thumb', 'image_medium', 'slide_type', 'total_views', 'category_id',
+        'channel_id', 'description', 'tag_ids', 'write_date', 'create_date',
+        'website_published', 'website_url', 'website_meta_title', 'website_meta_description', 'website_meta_keywords']
 
     _sql_constraints = [
         ('name_uniq', 'UNIQUE(channel_id, name)',
@@ -288,18 +314,16 @@ class Slide(models.Model):
          ('public', 'Everyone')],
         string='Download Security',
         required=True, default='user')
-    image = fields.Binary('Image')
-    image_medium = fields.Binary('Medium', compute="_get_image", store=True)
-    image_thumb = fields.Binary('Thumbnail', compute="_get_image", store=True)
+    image = fields.Binary('Image', attachment=True)
+    image_medium = fields.Binary('Medium', compute="_get_image", store=True, attachment=True)
+    image_thumb = fields.Binary('Thumbnail', compute="_get_image", store=True, attachment=True)
 
     @api.depends('image')
     def _get_image(self):
         for record in self:
             if record.image:
-                record.image_medium = image.crop_image(
-                    record.image, thumbnail_ratio=3)
-                record.image_thumb = image.crop_image(
-                    record.image, thumbnail_ratio=4)
+                record.image_medium = image.crop_image(record.image, type='top', ratio=(4, 3), thumbnail_ratio=4)
+                record.image_thumb = image.crop_image(record.image, type='top', ratio=(4, 3), thumbnail_ratio=6)
             else:
                 record.image_medium = False
                 record.iamge_thumb = False
@@ -312,8 +336,7 @@ class Slide(models.Model):
         ('video', 'Video')],
         string='Type', required=True,
         default='document',
-        help=""
-             "Document type will be set automatically depending on file type,"
+        help="Document type will be set automatically depending on file type, "
              "height and width.")
     index_content = fields.Text('Transcript')
     datas = fields.Binary('Content')
@@ -328,10 +351,7 @@ class Slide(models.Model):
         if self.url:
             res = self._parse_document_url(self.url)
             if res.get('error'):
-                raise Warning(_(
-                    "Could not fetch data from url."
-                    "Document or access right not available:\n%s") % (
-                    res['error']))
+                raise Warning(_('Could not fetch data from url. Document or access right not available:\n%s') % res['error'])
             values = res['values']
             if not values.get('document_id'):
                 raise Warning(
@@ -367,46 +387,15 @@ class Slide(models.Model):
     def _get_embed_code(self):
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         for record in self:
-            if record.datas and not record.document_id:
-                record.embed_code = \
-                    '<iframe src="%s/slides/embed/%s?page=1" ' \
-                    'allowFullScreen="true" height="%s" width="%s" ' \
-                    'frameborder="0"></iframe>' % (
-                        base_url, record.id, 315, 420)
+            if record.datas and (not record.document_id or record.slide_type in ['document', 'presentation']):
+                record.embed_code = '<iframe src="%s/slides/embed/%s?page=1" allowFullScreen="true" height="%s" width="%s" frameborder="0"></iframe>' % (base_url, record.id, 315, 420)
             elif record.slide_type == 'video' and record.document_id:
                 if not record.mime_type:
                     # embed youtube video
-                    record.embed_code = '' \
-                        '<iframe src="//www.youtube.com/embed/%s?theme=light"'\
-                        'frameborder="0" allowfullscreen="true">' \
-                        '</iframe>' % (record.document_id)
+                    record.embed_code = '<iframe src="//www.youtube.com/embed/%s?theme=light" allowFullScreen="true" frameborder="0"></iframe>' % (record.document_id)
                 else:
                     # embed google doc video
-                    record.embed_code = '' \
-                        '<embed src="https://video.google.com/get_player?' \
-                        'ps=docs&partnerid=30&docid=%s" ' \
-                        'type="application/x-shockwave-flash">' \
-                        '</embed>' % (record.document_id)
-            elif 'application/vnd.google-apps.document' in record.mime_type:
-                record.embed_code = '' \
-                    '<iframe src="https://docs.google.com/document/d/%s/pub?' \
-                    'embedded=true" frameborder="0">' \
-                    '</iframe>' % (record.document_id)
-            elif 'application/vnd.google-apps.presentation' in \
-                    record.mime_type:
-                record.embed_code = '' \
-                    '<iframe ' \
-                    'src="https://docs.google.com/presentation/d/%s/embed?' \
-                    'start=false&loop=false&delayms=3000" frameborder="0" ' \
-                    'allowfullscreen="true" mozallowfullscreen="true" ' \
-                    'webkitallowfullscreen="true">' \
-                    '</iframe>' % (record.document_id)
-            elif record.slide_type == 'document' and record.document_id:
-                # embed code for google pdf
-
-                record.embed_code = '<iframe src="https://drive.google.com' \
-                                    '/file/d/%s/preview" frameborder="0">' \
-                                    ' </iframe>' % (record.document_id)
+                    record.embed_code = '<embed src="https://video.google.com/get_player?ps=docs&partnerid=30&docid=%s" type="application/x-shockwave-flash"></embed>' % (record.document_id)
             else:
                 record.embed_code = False
 
@@ -415,8 +404,12 @@ class Slide(models.Model):
     def _website_url(self, name, arg):
         res = super(Slide, self)._website_url(name, arg)
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
-        res.update({(slide.id, '%s/slides/slide/%s' % (
-            base_url, slug(slide))) for slide in self})
+        #link_tracker is not in dependencies, so use it to shorten url only if installed.
+        if self.env.registry.get('link.tracker'):
+            LinkTracker = self.env['link.tracker']
+            res.update({(slide.id, LinkTracker.sudo().create({'url': '%s/slides/slide/%s' % (base_url, slug(slide))}).short_url) for slide in self})
+        else:
+            res.update({(slide.id, '%s/slides/slide/%s' % (base_url, slug(slide))) for slide in self})
         return res
 
     @api.model
@@ -434,9 +427,6 @@ class Slide(models.Model):
                 values['url']).get('values', dict())
             for key, value in doc_data.iteritems():
                 values.setdefault(key, value)
-        if 'mime_type' in values:
-            if 'application/vnd.google-apps.' in values['mime_type']:
-                values['datas'] = False
         # Do not publish slide if user has not publisher rights
         if not self.user_has_groups('base.group_website_publisher'):
             values['website_published'] = False
@@ -462,7 +452,7 @@ class Slide(models.Model):
     def check_field_access_rights(self, operation, fields):
         """ As per channel access configuration (visibility)
          - public  ==> no restriction on slides access
-         - private ==> restrict all slides of channel base on access group
+         - private ==> restrict all slides of channel based on access group
             defined on channel group_ids field
          - partial ==> show channel, but presentations based on groups means
             any user can see channel but not slide's content.
@@ -472,7 +462,7 @@ class Slide(models.Model):
         public user so he can have access of promotional
         field (name, view_count) of slides,but not all fields like
         data (actual pdf content) all fields should be accessible only
-        for user group define on channel group_ids
+        for user group defined on channel group_ids
         """
         if self.env.uid == SUPERUSER_ID:
             return fields or list(self._fields)
@@ -592,7 +582,10 @@ class Slide(models.Model):
             return fetch_res
 
         values = {'slide_type': 'video', 'document_id': document_id}
-        youtube_values = fetch_res['values'].get('items', list(dict()))[0]
+        items = fetch_res['values'].get('items')
+        if not items:
+            return {'error': _('Please enter valid Youtube or Google Doc URL')}
+        youtube_values = items[0]
         if youtube_values.get('snippet'):
             snippet = youtube_values['snippet']
             if only_preview_fields:

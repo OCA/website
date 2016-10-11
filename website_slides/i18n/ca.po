@@ -446,7 +446,7 @@ msgstr ""
 #. module: website_slides
 #: selection:slide.slide,download_security:0
 msgid "Everyone"
-msgstr ""
+msgstr "Tothom"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -476,7 +476,7 @@ msgstr ""
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:357
 #, python-format
-msgid "File is too big."
+msgid "File is too big. File size cannot exceed 15MB"
 msgstr ""
 
 #. module: website_slides
