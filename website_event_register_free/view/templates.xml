@@ -78,9 +78,18 @@
                     <div class="row">
                         <div class="form-group col-lg-6">
                             <label class="control-label" for="name">Quantity</label>
-                            <select name="tickets" class="form-control" t-if="event.seats_available > 0">
-                                <t t-foreach="range(1, event.seats_available > 9 and 11 or event.seats_available + 1)" t-as="nb">
-                                    <option t-esc="nb" t-att="{'selected': 'selected'} if str(tickets) == str(nb) else {}" />
+                            <select
+                                name="tickets"
+                                class="form-control"
+                                t-if="event.seats_available or
+                                      not event.seats_max">
+                                <t
+                                    t-foreach="range(
+                                        1,
+                                        min(event.seats_available or 10,
+                                            10) + 1)"
+                                    t-as="nb">
+                                    <option t-esc="nb" t-att="{'selected': 'selected'} if str(tickets) == str(nb) else {}"/>
                                 </t>
                             </select>
                         </div>
