@@ -20,6 +20,7 @@
         "views/website_seo_redirection_view.xml",
     ],
     "demo": [
+        "demo/assets_demo.xml",
         "demo/website_seo_redirection_demo.xml",
     ],
 }

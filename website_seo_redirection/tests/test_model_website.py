@@ -31,7 +31,10 @@ class WebsiteCase(HttpCase):
             "params": {
                 "model": "website",
                 "method": "search_pages",
-                "args": [self.env["website"].get_current_website().id, query],
+                "args": [
+                    self.env["website"]._get_current_website_id("localhost"),
+                    query,
+                ],
             }
         }
         response = json.load(
