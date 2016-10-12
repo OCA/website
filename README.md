@@ -19,6 +19,7 @@ addon | version | summary
 --- | --- | ---
 [website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 9.0.1.0.0 | Replace default behavior for internal links (anchor only) with smooth scroll
 [website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 | Website blog Management
+[website_cookie_notice](website_cookie_notice/) | 9.0.1.0.0 | Show cookie notice according to cookie law
 [website_crm_recaptcha](website_crm_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 9.0.1.0.1 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha field for Website Forms
@@ -29,7 +30,7 @@ addon | version | summary
 [website_portal_contact](website_portal_contact/) | 9.0.1.0.0 | Allows logged in portal users to manage their contacts
 [website_portal_purchase](website_portal_purchase/) | 9.0.1.0.0 | Add purchase orders and quotation in the frontend portal
 [website_portal_v10](website_portal_v10/) | 9.0.1.0.0 | Account Management Frontend for your Customers
-[website_seo_redirection](website_seo_redirection/) | 9.0.1.0.0 | Redirect any controller to the URL of your dreams
+[website_seo_redirection](website_seo_redirection/) | 9.0.1.1.0 | Redirect any controller to the URL of your dreams
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 9.0.1.0.0 | Allow to select country in a dropdown
 
 Unported addons
@@ -40,7 +41,6 @@ addon | version | summary
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 (unported) | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 (unported) | Add Facebook comments on blog posts
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 (unported) | Let you choose between fixed or fluid containers
-[website_cookie_notice](website_cookie_notice/) | 8.0.1.0.0 (unported) | Show cookie notice according to cookie law
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 (unported) | Website CRM privacy policy
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 (unported) | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 (unported) | Combine free and paid tickets on events
