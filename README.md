@@ -27,7 +27,7 @@ addon | version | summary
 [website_blog_title_image](website_blog_title_image/) | 8.0.1.0.0 | Enables adding title image to blogpost.
 [website_breadcrumb](website_breadcrumb/) | 8.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_calendar_snippet](website_calendar_snippet/) | 8.0.1.0.0 | Calendar (based on Messaging -> Calendar) on website.
-[website_canonical_url](website_canonical_url/) | 8.0.1.0.0 | Canonical URL in Website Headers
+[website_canonical_url](website_canonical_url/) | 8.0.1.1.0 | Canonical URL in Website Headers
 [website_container_fluid](website_container_fluid/) | 8.0.1.0.1 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 8.0.2.1.0 | Show cookie notice according to cookie law
 [website_country_localized_pages](website_country_localized_pages/) | 8.0.1.0.0 | Show website pages localized according to country's visitor
@@ -59,7 +59,7 @@ addon | version | summary
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 | VAT number required in checkout form
 [website_seo_redirection](website_seo_redirection/) | 8.0.1.1.0 | Redirect any controller to the URL of your dreams
 [website_signup_legal_page_required](website_signup_legal_page_required/) | 8.0.1.0.0 | Force the user to accept the legal terms to open an account
-[website_slides](website_slides/) | 8.0.1.0.0 | Share and Publish Videos, Presentations and Documents
+[website_slides](website_slides/) | 8.0.2.0.0 | Share and Publish Videos, Presentations and Documents
 [website_snippet_anchor](website_snippet_anchor/) | 8.0.1.0.0 | Allow to reach a concrete section in the page
 [website_snippet_big_button](website_snippet_big_button/) | 8.0.1.0.0 | A snippet that adds two big buttons
 [website_snippet_contact_form](website_snippet_contact_form/) | 8.0.1.0.0 | Put a contact form anywhere you want
