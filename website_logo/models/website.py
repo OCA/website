@@ -21,6 +21,10 @@
 from openerp import models, fields
 
 
-class Company(models.Model):
-    _inherit = 'res.company'
-    website_logo = fields.Binary("Website logo")
+class Website(models.Model):
+    _inherit = 'website'
+
+    logo = fields.Binary(
+        string="Website logo",
+        help="This field holds the logo for this website, showed in header. "
+             "Recommended size is 180x50")
