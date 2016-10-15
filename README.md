@@ -25,6 +25,7 @@ addon | version | summary
 [website_form_recaptcha](website_form_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha field for Website Forms
 [website_forum_censored](website_forum_censored/) | 9.0.1.0.0 | Block phrases entered in forum posts and comments.
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 | Website Legal Page
+[website_logo](website_logo/) | 9.0.1.0.0 | Website company logo
 [website_no_crawler](website_no_crawler/) | 9.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
 [website_payment_v10](website_payment_v10/) | 9.0.1.0.0 | Payment: Website Integration
 [website_portal_contact](website_portal_contact/) | 9.0.1.0.0 | Allows logged in portal users to manage their contacts
@@ -45,7 +46,6 @@ addon | version | summary
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 (unported) | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 (unported) | Combine free and paid tickets on events
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
-[website_logo](website_logo/) | 8.0.1.0.0 (unported) | Website company logo
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 (unported) | Website Menu Multilanguage
 [website_sale_collapse_categories](website_sale_collapse_categories/) | 8.0.1.0.0 (unported) | Collapsible product categories in website shop
