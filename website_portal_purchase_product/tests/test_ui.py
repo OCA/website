@@ -15,7 +15,7 @@ class UICase(HttpCase):
         })
         self.tourman = self.env["res.users"].create({
             "name": "Tourman",
-            "parent_id": self.parent,
+            "parent_id": self.parent.id,
             "login": "tourman",
             "new_password": "tourman",
             "groups_id":
