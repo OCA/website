@@ -7,6 +7,8 @@
     'category': 'Website',
     'summary': 'Add your sales document in the frontend portal (sales order, '
                'quotations, invoices)',
+    "author": "Odoo S.A., Tecnativa, Odoo Community Association (OCA)",
+    "license": "LGPL-3",
     'version': '9.0.1.0.0',
     'depends': [
         'website_portal_sale',
