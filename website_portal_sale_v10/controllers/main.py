@@ -3,10 +3,7 @@
 # © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-import datetime
-
 from openerp import http
-from openerp.exceptions import AccessError
 from openerp.http import request
 
 from openerp.addons.website_portal_v10.controllers.main import WebsiteAccount
