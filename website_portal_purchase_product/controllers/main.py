@@ -4,16 +4,15 @@
 # © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-import base64
-from contextlib import contextmanager
-from werkzeug.datastructures import CombinedMultiDict, FileStorage
-from werkzeug.exceptions import Forbidden
+from werkzeug.datastructures import CombinedMultiDict
+
 from openerp import _
 from openerp.http import local_redirect, request, route
 from openerp.addons.website_portal_purchase.controllers.main import (
     PortalPurchaseWebsiteAccount,
 )
 from openerp.addons.website_form.controllers.main import WebsiteForm
+
 from ..exceptions import FormSaveError
 
 
