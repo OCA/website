@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+<!-- FIXME See README's known issues; this shall disappear on v10 -->
+<template id="link_claims"
+          name="Inhibit website_crm_claim link"
+          inherit_id="website_crm_claim.link_claims">
+    <xpath expr="//li[a[@href='/web#action=website_crm_claim.crm_claim_category_claim0']]"
+           position="replace"/>
+</template>
+
+</odoo>

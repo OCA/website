@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+<record id="view_sale_config_settings" model="ir.ui.view">
+    <field name="name">Add claims alias to settings</field>
+    <field name="model">sale.config.settings</field>
+    <field name="inherit_id" ref="crm.view_sale_config_settings"/>
+    <field name="arch" type="xml">
+        <xpath expr="//group[@name='config_alias']">
+            <label for="alias_claim"/>
+            <div>
+                <div attrs="{'invisible': [('alias_domain', 'in', ['localhost', '', False])]}">
+                    <field name="alias_claim" class="oe_inline"/>
+                    <span>@</span>
+                    <field name="alias_domain" class="oe_inline" readonly="1"/>
+                </div>
+            </div>
+        </xpath>
+    </field>
+</record>
+
+</odoo>
