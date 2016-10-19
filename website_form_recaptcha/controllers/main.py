@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2016-TODAY LasLabs Inc.
+# Copyright 2016-2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from openerp import http
@@ -28,9 +28,9 @@ class WebsiteForm(WebsiteForm):
             ),
         })
 
-    def extract_data(self, model, **kwargs):
+    def extract_data(self, model, values):
         """ Inject ReCaptcha validation into pre-existing data extraction """
-        res = super(WebsiteForm, self).extract_data(model, **kwargs)
+        res = super(WebsiteForm, self).extract_data(model, values)
         if model.website_form_recaptcha:
             captcha_obj = request.env['website.form.recaptcha']
             ip_addr = request.httprequest.environ.get('HTTP_X_FORWARDED_FOR')
@@ -40,7 +40,7 @@ class WebsiteForm(WebsiteForm):
                 ip_addr = request.httprequest.remote_addr
             try:
                 captcha_obj.action_validate(
-                    kwargs.get(captcha_obj.RESPONSE_ATTR), ip_addr
+                    values.get(captcha_obj.RESPONSE_ATTR), ip_addr
                 )
             except ValidationError:
                 raise ValidationError([captcha_obj.RESPONSE_ATTR])
