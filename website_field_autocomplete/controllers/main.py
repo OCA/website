@@ -3,9 +3,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 import json
-from openerp import http
-from openerp.http import request
-from openerp.addons.website.controllers.main import Website
+from odoo import http
+from odoo.http import request
+from odoo.addons.website.controllers.main import Website
 
 
 class Website(Website):
