@@ -5,9 +5,9 @@
 import mock
 from contextlib import contextmanager
 
-from openerp.tests.common import TransactionCase
+from odoo.tests.common import TransactionCase
 
-from openerp.addons.website_field_autocomplete_related.controllers import main
+from odoo.addons.website_field_autocomplete_related.controllers import main
 
 
 class TestController(TransactionCase):

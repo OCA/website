@@ -88,7 +88,7 @@ Following is a breakdown of the attributes and functions provided:
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/9.0
+   :target: https://runbot.odoo-community.org/runbot/186/10.0
 
 
 Known Issues / Road Map

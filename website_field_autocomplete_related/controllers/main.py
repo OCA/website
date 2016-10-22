@@ -2,8 +2,8 @@
 # Copyright 2016 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp.http import request
-from openerp.addons.website_field_autocomplete.controllers.main import Website
+from odoo.http import request
+from odoo.addons.website_field_autocomplete.controllers.main import Website
 
 
 class WebsiteAutocomplete(Website):
