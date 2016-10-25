@@ -1,0 +1,16 @@
+/* Copyright (C) 2016 LasLabs, Inc. [https://laslabs.com]
+ * @author Dave Lasley <dave@laslabs.com>
+ * @license LGPL-3
+ **/
+
+.slider-arrow-left {
+    position: absolute;
+    top: 40%;
+    left: -40px;
+}
+
+.slider-arrow-right {
+    position: absolute;
+    top: 40%;
+    right: -40px;
+}
