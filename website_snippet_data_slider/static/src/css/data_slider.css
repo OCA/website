@@ -14,3 +14,7 @@
     top: 40%;
     right: -40px;
 }
+
+.slick-slide {
+    background: transparent;
+}
