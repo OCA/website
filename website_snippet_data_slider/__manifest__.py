@@ -21,4 +21,7 @@
         "views/assets.xml",
         'views/snippet_template.xml',
     ],
+    "demo": [
+        "demo/data_slider_demo.xml",
+    ],
 }
