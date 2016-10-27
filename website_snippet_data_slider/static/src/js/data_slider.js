@@ -1,5 +1,5 @@
 /* Copyright 2016 LasLabs Inc.
- * License LGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
  */
 
 odoo.define('website_snippet_data_slider', function(require){
@@ -26,7 +26,7 @@ odoo.define('website_snippet_data_slider', function(require){
         data_title: 'Featured Products',
         data_title_tag: 'h1',
         data_title_class: 'text-center',
-        data_uri_prefix: '/shop/product/',
+        data_uri_field: 'website_url',
         data_container_width: '90%',
         data_limit: 10,
         prevArrow: '<a href="#" class="slider-arrow-left"><i class="fa fa-arrow-left fa-2x"></i></a>',
@@ -62,7 +62,7 @@ odoo.define('website_snippet_data_slider', function(require){
         _handleRecord: function(record) {
             var $img = $('<img>');
             var $div = $('<div class="thumbnail">');
-            var $href = $('<a>').attr('href', this.uriPrefix + record.id);
+            var $href = $('<a>').attr('href', record[this.uriField]);
             var $title = $('<h5>').text(record[this.fields[0]]);
             var $caption = $('<div class="caption">').append($title);
             $div.append($href);
@@ -96,9 +96,9 @@ odoo.define('website_snippet_data_slider', function(require){
             this.titleTag = this.widgetOptions.data_title_tag;
             this.titleStr = this.widgetOptions.data_title;
             this.titleClass = this.widgetOptions.data_title_class;
-            this.uriPrefix = this.widgetOptions.data_uri_prefix;
+            this.uriField = this.widgetOptions.data_uri_field;
             this.baseUri = '/web/image/' + this.model;
-            this.fields = [this.nameField, 'id'];
+            this.fields = [this.nameField, this.uriField, 'id'];
             var $titleEl = $('<' + this.titleTag + '>');
             $titleEl.text(this.titleStr).addClass(this.titleClass);
             this.$target.prepend($('<div class="row">').append($titleEl));

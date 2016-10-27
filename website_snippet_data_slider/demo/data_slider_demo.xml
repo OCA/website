@@ -2,7 +2,7 @@
 
 <!--
     Copyright 2016 LasLabs Inc.
-    @license AGPL-3 or later (http://www.gnu.org/licenses/agpl.html).
+    License AGPL-3 or later (http://www.gnu.org/licenses/lgpl.html).
 -->
 
 <odoo>
@@ -11,28 +11,31 @@
             <div id="wrap" class="oe_structure oe_empty">
                 <div class="container">
                     <div class="row">
-                        <section class="oe_snippet_body o_data_slider mb32 container text-center"
-                                 data-options="{  
-                                                    &quot;data_model&quot;: &quot;res.partner&quot;,
-                                                    &quot;data_domain&quot;: [[&quot;image&quot;, &quot;!=&quot;, false]],
-                                                    &quot;data_image_field&quot;: &quot;image_medium&quot;,
-                                                    &quot;data_name_field&quot;: &quot;name&quot;,
-                                                    &quot;data_title&quot;: &quot;Partners&quot;,
-                                                    &quot;data_title_tag&quot;: &quot;h1&quot;,
-                                                    &quot;slidesToShow&quot;: 5,
-                                                    &quot;slidesToScroll&quot;: 2,
-                                                    &quot;dots&quot;: true,
-                                                    &quot;infinite&quot;: true,
-                                                    &quot;arrows&quot;: true,
-                                                    &quot;autoplay&quot;: true
-                                                 }"
-                                 >
-                            <div class="container">
-                                <div class="row">
-                                    <div class="oe_structure" />
+                        <div class="oe_structure">
+                            <section class="oe_snippet_body o_data_slider mb32 container text-center"
+                                     t-att-data-options='&apos;{  
+                                                            "data_model": "res.partner",
+                                                            "data_domain": [["image", "!=", false]],
+                                                            "data_image_field": "image_medium",
+                                                            "data_name_field": "name",
+                                                            "data_uri_field": "website_url",
+                                                            "data_title": "Partners",
+                                                            "data_title_tag": "h1",
+                                                            "slidesToShow": 5,
+                                                            "slidesToScroll": 2,
+                                                            "dots": true,
+                                                            "infinite": true,
+                                                            "arrows": true,
+                                                            "autoplay": true
+                                                         }&apos;'
+                                     >
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="oe_structure" />
+                                    </div>
                                 </div>
-                            </div>
-                        </section>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>

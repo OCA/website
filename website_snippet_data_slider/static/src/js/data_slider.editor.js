@@ -1,15 +1,14 @@
 /* Copyright 2016 LasLabs Inc.
- * License LGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
  */
 
 odoo.define('website_snippet_data_slider.snippet_editor', function(require){
   "use strict";
   
   var options = require('web_editor.snippets.options');
+  var defaults = require('website_snippet_data_slider').defaults;
   
   options.registry.data_slider = options.Class.extend({
-    
-    defaults: require('website_snippet_data_slider').defaults,
     
     start: function() {
       
@@ -37,7 +36,6 @@ odoo.define('website_snippet_data_slider.snippet_editor', function(require){
       this.$target.height(size.height);
       $slickEl.css({
           'position' : 'relative',
-          //'left': ((size.width - $slickEl.width()) / 2),
           'top': ((size.height - $slickEl.height()) / 2),
         });
     },
@@ -89,7 +87,7 @@ odoo.define('website_snippet_data_slider.snippet_editor', function(require){
         originalOptions = this.$target.attr('data-options');
         originalOptions = JSON.parse(originalOptions);
       } catch(e) { }
-      this.options = _.defaults(originalOptions, this.defaults);
+      this.options = _.defaults(originalOptions, defaults);
       if (addData) {
         this.options = _.defaults(addData, this.options);
         _.each(addData, function(val, key){

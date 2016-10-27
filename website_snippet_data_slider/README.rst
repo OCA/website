@@ -1,5 +1,5 @@
 .. image:: https://img.shields.io/badge/license-AGPL--3-blue.svg
-   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
    :alt: License: LGPL-3
 
 =============================
@@ -40,7 +40,7 @@ Following are the setings that do not have configuration in the UI:
 * `data_title` - Text to use as main snippet header
 * `data_title_tag` - HTML element type to use for title element (such as `h1`)
 * `data_title_class` - Class to use for the title element
-* `data_uri_prefix` - Path prefix for link. Record id will be added to it in context.
+* `data_uri_field` - Field to use for the link
 * `data_container_width` - Width of the outer container, default 90%
 * `prevArrow` & `nextArrow` - HTML or jQuery selector of slider arrows
 
@@ -62,7 +62,7 @@ Bug Tracker
 ===========
 
 Bugs are tracked on `GitHub Issues
-<https://github.com/OCA/{project_repo}/issues>`_. In case of trouble, please
+<https://github.com/OCA/website/issues>`_. In case of trouble, please
 check there if your issue has already been reported. If you spotted it first,
 help us smashing it by providing a detailed and welcomed feedback.
 

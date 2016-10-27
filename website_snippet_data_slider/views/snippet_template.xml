@@ -2,7 +2,7 @@
 
 <!--
     Copyright 2016 LasLabs Inc.
-    @license LGPL-3 or later (http://www.gnu.org/licenses/agpl.html).
+    License AGPL-3 or later (http://www.gnu.org/licenses/lgpl.html).
 -->
 
 <odoo>
@@ -19,29 +19,6 @@
         <xpath expr="//div[@id='snippet_options']" position="inside">
             <div data-js="data_slider"
                  data-selector=".o_data_slider">
-               
-                
-               <!-- @TODO: Figure out how to allow actual input w/ the stdlib events
-                <li class="oe_snippet_options dropdown-submenu">
-                    <a tabindex="-1" href="#">
-                        Data Model
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("data_model", true)'
-                            class="slick-option">
-                            <a>Model</a>
-                        </li>
-                        <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("data_domain", true)'
-                            class="slick-option">
-                            <a>Domain</a>
-                        </li>
-                        <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("data_image_field", true)'
-                            class="slick-option">
-                            <a>Image Field</a>
-                        </li>
-                    </ul>
-                </li>
-                -->
                     
                 <li class="oe_snippet_options dropdown-submenu">
                     <a tabindex="-1" href="#">Slides to Show</a>
