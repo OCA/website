@@ -9,6 +9,9 @@ Website Snippet - Data Slider
 Adds a SlickJS slider building block to website for abstract datasets,
 assuming proper user permissions.
 
+.. image:: static/description/screenshot.png?raw=true
+   :alt: Data Sliders
+
 Usage
 =====
 

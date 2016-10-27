@@ -13,7 +13,7 @@
         
         <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
             <t t-snippet="website_snippet_data_slider.data_slider_snippet"
-               t-thumbnail="/website_snippet_data_slider/static/description/icon.png" />
+               t-thumbnail="/website_snippet_data_slider/static/description/widget_icon.png" />
         </xpath>
         
         <xpath expr="//div[@id='snippet_options']" position="inside">
