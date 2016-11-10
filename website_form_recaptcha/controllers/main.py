@@ -17,6 +17,7 @@ class WebsiteForm(http.Controller):
         auth='public',
         methods=['GET'],
         website=True,
+        multilang=False,
     )
     def recaptcha_public(self):
         return json.dumps({
