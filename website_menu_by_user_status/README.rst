@@ -20,6 +20,7 @@ Contributors
 ------------
 * Bruno Joliveau <bruno.joliveau@savoirfairelinux.com>
 * Jordi Riera <jordi.riera@savoirfairelinux.com>
+* Nicola Malcontenti <nicola.malcontenti@agilebg.com>
 
 More information
 ----------------
