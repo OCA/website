@@ -7,7 +7,7 @@ Google Tag Manager
 ==================
 
 This module allows to configure your Odoo website to support
-`Google Tag Manager <https://www.google.com/analytics/tag-manager/>`_.
+the Google `Tag Manager <https://www.google.com/analytics/tag-manager/>`_ tool.
 
 Configuration
 =============
