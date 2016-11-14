@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Remove "Create a free website with Odoo" -->
+    <template id="layout_footer_copyright"
+              inherit_id="website.layout_footer_copyright"
+              name="Remove footer Odoo link" priority="20">
+        <xpath expr="//div[@class='pull-right']" position="replace">
+            <div class="pull-right"> </div>
+        </xpath>
+    </template>
+
+</odoo>
