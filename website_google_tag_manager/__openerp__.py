@@ -4,7 +4,7 @@
 {
     "name": "Google Tag Manager",
     "version": "9.0.1.0.0",
-    "author": "ABF OSIELL",
+    "author": "ABF OSIELL, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
     "summary": "Add support for Google Tag Manager",
