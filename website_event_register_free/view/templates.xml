@@ -28,20 +28,15 @@
                                 <select
                                     name="tickets"
                                     class="form-control"
-                                    t-if="event.seats_available or
-                                          not event.seats_max">
+                                    t-if="event.seats_available or not event.seats_max">
                                     <t
-                                        t-foreach="range(
-                                            1,
-                                            min(event.seats_available or 10,
-                                                10) + 1)"
+                                        t-foreach="range(1, min(event.seats_available or 10, 10) + 1)"
                                         t-as="nb">
                                         <option t-esc="nb"/>
                                     </t>
                                 </select>
                                 <span
-                                    t-if="not event.seats_available and
-                                          event.seats_max">
+                                    t-if="not (event.seats_available or not event.seats_max)">
                                     No seats available
                                 </span>
                             </td>
