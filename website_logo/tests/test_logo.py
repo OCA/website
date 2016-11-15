@@ -25,7 +25,7 @@ class TestLogo(HttpCase):
         self.image_val = 'Test'.encode('base64')
 
     def test_image_logo_get_domain(self):
-        """ Test logo get w/ domain """
+        """ It should search for logo using defined domain """
         mk = mock.MagicMock()
         mk.execute.side_effect = StopTestException
         expect = 'Test'
@@ -44,7 +44,7 @@ class TestLogo(HttpCase):
         )
 
     def test_image_logo_get_no_domain(self):
-        """ Test logo get w/out domain """
+        """ It should search for logo without a domain """
         mk = mock.MagicMock()
         mk.execute.side_effect = StopTestException
         with self.assertRaises(StopTestException):
@@ -81,10 +81,9 @@ class TestLogo(HttpCase):
     @mock.patch('%s.StringIO' % imp_cont)
     @mock.patch(imp_req)
     def test_default_on_exception(self, imp_mk, str_mk, http_mk, func_mk):
-        http_mk.send_file.side_effect = StopTestException
+        """ It should send the default logo if there is an exception """
         with mock.patch('%s.openerp' % imp_cont) as mk:
             cr_mk = mk.modules.registry.Registry().cursor().__enter__()
-            cr_mk.execute.side_effect = StopTestException
-            with self.assertRaises(StopTestException):
-                self.cont_obj.website_logo()
-            http_mk.send_file.assert_called_once(func_mk())
+            cr_mk.execute.side_effect = Exception
+            self.cont_obj.website_logo()
+            func_mk.partial().assert_called_once_with('website_nologo.png')
