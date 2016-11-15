@@ -27,7 +27,9 @@ You have two options for events:
 
 Known issues / Roadmap
 ======================
+
 * Hide on checkout page the fields that are not needed for free events.
+* Move to OCA/event when migrating to v9.
 
 Credits
 =======
