@@ -80,5 +80,5 @@ class Website(http.Controller):
                             image, filename=imgname, mtime=mtime)
                         return response
             except Exception:
-                return http.send_file(placeholder(imgname))
+                pass
         return http.send_file(placeholder(imgname))
