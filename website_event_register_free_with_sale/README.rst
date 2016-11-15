@@ -35,7 +35,8 @@ Credits
 Contributors
 ------------
 
-* Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+* Pedro M. Baeza <pedro.baeza@tecnativa.com>
+* Jairo Llopis <jairo.llopis@tecnativa.com>
 
 Icon
 ----

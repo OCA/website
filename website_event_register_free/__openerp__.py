@@ -20,13 +20,14 @@
 ##############################################################################
 {
     "name": "Register for free events",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.1.0",
     "author": "Therp BV,"
-              "Serv. Tecnol. Avanzados - Pedro M. Baeza,"
+              "Tecnativa,"
               "Antiun Ingeniería S.L.,"
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
+    "website": "https://www.tecnativa.com",
     "summary": "Avoid shopping chart when registering for free events",
     "depends": [
         'website',

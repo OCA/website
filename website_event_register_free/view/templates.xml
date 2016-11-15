@@ -115,10 +115,19 @@
         <template id="partner_register_confirm" name="Confirmation">
             <t t-call="website.layout">
                 <div id="wrap" class="container">
-                    <h1>Thank you <span t-esc="registration.name" />!</h1>
-                    Your registration for <span t-esc="registration.event_id.name" /> succeeded!
+                    <t t-call="website_event_register_free.confirm_message"/>
                 </div>
             </t>
+        </template>
+
+        <template id="confirm_message"
+                  name="Registration Succeeded Message">
+            <div class="alert alert-success">
+                <h3>Thank you <span t-esc="registration.name" />!</h3>
+                Your free registration for
+                <strong t-esc="registration.event_id.name" />
+                succeeded!
+            </div>
         </template>
      </data>
 </openerp>

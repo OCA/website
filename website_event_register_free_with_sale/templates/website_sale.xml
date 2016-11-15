@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+<template id="payment"
+          inherit_id="website_sale.payment"
+          name="Free event registration confirmation">
+    <xpath expr="//t[@t-as='error']" position="after">
+        <t t-if="free_registration">
+            <t t-call="website_event_register_free.confirm_message">
+                <t t-set="registration" t-value="free_registration"/>
+            </t>
+        </t>
+    </xpath>
+</template>
+
+</data>
+</openerp>
