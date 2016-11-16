@@ -1,24 +1,105 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_event_register_free_with_sale
-# 
+#
 # Translators:
 # Carles Antolí <carlesantoli@hotmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-14 08:34+0000\n"
-"PO-Revision-Date: 2015-10-12 17:45+0000\n"
-"Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"POT-Creation-Date: 2016-11-16 15:04+0100\n"
+"PO-Revision-Date: 2016-11-16 15:05+0100\n"
+"Last-Translator: Jairo Llopis <yajo.sk8@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/"
+"language/es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: es\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.8\n"
 
-#. module: website_event_register_free_with_sale
-#: model:ir.model,name:website_event_register_free_with_sale.model_website
-msgid "Website"
-msgstr "Sitio Web"
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Email"
+msgstr "Correo electrónico"
+
+#. module: website_event_register_free
+#: model:ir.model,name:website_event_register_free.model_event_registration
+msgid "Event Registration"
+msgstr "Registro de evento"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.free_registration_form
+msgid "Free"
+msgstr "Gratis"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.free_registration_form
+msgid "No seats available"
+msgstr "No quedan asientos disponibles"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.free_registration_form
+#: view:website:website_event_register_free.partner_register_form
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Register"
+msgstr "Registrarse"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.free_registration_form
+msgid "Register Now"
+msgstr "Registrarse ahora"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Review the amount of tickets to register"
+msgstr "Revisar la cantidad de tickets para registrar"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.confirm_message
+msgid "Thank you"
+msgstr "Gracias"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.free_registration_form
+msgid "Ticket Type"
+msgstr "Tipo de ticket"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Your Details"
+msgstr "Sus detalles"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Your Name"
+msgstr "Su nombre"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.partner_register_form
+msgid "Your company / organisation"
+msgstr "Su empresa / organización"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.confirm_message
+msgid "Your free registration for"
+msgstr "¡Su registro gratuito para"
+
+#. module: website_event_register_free
+#: view:website:website_event_register_free.confirm_message
+msgid "succeeded!"
+msgstr "se ha completado satisfactoriamente!"
+
+#~ msgid "Website"
+#~ msgstr "Sitio Web"
