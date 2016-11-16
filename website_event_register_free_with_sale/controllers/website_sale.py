@@ -20,8 +20,6 @@
 ##############################################################################
 from openerp.http import request, route
 from openerp.addons.website_sale.controllers.main import website_sale
-from openerp.addons.website_event_register_free.controllers.website_event \
-    import WebsiteEvent
 
 from ..exceptions import NoNeedForSOError
 
