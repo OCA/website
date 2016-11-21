@@ -4,7 +4,7 @@
 
 {
     'name': 'Website Supplier List',
-    'version': '8.0.1.0.0',
+    'version': '9.0.1.0.0',
     'summary': 'Publish Your Suppliers References',
     'author': 'OpenSynergy Indonesia,Odoo Community Association (OCA)',
     'website': 'https://github.com/mikevhe18',
