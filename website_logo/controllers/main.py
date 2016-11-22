@@ -20,6 +20,7 @@
 ##############################################################################
 
 import functools
+import logging
 from cStringIO import StringIO
 
 import openerp
@@ -27,7 +28,9 @@ from openerp.addons.web import http
 from openerp.addons.web.http import request
 from openerp.modules import get_module_resource
 
+
 db_monodb = http.db_monodb
+_logger = logging.getLogger(__name__)
 
 
 class Website(http.Controller):
@@ -79,6 +82,8 @@ class Website(http.Controller):
                         response = http.send_file(
                             image, filename=imgname, mtime=mtime)
                         return response
-            except Exception:
-                pass
+            except Exception:  # pragma: no cover
+                _logger.exception(openerp._(
+                    'Could not get website logo, falling back to default',
+                ))
         return http.send_file(placeholder(imgname))
