@@ -28,6 +28,8 @@ class WebsiteEvent(website_event):
     def cart_update(self, **post):
         has_paid_tickets = False
         free_tickets = 0
+        request.session.pop("free_tickets", None)
+        request.session.pop("event_id", None)
         for key, value in post.items():
             qty = int(value or 0)
             if not qty or not key.startswith("ticket-"):

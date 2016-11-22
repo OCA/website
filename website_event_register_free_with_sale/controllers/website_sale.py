@@ -59,7 +59,7 @@ class WebsiteSale(website_sale):
 
         :raise KeyError:
             When ``free_tickets`` or ``event_id`` are not found under
-            :class:`~request.session`.
+            :class:`~request.session`, or are empty.
 
         :raise NoNeedForSOError:
             When there is nothing left to buy after free registrations are
@@ -71,6 +71,8 @@ class WebsiteSale(website_sale):
         """
         tickets = request.session["free_tickets"]
         event = request.env["event.event"].browse(request.session["event_id"])
+        if not (tickets and event):
+            raise KeyError
         Registration = request.env['event.registration']
         registration_vals = Registration._prepare_registration(
             event,
