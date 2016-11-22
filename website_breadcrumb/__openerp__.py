@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
 {
     "name": "Website Breadcrumbs",
     "summary": "Let you have breadcrumbs in website pages",
@@ -9,7 +9,7 @@
     "website": "https://grupoesoc.es/",
     "author": "Grupo ESOC Ingeniería de Servicios, "
               "Odoo Community Association (OCA)",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     "application": False,
     "installable": True,
     "depends": [
