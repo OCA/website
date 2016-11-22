@@ -2,8 +2,7 @@
 <!-- © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 
-<openerp>
-<data>
+<odoo>
 
 <template id="layout"
           inherit_id="website.layout"
@@ -24,5 +23,4 @@
     </xpath>
 </template>
 
-</data>
-</openerp>
+</odoo>
