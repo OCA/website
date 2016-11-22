@@ -18,9 +18,10 @@
 #
 ##############################################################################
 
-from openerp import models, fields
+from odoo import models, fields
 
 
 class Company(models.Model):
     _inherit = 'res.company'
+
     website_logo = fields.Binary("Website logo")
