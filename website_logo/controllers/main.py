@@ -22,7 +22,10 @@ from odoo.addons.web.controllers.main import Binary
 import odoo
 from odoo import http
 from odoo.http import request
+from odoo.modules import get_resource_path
 from cStringIO import StringIO
+import functools
+
 
 db_monodb = http.db_monodb
 
@@ -36,6 +39,7 @@ class WebsiteLogo(Binary):
     def website_logo(self, dbname=None, **kw):
         imgname = 'logo.png'
         uid = None
+        placeholder = functools.partial(get_resource_path, 'web', 'static', 'src', 'img')
         if request.session.db:
             dbname = request.session.db
             uid = request.session.uid
@@ -61,5 +65,5 @@ class WebsiteLogo(Binary):
                         return http.send_file(image_data, filename=imgname, mtime=row[1])
             except Exception:
                 pass
-        return http.send_file(self.placeholder(image=imgname))
+        return http.send_file(placeholder(imgname))
         # return super(WebsiteLogo, self).company_logo(dbname=dbname, **kw)
