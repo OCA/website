@@ -1,101 +1,86 @@
-/* © 2015 Antiun Ingeniería S.L. - Jairo Llopis
- * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
- */
+/* Copyright 2015-2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+ * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). */
 
-"use strict";
-(function ($) {
-    var website = openerp.website,
-        _t = openerp._t;
+odoo.define('website_snippet_anchor.widgets', function (require) {
+    "use strict";
+    var ajax = require("web.ajax");
+    var core = require("web.core");
+    var options = require("web_editor.snippets.options");
+    var website = require("website.website");
+    var widget = require("web_editor.widget");
+    var _t = core._t;
+
+    // Templates
+    ajax.loadXML(
+        "/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml",
+        core.qweb
+    );
 
     // Option to have anchors in snippets
-    website.snippet.options.anchor = website.snippet.Option.extend({
-        start: function () {
-            var self = this;
-            self.$el.find(".js_anchor").click(function (event) {
-                return self.select(event, _t("Choose anchor"));
-            });
-        },
-
-        /**
-         * Allow to set anchor name.
-         */
-        select: function (event, window_title, default_) {
-            var self = this;
-            default_ = default_ || self.$target.attr("id");
-            website.prompt({
-                "window_title": window_title,
-                "default": default_,
+    options.registry.anchor = options.Class.extend({
+        // Ask anchor name.
+        ask: function (type, value, $li) {
+            if (type !== "click") return;
+            return website.prompt({
+                "window_title": value,
+                "default": this.$target.attr("id") || "",
                 "input": _t("Name"),
-            }).then(function (answer) {
-                if (answer) {
-                    if (-1 != $.inArray(answer,
-                                  self.current_anchors(self.$target[0]))) {
-                        return self.select(
-                            event,
-                            _t("Anchor already exists: ") + answer,
-                            answer
-                        );
-                    } else {
-                        self.update_anchor(self.$target, answer);
-                    }
+            })
+            .done($.proxy(this.answer, this));
+        },
+
+        // Process user's answer
+        answer: function (answer) {
+            if (answer) {
+                if (this.valid_anchor(answer)) {
+                    return this.update_anchor(answer);
                 } else {
-                    self.$target.removeAttr("id");
+                    return this.ask(
+                        "click",
+                        _.str.sprintf(
+                            _t("Anchor %s already exists, choose another"),
+                            answer
+                        )
+                    );
                 }
-            });
+            } else {
+                this.$target.removeAttr("id");
+            }
         },
 
-        /**
-         * Return an array of anchors except the one found in `except`.
-         */
-        current_anchors: function (except) {
-            var anchors = Array();
-
-            $("[id]").not(except).each(function () {
-                anchors.push($(this).attr("id"));
-            });
-
-            return anchors;
+        // Check if a given anchor is valid
+        valid_anchor: function (anchor) {
+            return !$("#" + anchor).not(this.$target[0]).length;
         },
 
-        /**
-         * Update an anchor and all its dependencies.
-         */
-        update_anchor: function ($element, new_anchor, old_anchor) {
-            old_anchor = old_anchor || $element.attr("id");
-            var new_hashed = "#" + new_anchor,
+        // Update an anchor and all its dependencies.
+        update_anchor: function (new_anchor) {
+            var old_anchor = this.$target.attr("id"),
+                new_hashed = "#" + new_anchor,
                 old_hashed = "#" + old_anchor;
 
             // Set new anchor
-            $element.attr("id", new_anchor);
-            $element.attr("data-cke-saved-id", new_anchor);
+            this.$target.attr("id", new_anchor);
 
-            // Fix other elements' attributes. The "data-cke-saved-*" attribute
-            // forces Odoo to update when no visible changes are made.
-            $("[href='" + old_hashed + "'], \
-               [data-cke-saved-href='" + old_hashed + "']")
-                .attr("href", new_hashed)
-                .attr("data-cke-saved-href", new_hashed);
-            $("[data-target='" + old_hashed + "']")
+            // Fix other elements' attributes.
+            $(".oe_editable [href='" + old_hashed + "']")
+                .attr("href", new_hashed);
+            $(".oe_editable [data-target='" + old_hashed + "']")
                 .attr("data-target", new_hashed);
-            $("[for='" + old_anchor + "'], \
-               [data-cke-saved-for='" + old_anchor + "']")
-                .attr("for", new_anchor)
-                .attr("data-cke-saved-for", new_anchor);
+            $(".oe_editable [for='" + old_anchor + "']")
+                .attr("for", new_anchor);
         },
     });
 
-    // Load QWeb js snippets
-    website.add_template_file(
-        "/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml");
-
     // Add anchor to link dialog
-    website.editor.RTELinkDialog = website.editor.RTELinkDialog.extend({
+    widget.LinkDialog.include({
         /**
          * Allow the user to use only an anchor.
          */
         get_data: function (test) {
             var $anchor = this.$el.find("#anchor");
 
+            // Replace parent method if we have an anchor
             if (test !== false && $anchor.val()) {
                 var $url_source = this.$el
                                   .find(".active input.url-source:input"),
@@ -113,6 +98,8 @@
                     this.$el.find("input.window-new").prop("checked"),
                     this.$el.find("#link-text").val() || $url_source.val(),
                     classes);
+
+            // Fall back to parent method if no anchor is present
             } else {
                 return this._super(test);
             }
@@ -125,27 +112,28 @@
          * in its field.
          */
         bind_data: function () {
-            var url = this.element && (this.element.data("cke-saved-href")
-                                   ||  this.element.getAttribute("href")),
-                url_parts = url.split("#", 2),
-                result = null;
+            var url = this.element && this.element.getAttribute("href"),
+                url_parts = url.split("#", 2);
 
             // Trick this._super()
             if (url_parts.length > 1) {
                 this.element.setAttribute("href", url_parts[0]);
-                this.element.data("cke-saved-href", url_parts[0])
                 this.$el.find("#anchor").val(url_parts[1]);
             }
 
-            result = this._super();
+            var result = this._super();
 
             // Back to expected status of this.element
             if (url_parts.length > 1) {
                 this.element.setAttribute("href", url)
-                this.element.data("cke-saved-href", url)
             }
 
             return result;
         },
-    })
-})(jQuery);
+    });
+
+    return {
+        Option: options.registry.anchor,
+        LinkDialog: widget.LinkDialog,
+    }
+});

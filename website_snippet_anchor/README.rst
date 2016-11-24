@@ -12,7 +12,7 @@ easily.
 
 Anchors are just the HTML ``id`` attribute, which is commonly used to add it
 to any URL and get directly to the element with that anchor, in the form of
-http://www.antiun.com/#anchor-name.
+http://www.tecnativa.com/#anchor-name.
 
 Usage
 =====
@@ -36,7 +36,7 @@ To link to any page's anchor, you need to:
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/8.0
+   :target: https://runbot.odoo-community.org/runbot/186/9.0
 
 Bug Tracker
 ===========
@@ -44,11 +44,16 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues
 <https://github.com/OCA/website/issues>`_. In case of trouble, please
 check there if your issue has already been reported. If you spotted it first,
-help us smashing it by providing a detailed and welcomed `feedback
-<https://github.com/OCA/
-website/issues/new?body=module:%20
-website_snippet_anchor%0Aversion:%20
-8.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+help us smashing it by providing a detailed and welcomed feedback.
+
+Roadmap / Known Issues
+======================
+
+* If you try to save a wrong anchor, another dialog is shown, but backdrop
+  disappears.
+* We should have a better dialog that explains to user the purpose of anchors
+  and uses HTML5 to validate input, but it is quite hard to achieve until
+  https://github.com/odoo/odoo/issues/14458 gets fixed.
 
 Credits
 =======
@@ -61,8 +66,8 @@ Images
 Contributors
 ------------
 
-* Rafael Blasco <rafabn@antiun.com>
-* Jairo Llopis <yajo.sk8@gmail.com>
+* Rafael Blasco <rafael.blasco@tecnativa.com>
+* Jairo Llopis <jairo.llopis@tecnativa.com>
 
 Maintainer
 ----------
@@ -77,4 +82,4 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-To contribute to this module, please visit http://odoo-community.org.
+To contribute to this module, please visit https://odoo-community.org.
