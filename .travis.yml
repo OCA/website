@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 cache: pip
 
 addons:
@@ -34,6 +34,7 @@ before_install:
 install:
   - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
+  - sudo apt-get install ruby-sass
   - travis_install_nightly
 
 script:
