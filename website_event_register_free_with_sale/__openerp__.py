@@ -20,16 +20,20 @@
 ##############################################################################
 {
     "name": "Register for free events - Sale extension",
-    "version": "8.0.1.0.0",
-    "author": "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
-              "Antiun Ingeniería S.L.,",
-              "Odoo Community Association (OCA)"
+    "version": "8.0.1.1.0",
+    "author": "Tecnativa, "
+              "Antiun Ingeniería S.L., "
+              "Odoo Community Association (OCA)",
+    "website": "https://www.tecnativa.com",
     "license": "AGPL-3",
     "category": "Website",
     "summary": "Combine free and paid tickets on events",
     "depends": [
         'website_event_register_free',
         'website_event_sale',
+    ],
+    "data": [
+        "templates/website_sale.xml",
     ],
     "auto_install": True,
     "installable": True,

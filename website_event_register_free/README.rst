@@ -12,6 +12,7 @@ Known issues / Roadmap
 ======================
 
 * it would be nice if we could define tickets with price zero and free registration then asks which of the free tickets we want to take.
+* Move to OCA/event when migrating to v9.
 
 Credits
 =======
@@ -20,8 +21,9 @@ Contributors
 ------------
 
 * Holger Brunn <hbrunn@therp.nl>
-* Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+* Pedro M. Baeza <pedro.baeza@tecnativa.com>
 * Daniel Gómez Zurita <danielgz@antiun.com>
+* Jairo Llopis <jairo.llopis@tecnativa.com>
 
 Addon icon
 ----------
