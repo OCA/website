@@ -27,6 +27,7 @@ addon | version | summary
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 | Website Legal Page
 [website_logo](website_logo/) | 9.0.1.0.0 | Website company logo
 [website_no_crawler](website_no_crawler/) | 9.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
+[website_odoo_debranding](website_odoo_debranding/) | 9.0.1.0.0 | Remove odoo.com bindings on website
 [website_payment_v10](website_payment_v10/) | 9.0.1.0.0 | Payment: Website Integration
 [website_portal_contact](website_portal_contact/) | 9.0.1.0.0 | Allows logged in portal users to manage their contacts
 [website_portal_purchase](website_portal_purchase/) | 9.0.1.0.0 | Add purchase orders and quotation in the frontend portal
