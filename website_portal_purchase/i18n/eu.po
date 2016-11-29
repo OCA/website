@@ -4,19 +4,20 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Esther Martín Menéndez <esthermartin001@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 10:40+0000\n"
-"PO-Revision-Date: 2017-03-28 10:40+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
-"Language-Team: Vietnamese (https://www.transifex.com/oca/teams/23907/vi/)\n"
+"POT-Creation-Date: 2017-02-25 04:20+0000\n"
+"PO-Revision-Date: 2017-02-25 04:20+0000\n"
+"Last-Translator: Esther Martín Menéndez <esthermartin001@gmail.com>, 2017\n"
+"Language-Team: Basque (https://www.transifex.com/oca/teams/23907/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: vi\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: eu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.order_list
@@ -130,7 +131,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.order_list
 msgid "Date"
-msgstr "Ngày"
+msgstr ""
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.purchases_backend_access
@@ -187,7 +188,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "Taxes:"
-msgstr ""
+msgstr "Zergak:"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.home_orders
@@ -204,7 +205,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.order_list
 msgid "Total"
-msgstr "Tổng"
+msgstr "Total"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup

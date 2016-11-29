@@ -11,12 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2017-03-28 10:40+0000\n"
 "PO-Revision-Date: 2017-03-28 10:40+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
-"Language-Team: Vietnamese (https://www.transifex.com/oca/teams/23907/vi/)\n"
+"Language-Team: Afrikaans (https://www.transifex.com/oca/teams/23907/af/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: vi\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: af\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.order_list
@@ -130,7 +130,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.order_list
 msgid "Date"
-msgstr "Ngày"
+msgstr ""
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.purchases_backend_access
@@ -172,7 +172,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "Kwotasie #"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.layout_orders
@@ -204,7 +204,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.order_list
 msgid "Total"
-msgstr "Tổng"
+msgstr "Totaal"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
