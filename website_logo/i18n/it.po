@@ -3,16 +3,15 @@
 # * website_logo
 # 
 # Translators:
-# Paolo Valier, 2016
-# Paolo Valier, 2016
+# OCA Transbot <transbot@odoo-community.org>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: website (8.0)\n"
+"Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-29 17:03+0000\n"
-"PO-Revision-Date: 2016-07-29 14:15+0000\n"
-"Last-Translator: Paolo Valier\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
+"POT-Creation-Date: 2016-11-29 03:55+0000\n"
+"PO-Revision-Date: 2016-11-29 03:55+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -20,34 +19,34 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_logo
-#: view:website:website.layout
-msgid "/website_logo.png"
-msgstr "/website_logo.png"
+#: code:addons/website_logo/controllers/main.py:86
+#, python-format
+msgid "Could not get website logo, falling back to default"
+msgstr ""
 
 #. module: website_logo
-#: view:website.config.settings:website_logo.view_website_config_settings
-msgid "Domain"
-msgstr "Dominio"
-
-#. module: website_logo
-#: view:website:website_logo.view_website_form
-#: view:website.config.settings:website_logo.view_website_config_settings
+#: model:ir.ui.view,arch_db:website_logo.view_website_config_settings
+#: model:ir.ui.view,arch_db:website_logo.view_website_form
 msgid "Logo"
 msgstr "Logo"
 
 #. module: website_logo
-#: help:website,logo:0
+#: model:ir.model.fields,help:website_logo.field_website_logo
 msgid ""
 "This field holds the logo for this website, showed in header. Recommended "
 "size is 180x50"
-msgstr "Questo campo contiene il logo del sito mostrato nell'intestazione. Dimensioni raccomandate: 180x50."
+msgstr ""
+"Questo campo contiene il logo del sito mostrato nell'intestazione. "
+"Dimensioni raccomandate: 180x50."
 
 #. module: website_logo
-#: help:website.config.settings,logo:0
+#: model:ir.model.fields,help:website_logo.field_website_config_settings_logo
 msgid ""
 "This field holds the logo for this website, showed in header.Recommended "
 "size is 180x50"
-msgstr "Questo campo contiene il logo del sito mostrato nell'intestazione. Dimensioni raccomandate: 180x50."
+msgstr ""
+"Questo campo contiene il logo del sito mostrato nell'intestazione. "
+"Dimensioni raccomandate: 180x50."
 
 #. module: website_logo
 #: model:ir.model,name:website_logo.model_website
@@ -55,6 +54,12 @@ msgid "Website"
 msgstr "Sito"
 
 #. module: website_logo
-#: field:website,logo:0 field:website.config.settings,logo:0
+#: model:ir.model.fields,field_description:website_logo.field_website_config_settings_logo
+#: model:ir.model.fields,field_description:website_logo.field_website_logo
 msgid "Website logo"
 msgstr "Logo del sito"
+
+#. module: website_logo
+#: model:ir.model,name:website_logo.model_website_config_settings
+msgid "website.config.settings"
+msgstr ""

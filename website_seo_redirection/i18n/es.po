@@ -1,23 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_seo_redirection
-#
+# 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-01 13:03+0200\n"
-"PO-Revision-Date: 2016-09-01 13:06+0200\n"
-"Last-Translator: Jairo Llopis <jairo.llopis@tecnativa.com>\n"
+"POT-Creation-Date: 2016-11-29 03:55+0000\n"
+"PO-Revision-Date: 2016-11-29 03:55+0000\n"
+"Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>, 2016\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.8\n"
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:77
@@ -26,17 +26,17 @@ msgid "%s must start with `/`"
 msgstr "%s debe comenzar por \"/\""
 
 #. module: website_seo_redirection
-#: view:website:website_seo_redirection.sample_page
+#: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid ", but"
 msgstr ", pero"
 
 #. module: website_seo_redirection
-#: view:website:website_seo_redirection.sample_page
+#: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "/page/website_seo_redirection.sample_page"
 msgstr "/page/website_seo_redirection.sample_page"
 
 #. module: website_seo_redirection
-#: view:website:website_seo_redirection.sample_page
+#: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "/seo/sample"
 msgstr "/seo/sample"
 
@@ -55,17 +55,17 @@ msgid "Change the URL"
 msgstr "Cambiar la URL"
 
 #. module: website_seo_redirection
-#: field:website.seo.redirection,create_uid:0
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: website_seo_redirection
-#: field:website.seo.redirection,create_date:0
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_create_date
 msgid "Created on"
 msgstr "Creado en"
 
 #. module: website_seo_redirection
-#: field:website.seo.redirection,destination:0
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_destination
 msgid "Destination URL"
 msgstr "URL de destino"
 
@@ -77,7 +77,7 @@ msgid "Destination URL:"
 msgstr "URL de destino:"
 
 #. module: website_seo_redirection
-#: field:website.seo.redirection,display_name:0
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
 
@@ -105,7 +105,7 @@ msgid "HTTP routing"
 msgstr "Enrutamiento HTTP"
 
 #. module: website_seo_redirection
-#: field:website.seo.redirection,id:0
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_id
 msgid "ID"
 msgstr "ID (identificación)"
 
@@ -114,19 +114,19 @@ msgstr "ID (identificación)"
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:16
 #, python-format
 msgid ""
-"If you need a special URL for this page, you can set it here, but if you set "
-"some URL that is already in use, could be interferring with other page and "
+"If you need a special URL for this page, you can set it here, but if you set"
+" some URL that is already in use, could be interferring with other page and "
 "bad things could happen..."
 msgstr ""
-"Si necesita una URL especial para esta página, puede establecerla aquí, pero "
-"si establece una URL que ya está en uso, podría interferir con otra página y "
-"podría haber problemas..."
+"Si necesita una URL especial para esta página, puede establecerla aquí, pero"
+" si establece una URL que ya está en uso, podría interferir con otra página "
+"y podría haber problemas..."
 
 #. module: website_seo_redirection
-#: help:website.seo.redirection,relocate_controller:0
+#: model:ir.model.fields,help:website_seo_redirection.field_website_seo_redirection_relocate_controller
 msgid ""
-"If you relocate the controller, the same page that was found in the original "
-"URL will be now in the destination. Otherwise, this will simply make "
+"If you relocate the controller, the same page that was found in the original"
+" URL will be now in the destination. Otherwise, this will simply make "
 "requests be redirected, but a new controller should be available in the "
 "destination URL if you do not want a 404 error."
 msgstr ""
@@ -142,17 +142,17 @@ msgid "Invalid character found in %s: `%s`"
 msgstr "Se ha encontrado un carácter no válido en %s: \"%s\""
 
 #. module: website_seo_redirection
-#: field:website.seo.redirection,__last_update:0
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection___last_update
 msgid "Last Modified on"
 msgstr "Última modificación el"
 
 #. module: website_seo_redirection
-#: field:website.seo.redirection,write_uid:0
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_write_uid
 msgid "Last Updated by"
 msgstr "Última actualización de"
 
 #. module: website_seo_redirection
-#: field:website.seo.redirection,write_date:0
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
 
@@ -169,18 +169,18 @@ msgid "No redirection target found."
 msgstr "No se ha encontrado ningún destino."
 
 #. module: website_seo_redirection
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_origin
 #: model:website.menu,name:website_seo_redirection.sample_origin_menu
-#: field:website.seo.redirection,origin:0
 msgid "Original URL"
 msgstr "URL original"
 
 #. module: website_seo_redirection
-#: help:website.seo.redirection,destination:0
+#: model:ir.model.fields,help:website_seo_redirection.field_website_seo_redirection_destination
 msgid "Path where the controller will be found now."
 msgstr "Ruta donde el controlador se encontrará ahora."
 
 #. module: website_seo_redirection
-#: help:website.seo.redirection,origin:0
+#: model:ir.model.fields,help:website_seo_redirection.field_website_seo_redirection_origin
 msgid "Path where the original controller was found."
 msgstr "Ruta donde se encontraba el controlador original."
 
@@ -201,7 +201,7 @@ msgid "Redirected URL"
 msgstr "URL redireccionada"
 
 #. module: website_seo_redirection
-#: field:website.seo.redirection,relocate_controller:0
+#: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_relocate_controller
 msgid "Relocate controller"
 msgstr "Reubicar controlador"
 
@@ -222,7 +222,7 @@ msgid "SEO controller redirections"
 msgstr "Redirecciones de controladores SEO"
 
 #. module: website_seo_redirection
-#: view:website:website_seo_redirection.sample_page
+#: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "The original URL for this page is"
 msgstr "La URL original para esta página es"
 
@@ -239,7 +239,7 @@ msgid "Website"
 msgstr "Sitio web"
 
 #. module: website_seo_redirection
-#: view:website:website_seo_redirection.sample_page
+#: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "Welcome, this is SEO."
 msgstr "Bienvenido, esto es SEO."
 
@@ -247,9 +247,9 @@ msgstr "Bienvenido, esto es SEO."
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:85
 #, python-format
 msgid "You cannot redirect an URL to itself."
-msgstr "No puede redireccionar una URL a sí misma."
+msgstr "No puede redireccionar una URL a si misma."
 
 #. module: website_seo_redirection
-#: view:website:website_seo_redirection.sample_page
+#: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "is beautier, right?"
 msgstr "es más bonita, ¿verdad?"

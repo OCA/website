@@ -4,13 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-26 16:36+0000\n"
-"PO-Revision-Date: 2016-08-26 16:36+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"POT-Creation-Date: 2016-11-29 03:55+0000\n"
+"PO-Revision-Date: 2016-11-29 03:55+0000\n"
+"Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>, 2016\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,17 +22,17 @@ msgstr ""
 #. module: website_anchor_smooth_scroll
 #: model:website.menu,name:website_anchor_smooth_scroll.website_anchor_smooth_scroll_menu
 msgid "Anchor Smooth Scroll Demo"
-msgstr ""
+msgstr "Demo desplaz. suave de ancla"
 
 #. module: website_anchor_smooth_scroll
 #: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
 msgid "It works for any links to #anchors in your website!"
-msgstr ""
+msgstr "¡Funciona para cualquier enlace a #anclas en su sitio web!"
 
 #. module: website_anchor_smooth_scroll
 #: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
 msgid "More dummy content"
-msgstr ""
+msgstr "Más contenido de relleno"
 
 #. module: website_anchor_smooth_scroll
 #: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
@@ -41,29 +42,29 @@ msgstr "CMS Odoo - una imagen grande"
 #. module: website_anchor_smooth_scroll
 #: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
 msgid "Press the button below and enjoy a smooth experience."
-msgstr ""
+msgstr "Pulse el botón a continuación para disfrutar de una experiencia suave"
 
 #. module: website_anchor_smooth_scroll
 #: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
 msgid "Scroll to bottom"
-msgstr ""
+msgstr "Desplazamiento a la parte de abajo"
 
 #. module: website_anchor_smooth_scroll
 #: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
 msgid "Scroll to top"
-msgstr ""
+msgstr "Desplazamiento a la parte de arriba"
 
 #. module: website_anchor_smooth_scroll
 #: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
 msgid "Smooth? Nice."
-msgstr ""
+msgstr "¿Suave? Es agradable."
 
 #. module: website_anchor_smooth_scroll
 #: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
 msgid "This is dummy content"
-msgstr ""
+msgstr "Esto es un contenido de relleno"
 
 #. module: website_anchor_smooth_scroll
 #: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
 msgid "Try smooth scrolling. Easily."
-msgstr ""
+msgstr "Pruebe el desplazamiento suave. Fácilmente."

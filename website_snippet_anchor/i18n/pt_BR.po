@@ -3,15 +3,15 @@
 # * website_snippet_anchor
 # 
 # Translators:
-# danimaribeiro <danimaribeiro@gmail.com>, 2016
+# OCA Transbot <transbot@odoo-community.org>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: website (8.0)\n"
+"Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-05 18:10+0000\n"
-"Last-Translator: danimaribeiro <danimaribeiro@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-website-8-0/language/pt_BR/)\n"
+"POT-Creation-Date: 2016-11-29 03:55+0000\n"
+"PO-Revision-Date: 2016-11-29 03:55+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/23907/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -27,10 +27,10 @@ msgstr "Âncora"
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:35
+#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:41
 #, python-format
-msgid "Anchor already exists: "
-msgstr "Âncora já existe:"
+msgid "Anchor %s already exists, choose another"
+msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
@@ -40,30 +40,16 @@ msgid "Anchors are appended to the URL like http://localhost/#your-anchor"
 msgstr "Âncoras são adicionadas a URL como http://localhost/#your-anchor"
 
 #. module: website_snippet_anchor
-#. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:15
-#, python-format
-msgid "Choose anchor"
-msgstr "Escolha uma âncora"
+#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
+msgid "Change anchor"
+msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:28
+#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:27
 #, python-format
 msgid "Name"
 msgstr "Nome"
-
-#. module: website_snippet_anchor
-#: view:website:website.snippet_options
-msgid "Set anchor"
-msgstr "Setar âncora"
-
-#. module: website_snippet_anchor
-#: view:website:website.snippet_options
-msgid ""
-"Use anchors to go directly to a section of your page, appending #anchor to "
-"the URL"
-msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
