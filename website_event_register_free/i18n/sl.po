@@ -3,13 +3,13 @@
 # * website_event_register_free
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
-"PO-Revision-Date: 2015-10-18 03:57+0000\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2016-11-28 06:20+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,7 @@ msgid "Review the amount of tickets to register"
 msgstr "Revizija količine vstopnic za registracijo"
 
 #. module: website_event_register_free
-#: view:website:website_event_register_free.partner_register_confirm
+#: view:website:website_event_register_free.confirm_message
 msgid "Thank you"
 msgstr "Hvala"
 
@@ -90,11 +90,11 @@ msgid "Your company / organisation"
 msgstr "Vaša družba / organizacija"
 
 #. module: website_event_register_free
-#: view:website:website_event_register_free.partner_register_confirm
-msgid "Your registration for"
-msgstr "Vaša registracija za"
+#: view:website:website_event_register_free.confirm_message
+msgid "Your free registration for"
+msgstr "Vaša brezplačna registracija za"
 
 #. module: website_event_register_free
-#: view:website:website_event_register_free.partner_register_confirm
+#: view:website:website_event_register_free.confirm_message
 msgid "succeeded!"
 msgstr "uspešna!"

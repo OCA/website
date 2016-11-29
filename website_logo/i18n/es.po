@@ -7,12 +7,13 @@
 # Antonio Trueba, 2016
 # Antonio Trueba, 2016
 # Carles Antoli <carlesantoli@hotmail.com>, 2015
+# Carles Antoli <carlesantoli@hotmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
-"PO-Revision-Date: 2016-05-01 19:59+0000\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2016-10-18 06:57+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -49,7 +50,7 @@ msgstr "Este campo define el logo para este sitio web, mostrado en la cabecera. 
 msgid ""
 "This field holds the logo for this website, showed in header.Recommended "
 "size is 180x50"
-msgstr ""
+msgstr "Este campo contiene el logo para este sitio web, mostrado en la cabecera. El tamaño recomendado en 180x50."
 
 #. module: website_logo
 #: model:ir.model,name:website_logo.model_website

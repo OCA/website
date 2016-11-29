@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-29 17:03+0000\n"
-"PO-Revision-Date: 2016-07-27 03:03+0000\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2016-11-25 14:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgid ""
 "    </tr><tr>\n"
 "        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n"
 "            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n"
-"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\"\n"
+"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/web/image/slide.slide/${object.id}/image\"\n"
 "                    style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n"
 "            </a>\n"
 "            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n"
@@ -66,7 +66,7 @@ msgid ""
 "    </tr></tbody>\n"
 "</table>\n"
 "</div>"
-msgstr "\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n            </a>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n            <h2 style=\"margin:0px;\">\n                ${user.name} ha compartido el/la ${object.slide_type} ${object.name} contigo.\n            </h2>\n        </td>\n    </tr><tr>\n        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\"\n                    style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n            </a>\n            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n            <p style=\"color: #ccc;\">Publicado el ${object.write_date}</p>\n            <p><a href=\"${object.website_url}\">Haga click aquí para abrir el/la ${object.slide_type}</a></p>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n    <tbody><tr>\n        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n            <a href=\"${object.website_url}\" style=\"color:#a24689\">Ver en el navegador</a> |\n            <a href=\"/page/contactus\" style=\"color:#a24689\">Contactar</a>\n        </td>\n    </tr></tbody>\n</table>\n</div>"
+msgstr ""
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_published
@@ -94,7 +94,7 @@ msgid ""
 "    </tr><tr>\n"
 "        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n"
 "            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n"
-"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\" style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n"
+"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/web/image/slide.slide/${object.id}/image\" style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n"
 "            </a>\n"
 "            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n"
 "            <p style=\"color: #ccc;\">Published on ${object.write_date}</p>\n"
@@ -113,7 +113,7 @@ msgid ""
 "    </tr></tbody>\n"
 "</table>\n"
 "</div>"
-msgstr "\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n            </a>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n            <h2 style=\"margin:0px;\">\n                Nuevo ${object.slide_type} publicado el ${object.channel_id.name}\n            </h2>\n        </td>\n    </tr><tr>\n        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\" style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n            </a>\n            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n            <p style=\"color: #ccc;\">Publicado el ${object.write_date}</p>\n            <p><a href=\"${object.website_url}\">Haga click aquí para abrir el/la ${object.slide_type}</a></p>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n    <tbody><tr>\n        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n            <a href=\"${object.website_url}\" style=\"color:#a24689\">Ver en el navegador</a> |\n            <a href=\"/page/contactus\" style=\"color:#a24689\">Contactar</a>\n        </td>\n    </tr></tbody>\n</table>\n</div>"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.embed,count_views:0
@@ -186,6 +186,11 @@ msgid "Authentified Users Only"
 msgstr "Solo usuarios autenticados"
 
 #. module: website_slides
+#: model:slide.slide,name:website_slides.slide_5
+msgid "Awesome Timesheet by Odoo"
+msgstr ""
+
+#. module: website_slides
 #: field:slide.channel,can_see:0
 msgid "Can See"
 msgstr ""
@@ -205,8 +210,8 @@ msgstr "Categorías"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:240
-#: code:addons/website_slides/static/src/xml/website_slides.xml:50
+#: code:addons/website_slides/static/src/js/slides_upload.js:248
+#: code:addons/website_slides/static/src/xml/website_slides.xml:54
 #: view:slide.category:website_slides.view_slides_category_form
 #: view:slide.category:website_slides.view_slides_category_tree
 #: view:slide.slide:website_slides.view_slide_slide_search
@@ -235,7 +240,7 @@ msgstr "Configuración del canal"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:165
+#: code:addons/website_slides/static/src/js/slides_upload.js:168
 #, python-format
 msgid ""
 "Channel contains the given title, please change before Save or Publish."
@@ -271,13 +276,13 @@ msgstr "Contenido"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:18
+#: code:addons/website_slides/static/src/xml/website_slides.xml:20
 #, python-format
 msgid "Content Preview"
 msgstr "Previsualizar el contenido"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:344
+#: code:addons/website_slides/controllers/main.py:330
 #, python-format
 msgid ""
 "Could not fetch data from url. Document or access right not available.\n"
@@ -285,19 +290,12 @@ msgid ""
 msgstr "No se ha podido recuperar información de la URL. Documento o permisos de acceso no disponibles.\nEsta es la respuesta recibida: %s"
 
 #. module: website_slides
-#: code:addons/website_slides/models/slides.py:331
+#: code:addons/website_slides/models/slides.py:354
 #, python-format
 msgid ""
-"Could not fetch data from url.Document or access right not available:\n"
+"Could not fetch data from url. Document or access right not available:\n"
 "%s"
-msgstr "No se ha podido recuperar información de la URL. Documento o permisos de acceso no disponibles:\n%s"
-
-#. module: website_slides
-#. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:210
-#, python-format
-msgid "Create New %s '%s'"
-msgstr "Crear nuevo %s '%s'"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_1
@@ -307,6 +305,13 @@ msgid ""
 "This is a new open source application in Python/Javascript based on Bootstrap and OpenERP.\n"
 "\n"
 "Download or use online on http://openerp.com"
+msgstr ""
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:217
+#, python-format
+msgid "Create new tag '%s'"
 msgstr ""
 
 #. module: website_slides
@@ -330,8 +335,8 @@ msgstr "Fecha del último mensaje publicado en el registro."
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:56
-#: code:addons/website_slides/static/src/xml/website_slides.xml:58
+#: code:addons/website_slides/static/src/xml/website_slides.xml:60
+#: code:addons/website_slides/static/src/xml/website_slides.xml:62
 #: field:slide.channel,description:0
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: field:slide.slide,description:0
@@ -341,15 +346,10 @@ msgstr "Descripción"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:68
+#: code:addons/website_slides/static/src/xml/website_slides.xml:72
 #, python-format
 msgid "Discard"
 msgstr "Descartar"
-
-#. module: website_slides
-#: model:slide.slide,name:website_slides.slide_5
-msgid "Discover Odoo Point Of Sale - For Shops and Restaurants"
-msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,dislikes:0 view:website:website_slides.slide_detail_view
@@ -387,9 +387,9 @@ msgstr "URL del documento"
 #. module: website_slides
 #: help:slide.slide,slide_type:0
 msgid ""
-"Document type will be set automatically depending on file type,height and "
+"Document type will be set automatically depending on file type, height and "
 "width."
-msgstr "El tipo de documento se fijará de forma automática en función del tipo de archivo, altura y anchura."
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
@@ -400,6 +400,15 @@ msgstr "Documentos"
 #: view:website:website_slides.embed_slide
 msgid "Download"
 msgstr "Descargar"
+
+#. module: website_slides
+#: model:slide.slide,description:website_slides.slide_5
+msgid ""
+"Download Awesome Timesheet by Odoo and discover how easy time tracking and employee management can be!\n"
+"\n"
+"Chrome: http://bit.ly/2613LcY\n"
+"iOS: http://bit.ly/1ZUZsZD"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,download_security:0
@@ -503,17 +512,12 @@ msgid "Featuring Policy"
 msgstr "Política de destacados"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:357
-#, python-format
-msgid "File is too big."
-msgstr "El fichero es demasiado grande."
-
-#. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:84
+#: code:addons/website_slides/controllers/main.py:345
+#: code:addons/website_slides/static/src/js/slides_upload.js:87
 #, python-format
-msgid "File is too big. Please select file upto 15MB"
-msgstr "El fichero es demasiado grande. El máximo son 15MB"
+msgid "File is too big. File size cannot exceed 15MB"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
@@ -598,11 +602,6 @@ msgid "Image"
 msgstr "Imagen"
 
 #. module: website_slides
-#: view:slide.channel:website_slides.view_slide_channel_form
-msgid "Image size: 330px x 240px"
-msgstr "Tamaño de imagen: 330px x 240px"
-
-#. module: website_slides
 #: selection:slide.slide,slide_type:0
 msgid "Infographic"
 msgstr "Infografía"
@@ -613,7 +612,7 @@ msgid "Infographics"
 msgstr "Infografías"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:381
+#: code:addons/website_slides/controllers/main.py:369
 #, python-format
 msgid ""
 "Internal server error, please try again later or contact administrator.\n"
@@ -629,7 +628,7 @@ msgstr ""
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:79
+#: code:addons/website_slides/static/src/js/slides_upload.js:82
 #, python-format
 msgid "Invalid file type. Please select pdf or image file"
 msgstr "Tipo de fichero incorrecto. Por favor seleccione un pdf o una imagen"
@@ -771,11 +770,9 @@ msgid "No channel created or published yet."
 msgstr "No hay canales creados o publicados todavía."
 
 #. module: website_slides
-#. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:195
-#, python-format
-msgid "No matches found. Type to create new %s"
-msgstr "No se han encontrado coincidencias. escriba para crear nuevo %s"
+#: view:website:website_slides.slide_detail_view
+msgid "No presentation available."
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
@@ -872,21 +869,13 @@ msgid ""
 msgstr ""
 
 #. module: website_slides
-#: model:slide.slide,description:website_slides.slide_5
-msgid ""
-"Odoo's online Point of Sale software for restaurants and shops is based on a smart interface that any retail company can use without difficulty. The POS can be used online or offline and iPads, Android tablets or laptops. \n"
-"\n"
-"More info - https://www.odoo.com/page/point-of-sale"
-msgstr ""
-
-#. module: website_slides
 #: model:slide.slide,name:website_slides.slide_9
 msgid "Open Days 2014 Infographic"
 msgstr ""
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_1
-msgid "Open Source Website Builder and eCommerce: OpenERP"
+msgid "Open Source Website Builder and eCommerce: Odoo"
 msgstr ""
 
 #. module: website_slides
@@ -901,7 +890,7 @@ msgstr ""
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:24
+#: code:addons/website_slides/static/src/xml/website_slides.xml:28
 #, python-format
 msgid "PDF or Image File"
 msgstr "PDF o archivo de imagen"
@@ -918,19 +907,20 @@ msgstr "Por favor"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides.js:50
+#: code:addons/website_slides/static/src/js/slides.js:59
 #, python-format
 msgid "Please <a href=\"/web?redirect=%s\">login</a> to vote this slide"
 msgstr "Por favor <a href=\"/web?redirect=%s\">inicie sesión</a> para votar esta diapositiva"
 
 #. module: website_slides
-#: code:addons/website_slides/models/slides.py:338
+#: code:addons/website_slides/models/slides.py:358
+#: code:addons/website_slides/models/slides.py:587
 #, python-format
 msgid "Please enter valid Youtube or Google Doc URL"
 msgstr "Por favor introduzca una URL de Youtube or Google Doc válida"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:328
+#: code:addons/website_slides/controllers/main.py:316
 #, python-format
 msgid "Please enter valid youtube or google doc url"
 msgstr "Por favor introduzca una URL de Youtube or Google Doc válida"
@@ -981,11 +971,6 @@ msgid "Private channel"
 msgstr "Canal privado"
 
 #. module: website_slides
-#: field:slide.channel,promoted_image:0
-msgid "Promoted image"
-msgstr "Imagen promocionada"
-
-#. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Public"
 msgstr "Público"
@@ -999,11 +984,6 @@ msgstr "Canal público"
 #: field:slide.slide,date_published:0
 msgid "Publish Date"
 msgstr "Fecha de publicación"
-
-#. module: website_slides
-#: view:website:website_slides.slide_detail_view
-msgid "Publish a presentation to enable social sharing feature"
-msgstr "Publica una presentación para habilitar las características de compartición"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
@@ -1022,6 +1002,11 @@ msgstr "Relacionado"
 
 #. module: website_slides
 #: view:website:website_slides.home
+msgid "Results for"
+msgstr ""
+
+#. module: website_slides
+#: view:website:website_slides.home
 msgid ""
 "Review your channel settings to promote your most viewed or recent published"
 " presentation"
@@ -1037,14 +1022,14 @@ msgstr ""
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:66
+#: code:addons/website_slides/static/src/xml/website_slides.xml:70
 #, python-format
 msgid "Save and Publish"
 msgstr "Guardar y publicar"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:65
+#: code:addons/website_slides/static/src/xml/website_slides.xml:69
 #, python-format
 msgid "Save as Draft"
 msgstr "Guardar como borrador"
@@ -1063,6 +1048,11 @@ msgstr "Seguridad"
 #: view:website:website_slides.home
 msgid "See all"
 msgstr "Ver todo"
+
+#. module: website_slides
+#: view:website:website_slides.channels
+msgid "Select a Channel"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_embed
@@ -1126,12 +1116,6 @@ msgid "Show channel but restrict presentations"
 msgstr "Mostrar canal pero restringir presentaciones"
 
 #. module: website_slides
-#: view:slide.channel:website_slides.view_slide_channel_form
-#: view:slide.slide:website_slides.view_slide_slide_form
-msgid "Show in website"
-msgstr "Mostrar en sitio web"
-
-#. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Slide"
 msgstr "Diapositiva"
@@ -1149,7 +1133,7 @@ msgstr "Diapositiva para promocionar"
 #. module: website_slides
 #: model:ir.actions.act_window,name:website_slides.action_slides_slides
 #: model:ir.model,name:website_slides.model_slide_slide
-#: model:ir.ui.menu,name:website_slides.menu_slides
+#: model:ir.ui.menu,name:website_slides.menu_website_slides_root
 #: model:ir.ui.menu,name:website_slides.submenu_action_slides_slides
 #: field:slide.category,slide_ids:0 field:slide.channel,slide_ids:0
 #: view:slide.slide:website_slides.view_slide_slide_tree
@@ -1193,8 +1177,8 @@ msgstr "Etiqueta"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:263
-#: code:addons/website_slides/static/src/xml/website_slides.xml:44
+#: code:addons/website_slides/static/src/js/slides_upload.js:271
+#: code:addons/website_slides/static/src/xml/website_slides.xml:48
 #: model:ir.actions.act_window,name:website_slides.action_slide_tag
 #: model:ir.ui.menu,name:website_slides.menu_slide_tag
 #: field:slide.slide,tag_ids:0
@@ -1233,6 +1217,13 @@ msgid "The slide name must be unique within a channel"
 msgstr "El nombre de una diapositiva debe ser único dentro de un canal"
 
 #. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid ""
+"The social sharing module will be unlocked when a moderator will allow your "
+"publication."
+msgstr ""
+
+#. module: website_slides
 #: field:slide.embed,url:0
 msgid "Third Party Website URL"
 msgstr ""
@@ -1245,7 +1236,7 @@ msgid "This"
 msgstr "Esto"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:334
+#: code:addons/website_slides/controllers/main.py:322
 #, python-format
 msgid ""
 "This video already exists in this channel <a target=\"_blank\" "
@@ -1259,8 +1250,8 @@ msgstr "Miniatura"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:38
-#: code:addons/website_slides/static/src/xml/website_slides.xml:40
+#: code:addons/website_slides/static/src/xml/website_slides.xml:42
+#: code:addons/website_slides/static/src/xml/website_slides.xml:44
 #: field:slide.slide,name:0
 #, python-format
 msgid "Title"
@@ -1299,7 +1290,7 @@ msgid "Type"
 msgstr "Tipo"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:158
+#: code:addons/website_slides/controllers/main.py:152
 #, python-format
 msgid "Uncategorized"
 msgstr "Sin categoría"
@@ -1310,7 +1301,7 @@ msgid "Uncategorized presentation"
 msgstr "Presentación sin categorizar"
 
 #. module: website_slides
-#: code:addons/website_slides/models/slides.py:582
+#: code:addons/website_slides/models/slides.py:572
 #, python-format
 msgid "Unknown document"
 msgstr "Documento desconocido"
@@ -1459,14 +1450,14 @@ msgstr "Escribe un comentario..."
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:109
+#: code:addons/website_slides/static/src/js/slides_upload.js:112
 #, python-format
 msgid "You can not upload password protected file."
 msgstr "No puedes subir ficheros protegidos."
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides.js:59
+#: code:addons/website_slides/static/src/js/slides.js:68
 #, python-format
 msgid "You have already voted for this slide"
 msgstr "Ya has votado esta diapositiva"
@@ -1478,14 +1469,14 @@ msgstr "Su nombre"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:32
+#: code:addons/website_slides/static/src/xml/website_slides.xml:36
 #, python-format
 msgid "Youtube Video URL"
 msgstr "URL del vídeo de Youtube"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:30
+#: code:addons/website_slides/static/src/xml/website_slides.xml:34
 #, python-format
 msgid "Youtube or Google Doc URL"
 msgstr "URL del vídeo de Youtube o Google Doc"
@@ -1534,7 +1525,7 @@ msgstr "en"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:66
+#: code:addons/website_slides/static/src/xml/website_slides.xml:70
 #, python-format
 msgid "or"
 msgstr "o"

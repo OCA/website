@@ -3,13 +3,14 @@
 # * website_portal_sale
 # 
 # Translators:
+# Kostas Goutoudis <goutoudis@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-01 16:32+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2016-10-11 11:58+0000\n"
+"Last-Translator: Kostas Goutoudis <goutoudis@gmail.com>\n"
 "Language-Team: Greek (Greece) (http://www.transifex.com/oca/OCA-website-8-0/language/el_GR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,6 +44,11 @@ msgid "Date:"
 msgstr "Ημερομηνία:"
 
 #. module: website_portal_sale
+#: view:website:website_portal_sale.orders_followup
+msgid "Discount (%)"
+msgstr "Έκπτωση (%)"
+
+#. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Done"
 msgstr "Ολοκληρωμένο"
@@ -62,7 +68,7 @@ msgstr "Εάν επιθυμείτε να αποκτήσετε πρόσβαση �
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "In preparation"
-msgstr ""
+msgstr "Σε προετοιμασία"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices

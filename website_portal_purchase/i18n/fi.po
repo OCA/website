@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-16 20:38+0000\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
 "PO-Revision-Date: 2015-12-25 15:37+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Finnish (http://www.transifex.com/oca/OCA-website-8-0/language/fi/)\n"
@@ -185,7 +185,7 @@ msgstr ""
 #: view:website:website_portal_purchase.request_quotations
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Total"
-msgstr ""
+msgstr "Yhteensä"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
-"PO-Revision-Date: 2016-05-02 04:11+0000\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2016-11-22 16:25+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgid ""
 "    </tr><tr>\n"
 "        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n"
 "            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n"
-"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\"\n"
+"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/web/image/slide.slide/${object.id}/image\"\n"
 "                    style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n"
 "            </a>\n"
 "            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n"
@@ -64,7 +64,7 @@ msgid ""
 "    </tr></tbody>\n"
 "</table>\n"
 "</div>"
-msgstr "\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n            </a>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n            <h2 style=\"margin:0px;\">\n                ${user.name} souporablja ${object.slide_type} ${object.name} z vami!\n            </h2>\n        </td>\n    </tr><tr>\n        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\"\n                    style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n            </a>\n            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n            <p style=\"color: #ccc;\">Objavljeno ${object.write_date}</p>\n            <p><a href=\"${object.website_url}\">Kliknite za odpiranje ${object.slide_type}</a></p>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n    <tbody><tr>\n        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n            <a href=\"${object.website_url}\" style=\"color:#a24689\">Prikaz v brskalniku</a> |\n            <a href=\"/page/contactus\" style=\"color:#a24689\">Stik</a>\n        </td>\n    </tr></tbody>\n</table>\n</div>"
+msgstr "\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n            </a>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n            <h2 style=\"margin:0px;\">\n                ${user.name} je dal ${object.slide_type} ${object.name} v souporabo z vami!\n            </h2>\n        </td>\n    </tr><tr>\n        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/web/image/slide.slide/${object.id}/image\"\n                    style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n            </a>\n            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n            <p style=\"color: #ccc;\">Objavljeno ${object.write_date}</p>\n            <p><a href=\"${object.website_url}\">Kliknite za odpiranje ${object.slide_type}</a></p>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n    <tbody><tr>\n        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n            <a href=\"${object.website_url}\" style=\"color:#a24689\">View in browser</a> |\n            <a href=\"/page/contactus\" style=\"color:#a24689\">Contact</a>\n        </td>\n    </tr></tbody>\n</table>\n</div>"
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_published
@@ -92,7 +92,7 @@ msgid ""
 "    </tr><tr>\n"
 "        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n"
 "            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n"
-"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\" style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n"
+"                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/web/image/slide.slide/${object.id}/image\" style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n"
 "            </a>\n"
 "            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n"
 "            <p style=\"color: #ccc;\">Published on ${object.write_date}</p>\n"
@@ -111,7 +111,7 @@ msgid ""
 "    </tr></tbody>\n"
 "</table>\n"
 "</div>"
-msgstr "\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n            </a>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n            <h2 style=\"margin:0px;\">\n                Nova ${object.slide_type} objavljena ${object.channel_id.name}\n            </h2>\n        </td>\n    </tr><tr>\n        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/website/image/slide.slide/${object.id}/image\" style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n            </a>\n            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n            <p style=\"color: #ccc;\">Objavljeno ${object.write_date}</p>\n            <p><a href=\"${object.website_url}\">Odprite ${object.slide_type}</a></p>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n    <tbody><tr>\n        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n            <a href=\"${object.website_url}\" style=\"color:#a24689\">Prikaz v brskalniku</a> |\n            <a href=\"/page/contactus\" style=\"color:#a24689\">Stik</a>\n        </td>\n    </tr></tbody>\n</table>\n</div>"
+msgstr "\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px; background-color:#ffffff\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center\" valign=\"center\">\n            <a href=\"${user.company_id.website}\" style=\"text-decoration:none\">\n                <img alt=\"Odoo\" src=\"${ctx['base_url']}/logo.png\" style=\"display:block; border:none; min-height:60px; margin:0 auto;\">\n            </a>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"width: 600px; margin: 10px 0px 0px 0px; vertical-align: top; padding: 0px; font-family:arial; font-size:12px;\">\n    <tbody><tr>\n        <td style=\"width: 600px; text-align:center; color: #ffffff; background-color:#a24689;\" valign=\"center\">\n            <h2 style=\"margin:0px;\">\n                Nova ${object.slide_type} objavljena na ${object.channel_id.name}\n            </h2>\n        </td>\n    </tr><tr>\n        <td style=\"width: 600px; vertical-align:top; text-align:center; background-color:#FFFFF; color:#414141\">\n            <a href=\"${object.website_url}\" style=\"color: #a24689;\">\n                <img alt=\"${object.name}\" src=\"${ctx['base_url']}/web/image/slide.slide/${object.id}/image\" style=\"height:auto; width:500px; background-color: #cccccc; margin: 16px;\">\n            </a>\n            <p style=\"font-size:24px; font-weight:bold\"><a href=\"${object.website_url}\">${object.name}</a></p>\n            <p style=\"color: #ccc;\">Objavljeno ${object.write_date}</p>\n            <p><a href=\"${object.website_url}\">Kliknite za odpiranje ${object.slide_type}</a></p>\n        </td>\n    </tr></tbody>\n</table>\n</div>\n<div style=\"padding:0px; margin:0px;\">\n<table cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 10px 0px 0px 0px; vertical-align: top;padding: 0px; font-family:arial; font-size:12px; color: #ffffff; background-color:#8f8f8f;\">\n    <tbody><tr>\n        <td style=\"width: 600px; font-size:12px; text-align:center; padding-top:10px; color:#a24689; padding-bottom:5px\">\n            <a href=\"${object.website_url}\" style=\"color:#a24689\">View in browser</a> |\n            <a href=\"/page/contactus\" style=\"color:#a24689\">Contact</a>\n        </td>\n    </tr></tbody>\n</table>\n</div>"
 
 #. module: website_slides
 #: field:slide.embed,count_views:0
@@ -184,6 +184,11 @@ msgid "Authentified Users Only"
 msgstr "Le overjeni uporabniki"
 
 #. module: website_slides
+#: model:slide.slide,name:website_slides.slide_5
+msgid "Awesome Timesheet by Odoo"
+msgstr "Odoo časovnice 'Awesome Timesheet'"
+
+#. module: website_slides
 #: field:slide.channel,can_see:0
 msgid "Can See"
 msgstr "Lahko vidi"
@@ -203,8 +208,8 @@ msgstr "Kategorije"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:240
-#: code:addons/website_slides/static/src/xml/website_slides.xml:50
+#: code:addons/website_slides/static/src/js/slides_upload.js:248
+#: code:addons/website_slides/static/src/xml/website_slides.xml:54
 #: view:slide.category:website_slides.view_slides_category_form
 #: view:slide.category:website_slides.view_slides_category_tree
 #: view:slide.slide:website_slides.view_slide_slide_search
@@ -233,7 +238,7 @@ msgstr "Nastavitve kanala"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:165
+#: code:addons/website_slides/static/src/js/slides_upload.js:168
 #, python-format
 msgid ""
 "Channel contains the given title, please change before Save or Publish."
@@ -269,13 +274,13 @@ msgstr "Vsebina"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:18
+#: code:addons/website_slides/static/src/xml/website_slides.xml:20
 #, python-format
 msgid "Content Preview"
 msgstr "Predogled vsebine"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:344
+#: code:addons/website_slides/controllers/main.py:330
 #, python-format
 msgid ""
 "Could not fetch data from url. Document or access right not available.\n"
@@ -283,19 +288,12 @@ msgid ""
 msgstr "Iz URL ni bilo mogoče pridobiti podatkov. Dokument ali dostopna pravica nista na voljo.\nPrejeti odgovor: %s"
 
 #. module: website_slides
-#: code:addons/website_slides/models/slides.py:331
+#: code:addons/website_slides/models/slides.py:354
 #, python-format
 msgid ""
-"Could not fetch data from url.Document or access right not available:\n"
+"Could not fetch data from url. Document or access right not available:\n"
 "%s"
 msgstr "Iz URL ni bilo mogoče pridobiti podatkov. Dokument ali dostopna pravica nista na voljo:\n%s"
-
-#. module: website_slides
-#. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:210
-#, python-format
-msgid "Create New %s '%s'"
-msgstr "Ustvari nov %s '%s'"
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_1
@@ -306,6 +304,13 @@ msgid ""
 "\n"
 "Download or use online on http://openerp.com"
 msgstr "Ustvari profesionalno spletno stran z enostavnim graditeljem strani. Uporabite dobro zasnovane gradnike in vse urejajte iz istega mesta. Izkoristite privzete poslovne funkcije; e-trgovina, dogodki, blogi, razpisi dela, reference, pozivi, izd.\n\nTo je nova Python/Javascript odprto kodna aplikacija na osnovi Bootstrap in OpenERP.\n\nPrenesite ali uporabljajte preko spleta na http://openerp.com"
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/js/slides_upload.js:217
+#, python-format
+msgid "Create new tag '%s'"
+msgstr "Ustvari novo oznako '%s'"
 
 #. module: website_slides
 #: field:slide.category,create_uid:0 field:slide.channel,create_uid:0
@@ -328,8 +333,8 @@ msgstr "Datum zadnjega objavljenega sporočila na zapisu."
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:56
-#: code:addons/website_slides/static/src/xml/website_slides.xml:58
+#: code:addons/website_slides/static/src/xml/website_slides.xml:60
+#: code:addons/website_slides/static/src/xml/website_slides.xml:62
 #: field:slide.channel,description:0
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: field:slide.slide,description:0
@@ -339,15 +344,10 @@ msgstr "Opis"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:68
+#: code:addons/website_slides/static/src/xml/website_slides.xml:72
 #, python-format
 msgid "Discard"
 msgstr "Zavrzi"
-
-#. module: website_slides
-#: model:slide.slide,name:website_slides.slide_5
-msgid "Discover Odoo Point Of Sale - For Shops and Restaurants"
-msgstr "Odkrijte Odoo prodajno točko - za trgovine in restavracije"
 
 #. module: website_slides
 #: field:slide.slide,dislikes:0 view:website:website_slides.slide_detail_view
@@ -385,7 +385,7 @@ msgstr "URL dokumenta"
 #. module: website_slides
 #: help:slide.slide,slide_type:0
 msgid ""
-"Document type will be set automatically depending on file type,height and "
+"Document type will be set automatically depending on file type, height and "
 "width."
 msgstr "Tip dokumenta se samodejno nastavi glede na tip datoteke, višino in širino."
 
@@ -398,6 +398,15 @@ msgstr "Dokumenti"
 #: view:website:website_slides.embed_slide
 msgid "Download"
 msgstr "Prenos"
+
+#. module: website_slides
+#: model:slide.slide,description:website_slides.slide_5
+msgid ""
+"Download Awesome Timesheet by Odoo and discover how easy time tracking and employee management can be!\n"
+"\n"
+"Chrome: http://bit.ly/2613LcY\n"
+"iOS: http://bit.ly/1ZUZsZD"
+msgstr "Prenesite Odoo Awesome Timesheet in odkrijte, kako enostavno je lahko spremljanje časa in upravljanje kadrov!\n\nChrome: http://bit.ly/2613LcY\niOS: http://bit.ly/1ZUZsZD"
 
 #. module: website_slides
 #: field:slide.slide,download_security:0
@@ -501,17 +510,12 @@ msgid "Featuring Policy"
 msgstr "Pravilnik za izpostavo"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:357
-#, python-format
-msgid "File is too big."
-msgstr "Datoteka je prevelika."
-
-#. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:84
+#: code:addons/website_slides/controllers/main.py:345
+#: code:addons/website_slides/static/src/js/slides_upload.js:87
 #, python-format
-msgid "File is too big. Please select file upto 15MB"
-msgstr "Datoteka je prevelika. Izberite datoteko do 15MB"
+msgid "File is too big. File size cannot exceed 15MB"
+msgstr "Datoteka je prevelika. Velikost datoteke ne sme presegati 15MB"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
@@ -596,11 +600,6 @@ msgid "Image"
 msgstr "Slika"
 
 #. module: website_slides
-#: view:slide.channel:website_slides.view_slide_channel_form
-msgid "Image size: 330px x 240px"
-msgstr "Velikost slike: 330px x 240px"
-
-#. module: website_slides
 #: selection:slide.slide,slide_type:0
 msgid "Infographic"
 msgstr "Informacijska grafika"
@@ -611,7 +610,7 @@ msgid "Infographics"
 msgstr "Informacijske grafike"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:381
+#: code:addons/website_slides/controllers/main.py:369
 #, python-format
 msgid ""
 "Internal server error, please try again later or contact administrator.\n"
@@ -627,7 +626,7 @@ msgstr "Intervjuvanec Guy Christiaens, Finančni vodja pri Alpinter, o uporabi O
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:79
+#: code:addons/website_slides/static/src/js/slides_upload.js:82
 #, python-format
 msgid "Invalid file type. Please select pdf or image file"
 msgstr "Neveljaven tip datoteke. Izberite pdf ali slikovno datoteko"
@@ -769,11 +768,9 @@ msgid "No channel created or published yet."
 msgstr "Noben kanal še ni ustvarjen ali objavljen."
 
 #. module: website_slides
-#. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:195
-#, python-format
-msgid "No matches found. Type to create new %s"
-msgstr "Ni najdenih ujemanj. Ustvarite novo %s"
+#: view:website:website_slides.slide_detail_view
+msgid "No presentation available."
+msgstr "Nobene predstavitve ni na voljo."
 
 #. module: website_slides
 #: view:website:website_slides.home
@@ -870,22 +867,14 @@ msgid ""
 msgstr "Odoo integrirana marketinška aplikacija pomaga pri privabljanju, konverziji in zaključevanju novih indicev. Preverite tri-delni video in odkrijte več na www.odoo.com\n\nVideo pripravili Miroslava Ganzarcikova in Sophia Eribo."
 
 #. module: website_slides
-#: model:slide.slide,description:website_slides.slide_5
-msgid ""
-"Odoo's online Point of Sale software for restaurants and shops is based on a smart interface that any retail company can use without difficulty. The POS can be used online or offline and iPads, Android tablets or laptops. \n"
-"\n"
-"More info - https://www.odoo.com/page/point-of-sale"
-msgstr "Odoo aplikacija Spletna prodajna točka za restavracije in trgovine sloni na preglednem vmesniku, ki ga lahko katerokoli podjetje brez težav uporablja.  POS se lahko uporablja 'online' ali 'offline', na iPad, Android tablicah ali prenosnikih. \n\nVeč o tem - https://www.odoo.com/page/point-of-sale"
-
-#. module: website_slides
 #: model:slide.slide,name:website_slides.slide_9
 msgid "Open Days 2014 Infographic"
 msgstr "Open Days 2014 Infographic"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_1
-msgid "Open Source Website Builder and eCommerce: OpenERP"
-msgstr "Odprto kodni gradnik spletnih strani in e-trgovin: OpenERP"
+msgid "Open Source Website Builder and eCommerce: Odoo"
+msgstr "Odprto kodni gradnik spletnih strani in e-trgovin: Odoo"
 
 #. module: website_slides
 #: model:slide.slide,name:website_slides.slide_4
@@ -899,7 +888,7 @@ msgstr "Odprto kodni CMS, Primerjava zmogljivosti - Mantavya Gajjar"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:24
+#: code:addons/website_slides/static/src/xml/website_slides.xml:28
 #, python-format
 msgid "PDF or Image File"
 msgstr "PDF ali slikovna datoteka"
@@ -916,19 +905,20 @@ msgstr "Prosimo"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides.js:50
+#: code:addons/website_slides/static/src/js/slides.js:59
 #, python-format
 msgid "Please <a href=\"/web?redirect=%s\">login</a> to vote this slide"
 msgstr "<a href=\"/web?redirect=%s\">prijavite se</a> za glasovanje za to prosojnico"
 
 #. module: website_slides
-#: code:addons/website_slides/models/slides.py:338
+#: code:addons/website_slides/models/slides.py:358
+#: code:addons/website_slides/models/slides.py:587
 #, python-format
 msgid "Please enter valid Youtube or Google Doc URL"
 msgstr "Vnesite veljaven Youtube ali Google Doc URL"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:328
+#: code:addons/website_slides/controllers/main.py:316
 #, python-format
 msgid "Please enter valid youtube or google doc url"
 msgstr "Vnesite veljaven Youtube ali Google Doc URL"
@@ -979,11 +969,6 @@ msgid "Private channel"
 msgstr "Privatni kanal"
 
 #. module: website_slides
-#: field:slide.channel,promoted_image:0
-msgid "Promoted image"
-msgstr "Promovirana slika"
-
-#. module: website_slides
 #: selection:slide.channel,visibility:0
 msgid "Public"
 msgstr "Javno"
@@ -997,11 +982,6 @@ msgstr "Javni kanal"
 #: field:slide.slide,date_published:0
 msgid "Publish Date"
 msgstr "Datum objave"
-
-#. module: website_slides
-#: view:website:website_slides.slide_detail_view
-msgid "Publish a presentation to enable social sharing feature"
-msgstr "Da bi omogočili opcijo socialne souporabe objavite predstavitev"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
@@ -1020,6 +1000,11 @@ msgstr "Povezano"
 
 #. module: website_slides
 #: view:website:website_slides.home
+msgid "Results for"
+msgstr "Rezultati za"
+
+#. module: website_slides
+#: view:website:website_slides.home
 msgid ""
 "Review your channel settings to promote your most viewed or recent published"
 " presentation"
@@ -1035,14 +1020,14 @@ msgstr "Upravljajte poslovanje z zbirko poslovnih aplikacij. Z Odoo je enostavno
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:66
+#: code:addons/website_slides/static/src/xml/website_slides.xml:70
 #, python-format
 msgid "Save and Publish"
 msgstr "Shrani in objavi"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:65
+#: code:addons/website_slides/static/src/xml/website_slides.xml:69
 #, python-format
 msgid "Save as Draft"
 msgstr "Shrani kot osnutek"
@@ -1061,6 +1046,11 @@ msgstr "Varnost"
 #: view:website:website_slides.home
 msgid "See all"
 msgstr "Prikaži vse"
+
+#. module: website_slides
+#: view:website:website_slides.channels
+msgid "Select a Channel"
+msgstr "Izberite kanal"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_embed
@@ -1124,12 +1114,6 @@ msgid "Show channel but restrict presentations"
 msgstr "Prikaži kanal a omeji predstavitve"
 
 #. module: website_slides
-#: view:slide.channel:website_slides.view_slide_channel_form
-#: view:slide.slide:website_slides.view_slide_slide_form
-msgid "Show in website"
-msgstr "Prikaz na spletni strani"
-
-#. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Slide"
 msgstr "Prosojnica"
@@ -1147,7 +1131,7 @@ msgstr "Promovirana prosojnica"
 #. module: website_slides
 #: model:ir.actions.act_window,name:website_slides.action_slides_slides
 #: model:ir.model,name:website_slides.model_slide_slide
-#: model:ir.ui.menu,name:website_slides.menu_slides
+#: model:ir.ui.menu,name:website_slides.menu_website_slides_root
 #: model:ir.ui.menu,name:website_slides.submenu_action_slides_slides
 #: field:slide.category,slide_ids:0 field:slide.channel,slide_ids:0
 #: view:slide.slide:website_slides.view_slide_slide_tree
@@ -1191,8 +1175,8 @@ msgstr "Oznaka"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:263
-#: code:addons/website_slides/static/src/xml/website_slides.xml:44
+#: code:addons/website_slides/static/src/js/slides_upload.js:271
+#: code:addons/website_slides/static/src/xml/website_slides.xml:48
 #: model:ir.actions.act_window,name:website_slides.action_slide_tag
 #: model:ir.ui.menu,name:website_slides.menu_slide_tag
 #: field:slide.slide,tag_ids:0
@@ -1231,6 +1215,13 @@ msgid "The slide name must be unique within a channel"
 msgstr "Naziv prosojnice mora biti unikaten v sklopu kanala"
 
 #. module: website_slides
+#: view:website:website_slides.slide_detail_view
+msgid ""
+"The social sharing module will be unlocked when a moderator will allow your "
+"publication."
+msgstr "Modul za socialno souporabo bo odklenjen, ko bo moderator dovolil vašo objavo."
+
+#. module: website_slides
 #: field:slide.embed,url:0
 msgid "Third Party Website URL"
 msgstr "URL spletne strani tretje osebe"
@@ -1243,7 +1234,7 @@ msgid "This"
 msgstr "Ta"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:334
+#: code:addons/website_slides/controllers/main.py:322
 #, python-format
 msgid ""
 "This video already exists in this channel <a target=\"_blank\" "
@@ -1257,8 +1248,8 @@ msgstr "Sličica"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:38
-#: code:addons/website_slides/static/src/xml/website_slides.xml:40
+#: code:addons/website_slides/static/src/xml/website_slides.xml:42
+#: code:addons/website_slides/static/src/xml/website_slides.xml:44
 #: field:slide.slide,name:0
 #, python-format
 msgid "Title"
@@ -1297,7 +1288,7 @@ msgid "Type"
 msgstr "Tip"
 
 #. module: website_slides
-#: code:addons/website_slides/controllers/main.py:158
+#: code:addons/website_slides/controllers/main.py:152
 #, python-format
 msgid "Uncategorized"
 msgstr "Neopredeljeno"
@@ -1308,7 +1299,7 @@ msgid "Uncategorized presentation"
 msgstr "Neopredeljena predstavitev"
 
 #. module: website_slides
-#: code:addons/website_slides/models/slides.py:582
+#: code:addons/website_slides/models/slides.py:572
 #, python-format
 msgid "Unknown document"
 msgstr "Neznan dokument"
@@ -1457,14 +1448,14 @@ msgstr "Zapišite komentar..."
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides_upload.js:109
+#: code:addons/website_slides/static/src/js/slides_upload.js:112
 #, python-format
 msgid "You can not upload password protected file."
 msgstr "Z geslom zaščitene datoteke ne morete naložiti."
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/js/slides.js:59
+#: code:addons/website_slides/static/src/js/slides.js:68
 #, python-format
 msgid "You have already voted for this slide"
 msgstr "Za to prosojnico ste že glasovali"
@@ -1476,14 +1467,14 @@ msgstr "Vaš naziv"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:32
+#: code:addons/website_slides/static/src/xml/website_slides.xml:36
 #, python-format
 msgid "Youtube Video URL"
 msgstr "Youtube video URL"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:30
+#: code:addons/website_slides/static/src/xml/website_slides.xml:34
 #, python-format
 msgid "Youtube or Google Doc URL"
 msgstr "Youtube ali Google Doc URL"
@@ -1532,7 +1523,7 @@ msgstr "na"
 
 #. module: website_slides
 #. openerp-web
-#: code:addons/website_slides/static/src/xml/website_slides.xml:66
+#: code:addons/website_slides/static/src/xml/website_slides.xml:70
 #, python-format
 msgid "or"
 msgstr "ali"

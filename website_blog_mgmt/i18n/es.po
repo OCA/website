@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Antonio Trueba, 2016
+# Antonio Trueba, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 11:34+0000\n"
-"PO-Revision-Date: 2016-02-05 12:20+0000\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2016-10-15 01:55+0000\n"
 "Last-Translator: Antonio Trueba\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: website_blog_mgmt
 #: model:ir.model,name:website_blog_mgmt.model_blog_post
 msgid "Blog Post"
-msgstr ""
+msgstr "Publicación del blog"
 
 #. module: website_blog_mgmt
 #: field:blog.post,website_publication_date:0

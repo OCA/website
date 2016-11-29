@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-16 20:38+0000\n"
-"PO-Revision-Date: 2016-09-09 12:25+0000\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2016-11-25 14:58+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Galician (http://www.transifex.com/oca/OCA-website-8-0/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "ID"
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación"
 
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,write_uid:0

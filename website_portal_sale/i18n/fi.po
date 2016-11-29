@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-16 20:38+0000\n"
-"PO-Revision-Date: 2016-09-15 12:46+0000\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2016-11-11 18:06+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Finnish (http://www.transifex.com/oca/OCA-website-8-0/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -189,7 +189,7 @@ msgstr ""
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Total"
-msgstr ""
+msgstr "Yhteensä"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
 "PO-Revision-Date: 2016-05-05 17:30+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
@@ -25,12 +25,12 @@ msgstr ""
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "It works for any links to #anchors in your website!"
-msgstr ""
+msgstr "¡Funciona para cualquier enlace a #anclas en su sitio web!"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "More dummy content"
-msgstr ""
+msgstr "Más contenido de relleno"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
@@ -40,29 +40,29 @@ msgstr "CMS Odoo - una imagen grande"
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Press the button below and enjoy a smooth experience."
-msgstr ""
+msgstr "Pulse el botón a continuación para disfrutar de una experiencia suave"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to bottom"
-msgstr ""
+msgstr "Desplazamiento a la parte de abajo"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to top"
-msgstr ""
+msgstr "Desplazamiento a la parte de arriba"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Smooth? Nice."
-msgstr ""
+msgstr "¿Suave? Es agradable."
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "This is dummy content"
-msgstr ""
+msgstr "Esto es un contenido de relleno"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Try smooth scrolling. Easily."
-msgstr ""
+msgstr "Pruebe el desplazamiento suave. Fácilmente."

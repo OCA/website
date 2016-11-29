@@ -1,0 +1,233 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_portal_purchase
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2015-12-25 15:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Bosnian (http://www.transifex.com/oca/OCA-website-8-0/language/bs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: bs\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Access the complete Purchase application"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Approved"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Cancelled"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Confirmation Date"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Date:"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Done"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Due Date"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid ""
+"If you wish to access the complete application to manage your orders, you "
+"can follow"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Invoice #"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Invoice Date"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Invoices"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Invoicing Address"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "My Account"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Order"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Paid"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+#: view:website:website_portal_purchase.request_quotations
+msgid "Print"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Problem"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Product"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Purchase Order #"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal.account
+msgid "Purchases"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Quantity"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.request_quotations
+msgid "Quotation #"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Request for Quotation"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Shipping Address"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+#: view:website:website_portal_purchase.request_quotations
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Show less"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+#: view:website:website_portal_purchase.request_quotations
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Show more"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Subtotal"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Taxes:"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "There are currently no invoices for your account."
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "There are currently no orders for your account."
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.request_quotations
+msgid "There are currently no quotes for your account."
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+#: view:website:website_portal_purchase.request_quotations
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Total"
+msgstr "Ukupno"
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Total:"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Unit Price"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Untaxed Amount:"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "Waiting"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Waiting for Payment"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.supplier_invoices
+msgid "Your Invoices and Payments"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.purchase_orders
+msgid "Your Orders"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.request_quotations
+msgid "Your Request Quotations"
+msgstr ""
+
+#. module: website_portal_purchase
+#: view:website:website_portal_purchase.orders_followup
+msgid "this link"
+msgstr ""

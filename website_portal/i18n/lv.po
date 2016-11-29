@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_portal
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2015-09-30 14:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Latvian (http://www.transifex.com/oca/OCA-website-8-0/language/lv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: lv\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
+
+#. module: website_portal
+#: view:website:website_portal.account
+msgid "Change"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "City"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Company Name"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Confirm"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.contact
+msgid "Contact"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Contact Details"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Country"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Country..."
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.account
+msgid "Custom Panel"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Details"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Email"
+msgstr ""
+
+#. module: website_portal
+#: code:addons/website_portal/controllers/main.py:79
+#, python-format
+msgid "Invalid Email! Please enter a valid email address."
+msgstr ""
+
+#. module: website_portal
+#: view:website:website.layout
+msgid "Logout"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website.layout view:website:website_portal.details
+msgid "My Account"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Phone"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.account
+msgid "Place your content here."
+msgstr ""
+
+#. module: website_portal
+#: code:addons/website_portal/controllers/main.py:96
+#, python-format
+msgid "Some required fields are empty."
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "State / Province"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Street"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "VAT Number"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.account
+msgid "Your Details"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Your Name"
+msgstr "Jūsu vārds un uzvārds"
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "Zip / Postal Code"
+msgstr ""
+
+#. module: website_portal
+#: view:website:website_portal.details
+msgid "select..."
+msgstr ""
