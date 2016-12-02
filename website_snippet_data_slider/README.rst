@@ -6,8 +6,13 @@
 Website Snippet - Data Slider
 =============================
 
-Adds a SlickJS slider building block to website for abstract datasets,
-assuming proper user permissions.
+Adds a SlickJS slider building block to website allowing for the query and
+display of abstract datasets.
+
+Example uses for this module:
+
+* Products slider using the ``product.product`` model
+* Affiliates slider using the ``res.partner`` model
 
 .. image:: static/description/screenshot.png?raw=true
    :alt: Data Sliders
