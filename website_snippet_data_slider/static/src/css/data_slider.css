@@ -1,0 +1,19 @@
+/* Copyright 2016 LasLabs, Inc.
+ * License AGPL-3 or later (http://www.gnu.org/licenses/lgpl.html).
+ **/
+
+.slider-arrow-left {
+    position: absolute;
+    top: 40%;
+    left: -40px;
+}
+
+.slider-arrow-right {
+    position: absolute;
+    top: 40%;
+    right: -40px;
+}
+
+.slick-slide {
+    background: transparent;
+}
