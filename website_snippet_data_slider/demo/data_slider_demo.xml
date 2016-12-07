@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2016 LasLabs Inc.
+    License AGPL-3 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+
+<odoo>
+    <template id="data_slider_demo" name="Data Slider Demo"  page="True">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container">
+                    <div class="row">
+                        <div class="oe_structure">
+                            <section class="oe_snippet_body o_data_slider mb32 container text-center"
+                                     t-att-data-options='&apos;{  
+                                                            "data_model": "res.partner",
+                                                            "data_domain": [["image", "!=", false]],
+                                                            "data_image_field": "image_medium",
+                                                            "data_name_field": "name",
+                                                            "data_uri_field": "website_url",
+                                                            "data_title": "Partners",
+                                                            "data_title_tag": "h1",
+                                                            "slidesToShow": 5,
+                                                            "slidesToScroll": 2,
+                                                            "dots": true,
+                                                            "infinite": true,
+                                                            "arrows": true,
+                                                            "autoplay": true
+                                                         }&apos;'
+                                     >
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="oe_structure" />
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+    <record id="data_slider_demo_link" model="website.menu">
+        <field name="name">DataSlider</field>
+        <field name="url">/page/website_snippet_data_slider.data_slider_demo</field>
+        <field name="parent_id" ref="website.main_menu" />
+        <field name="sequence" type="int">50</field>
+    </record>
+</odoo>

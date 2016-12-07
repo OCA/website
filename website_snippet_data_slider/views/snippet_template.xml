@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2016 LasLabs Inc.
+    License AGPL-3 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+
+<odoo>
+    
+    <template id="snippets"
+              inherit_id="website.snippets"
+              name="Data Slider Snipper">
+        
+        <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
+            <t t-snippet="website_snippet_data_slider.data_slider_snippet"
+               t-thumbnail="/website_snippet_data_slider/static/description/widget_icon.png" />
+        </xpath>
+        
+        <xpath expr="//div[@id='snippet_options']" position="inside">
+            <div data-js="data_slider"
+                 data-selector=".o_data_slider">
+                    
+                <li class="oe_snippet_options dropdown-submenu">
+                    <a tabindex="-1" href="#">Slides to Show</a>
+                    <ul class="dropdown-menu">
+                        <t t-foreach="range(1, 11)" t-as="i">
+                            <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("slidesToShow", i)'
+                                class="slick-option">
+                                <a t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+               </li>
+                
+                <li class="oe_snippet_options dropdown-submenu">
+                    <a tabindex="-1" href="#">Slides to Scroll</a>
+                    <ul class="dropdown-menu">
+                        <t t-foreach="range(1, 11)" t-as="i">
+                            <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("slidesToScroll", i)'
+                                class="slick-option">
+                                <a t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+               
+                <li class="oe_snippet_options dropdown-submenu">
+                    <a tabindex="-1" href="#">Dots</a>
+                    <ul class="dropdown-menu">
+                        <t t-foreach="['true', 'false']" t-as="i">
+                            <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("dots", i)'
+                                class="slick-option">
+                                <a t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+               
+                <li class="oe_snippet_options dropdown-submenu">
+                    <a tabindex="-1" href="#">Infinite</a>
+                    <ul class="dropdown-menu">
+                        <t t-foreach="['true', 'false']" t-as="i">
+                            <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("infinite", i)'
+                                class="slick-option">
+                                <a t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+               
+                <li class="oe_snippet_options dropdown-submenu">
+                    <a tabindex="-1" href="#">Arrows</a>
+                    <ul class="dropdown-menu">
+                        <t t-foreach="['true', 'false']" t-as="i">
+                            <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("arrows", i)'
+                                class="slick-option">
+                                <a t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+               
+                <li class="oe_snippet_options dropdown-submenu">
+                    <a tabindex="-1" href="#">Speed</a>
+                    <ul class="dropdown-menu">
+                        <t t-foreach="[250, 500, 750, 1000, 1500]" t-as="i">
+                            <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("speed", i)'
+                                class="slick-option">
+                                <a t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+               
+                <li class="oe_snippet_options dropdown-submenu">
+                    <a tabindex="-1" href="#">Lazy Load</a>
+                    <ul class="dropdown-menu">
+                        <t t-foreach="['ondemand', 'progressive']" t-as="i">
+                            <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("lazyLoad", i)'
+                                class="slick-option">
+                                <a t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+                
+                <li class="oe_snippet_options dropdown-submenu">
+                    <a tabindex="-1" href="#">Autoplay</a>
+                    <ul class="dropdown-menu">
+                        <t t-foreach="['true', 'false']" t-as="i">
+                            <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("autoplay", i)'
+                                class="slick-option">
+                                <a t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+               </li>
+                
+                <li class="oe_snippet_options dropdown-submenu">
+                    <a tabindex="-1" href="#">Autoplay Speed</a>
+                    <ul class="dropdown-menu">
+                        <t t-foreach="[0, 1000, 2000, 3000, 4000, 5000, 6000]" t-as="i">
+                            <li t-att-data-settings_callback='"{\"%s\": \"%s\" }" % ("autoplaySpeed", i)'
+                                class="slick-option">
+                                <a t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+                
+           </div>
+        </xpath>
+        
+    </template>
+    
+    <template id="data_slider_snippet" name="Data Slider Snippet">
+        <section class="oe_snippet_body o_data_slider mb32 container text-center"
+                 data-options="false"
+                 >
+            <div class="container">
+                <div class="row">
+                    <div class="oe_structure">
+                        Unable to display web slider.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    
+</odoo>
