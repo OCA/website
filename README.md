@@ -13,6 +13,12 @@ Includes modules that expand official website modules and include:
 * and more...
 
 [//]: # (addons)
+Available addons
+----------------
+addon | version | summary
+--- | --- | ---
+[website_snippet_data_slider](website_snippet_data_slider/) | 10.0.1.0.0 | Abstract data slider for use on website. Primary use (and default implementation) is product slider.
+
 Unported addons
 ---------------
 addon | version | summary
