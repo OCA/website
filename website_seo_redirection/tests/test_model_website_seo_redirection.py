@@ -2,8 +2,8 @@
 # © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp.exceptions import ValidationError
-from openerp.tests.common import TransactionCase
+from odoo.exceptions import ValidationError
+from odoo.tests.common import TransactionCase
 
 
 class WebsiteSeoRedirectionCase(TransactionCase):

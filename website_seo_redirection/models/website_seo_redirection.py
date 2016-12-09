@@ -2,9 +2,9 @@
 # © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp import _, api, fields, models
-from openerp.http import request, local_redirect
-from openerp.exceptions import ValidationError
+from odoo import _, api, fields, models
+from odoo.http import request, local_redirect
+from odoo.exceptions import ValidationError
 from ..exceptions import NoOriginError, NoRedirectionError
 
 
@@ -88,7 +88,7 @@ class WebsiteSeoRedirection(models.Model):
         :param int code:
             HTTP redirection code.
 
-        :param website openerp.models.Model:
+        :param website odoo.models.Model:
             Current website object. Default: ``request.website``.
 
         :param list rerouting:
