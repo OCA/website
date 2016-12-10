@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-05 19:41+0000\n"
+"POT-Creation-Date: 2016-12-03 06:33+0000\n"
 "PO-Revision-Date: 2015-12-25 15:37+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Dutch (http://www.transifex.com/oca/OCA-website-8-0/language/nl/)\n"
@@ -67,7 +67,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Invoice Date"
-msgstr ""
+msgstr "Factuurdatum"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup

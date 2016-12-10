@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 19:52+0000\n"
-"PO-Revision-Date: 2016-12-02 13:53+0000\n"
+"PO-Revision-Date: 2016-12-09 17:18+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1365,7 +1365,7 @@ msgstr ""
 #: view:website:website_slides.slide_detail_view
 #: view:website:website_slides.slides_grid_view
 msgid "Views"
-msgstr ""
+msgstr "Views"
 
 #. module: website_slides
 #: view:website:website_slides.related_slides
