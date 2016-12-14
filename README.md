@@ -19,6 +19,8 @@ addon | version | summary
 --- | --- | ---
 [website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 9.0.1.0.0 | Replace default behavior for internal links (anchor only) with smooth scroll
 [website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 | Website blog Management
+[website_blog_share](website_blog_share/) | 9.0.1.0.0 | Blog Share
+[website_breadcrumb](website_breadcrumb/) | 9.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_cookie_notice](website_cookie_notice/) | 9.0.1.0.0 | Show cookie notice according to cookie law
 [website_crm_recaptcha](website_crm_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 9.0.1.0.1 | Provides an autocomplete field for Website on any model
