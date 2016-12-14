@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="confirmation_survey" inherit_id="website_sale.confirmation">
+            <xpath expr="//div[@class='oe_structure']" position="before">
+                <div class="col-lg-8 col-sm-8" t-if="order.survey_id">
+                    <form target="_self" action="/shop/survey" method="post" class="pull-right">
+                        <a style="width:100px;" class="btn btn-primary a-submit">
+                            <span>Survey
+                                <span class="fa fa-long-arrow-right"></span>
+                            </span>
+                        </a>
+                    </form>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</openerp>
