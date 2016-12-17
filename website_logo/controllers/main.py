@@ -39,7 +39,7 @@ class Website(http.Controller):
         if domain:
             cr.execute("""SELECT logo, write_date
                             FROM website
-                           WHERE name = %s
+                           WHERE domain = %s
                        """, (domain,))
         else:
             cr.execute("""SELECT logo, write_date
