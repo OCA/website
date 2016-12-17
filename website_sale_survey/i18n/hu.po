@@ -11,17 +11,17 @@ msgstr ""
 "POT-Creation-Date: 2016-12-15 03:52+0000\n"
 "PO-Revision-Date: 2016-12-15 03:52+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
-"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
+"Language-Team: Hungarian (https://www.transifex.com/oca/teams/23907/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
+"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_sale_survey
 #: field:survey.survey,default_for_website_sales:0
 msgid "Default for Website Sales"
-msgstr "Encuesta por defecto para venta online"
+msgstr ""
 
 #. module: website_sale_survey
 #: help:survey.survey,default_for_website_sales:0
@@ -29,32 +29,30 @@ msgid ""
 "If checked this survey could be done by customer after payment, no more than"
 " one survey could be set as default."
 msgstr ""
-"Si se marca esta encuesta se mostrará al cliente después del pago, no se "
-"puede marcar en mas de una encuesta"
 
 #. module: website_sale_survey
 #: code:addons/website_sale_survey/models/survey.py:23
 #, python-format
 msgid "No more than one survey could be set as default."
-msgstr "No se puede marcar mas de una encuesta por defecto"
+msgstr ""
 
 #. module: website_sale_survey
 #: field:survey.user_input,sale_order_id:0
 msgid "Sale Order"
-msgstr "Pedido de venta"
+msgstr ""
 
 #. module: website_sale_survey
 #: model:ir.model,name:website_sale_survey.model_sale_order
 msgid "Sales Order"
-msgstr "Pedidos de venta"
+msgstr "Vevői megrendelés"
 
 #. module: website_sale_survey
 #: model:ir.model,name:website_sale_survey.model_survey_survey
 #: field:sale.order,survey_id:0 view:website:website_sale.confirmation
 msgid "Survey"
-msgstr "Encuesta"
+msgstr ""
 
 #. module: website_sale_survey
 #: model:ir.model,name:website_sale_survey.model_survey_user_input
 msgid "Survey User Input"
-msgstr "Resultado"
+msgstr ""
