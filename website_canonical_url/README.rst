@@ -1,15 +1,20 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
+
 =====================
 Website Canoncial URL
 =====================
 
-This module adds a HTML tag in the header that contains a canoncial URL for the current page.
+This module is a SEO booster that adds a HTML tag in the header that contains a
+`canoncial URL <https://support.google.com/webmasters/answer/139066>`_ for the
+current page, no matter what query it gets, and `rel=next and rel=prev links
+<https://webmasters.googleblog.com/2011/09/pagination-with-relnext-and-relprev.html>`_
+wherever a pager is found.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target:  https://runbot.odoo-community.org/runbot/186/8.0
-
+   :target:  https://runbot.odoo-community.org/runbot/186/9.0
 
 Bug Tracker
 ===========
