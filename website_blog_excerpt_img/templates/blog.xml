@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<odoo>
+
+    <template id="blog_post_short"
+              inherit_id="website_blog.blog_post_short">
+        <!-- Entries are Bootstrap rows -->
+        <xpath expr="//div[@t-as='blog_post']" position="attributes">
+            <attribute name="class">mb32 row</attribute>
+        </xpath>
+        <xpath expr="//h2/.." position="attributes">
+            <attribute name="class">col-xs-10</attribute>
+        </xpath>
+        <xpath expr="//div[@name='blog_post_data']/.." position="attributes">
+            <attribute name="class">text-muted col-xs-12 mb16</attribute>
+        </xpath>
+
+        <!-- Excerpt, image, read more button -->
+        <xpath expr="//div[@name='blog_post_data']/.." position="after">
+            <t t-set="image_url" t-value="blog_post.main_image()"/>
+
+            <div t-attf-class="excerpt-txt col-sm-#{7 if image_url else 12}">
+                <p t-esc="blog_post.content_excerpt()"/>
+                <p>
+                    <a t-attf-href="/blog/#{slug(blog_post.blog_id)}/post/#{slug(blog_post)}"
+                       class="btn btn-primary">
+                       Read more
+                    </a>
+                </p>
+            </div>
+            <div t-if="image_url" class="col-sm-5 text-center excerpt-img">
+                <!-- Use cover image if available -->
+                <img class="img img-responsive img-thumbnail"
+                     t-att-src="image_url"/>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
