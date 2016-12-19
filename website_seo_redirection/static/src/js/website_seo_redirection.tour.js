@@ -3,7 +3,7 @@
 odoo.define('website_seo_redirection.tour', function(require) {
     'use strict';
 
-    var Tour = require('web.Tour');
+    var Tour = require('web_tour.tour');
 
     Tour.register({
         id: "website_seo_redirection",
