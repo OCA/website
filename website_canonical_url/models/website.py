@@ -13,7 +13,7 @@ class website(models.Model):
     @api.multi
     def get_canonical_url(self, req=None):
         canonical_url = None
-        if req is None:
+        if req is None:  # pragma: no cover
             req = request
         if req and req.httprequest.path:
             lang = self.env.lang
@@ -30,6 +30,6 @@ class website(models.Model):
             if (canonical_url.startswith("/page/") and
                     self.menu_id.child_id[0].url == canonical_url):
                 canonical_url = "/"
-        except:
+        except:  # pragma: no cover
             pass
         return canonical_url
