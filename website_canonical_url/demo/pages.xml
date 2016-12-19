@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <template id="canonical_demo"
+              page="True"
+              name="Canonical URL and pager demo">
+        <t t-call="website.layout">
+            <!-- Add a fake pager to test the rel=prev/next links -->
+            <t t-set="pager" t-value="website.pager(request.httprequest.path, 100, 2, url_args=request.httprequest.args)"/>
+        </t>
+    </template>
+
+</odoo>
