@@ -1,49 +1,30 @@
 /**
- * # -*- coding: utf-8 -*-
- * ##############################################################################
- * #
- * #    OpenERP, Open Source Management Solution
- * #    This module copyright :
- * #        (c) 2014-Today Trey, Kilobytes de Soluciones <www.trey.es>
- * #                 Jorge Camacho <jcamacho@trey.es>
- * #        (c) 2015 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
- * #                 Antonio Espinosa <antonioea@antiun.com>
- * #                 Endika Iglesias <endikaig@antiun.com>
- * #
- * #    This program is free software: you can redistribute it and/or modify
- * #    it under the terms of the GNU Affero General Public License as
- * #    published by the Free Software Foundation, either version 3 of the
- * #    License, or (at your option) any later version.
- * #
- * #    This program is distributed in the hope that it will be useful,
- * #    but WITHOUT ANY WARRANTY; without even the implied warranty of
- * #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * #    GNU Affero General Public License for more details.
- * #
- * #    You should have received a copy of the GNU Affero General Public License
- * #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * #
- * ##############################################################################
+ * Copyright 2014 Jorge Camacho <jcamacho@trey.es>
+ * Copyright 2015 Antonio Espinosa <antonioea@antiun.com>
+ * Copyright 2016 Vicent Cubells <vicent.cubells@tecnativa.com>
  */
-
-// Check jQuery available
-if (typeof jQuery === 'undefined') { throw new Error('Website CRM privacy policy addon requires jQuery') }
-
-+function ($) {
+odoo.define('website_crm_privacy_policy.crm_policy', function (require) {
     'use strict';
 
-    $(document).ready(function() {
-        var _t = openerp._t;
+    var core = require('web.core');
+    var _t = core._t;
+    var animation = require('web_editor.snippets.animation');
+
+
+    return animation.registry.accept_policy = animation.Class.extend({
+        selector: '.s_website_form',
+
+        start: function() {
+            this.$('.o_website_form_send').on('click', $.proxy(this.accept_policy, this));
+        },
 
         // Validate form
-        $('form[action="/crm/contactus"]').on('submit', function(e) {
-            // Validate privacy_policy is checked
-            if(!$('input[name="privacy_policy"]').is(':checked')) {
-                e.preventDefault();  // Prevent form from submitting
+        accept_policy: function(event) {
+            event.preventDefault();  // Prevent the default submit behavior
+
+            if(!this.$('input[name="privacy_policy"]').is(':checked')) {
                 alert(_t('You must accept our Privacy Policy.'));
             }
-        });
-
+        },
     });
-
-}(jQuery);
+});
