@@ -10,21 +10,11 @@ class UICase(HttpCase):
         """Test frontend tour."""
         # See https://github.com/odoo/odoo/pull/13902
         with self.cursor() as cr:
+            # TODO Remove all this and use Demo Portal User after merging
+            # https://github.com/odoo/odoo/pull/14777
             env = self.env(cr)
-            # Create a portal user to avoid dependency on portal module
-            self.parent = env["res.partner"].create({
-                "name": "Tourman parent company",
-                "is_company": True,
-                "supplier": True,
-            })
-            self.tourman = env["res.users"].create({
-                "name": "Tourman",
-                "parent_id": self.parent.id,
-                "login": "tourman",
-                "new_password": "tourman",
-                "groups_id":
-                    [(4, env.ref("base.group_portal").id, False)],
-            })
+            # Set demo user as a portal user
+            env.ref("base.user_demo").groups_id = env.ref("base.group_portal")
 
         self.phantom_js(
             url_path="/",
@@ -32,4 +22,4 @@ class UICase(HttpCase):
                  ".run('website_portal_purchase_product_tour', 'test')",
             ready="odoo.__DEBUG__.services['web.Tour'].tours"
                   ".website_portal_purchase_product_tour",
-            login="tourman")
+            login="demo")
