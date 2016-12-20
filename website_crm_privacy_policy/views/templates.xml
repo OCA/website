@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<openerp>
-<data>
+<odoo>
 
 <!-- Privacy Policy -->
 <template id="contactus_form"
           inherit_id="website_crm.contactus_form"
           name="Add privacy policy checkbox">
-    <xpath expr="//form/div/div/button/../.." position="before">
+    <xpath expr="//form/div/div/span[@id='o_website_form_result']/../.." position="before">
         <div t-attf-class="form-group #{error and 'terms' in error and 'has-error' or ''}">
-            <label class="col-md-3 col-sm-4 control-label" for="terms"></label>
+            <label class="col-md-3 col-sm-4 control-label" for="terms"> </label>
             <div class="col-md-7 col-sm-8">
                 <div class="checkbox">
                     <label>
@@ -22,5 +21,4 @@
     </xpath>
 </template>
 
-</data>
-</openerp>
+</odoo>
