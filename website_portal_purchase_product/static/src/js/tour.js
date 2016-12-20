@@ -73,7 +73,7 @@ odoo.define("website_portal_purchase_product.tour", function (require) {
                 waitFor: "button[type=submit]",
                 onload: function() {
                     // HACK https://github.com/odoo/odoo/issues/12961
-                    if (!location.pathname.endsWith("/new")) {
+                    if (!/\/new$/.test(location.pathname)) {
                         return "Check the product got created finely";
                     }
                 },
