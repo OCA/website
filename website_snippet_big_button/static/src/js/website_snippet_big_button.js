@@ -1,19 +1,20 @@
-/* © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
- * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
- */
+/* Copyright 2015-2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+ * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). */
 
-(function ($) {
+odoo.define("website_snippet_big_button", function (require) {
     'use strict';
 
-    var snippet = openerp.website.snippet;
+    var animation = require("web_editor.snippets.animation");
 
-    snippet.animationRegistry.big_button = snippet.Animation.extend({
+    animation.registry.big_button = animation.Class.extend({
         selector: ".js_big_button",
+
         start: function(editable_mode) {
             if (!editable_mode) {
-                this.$target.click(this.on_click);
+                this.$target.on("click", $.proxy(this.on_click, this));
             }
         },
+
         /**
          * Make the whole button element be clickable. It would have been much
          * easier to make the button an <a/> tag, but website editor would
@@ -23,4 +24,4 @@
             $(event.currentTarget).find("a")[0].click();
         },
     });
-})(jQuery);
+});
