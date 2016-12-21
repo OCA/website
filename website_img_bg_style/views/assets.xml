@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copright 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     Copright 2016 Tecnativa - Vicent Cubells
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+    <template id="styles"
+              inherit_id="website.assets_frontend"
+              name="Website snippets background image style">
+        <xpath expr="." position="inside">
+            <link href="/website_img_bg_style/static/src/css/styles.sass"
+                  rel="stylesheet"/>
+        </xpath>
+    </template>
+</odoo>

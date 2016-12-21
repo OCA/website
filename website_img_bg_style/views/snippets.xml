@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     Copyright 2016 Tecnativa - Vicent Cubells
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+
+<template id="snippet_options"
+          inherit_id="website.snippet_options"
+          name="Container width type chooser">
+    <xpath expr=".">
+        <div data-js='background-style'
+             data-selector="section, :not(.o_gallery > .container) > .carousel, .parallax">
+            <li class="dropdown-submenu">
+                <a href="#">Background style</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                        <a href="#">Position</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#">Vertical</a>
+                                <ul class="dropdown-menu">
+                                    <li data-select_class="bg-top">
+                                        <a>Top</a>
+                                    </li>
+                                    <li data-select_class="bg-center-h">
+                                        <a>Center</a>
+                                    </li>
+                                    <li data-select_class="bg-bottom">
+                                        <a>Bottom</a>
+                                    </li>
+                                    <li data-select_class="">
+                                        <a>None</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#">Horizontal</a>
+                                <ul class="dropdown-menu">
+                                    <li data-select_class="bg-left">
+                                        <a>Left</a>
+                                    </li>
+                                    <li data-select_class="bg-center-v">
+                                        <a>Center</a>
+                                    </li>
+                                    <li data-select_class="bg-right">
+                                        <a>Right</a>
+                                    </li>
+                                    <li data-select_class="">
+                                        <a>None</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a href="#">Repeat</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#">Vertical</a>
+                                <ul class="dropdown-menu">
+                                    <li data-select_class="bg-repeat-v">
+                                        <a>Clipped</a>
+                                    </li>
+                                    <li data-select_class="bg-space-v">
+                                        <a>Spaced</a>
+                                    </li>
+                                    <li data-select_class="bg-round-v">
+                                        <a>Rounded</a>
+                                    </li>
+                                    <li data-select_class="bg-no-repeat-v">
+                                        <a>None</a>
+                                    </li>
+                                    <li data-select_class="">
+                                        <a>Auto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#">Horizontal</a>
+                                <ul class="dropdown-menu">
+                                    <li data-select_class="bg-repeat-h">
+                                        <a>Clipped</a>
+                                    </li>
+                                    <li data-select_class="bg-space-h">
+                                        <a>Spaced</a>
+                                    </li>
+                                    <li data-select_class="bg-round-h">
+                                        <a>Rounded</a>
+                                    </li>
+                                    <li data-select_class="bg-no-repeat-h">
+                                        <a>None</a>
+                                    </li>
+                                    <li data-select_class="">
+                                        <a>Auto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a href="#">Size</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#">Vertical</a>
+                                <ul class="dropdown-menu">
+                                    <li data-select_class="bg-size-auto-v">
+                                        <a>Auto</a>
+                                    </li>
+                                    <li data-select_class="bg-size-contain-v">
+                                        <a>Contain</a>
+                                    </li>
+                                    <li data-select_class="bg-size-cover-v">
+                                        <a>Cover</a>
+                                    </li>
+                                    <li data-select_class="bg-size-25-v">
+                                        <a>25%</a>
+                                    </li>
+                                    <li data-select_class="bg-size-50-v">
+                                        <a>50%</a>
+                                    </li>
+                                    <li data-select_class="bg-size-75-v">
+                                        <a>75%</a>
+                                    </li>
+                                    <li data-select_class="bg-size-100-v">
+                                        <a>100%</a>
+                                    </li>
+                                    <li data-select_class="">
+                                        <a>None</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#">Horizontal</a>
+                                <ul class="dropdown-menu">
+                                    <li data-select_class="bg-size-auto-h">
+                                        <a>Auto</a>
+                                    </li>
+                                    <li data-select_class="bg-size-contain-h">
+                                        <a>Contain</a>
+                                    </li>
+                                    <li data-select_class="bg-size-cover-h">
+                                        <a>Cover</a>
+                                    </li>
+                                    <li data-select_class="bg-size-25-h">
+                                        <a>25%</a>
+                                    </li>
+                                    <li data-select_class="bg-size-50-h">
+                                        <a>50%</a>
+                                    </li>
+                                    <li data-select_class="bg-size-75-h">
+                                        <a>75%</a>
+                                    </li>
+                                    <li data-select_class="bg-size-100-h">
+                                        <a>100%</a>
+                                    </li>
+                                    <li data-select_class="">
+                                        <a>None</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </div>
+    </xpath>
+</template>
+
+</odoo>
