@@ -1,26 +1,23 @@
 # -*- coding: utf-8 -*-
-# © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# Copyright 2015-2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 {
     "name": "Big Buttons Snippet",
     "summary": "A snippet that adds two big buttons",
-    "version": "8.0.1.0.0",
+    "version": "9.0.1.0.0",
     "category": "Website",
-    "website": "https://odoo-community.org/",
+    "website": "https://www.tecnativa.com/",
     "author": "Grupo ESOC Ingeniería de Servicios, S.L.U., "
+              "Tecnativa, "
               "Odoo Community Association (OCA)",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {
-        "python": [],
-        "bin": [],
-    },
     "depends": [
         "website",
     ],
     "data": [
-        "views/assets.xml",
-        "views/snippets.xml",
+        "templates/assets.xml",
+        "templates/snippets.xml",
     ],
 }
