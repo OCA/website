@@ -26,6 +26,8 @@ addon | version | summary
 [website_field_autocomplete](website_field_autocomplete/) | 9.0.1.0.1 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha field for Website Forms
 [website_forum_censored](website_forum_censored/) | 9.0.1.0.0 | Block phrases entered in forum posts and comments.
+[website_google_tag_manager](website_google_tag_manager/) | 9.0.1.0.0 | Add support for Google Tag Manager
+[website_img_bg_style](website_img_bg_style/) | 9.0.1.0.0 | Let you change styles of snippets background images
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 | Website Legal Page
 [website_logo](website_logo/) | 9.0.1.0.0 | Website company logo
 [website_no_crawler](website_no_crawler/) | 9.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
