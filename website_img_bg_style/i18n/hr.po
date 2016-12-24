@@ -3,20 +3,21 @@
 # * website_img_bg_style
 # 
 # Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2016
+# Ana-Maria Olujić <ana-maria.olujic@slobodni-programi.hr>, 2016
+# Bole <bole@dajmi5.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-24 04:16+0000\n"
 "PO-Revision-Date: 2016-12-24 04:16+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
-"Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
+"Last-Translator: Bole <bole@dajmi5.com>, 2016\n"
+"Language-Team: Croatian (https://www.transifex.com/oca/teams/23907/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
@@ -41,12 +42,12 @@ msgstr ""
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Auto"
-msgstr ""
+msgstr "Automatski"
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Background style"
-msgstr "Stile background"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
@@ -76,42 +77,42 @@ msgstr ""
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Horizontal"
-msgstr "Orizzontale"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Left"
-msgstr "Sinistra"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "None"
-msgstr "Nessuno"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Position"
-msgstr "Posizione"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Repeat"
-msgstr "Ripeti"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Right"
-msgstr "Destra"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Rounded"
-msgstr "Arrotondato"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Size"
-msgstr "Dimensione"
+msgstr "Veličina"
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
@@ -126,4 +127,4 @@ msgstr ""
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Vertical"
-msgstr "Verticale"
+msgstr ""

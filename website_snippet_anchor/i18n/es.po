@@ -4,13 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2016-11-29 03:55+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"POT-Creation-Date: 2016-12-24 04:17+0000\n"
+"PO-Revision-Date: 2016-12-24 04:17+0000\n"
+"Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>, 2016\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +31,7 @@ msgstr "Ancla"
 #: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:41
 #, python-format
 msgid "Anchor %s already exists, choose another"
-msgstr ""
+msgstr "El ancla %s ya existe. Escoja otro nombre."
 
 #. module: website_snippet_anchor
 #. openerp-web
@@ -42,7 +43,7 @@ msgstr "Las anclas se añaden a la URL como http://localhost/#su-ancla"
 #. module: website_snippet_anchor
 #: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
 msgid "Change anchor"
-msgstr ""
+msgstr "Cambiar ancla"
 
 #. module: website_snippet_anchor
 #. openerp-web

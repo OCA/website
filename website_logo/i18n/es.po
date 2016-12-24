@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2016-11-29 03:55+0000\n"
+"POT-Creation-Date: 2016-12-24 04:17+0000\n"
+"PO-Revision-Date: 2016-12-24 04:17+0000\n"
 "Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>, 2016\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,7 @@ msgstr ""
 #, python-format
 msgid "Could not get website logo, falling back to default"
 msgstr ""
+"No se puede obtener el logo del sitio web. Volviendo al de por defecto."
 
 #. module: website_logo
 #: model:ir.ui.view,arch_db:website_logo.view_website_config_settings
@@ -37,8 +38,8 @@ msgid ""
 "This field holds the logo for this website, showed in header. Recommended "
 "size is 180x50"
 msgstr ""
-"Este campo define el logo para este sitio web, mostrado en la cabecera. "
-"Tamaño recomendado 180x50"
+"Este campo define el logo para este sitio web, mostrado en la cabecera. El "
+"tamaño recomendado es 180x50."
 
 #. module: website_logo
 #: model:ir.model.fields,help:website_logo.field_website_config_settings_logo
@@ -47,7 +48,7 @@ msgid ""
 "size is 180x50"
 msgstr ""
 "Este campo contiene el logo para este sitio web, mostrado en la cabecera. El"
-" tamaño recomendado en 180x50."
+" tamaño recomendado es 180x50."
 
 #. module: website_logo
 #: model:ir.model,name:website_logo.model_website
@@ -58,7 +59,7 @@ msgstr "Sitio web"
 #: model:ir.model.fields,field_description:website_logo.field_website_config_settings_logo
 #: model:ir.model.fields,field_description:website_logo.field_website_logo
 msgid "Website logo"
-msgstr "Logo sitio Web"
+msgstr "Logo sitio web"
 
 #. module: website_logo
 #: model:ir.model,name:website_logo.model_website_config_settings
