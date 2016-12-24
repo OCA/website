@@ -3,15 +3,15 @@
 # * website_sale_survey
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2016
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-15 03:52+0000\n"
-"PO-Revision-Date: 2016-12-15 03:52+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"POT-Creation-Date: 2016-12-17 06:53+0000\n"
+"PO-Revision-Date: 2016-12-17 06:53+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>, 2016\n"
 "Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. module: website_sale_survey
 #: field:survey.survey,default_for_website_sales:0
 msgid "Default for Website Sales"
-msgstr ""
+msgstr "Privzeto za spletno prodajo"
 
 #. module: website_sale_survey
 #: help:survey.survey,default_for_website_sales:0
@@ -30,12 +30,14 @@ msgid ""
 "If checked this survey could be done by customer after payment, no more than"
 " one survey could be set as default."
 msgstr ""
+"Če označeno, lahko to raziskavo opravi kupec po plačilu. Kot privzeto se "
+"lahko nastavi največ eno raziskavo."
 
 #. module: website_sale_survey
 #: code:addons/website_sale_survey/models/survey.py:23
 #, python-format
 msgid "No more than one survey could be set as default."
-msgstr ""
+msgstr "Za privzeto se lahko nastavi le eno raziskavo"
 
 #. module: website_sale_survey
 #: field:survey.user_input,sale_order_id:0
@@ -56,4 +58,4 @@ msgstr "Raziskava"
 #. module: website_sale_survey
 #: model:ir.model,name:website_sale_survey.model_survey_user_input
 msgid "Survey User Input"
-msgstr ""
+msgstr "Uporabnikovi vnosi za raziskavo"

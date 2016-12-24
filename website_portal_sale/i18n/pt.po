@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-17 06:53+0000\n"
-"PO-Revision-Date: 2016-12-22 20:20+0000\n"
+"PO-Revision-Date: 2016-12-22 14:05+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Slovak (http://www.transifex.com/oca/OCA-website-8-0/language/sk/)\n"
+"Language-Team: Portuguese (http://www.transifex.com/oca/OCA-website-8-0/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sk\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
@@ -50,7 +50,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Done"
-msgstr "Hotovo"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -113,12 +113,12 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Product"
-msgstr ""
+msgstr "Produto"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Quantity"
-msgstr ""
+msgstr "Quantidade"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -189,7 +189,7 @@ msgstr ""
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Total"
-msgstr "Celkom"
+msgstr ""
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

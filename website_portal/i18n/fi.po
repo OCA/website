@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"POT-Creation-Date: 2016-12-17 06:53+0000\n"
 "PO-Revision-Date: 2015-09-30 14:33+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Finnish (http://www.transifex.com/oca/OCA-website-8-0/language/fi/)\n"
@@ -35,7 +35,7 @@ msgstr ""
 #. module: website_portal
 #: view:website:website_portal.details
 msgid "Confirm"
-msgstr ""
+msgstr "Vahvista"
 
 #. module: website_portal
 #: view:website:website_portal.contact
