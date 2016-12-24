@@ -47,7 +47,6 @@ addon | version | summary
 [website_portal_contact](website_portal_contact/) | 9.0.1.0.0 (unported) | Allows logged in portal users to manage their contacts
 [website_portal_purchase](website_portal_purchase/) | 9.0.1.0.0 (unported) | Add purchase orders and quotation in the frontend portal
 [website_portal_v10](website_portal_v10/) | 9.0.1.0.0 (unported) | Account Management Frontend for your Customers
-[website_sale_collapse_categories](website_sale_collapse_categories/) | 8.0.1.0.0 (unported) | Collapsible product categories in website shop
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 (unported) | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 (unported) | Prevent optional products to be sold singularly
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 (unported) | VAT number required in checkout form
