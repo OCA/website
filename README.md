@@ -38,6 +38,7 @@ addon | version | summary
 [website_portal_v10](website_portal_v10/) | 9.0.1.0.0 | Account Management Frontend for your Customers
 [website_seo_redirection](website_seo_redirection/) | 9.0.1.1.0 | Redirect any controller to the URL of your dreams
 [website_snippet_anchor](website_snippet_anchor/) | 9.0.1.0.0 | Allow to reach a concrete section in the page
+[website_snippet_big_button](website_snippet_big_button/) | 9.0.1.0.0 | A snippet that adds two big buttons
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 9.0.1.0.0 | Allow to select country in a dropdown
 
 Unported addons
@@ -54,7 +55,6 @@ addon | version | summary
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 (unported) | Website Menu Multilanguage
-[website_sale_collapse_categories](website_sale_collapse_categories/) | 8.0.1.0.0 (unported) | Collapsible product categories in website shop
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 (unported) | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 (unported) | Prevent optional products to be sold singularly
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 (unported) | VAT number required in checkout form
