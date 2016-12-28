@@ -7,7 +7,7 @@ from contextlib import contextmanager
 
 from openerp.tests.common import TransactionCase
 
-from openerp.addons.website_field_autocomplete_related.controllers import main
+from ..controllers import main
 
 
 class TestController(TransactionCase):
