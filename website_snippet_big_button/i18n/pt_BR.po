@@ -3,38 +3,38 @@
 # * website_snippet_big_button
 #
 # Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2016
+# Armando Vulcano Junior <vulcano@uol.com.br>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-24 04:17+0000\n"
-"PO-Revision-Date: 2016-12-24 04:17+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
-"Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
-"Language: sl\n"
+"POT-Creation-Date: 2017-10-13 00:48+0000\n"
+"PO-Revision-Date: 2017-10-13 00:48+0000\n"
+"Last-Translator: Armando Vulcano Junior <vulcano@uol.com.br>, 2017\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
+"teams/23907/pt_BR/)\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_snippet_big_button
 #: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
 msgid "Continue searching"
-msgstr "Nadaljuj z iskanjem"
+msgstr "Continue procurando"
 
 #. module: website_snippet_big_button
 #: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
 msgid "I want another thing"
-msgstr "??elim nekaj drugega"
+msgstr "Eu quero outra coisa"
 
 #. module: website_snippet_big_button
 #: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
 msgid "I want this"
-msgstr "??elim to"
+msgstr "Eu quero isso"
 
 #. module: website_snippet_big_button
 #: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
 msgid "Request budget"
-msgstr "Zahtevaj prora??un"
+msgstr "Solicitar or??amento"
