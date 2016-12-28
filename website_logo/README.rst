@@ -13,7 +13,8 @@ Configuration
 
 To configure this module, you need to:
 
-* Go to 'Settings' > 'Configuration' > 'Website Settings'
+* Go to 'Website Admin'
+* In the configuration form of a website there is a category logo
 * Load a logo image in the logo field
 
 
