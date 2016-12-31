@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-13 02:52+0000\n"
-"PO-Revision-Date: 2016-09-13 02:52+0000\n"
+"POT-Creation-Date: 2016-12-28 14:13+0000\n"
+"PO-Revision-Date: 2016-12-28 14:13+0000\n"
 "Last-Translator: Ahmet Altinisik <aaltinisik@altinkaya.com.tr>, 2016\n"
 "Language-Team: Turkish (https://www.transifex.com/oca/teams/23907/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr ""
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_menu_contacts
 msgid "Contacts"
-msgstr ""
+msgstr "Kişiler"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
@@ -48,7 +48,7 @@ msgstr ""
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
 msgid "Email"
-msgstr ""
+msgstr "Eposta"
 
 #. module: website_portal_contact
 #: code:addons/website_portal_contact/controllers/main.py:89
