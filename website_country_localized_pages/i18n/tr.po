@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-16 20:38+0000\n"
-"PO-Revision-Date: 2016-09-09 11:33+0000\n"
+"POT-Creation-Date: 2016-12-24 07:35+0000\n"
+"PO-Revision-Date: 2016-12-30 21:31+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Turkish (http://www.transifex.com/oca/OCA-website-8-0/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,country_id:0
 msgid "Country"
-msgstr ""
+msgstr "Ülke"
 
 #. module: website_country_localized_pages
 #: view:ir.ui.view:website_country_localized_pages.view_view_form
@@ -45,7 +45,7 @@ msgstr ""
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Görünen İsim"
 
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,id:0
@@ -55,7 +55,7 @@ msgstr "ID"
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Son değişiklik"
 
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,write_uid:0
