@@ -105,7 +105,9 @@ class WebsiteSeoRedirection(models.Model):
             ("destination", "=", path),
             ("relocate_controller", "=", True),
         ])
-        if not redirection.origin:
+        if len(redirection) > 1:
+            raise NoOriginError(_("Too many origin found for this redirection."))
+        elif not redirection.origin:
             raise NoOriginError(_("No origin found for this redirection."))
         return redirection.origin
 
