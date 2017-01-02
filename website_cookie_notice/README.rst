@@ -1,6 +1,8 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-    :alt: License: AGPL-3
+   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :alt: License: AGPL-3
 
+=============
 Cookie notice
 =============
 
@@ -8,6 +10,7 @@ This module adds the cookie notice, according to the `european cookie law
 <http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32002L0058:en:HTML>`_,
 to your website.
 
+=============
 Configuration
 =============
 
@@ -20,6 +23,7 @@ To change the cookie message:
 If you are developing a theme for Odoo, remember that this message has the
 ``cc-cookies`` class. You can style it at will too.
 
+======================
 Known Issues / Roadmap
 ======================
 
@@ -40,6 +44,7 @@ Known Issues / Roadmap
   >= 8.0.2.0.0 you will lose your previous customized messages. If you want to
   customize it, please follow steps in the configuration section.
 
+===========
 Bug Tracker
 ===========
 
@@ -51,10 +56,16 @@ help us smashing it by providing a detailed and welcomed feedback.
 Credits
 =======
 
+Images
+------
+
+* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
+
 Contributors
 ------------
 
 * Lorenzo Battistini <lorenzo.battistini@agilebg.com>
+* Nicola Malcontenti <nicola.malcontenti@agilebg.com>
 * Rafael Blasco <rafabn@antiun.com>
 * Jairo Llopis <yajo.sk8@gmail.com>
 

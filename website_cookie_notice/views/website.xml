@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
 <data>
 
-<template id="loader" name="Cookies script loader">
-    <script type="text/javascript"
-        src="/website_cookie_notice/static/src/js/accept_cookies.js">
-    </script>
+<template id="loader" inherit_id="website.assets_frontend" name="Cookies script loader">
+    <xpath expr="/t" position="inside">
+        <script type="text/javascript" src="/website_cookie_notice/static/src/js/accept_cookies.js"/>
+    </xpath>
 </template>
+
 
 <template id="message" name="Cookies notice">
     <div t-if="request and
-        not request.httpsession.get('accepted_cookies')"
+        not request.session.get('accepted_cookies')"
         id="website_cookie_notice"
         class="container-fluid bg-warning cc-cookies">
         <div class="container">
@@ -24,12 +25,6 @@
     </div>
 </template>
 
-<template id="assets_frontend" inherit_id="website.assets_frontend">
-    <xpath expr="." position="inside">
-        <t t-call="website_cookie_notice.loader"/>
-    </xpath>
-</template>
-
 <template id="cookiebanner" inherit_id="website.layout">
     <xpath expr="//header" position="before">
         <t t-call="website_cookie_notice.message"/>
@@ -37,4 +32,4 @@
 </template>
 
 </data>
-</openerp>
+</odoo>
