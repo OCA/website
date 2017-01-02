@@ -3,7 +3,7 @@
 # Copyright 2015 Antiun Ingeniería S.L. <http://antiun.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import http
+from odoo import http
 
 
 class CookieNotice(http.Controller):
@@ -12,7 +12,7 @@ class CookieNotice(http.Controller):
         methods=['POST'])
     def accept_cookies(self):
         """Stop spamming with cookie banner."""
-        http.request.httpsession["accepted_cookies"] = True
+        http.request.session["accepted_cookies"] = True
         http.request.env['ir.ui.view'].search([
             ('type', '=', 'qweb')
             ]).clear_caches()
