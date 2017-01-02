@@ -6,7 +6,7 @@ from psycopg2 import IntegrityError
 
 from openerp.exceptions import ValidationError
 from openerp.tests.common import TransactionCase
-from ..exceptions import NoOriginError, NoRedirectionError
+from ..exceptions import NoOriginError
 
 
 class WebsiteSeoRedirectionCase(TransactionCase):
