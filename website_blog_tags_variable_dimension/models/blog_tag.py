@@ -53,11 +53,11 @@ class BlogTag(models.Model):
     @api.multi
     def compute_color(self):
         for this in self:
-            # green therp, darkgreen, blue. 
+            # green therp, darkgreen, blue, orange
             # hastable allows me to use better performing randint here too.
             # TODO EXTEND THE THREE COLORS , TO BE SELECTE<F5><F6>D
-            hashtable = {1:'#7b7655', 2: '#006400', 3: '#4682B4'}
-            this.random_color = hashtable[random.randint(1,3)]
+            hashtable = {1:'#7b7655', 2: '#006400', 3: '#4682B4', 4: '#ffa500'}
+            this.random_color = hashtable[random.randint(1,4)]
 
     tag_cardinality = fields.Integer(
             string="In how many posts is the tag used", 
