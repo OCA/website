@@ -1,0 +1,15 @@
+.blog-tagcloud {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.blog-tagcloud > li {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+}
+
+.blog-tagcloud > li > a {
+	padding: 2px 5px !important;
+}

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-        <template id="assets_backend" name="website_blog_tags_variable_dimension assets" inherit_id="web.assets_backend">
+        <template id="assets_common" name="website_blog_tags_variable_dimension assets" inherit_id="web.assets_common">
             <xpath expr="." position="inside">
-                <script type="text/javascript" src="/website_blog_tags_variable_dimension/static/src/js/website_blog_tags_variable_dimension.js"></script>
                 <link rel="stylesheet" href="/website_blog_tags_variable_dimension/static/src/css/website_blog_tags_variable_dimension.css"/>
             </xpath>  
         </template>
@@ -24,16 +23,13 @@
             <xpath expr="//div[@id='blog_right_column']/section[1]" position="before">
                 <section class="mt32">
                     <h4>Tags</h4>
-                    <ul class="nav nav-pills nav-stacked">
+                    <ul class="nav nav-pills nav-stacked blog-tagcloud">
                         <t t-set="random_tags" t-value="tags.randomize_recordset()"/>
                         <t t-foreach="random_tags" t-as="nav_tag">
-                            <li t-att-class="tag and tag.id == nav_tag.id and 'active' or None" 
-                                t-attf-style="display: inline-block; font-size: {{nav_tag.font_size_in_cloud}}px;">
+                            <li t-att-class="'active' if tag and tag.id == nav_tag.id else None" 
+                                t-attf-style="font-size: {{nav_tag.font_size_in_cloud}}px;">
                                 <a t-attf-href="#{blog_url(tag=nav_tag)}">
-                                    <span t-attf-style="color:{{nav_tag.random_color}};" t-field="nav_tag.name"/>
-                                    <span t-attf-style="color:{{nav_tag.random_color}};"> (</span>
-                                    <span t-attf-style="color:{{nav_tag.random_color}};" t-esc="nav_tag.tag_cardinality"/> 
-                                    <span t-attf-style="color:{{nav_tag.random_color}};"> )</span>
+                                    <span t-attf-style="color:{{nav_tag.random_color}};"><t t-esc="nav_tag.name"/> (<t t-esc="nav_tag.tag_cardinality"/>)</span>
                                 </a>
                             </li>
                         </t>
