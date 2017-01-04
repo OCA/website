@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<!-- Privacy Policy -->
+<template id="contactus_form"
+          inherit_id="website_crm.contactus_form"
+          name="Add privacy policy checkbox">
+    <xpath expr="//form/div/div/span[@id='o_website_form_result']/../.."
+           position="before">
+        <div class="form-group form-field o_website_form_required">
+            <div class="col-md-7 col-md-offset-3 col-sm-8 col-sm-offset-4">
+                <div class="checkbox">
+                    <input type="checkbox"
+                        value="accepted"
+                        id="privacy_policy"
+                        name="privacy_policy"
+                        class="o_website_form_input"
+                        required="required"/>
+                    <label class="control-label">
+                        <t t-call="website_legal_page.acceptance_full"/>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </xpath>
+</template>
+
+</odoo>
