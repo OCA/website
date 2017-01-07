@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-31 10:46+0000\n"
-"PO-Revision-Date: 2016-12-31 21:31+0000\n"
+"PO-Revision-Date: 2017-01-04 14:44+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Turkish (http://www.transifex.com/oca/OCA-website-8-0/language/tr/)\n"
+"Language-Team: Turkish (Turkey) (http://www.transifex.com/oca/OCA-website-8-0/language/tr_TR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: tr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_shared
@@ -215,7 +215,7 @@ msgstr ""
 #: field:slide.slide,category_id:0
 #, python-format
 msgid "Category"
-msgstr "Kategori"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,channel_id:0
@@ -264,7 +264,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Comments"
-msgstr "Yorumlar"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,datas:0
@@ -323,12 +323,12 @@ msgstr "Oluşturan"
 #: field:slide.embed,create_date:0 field:slide.slide,create_date:0
 #: field:slide.tag,create_date:0
 msgid "Created on"
-msgstr "Oluşturuldu"
+msgstr "Oluşturulma tarihi"
 
 #. module: website_slides
 #: help:slide.channel,message_last_post:0 help:slide.slide,message_last_post:0
 msgid "Date of the last message posted on the record."
-msgstr "Kayıda eklenen son mesajın tarihi."
+msgstr ""
 
 #. module: website_slides
 #. openerp-web
@@ -358,7 +358,7 @@ msgstr ""
 #: field:slide.embed,display_name:0 field:slide.slide,display_name:0
 #: field:slide.tag,display_name:0 field:website.published.mixin,display_name:0
 msgid "Display Name"
-msgstr "Görünen İsim"
+msgstr "Görünen ad"
 
 #. module: website_slides
 #: help:slide.category,sequence:0 help:slide.channel,sequence:0
@@ -396,7 +396,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Download"
-msgstr "İndir"
+msgstr ""
 
 #. module: website_slides
 #: model:slide.slide,description:website_slides.slide_5
@@ -415,7 +415,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Email"
-msgstr "Eposta"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
@@ -525,7 +525,7 @@ msgstr ""
 #: field:slide.channel,message_follower_ids:0
 #: field:slide.slide,message_follower_ids:0
 msgid "Followers"
-msgstr "Takipçiler"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.channel,can_see_full:0
@@ -574,7 +574,7 @@ msgstr ""
 msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
-msgstr "Sohbet özetini tutar (kaç mesa vs) Bu özet kanban görünümleri gibi yerlerde kullanılmak için doğrudan HTML formatındadır. "
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
@@ -586,17 +586,17 @@ msgstr ""
 #: field:slide.slide,id:0 field:slide.tag,id:0
 #: field:website.published.mixin,id:0
 msgid "ID"
-msgstr "ID"
+msgstr "Kimlik"
 
 #. module: website_slides
 #: help:slide.channel,message_unread:0 help:slide.slide,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr "Eğer işaretlenirse yeni mesajlar dikkatinizi ister."
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,image:0
 msgid "Image"
-msgstr "Resim"
+msgstr ""
 
 #. module: website_slides
 #: selection:slide.slide,slide_type:0
@@ -640,7 +640,7 @@ msgstr ""
 #: field:slide.channel,message_last_post:0
 #: field:slide.slide,message_last_post:0
 msgid "Last Message Date"
-msgstr "Son mesaj tarihi"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.category,__last_update:0 field:slide.channel,__last_update:0
@@ -648,21 +648,21 @@ msgstr "Son mesaj tarihi"
 #: field:slide.tag,__last_update:0
 #: field:website.published.mixin,__last_update:0
 msgid "Last Modified on"
-msgstr "Son değişiklik"
+msgstr "En son güncelleme tarihi"
 
 #. module: website_slides
 #: field:slide.category,write_uid:0 field:slide.channel,write_uid:0
 #: field:slide.embed,write_uid:0 field:slide.slide,write_uid:0
 #: field:slide.tag,write_uid:0
 msgid "Last Updated by"
-msgstr "Son güncelleyen"
+msgstr "En son güncelleyen "
 
 #. module: website_slides
 #: field:slide.category,write_date:0 field:slide.channel,write_date:0
 #: field:slide.embed,write_date:0 field:slide.slide,write_date:0
 #: field:slide.tag,write_date:0
 msgid "Last Updated on"
-msgstr "Son güncelleme"
+msgstr "En son güncelleme tarihi"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
@@ -702,12 +702,12 @@ msgstr ""
 #. module: website_slides
 #: field:slide.channel,message_ids:0 field:slide.slide,message_ids:0
 msgid "Messages"
-msgstr "Mesajlar"
+msgstr ""
 
 #. module: website_slides
 #: help:slide.channel,message_ids:0 help:slide.slide,message_ids:0
 msgid "Messages and communication history"
-msgstr "Mesaj ve iletişim geçmişi"
+msgstr ""
 
 #. module: website_slides
 #: field:slide.slide,mime_type:0
@@ -734,7 +734,7 @@ msgstr ""
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: field:slide.tag,name:0
 msgid "Name"
-msgstr "Adı"
+msgstr "Ad"
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_published
@@ -1039,7 +1039,7 @@ msgstr ""
 #. module: website_slides
 #: view:slide.channel:website_slides.view_slide_channel_form
 msgid "Security"
-msgstr ""
+msgstr "Güvenlik"
 
 #. module: website_slides
 #: view:website:website_slides.home
@@ -1284,7 +1284,7 @@ msgstr ""
 #: view:slide.slide:website_slides.view_slide_slide_search
 #: field:slide.slide,slide_type:0
 msgid "Type"
-msgstr "Tipi"
+msgstr "Tip"
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:152
@@ -1306,7 +1306,7 @@ msgstr ""
 #. module: website_slides
 #: field:slide.channel,message_unread:0 field:slide.slide,message_unread:0
 msgid "Unread Messages"
-msgstr "Okunmamış mesajlar"
+msgstr ""
 
 #. module: website_slides
 #: view:website:website_slides.home
@@ -1525,7 +1525,7 @@ msgstr ""
 #: code:addons/website_slides/static/src/xml/website_slides.xml:70
 #, python-format
 msgid "or"
-msgstr "ya da"
+msgstr "ya da "
 
 #. module: website_slides
 #: view:website:website_slides.slides_search

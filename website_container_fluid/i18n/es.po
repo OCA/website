@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-25 14:25+0000\n"
-"PO-Revision-Date: 2016-02-23 12:36+0000\n"
+"POT-Creation-Date: 2016-12-31 10:45+0000\n"
+"PO-Revision-Date: 2017-01-05 17:47+0000\n"
 "Last-Translator: Antonio Trueba\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +32,7 @@ msgstr ""
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "A small explanation of this great"
-msgstr ""
+msgstr "Una pequeña explicación de lo grande"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -52,7 +52,7 @@ msgstr "Siempre el 100% del espacio disponible"
 msgid ""
 "Choose a vibrant image and write an inspiring paragraph about it. It does "
 "not have to be long, but it should reinforce your image."
-msgstr ""
+msgstr "Escoja una imagen vibrante y escriba un párrafo inspirador sobre ello. No tiene que ser largo, pero debe reforzar su imagen."
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -62,12 +62,12 @@ msgstr "Contáctenos »"
 #. module: website_container_fluid
 #: view:website:website.snippet_options
 msgid "Container width type"
-msgstr ""
+msgstr "Tipo de ancho del contenedor"
 
 #. module: website_container_fluid
 #: model:website.menu,name:website_container_fluid.demo_page_link
 msgid "Container width type demo"
-msgstr ""
+msgstr "Demo del tipo de ancho de contenedor"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -104,7 +104,7 @@ msgstr "Fijo, según el tamaño de la pantalla"
 #. module: website_container_fluid
 #: view:website:website.snippet_options
 msgid "Fluid"
-msgstr ""
+msgstr "Fluido"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -144,7 +144,7 @@ msgstr "Referencias de nuestros clientes"
 #. module: website_container_fluid
 #: view:website:website.snippet_options
 msgid "Responsive"
-msgstr ""
+msgstr "Responsivo"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -154,12 +154,12 @@ msgstr "Segunda característica"
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "Tell what's the value for the"
-msgstr ""
+msgstr "Diga cuál es el valor para"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "These are responsive containers"
-msgstr ""
+msgstr "Éstos son contenedores responsivos"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
