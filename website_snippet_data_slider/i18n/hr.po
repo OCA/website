@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_data_slider
+# 
+# Translators:
+# Bole <bole@dajmi5.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-23 22:21+0000\n"
+"PO-Revision-Date: 2016-12-23 22:21+0000\n"
+"Last-Translator: Bole <bole@dajmi5.com>, 2017\n"
+"Language-Team: Croatian (https://www.transifex.com/oca/teams/23907/hr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.snippets
+msgid "Arrows"
+msgstr "Strelice"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.snippets
+msgid "Autoplay"
+msgstr "Autopokretanje"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.snippets
+msgid "Autoplay Speed"
+msgstr "Brzina autopokretanja"
+
+#. module: website_snippet_data_slider
+#: model:website.menu,name:website_snippet_data_slider.data_slider_demo_link
+msgid "DataSlider"
+msgstr "Klizač sa podacima"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.snippets
+msgid "Dots"
+msgstr "Točkice"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.snippets
+msgid "Infinite"
+msgstr "Beskonačno"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.snippets
+msgid "Lazy Load"
+msgstr "Lazy Load"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.snippets
+msgid "Slides to Scroll"
+msgstr "Sličice za izmjenu"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.snippets
+msgid "Slides to Show"
+msgstr "Sličice za prikaz"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.snippets
+msgid "Speed"
+msgstr "Brzina"
+
+#. module: website_snippet_data_slider
+#: model:ir.ui.view,arch_db:website_snippet_data_slider.data_slider_snippet
+msgid "Unable to display web slider."
+msgstr "Nije moguće prikazati web klizač"
