@@ -24,6 +24,7 @@ addon | version | summary
 [website_canonical_url](website_canonical_url/) | 9.0.1.1.0 | Canonical URL in Website Headers
 [website_container_fluid](website_container_fluid/) | 9.0.1.0.0 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 9.0.1.0.0 | Show cookie notice according to cookie law
+[website_crm_privacy_policy](website_crm_privacy_policy/) | 9.0.1.0.0 | Website CRM privacy policy
 [website_crm_recaptcha](website_crm_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 9.0.1.0.1 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha field for Website Forms
@@ -50,7 +51,6 @@ addon | version | summary
 [website_analytics_piwik](website_analytics_piwik/) | 8.0.1.0.0 (unported) | Track website users using piwik
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 (unported) | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 (unported) | Add Facebook comments on blog posts
-[website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 (unported) | Website CRM privacy policy
 [website_event_register_free](website_event_register_free/) | 8.0.1.0.0 (unported) | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 (unported) | Combine free and paid tickets on events
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
