@@ -505,7 +505,7 @@ class Slide(models.Model):
         for slide in self.filtered(lambda slide: slide.website_published):
             publish_template = slide.channel_id.publish_template_id
             html_body = publish_template.with_context(
-                {'base_url': base_url}).render_template(
+                base_url=base_url).render_template(
                 publish_template.body_html, 'slide.slide', slide.id)
             slide.channel_id.message_post(
                 body=html_body,
@@ -516,7 +516,7 @@ class Slide(models.Model):
     def send_share_email(self, email):
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         return self.channel_id.share_template_id.with_context(
-            {'email': email, 'base_url': base_url}).send_mail(self.id)
+            email=email, base_url=base_url).send_mail(self.id)
 
     # --------------------------------------------------
     # Parsing methods
