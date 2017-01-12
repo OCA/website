@@ -23,11 +23,6 @@ On website:
 * click "Upload a video from your computer";
 * click "Save" button.
 
-Known issues / Roadmap
-======================
-
-* No video preview
-* Option autoplay is not implemented
  
 Bug Tracker
 ===========
@@ -48,6 +43,7 @@ Contributors
 ------------
 
 * Dennis Sluijk <d.sluijk@onestein.nl>
+* Techspawn Solutions <http://techspawn.com>
 
 Maintainer
 ----------

@@ -8,7 +8,15 @@
                 <a class="btn btn-primary filepicker pull-left o_website_upload_video_btn" href="#">
                     Upload a video from your computer
                 </a>
+                
+            <!-- Play video button visible when the video is uploaded -->
+                  <a class=" btn btn-primary play_video-class hidden o_website_upload_success" style='margin-left:5px'>Play Video</a>
+
                 <span class="hidden pull-right text-muted o_website_upload_success" style="margin-left:10px; line-height: 2.4em;">Video uploaded</span>
+
+
+            <!-- To Display Video  -->
+ <div id="display_video" style="display:block;"></div>
             </div>
         </t>
     </t>    
