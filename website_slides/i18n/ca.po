@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-11-25 14:57+0000\n"
+"POT-Creation-Date: 2017-01-11 08:55+0000\n"
+"PO-Revision-Date: 2017-01-13 09:22+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -359,7 +359,7 @@ msgstr "No m'agrada"
 #: field:slide.embed,display_name:0 field:slide.slide,display_name:0
 #: field:slide.tag,display_name:0 field:website.published.mixin,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Veure el nom"
 
 #. module: website_slides
 #: help:slide.category,sequence:0 help:slide.channel,sequence:0
@@ -649,7 +649,7 @@ msgstr "Data últim missatge"
 #: field:slide.tag,__last_update:0
 #: field:website.published.mixin,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Darrera modificació el"
 
 #. module: website_slides
 #: field:slide.category,write_uid:0 field:slide.channel,write_uid:0

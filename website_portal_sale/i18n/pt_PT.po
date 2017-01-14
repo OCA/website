@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-15 03:52+0000\n"
-"PO-Revision-Date: 2016-12-15 10:12+0000\n"
+"POT-Creation-Date: 2017-01-11 08:55+0000\n"
+"PO-Revision-Date: 2017-01-10 08:59+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/oca/OCA-website-8-0/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -45,12 +45,12 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Discount (%)"
-msgstr ""
+msgstr "Desconto (%)"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Done"
-msgstr ""
+msgstr "Concluído"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices

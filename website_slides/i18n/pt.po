@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-15 03:53+0000\n"
-"PO-Revision-Date: 2016-12-12 11:45+0000\n"
+"POT-Creation-Date: 2017-01-11 08:55+0000\n"
+"PO-Revision-Date: 2017-01-13 09:26+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (http://www.transifex.com/oca/OCA-website-8-0/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -339,7 +339,7 @@ msgstr ""
 #: field:slide.slide,description:0
 #, python-format
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #. module: website_slides
 #. openerp-web
@@ -1069,7 +1069,7 @@ msgstr ""
 #. module: website_slides
 #: field:slide.category,sequence:0 field:slide.channel,sequence:0
 msgid "Sequence"
-msgstr ""
+msgstr "Sequência"
 
 #. module: website_slides
 #: view:website:website_slides.embed_slide
