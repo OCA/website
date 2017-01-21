@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-11 08:55+0000\n"
-"PO-Revision-Date: 2017-01-13 09:23+0000\n"
+"POT-Creation-Date: 2017-01-14 09:46+0000\n"
+"PO-Revision-Date: 2017-01-19 20:17+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -175,7 +175,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Actions"
-msgstr ""
+msgstr "Actions"
 
 #. module: website_slides
 #: selection:slide.slide,download_security:0
@@ -1398,7 +1398,7 @@ msgstr "Site Internet"
 #: field:slide.channel,website_message_ids:0
 #: field:slide.slide,website_message_ids:0
 msgid "Website Messages"
-msgstr ""
+msgstr "Messages du site web"
 
 #. module: website_slides
 #: view:website.config.settings:website_slides.view_website_config_settings
@@ -1420,7 +1420,7 @@ msgstr ""
 #: help:slide.channel,website_message_ids:0
 #: help:slide.slide,website_message_ids:0
 msgid "Website communication history"
-msgstr ""
+msgstr "Historique des communications du site web"
 
 #. module: website_slides
 #: field:slide.channel,website_meta_description:0

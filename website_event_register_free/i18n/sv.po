@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-11-25 00:26+0000\n"
+"POT-Creation-Date: 2017-01-14 09:45+0000\n"
+"PO-Revision-Date: 2017-01-19 20:17+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Swedish (http://www.transifex.com/oca/OCA-website-8-0/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: website_event_register_free
 #: view:website:website_event_register_free.partner_register_form
 msgid "Email"
-msgstr ""
+msgstr "E-post"
 
 #. module: website_event_register_free
 #: model:ir.model,name:website_event_register_free.model_event_registration
@@ -40,7 +40,7 @@ msgstr ""
 #. module: website_event_register_free
 #: view:website:website_event_register_free.partner_register_form
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 #. module: website_event_register_free
 #: view:website:website_event_register_free.free_registration_form

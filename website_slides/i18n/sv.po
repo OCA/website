@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-10-11 09:53+0000\n"
+"POT-Creation-Date: 2017-01-14 09:46+0000\n"
+"PO-Revision-Date: 2017-01-19 20:17+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Swedish (http://www.transifex.com/oca/OCA-website-8-0/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -415,7 +415,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Email"
-msgstr ""
+msgstr "E-post"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
