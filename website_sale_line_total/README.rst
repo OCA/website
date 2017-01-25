@@ -1,6 +1,6 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
-   :alt: License: AGPL-3
+   :alt: License: LGPL-3
 
 =======================
 Website Sale Line Total
@@ -15,7 +15,10 @@ Usage
 
 To use this module, you need to:
 
-#. Go to ...
+#. Go to the "Shop" section of the website
+#. Put more than one of the same item into your shopping cart
+#. Go to your shopping cart to view the "Unit Price" and "Price" columns
+#. Toggle the quantity to watch the "Price" column change
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
