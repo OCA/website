@@ -62,7 +62,7 @@ class website_blog(WebsiteBlog):
     @http.route()
     def blog(self, blog=None, tag=None, page=1, **opt):
         result = super(website_blog, self).blog(
-                blog=blog, tag=tag, page=page, **opt
+                blog=blog, tag=tag, page=page, **opt.get('opt')
             )
         result.qcontext['nav_list_old_grouped'] = self.nav_list_grouped()['old_groups']
         result.qcontext['nav_list_new_grouped'] = self.nav_list_grouped()['new_groups']
