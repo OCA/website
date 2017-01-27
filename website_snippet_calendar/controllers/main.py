@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2016 ONESTEiN BV (<http://www.onestein.eu>)
+# © 2017 Onestein (<http://www.onestein.eu>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 import json
@@ -9,10 +9,10 @@ from openerp import http
 from openerp.http import request
 
 
-class WebsiteCalendarBlock(http.Controller):
+class WebsiteCalendarSnippet(http.Controller):
 
     @http.route(
-        ['/calendar_block/get_events/<int:start>/<int:end>'],
+        ['/calendar_snippet/get_events/<int:start>/<int:end>'],
         type='http',
         auth='public',
         website=True)

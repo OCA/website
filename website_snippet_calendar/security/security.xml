@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Onestein
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
 <openerp>
     <data>
 
-        <record id="website_calendar_block_event_public" model="ir.rule">
+        <record id="website_snippet_calendar_event_public" model="ir.rule">
             <field name="name">Calendar event public</field>
             <field name="model_id" ref="calendar.model_calendar_event"/>
             <field name="domain_force">[('class', '=', 'public')]</field>
@@ -13,7 +16,7 @@
             <field name="perm_unlink" eval="False"/>
         </record>
 
-        <record id="website_calendar_block_attendee_public" model="ir.rule">
+        <record id="website_snippet_calendar_attendee_public" model="ir.rule">
             <field name="name">Calendar attendee public</field>
             <field name="model_id" ref="calendar.model_calendar_attendee"/>
             <field name="domain_force">[('event_id.class', '=', 'public')]</field>
@@ -24,7 +27,7 @@
             <field name="perm_unlink" eval="False"/>
         </record>
 
-        <record id="website_calendar_block_partner_public" model="ir.rule">
+        <record id="website_snippet_calendar_partner_public" model="ir.rule">
             <field name="name">Partner public</field>
             <field name="model_id" ref="base.model_res_partner"/>
             <field name="domain_force">[(1, '=', 1)]</field>

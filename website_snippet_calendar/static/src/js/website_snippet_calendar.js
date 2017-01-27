@@ -1,10 +1,13 @@
+/* Copyright 2017 Onestein
+* License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). */
+
 (function () {
     'use strict';
     var website = openerp.website;
     var _t = openerp._t;
 
     website.ready().then(function () {
-        website.if_dom_contains('div.calendar_block', function ($el) {
+        website.if_dom_contains('div.calendar_snippet', function ($el) {
             var $calendar = $el.find('.calendar');
             $calendar.html('');
             var datejs_locale = "/web/static/lib/datejs/globalization/" + $('html').attr('lang').replace("_", "-") + ".js";
@@ -28,7 +31,7 @@
                 $calendar.fullCalendar({
                     events: function(start, end, callback) {
                         $.ajax({
-                            url: '/calendar_block/get_events/' + Math.round(start.getTime() / 1000) + '/' + Math.round(end.getTime() / 1000),
+                            url: '/calendar_snippet/get_events/' + Math.round(start.getTime() / 1000) + '/' + Math.round(end.getTime() / 1000),
                             dataType: 'json',
                             success: function(result) {
                                 //Setup colors
