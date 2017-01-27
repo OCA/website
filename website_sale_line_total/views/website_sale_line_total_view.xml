@@ -6,7 +6,7 @@
 
     <template id="add_item_line_total" inherit_id="website_sale.cart_lines">
         <xpath expr="//table[@id='cart_products']/thead/tr/th[@class='text-center']" position="before">
-            <th width="130" class="text-center">Quantity</th>
+            <th width="130" class="text-center">Unit Price</th>
         </xpath>
         <xpath expr="//td[@id='td-qty']" position="before">
             <td class="text-center">
