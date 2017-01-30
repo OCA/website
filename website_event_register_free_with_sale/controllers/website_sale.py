@@ -58,8 +58,8 @@ class WebsiteSale(website_sale):
             - phone
 
         :raise KeyError:
-            When ``free_tickets`` or ``event_id`` are not found under
-            :class:`~request.session`, or are empty.
+            When ``free_tickets`` is not found under
+            :class:`~request.session`, or is empty.
 
         :raise NoNeedForSOError:
             When there is nothing left to buy after free registrations are
@@ -67,31 +67,33 @@ class WebsiteSale(website_sale):
             ``registration`` attribute.
 
         :return openerp.Model:
-            Registration that has been created.
+            Registrations that has been created.
         """
         tickets = request.session["free_tickets"]
-        event = request.env["event.event"].browse(request.session["event_id"])
-        if not (tickets and event):
+        if not tickets:
             raise KeyError
-        Registration = request.env['event.registration']
-        registration_vals = Registration._prepare_registration(
-            event,
-            dict(post, tickets=tickets),
-            request.uid,
-            partner=(request.env.user != request.website.user_id and
-                     request.env.user.partner_id),
-        )
-        registration = Registration.sudo().create(registration_vals)
-        if registration.partner_id:
-            registration._onchange_partner()
-        registration.registration_open()
+        registrations = request.env['event.registration']
+        for ticket in tickets:
+            registration_vals = registrations._prepare_registration(
+                ticket["event_id"],
+                dict(post, tickets=ticket["qty"]),
+                request.uid,
+                partner=(request.env.user != request.website.user_id and
+                         request.env.user.partner_id),
+            )
+            registration_vals["event_ticket_id"] = ticket["ticket_id"]
+            registration = registrations.sudo().create(registration_vals)
+            if registration.partner_id:
+                registration._onchange_partner()
+            registration.registration_open()
+            registrations |= registration
         try:
             if self._only_free_ticket_checkout():
-                raise NoNeedForSOError(registration)
+                raise NoNeedForSOError(registrations)
         finally:
-            del request.session["free_tickets"], request.session["event_id"]
-        request.session["free_registration_id"] = registration.id
-        return registration
+            del request.session["free_tickets"]
+        request.session["free_registration_ids"] = registrations.ids
+        return registrations
 
     def checkout_form_save(self, checkout):
         """Save free registrations too."""
@@ -110,14 +112,16 @@ class WebsiteSale(website_sale):
         except NoNeedForSOError as ex:
             return request.render(
                 'website_event_register_free.partner_register_confirm',
-                {'registration': ex.registration})
+                # No actual chance of getting multiple events or attendees, so
+                # just use the first from the recordset
+                {'registration': ex.registrations[:1]})
 
     @route()
     def payment(self, **post):
         """Add free registration confirmation to page."""
         result = super(WebsiteSale, self).payment(**post)
-        registration = request.session.pop("free_registration_id", None)
-        if registration:
+        registrations = request.session.pop("free_registration_ids", None)
+        if registrations:
             result.qcontext["free_registration"] = \
-                request.env["event.registration"].browse(registration)
+                request.env["event.registration"].browse(registrations[0])
         return result
