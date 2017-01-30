@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Onestein
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
+            <t t-snippet="website_snippet_calendar.s_calendar" t-thumbnail="/website_snippet_calendar/static/src/img/snippets/calendar.png"/>
+        </xpath>
+    </template>
+
+    <template id="s_calendar" name="Calendar">
+
+        <div class="panel panel-default s_calendar s_panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">Calendar</h3>
+            </div>
+            <div class="panel-body">
+                <div class="calendar"></div>
+            </div>
+        </div>
+    </template>
+
+</odoo>

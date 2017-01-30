@@ -18,7 +18,8 @@
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',
-        'templates/website_snippet_calendar.xml',
+        'templates/assets.xml',
+        'templates/snippets.xml',
     ],
     'installable': True,
     'auto_install': False,
