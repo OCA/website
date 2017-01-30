@@ -7,20 +7,21 @@ Calendar Snippet
 ================
 
 This module adds a new block in the website editor.
-The new block is based on Messaging -> Calendar. Use field 'Privacy'
+The new block is based on Calendar (module). Use field 'Privacy'
 to determine its publicity.
 Since it's a block it can be placed anywhere on your website.
 
+Configuration
+=============
 
-Usage
-=====
+Privacy setting is per event; in order to change privacy setting go to:
 
-Privacy setting is per event; in order to change privacy setting you should:
-
-* open the event form;
+* the event form;
 * click Edit Event button;
 * go to Options tab.
 
+Usage
+=====
 
 To use this module, you need to:
 
@@ -30,19 +31,15 @@ To use this module, you need to:
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/8.0
+   :target: https://runbot.odoo-community.org/runbot/186/9.0
 
 Bug Tracker
 ===========
 
 Bugs are tracked on `GitHub Issues
-<https://github.com/OCA/website/issues>`_. In case of trouble, please
+<https://github.com/OCA/186/issues>`_. In case of trouble, please
 check there if your issue has already been reported. If you spotted it first,
-help us smashing it by providing a detailed and welcomed `feedback
-<https://github.com/OCA/
-website/issues/new?body=module:%20
-website_calendar_snippet%0Aversion:%20
-8.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+help us smashing it by providing a detailed and welcomed feedback.
 
 Credits
 =======
