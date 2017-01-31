@@ -1,17 +1,15 @@
 /* Copyright 2017 Onestein
 * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). */
 
-
 odoo.define('website_snippet_calendar', function(require) {
 'use strict';
 
-    var core = require('web.core');
-    var time = require('web.time');
-    var _t = core._t;
+    var core = require('web.core'),
+        time = require('web.time'),
+        base = require('web_editor.base'),
+        _t = core._t;
 
-    $(document).ready(function() {
-        console.log(moment);
-
+    base.ready().done(function() {
         //Reset
         var $calendar = $('.s_calendar .calendar');
         $calendar.html('');
@@ -47,7 +45,7 @@ odoo.define('website_snippet_calendar', function(require) {
                         all_filters[0] = get_color(result.contacts[0]);
                         all_filters[-1] = get_color(-1);
                         _.each(result.contacts, function (c) {
-                            if (!all_filters[c]/* && c != result.contacts[0]*/) {
+                            if (!all_filters[c]) {
                                 all_filters[c] = get_color(c);
                             }
                         });
@@ -69,14 +67,11 @@ odoo.define('website_snippet_calendar', function(require) {
                             }
 
                             if (all_filters[events[i].color] !== undefined) {
-                                //events[i].className = 'calendar_color_' + all_filters[events[i].color];
                                 events[i].className = 'calendar_color_'+ all_filters[events[i].color];
                             }
                             else  {
                                 events[i].className = 'calendar_color_'+ all_filters[-1];
                             }
-                            console.log(events[i].className);
-                            console.log(all_filters);
                         }
                         callback(events);
                     }
@@ -122,10 +117,10 @@ odoo.define('website_snippet_calendar', function(require) {
                 right: 'month,agendaWeek,agendaDay'
             },
             eventAfterRender: function (event, element, view) {
-                if ((view.name !== 'month') && (((event.end-event.start)/60000)<=30)) {
+                if ((view.name !== 'month') && (((event.end-event.start)/60000) <= 30)) {
                     //if duration is too small, we see the html code of img
                     var current_title = $(element.find('.fc-event-time')).text();
-                    var new_title = current_title.substr(0,current_title.indexOf("<img")>0?current_title.indexOf("<img"):current_title.length);
+                    var new_title = current_title.substr(0,current_title.indexOf("<img") > 0 ? current_title.indexOf("<img") : current_title.length);
                     element.find('.fc-event-time').html(new_title);
                 }
             },
@@ -135,4 +130,3 @@ odoo.define('website_snippet_calendar', function(require) {
         });
     });
 });
-

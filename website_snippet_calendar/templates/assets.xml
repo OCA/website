@@ -7,7 +7,6 @@
     <template id="assets_frontend" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
             <link href="/website_snippet_calendar/static/src/less/website_snippet_calendar.less" rel="stylesheet" />
-            <link href="/website_snippet_calendar/static/lib/fullcalendar/css/fullcalendar.css" type="text/css" rel="stylesheet" />
 
             <script type="text/javascript" src="/website_snippet_calendar/static/lib/date/js/date.js"></script>
             <script type="text/javascript" src="/website_snippet_calendar/static/lib/fullcalendar/js/fullcalendar.js"></script>
