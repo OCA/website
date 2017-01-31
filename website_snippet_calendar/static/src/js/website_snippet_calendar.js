@@ -47,7 +47,7 @@ odoo.define('website_snippet_calendar', function(require) {
                         all_filters[0] = get_color(result.contacts[0]);
                         all_filters[-1] = get_color(-1);
                         _.each(result.contacts, function (c) {
-                            if (!all_filters[c] && c != result.contacts[0]) {
+                            if (!all_filters[c]/* && c != result.contacts[0]*/) {
                                 all_filters[c] = get_color(c);
                             }
                         });
@@ -66,13 +66,17 @@ odoo.define('website_snippet_calendar', function(require) {
 
                             for(var j = 0; j < events[i].attendees.length; j++) {
                                 events[i].title += '<img title="' + events[i].attendees[j].name + '" class="attendee_head" src="/web/binary/image?model=res.partner&field=image_small&id=' + events[i].attendees[j].id + '" />';
-                                if (all_filters[events[i].color] !== undefined) {
-                                    events[i].className = 'calendar_color_' + all_filters[events[i].color];
-                                }
-                                else  {
-                                    events[i].className = 'cal_opacity calendar_color_'+ all_filters[-1];
-                                }
                             }
+
+                            if (all_filters[events[i].color] !== undefined) {
+                                //events[i].className = 'calendar_color_' + all_filters[events[i].color];
+                                events[i].className = 'calendar_color_'+ all_filters[events[i].color];
+                            }
+                            else  {
+                                events[i].className = 'calendar_color_'+ all_filters[-1];
+                            }
+                            console.log(events[i].className);
+                            console.log(all_filters);
                         }
                         callback(events);
                     }
