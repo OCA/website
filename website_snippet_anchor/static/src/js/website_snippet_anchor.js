@@ -113,7 +113,7 @@ odoo.define('website_snippet_anchor.widgets', function (require) {
          */
         bind_data: function () {
             var url = this.element && this.element.getAttribute("href"),
-                url_parts = url.split("#", 2);
+                url_parts = url && url.split("#", 2) || "";
 
             // Trick this._super()
             if (url_parts.length > 1) {
