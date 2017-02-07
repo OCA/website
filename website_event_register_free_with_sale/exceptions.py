@@ -10,5 +10,5 @@ class NoNeedForSOError(exceptions.ValidationError):
 
     Useful when you want to register for free and there is nothing to invoice.
     """
-    def __init__(self, registration):
-        self.registration = registration
+    def __init__(self, registrations):
+        self.registrations = registrations

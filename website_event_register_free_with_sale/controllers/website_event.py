@@ -27,9 +27,8 @@ class WebsiteEvent(website_event):
     @http.route()
     def cart_update(self, **post):
         has_paid_tickets = False
-        free_tickets = 0
+        free_tickets = list()
         request.session.pop("free_tickets", None)
-        request.session.pop("event_id", None)
         for key, value in post.items():
             qty = int(value or 0)
             if not qty or not key.startswith("ticket-"):
@@ -41,7 +40,11 @@ class WebsiteEvent(website_event):
             ticket = request.env['event.event.ticket'].sudo().browse(ticket_id)
             if not ticket.price:
                 # Accumulate possible multiple free tickets
-                free_tickets += qty
+                free_tickets.append({
+                    "event_id": int(post["event_id"]),
+                    "ticket_id": ticket_id,
+                    "qty": qty,
+                })
             else:
                 has_paid_tickets = True
                 # Add to shopping cart the rest of the items
@@ -52,6 +55,5 @@ class WebsiteEvent(website_event):
             return request.redirect("/event/%s" % post['event_id'])
         request.session.update({
             'free_tickets': free_tickets,
-            'event_id': int(post['event_id']),
         })
         return request.redirect("/shop/checkout")

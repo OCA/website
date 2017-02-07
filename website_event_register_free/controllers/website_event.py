@@ -48,13 +48,13 @@ class WebsiteEvent(website_event):
                 validate('tickets', force_check=True)):
             # if logged in, use that info
             registration_vals = reg_obj._prepare_registration(
-                event, post, http.request.env.user.id,
+                event.id, post, http.request.env.user.id,
                 partner=http.request.env.user.partner_id)
         if all(map(lambda f: validate(f, force_check=True),
                    ['name', 'email', 'tickets'])):
             # otherwise, create a simple registration
             registration_vals = reg_obj._prepare_registration(
-                event, post, http.request.env.user.id)
+                event.id, post, http.request.env.user.id)
         if registration_vals:
             registration = reg_obj.sudo().create(registration_vals)
             if registration.partner_id:
