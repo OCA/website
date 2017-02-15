@@ -5,17 +5,17 @@ odoo.define("website_portal_contact.tour", function (require) {
     var ajax = require("web.ajax");
     $(document).ready(function() {
         $('input[type="radio"]').click(function() {
-            if($(this).attr("value")=="contact") {
+            if($(this).attr("value") === "contact") {
                 $(".contact_address_website").addClass('hidden');
             }
             else {
                 $(".contact_address_website").removeClass('hidden');
             }
-        })
+        });
         $('input[type="radio"]').each(function() {
-            if($(this).attr('checked') == 'checked') {
+            if($(this).attr('checked') === 'checked') {
                 $(this).click();
             }
-        })
+        });
     });
 });
