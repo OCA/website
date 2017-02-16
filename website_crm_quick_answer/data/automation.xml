@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
 
-<record id="website_form_leads_filter" model="ir.filters">
-    <field name="name">Coming from the website contact form</field>
-    <field name="user_id" eval="False"/>
-    <field name="model_id">crm.lead</field>
-    <field name="domain"
-           eval="[('section_id', '=', ref('website.salesteam_website_sales')),
-                  ('medium_id', '=', ref('crm.crm_medium_website'))]"/>
-</record>
-
-<record id="email_template" model="email.template">
+<record id="email_template" model="mail.template">
     <field name="name">Quick response to website contact form</field>
     <field name="model_id" ref="crm.model_crm_lead"/>
     <field name="use_default_to" eval="True"/>
@@ -43,11 +35,13 @@
 <record id="automated_action" model="base.action.rule">
     <field name="name">Quick response to website contact form</field>
     <field name="model_id" ref="crm.model_crm_lead"/>
-    <field name="filter_id" ref="website_form_leads_filter"/>
+    <field name="filter_domain" eval="[
+        ('team_id', '=', ref('website.salesteam_website_sales')),
+        ('medium_id', '=', ref('utm.utm_medium_website')),
+    ]"/>
     <field name="kind">on_create</field>
     <field name="server_action_ids"
            eval="[(4, ref('website_crm_quick_answer.server_action'), False)]"/>
 </record>
 
-</data>
-</openerp>
+</odoo>
