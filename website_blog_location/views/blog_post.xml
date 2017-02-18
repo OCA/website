@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_blog_post_form" model="ir.ui.view">
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.view_blog_post_form" />
+            <field name="arch" type="xml">
+                <sheet position="inside">
+                    <group name="location" string="Location">
+                        <field name="latitude" />
+                        <field name="longitude" />
+                        <button
+                            colspan="2"
+                            type="object"
+                            name="action_show_in_map"
+                            string="Show in map"
+                            class="oe_link"
+                            attrs="{
+                                'invisible': [
+                                    '|', '|', '|',
+                                    ('latitude', '=', False),
+                                    ('latitude', '=', 0),
+                                    ('longitude', '=', False),
+                                    ('longitude', '=', 0),
+                                ]
+                            }"
+                        />
+                    </group>
+                </sheet>
+            </field>
+        </record>
+    </data>
+</openerp>
