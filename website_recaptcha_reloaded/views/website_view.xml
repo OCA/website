@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	<template id="assets_editor_recaptcha" name="GoogleRecaptcha" inherit_id="website.layout">
+	    <xpath expr="//body" position="inside">
+	      <script src="https://www.google.com/recaptcha/api.js"></script>
+	    </xpath>
+	  </template>
+    	
+    
+        <record id="view_website_form" model="ir.ui.view">
+            <field name="name">website.form</field>
+            <field name="model">website</field>
+            <field name="inherit_id" ref="website.view_website_form" />
+            <field name="arch" type="xml">
+                <div name="social_media" position="after">
+                    <div name="goole_recaptcha">
+                        <separator string="Google reCAPTCHA Reloaded"/>
+                        <group name="social_media">
+                            <field name="recaptcha_site_key" placeholder="Your reCAPTCHA site key"/>
+                            <field name="recaptcha_private_key" placeholder="Your reCAPTCHA private key"/>
+                        </group>
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</openerp>
