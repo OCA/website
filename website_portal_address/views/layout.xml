@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="contact_address_type_website_form"
+              name="Portal Contact Address Type Form"
+              inherit_id="website_portal_contact.contacts_table">
+        <xpath expr="//th[@class='text-center']" position="before">
+            <th>Type</th>
+        </xpath>
+        <xpath expr="//td/a[@t-attf-href='mailto://#{contact.email}']"
+               position="after">
+            <td>
+               <span t-field="contact.type"/>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>
