@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_blog_facebook_comment
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-07 17:41+0000\n"
+"PO-Revision-Date: 2017-02-23 08:30+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: Basque (http://www.transifex.com/oca/OCA-website-8-0/language/eu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: eu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_blog_facebook_comment
+#: field:website,facebook_appid:0
+#: field:website.config.settings,facebook_appid:0
+msgid "Facebook AppID"
+msgstr ""
+
+#. module: website_blog_facebook_comment
+#: view:website.config.settings:website_blog_facebook_comment.view_facebook_comment_configuration
+msgid "Facebook comment API"
+msgstr ""
+
+#. module: website_blog_facebook_comment
+#: field:website,facebook_numposts:0
+#: field:website.config.settings,facebook_numposts:0
+msgid "Number of Posts"
+msgstr ""
+
+#. module: website_blog_facebook_comment
+#: view:website.config.settings:website_blog_facebook_comment.view_facebook_comment_configuration
+msgid ""
+"Set your Facebook API access below to be able to use the Facebook comment "
+"Website blog."
+msgstr ""
+
+#. module: website_blog_facebook_comment
+#: model:ir.model,name:website_blog_facebook_comment.model_website
+msgid "Website"
+msgstr "Website"
+
+#. module: website_blog_facebook_comment
+#: view:website:website_blog.blog_post_complete
+msgid "display: none;"
+msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"POT-Creation-Date: 2017-02-07 17:42+0000\n"
 "PO-Revision-Date: 2015-12-03 10:39+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:12
 #, python-format
 msgid "Anchor"
-msgstr ""
+msgstr "Balise"
 
 #. module: website_snippet_anchor
 #. openerp-web

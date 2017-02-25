@@ -3,13 +3,14 @@
 # * website_slides
 # 
 # Translators:
+# Esther Martín Menéndez <esthermartin001@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-10-11 09:51+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"POT-Creation-Date: 2017-02-07 17:42+0000\n"
+"PO-Revision-Date: 2017-02-23 15:58+0000\n"
+"Last-Translator: Esther Martín Menéndez <esthermartin001@gmail.com>\n"
 "Language-Team: Basque (http://www.transifex.com/oca/OCA-website-8-0/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -203,7 +204,7 @@ msgstr ""
 #: view:slide.channel:website_slides.view_slide_channel_form
 #: field:slide.channel,category_ids:0
 msgid "Categories"
-msgstr ""
+msgstr "Kategoriak"
 
 #. module: website_slides
 #. openerp-web
@@ -369,7 +370,7 @@ msgstr ""
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: selection:slide.slide,slide_type:0
 msgid "Document"
-msgstr ""
+msgstr "Dokumentua"
 
 #. module: website_slides
 #: field:slide.slide,document_id:0
@@ -486,7 +487,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #. module: website_slides
 #: selection:slide.channel,promote_strategy:0
@@ -545,7 +546,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Google+"
-msgstr ""
+msgstr "Google+"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_graph
@@ -900,7 +901,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Please"
-msgstr ""
+msgstr "Mesedez"
 
 #. module: website_slides
 #. openerp-web
@@ -1059,7 +1060,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
 msgid "Send Email"
-msgstr ""
+msgstr "Emaila Bidali"
 
 #. module: website_slides
 #: view:website:website_slides.slide_social_email
@@ -1170,7 +1171,7 @@ msgstr ""
 #. module: website_slides
 #: view:slide.tag:website_slides.view_slide_tag_form
 msgid "Tag"
-msgstr ""
+msgstr "Etiketa"
 
 #. module: website_slides
 #. openerp-web
@@ -1278,7 +1279,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
@@ -1392,7 +1393,7 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Website"
-msgstr ""
+msgstr "Website"
 
 #. module: website_slides
 #: field:slide.channel,website_message_ids:0
@@ -1462,7 +1463,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
 msgid "Your Name"
-msgstr ""
+msgstr "Zure Izena"
 
 #. module: website_slides
 #. openerp-web
@@ -1525,7 +1526,7 @@ msgstr ""
 #: code:addons/website_slides/static/src/xml/website_slides.xml:70
 #, python-format
 msgid "or"
-msgstr "or"
+msgstr "edo"
 
 #. module: website_slides
 #: view:website:website_slides.slides_search

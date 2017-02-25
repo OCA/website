@@ -3,13 +3,14 @@
 # * website_portal_sale
 # 
 # Translators:
+# David BEAL, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-11 08:55+0000\n"
-"PO-Revision-Date: 2017-01-12 18:07+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"POT-Creation-Date: 2017-02-07 17:41+0000\n"
+"PO-Revision-Date: 2017-02-22 14:05+0000\n"
+"Last-Translator: David BEAL\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +21,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Access the complete Sale application"
-msgstr ""
+msgstr "Accéder à l'application de vente complète"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -62,12 +63,12 @@ msgstr "Date d'échéance"
 msgid ""
 "If you wish to access the complete application to manage your orders, you "
 "can follow"
-msgstr ""
+msgstr "Si vous souhaitez accéder à l'application complète pour gérer vos ventes, vous pouvez vous abonner"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "In preparation"
-msgstr ""
+msgstr "En préparation"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -123,7 +124,7 @@ msgstr "Quantité"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Quotation"
-msgstr ""
+msgstr "Devis"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
@@ -133,12 +134,12 @@ msgstr "Devis #"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Sale Order #"
-msgstr ""
+msgstr "Commande de ventes"
 
 #. module: website_portal_sale
 #: view:website:website_portal.account
 msgid "Sales"
-msgstr ""
+msgstr "Commandes"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -182,7 +183,7 @@ msgstr "Il n'y a actuellement aucune commande pour votre compte."
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "Il n'y a actuellement aucun devis pour votre compte."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -229,7 +230,7 @@ msgstr "Vos commandes"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Your Quotes"
-msgstr ""
+msgstr "Vos devis"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

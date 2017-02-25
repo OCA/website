@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-15 21:08+0000\n"
-"PO-Revision-Date: 2016-05-18 20:30+0000\n"
+"POT-Creation-Date: 2017-02-07 17:41+0000\n"
+"PO-Revision-Date: 2017-02-22 14:05+0000\n"
 "Last-Translator: Isabelle RICHARD <isabellerichard89@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -58,7 +58,7 @@ msgstr "Date d'échéance"
 msgid ""
 "If you wish to access the complete application to manage your orders, you "
 "can follow"
-msgstr ""
+msgstr "Si vous souhaitez accéder à l'application complète pour gérer vos ventes, vous pouvez vous abonner"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
@@ -179,7 +179,7 @@ msgstr "Il n'y a actuellement aucune commande pour votre compte."
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "Il n'y a actuellement aucun devis pour votre compte."
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
