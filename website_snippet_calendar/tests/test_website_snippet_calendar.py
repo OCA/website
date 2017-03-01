@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+# Copyright 2017 Onestein (<http://www.onestein.eu>)
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
+from json import loads
+from time import mktime
+from datetime import datetime
+
+from openerp.tests.common import TransactionCase
+from openerp.http import request
+from openerp.fields import Datetime
+from openerp.addons.website_snippet_calendar.controllers.main \
+    import WebsiteCalendarSnippet
+
+
+class TestWebsiteSnippetCalendar(TransactionCase):
+    def test_controller(self):
+        request.website = self.env.ref('website.default_website')
+        select_start = '2017-03-01 11:00:00'
+        select_stop = '2017-03-01 14:00:00'
+        event_obj = self.env['calendar.event'].with_env(request.env)
+        event_obj.create({
+            'name': 'Test',
+            'start': '2017-03-01 12:00:00',
+            'stop': '2017-03-01 13:00:00'
+        })
+        events = event_obj.search([('start', '<', select_stop),
+                                   ('stop', '>', select_start)])
+        controller = WebsiteCalendarSnippet()
+        select_start_obj = Datetime.from_string(select_start)
+        select_stop_obj = Datetime.from_string(select_stop)
+        select_start_ts = mktime(select_start_obj.timetuple())
+        select_stop_ts = mktime(select_stop_obj.timetuple())
+        res_str = controller.get_events(select_start_ts, select_stop_ts).data
+        res = loads(res_str)
+        self.assertListEqual(map(lambda e: e['id'], res['events']), events.ids)

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# © 2017 Onestein (<http://www.onestein.eu>)
+# Copyright 2017 Onestein (<http://www.onestein.eu>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-import json
+from json import dumps
 from datetime import datetime
 
 from openerp import http
@@ -60,4 +60,4 @@ class WebsiteCalendarSnippet(http.Controller):
                  'attendees': attendees
                  })
 
-        return json.dumps({'events': events, 'contacts': contacts})
+        return dumps({'events': events, 'contacts': contacts})
