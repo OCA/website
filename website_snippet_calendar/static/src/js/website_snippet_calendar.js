@@ -93,11 +93,6 @@ odoo.define('website_snippet_calendar', function(require) {
                 week: "w",
                 day: dateFormat,
             },
-            titleFormat: {
-                month: 'MMMM yyyy',
-                week: "w",
-                day: dateFormat,
-            },
             columnFormat: {
                 month: 'ddd',
                 week: 'ddd ' + dateFormat,

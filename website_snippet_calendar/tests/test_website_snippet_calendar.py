@@ -4,13 +4,11 @@
 
 from json import loads
 from time import mktime
-from datetime import datetime
 
 from openerp.tests.common import TransactionCase
 from openerp.http import request
 from openerp.fields import Datetime
-from openerp.addons.website_snippet_calendar.controllers.main \
-    import WebsiteCalendarSnippet
+from ..controllers.main import WebsiteCalendarSnippet
 
 
 class TestWebsiteSnippetCalendar(TransactionCase):
