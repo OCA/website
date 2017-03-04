@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"POT-Creation-Date: 2017-02-25 09:34+0000\n"
 "PO-Revision-Date: 2015-12-25 15:37+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-website-8-0/language/zh_CN/)\n"
@@ -45,7 +45,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "Done"
-msgstr ""
+msgstr "已完成"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
