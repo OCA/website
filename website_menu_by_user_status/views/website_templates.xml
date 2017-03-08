@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<!-- Copyright 2013-2017 Savoir-faire Linux (<http://www.savoirfairelinux.com>)
+     Copyright 2017 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
     <data>
         <template id="website_display_menu" name="Conditional display menu"
                   inherit_id="website.layout"
@@ -9,7 +12,35 @@
                     <t t-call="website.submenu"/>
                 </t>
             </xpath>
-
         </template>
     </data>
-</openerp>
+
+    <template id="404" name="Display pages" inherit_id="website.404">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap">
+                <t t-raw="0"/>
+                <div class="oe_structure oe_empty">
+                    <div class="container">
+                        <h1 class="mt32">404: Page not found!</h1>
+                        <p>
+                            The page you were looking for could not be found; it is possible you have
+                            typed the address incorrectly, but it has most probably been removed due
+                            to the recent website reorganisation.
+                        </p>
+                        <p t-if="not suggest_page">No page active</p>
+                        <p t-if="suggest_page">Maybe you were looking for one of these popular pages ?</p>
+                        <ul t-if="suggest_page">
+                            <t t-foreach="suggest_page or []" t-as="page">
+                                <li><a t-attf-href="#{page.url}"><t t-esc="page.name"/></a></li>
+                            </t>
+                        </ul>
+                    </div>
+                </div>
+
+                <t t-if="request.debug">
+                    <t t-call="website.http_error_debug"/>
+                </t>
+            </div>
+        </xpath>
+    </template>
+</odoo>
