@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Specialty Medical Drugstore, LLC
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <template id="add_item_line_total" inherit_id="website_sale.cart_lines">
+        <xpath expr="//table[@id='cart_products']/thead/tr/th[@class='text-center']" position="before">
+            <th width="130" class="text-center">Unit Price</th>
+        </xpath>
+        <xpath expr="//td[@id='td-qty']" position="before">
+            <td class="text-center">
+                <t t-if="(compute_currency(line.product_id.lst_price) - line.price_reduce ) &gt; 0.01  and website.get_current_pricelist().discount_policy=='without_discount'">
+                    <del t-attf-class="#{'text-danger mr8'}" style="white-space: nowrap;" t-esc="compute_currency(line.product_id.website_public_price)" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}" />
+                </t>
+                <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_subtotal" />
+                <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}" groups="sale.group_show_price_total" />
+            </td>
+        </xpath>
+        <xpath expr="//td[@name='price']" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+        <xpath expr="//td[@name='price']" position="after">
+            <td class="text-center" id="td-price" name="price">
+                <span t-esc="line.price_subtotal" t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}"/>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>
