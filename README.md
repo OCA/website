@@ -17,6 +17,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[website_sale_line_total](website_sale_line_total/) | 10.0.1.0.0 | Adds separate columns for unit price and total price
 [website_snippet_data_slider](website_snippet_data_slider/) | 10.0.1.0.0 | Abstract data slider for use on website. Primary use (and default implementation) is product slider.
 
 Unported addons
