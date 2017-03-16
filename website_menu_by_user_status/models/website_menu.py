@@ -1,8 +1,5 @@
 # -*- encoding: utf-8 -*-
-#
-# OpenERP, Open Source Management Solution
-#    This module copyright (C) 2013 Savoir-faire Linux
-#    (<http://www.savoirfairelinux.com>).
+#    updating author: www.don-systems.de
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,10 +15,8 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-import logging
-_logger = logging.getLogger(__name__)
-from openerp import models, fields
-from openerp.tools.translate import _
+from odoo import models, fields
+from odoo.tools.translate import _
 
 
 class WebsiteMenu(models.Model):

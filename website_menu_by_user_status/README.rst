@@ -18,6 +18,7 @@ by editing the html DOM.
 
 Contributors
 ------------
+* Eugen Don <eugen.don@don-systems.de>
 * Bruno Joliveau <bruno.joliveau@savoirfairelinux.com>
 * Jordi Riera <jordi.riera@savoirfairelinux.com>
 

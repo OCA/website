@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
         <template id="website_display_menu" name="Conditional display menu"
                   inherit_id="website.layout"
@@ -12,4 +12,4 @@
 
         </template>
     </data>
-</openerp>
+</odoo>
