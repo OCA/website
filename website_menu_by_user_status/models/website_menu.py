@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 #    updating author: www.don-systems.de
 #
 #    This program is free software: you can redistribute it and/or modify
