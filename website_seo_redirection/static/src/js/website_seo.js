@@ -7,14 +7,15 @@ odoo.define('website_seo_redirection.website_seo', function(require) {
     var core = require("web.core");
     var seo = require("website.seo");
     var session = require("web.session");
-    var $ = require("$");
+
+    ajax.loadXML(
+        '/website_seo_redirection/static/src/xml/website_seo.xml',
+        core.qweb
+    );
 
     seo.Configurator.include({
         start: function () {
-            ajax.loadXML(
-                '/website_seo_redirection/static/src/xml/website_seo.xml',
-                core.qweb
-            ).done($.proxy(this._super, this));
+            this._super();
             this.$seo_redirection = this.$el.find(
                 "#js_website_seo_redirection");
             this.$seo_redirection.val(

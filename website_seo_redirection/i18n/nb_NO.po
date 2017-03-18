@@ -40,14 +40,14 @@ msgid "/seo/sample"
 msgstr ""
 
 #. module: website_seo_redirection
-#. openerp-web
+#. odoo-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:13
 #, python-format
 msgid "BEWARE!"
 msgstr ""
 
 #. module: website_seo_redirection
-#. openerp-web
+#. odoo-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:8
 #, python-format
 msgid "Change the URL"
@@ -69,7 +69,7 @@ msgid "Destination URL"
 msgstr ""
 
 #. module: website_seo_redirection
-#. openerp-web
+#. odoo-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:22
 #, python-format
 msgid "Destination URL:"
@@ -92,7 +92,7 @@ msgid "Duplicated redirection."
 msgstr "Dupliserte omdirigering."
 
 #. module: website_seo_redirection
-#. openerp-web
+#. odoo-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:33
 #, python-format
 msgid "E.g.: /some/good-url"
@@ -109,7 +109,7 @@ msgid "ID"
 msgstr "ID"
 
 #. module: website_seo_redirection
-#. openerp-web
+#. odoo-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:16
 #, python-format
 msgid ""
@@ -219,7 +219,7 @@ msgid "The original URL for this page is"
 msgstr "Den opprinnelige URLen for denne siden er"
 
 #. module: website_seo_redirection
-#. openerp-web
+#. odoo-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:33
 #, python-format
 msgid "URL without domain name, all lower case, hyphenated."

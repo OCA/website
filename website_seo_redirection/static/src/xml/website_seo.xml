@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
-<templates>
+<templates id="template" xml:space="preserve">
     <t t-extend="website.seo_configuration">
-        <t t-jquery=".modal-body" t-operation="append">
+        <t t-jquery=".js_seo_tips" t-operation="after">
             <section>
                 <h3 class="page-header">
                     Change the URL

@@ -3,43 +3,46 @@
 odoo.define('website_seo_redirection.tour', function(require) {
     'use strict';
 
-    var Tour = require('web.Tour');
+    var tour = require('web_tour.tour');
+    var base = require('web_editor.base');
 
-    Tour.register({
-        id: "website_seo_redirection",
-        name: "Check SEO redirections functionality",
-        path: "/",
-        mode: "test",
-        steps: [
+    tour.register(
+        "website_seo_redirection",
+        {
+            url: "/",
+            name: "Check SEO redirections functionality",
+            test: true,
+            wait_for: base.ready(),
+        },
+        [
             {
-                title: "Open SEO menu",
-                waitFor: "a:contains('SEO Sample')",
-                element: "a:contains('SEO Sample')",
+                content: "Open SEO menu",
+                trigger: "a:contains('SEO Sample')",
             },
             {
-                title: "Go to SEO sample page in original URL",
-                waitFor: "a:contains('Original URL')",
-                element: "a:contains('Original URL')",
+                content: "Go to SEO sample page in original URL",
+                trigger: "a:contains('Original URL')",
             },
             {
-                title: "Page reached, back to home",
-                waitFor: "#origin,#destination",
-                element: "a:contains('Home')",
+                content: "Page reached, back to home",
+                extra_trigger: "#origin, #destination",
+                trigger: "a:contains('Home')",
             },
             {
-                title: "Open SEO menu",
-                waitFor: "meta[property='og:title'][content='Homepage']",
-                element: "a:contains('SEO Sample')",
+                content: "Open SEO menu",
+                trigger: "a:contains('SEO Sample')",
             },
             {
-                title: "Go to SEO sample page in destination URL",
-                waitFor: "a:contains('Redirected URL')",
-                element: "a:contains('Redirected URL')",
+                content: "Go to SEO sample page in destination URL",
+                trigger: "a:contains('Redirected URL')",
             },
             {
-                title: "Page reached",
-                waitFor: "#origin,#destination",
+                content: "Page reached",
+                trigger: "#origin, #destination",
             },
-        ],
-    });
+        ]
+    );
+
+    return {};
+
 });
