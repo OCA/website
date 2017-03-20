@@ -44,10 +44,8 @@ addon | version | summary
 [website_logo](website_logo/) | 8.0.1.0.0 (unported) | Website company logo
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 (unported) | Website Menu Multilanguage
-[website_payment_v10](website_payment_v10/) | 9.0.1.0.0 (unported) | Payment: Website Integration
 [website_portal_contact](website_portal_contact/) | 9.0.1.0.0 (unported) | Allows logged in portal users to manage their contacts
 [website_portal_purchase](website_portal_purchase/) | 9.0.1.0.0 (unported) | Add purchase orders and quotation in the frontend portal
-[website_portal_v10](website_portal_v10/) | 9.0.1.0.0 (unported) | Account Management Frontend for your Customers
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 (unported) | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 (unported) | Prevent optional products to be sold singularly
 [website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 (unported) | VAT number required in checkout form
