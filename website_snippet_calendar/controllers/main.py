@@ -6,7 +6,6 @@ from json import dumps
 from datetime import datetime
 
 from openerp import http
-from openerp.http import request
 
 
 class WebsiteCalendarSnippet(http.Controller):
@@ -17,24 +16,21 @@ class WebsiteCalendarSnippet(http.Controller):
         auth='public',
         website=True)
     def get_events(self, start, end, **post):
-        cr, uid, context = request.cr, request.uid, request.context
+        request = http.request
 
         # Get events
-        calendar_event_obj = request.registry['calendar.event']
-        calendar_event_ids = calendar_event_obj.search(
-            cr, uid, [('start', '<', unicode(datetime.fromtimestamp(end))),
-                      ('stop', '>', unicode(datetime.fromtimestamp(start)))],
-            context=context)
-        calendar_events = calendar_event_obj.browse(
-            cr, uid, calendar_event_ids, context=context)
+        calendar_event_obj = request.env['calendar.event']
+        calendar_events = calendar_event_obj.search(
+            [('start', '<', unicode(datetime.fromtimestamp(end))),
+             ('stop', '>', unicode(datetime.fromtimestamp(start)))]
+        )
 
         contacts = []
-        if request.website.user_id.id != uid:
-            calendar_contact_obj = request.registry['calendar.contacts']
-            calendar_contact_ids = calendar_contact_obj.search(
-                cr, uid, [('user_id', '=', uid)], context=context)
-            calendar_contacts = calendar_contact_obj.browse(
-                cr, uid, calendar_contact_ids, context=context)
+        if request.website.user_id.id != request.env.uid:
+            calendar_contact_obj = request.env['calendar.contacts']
+            calendar_contacts = calendar_contact_obj.search(
+                [('user_id', '=', request.env.uid)]
+            )
 
             # Create response (Cannot serialize object)
             contacts.append(request.env.user.partner_id.id)
