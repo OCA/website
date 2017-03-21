@@ -4,12 +4,12 @@
 
 from json import loads
 from time import mktime
-from mock import MagicMock
+from mock import patch
 
 from openerp.tests.common import TransactionCase
 from openerp import http
 from openerp.fields import Datetime
-
+from ..controllers.main import WebsiteCalendarSnippet
 
 class TestWebsiteSnippetCalendar(TransactionCase):
     def test_controller(self):
@@ -23,18 +23,17 @@ class TestWebsiteSnippetCalendar(TransactionCase):
         })
         events = event_obj.search([('start', '<', select_stop),
                                    ('stop', '>', select_start)])
-        request = http.request
-        http.request = MagicMock(env=self.env,
-                                 website=self.env.ref('website.default_website'
-                                                      )
-                                 )
-        from ..controllers.main import WebsiteCalendarSnippet
-        controller = WebsiteCalendarSnippet()
+
         select_start_obj = Datetime.from_string(select_start)
         select_stop_obj = Datetime.from_string(select_stop)
         select_start_ts = mktime(select_start_obj.timetuple())
         select_stop_ts = mktime(select_stop_obj.timetuple())
-        res_str = controller.get_events(select_start_ts, select_stop_ts).data
-        http.request = request
-        res = loads(res_str)
-        self.assertListEqual(map(lambda e: e['id'], res['events']), events.ids)
+
+        with patch.object(http, 'request') as request:
+            request.env = self.env
+            controller = WebsiteCalendarSnippet()
+            res_str = controller.get_events(
+                select_start_ts,
+                select_stop_ts).data
+            res = loads(res_str)
+            self.assertListEqual(map(lambda e: e['id'], res['events']), events.ids)
