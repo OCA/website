@@ -36,4 +36,5 @@ class TestWebsiteSnippetCalendar(TransactionCase):
                 select_start_ts,
                 select_stop_ts).data
             res = loads(res_str)
-            self.assertListEqual(map(lambda e: e['id'], res['events']), events.ids)
+            self.assertListEqual(map(lambda e: e['id'], res['events']),
+                                 events.ids)
