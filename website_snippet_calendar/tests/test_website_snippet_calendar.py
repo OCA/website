@@ -11,6 +11,7 @@ from openerp import http
 from openerp.fields import Datetime
 from ..controllers.main import WebsiteCalendarSnippet
 
+
 class TestWebsiteSnippetCalendar(TransactionCase):
     def test_controller(self):
         select_start = '2017-03-01 11:00:00'
