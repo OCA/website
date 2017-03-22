@@ -7,7 +7,7 @@ Calendar Snippet
 ================
 
 This module adds a new block in the website editor.
-The new block is based on Calendar (module). Use field 'Privacy'
+The new block is based on the calendar of module Calendar. Use field 'Privacy'
 to determine its publicity.
 Since it's a block it can be placed anywhere on your website.
 
