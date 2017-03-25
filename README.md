@@ -13,6 +13,7 @@ Includes modules that expand official website modules and include:
 * and more...
 
 [//]: # (addons)
+
 Available addons
 ----------------
 addon | version | summary
