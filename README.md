@@ -47,6 +47,7 @@ addon | version | summary
 [website_snippet_big_button](website_snippet_big_button/) | 9.0.1.0.0 | A snippet that adds two big buttons
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 9.0.1.0.0 | Allow to select country in a dropdown
 
+
 Unported addons
 ---------------
 addon | version | summary
