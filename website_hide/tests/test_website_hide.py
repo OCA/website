@@ -9,6 +9,6 @@ class TestWebsiteHide(TransactionCase):
         if not self.env['res.lang'].search([('code', '=', 'nl_NL')]):
             self.env['res.lang'].load_lang('nl_NL')
         self.assertIn(
-            self.env['res.lang'].search([('iso_code', '=', 'nl_NL')]),
+            self.env['res.lang'].search([('code', '=', 'nl_NL')]),
             self.env.ref('website.default_website').language_ids,
         )
