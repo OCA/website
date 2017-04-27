@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-  <data>
-
+<!-- Copyright 2017 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
     <template id="assets_frontend" inherit_id="website.assets_frontend" name="Shop">
       <xpath expr="." position="inside">
         <link rel="stylesheet" href="/website_hr_department/static/src/css/website_hr_department.css"/>
@@ -19,6 +19,7 @@
               <div class="col-sm-5" t-if="department">
                 <t t-call="website.publish_management">
                   <t t-set="object" t-value="department"/>
+                  <t t-set="publish_edit" t-value="True"/>
                 </t>
               </div>
             </div>
@@ -166,6 +167,5 @@
         </div>
       </xpath>
     </template>
-  </data>
 
-</openerp>
+</odoo>

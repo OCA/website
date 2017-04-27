@@ -16,6 +16,7 @@ Contributors
 ------------
 
 * Laurent Mignon <laurent.mignon@acsone.eu>
+* Jonathan Nemry <jonathan.nemry@acsone.eu>
 
 Maintainer
 ----------

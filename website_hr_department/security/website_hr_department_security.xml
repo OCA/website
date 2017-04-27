@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+<!-- Copyright 2017 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
     <record id="hr_department_public" model="ir.rule">
         <field name="name">hr_department: Public</field>
         <field name="model_id" ref="hr.model_hr_department"/>
@@ -11,5 +12,4 @@
         <field name="perm_create" eval="False"/>
         <field name="perm_unlink" eval="False"/>
     </record>
-</data>
-</openerp>
+</odoo>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data noupdate="1">
+<!-- Copyright 2017 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
 
         <record id="menu_departments" model="website.menu">
             <field name="name">Departments</field>
@@ -18,5 +19,4 @@
             <field name="state">open</field>
         </record>
 
-    </data>
-</openerp>
+</odoo>
