@@ -2,8 +2,9 @@
 # © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp.exceptions import ValidationError
-from openerp.tests.common import TransactionCase
+from psycopg2 import IntegrityError
+from odoo.exceptions import ValidationError
+from odoo.tests.common import TransactionCase
 
 
 class WebsiteSeoRedirectionCase(TransactionCase):
@@ -17,6 +18,22 @@ class WebsiteSeoRedirectionCase(TransactionCase):
             "/test&other",
             "/test#anchor",
         }
+        self.ab = self.wsr.create({
+            "origin": "/a",
+            "destination": "/b",
+        })
+        self.cd = self.wsr.create({
+            "origin": "/c",
+            "destination": "/d",
+        })
+        self.de = self.wsr.create({
+            "origin": "/d",
+            "destination": "/e",
+        })
+        self.fa = self.wsr.create({
+            "origin": "/f",
+            "destination": "/a",
+        })
 
     def test_bad_origin(self):
         """Cannot enter a malformed origin URL."""
@@ -40,7 +57,7 @@ class WebsiteSeoRedirectionCase(TransactionCase):
 
     def test_equal_origin_redirection(self):
         """Cannot create a redirection to itself."""
-        with self.assertRaises(ValidationError):
+        with self.assertRaises(IntegrityError):
             self.wsr.create({
                 "origin": "/same-url",
                 "destination": "/same-url",
@@ -62,3 +79,62 @@ class WebsiteSeoRedirectionCase(TransactionCase):
 
         # Search by whatever, return itself
         self.assertEqual("/page/whatever", "/page/whatever")
+
+    def test_no_recursive_first(self):
+        """Recursive redirections are forbidden."""
+        with self.assertRaises(ValidationError):
+            self.wsr.create({
+                "origin": "/e",
+                "destination": "/c",
+            })
+
+    def test_smart_add_modify_by_origin(self):
+        """:meth:`~.smart_add` replaces destination when origin is the same."""
+        self.wsr.smart_add("/a", "/c")
+        self.assertEqual(self.ab.origin, "/a")
+        self.assertEqual(self.ab.destination, "/c")
+        self.assertEqual(self.cd.origin, "/c")
+        self.assertEqual(self.cd.destination, "/d")
+        self.assertEqual(self.de.origin, "/d")
+        self.assertEqual(self.de.destination, "/e")
+        self.assertEqual(self.fa.origin, "/f")
+        self.assertEqual(self.fa.destination, "/c")
+
+    def test_smart_add_modify_by_destination(self):
+        """:meth:`~.smart_add` replaces destination when it is the same."""
+        self.wsr.smart_add("/d", "/e")
+        self.assertEqual(self.ab.origin, "/a")
+        self.assertEqual(self.ab.destination, "/b")
+        self.assertEqual(self.cd.origin, "/c")
+        self.assertEqual(self.cd.destination, "/e")
+        self.assertEqual(self.de.origin, "/d")
+        self.assertEqual(self.de.destination, "/e")
+        self.assertEqual(self.fa.origin, "/f")
+        self.assertEqual(self.fa.destination, "/a")
+
+    def test_smart_add_unlink_recursive(self):
+        """:meth:`~.smart_add` unlinks redirection when it is recursive."""
+        self.wsr.smart_add("/d", "/c")
+        self.assertEqual(self.ab.origin, "/a")
+        self.assertEqual(self.ab.destination, "/b")
+        self.assertFalse(self.cd.exists())
+        self.assertEqual(self.de.origin, "/d")
+        self.assertEqual(self.de.destination, "/c")
+        self.assertEqual(self.fa.origin, "/f")
+        self.assertEqual(self.fa.destination, "/a")
+
+    def test_smart_add_create(self):
+        """:meth:`~.smart_add` creates a redirection."""
+        self.wsr.smart_add("/g", "/h")
+        self.assertEqual(self.ab.origin, "/a")
+        self.assertEqual(self.ab.destination, "/b")
+        self.assertEqual(self.cd.origin, "/c")
+        self.assertEqual(self.cd.destination, "/d")
+        self.assertEqual(self.de.origin, "/d")
+        self.assertEqual(self.de.destination, "/e")
+        self.assertEqual(self.fa.origin, "/f")
+        self.assertEqual(self.fa.destination, "/a")
+        self.assertTrue(self.wsr.search([
+            ("origin", "=", "/g"),
+            ("destination", "=", "/h"),
+        ]))

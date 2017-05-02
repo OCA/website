@@ -1,12 +1,10 @@
 /* © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
-
-
 odoo.define('website_seo_redirection.tour', function(require) {
     'use strict';
-    
-    var Tour = require('web.Tour');
-    
+
+    var Tour = require('web_tour.tour');
+
     Tour.register({
         id: "website_seo_redirection",
         name: "Check SEO redirections functionality",
@@ -15,28 +13,28 @@ odoo.define('website_seo_redirection.tour', function(require) {
         steps: [
             {
                 title: "Open SEO menu",
-                waitFor: "a>span:contains('SEO Sample')",
-                element: "a>span:contains('SEO Sample')",
+                waitFor: "a:contains('SEO Sample')",
+                element: "a:contains('SEO Sample')",
             },
             {
                 title: "Go to SEO sample page in original URL",
-                waitFor: "a>span:contains('Original URL')",
-                element: "a>span:contains('Original URL')",
+                waitFor: "a:contains('Original URL')",
+                element: "a:contains('Original URL')",
             },
             {
                 title: "Page reached, back to home",
                 waitFor: "#origin,#destination",
-                element: "a>span:contains('Home')",
+                element: "a:contains('Home')",
             },
             {
                 title: "Open SEO menu",
-                waitFor: "html[data-view-xmlid='website.homepage']",
-                element: "a>span:contains('SEO Sample')",
+                waitFor: "meta[property='og:title'][content='Homepage']",
+                element: "a:contains('SEO Sample')",
             },
             {
                 title: "Go to SEO sample page in destination URL",
-                waitFor: "a>span:contains('Redirected URL')",
-                element: "a>span:contains('Redirected URL')",
+                waitFor: "a:contains('Redirected URL')",
+                element: "a:contains('Redirected URL')",
             },
             {
                 title: "Page reached",
