@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-04 09:35+0000\n"
-"PO-Revision-Date: 2017-03-06 09:10+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-04-11 06:32+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-website-8-0/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +45,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Discount (%)"
-msgstr ""
+msgstr "折扣（%）"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
@@ -55,7 +55,7 @@ msgstr "已完成"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Due Date"
-msgstr ""
+msgstr "截止日期"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -72,17 +72,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice #"
-msgstr ""
+msgstr "发票号"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice Date"
-msgstr ""
+msgstr "开票日期"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Invoices"
-msgstr ""
+msgstr "发票"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -128,12 +128,12 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "报价 #"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Sale Order #"
-msgstr ""
+msgstr "销售订单#"
 
 #. module: website_portal_sale
 #: view:website:website_portal.account
@@ -172,17 +172,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "There are currently no invoices for your account."
-msgstr ""
+msgstr "现在你的账户没有发票"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "There are currently no orders for your account."
-msgstr ""
+msgstr "现在你的账户没有订单"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "现在你的账户没有报价"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -219,17 +219,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Your Invoices and Payments"
-msgstr ""
+msgstr "您的发票和付款单"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "你的订单"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Your Quotes"
-msgstr ""
+msgstr "您的报价单"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

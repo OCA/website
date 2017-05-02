@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-10-11 09:47+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-03-23 20:09+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Greek (http://www.transifex.com/oca/OCA-website-8-0/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Due Date"
-msgstr ""
+msgstr "Προθεσμία"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -72,12 +72,12 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice #"
-msgstr ""
+msgstr "Τιμολόγιο #"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice Date"
-msgstr ""
+msgstr "Ημερομηνία Τιμολογίου"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -128,12 +128,12 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "Προσφορά #"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Sale Order #"
-msgstr ""
+msgstr "Παραγγελία #"
 
 #. module: website_portal_sale
 #: view:website:website_portal.account
@@ -172,17 +172,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "There are currently no invoices for your account."
-msgstr ""
+msgstr "Δεν υπάρχουν τιμολόγια στον λογαριασμό σας."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "There are currently no orders for your account."
-msgstr ""
+msgstr "Δεν υπάρχουν παραγγελίες στον λογαριασμό σας."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "Δεν υπάρχουν προσφορές στον λογαριασμό σας."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -219,17 +219,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Your Invoices and Payments"
-msgstr ""
+msgstr "Τα Τιμολόγια και οι πληρωμές σας"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "Οι Παραγγελίες σας"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Your Quotes"
-msgstr ""
+msgstr "Οι Προσφορές σας"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

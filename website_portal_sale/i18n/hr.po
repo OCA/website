@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-10-13 09:56+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-03-23 20:10+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Croatian (http://www.transifex.com/oca/OCA-website-8-0/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "Izvršeno"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Due Date"
-msgstr ""
+msgstr "Datum dospijeća"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -72,12 +72,12 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice #"
-msgstr ""
+msgstr "Račun "
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice Date"
-msgstr ""
+msgstr "Datum fakture"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -128,12 +128,12 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "Ponuda "
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Sale Order #"
-msgstr ""
+msgstr "Prodajni nalog"
 
 #. module: website_portal_sale
 #: view:website:website_portal.account
@@ -172,17 +172,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "There are currently no invoices for your account."
-msgstr ""
+msgstr "Trenutno nemate računa."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "There are currently no orders for your account."
-msgstr ""
+msgstr "Trenutno nemate narudžbi."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "Trenutno nemate upita."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -219,17 +219,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Your Invoices and Payments"
-msgstr ""
+msgstr "Vaši računi i plaćanja"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "Vaše Narudžbe"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Your Quotes"
-msgstr ""
+msgstr "Vaši Upiti"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

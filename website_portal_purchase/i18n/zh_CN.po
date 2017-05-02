@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-04 09:35+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
 "PO-Revision-Date: 2015-12-25 15:37+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-website-8-0/language/zh_CN/)\n"
@@ -50,7 +50,7 @@ msgstr "已完成"
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Due Date"
-msgstr ""
+msgstr "截止日期"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
@@ -62,17 +62,17 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Invoice #"
-msgstr ""
+msgstr "发票号"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Invoice Date"
-msgstr ""
+msgstr "开票日期"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Invoices"
-msgstr ""
+msgstr "发票"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
@@ -129,7 +129,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "报价 #"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
@@ -168,17 +168,17 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "There are currently no invoices for your account."
-msgstr ""
+msgstr "现在你的账户没有发票"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "There are currently no orders for your account."
-msgstr ""
+msgstr "现在你的账户没有订单"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "现在你的账户没有报价"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
@@ -215,12 +215,12 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Your Invoices and Payments"
-msgstr ""
+msgstr "您的发票和付款单"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "你的订单"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-04 09:35+0000\n"
-"PO-Revision-Date: 2017-03-06 09:10+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-04-25 10:41+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Dutch (http://www.transifex.com/oca/OCA-website-8-0/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Due Date"
-msgstr ""
+msgstr "Vervaldatum"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -72,7 +72,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice #"
-msgstr ""
+msgstr "Factuur #"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
@@ -128,12 +128,12 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "Offerte #"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Sale Order #"
-msgstr ""
+msgstr "Verkooporder #"
 
 #. module: website_portal_sale
 #: view:website:website_portal.account
@@ -172,24 +172,24 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "There are currently no invoices for your account."
-msgstr ""
+msgstr "Er zijn momenteel geen facturen voor uw account."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "There are currently no orders for your account."
-msgstr ""
+msgstr "Er zijn momenteel geen orders voor uw account."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "Er zijn momenteel geen offertes voor uw account."
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Total"
-msgstr ""
+msgstr "Totaal"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -219,17 +219,17 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Your Invoices and Payments"
-msgstr ""
+msgstr "Uw facturen en betalingen"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "Uw orders"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Your Quotes"
-msgstr ""
+msgstr "Uw offertes"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

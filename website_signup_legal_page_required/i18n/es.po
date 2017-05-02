@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-07 17:42+0000\n"
-"PO-Revision-Date: 2017-02-24 11:53+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-03-24 18:23+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -119,7 +119,7 @@ msgstr ""
 #. module: website_signup_legal_page_required
 #: field:res.users,phonecall_count:0 field:res.users,phonecall_ids:0
 msgid "Phonecalls"
-msgstr ""
+msgstr "Llamadas telefónicas"
 
 #. module: website_signup_legal_page_required
 #: field:res.users,website_published:0

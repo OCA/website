@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-10-11 09:47+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-03-23 20:09+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Afrikaans (http://www.transifex.com/oca/OCA-website-8-0/language/af/)\n"
 "MIME-Version: 1.0\n"
@@ -129,7 +129,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "Kwotasie #"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
@@ -220,7 +220,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "Jou Bestellings"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations

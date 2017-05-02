@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
-"PO-Revision-Date: 2016-05-01 20:00+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-04-13 14:07+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. module: website_signup_legal_page_required
 #: field:res.users,meeting_count:0
 msgid "# Meetings"
-msgstr ""
+msgstr "Anz. Meetings"
 
 #. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
@@ -36,9 +36,19 @@ msgid "Accepted legal terms"
 msgstr "Nutzungsbedingungen angenommen"
 
 #. module: website_signup_legal_page_required
+#: field:res.users,activation:0
+msgid "Activation"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,opportunity_assigned_ids:0
+msgid "Assigned Opportunities"
+msgstr ""
+
+#. module: website_signup_legal_page_required
 #: field:res.users,property_stock_customer:0
 msgid "Customer Location"
-msgstr ""
+msgstr "Kundenanschrift"
 
 #. module: website_signup_legal_page_required
 #: help:res.users,accepted_legal_terms:0
@@ -46,29 +56,71 @@ msgid "Did the user accept our legal terms when opening the account?"
 msgstr "Hat der Benutzer unsere Nutzungsbedingungen akzeptiert, als er das Konto eröffnet hat?"
 
 #. module: website_signup_legal_page_required
+#: help:res.users,partner_weight:0
+msgid ""
+"Gives the probability to assign a lead to this partner. (0 means no "
+"assignation.)"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,grade_id:0
+msgid "Grade"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,partner_weight:0
+msgid "Grade Weight"
+msgstr ""
+
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "I accept the"
 msgstr "Ich akzeptiere die "
 
 #. module: website_signup_legal_page_required
+#: field:res.users,implemented_partner_ids:0
+msgid "Implementation References"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,assigned_partner_id:0
+msgid "Implemented by"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,date_review:0
+msgid "Latest Partner Review"
+msgstr ""
+
+#. module: website_signup_legal_page_required
 #: field:res.users,opportunity_ids:0
 msgid "Leads and Opportunities"
-msgstr ""
+msgstr "Leads und Chancen"
 
 #. module: website_signup_legal_page_required
 #: field:res.users,meeting_ids:0
 msgid "Meetings"
+msgstr "Meetings"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,date_review_next:0
+msgid "Next Partner Review"
 msgstr ""
 
 #. module: website_signup_legal_page_required
 #: field:res.users,opportunity_count:0
 msgid "Opportunity"
+msgstr "Gelegenheit"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,date_partnership:0
+msgid "Partnership Date"
 msgstr ""
 
 #. module: website_signup_legal_page_required
 #: field:res.users,phonecall_count:0 field:res.users,phonecall_ids:0
 msgid "Phonecalls"
-msgstr ""
+msgstr "Anrufe"
 
 #. module: website_signup_legal_page_required
 #: field:res.users,website_published:0
@@ -83,21 +135,21 @@ msgstr ""
 #. module: website_signup_legal_page_required
 #: field:res.users,property_stock_supplier:0
 msgid "Supplier Location"
-msgstr ""
+msgstr "Lieferantenstandort"
 
 #. module: website_signup_legal_page_required
 #: help:res.users,property_stock_customer:0
 msgid ""
 "This stock location will be used, instead of the default one, as the "
 "destination location for goods you send to this partner"
-msgstr ""
+msgstr "Dieses Lager wird anstelle der Vorgabe, als Zielort bei Warensendungen an diesen Partner, verwendet"
 
 #. module: website_signup_legal_page_required
 #: help:res.users,property_stock_supplier:0
 msgid ""
 "This stock location will be used, instead of the default one, as the source "
 "location for goods you receive from the current partner"
-msgstr ""
+msgstr "Dieses Lager wird anstelle der Vorgabe, als Herkunftsort bei Warenlieferungen von diesem Partner, verwendet"
 
 #. module: website_signup_legal_page_required
 #: model:ir.model,name:website_signup_legal_page_required.model_res_users
@@ -163,4 +215,4 @@ msgstr "Nutzungsbedingungen"
 #. module: website_signup_legal_page_required
 #: field:res.users,self:0
 msgid "unknown"
-msgstr ""
+msgstr "unbekannt"

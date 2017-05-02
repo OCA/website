@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-11 08:55+0000\n"
-"PO-Revision-Date: 2017-01-10 08:59+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-04-25 10:42+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (http://www.transifex.com/oca/OCA-website-8-0/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "Concluído"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Due Date"
-msgstr ""
+msgstr "Data da Dívida"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -77,7 +77,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Invoice Date"
-msgstr ""
+msgstr "Data da Fatura"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
@@ -128,7 +128,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.quotations
 msgid "Quotation #"
-msgstr ""
+msgstr "Cotação #"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
@@ -189,7 +189,7 @@ msgstr ""
 #: view:website:website_portal_sale.quotations
 #: view:website:website_portal_sale.sale_orders
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

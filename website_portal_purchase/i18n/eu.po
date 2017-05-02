@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-07 17:41+0000\n"
-"PO-Revision-Date: 2017-02-23 07:50+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-03-23 20:09+0000\n"
 "Last-Translator: Esther Martín Menéndez <esthermartin001@gmail.com>\n"
 "Language-Team: Basque (http://www.transifex.com/oca/OCA-website-8-0/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -68,7 +68,7 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Invoice Date"
-msgstr ""
+msgstr "Faktura data"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup

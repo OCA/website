@@ -4,18 +4,19 @@
 # 
 # Translators:
 # fausthuang, 2015
-# Jeffery Chen Fan <jeffery9@gmail.com>, 2016
+# Jeffery CHEN <jeffery9@gmail.com>, 2016
+# Jeffery CHEN <jeffery9@gmail.com>, 2016
 # Joray <13637815@qq.com>, 2016
 # liAnGjiA <liangjia@qq.com>, 2015
-# lttlsnk <lttlsnk@gmail.com>, 2016
+# 菜小蛇 <lttlsnk@gmail.com>, 2016
 # Siyuan Gu <siyuancn@hotmail.com>, 2015
 # Xia Fajin <xia.fajin@elico-corp.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-11-25 14:56+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-04-19 01:22+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-website-8-0/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -581,7 +582,7 @@ msgstr "能在这个频道上传文件的讨论组。所有的用户都可以上
 msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
-msgstr ""
+msgstr "HTML格式的简介，包括了各种项目的总结信息（比如消息数，作业数……）"
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
@@ -641,7 +642,7 @@ msgstr "错误的文件类型。请选择pfd文件或者图像"
 #: field:slide.channel,message_is_follower:0
 #: field:slide.slide,message_is_follower:0
 msgid "Is a Follower"
-msgstr ""
+msgstr "关注者"
 
 #. module: website_slides
 #: field:slide.channel,message_last_post:0

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-07 17:41+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
 "PO-Revision-Date: 2016-06-03 22:59+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
@@ -70,7 +70,7 @@ msgstr "Keine"
 #. module: website_img_bg_style
 #: view:website:website.snippet_options
 msgid "Position"
-msgstr ""
+msgstr "Stelle"
 
 #. module: website_img_bg_style
 #: view:website:website.snippet_options
@@ -90,7 +90,7 @@ msgstr ""
 #. module: website_img_bg_style
 #: view:website:website.snippet_options
 msgid "Size"
-msgstr ""
+msgstr "Größe"
 
 #. module: website_img_bg_style
 #: view:website:website.snippet_options

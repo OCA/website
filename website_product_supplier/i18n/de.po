@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-25 14:25+0000\n"
-"PO-Revision-Date: 2016-02-24 17:53+0000\n"
+"POT-Creation-Date: 2017-03-25 13:32+0000\n"
+"PO-Revision-Date: 2017-04-05 15:18+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "Verzug..."
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Delete"
-msgstr ""
+msgstr "Löschen"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
@@ -154,7 +154,7 @@ msgstr "Suche..."
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table
 msgid "Stock"
-msgstr ""
+msgstr "Bestand"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_list
