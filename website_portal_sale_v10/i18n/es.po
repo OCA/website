@@ -1,24 +1,22 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_portal_sale_v10
-#
+# 
 # Translators:
-# Alejandro Die <marketing@domatix.com>, 2015
-# Luis Triana <luistriana.28@gmail.com>, 2015
+# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 9.0\n"
+"Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-07 17:20+0200\n"
-"PO-Revision-Date: 2016-07-07 17:20+0200\n"
-"Last-Translator: Luis Triana <luistriana.28@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/odoo/odoo-9/language/es/)\n"
-"Language: es\n"
+"POT-Creation-Date: 2017-03-28 10:40+0000\n"
+"PO-Revision-Date: 2017-03-28 10:40+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
@@ -37,20 +35,20 @@ msgstr ""
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
 msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Done</"
-"span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
+"Done</span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/>Hecho</"
-"span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-"
+"check\"/>Hecho</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Paid</"
-"span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
+"Paid</span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/>Pagado</"
-"span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-"
+"check\"/>Pagado</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
@@ -58,8 +56,8 @@ msgid ""
 "<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> "
 "Expired</span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/"
-">Expirado</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-"
+"clock-o\"/>Expirado</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
@@ -77,8 +75,8 @@ msgid ""
 "<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> "
 "Invoiced</span>"
 msgstr ""
-"<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/"
-">Facturado</span>"
+"<span class=\"label label-info\"><i class=\"fa fa-fw fa-"
+"clock-o\"/>Facturado</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
@@ -190,81 +188,3 @@ msgstr "Sus pedidos"
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
 msgid "Your Quotes"
 msgstr "Tus Citas"
-
-#~ msgid ""
-#~ "<span class=\"label label-info orders_label_text_align\"><i class=\"fa fa-"
-#~ "fw fa-clock-o\"/> Waiting</span>"
-#~ msgstr ""
-#~ "<span class=\"label label-info orders_label_text_align\"><i class=\"fa fa-"
-#~ "fw fa-clock-o\"/>Esperando</span>"
-
-#~ msgid ""
-#~ "<span class=\"label label-success orders_label_text_align\"><i class=\"fa "
-#~ "fa-fw fa-check\"/> Paid</span>"
-#~ msgstr ""
-#~ "<span class=\"label label-success orders_label_text_align\"><i class=\"fa "
-#~ "fa-fw fa-check\"/> Pagado</span>"
-
-#~ msgid "<span>Show more</span><span class=\"hidden\">Show less</span>"
-#~ msgstr "<span>Ver más</span><span class=\"hidden\">Ver menos</span>"
-
-#~ msgid "<strong>Contact</strong>"
-#~ msgstr "<strong>Contacto</strong>"
-
-#~ msgid "<strong>Date:</strong>"
-#~ msgstr "<strong>Fecha:</strong>"
-
-#~ msgid "<strong>Invoices</strong>"
-#~ msgstr "<strong>Facturas</strong>"
-
-#~ msgid "<strong>Invoicing Address</strong>"
-#~ msgstr "<strong>Dirección de Facturación</strong>"
-
-#~ msgid "<strong>Product</strong>"
-#~ msgstr "<strong>Producto</strong>"
-
-#~ msgid "<strong>Quantity</strong>"
-#~ msgstr "<strong>Cantidad</strong>"
-
-#~ msgid "<strong>Shipping Address</strong>"
-#~ msgstr "<strong>Dirección de Envío</strong>"
-
-#~ msgid "<strong>Subtotal</strong>"
-#~ msgstr "<strong>Subtotal</strong>"
-
-#~ msgid "<strong>Total:</strong>"
-#~ msgstr "<strong>Total:</strong>"
-
-#~ msgid "<strong>Unit Price</strong>"
-#~ msgstr "<strong>Precio Unidad</strong>"
-
-#~ msgid "Access the complete Sale application"
-#~ msgstr "Acceso a la aplicación de Ventas completa"
-
-#~ msgid ""
-#~ "If you wish to access the complete application to manage your orders, you "
-#~ "can follow"
-#~ msgstr ""
-#~ "Si desea acceder a la aplicación completa para gestionar sus pedidos, "
-#~ "puede continuar"
-
-#~ msgid "My Account"
-#~ msgstr "Mi cuenta"
-
-#~ msgid "Order"
-#~ msgstr "Pedido"
-
-#~ msgid "Quotation"
-#~ msgstr "Presupuesto"
-
-#~ msgid "Sales Order"
-#~ msgstr "Aviso para pedido de venta"
-
-#~ msgid "Taxes:"
-#~ msgstr "Impuestos:"
-
-#~ msgid "Untaxed Amount:"
-#~ msgstr "Cantidad libre de impuestos:"
-
-#~ msgid "this link"
-#~ msgstr "este enlance"
