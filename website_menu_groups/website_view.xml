@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="menu_tree">
+            <field name="name">website.menu.tree.groups</field>
+            <field name="model">website.menu</field>
+            <field name="inherit_id" ref="website.menu_tree" />
+            <field name="arch" type="xml">
+                <field name="sequence" position="before">
+                    <field name="group_ids" widget="many2many_tags"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

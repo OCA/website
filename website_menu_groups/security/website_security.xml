@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        
+        <record model="ir.rule" id="rule_website_menu_groups">
+            <field name="name">Website Menu: Hide menu options with groups.</field>
+            <field name="model_id" ref="website.model_website_menu"/>
+            <field name="domain_force">[
+                    '|',
+                        ('group_ids','=', False),
+                        ('group_ids','in',[g.id for g in user.groups_id])
+                ]</field>
+        </record>
+        
+    </data>
+</openerp>
