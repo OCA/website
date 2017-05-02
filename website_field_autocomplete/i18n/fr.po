@@ -3,14 +3,15 @@
 # * website_field_autocomplete
 # 
 # Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2016
+# OCA Transbot <transbot@odoo-community.org>, 2017
+# Quentin THEURET <odoo@kerpeo.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-13 02:51+0000\n"
-"PO-Revision-Date: 2016-09-13 02:51+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"POT-Creation-Date: 2017-07-25 07:50+0000\n"
+"PO-Revision-Date: 2017-07-25 07:50+0000\n"
+"Last-Translator: Quentin THEURET <odoo@kerpeo.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: website_field_autocomplete
 #: model:website.menu,name:website_field_autocomplete.field_autocomplete_demo_link
 msgid "AutoComplete"
-msgstr ""
+msgstr "AutoCompletion"
 
 #. module: website_field_autocomplete
 #: model:ir.ui.view,arch_db:website_field_autocomplete.field_autocomplete_demo
@@ -31,4 +32,4 @@ msgstr "URL"
 #. module: website_field_autocomplete
 #: model:ir.ui.view,arch_db:website_field_autocomplete.field_autocomplete_demo
 msgid "Website Menu Autocomplete:"
-msgstr ""
+msgstr "Menu d'Autocompletion du site Web :"
