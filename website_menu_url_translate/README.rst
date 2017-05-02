@@ -30,12 +30,10 @@ Contributors
 
 * Rami Alwafaie <rami.alwafaie@initos.com>
 
-Sponosrs
+Sponsors
 --------
 
-Sponsered by Nitrokey:
-www.nitrokey.com
-
+* Sponsored by Nitrokey: www.nitrokey.com
 
 Maintainer
 ----------
