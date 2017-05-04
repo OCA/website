@@ -1,47 +1,48 @@
 /* © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
-
-
 odoo.define('website_seo_redirection.tour', function(require) {
     'use strict';
-    
-    var Tour = require('web.Tour');
-    
-    Tour.register({
-        id: "website_seo_redirection",
-        name: "Check SEO redirections functionality",
-        path: "/",
-        mode: "test",
-        steps: [
+
+    var tour = require('web_tour.tour');
+    var base = require('web_editor.base');
+
+    tour.register(
+        "website_seo_redirection",
+        {
+            url: "/",
+            name: "Check SEO redirections functionality",
+            test: true,
+            wait_for: base.ready(),
+        },
+        [
             {
-                title: "Open SEO menu",
-                waitFor: "a>span:contains('SEO Sample')",
-                element: "a>span:contains('SEO Sample')",
+                content: "Open SEO menu",
+                trigger: "a:contains('SEO Sample')",
             },
             {
-                title: "Go to SEO sample page in original URL",
-                waitFor: "a>span:contains('Original URL')",
-                element: "a>span:contains('Original URL')",
+                content: "Go to SEO sample page in original URL",
+                trigger: "a:contains('Original URL')",
             },
             {
-                title: "Page reached, back to home",
-                waitFor: "#origin,#destination",
-                element: "a>span:contains('Home')",
+                content: "Page reached, back to home",
+                extra_trigger: "#origin, #destination",
+                trigger: "a:contains('Home')",
             },
             {
-                title: "Open SEO menu",
-                waitFor: "html[data-view-xmlid='website.homepage']",
-                element: "a>span:contains('SEO Sample')",
+                content: "Open SEO menu",
+                trigger: "a:contains('SEO Sample')",
             },
             {
-                title: "Go to SEO sample page in destination URL",
-                waitFor: "a>span:contains('Redirected URL')",
-                element: "a>span:contains('Redirected URL')",
+                content: "Go to SEO sample page in destination URL",
+                trigger: "a:contains('Redirected URL')",
             },
             {
-                title: "Page reached",
-                waitFor: "#origin,#destination",
+                content: "Page reached",
+                trigger: "#origin, #destination",
             },
-        ],
-    });
+        ]
+    );
+
+    return {};
+
 });

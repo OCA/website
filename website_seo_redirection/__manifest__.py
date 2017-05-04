@@ -4,13 +4,13 @@
 {
     "name": "Website SEO Redirection",
     "summary": "Redirect any controller to the URL of your dreams",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Website",
     "website": "https://tecnativa.com/",
     "author": "Tecnativa, LasLabs, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
-    'installable': False,
+    'installable': True,
     "depends": [
         "website",
     ],
@@ -20,6 +20,7 @@
         "views/website_seo_redirection_view.xml",
     ],
     "demo": [
+        "demo/assets_demo.xml",
         "demo/website_seo_redirection_demo.xml",
     ],
 }

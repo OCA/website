@@ -7,7 +7,7 @@
 <template id="assets_editor" inherit_id="website.assets_editor">
     <xpath expr=".">
         <script type="text/javascript"
-                src="/website_seo_redirection/static/src/js/website_seo_redirection.tour.js"/>
+                src="/website_seo_redirection/static/src/js/website_seo.js"/>
     </xpath>
 </template>
 

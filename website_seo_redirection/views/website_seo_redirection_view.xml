@@ -13,6 +13,7 @@
                 <group>
                     <field name="origin"/>
                     <field name="destination"/>
+                    <field name="relocate_controller"/>
                 </group>
             </sheet>
         </form>
@@ -26,6 +27,7 @@
         <tree editable="top">
             <field name="origin"/>
             <field name="destination"/>
+            <field name="relocate_controller"/>
         </tree>
     </field>
 </record>
@@ -49,7 +51,7 @@
 <menuitem
     id="website_seo_redirection_menu"
     action="website_seo_redirection_action_open"
-    groups="base.group_website_designer"
+    groups="website.group_website_designer"
     parent="website.menu_website_configuration"
     sequence="110"/>
 
