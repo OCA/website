@@ -3,38 +3,37 @@
 # * website_analytics_piwik
 # 
 # Translators:
-# Loic <loic.richard2@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
-"PO-Revision-Date: 2015-10-01 21:45+0000\n"
-"Last-Translator: Loic <loic.richard2@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
+"POT-Creation-Date: 2016-12-31 10:45+0000\n"
+"PO-Revision-Date: 2015-09-25 08:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Indonesian (http://www.transifex.com/oca/OCA-website-8-0/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: website_analytics_piwik
 #: field:website,piwik_analytics_host:0
 #: field:website.config.settings,piwik_analytics_host:0
 msgid "Piwik host"
-msgstr "Hébergement PIWIK"
+msgstr ""
 
 #. module: website_analytics_piwik
 #: field:website,piwik_analytics_id:0
 #: field:website.config.settings,piwik_analytics_id:0
 msgid "Piwik website ID"
-msgstr "Id du site internet  PIWIK"
+msgstr ""
 
 #. module: website_analytics_piwik
 #: help:website,piwik_analytics_id:0
 #: help:website.config.settings,piwik_analytics_id:0
 msgid "The ID Piwik uses to identify the website"
-msgstr "Le ID de Piwik est utilisé pour identifier le site internet"
+msgstr ""
 
 #. module: website_analytics_piwik
 #: help:website,piwik_analytics_host:0
@@ -42,12 +41,12 @@ msgstr "Le ID de Piwik est utilisé pour identifier le site internet"
 msgid ""
 "The host/path your Piwik installation is accessible by on the internet. Do not include a protocol here!\n"
 "So http[s]://[this field]/piwik.php should resolve to your piwik.php"
-msgstr "Le chemin de l'hébergement de votre installation Piwik est accessible sur Internet. Cela n'inclue pas pas le protcol de l'hébergement.\nDonc http[s]://[this field]/piwik.php devrait résoudre votre piwik.php"
+msgstr ""
 
 #. module: website_analytics_piwik
 #: model:ir.model,name:website_analytics_piwik.model_website
 msgid "Website"
-msgstr "Site Internet"
+msgstr "Situs Web"
 
 #. module: website_analytics_piwik
 #: view:website:website_analytics_piwik.view_website_form
