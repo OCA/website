@@ -23,6 +23,7 @@ addon | version | summary
 [website_form_recaptcha](website_form_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha field for Website Forms
 [website_no_crawler](website_no_crawler/) | 10.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
 [website_sale_line_total](website_sale_line_total/) | 10.0.1.0.0 | Adds separate columns for unit price and total price
+[website_seo_redirection](website_seo_redirection/) | 10.0.1.0.0 | Redirect any controller to the URL of your dreams
 [website_snippet_data_slider](website_snippet_data_slider/) | 10.0.1.0.0 | Abstract data slider for use on website. Primary use (and default implementation) is product slider.
 
 
@@ -50,8 +51,6 @@ addon | version | summary
 [website_portal_purchase](website_portal_purchase/) | 9.0.1.0.0 (unported) | Add purchase orders and quotation in the frontend portal
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 (unported) | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 (unported) | Prevent optional products to be sold singularly
-[website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 (unported) | VAT number required in checkout form
-[website_seo_redirection](website_seo_redirection/) | 9.0.1.0.0 (unported) | Redirect any controller to the URL of your dreams
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 9.0.1.0.0 (unported) | Allow to select country in a dropdown
 
 [//]: # (end addons)
