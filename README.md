@@ -62,6 +62,5 @@ addon | version | summary
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 (unported) | Website Menu Multilanguage
 [website_sale_order_company](website_sale_order_company/) | 8.0.1.0.0 (unported) | Set order company according to products company
 [website_sale_unsaleable_options](website_sale_unsaleable_options/) | 8.0.1.0.0 (unported) | Prevent optional products to be sold singularly
-[website_sale_vat_required](website_sale_vat_required/) | 8.0.1.0.0 (unported) | VAT number required in checkout form
 
 [//]: # (end addons)
