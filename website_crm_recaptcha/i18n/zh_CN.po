@@ -1,9 +1,8 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_field_autocomplete
+# * website_crm_recaptcha
 # 
 # Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2017
 # ITGeeker <alanljj@qq.com>, 2017
 msgid ""
 msgstr ""
@@ -19,17 +18,7 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. module: website_field_autocomplete
-#: model:website.menu,name:website_field_autocomplete.field_autocomplete_demo_link
-msgid "AutoComplete"
-msgstr "自动完成"
-
-#. module: website_field_autocomplete
-#: model:ir.ui.view,arch_db:website_field_autocomplete.field_autocomplete_demo
-msgid "URL"
-msgstr "链接"
-
-#. module: website_field_autocomplete
-#: model:ir.ui.view,arch_db:website_field_autocomplete.field_autocomplete_demo
-msgid "Website Menu Autocomplete:"
-msgstr "网站菜单自动完成"
+#. module: website_crm_recaptcha
+#: model:ir.ui.view,arch_db:website_crm_recaptcha.contactus_form
+msgid "Human?"
+msgstr "人类？"
