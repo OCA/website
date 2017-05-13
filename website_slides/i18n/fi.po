@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-11 08:55+0000\n"
-"PO-Revision-Date: 2017-01-13 09:29+0000\n"
+"POT-Creation-Date: 2017-05-02 02:17+0000\n"
+"PO-Revision-Date: 2017-05-11 14:14+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Finnish (http://www.transifex.com/oca/OCA-website-8-0/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -555,7 +555,7 @@ msgstr ""
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_search
 msgid "Group By"
-msgstr ""
+msgstr "Ryhmittele"
 
 #. module: website_slides
 #: help:slide.channel,group_ids:0
@@ -1284,7 +1284,7 @@ msgstr ""
 #: view:slide.slide:website_slides.view_slide_slide_search
 #: field:slide.slide,slide_type:0
 msgid "Type"
-msgstr ""
+msgstr "Tyyppi"
 
 #. module: website_slides
 #: code:addons/website_slides/controllers/main.py:152

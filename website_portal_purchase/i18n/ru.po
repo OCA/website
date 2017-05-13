@@ -3,13 +3,14 @@
 # * website_portal_purchase
 # 
 # Translators:
+# Victor Safronovich <vsafronovich@suvit.ru>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-25 13:32+0000\n"
-"PO-Revision-Date: 2015-12-25 15:37+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2017-05-02 02:16+0000\n"
+"PO-Revision-Date: 2017-05-12 16:05+0000\n"
+"Last-Translator: Victor Safronovich <vsafronovich@suvit.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/oca/OCA-website-8-0/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,32 +21,32 @@ msgstr ""
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "Access the complete Purchase application"
-msgstr ""
+msgstr "Доступ в админскую часть"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "Approved"
-msgstr ""
+msgstr "Подтвержден"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Cancelled"
-msgstr ""
+msgstr "Отменен"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "Confirmation Date"
-msgstr ""
+msgstr "Дата подтверждения"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Date:"
-msgstr ""
+msgstr "Дата:"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "Done"
-msgstr ""
+msgstr "Завершен"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
@@ -57,12 +58,12 @@ msgstr "Срок оплаты"
 msgid ""
 "If you wish to access the complete application to manage your orders, you "
 "can follow"
-msgstr ""
+msgstr "Если вы хотите попасть в админскую часть, нажмите"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Invoice #"
-msgstr ""
+msgstr "Счет №"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
@@ -72,59 +73,59 @@ msgstr "Дата счёта"
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Invoices"
-msgstr ""
+msgstr "Счета"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Invoicing Address"
-msgstr ""
+msgstr "Контрагент для оплаты"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "My Account"
-msgstr ""
+msgstr "Мой кабинет"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Order"
-msgstr ""
+msgstr "Заказ"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Paid"
-msgstr ""
+msgstr "Оплачен"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 #: view:website:website_portal_purchase.request_quotations
 msgid "Print"
-msgstr ""
+msgstr "Печать"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "Problem"
-msgstr ""
+msgstr "Проблема"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Product"
-msgstr ""
+msgstr "Товар/Услуга"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "Purchase Order #"
-msgstr ""
+msgstr "Закупка №"
 
 #. module: website_portal_purchase
 #: view:website:website_portal.account
 msgid "Purchases"
-msgstr ""
+msgstr "Закупки"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Quantity"
-msgstr ""
+msgstr "Кол-во"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations
@@ -134,51 +135,51 @@ msgstr "Предложение цен №"
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Request for Quotation"
-msgstr ""
+msgstr "Запрос цен поставщика"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Shipping Address"
-msgstr ""
+msgstr "Адрес доставки"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 #: view:website:website_portal_purchase.request_quotations
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Show less"
-msgstr ""
+msgstr "Скрыть"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 #: view:website:website_portal_purchase.request_quotations
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Show more"
-msgstr ""
+msgstr "Показать еще"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Subtotal"
-msgstr ""
+msgstr "Итого"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Taxes:"
-msgstr ""
+msgstr "Налоги:"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "There are currently no invoices for your account."
-msgstr ""
+msgstr "Счета отсутствуют"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
 msgid "There are currently no orders for your account."
-msgstr ""
+msgstr "Заказы отсутствуют"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "Корзины отсутствуют"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
@@ -190,32 +191,32 @@ msgstr "Всего"
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Total:"
-msgstr ""
+msgstr "Итого:"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Unit Price"
-msgstr ""
+msgstr "Цена"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Untaxed Amount:"
-msgstr ""
+msgstr "Сумма без налога:"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "Waiting"
-msgstr ""
+msgstr "Ожидание"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Waiting for Payment"
-msgstr ""
+msgstr "Ожидает оплаты"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.supplier_invoices
 msgid "Your Invoices and Payments"
-msgstr ""
+msgstr "Ваши счета и платежи"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.purchase_orders
@@ -225,9 +226,9 @@ msgstr "Ваши заказы"
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.request_quotations
 msgid "Your Request Quotations"
-msgstr ""
+msgstr "Запросы цен поставщика"
 
 #. module: website_portal_purchase
 #: view:website:website_portal_purchase.orders_followup
 msgid "this link"
-msgstr ""
+msgstr "Ссылка в админскую часть"

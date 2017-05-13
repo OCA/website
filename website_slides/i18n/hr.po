@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-04 09:35+0000\n"
-"PO-Revision-Date: 2017-03-10 13:16+0000\n"
+"POT-Creation-Date: 2017-05-02 02:17+0000\n"
+"PO-Revision-Date: 2017-05-11 14:12+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Croatian (http://www.transifex.com/oca/OCA-website-8-0/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -1167,7 +1167,7 @@ msgstr ""
 #. module: website_slides
 #: field:slide.channel,message_summary:0 field:slide.slide,message_summary:0
 msgid "Summary"
-msgstr ""
+msgstr "Sažetak"
 
 #. module: website_slides
 #: view:slide.tag:website_slides.view_slide_tag_form
