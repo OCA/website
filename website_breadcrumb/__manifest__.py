@@ -4,7 +4,7 @@
 {
     "name": "Website Breadcrumbs",
     "summary": "Let you have breadcrumbs in website pages",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Website",
     "website": "https://grupoesoc.es/",
     "author": "Grupo ESOC Ingeniería de Servicios, "
