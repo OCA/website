@@ -2,7 +2,7 @@
 # © 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html).
 
-from openerp import api, models
+from odoo import api, models
 
 
 class WebsiteMenu(models.Model):
