@@ -1,32 +1,12 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#     This file is part of website_hr_contact, an Odoo module.
-#
-#     Copyright (c) 2015 ACSONE SA/NV (<http://acsone.eu>)
-#
-#     website_hr_contact is free software: you can redistribute it and/or
-#     modify it under the terms of the GNU Affero General Public License
-#     as published by the Free Software Foundation, either version 3 of
-#     the License, or (at your option) any later version.
-#
-#     website_hr_contact is distributed in the hope that it will be useful,
-#     but WITHOUT ANY WARRANTY; without even the implied warranty of
-#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#     GNU Affero General Public License for more details.
-#
-#     You should have received a copy of the
-#     GNU Affero General Public License
-#     along with website_hr_contact.
-#     If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# © 2015-2017 ACSONE SA/NV (<http://acsone.eu>)
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 import werkzeug
 
-from openerp import http
-from openerp.addons.website.models.website import slug
-from openerp.osv.orm import browse_record
+from odoo import http
+from odoo.addons.website.models.website import slug
+from odoo.osv.orm import browse_record
 
 
 class QueryURL(object):
@@ -151,5 +131,5 @@ class WebsiteHrAddressbook(http.Controller):
             'search': search,
             'count': count,
         }
-        return request.website.render(
+        return request.render(
             'website_hr_contact.employees', values)
