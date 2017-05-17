@@ -16,5 +16,5 @@
     ],
     "data": [
         "views/website_sale_templates.xml",
-    ]
+    ],
 }
