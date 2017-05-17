@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+
+<odoo>
+
+    <template inherit_id="website_sale.categories_recursive"
+              id="hide_categories_recursive"
+              active="True"
+              customize_show="True"
+              name="Hide Empty Category list">
+        <xpath expr="//t[@t-name='website_sale.categories_recursive']"
+               position="attributes">
+            <attribute name="t-if">c.product_ids</attribute>
+        </xpath>
+    </template>
+
+</odoo>
