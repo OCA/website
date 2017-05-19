@@ -5,8 +5,8 @@ odoo.define('website_seo_redirection.website_seo', function(require) {
     var ajax = require("web.ajax");
     var base = require("web_editor.base");
     var core = require("web.core");
+    var Model = require('web.Model');
     var seo = require("website.seo");
-    var session = require("web.session");
 
     ajax.loadXML(
         '/website_seo_redirection/static/src/xml/website_seo.xml',
@@ -31,7 +31,7 @@ odoo.define('website_seo_redirection.website_seo', function(require) {
             if (newurl === document.location.pathname) {
                 return $.Deferred().resolve("no-reload");
             }
-            return session.model("website.seo.redirection").call(
+            return new Model("website.seo.redirection").call(
                 "smart_add",
                 [document.location.pathname, newurl, base.get_context()]
             );
