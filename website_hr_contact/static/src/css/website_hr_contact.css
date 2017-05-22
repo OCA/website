@@ -1,0 +1,20 @@
+.employees_contact #middle_column>section+section {
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid #ddd;
+}
+.employees_contact dl {
+}
+
+.employees_contact dt {
+    float: left;
+    clear: left;
+    text-align: right;
+    font-weight: bold;
+}
+.employees_contact dt:after {
+    content: ":\00a0";
+}
+.employees_contact dd {
+    padding: 0 0 0.5em 0;
+}

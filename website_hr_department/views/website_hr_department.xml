@@ -74,7 +74,7 @@
     </template>
 
     <template id="employees_item" name="Employees item">
-      <div itemscope="itemscope" itemtype="http://schema.org/Emplyee">
+      <div itemscope="itemscope" itemtype="http://schema.org/employee">
         <t t-call="website.publish_management">
           <t t-set="object" t-value="employee"/>
         </t>

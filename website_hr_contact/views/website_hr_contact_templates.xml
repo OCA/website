@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend" name="Hr contacts">
+      <xpath expr="." position="inside">
+        <link rel="stylesheet" href="/website_hr_contact/static/src/css/website_hr_contact.css"/>
+      </xpath>
+    </template>
+
+    <template id="employees" name="Employees / Contacts" page="True">
+      <t t-call="website.layout">
+        <div class="container employees_contact">
+          <div class="row mt8 header">
+            <div class="col-sm-7" id="employees_menu">
+                <t t-call="website_hr_contact.search"><t t-set="search_class">pagination form-inline col-md-3</t></t>
+                 <t t-call="website.pager"/>
+            </div>
+          </div>
+          <div class="row mt16 mb32">
+            <section data-snippet-id="title">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1 class="text-center">Employee contacts</h1>
+                    <t t-if="search">
+                        <h2><t t-esc='count'/> employee(s) found for '<t t-esc='search'/>'</h2>
+                    </t>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="col-md-12 list" id="middle_column">
+              <t t-foreach="employees" t-as="employee">
+                <t t-call="website_hr_contact.employee"/>
+              </t>
+            </div>
+          </div>
+          <div class="row mt8" id="footer">
+            <t t-call="website.pager">
+                <t t-set="classname">pull-right</t>
+            </t>
+          </div>
+        </div>
+      </t>
+     </template>
+
+    <template id="search" name="Search hidden fields">
+        <form t-att-action="url_builder(department=department, search=0, page=None)" method="get" t-att-class="search_class">
+        <div class="input-group">
+          <input type="text" name="search" class="search-query form-control" placeholder="Search employee..." t-att-value="search"/>
+          <span class="input-group-btn">
+            <a class="btn btn-default a-submit"><i class="fa fa-search"/></a>
+          </span>
+      </div>
+      </form>
+    </template>
+
+    <template id="employee" name="Employee information">
+      <section class="employee_contact">
+      <div class="row">
+        <t t-call="website.publish_management">
+          <t t-set="object" t-value="employee"/>
+        </t>
+        <div class="col-md-12" itemscope="itemscope" itemtype="http://schema.org/employee">
+          <section class="row">
+            <div class="col-md-10">
+              <h5 itemprop="name" t-field="employee.name"/>
+              <div class="job_title" itemprop="jobTitle" t-field="employee.job_id"/>
+              <t t-set="department" t-value="employee.department_id.search([('id', '=', employee.department_id.id)])"/>
+              <t t-if="department">
+                <div class="department" itemprop="member" t-field="department.name"/>
+              </t>
+              <div class="public_info text-info oe_subdescription" t-field="employee.public_info"/>
+              <t t-call="website_hr_contact.employee_address">
+                <t t-set="address" t-value="employee.address_id"/>
+              </t>
+              <t t-call="website_hr_contact.employee_contact"/>
+            </div>
+            <div class="col-md-2">
+              <figure class="employee_image pull-right">
+                <t t-if="employee.image_medium">
+                    <img class="img img-responsive" itemprop="image" t-att-src="website.image_url(employee, 'image_medium')"/>
+                </t>
+              </figure>
+            </div>
+          </section>
+        </div>
+      </div>
+      </section>
+    </template>
+
+    <template id="hide_employee_logo" inherit_id="website_hr_contact.employee" customize_show="True" name="Hide Employee Logo">
+        <xpath expr="//img" position="replace"/>
+    </template>
+
+    <template id="employee_address" name="Employee address information">
+        <t t-call="website_hr_contact.address">
+            <t t-set="classname">employee_address</t>
+            <t t-set="address" t-value="address"/>
+        </t>
+    </template>
+
+    <template id="employee_contact" name="Employee contact information">
+        <div class="employee_contact">
+            <dl>
+                <t t-if="employee.work_phone">
+                    <dt class="phone">Phone</dt>
+                    <dd class="phone"><span itemprop="telephone" t-field="employee.work_phone"/></dd>
+                </t>
+                <t t-if="employee.mobile_phone">
+                    <dt class="mobile">Mobile</dt>
+                    <dd class="mobile"><span itemprop="telephone" t-field="employee.mobile_phone"/></dd>
+                </t>
+                <t t-if="employee.work_email">
+                    <dt class="email">Email</dt>
+                    <dd class="email"><a itemprop="email" class="link--mail" t-attf-href="mailto:#{employee.work_email}" t-field="employee.work_email"/></dd>
+                </t>
+            </dl>
+        </div>
+    </template>
+
+    <template id="address" name="Address information">
+      <div t-att-class="'address ' + classname" itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+        <t t-set="address" t-value="address.search([('id', '=', address.id)])"/>
+        <t t-if="address.id">
+          <t t-call="website.publish_management">
+              <t t-set="object" t-value="address" />
+          </t>
+          <dl>
+            <t t-if="address.street or address.street2">
+              <dt class="street street2">Street</dt>
+            </t>
+            <t t-if="address.street">
+              <dd class="street"><span itemprop="streetAddress" t-field='address.street'></span></dd>
+            </t>
+            <t t-if="address.street2">
+              <dd class="street2"><span itemprop="streetAddress" t-field='address.street2'></span></dd>
+            </t>
+            <t t-if="address.zip">
+              <dt class="zip">Zip</dt>
+              <dd class="zip"><span itemprop="postalCode" t-field='address.zip'/></dd>
+            </t>
+            <t t-if="address.city">
+              <dt class="city">City</dt>
+              <dd class="city"><span itemprop="addressLocality" t-field='address.city'/></dd>
+            </t>
+            <t t-if="address.country_id.name">
+              <dt class="country">Country</dt>
+              <dd class="country"><span itemprop="addressCountry" t-field='address.country_id.name'></span></dd>
+            </t>
+          </dl>
+        </t>
+      </div>
+    </template>
+
+    <template id="departments_recursive" name="Departments list">
+      <t t-set="root_d" t-value="d.get('department')"/>
+      <t t-set="children" t-value="d.get('children')"/>
+      <li t-att-class="'active' if root_d.id == int(department or 0) else ''">
+          <a t-att-href="url_builder(department=root_d)" t-field="root_d.name"></a>
+          <ul t-if="children" class="nav nav-pills nav-stacked nav-hierarchy">
+              <t t-foreach="children" t-as="d">
+                  <t t-call="website_hr_contact.departments_recursive"/>
+              </t>
+          </ul>
+      </li>
+    </template>
+
+    <template id="hr_departments" name="Departments List"
+      inherit_id="website_hr_contact.employees" active="True"
+      customize_show="True">
+      <xpath expr="//div[@id='middle_column']" position="attributes">
+        <attribute name="class">col-md-9</attribute>
+      </xpath>
+      <xpath expr="//div[@id='middle_column']" position="after">
+        <div class="col-md-3 css_noprint hidden-xs" id="right_column">
+          <ul class="nav nav-pills nav-stacked mt16">
+            <li t-att-class=" '' if department else 'active' ">
+              <a t-att-href="url_builder(department=0)">All Departments</a>
+            </li>
+            <t t-foreach="departments_tree" t-as="d">
+              <t t-call="website_hr_contact.departments_recursive" />
+            </t>
+          </ul>
+        </div>
+      </xpath>
+    </template>
+
+  </data>
+</openerp>
