@@ -9,6 +9,12 @@ from openerp.addons.website_blog.controllers.main import WebsiteBlog
 
 class website_blog(WebsiteBlog):
 
+    _date_begin = None
+    _date_end = None
+    _tag = None
+    _cat = None
+
+
     def nav_list_grouped(self):
         blog_post_obj = request.env['blog.post']
         beginning_of_year = datetime.date.strftime(
@@ -61,10 +67,47 @@ class website_blog(WebsiteBlog):
 
     @http.route()
     def blog(self, blog=None, tag=None, page=1, **opt):
+        self._date_begin, self._date_end = opt.get('date_begin'), opt.get('date_end')
+        self._tag = tag
         result = super(website_blog, self).blog(
-                blog=blog, tag=tag, page=page, **opt.get('opt')
-            )
+                blog=blog, tag=tag, page=page, **opt)
         result.qcontext['nav_list_old_grouped'] = self.nav_list_grouped()['old_groups']
         result.qcontext['nav_list_new_grouped'] = self.nav_list_grouped()['new_groups']
 	return result
 
+    @http.route()
+    def blog_post(self, blog, blog_post, tag_id=None, page=1, enable_editor=None, **post):
+        cr, uid, context = request.cr, request.uid, request.context
+        blog_post_obj = request.registry['blog.post']
+
+        result = super(website_blog, self).blog_post(blog=blog,
+                blog_post=blog_post, tag_id=tag_id, page=page,
+                enable_editor=enable_editor, **post)
+        domain = []
+        if blog:
+            domain += [('blog_id', '=', blog.id)]
+        if not tag_id and self._tag:
+            domain += [('tag_ids', 'in', self._tag.id)]
+        if self._date_begin and self._date_end:
+            domain += [("create_date", ">=", self._date_begin), ("create_date", "<=", self._date_end)]
+        if self._cat:
+            domain += [('category_id', '=', self._cat.id)]
+
+        # Find next Post
+        all_post_ids = blog_post_obj.search(cr, uid, domain, order="create_date desc", context=context)
+        # should always return at least the current post
+        current_blog_post_index = all_post_ids.index(blog_post.id)
+        next_post_id = all_post_ids[0 if current_blog_post_index == len(all_post_ids) - 1 \
+                            else current_blog_post_index + 1]
+        next_post = next_post_id and blog_post_obj.browse(cr, uid, next_post_id, context=context) or False
+
+        result.qcontext['next_post'] = next_post
+        return result
+
+    @http.route()
+    def blogcat(self, blog=None, cat=None, page=1, **opt):
+        self._cat = cat
+        result = super(website_blog, self).blogcat(
+            blog=blog, cat=cat, page=page, **opt
+        )
+	return result
