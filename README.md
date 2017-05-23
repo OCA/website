@@ -22,6 +22,7 @@ addon | version | summary
 [website_field_autocomplete](website_field_autocomplete/) | 10.0.1.0.0 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha field for Website Forms
 [website_no_crawler](website_no_crawler/) | 10.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
+[website_sale_hide_empty_category](website_sale_hide_empty_category/) | 10.0.1.0.0 | Hide any Product Categories that are empty
 [website_sale_line_total](website_sale_line_total/) | 10.0.1.0.0 | Adds separate columns for unit price and total price
 [website_seo_redirection](website_seo_redirection/) | 10.0.1.0.0 | Redirect any controller to the URL of your dreams
 [website_snippet_data_slider](website_snippet_data_slider/) | 10.0.1.0.0 | Abstract data slider for use on website. Primary use (and default implementation) is product slider.
