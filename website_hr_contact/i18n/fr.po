@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_hr_contact
+# 
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+# Christophe CHAUVET <christophe.chauvet@gmail.com>, 2017
+# Mohamed HABOU <m.habou@agoradeveloppement.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-23 01:07+0000\n"
+"PO-Revision-Date: 2017-05-23 01:07+0000\n"
+"Last-Translator: Mohamed HABOU <m.habou@agoradeveloppement.com>, 2017\n"
+"Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employees
+msgid "All Departments"
+msgstr ""
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.address
+msgid "City"
+msgstr "Ville"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.address
+msgid "Country"
+msgstr "Pays"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employee_contact
+msgid "Email"
+msgstr "Courriel"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employees
+msgid "Employee contacts"
+msgstr ""
+
+#. module: website_hr_contact
+#: model:website.menu,name:website_hr_contact.menu_contact_employees
+msgid "Employees"
+msgstr "Employés"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employee_contact
+msgid "Mobile"
+msgstr "Portable"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employee_contact
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.search
+msgid "Search employee..."
+msgstr ""
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.address
+msgid "Street"
+msgstr "Rue"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.address
+msgid "Zip"
+msgstr "Code postal"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employees
+msgid "col-md-9"
+msgstr "col-md-9"
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employees
+msgid "employee(s) found for '"
+msgstr ""
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employee_address
+msgid "employee_address"
+msgstr ""
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employees
+msgid "pagination form-inline col-md-3"
+msgstr ""
+
+#. module: website_hr_contact
+#: view:website:website_hr_contact.employees
+msgid "pull-right"
+msgstr ""
