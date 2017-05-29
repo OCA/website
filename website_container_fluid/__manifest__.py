@@ -4,7 +4,7 @@
 {
     "name": "Snippet container width type chooser",
     "summary": "Let you choose between fixed or fluid containers",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Website",
     "license": "LGPL-3",
 
