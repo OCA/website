@@ -13,4 +13,4 @@ class UICase(HttpCase):
             "/en_US",
             tour + ".run('website_seo_redirection')",
             tour + ".tours.website_seo_redirection",
-            "admin")
+        )
