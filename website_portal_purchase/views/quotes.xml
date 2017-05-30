@@ -8,7 +8,7 @@
               customize_show="True"
               active="True">
         <xpath expr="//t[@name='supplier_menu']">
-            <li>
+            <li t-att-class="'active' if request.httprequest.path.startswith('/my/purchase/quotes') else ''">
                 <a href="/my/purchase/quotes">Supplier Quotes</a>
             </li>
         </xpath>
