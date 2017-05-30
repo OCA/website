@@ -5,7 +5,7 @@
 <odoo>
 
 <template id="contacts_followup" name="Portal Contact Form">
-    <t t-call="website_portal_v10.portal_layout">
+    <t t-call="website_portal.portal_layout">
         <div id="wrap" class="o_my_contact_form container">
             <t name="placeholder1"/>
             <section id="contact_title" class="row">
@@ -105,7 +105,7 @@
                 t-att-name="field_name"
                 t-att-type="'email' if field_name == 'email' else ('tel' if field_name in ('phone', 'mobile') else 'text')"
                 t-att-required="field_description['required'] and 'required'"
-                t-att-title="field_description['help'] or False"
+                t-att-title="field_description['string'] or False"
                 t-att-value="contact[field_name]"
                 class="form-control"/>
         </div>

@@ -4,11 +4,11 @@
 
 import logging
 
-from openerp import _
-from openerp.addons.website_portal_v10.controllers.main \
-    import WebsiteAccount as PortalController
-from openerp.exceptions import ValidationError
-from openerp.http import local_redirect, request, route
+from odoo import _
+from odoo.addons.website_portal.controllers.main \
+    import website_account as PortalController
+from odoo.exceptions import ValidationError
+from odoo.http import local_redirect, request, route
 
 _logger = logging.getLogger(__name__)
 
@@ -110,7 +110,7 @@ class WebsiteAccount(PortalController):
     def portal_my_contacts(self, page=1, date_begin=None, date_end=None,
                            search=""):
         """List all of your contacts."""
-        return request.website.render(
+        return request.render(
             "website_portal_contact.portal_my_contacts",
             self._prepare_contacts_values(page, date_begin, date_end, search))
 
@@ -139,7 +139,7 @@ class WebsiteAccount(PortalController):
             "contact": contact,
             "fields": self._contacts_fields(),
         })
-        return request.website.render(
+        return request.render(
             "website_portal_contact.contacts_followup", values)
 
     @route("/my/contacts/<model('res.partner'):contact>/update",
