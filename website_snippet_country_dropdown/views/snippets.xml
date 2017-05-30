@@ -4,27 +4,6 @@
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
 
-<template id="snippets"
-          inherit_id="website.snippets"
-          name="Country Dropdown">
-    <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
-        <t t-snippet="website_snippet_country_dropdown.dropdown_element_form"
-           t-thumbnail="/website_snippet_country_dropdown/static/description/icon.png"/>
-    </xpath>
-</template>
-
-<template id="snippet_options" inherit_id="website.snippet_options">
-    <xpath expr="." position="inside">
-        <div data-js='country_dropdown'
-             data-selector=".o_country_dropdown"
-             data-drop-in="form, .form-horizontal">
-            <li data-ask_field_name="" data-only="click">
-                <a>Set input options</a>
-            </li>
-        </div>
-    </xpath>
-</template>
-
 <template id="dropdown_element_form"
           name="Country Dropdown Input">
     <div t-attf-class="form-group #{extra_class or ''} o_country_dropdown"
