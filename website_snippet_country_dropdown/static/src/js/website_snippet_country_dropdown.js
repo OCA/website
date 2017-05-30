@@ -1,11 +1,10 @@
 /* © 2016 Tecnativa, S.L.
  * © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). */
+
 odoo.define("website_snippet_country_dropdown.dropdown", function (require) {
     "use strict";
-
-    var animation = require("web_editor.snippets.animation"),
-        $ = require("$");
+    var animation = require("web_editor.snippets.animation");
 
     return animation.registry.countryDropdown = animation.Class.extend({
         selector: ".js_country_dropdown",
