@@ -4,7 +4,7 @@
 <odoo>
     <template id="portal_layout"
               name="Supplier Documents In Menu"
-              inherit_id="website_portal_v10.portal_layout">
+              inherit_id="website_portal.portal_layout">
         <xpath expr="//ul[contains(@class,'o_portal_submenu')]">
             <t name="supplier_menu"/>
         </xpath>
@@ -12,14 +12,14 @@
 
     <template id="portal_my_home"
               name="Supplier Documents In Portal Home"
-              inherit_id="website_portal_v10.portal_my_home">
+              inherit_id="website_portal.portal_my_home">
         <xpath expr="//div[contains(@class,'o_my_home_content')]">
             <t name="supplier_home"/>
         </xpath>
     </template>
 
     <template id="order_list">
-        <t t-call="website_portal_v10.portal_layout">
+        <t t-call="website_portal.portal_layout">
             <h3 class="page-header">
                 <t t-esc="page_header"/>
             </h3>
