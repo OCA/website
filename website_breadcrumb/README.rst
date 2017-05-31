@@ -14,8 +14,11 @@ Configuration
 
 To configure the shown breadcrumbs, you need to:
 
-* Go to *Website Admin > Configuration* and click on "Configure website menus".
-* Edit any menu there.
+#. Enable developer mode.
+#. Go to *Website Admin > Configuration > Settings > Menu > 
+   Configure website menus".
+#. Remove the website grouping from the filter if it is set.
+#. Edit any menu there.
 
 Keep in mind that:
 
