@@ -55,8 +55,6 @@ addon | version | summary
 [website_analytics_piwik](website_analytics_piwik/) | 8.0.1.0.0 (unported) | Track website users using piwik
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 (unported) | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 (unported) | Add Facebook comments on blog posts
-[website_event_register_free](website_event_register_free/) | 8.0.1.0.0 (unported) | Avoid shopping chart when registering for free events
-[website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 (unported) | Combine free and paid tickets on events
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 (unported) | Website Menu Multilanguage
