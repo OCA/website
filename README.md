@@ -18,6 +18,8 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 10.0.1.0.0 | Replace default behavior for internal links (anchor only) with smooth scroll
+[website_container_fluid](website_container_fluid/) | 10.0.1.0.0 | Let you choose between fixed or fluid containers
 [website_crm_recaptcha](website_crm_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 10.0.1.0.0 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha field for Website Forms
@@ -33,15 +35,11 @@ Unported addons
 addon | version | summary
 --- | --- | ---
 [website_analytics_piwik](website_analytics_piwik/) | 8.0.1.0.0 (unported) | Track website users using piwik
-[website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 9.0.1.0.0 (unported) | Replace default behavior for internal links (anchor only) with smooth scroll
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 (unported) | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 (unported) | Add Facebook comments on blog posts
 [website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 (unported) | Website blog Management
-[website_container_fluid](website_container_fluid/) | 8.0.1.0.1 (unported) | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 8.0.1.0.0 (unported) | Show cookie notice according to cookie law
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 (unported) | Website CRM privacy policy
-[website_event_register_free](website_event_register_free/) | 8.0.1.0.0 (unported) | Avoid shopping chart when registering for free events
-[website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.0.0 (unported) | Combine free and paid tickets on events
 [website_forum_censored](website_forum_censored/) | 9.0.1.0.0 (unported) | Block phrases entered in forum posts and comments.
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 (unported) | Website Legal Page
