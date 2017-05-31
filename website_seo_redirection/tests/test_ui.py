@@ -17,5 +17,4 @@ class UICase(HttpCase):
             "/en_US",
             "%s.run('website_seo_redirection')" % tour,
             "%s.tours.website_seo_redirection.ready" % tour,
-            login="admin",
         )
