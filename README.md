@@ -18,7 +18,9 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[website_analytics_piwik](website_analytics_piwik/) | 10.0.1.0.0 | Track website users using piwik
 [website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 10.0.1.0.0 | Replace default behavior for internal links (anchor only) with smooth scroll
+[website_breadcrumb](website_breadcrumb/) | 10.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_container_fluid](website_container_fluid/) | 10.0.1.0.0 | Let you choose between fixed or fluid containers
 [website_crm_recaptcha](website_crm_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 10.0.1.0.0 | Provides an autocomplete field for Website on any model
@@ -34,7 +36,6 @@ Unported addons
 ---------------
 addon | version | summary
 --- | --- | ---
-[website_analytics_piwik](website_analytics_piwik/) | 8.0.1.0.0 (unported) | Track website users using piwik
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 (unported) | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 (unported) | Add Facebook comments on blog posts
 [website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 (unported) | Website blog Management
