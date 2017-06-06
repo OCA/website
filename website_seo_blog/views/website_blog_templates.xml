@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <!-- Replace the old blog urls with the new one, we don't update the link in the website blog template "header_footer_custom" because a template reference is 
+      used here and we can't use the seo_url field in a dynamically way -->
+    <template id="blog_post_short" inherit_id="website_blog.blog_post_short" name="Blog Posts">
+      <xpath expr="//div[@id='main_column']/div/a" position="replace">
+        <a t-attf-href="/blog-#{ slug(blog_post.blog_id) }/#{ slug(blog_post) }">
+          <h2 t-field="blog_post.name" class="mb4" />
+        </a>
+      </xpath>
+    </template>
+
+    <template id="blog_post_complete" inherit_id="website_blog.blog_post_complete">
+      <xpath expr="//div[@class='blog_title']/a" position="replace">
+        <a class="hidden js_next" t-attf-href="/blog-#{ slug(next_post.blog_id) }/#{ slug(next_post) }/#wrap" />
+      </xpath>
+    </template>
+
+  </data>
+</openerp>

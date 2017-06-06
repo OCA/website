@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template id="assets_editor" inherit_id="website.assets_editor" name="SEO Editor" priority="900">
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="/website_seo/static/src/js/seo_robots.js"/>
+      </xpath>
+    </template>
+
+  </data>
+</openerp>
