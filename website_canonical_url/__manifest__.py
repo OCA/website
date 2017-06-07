@@ -8,13 +8,14 @@
     'author': "initOS GmbH, Tecnativa, Odoo Community Association (OCA)",
     'website': "http://www.initos.com",
     'category': 'Website',
-    'version': '9.0.1.1.0',
+    'version': '10.0.1.0.0',
     'license': 'AGPL-3',
+    'installable': True,
     'depends': [
         'website',
     ],
     'data': [
-        'templates/layout.xml',
+        'views/templates.xml',
     ],
     'demo': [
         'demo/pages.xml',
