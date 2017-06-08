@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<template id="signup_view"
+          name="Force legal terms"
+          inherit_id="auth_signup.fields"
+          active="True"
+          customize_show="True">
+    <xpath expr="./div[last()]" position="after">
+        <div class="form-group field-accepted_legal_terms">
+            <label for="accepted_legal_terms" class="control-label">
+                <input type="checkbox"
+                       name="accepted_legal_terms"
+                       id="accepted_legal_terms"
+                       required="required"/>
+                I accept the <a href="/page/legal">legal advice</a>,
+                the <a href="/page/privacy">privacy policy</a>
+                and the <a href="/page/terms">terms of use</a>
+                of this website.
+            </label>
+        </div>
+    </xpath>
+
+</template>
+
+</data>
+</openerp>
