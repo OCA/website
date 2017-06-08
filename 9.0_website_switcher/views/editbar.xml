@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+
+    <template id="user_navbar_contracts" inherit_id="website.user_navbar"
+              groups="base.group_user">
+      <xpath expr="//nav/ul[3]/li" position="before">
+
+        <!-- choose Website -->
+        <li class="dropdown" groups="base.group_website_designer">
+          <a id="content-menu-button" class="dropdown-toggle" data-toggle="dropdown" href="#">
+            switch Website
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu oe_content_menu" role="menu">
+            <t t-foreach="select_websites" t-as="select_websites">
+              <li groups="base.group_website_designer">
+                <a t-att-href="'http://' + select_websites.domain">
+                  <t t-esc="select_websites.name"/>
+                </a>
+              </li>
+            </t>
+          </ul>
+        </li>
+
+      </xpath>
+    </template>
+
+  </data>
+</openerp>
