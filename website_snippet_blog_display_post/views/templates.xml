@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+   <data>
+       <template id="three_columns_assets_editor" name="website_blog_entries assets" inherit_id="website.assets_editor" groups="base.group_website_publisher">
+           <xpath expr="." position="inside">
+               <script type="text/javascript" src="/website_snippet_blog_display_post/static/src/js/website_snippet_blog_display_post.js"/>
+           </xpath>
+       </template> 
+
+      <template id="blog_postcontent">
+          <t t-set="blogpost" t-value="request.env['blog.post'].get_post(parameter_id,blog_id)"/>
+          <div class="col-md-4" t-if="blogpost">
+              <h4>
+                  <t t-esc="blogpost.name or 'Selected Post Has No Title'"/>
+              </h4>
+              <p>
+                  <t t-esc="blogpost.teaser or 'Selected Post Has No Teaser'"/>
+              </p>
+          </div>
+          <div class="col-md-4" t-if="not blogpost">
+              <p>'No blog post selected , please do so by selecting fro widget configuration options'</p>
+          </div>
+      </template>
+
+      <template id="three_columns_posts_widget" inherit_id="website.snippets" name="show_blog_post">
+          <xpath expr="//div[@id='snippet_content']" position="inside">
+              <div>
+                  <div class="oe_snippet_thumbnail">
+                      <!-- definition of the snippet thumbnail -->
+                      <img class="oe_snippet_thumbnail_img" src="/website_snippet_blog_display_post/static/src/img/blocks/block_show_blog_post.png"/>
+                      <span class="oe_snippet_thumbnail_title">Show blog post</span>
+                  </div>
+                  <section class="oe_snippet_body jq_blg_entry" >
+                      <div class="parametricTemplate">
+                          <!-- the template call code is injected via javascript 
+                               the class is parametricTemplate in order to 
+                               override odoo's normal behaviour 
+                               (no t tags allowed except for t-field) -->
+                      </div>
+                   </section>
+              </div>
+          </xpath>
+          <!-- there we access directly addons/website/static/src/xml/website.snippets.xml and add a new dropdown -->
+          <!-- Once accessed our dropdown, menus and functions are  excellently documented (for once!) in 
+                addons/website/static/src/js/website.snippets.editor.js   -->
+
+          <xpath expr="//div[@id='snippet_options']" position="inside">
+              <div data-snippet-option-id="blg_entry" data-selector=".jq_blg_entry"
+               data-selector-siblings="p, h1, h2, h3, blockquote, .well, .panel, .oe_share"
+               data-selector-children=".content">
+                 <li class="dropdown-submenu"    data-required="false">
+                     <a tabindex="-1" href="#">View from blog </a>
+                     <!--todo usure how to unify setting and loop tags check code -->
+                     <t t-set="blogs" t-value="request.env['blog.blog'].search([])"/>
+                     <ul class="dropdown-menu">
+                         <li t-foreach="blogs" t-as="blog"  data-value="blog.id" class="dropdown-submenu">
+                             <t t-esc="blog.name"/>
+                             <t t-set="blog_posts" t-value="request.env['blog.post'].search([('blog_id', '=', blog.id)])"/>
+                             <ul class="dropdown-menu">
+                                 <li t-if="len(blog_posts) > 0" t-attf-data-value="-1_#{blog.id}">
+                                     <a>Last Blog Post </a>
+                                 </li>
+                                 <li t-if="len(blog_posts) > 1" t-attf-data-value="-2_#{blog.id}">
+                                     <a>Second-Last Blog Post</a>
+                                 </li>
+                                 <li t-if="len(blog_posts) > 2" t-attf-data-value="-3_#{blog.id}">
+                                     <a>Third-Last Blog Post</a>
+                                 </li>
+                                 <li t-if="len(blog_posts) > 3" t-attf-data-value="-4_#{blog.id}">
+                                     <a>Fourth Last Blog Post</a>
+                                 </li>
+                                 <li t-if="len(blog_posts) > 4" t-attf-data-value="-5_#{blog.id}">
+                                     <a>Fifth Last Blog Post</a>
+                                 </li>
+                                 <li class="dropdown-submenu" data-value="0_0" data-required="false">
+                                     <a tabindex="-1" href="#">Or select post directly</a>
+                                     <!--todo usure how to unify setting and loop tags check code -->
+                                     <ul class="dropdown-menu">
+                                         <t t-foreach="blog_posts[:len(blog_posts)]" t-as="blog_post">
+                                             <li t-attf-data-value="#{blog_post.id}_#{blog.id}">
+                                                 <a> <t t-esc="blog_post.name"/> </a>
+                                             </li>
+                                         </t>
+                                     </ul>
+                                 </li>
+                             </ul>
+                         </li>
+                     </ul>
+                 </li>
+             </div>
+          </xpath>
+      </template>
+  </data>
+</openerp>
