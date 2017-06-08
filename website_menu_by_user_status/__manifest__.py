@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -22,7 +22,7 @@
 
 {
     'name': 'Website Menu By User Display',
-    'version': '8.0.1.1.0',
+    "version": "10.0.1.0.0",
     'author': 'Savoir-faire Linux,Odoo Community Association (OCA)',
     'website': 'http://www.savoirfairelinux.com',
     'license': 'AGPL-3',
@@ -40,5 +40,5 @@
     ],
     'demo': [],
     'test': [],
-    'installable': False,
+    'installable': True,
 }
