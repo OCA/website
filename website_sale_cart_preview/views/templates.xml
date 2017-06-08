@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <template
+        id="assets_frontend"
+        inherit_id="website.assets_frontend"
+        name="Cart Preview Assets">
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="/website_sale_cart_preview/static/src/js/website_sale_cart_preview.js"></script>
+        <link rel='stylesheet' href='/website_sale_cart_preview/static/src/css/website_sale_cart_preview.css'/>
+      </xpath>
+    </template>
+
+    <!-- Page Shop my cart and payment total -->
+    <template id="total" inherit_id="website_sale.total" primary="True">
+      <xpath expr="table" position="replace">
+        <div id="cart_total" t-if="website_sale_order">
+          <div class="row" id="order_total_untaxed">
+            <span class="col-xs-6 text-right text-muted">Subtotal:</span>
+            <span class="col-xs-6 text-left text-muted">
+              <span
+                  t-field="website_sale_order.amount_untaxed"
+                  style="white-space: nowrap;"
+                  t-field-options='{
+                    "widget": "monetary",
+                    "from_currency": "website_sale_order.pricelist_id.currency_id",
+                    "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
+                  }'/>
+            </span>
+          </div>
+          <div class="row" id="order_total_taxes">
+            <span class="col-xs-6 text-right text-muted" title="Taxes may be updated after providing shipping address"> Taxes:</span>
+            <span class="col-xs-6 text-left text-muted">
+              <span
+                  t-field="website_sale_order.amount_tax"
+                  style="white-space: nowrap;"
+                  t-field-options='{
+                    "widget": "monetary",
+                    "from_currency": "website_sale_order.pricelist_id.currency_id",
+                    "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
+                  }'/>
+            </span>
+          </div>
+          <div class="row" id="order_total">
+            <span class="col-xs-6 text-right h4">Total:</span>
+            <span class="col-xs-6 text-left h4" style="white-space: nowrap;">
+              <span
+                  t-field="website_sale_order.amount_total"
+                  style="white-space: nowrap;"
+                  t-field-options='{
+                    "widget": "monetary",
+                    "from_currency": "website_sale_order.pricelist_id.currency_id",
+                    "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
+                  }'/>
+            </span>
+          </div>
+        </div>
+      </xpath>
+    </template>
+
+    <template id="cart_popover" name="Cart Popover">
+      <div t-if="not website_sale_order or not website_sale_order.website_order_line" class="well well-lg">
+        Your cart is empty!
+      </div>
+      <t t-if="website_sale_order and website_sale_order.website_order_line">
+        <t t-foreach="website_sale_order.website_order_line" t-as="line">
+          <div class='row mb8 cart_line' >
+            <div class='col-xs-3'><span t-field="line.product_id.image_small"
+            t-field-options='{"widget": "image", "class": "img-rounded"}'/></div>
+            <div class='col-xs-9'>
+              <a t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }">
+                <span t-esc="line.product_id.with_context(display_default_code=False).display_name" class="h6"/>
+              </a>
+              <br/><small>Qty: <t t-esc="int(line.product_uom_qty)"/></small>
+            </div>
+          </div>
+        </t>
+
+        <div class="text-center">
+          <span class="h5">
+            <t t-call="website_sale_cart_preview.total"/>
+          </span>
+          <a class="btn btn-primary" href="/shop/cart">
+            View Cart (<t t-esc="website_sale_order.cart_quantity"/> items)
+          </a>
+        </div>
+      </t>
+    </template>
+
+  </data>
+</openerp>

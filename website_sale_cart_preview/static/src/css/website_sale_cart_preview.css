@@ -1,0 +1,26 @@
+.mycart-popover .cart_line {
+  border-bottom: 1px #EEE solid;
+}
+
+.mycart-popover .cart_line {
+  border-bottom: 1px #EEE solid;
+}
+
+.mycart-popover {
+  max-width: 500px;
+  min-width: 250px;
+}
+
+.mycart-popover > .popover-content {
+    padding: 9px 14px;
+    padding-top: 0;
+}
+
+.mycart-popover > .popover-content > div {
+    padding: 5px;
+    margin-bottom: 0 !important;
+}
+
+.mycart-popover > .popover-content > div.text-center {
+    margin-top: 9px;
+}
