@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<template id="payment_revocation" name="German revocation and conditions" inherit_id="website_sale.payment">
+
+	<xpath expr="." position="inside">
+		<script type="text/javascript" src="/website_sale_german_additions/static/src/js/website_sale_german_additions.js"></script>
+	</xpath>	
+	
+	<xpath expr="//table[@id='cart_products']" position="before">
+		<h3>Please accept our revocation and conditions!</h3>
+		<div class="form-group">
+			<input id="rev" value="rev" type="checkbox" name="rev" />
+			<label class="control-label" for="rev">I have read the terms and the revocation and accept them.</label>
+		</div>	
+	</xpath>
+	
+</template>
+
+</data>
+</openerp>

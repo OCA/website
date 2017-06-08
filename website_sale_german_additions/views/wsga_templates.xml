@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+  
+<!-- Add needed websites for necsessary informations -->
+<!-- Template for terms-page -->  
+<template id="wsga_terms" name="Terms" page="True">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">Terms</h1>
+                            <h3 class="text-muted text-center">Add your terms here!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+<!-- Template for revocation-page -->  
+<template id="wsga_revocation" name="Revocation" page="True">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">Revocation</h1>
+                            <h3 class="text-muted text-center">Add your revocation conditions here!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+<!-- Template for delivery-page (terms of sale) -->   
+<template id="wsga_delivery" name="Delivery" page="True">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">Delivery</h1>
+                            <h3 class="text-muted text-center">Add your terms of sale here!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+<!-- Template for privacy-page -->   
+<template id="wsga_privacy" name="Privacy" page="True">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">Privacy</h1>
+                            <h3 class="text-muted text-center">Add your privacy information here!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+<!-- Template for imprint-page -->  
+<template id="wsga_imprint" name="Imprint" page="True">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div class="oe_structure">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="text-center">Imprint</h1>
+                            <h3 class="text-muted text-center">Add your imprint here!</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+<!-- Add links to standard footer --> 
+<template id="footer_wsga" inherit_id="website.footer_default" name="Footer WSGA">
+    <xpath expr="//ul[@id='products']" position="inside"> 
+        <li><a href="/page/terms">Terms</a></li>
+        <li><a href="/page/revocation">Revocation</a></li>
+        <li><a href="/page/delivery">Delivery</a></li>
+        <li><a href="/page/privacy">Privacy</a></li>
+    </xpath>
+</template>
+
+<!-- Terms popover bind as iframe --> 
+<template id="wsga_popover_terms" name="German terms popover">
+    <link id="bootstrap_css" rel='stylesheet' href='/web/static/lib/bootstrap/css/bootstrap.css' t-ignore="true"/>
+    <link rel="stylesheet" href='/website/static/src/css/website.css' t-ignore="true"/>
+    <t t-set="view" t-value="html_view"/>
+    <div t-raw="view"/>
+</template>
+
+<!-- Revocation popover bind as iframe --> 
+<template id="wsga_popover_revocation" name="German terms revocation">
+    <link id="bootstrap_css" rel='stylesheet' href='/web/static/lib/bootstrap/css/bootstrap.css' t-ignore="true"/>
+    <link rel="stylesheet" href='/website/static/src/css/website.css' t-ignore="true"/>
+    <t t-set="view" t-value="html_view"/>
+    <div t-raw="view"/>
+</template>
+
+    </data>
+</openerp>

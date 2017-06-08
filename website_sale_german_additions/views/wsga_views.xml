@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<!-- Add needed CSS and JS in template -->
+<template id="assets_frontend" inherit_id="website.assets_frontend" name="WSGA">
+  <xpath expr="." position="inside">
+		<link rel='stylesheet' href='/website_sale_german_additions/static/src/css/website_sale_german_additions.css'/>
+		<script type="text/javascript" src="/website_sale_german_additions/static/src/js/website_sale_german_additions.js"></script>
+  </xpath>
+</template>
+
+<!-- Replace the payment-site -->
+<template id="wsga_payment" name="German revocation and conditions" inherit_id="website_sale.payment">
+	
+    <xpath expr="//div[@id='wrap']" position="replace"> 
+      <div id="wrap">
+        <div class="container oe_website_sale">
+
+          <ul class="wizard pull-right">
+              <li><a href="/shop/cart" class="text-success">Review Order<span class="chevron"></span></a></li>
+              <li><a href="/shop/checkout" class="text-success">Shipping &amp; Billing<span class="chevron"></span></a></li>
+              <li class="text-primary">Payment<span class="chevron"></span></li>
+              <li class="text-muted">Confirmation<span class="chevron"></span></li>
+          </ul>
+          <h1 class="mb32">Validate Order</h1>
+          
+          <t t-set="website_sale_order" t-value="website.sale_get_order()"/>
+          
+          <div class="row">
+          
+            <div class="col-lg-8 col-sm-9 oe_cart">
+            
+            <div t-if="deliveries" id="delivery_carrier">
+                <div class="wsga-mb30" >
+                <h4>Choose your Delivery Method</h4>
+                    <ul class="list-unstyled">
+                        <li t-foreach="deliveries" t-as="delivery">
+                            <label>
+                                <input t-att-value="delivery.id" type="radio" name="delivery_type"
+                                    t-att-checked="order.carrier_id and order.carrier_id.id == delivery.id and 'checked' or False" 
+                                    t-att-disabled="delivery.available and '0' or '1'"/>
+                                <span t-field="delivery.name"/>
+                                <t t-if="delivery.available">
+                                    <span class="badge" t-field="delivery.price"
+                                        t-field-options='{
+                                            "widget": "monetary",
+                                            "display_currency": "website.pricelist_id.currency_id"
+                                        }'/>
+                                </t>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+ 
+            <div class="js_payment" t-if="acquirers and website_sale_order.amount_total" id="payment_method">
+              <div class="wsga-mb30" >
+                  <h4>Choose your Payment Method</h4>
+                  <ul class="list-unstyled">
+                    <li t-foreach="acquirers or []" t-as="acquirer">
+                      <label t-if="acquirer.button">
+                          <input t-att-value="acquirer.id" type="radio" name="acquirer" t-att-checked="acquirers[0] == acquirer"/>
+                          <img class="media-object" style="width: 60px; display: inline-block;"
+                              t-att-title="acquirer.name"
+                              t-att-src="'/payment_%s/static/src/img/%s_icon.png' % (acquirer.provider, acquirer.provider)"/>
+                              <span t-field="acquirer.name"/>
+                      </label>
+                    </li>
+                  </ul>
+              </div>
+              
+              <div class="wsga-mb30">
+                  <h4 id="rev">Please accept our terms and revocation!</h4>
+                  <div id="revlabel" class="form-group">
+                      <input id="revbox" value="rev" type="checkbox" name="rev" />
+                      <label class="control-label" for="rev">I have read the <span id="open-terms" class="wsga-cursor">terms</span> and the <span id="open-revo" class="wsga-cursor">revocation</span> and accept them.</label>
+                  </div>
+              </div>
+              
+              <div class="wsga-highlight wsga-mb10">
+                  <t t-set="website_sale_order" t-value="website.sale_get_order()"/>
+                  <table class="table table-striped table-condensed" id="cart_products" t-if="website_sale_order and website_sale_order.website_order_line">
+                      <thead>
+                          <tr>
+                              <th colspan="2" width="80">Product</th>
+                              <th class="text-right" width="100">Price</th>
+                              <th class="text-right" width="80">Quantity</th>
+                              <th class="text-right" width="120">Subtotal</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr t-foreach="website_sale_order.website_order_line" t-as="line">
+                              <td colspan="2" t-if="not line.product_id.product_tmpl_id"></td>
+                              <td t-if="line.product_id.product_tmpl_id">
+                                  <a t-attf-href="/shop/product/#{ slug(line.product_id.product_tmpl_id) }">
+                                      <span t-field="line.product_id.image_small"
+                                            t-field-options='{"widget": "image", "class": "img-rounded"}'/>
+                                  </a>
+                              </td>
+                              <td t-if="line.product_id.product_tmpl_id">
+                                 <strong t-field="line.product_id.name"/><br/>
+                                 <span t-field="line.product_id.description_sale"/>
+                              </td>
+                              <td class="text-right">
+                                 <span t-field="line.price_unit" style="white-space: nowrap;" t-field-options='{
+                                     "widget": "monetary",
+                                     "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
+                                 }'/>
+                              </td>
+                              <td class="text-right">
+                                 <div t-esc="line.product_uom_qty"/>
+                              </td>
+                              <td class="text-right">
+                                 <span t-field="line.price_subtotal" style="white-space: nowrap;" t-field-options='{
+                                     "widget": "monetary",
+                                     "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
+                                 }'/>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <t t-call="website_sale.total"/>
+                  <div class="clearfix"/>
+                </div>
+              
+              <div>
+                  <t t-foreach="acquirers or []" t-as="acquirer">
+                      <div t-att-data-id="acquirer.id" class="oe_sale_acquirer_button hidden pull-right wsga-mb60 wsga-text-right">
+                        <div t-raw="acquirer.button"/>
+                        <div class="wsga-hide" t-field="acquirer.pre_msg"/>
+                      </div>
+                  </t>
+              </div>
+            </div>
+ 
+            </div>
+            
+            <div class="col-lg-3 col-lg-offset-1 col-sm-3 text-muted" id="right_column">
+                <h4>Bill To:</h4>
+                <div t-field="order.partner_invoice_id" t-field-options='{
+                    "widget": "contact",
+                    "fields": ["address", "name", "phone", "email"]
+                    }'/>
+                <div>
+                  <a href="/shop/checkout"><span class="fa fa-arrow-right"/> Change Address</a>
+                </div>
+                <t>
+                    <h4 class="mt32">Ship To:</h4>
+                    <t t-if="website_sale_order.partner_shipping_id and website_sale_order.partner_shipping_id.id != website_sale_order.partner_invoice_id.id">
+                      <div t-field="order.partner_shipping_id" t-field-options='{
+                        "widget": "contact",
+                        "fields": ["address", "name", "phone"]
+                        }'/>
+                    </t>
+                    <address t-if="website_sale_order.partner_shipping_id.id == website_sale_order.partner_invoice_id.id">Ship to the same address</address>
+                    <div class="mb32">
+                      <a href="/shop/checkout"><span class="fa fa-arrow-right"/> Change Address</a>
+                    </div>
+                </t>
+            </div> 
+            
+          </div> 
+          
+        </div>
+      </div>
+
+      <div id="wsga-terms" class="wsga-popover wsga-center" style="display:none;">
+            <h3 class="popover-title">
+                Terms
+                <button id="close-terms" title="close" type="button" class="close">×</button>
+            </h3>
+            <iframe src="../../popover/terms/"/>
+        </div>
+        
+
+      <div id="wsga-revo" class="wsga-popover wsga-center" style="display:none;">
+            <h3 class="popover-title">
+                Revocation
+                <button id="close-revo" title="close" type="button" class="close">×</button>
+            </h3>
+            <iframe src="../../popover/revocation/"/>       
+      </div>
+    
+    </xpath>     
+</template>
+
+<!-- Add VAT and shipping line under price on categories -->
+<!-- Todo: add VAT percentage to the message -->
+<template id="wsga_products_categories" inherit_id="website_sale.products_item" name="German product item view">
+  <xpath expr="//span[@itemprop='priceCurrency']" position="after">
+      <br/>
+      <span class="wsga-fs9">
+        incl. VAT, plus <a href="/page/delivery">shipping costs</a>
+      </span>
+  </xpath>
+</template>
+
+<!-- Add VAT and shipping line under price on product description -->
+<!-- Todo: add VAT percentage to the message -->
+<template id="wsga_products_description" inherit_id="website_sale.product_price" name="German product descritpion view">
+  <xpath expr="//span[@itemprop='priceCurrency']" position="after">
+      <br/>
+      <b>
+        <span class="wsga-fs10">
+          incl. VAT, plus <a href="/page/delivery">shipping costs</a>
+        </span>
+      </b>
+  </xpath>
+</template>
+
+    </data>
+</openerp>

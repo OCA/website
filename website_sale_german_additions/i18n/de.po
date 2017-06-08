@@ -1,0 +1,209 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_sale_german_additions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0rc1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-19 10:26+0000\n"
+"PO-Revision-Date: 2014-08-20 14:30+0100\n"
+"Last-Translator: Mathias Neef <mn@copado.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.7\n"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale_german_additions.wsga_imprint
+msgid "Add your imprint here!"
+msgstr "Fügen Sie das Impressum hier ein!"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale_german_additions.wsga_privacy
+msgid "Add your privacy information here!"
+msgstr "Fügen Sie Ihre Datenschutzbestimmungen hier ein!"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale_german_additions.wsga_revocation
+msgid "Add your revocation conditions here!"
+msgstr "Fügen Sie die Widerrufsbelehrung hier ein!"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale_german_additions.wsga_terms
+msgid "Add your terms here!"
+msgstr "Fügen Sie die AGB hier ein!"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale_german_additions.wsga_delivery
+msgid "Add your terms of sale here!"
+msgstr "Fügen Sie die AGB hier ein!"
+
+#. module: website_sale_german_additions
+#: view:website:website.snippets
+msgid "Address Block"
+msgstr "Adress-Block"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Bill To:"
+msgstr "Rechnungsanschrift:"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Change Address"
+msgstr "Adresse ändern"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Choose your Delivery Method"
+msgstr "Wählen Sie die gewünschte Versandart"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Choose your Payment Method"
+msgstr "Wählen Sie die gewünschte Zahlungsweise"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Confirmation"
+msgstr "Bestätigung"
+
+#. module: website_sale_german_additions
+#: view:website:website.layout
+#: view:website:website_sale_german_additions.wsga_delivery
+msgid "Delivery"
+msgstr "Lieferung"
+
+#. module: website_sale_german_additions
+#: view:website:website.snippets
+msgid "Email:"
+msgstr "Email:"
+
+#. module: website_sale_german_additions
+#: view:website:website.snippets
+msgid "Fax:"
+msgstr "Fax:"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "I have read the"
+msgstr "Ich habe die"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale_german_additions.wsga_imprint
+#: model:website.menu,name:website_sale_german_additions.menu_contactus
+msgid "Imprint"
+msgstr "Impressum"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Payment"
+msgstr "Versand & Zahlung"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Please accept our terms and revocation!"
+msgstr "Bitte akzeptieren Sie unsere AGB und Widerrufsbelehrung!"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Price"
+msgstr "Verkaufspreis"
+
+#. module: website_sale_german_additions
+#: view:website:website.layout
+#: view:website:website_sale_german_additions.wsga_privacy
+msgid "Privacy"
+msgstr "Datenschutz"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Product"
+msgstr "Produkt"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Quantity"
+msgstr "Menge"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Review Order"
+msgstr "Bestellung prüfen"
+
+#. module: website_sale_german_additions
+#: view:website:website.layout view:website:website_sale.payment
+#: view:website:website_sale_german_additions.wsga_revocation
+msgid "Revocation"
+msgstr "Widerrufsbelehrung"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Ship To:"
+msgstr "Lieferanschrift"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Ship to the same address"
+msgstr "An die gleiche Adresse liefern"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Shipping & Billing"
+msgstr "Rechnungs- & Versandadresse"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+#. module: website_sale_german_additions
+#: view:website:website.layout view:website:website_sale.payment
+#: view:website:website_sale_german_additions.wsga_terms
+msgid "Terms"
+msgstr "AGB"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "Validate Order"
+msgstr "Bestellung prüfen"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "and accept them."
+msgstr "gelesen und akzeptiere diese."
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "and the"
+msgstr "und die"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "close"
+msgstr "schließen"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.product_price
+#: view:website:website_sale.products_item
+msgid "incl. VAT, plus"
+msgstr "incl. MwSt, zzgl."
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "revocation"
+msgstr "Widerrufsbelehrung"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.product_price
+#: view:website:website_sale.products_item
+msgid "shipping costs"
+msgstr "Versandkosten"
+
+#. module: website_sale_german_additions
+#: view:website:website_sale.payment
+msgid "terms"
+msgstr "AGB"

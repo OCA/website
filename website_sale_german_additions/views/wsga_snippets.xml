@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+<template id="wsga_address_snippet" name="Address snippet" inherit_id="website.snippets">
+    <xpath expr="//div[@id='snippet_content']" position="inside">
+    
+        <div>
+            <div class="oe_snippet_thumbnail">
+                <img class="oe_snippet_thumbnail_img" src="/website_sale_german_additions/static/src/img/blocks/block_address.png"/>
+                <span class="oe_snippet_thumbnail_title">Address Block</span>
+            </div>
+            <section class="oe_snippet_body mt16 mb16">
+                <div class="container">
+                    <ul class="list-unstyled">
+                        <li t-ignore="true"><b><span t-field="res_company.name"></span></b></li>
+                        <li t-ignore="true"><span t-field="res_company.street"></span></li>
+                        <li t-ignore="true"><span t-field="res_company.zip"></span> <span t-field="res_company.city"></span></li>
+                        <li t-ignore="true">Fax: <span t-field="res_company.fax"></span></li>
+                        <li t-ignore="true">Email: <span t-field="res_company.email"></span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>        
+    
+    </xpath>
+</template>
+    
+    </data>
+</openerp>
