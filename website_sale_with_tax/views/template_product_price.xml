@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+<data>
+
+<template id="product_price"
+          inherit_id="website_sale.product_price"
+          name="Product price with taxes included">
+    <xpath expr="//span[@itemprop='price']" position="attributes">
+        <attribute name="t-esc">product.price_with_tax</attribute>
+    </xpath>
+    <xpath expr="//b[@t-field='product.price']" position="attributes">
+        <attribute name="class">hidden</attribute>
+    </xpath>
+    <xpath expr="//b[@t-field='product.price']" position="after">
+        <b class="oe_price" style="white-space: nowrap;"
+           t-field="product.price_with_tax"
+           t-field-options='{
+              "widget": "monetary",
+              "from_currency": "product.company_id.currency_id",
+              "display_currency": "user_id.partner_id.property_product_pricelist.currency_id"
+           }'/>
+    </xpath>
+</template>
+
+</data>
+</openerp>
