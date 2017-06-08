@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="default_home_action" model="ir.actions.act_url">
+            <field name="name">Default user home</field>
+            <field name="target">self</field>
+            <field name="url">/shop</field>
+        </record>
+
+    </data>
+</openerp>

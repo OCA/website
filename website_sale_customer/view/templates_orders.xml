@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+<!-- add menu item to account navbar -->
+<template
+    id="account_navbar_orders"
+    inherit_id="website_sale_customer.account_navbar">
+  <xpath expr="//li[@id='my-account']" position="after">
+    <li role="presentation" id="my-orders"
+        t-att-class="request.httprequest.path == '/shop/orders' and 'active'">
+      <a href="/shop/orders">
+        Orders
+      </a>
+    </li>
+  </xpath>
+</template>
+
+
+<template id="orders_followup_navbar" name="Navbar for My Orders page">
+  <div class="row">
+    <div class="col-md-12">
+      <span class="pull-right">
+        <t t-call="website.pager"/>
+      </span>
+    </div>
+  </div>
+</template>
+
+
+<template id="orders_followup" name="Odoo - Follow your Orders">
+  <t t-call="website.layout">
+    <div id="wrap">
+
+      <div class="container oe_website_sale">
+
+        <t t-call="website_sale_customer.account_navbar" />
+
+        <t t-if="not orders">
+          <h4 class="text-muted text-center mt64 mb64">
+            You have yet to order anything, why not <a href="/shop/">start now</a> ?
+          </h4>
+        </t>
+
+        <t t-call="website_sale_customer.orders_followup_navbar"/>
+
+        <div id="accordion" class="panel-group" role="tablist" aria-multiselectable="true">
+          <t t-foreach="orders" t-as="o">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" t-attf-id="heading-order-#{o.id}">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion"
+                     t-attf-href="#content-order-#{o.id}" aria-expanded="true" aria-controls="collapseOne">
+                    <t t-if="o.state == 'sent'">
+                      <strong>Quotation</strong> N°
+                    </t>
+                    <t t-if="o.state != 'sent'">
+                      <strong>Order</strong> N°
+                    </t>
+                    <span class="order-name" t-field="o.name"/>
+                    -
+                    <span class="order-date">
+                      <strong>Date:</strong>
+                      <span t-field="o.create_date" t-field-options='{"widget": "date"}'/>
+                    </span>
+                  </a>
+                </h4>
+              </div>
+              <div class="panel-collapse collapse" role="tabpanel"
+                   t-attf-id="content-order-#{o.id}">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-4 invoice-address">
+                      <h5><strong>Invoicing Address</strong></h5>
+                      <div>
+                        <address t-field="o.partner_invoice_id" t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                      </div>
+                    </div>
+                    <t t-set="invoices"
+                       t-value="[i for i in o.invoice_ids if i.state not in ['draft', 'cancel']]" />
+                    <t t-if="invoices">
+                      <div class="col-md-4 invoices">
+                        <h5><strong>Invoices</strong></h5>
+                        <div>
+                          <t t-foreach="invoices" t-as="i">
+                            <t t-set="report_url" t-value="'/report/pdf/account.report_invoice/%s' % i.id"/>
+                            <div>
+                              <a t-att-href="report_url"><span class="fa fa-download"/></a>
+                              <a t-att-href="report_url"><span t-field="i.number"/></a>
+                              <span class="text-muted" t-field="i.date_invoice"/>
+                              <t t-if="i.state == 'paid'">
+                                <span class="label label-success orders_label_text_align">
+                                  <i class="fa fa-fw fa-check"/> Paid
+                                </span>
+                              </t>
+                              <t t-if="i.state != 'paid'">
+                                <span class="label label-info orders_label_text_align">
+                                  <i class="fa fa-fw fa-clock-o"/> Waiting
+                                </span>
+                              </t>
+                            </div>
+                          </t>
+                        </div>
+                      </div>
+                    </t>
+                    <div class="col-md-4 shipping-address">
+                      <h5><strong>Shipping Address</strong></h5>
+                      <div>
+                        <address t-field="o.partner_shipping_id" t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr/>
+
+                  <div id="order_lines">
+                    <t t-call="website_sale_customer.orders_followup_lines" />
+                  </div>
+
+                  <hr/>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div>
+                        <strong>Contact</strong>
+                      </div>
+                      <div t-field="o.user_id.partner_id"
+                           t-field-options='{"widget": "contact", "fields": ["email", "phone"]}'/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-10 text-right">
+                          Untaxed Amount:
+                        </div>
+                        <div class="col-md-2 text-right">
+                          <span t-field="o.amount_untaxed"
+                                t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-10 text-right">
+                          Taxes:
+                        </div>
+                        <div class="col-md-2 text-right">
+                          <span t-field="o.amount_tax"
+                                t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-10 text-right">
+                          <strong>Total:</strong>
+                        </div>
+                        <div class="col-md-2 text-right">
+                          <strong>
+                            <span t-field="o.amount_total"
+                                  t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
+                          </strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </t>
+        </div>
+
+        <t t-if="len(orders) >= 2">
+          <t t-call="website_sale_customer.orders_followup_navbar"/>
+        </t>
+
+      </div>
+      <div class="oe_structure mb32"/>
+    </div>
+  </t>
+</template>
+
+
+<template id="orders_followup_lines"
+  name="Customer order lines">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-1">
+      <strong>Product</strong>
+    </div>
+    <div class="col-md-1 text-right">
+      <strong>Unit Price</strong>
+    </div>
+    <div class="col-md-1 text-right">
+      <strong>Quantity</strong>
+    </div>
+    <div class="col-md-1 text-right">
+      <strong>Subtotal</strong>
+    </div>
+  </div>
+  <t t-foreach="o.order_line" t-as="ol">
+    <div class="row orders_vertical_align">
+      <div class="col-md-1 text-center">
+        <a t-att-href="'/shop/product/%s' % str(ol.product_id.product_tmpl_id.id)">
+          <img t-att-src="'/website/image/product.product/%s/image_small/48x48' % ol.product_id.id"/>
+        </a>
+      </div>
+      <div id='product_name' class="col-md-8">
+        <a t-att-href="'/shop/product/%s' % str(ol.product_id.product_tmpl_id.id)"><span t-field="ol.product_id.name"/></a>
+      </div>
+      <div class="col-md-1 text-right">
+        <span t-field="ol.price_unit" t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
+      </div>
+      <div class="col-md-1 text-right">
+        <t t-if="ol._name == 'sale.order.line'">
+          <span t-field="ol.product_uom_qty"/>
+        </t>
+        <t t-if="ol._name == 'account.invoice.line'">
+          <span t-field="ol.quantity"/>
+        </t>
+      </div>
+      <div class="col-md-1 text-right">
+        <span t-field="ol.price_subtotal" t-field-options='{"widget": "monetary", "display_currency": "o.company_id.currency_id"}'/>
+      </div>
+    </div>
+  </t>
+</template>
+
+
+<template id="orders_followup_link"
+  name="Orders Link from User Account"
+  inherit_id="website_sale_customer.my_account_link_update">
+  <xpath expr="//li[@class='dropdown']/ul/li[contains(.,'Logout')]" position="before">
+    <li><a href="/shop/orders" role="menuitem">My Orders</a></li>
+  </xpath>
+</template>
+
+
+  </data>
+</openerp>

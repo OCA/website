@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="action_shop_partner_registered" model="ir.actions.server">
+            <field name="name">Shop partner registered</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+            <field name="state">email</field>
+            <field name="template_id" ref="website_sale_customer.email_shop_partner_registered" />
+        </record>
+
+
+        <record id="rule_shop_partner_registered" model="base.action.rule">
+            <field name="name">Shop partner registered</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="sequence">1</field>
+            <field name="kind">on_create</field>
+            <field name="server_action_ids" eval="[(6,0,[ref('action_shop_partner_registered')])]"/>
+        </record>
+
+    </data>
+</openerp>
