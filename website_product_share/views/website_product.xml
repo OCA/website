@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <template id="product_share" name="Share Button" inherit_id="website_sale.product" active="False" customize_show="True">
+        <xpath expr="//p[@class='text-muted']" position="after">
+            <div class="oe_share s_share">
+                  <h3>Share 
+                    <a class="oe_share_facebook" t-attf-href="https://www.facebook.com/sharer/sharer.php?u={url}" target="_Blank"><i class="fa fa-facebook-square"/> </a>
+                    <a class="oe_share_twitter" t-attf-href="https://twitter.com/intent/tweet?text={{product.website_meta_title}}&amp;url={url}" target="_Blank"><i class="fa fa-twitter"/> </a>
+                    <a class="oe_share_linkedin" t-attf-href="http://www.linkedin.com/shareArticle?mini=true&amp;url={url}&amp;title={{product.website_meta_title}}" target="_Blank"><i class="fa fa-linkedin"/> </a>
+                    <a class="oe_share_google" t-attf-href="https://plus.google.com/share?url={url}" target="_Blank"><i class="fa fa-google-plus-square"/> </a>
+                    <a href="mailto:?body={url}&amp;subject={title}"><i class="fa fa-envelope-o"></i></a>                    
+                    </h3>
+                </div>
+        </xpath>
+  </template>
+</data>
+</openerp>
