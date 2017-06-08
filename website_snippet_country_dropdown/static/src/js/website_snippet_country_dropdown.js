@@ -20,6 +20,11 @@
             this.$flag_selector.on('click', function(event) {
                 return self.set_value(event);
             });
+            $('form[action="/shop/confirm_order"]').on('submit', function(){
+                if(!this.no_country_field.value){
+                    this.vat.value = "";
+                }
+            });
             this.$no_country_field.change(function(event){
                 return self.join_value(self.$country_code_field.val(), this.value);
             });
