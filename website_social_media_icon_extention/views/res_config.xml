@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record id="view_website_config_settings_ext"
+            model="ir.ui.view">
+      <field name="name">Website settings</field>
+      <field name="model">website.config.settings</field>
+      <field name="inherit_id" ref="website.view_website_config_settings"/>
+      <field name="arch"
+             type="xml">
+        <xpath expr="//div[@name='social_googleplus']"
+               position="after">
+
+          <label for="social_xing"/>
+          <div name="social_xing">
+            <div class="oe_inline">
+              <field name="social_xing"
+                     placeholder="https://www.xing.com"/>
+            </div>
+          </div>
+          <label for="social_dribbble"/>
+          <div name="social_dribbble">
+            <div class="oe_inline">
+              <field name="social_dribbble"
+                     placeholder="https://dribbble.com"/>
+            </div>
+          </div>
+          <label for="social_tripadvisor"/>
+          <div name="social_tripadvisor">
+            <div class="oe_inline">
+              <field name="social_tripadvisor"
+                     placeholder="http://tripadvisor.de"/>
+            </div>
+          </div>
+
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</openerp>
