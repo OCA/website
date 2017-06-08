@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+<template id="mailing_list_subscribe"
+          inherit_id="mass_mailing.mailing_list_subscribe">
+    <xpath expr="//input[@class='js_subscribe_email form-control']"
+           position="before">
+        <input
+            name="name"
+            class="js_subscribe_name form-control"
+            placeholder="your name..."/>
+    </xpath>
+</template>
+
+</data>
+</openerp>

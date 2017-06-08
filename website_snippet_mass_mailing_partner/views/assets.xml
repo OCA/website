@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+<template id="assets_frontend"
+          inherit_id="mass_mailing.assets_frontend">
+    <xpath expr=".">
+        <link rel="stylesheet"
+              href="/website_snippet_mass_mailing_partner/static/src/css/website_snippet_mass_mailing_partner.css"/>
+        <script type="text/javascript"
+                src="/website_snippet_mass_mailing_partner/static/src/js/website_snippet_mass_mailing_partner.js"/>
+    </xpath>
+</template>
+
+</data>
+</openerp>
