@@ -1,0 +1,108 @@
+.asterix {
+  color: @red-primary;
+}
+
+.contact-form {
+  .form-group {
+    label {
+      .font-light;
+    }
+
+    input,
+    textarea {
+      width: 85% !important;
+      float: right;
+      .bg-midgrey;
+      .font-primary;
+
+      @media screen and (max-width: 768px) {
+        float: none;
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+.contact-info {
+  @media screen and (max-width: 768px) {
+    margin-top: 32px;
+  }
+}
+
+.blog-post {
+  border-bottom: 1px solid @mid-grey;
+  padding-bottom: 20px;
+}
+
+.blog-post:last-child {
+  border-bottom: none;
+}
+
+.blog-prev{
+  .font-light !important;
+  &:before {
+    content: "\f104";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    padding-right: 8px;
+  }
+}
+
+.blog-next {
+  .font-light !important;
+  &:after {
+    content: "\f105";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    padding-left: 8px;
+  }
+}
+
+.blog-subtitle {
+  margin-top: 0;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 24px;
+  }
+}
+
+#wrapwrap .pagination > li > a, 
+.pagination > li > span {
+  color: @dark-grey;
+  border: none;
+}
+
+.pagination > li > a {
+  .font-heading;
+}
+
+#wrapwrap .pagination > li > a:hover {
+  background: transparent;
+}
+
+#wrapwrap .pagination li.active > a {
+  background-color: transparent;
+  color: @black;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+#blog_right_column {
+  border-left: 1px solid @mid-grey;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+}
