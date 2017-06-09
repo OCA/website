@@ -19,7 +19,7 @@
     ],
     'author': 'Antiun Ingeniería S.L., '
               'Tecnativa, '
-              'LasLabs Inc, '
+              'LasLabs, '
               'Odoo Community Association (OCA)',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
