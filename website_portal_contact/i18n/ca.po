@@ -4,13 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Marc Tormo i Bochaca <mtbochaca@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-13 02:52+0000\n"
-"PO-Revision-Date: 2016-09-13 02:52+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"POT-Creation-Date: 2017-06-03 11:18+0000\n"
+"PO-Revision-Date: 2017-06-03 11:18+0000\n"
+"Last-Translator: Marc Tormo i Bochaca <mtbochaca@gmail.com>, 2017\n"
 "Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,28 +22,28 @@ msgstr ""
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
 msgid "Add Contact"
-msgstr ""
+msgstr "Afegir Contacte"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.tree_actions
 msgid "Add new contact"
-msgstr ""
+msgstr "Afegir un nou contacte "
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_menu_contacts
 msgid "Contacts"
-msgstr ""
+msgstr "Contactes"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
 #: model:ir.ui.view,arch_db:website_portal_contact.form_actions
 msgid "Delete"
-msgstr ""
+msgstr "Esborrar"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
 msgid "Edit Contact"
-msgstr ""
+msgstr "Editar Contacte "
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
@@ -53,17 +54,17 @@ msgstr "Correu Electrònic"
 #: code:addons/website_portal_contact/controllers/main.py:89
 #, python-format
 msgid "Fields not available: %s"
-msgstr ""
+msgstr "Camps no disponibles: %s"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
 msgid "Mobile"
-msgstr ""
+msgstr "Mòbil "
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
 msgid "My Contacts"
-msgstr ""
+msgstr "Els meus contactes "
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
@@ -73,35 +74,35 @@ msgstr "Nom"
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
 msgid "New Contact"
-msgstr ""
+msgstr "Nou contacte "
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
 msgid "No contacts found."
-msgstr ""
+msgstr "No s'han trobat contactes."
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
 msgid "Save"
-msgstr ""
+msgstr "Desar"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.search
 msgid "Search"
-msgstr ""
+msgstr "Cercar"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.search
 msgid "Search..."
-msgstr ""
+msgstr "Cercar..."
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
 msgid "There are currently no contacts for your account."
-msgstr ""
+msgstr "Actualment no hi ha contactes al seu compte."
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
 msgid "Your Contacts"
-msgstr ""
+msgstr "Els vostres contactes "
