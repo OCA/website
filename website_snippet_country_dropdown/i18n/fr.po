@@ -3,35 +3,20 @@
 # * website_snippet_country_dropdown
 # 
 # Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2016
-# Pascal ZIMMERMANN <pascalpci@hotmail.com>, 2017
+# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-25 04:20+0000\n"
-"PO-Revision-Date: 2017-02-25 04:20+0000\n"
-"Last-Translator: Pascal ZIMMERMANN <pascalpci@hotmail.com>, 2017\n"
+"POT-Creation-Date: 2017-06-09 02:51+0000\n"
+"PO-Revision-Date: 2017-06-09 02:51+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#. module: website_snippet_country_dropdown
-#. openerp-web
-#: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:26
-#, python-format
-msgid "Complete field name"
-msgstr "Nom complet du champ"
-
-#. module: website_snippet_country_dropdown
-#. openerp-web
-#: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:25
-#, python-format
-msgid "Country Dropdown Options"
-msgstr ""
 
 #. module: website_snippet_country_dropdown
 #: model:website.menu,name:website_snippet_country_dropdown.demo_page_link
@@ -42,11 +27,6 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
 msgid "Other label"
 msgstr "Autre label"
-
-#. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.snippet_options
-msgid "Set input options"
-msgstr ""
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
