@@ -3,14 +3,14 @@
 # * website_snippet_country_dropdown
 #
 # Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2016
+# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-13 02:52+0000\n"
-"PO-Revision-Date: 2016-09-13 02:52+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"POT-Creation-Date: 2017-06-09 02:51+0000\n"
+"PO-Revision-Date: 2017-06-09 02:51+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
 "Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -18,20 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3);\n"
-
-#. module: website_snippet_country_dropdown
-#. openerp-web
-#: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:26
-#, python-format
-msgid "Complete field name"
-msgstr ""
-
-#. module: website_snippet_country_dropdown
-#. openerp-web
-#: code:addons/website_snippet_country_dropdown/static/src/js/website_snippet_country_dropdown.editor.js:25
-#, python-format
-msgid "Country Dropdown Options"
-msgstr "Opcije spustnega seznama držav"
 
 #. module: website_snippet_country_dropdown
 #: model:website.menu,name:website_snippet_country_dropdown.demo_page_link
@@ -42,11 +28,6 @@ msgstr "Demo spustnega seznama držav"
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
 msgid "Other label"
 msgstr "Druga oznaka"
-
-#. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.snippet_options
-msgid "Set input options"
-msgstr "Nastavi vnosne opcije"
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
