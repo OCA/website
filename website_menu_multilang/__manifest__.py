@@ -24,7 +24,7 @@
 
 {
     'name': 'Website Menu Multilanguage',
-    'version': '8.0.0.1.0',
+    'version': '10.0.0.1.0',
     'author': 'Versada UAB,Odoo Community Association (OCA)',
     'category': 'Website',
     'website': 'http://www.versada.lt',
@@ -46,6 +46,6 @@ TODO:
     'data': [
         'view/website.xml',
     ],
-    'installable': False,
+    'installable': True,
     'application': False,
 }
