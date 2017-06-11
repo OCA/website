@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2014 Odoo SA
+     © 2015 Antiun Ingenieria S.L. - Antonio Espinosa
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+<!-- TODO: Refactor with ir.ui.view.template model
+<record id="public_user_website_ip" model="res.users">
+    <field name="name">Public User (127.0.0.1)</field>
+    <field name="login">Public User (127.0.0.1)</field>
+    <field name="active" eval="True" />
+    <field name="groups_id" eval="[(6,0,[ref('base.group_public'), ref('share.group_share_user')])]" />
+</record>
+
+
+<record id="website_ip" model="website">
+    <field name="name">127.0.0.1</field>
+    <field name="language_ids" eval="[(6,0,[ref('base.lang_en')])]" />
+    <field name="default_lang_id" ref="base.lang_en" />
+    <field name="user_id" ref="public_user_website_ip" />
+</record>
+
+<record id="website_ip_top_menu" model="website.menu">
+    <field name="name">Top Menu (127.0.0.1)</field>
+    <field name="website_id" ref="website_ip" />
+    <field name="parent_id"></field>
+     <field name="url"></field>
+</record>
+
+<record id="website_ip_homepage_menu" model="website.menu">
+    <field name="name">Homepage</field>
+    <field name="website_id" ref="website_ip" />
+    <field name="parent_id" ref="website_ip_top_menu" />
+     <field name="url">/page/homepage</field>
+</record>
+
+<record id="website_ip_other_menu" model="website.menu">
+    <field name="name">Other page</field>
+    <field name="website_id" ref="website_ip" />
+    <field name="parent_id" ref="website_ip_top_menu" />
+	<field name="url">/page/website.other-127-0-0-1-page</field>
+</record>
+-->
+</data>
+</openerp>

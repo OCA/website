@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2014 Odoo SA
+     © 2015 Antiun Ingenieria S.L. - Antonio Espinosa
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+
+<record id="view_website_config_setting_website_multi" model="ir.ui.view">
+    <field name="name">Website Multi Settings</field>
+    <field name="model">website.config.settings</field>
+    <field name="inherit_id" ref="website.view_website_config_settings" />
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='website_id']" position="attributes">
+            <attribute name="invisible">0</attribute>
+        </xpath>
+    </field>
+</record>
+
+</data>
+</openerp>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2014 Odoo SA
+     © 2015 Antiun Ingenieria S.L. - Antonio Espinosa
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data noupdate="1">
+<!-- TODO: Refactor with ir.ui.view.template model
+<record id="website.default_website" model="website">
+    <field name="menu_id" ref="website.main_menu"/>
+</record>
+
+<record id="website.main_menu" model="website.menu">
+    <field name="website_id" ref='website.default_website'/>
+</record>
+
+<record id="website.menu_homepage" model="website.menu">
+    <field name="website_id" ref='website.default_website'/>
+</record>
+
+<record id="website.menu_contactus" model="website.menu">
+    <field name="website_id" ref='website.default_website'/>
+</record>
+
+<record id="website.homepage" model="ir.ui.view">
+    <field name="website_id" ref="website.default_website"/>
+    <field name="key">website.homepage</field>
+</record>
+
+<record id="website.contactus" model="ir.ui.view">
+    <field name="website_id" ref="website.default_website"/>
+    <field name="key">website.contactus</field>
+</record>
+
+<record id="website.aboutus" model="ir.ui.view">
+    <field name="website_id" ref="website.default_website"/>
+    <field name="key">website.aboutus</field>
+</record>
+-->
+</data>
+</openerp>
