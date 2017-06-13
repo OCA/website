@@ -7,7 +7,7 @@
     'name': "Website Legal Page",
     'description': 'Add legal information, such as privacy policy',
     'category': 'Website',
-    'version': '9.0.1.0.0',
+    'version': '10.0.1.0.0',
     'depends': [
         'website',
     ],
@@ -19,9 +19,9 @@
     ],
     'author': 'Antiun Ingeniería S.L., '
               'Tecnativa, '
-              'LasLabs Inc, '
+              'LasLabs, '
               'Odoo Community Association (OCA)',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
-    'installable': False,
+    'installable': True,
 }
