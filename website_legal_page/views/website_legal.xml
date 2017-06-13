@@ -6,17 +6,17 @@
           inherit_id="website.layout_footer_copyright"
           name="Legal advice Link">
     <xpath expr="//footer//div/span[@t-field='res_company.name']" position="after">
-        <span>- <a href="/page/legal">Legal advice</a></span>
+        <span>- <a href="/legal">Legal Advice</a></span>
     </xpath>
 </template>
 
-<template id="website.legal" name="Legal advice" page="True">
+<template id="legal" name="Legal Advice" page="True">
   <t t-call="website.layout">
     <div id="wrap">
       <div class="oe_structure">
         <section data-snippet-id="title">
           <h1 class="text-center">
-            Legal advice
+            Legal Advice
           </h1>
         </section>
       </div>
