@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+
+    <!-- Make sure we always have the latest patterns applied -->
+    <function model="website" name="_multi_theme_update"/>
+
+</odoo>
