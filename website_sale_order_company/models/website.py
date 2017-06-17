@@ -18,19 +18,18 @@
 #
 ##############################################################################
 
-from openerp.osv import orm
+from odoo import models
 
 
-class website(orm.Model):
+class Website(models.Model):
     _inherit = 'website'
 
-    def sale_get_order(
-        self, cr, uid, ids, force_create=False, code=None,
-        update_pricelist=None, context=None
-    ):
-        order = super(website, self).sale_get_order(
-            cr, uid, ids, force_create=force_create, code=code,
-            update_pricelist=update_pricelist, context=context)
+    def sale_get_order(self, force_create=False, code=None,
+                       update_pricelist=None
+                       ):
+        order = super(Website, self).sale_get_order(
+            force_create=force_create, code=code,
+            update_pricelist=update_pricelist)
         if order:
             company = order.get_products_company()
             if company:
