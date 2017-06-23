@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# License AGPL-3: Antiun Ingenieria S.L. - Antonio Espinosa
-# See README.rst file on addon root folder for more details
+# Copyright 2016 Tecnativa - Antonio Espinosa
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp import models, fields
+from odoo import models, fields
 
 
 class WebsiteConfigSettings(models.TransientModel):
