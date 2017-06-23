@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+blog_category,blog.category,model_blog_category,,1,0,0,0
+blog_category_edition,blog.category,model_blog_category,website.group_website_designer,1,1,1,1

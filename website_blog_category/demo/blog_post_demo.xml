@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+    <record id="website_blog.blog_post_1" model="blog.post">
+        <field name="website_category_id" ref="blog_category_technology" />
+    </record>
+
+    <record id="website_blog.blog_post_2" model="blog.post">
+        <field name="website_category_id" ref="blog_category_cms" />
+    </record>
+
+</odoo>
