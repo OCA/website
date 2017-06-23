@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# © 2016 LasLabs Inc.
+# Copyright 2016 LasLabs Inc.
+# Copyright 2017 Tecnativa - David Vidal
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp.tests import HttpCase
-from openerp.addons.website_logo.controllers.main import Website
+from odoo.tests import HttpCase
+from ..controllers.main import Website
 import mock
 
-
-imp_cont = 'openerp.addons.website_logo.controllers.main'
+imp_cont = 'odoo.addons.website_logo.controllers.main'
 imp_req = '%s.request' % imp_cont
 
 
@@ -82,8 +82,8 @@ class TestLogo(HttpCase):
     @mock.patch(imp_req)
     def test_default_on_exception(self, imp_mk, str_mk, http_mk, func_mk):
         """ It should send the default logo if there is an exception """
-        with mock.patch('%s.openerp' % imp_cont) as mk:
-            cr_mk = mk.modules.registry.Registry().cursor().__enter__()
-            cr_mk.execute.side_effect = Exception
+        with mock.patch('%s.registry' % imp_cont) as mk:
+            cr_mk = mk.Registry().cursor().__enter__()
+            cr_mk.execute.side_effect = Exception('Mock Exception')
             self.cont_obj.website_logo()
             func_mk.partial().assert_called_once_with('website_nologo.png')
