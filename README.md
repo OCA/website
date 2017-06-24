@@ -20,6 +20,7 @@ addon | version | summary
 --- | --- | ---
 [website_analytics_piwik](website_analytics_piwik/) | 10.0.1.0.0 | Track website users using piwik
 [website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 10.0.1.0.0 | Replace default behavior for internal links (anchor only) with smooth scroll
+[website_blog_category](website_blog_category/) | 10.0.1.0.0 | Website Blog - Categories
 [website_breadcrumb](website_breadcrumb/) | 10.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_container_fluid](website_container_fluid/) | 10.0.1.0.0 | Let you choose between fixed or fluid containers
 [website_crm_recaptcha](website_crm_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
