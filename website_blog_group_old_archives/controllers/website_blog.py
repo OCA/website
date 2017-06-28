@@ -3,6 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 import datetime
+import random
 from openerp import http, tools
 from openerp.http import request
 from openerp.addons.website_blog.controllers.main import WebsiteBlog
@@ -79,7 +80,6 @@ class website_blog(WebsiteBlog):
     def blog_post(self, blog, blog_post, tag_id=None, page=1, enable_editor=None, **post):
         cr, uid, context = request.cr, request.uid, request.context
         blog_post_obj = request.registry['blog.post']
-
         result = super(website_blog, self).blog_post(blog=blog,
                 blog_post=blog_post, tag_id=tag_id, page=page,
                 enable_editor=enable_editor, **post)
@@ -96,7 +96,12 @@ class website_blog(WebsiteBlog):
         # Find next Post
         all_post_ids = blog_post_obj.search(cr, uid, domain, order="create_date desc", context=context)
         # should always return at least the current post
-        current_blog_post_index = all_post_ids.index(blog_post.id)
+        # but if the blogpost id is not present in the current domain we
+        # fetched we will just get a random one.
+        if blog_post.id not in all_post_ids:
+            current_blog_post_index = random.sample(all_post_ids, 1)
+        else:
+           current_blog_post_index = all_post_ids.index(blog_post.id)
         next_post_id = all_post_ids[0 if current_blog_post_index == len(all_post_ids) - 1 \
                             else current_blog_post_index + 1]
         next_post = next_post_id and blog_post_obj.browse(cr, uid, next_post_id, context=context) or False
