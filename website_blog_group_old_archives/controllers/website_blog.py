@@ -78,8 +78,7 @@ class website_blog(WebsiteBlog):
 
     @http.route()
     def blog_post(self, blog, blog_post, tag_id=None, page=1, enable_editor=None, **post):
-        cr, uid, context = request.cr, request.uid, request.context
-        blog_post_obj = request.registry['blog.post']
+        blog_post_obj = request.env['blog.post']
         result = super(website_blog, self).blog_post(blog=blog,
                 blog_post=blog_post, tag_id=tag_id, page=page,
                 enable_editor=enable_editor, **post)
@@ -94,17 +93,19 @@ class website_blog(WebsiteBlog):
             domain += [('category_id', '=', self._cat.id)]
 
         # Find next Post
-        all_post_ids = blog_post_obj.search(cr, uid, domain, order="create_date desc", context=context)
+        all_post_ids = blog_post_obj.search(
+            domain, order="create_date desc"
+        ).ids
         # should always return at least the current post
         # but if the blogpost id is not present in the current domain we
         # fetched we will just get a random one.
         if blog_post.id not in all_post_ids:
-            current_blog_post_index = random.sample(all_post_ids, 1)
+            current_blog_post_index = random.sample(all_post_ids, 1)[0]
         else:
            current_blog_post_index = all_post_ids.index(blog_post.id)
         next_post_id = all_post_ids[0 if current_blog_post_index == len(all_post_ids) - 1 \
                             else current_blog_post_index + 1]
-        next_post = next_post_id and blog_post_obj.browse(cr, uid, next_post_id, context=context) or False
+        next_post = next_post_id and blog_post_obj.browse(next_post_id) or False
 
         result.qcontext['next_post'] = next_post
         return result
