@@ -78,7 +78,7 @@ Thanks to [johnny_automatic](https://openclipart.org/user-detail/johnny_automati
 Contributors
 ------------
 
-* Rafael Blasco <rafabn@antiun.com>
+* Rafael Blasco <rafael.blasco@tecnativa.com>
 * Antonio Espinosa <antonioea@antiun.com>
 * Igor Pastor <igorpg@antiun.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
