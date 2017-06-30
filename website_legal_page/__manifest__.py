@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# © 2015 Antiun Ingeniería S.L. (http://www.antiun.com)
-# © 2015 Antonio Espinosa <antonioea@antiun.com>
+# Copyright 2015 Antonio Espinosa <antonioea@antiun.com>
+# Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
@@ -21,7 +21,7 @@
               'Tecnativa, '
               'LasLabs, '
               'Odoo Community Association (OCA)',
-    'website': 'http://www.antiun.com',
+    'website': 'https://www.tecnativa.com',
     'license': 'AGPL-3',
     'installable': True,
 }
