@@ -26,6 +26,7 @@ addon | version | summary
 [website_crm_recaptcha](website_crm_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 10.0.1.0.0 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha field for Website Forms
+[website_logo](website_logo/) | 10.0.1.0.0 | Website company logo
 [website_no_crawler](website_no_crawler/) | 10.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
 [website_sale_hide_empty_category](website_sale_hide_empty_category/) | 10.0.1.0.0 | Hide any Product Categories that are empty
 [website_sale_line_total](website_sale_line_total/) | 10.0.1.0.0 | Adds separate columns for unit price and total price
@@ -46,7 +47,6 @@ addon | version | summary
 [website_forum_censored](website_forum_censored/) | 9.0.1.0.0 (unported) | Block phrases entered in forum posts and comments.
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
 [website_legal_page](website_legal_page/) | 9.0.1.0.0 (unported) | Website Legal Page
-[website_logo](website_logo/) | 8.0.1.0.0 (unported) | Website company logo
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
 [website_menu_multilang](website_menu_multilang/) | 8.0.0.1.0 (unported) | Website Menu Multilanguage
 [website_portal_contact](website_portal_contact/) | 9.0.1.0.0 (unported) | Allows logged in portal users to manage their contacts
