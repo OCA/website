@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<data>
 
 <template id="loader" inherit_id="website.assets_frontend" name="Cookies script loader">
-    <xpath expr="/t" position="inside">
+    <xpath expr=".">
         <script type="text/javascript" src="/website_cookie_notice/static/src/js/accept_cookies.js"/>
     </xpath>
 </template>
@@ -16,7 +15,7 @@
         class="container-fluid bg-warning cc-cookies">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10">We use cookies in this website. Read about them in our <a href="/page/privacy">privacy policy</a>. To disable them, configure your browser properly. If you keep using this website, you are accepting those.</div>
+                <div class="col-sm-10">We use cookies in this website. Read about them in our <a href="/legal/privacy-policy">privacy policy</a>. To disable them, configure your browser properly. If you keep using this website, you are accepting those.</div>
                 <div class="col-sm-2 text-center">
                     <a class="btn btn-primary" href="#">OK</a>
                 </div>
@@ -31,5 +30,4 @@
     </xpath>
 </template>
 
-</data>
 </odoo>

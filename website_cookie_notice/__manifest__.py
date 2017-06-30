@@ -16,7 +16,7 @@
         'website_legal_page',
     ],
     'data': [
-        'views/website.xml',
+        'templates/website.xml',
     ],
     'installable': True,
     'auto_install': False,
