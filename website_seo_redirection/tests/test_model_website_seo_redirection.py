@@ -6,6 +6,7 @@ from psycopg2 import IntegrityError
 
 from openerp.exceptions import ValidationError
 from openerp.tests.common import TransactionCase
+from ..exceptions import NoOriginError
 
 
 class WebsiteSeoRedirectionCase(TransactionCase):
@@ -80,6 +81,26 @@ class WebsiteSeoRedirectionCase(TransactionCase):
 
         # Search by whatever, return itself
         self.assertEqual("/page/whatever", "/page/whatever")
+
+    def test_ignore_multi_origin(self):
+        """Ignore origin if destination have multiple origin like:
+            /tinyerp -> /odoo
+            /openerp -> /odoo
+        """
+        r_tiny = self.wsr.create({
+            "origin": "/tinyerp",
+            "destination": "/odoo",
+        })
+        r_open = self.wsr.create({
+            "origin": "/openerp",
+            "destination": "/odoo",
+        })
+        # Search by origin, return itself
+        self.assertEqual(r_tiny.destination, r_open.destination)
+
+        # Nothing to do if destination have multiple origin
+        with self.assertRaises(NoOriginError):
+            self.wsr.find_origin(r_open.destination),
 
     def test_no_recursive_first(self):
         """Recursive redirections are forbidden."""
