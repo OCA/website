@@ -1,0 +1,51 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_crm_quick_answer
+# 
+# Translators:
+# Carles Antolí <carlesantoli@hotmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-23 10:22+0000\n"
+"PO-Revision-Date: 2015-11-18 21:15+0000\n"
+"Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
+"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_crm_quick_answer
+#: model:email.template,body_html:website_crm_quick_answer.email_template
+msgid ""
+"<p>\n"
+"            Dear\n"
+"            <b>${object.partner_id and object.partner_id.name or\n"
+"                 object.contact_name}</b>,\n"
+"          </p>\n"
+"        <h3>Thanks for contacting us!</h3>\n"
+"        <p>\n"
+"            We have received your request and will answer you as soon as\n"
+"            possible.\n"
+"        </p>\n"
+"        <p>Please, be patient. Best regards.</p>\n"
+"    "
+msgstr "<p> Benvolgut <b>${object.partner_id i object.partner_id.name o object.contact_name} </b>,</p> <h3> Gràcies per posar-se en contacte amb nosaltres! </h3> <p> Hem rebut seva sol·licitud i li respondrem el més aviat possible. </ p> <p> Si us plau, sigui pacient. Salutacions cordials.</P>"
+
+#. module: website_crm_quick_answer
+#: model:ir.filters,name:website_crm_quick_answer.website_form_leads_filter
+msgid "Coming from the website contact form"
+msgstr "Venint des del formulari de contacte web"
+
+#. module: website_crm_quick_answer
+#: model:ir.actions.server,name:website_crm_quick_answer.server_action
+msgid "Quick response to website contact form"
+msgstr "Resposta ràpida al formulari de contacte web"
+
+#. module: website_crm_quick_answer
+#: model:email.template,subject:website_crm_quick_answer.email_template
+msgid "Thanks for your request"
+msgstr "Gràcies per la seva sol·licitud"
