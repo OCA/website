@@ -11,18 +11,18 @@ msgstr ""
 "POT-Creation-Date: 2017-07-01 01:34+0000\n"
 "PO-Revision-Date: 2017-07-01 01:34+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
-"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
+"Language-Team: Turkish (https://www.transifex.com/oca/teams/23907/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_website_config_settings_piwik_analytics_host
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_website_piwik_analytics_host
 msgid "Piwik host"
-msgstr "Host Piwik"
+msgstr ""
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_website_config_settings_piwik_analytics_id
@@ -47,7 +47,7 @@ msgstr ""
 #. module: website_analytics_piwik
 #: model:ir.model,name:website_analytics_piwik.model_website
 msgid "Website"
-msgstr "Sitio Web"
+msgstr "Web Sitesi"
 
 #. module: website_analytics_piwik
 #: model:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
@@ -58,4 +58,4 @@ msgstr ""
 #. module: website_analytics_piwik
 #: model:ir.model,name:website_analytics_piwik.model_website_config_settings
 msgid "website.config.settings"
-msgstr "website.config.settings"
+msgstr ""
