@@ -3,9 +3,9 @@
 
 <!-- Base templates for submodules -->
 <template id="acceptance_full">
-    I accept the <a href="/page/legal">legal advice</a>, the
-    <a href="/page/privacy">privacy policy</a>, and the
-    <a href="/page/terms">terms of use</a> of this website.
+    I accept the <a href="/legal/advice">legal advice</a>, the
+    <a href="/legal/privacy-policy">privacy policy</a>, and the
+    <a href="/legal/terms-of-use">terms of use</a> of this website.
 </template>
 
 </odoo>
