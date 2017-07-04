@@ -6,7 +6,7 @@
 {
     "name": "Website CRM privacy policy",
     "category": "Website",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "website": "http://www.trey.es",
     "author": "Trey, "
               "Tecnativa, "
