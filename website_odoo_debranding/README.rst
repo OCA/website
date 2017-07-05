@@ -1,5 +1,6 @@
-.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-    :alt: AGPLv3 License
+.. image:: https://img.shields.io/badge/licence-LGPL--3-blue.svg
+   :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
+   :alt: License: LGPL-3
 
 =================================
 Remove Odoo Branding from Website
@@ -12,9 +13,13 @@ This module remove Odoo branding on website:
 Usage
 =====
 
+#. Go to your home page.
+#. Enable or disable *Customize > Footer Copyright > Remove Odoo Promotional
+   Link* at your will. It should be enabled by default.
+
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/9.0
+   :target: https://runbot.odoo-community.org/runbot/186/10.0
 
 Bug Tracker
 ===========
@@ -39,6 +44,7 @@ Contributors
 
 * Antonio Espinosa <antonioea@antiun.com>
 * Vicent Cubells <vicent.cubells@tecnativa.com>
+* Jairo Llopis <jairo.llopis@tecnativa.com>
 
 Maintainer
 ----------
