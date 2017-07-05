@@ -7,14 +7,14 @@
     "version": "10.0.1.0.0",
     "author": "Tecnativa, "
               "Odoo Community Association (OCA)",
-    "website": "http://www.tecnativa.com",
+    "website": "https://www.tecnativa.com",
     "license": "LGPL-3",
     "category": "Website",
     "depends": [
         'website',
     ],
     "data": [
-        "views/disable_odoo.xml",
+        "templates/disable_odoo.xml",
     ],
     "installable": True,
 }
