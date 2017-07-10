@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2015, 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<odoo>
+
+<template id="assets_editor" inherit_id="web_editor.assets_editor">
+    <xpath expr=".">
+        <script type="text/javascript"
+                src="/website_snippet_anchor/static/src/js/anchor_option.js"/>
+        <script type="text/javascript"
+                src="/website_snippet_anchor/static/src/js/link_dialog.js"/>
+    </xpath>
+</template>
+
+</odoo>
