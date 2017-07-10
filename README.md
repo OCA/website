@@ -30,6 +30,7 @@ addon | version | summary
 [website_legal_page](website_legal_page/) | 10.0.1.1.0 | Website Legal Page
 [website_logo](website_logo/) | 10.0.1.0.0 | Website company logo
 [website_no_crawler](website_no_crawler/) | 10.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
+[website_odoo_debranding](website_odoo_debranding/) | 10.0.1.0.0 | Remove odoo.com bindings on website
 [website_sale_hide_empty_category](website_sale_hide_empty_category/) | 10.0.1.0.0 | Hide any Product Categories that are empty
 [website_sale_line_total](website_sale_line_total/) | 10.0.1.0.0 | Adds separate columns for unit price and total price
 [website_seo_redirection](website_seo_redirection/) | 10.0.1.0.0 | Redirect any controller to the URL of your dreams
