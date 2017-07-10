@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- © 2015 Antiun Ingeniería S.L. - Jairo Llopis
-     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<!-- Copyright 2015, 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
 
 <templates id="template" xml:space="preserve">
 
-<t t-extend="website.editor.dialog.link">
+<t t-extend="web_editor.dialog.link">
     <t t-jquery="form>.link-style:has(#link-preview)" t-operation="before">
         <div class="form-horizontal"
              title="Anchors are appended to the URL like http://localhost/#your-anchor">

@@ -28,8 +28,9 @@ virtualenv:
 
 before_install:
   - rvm install ruby --latest
-  - gem install bootstrap-sass
-  - gem install compass --pre
+  - rvm use ruby --latest
+  - gem install compass bootstrap-sass
+  - gem list
 
 install:
   - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
