@@ -23,8 +23,7 @@ class VersioningController(Website):
                 website=True)
     def create_version(self, name, version_id=None):
         if not name:
-            name = fields.Datetime.now().strftime(
-                DEFAULT_SERVER_DATETIME_FORMAT)
+            name = fields.Datetime.now()
         new_version = request.env['website_version_ce.version'].create(
             {'name': name, 'website_id': request.website.id}
         )
@@ -120,13 +119,15 @@ class VersioningController(Website):
     @http.route('/website_version_ce/google_access', type='json', auth="user")
     def google_authorize(self, **kw):
         # Check if client_id and client_secret are set for Google
-        gs_obj = request.env['google.service']
-        gm_obj = request.env['google.management']
+        gs_obj = request.env['google.service'].with_context(
+            kw.get('local_context', {}),
+        )
+        gm_obj = request.env['google.management'].with_context(
+            kw.get('local_context', {}),
+        )
 
-        client_id = gs_obj.get_client_id(
-            'management', context=kw.get('local_context'))
-        client_secret = gs_obj.get_client_secret(
-            'management', context=kw.get('local_context'))
+        client_id = gs_obj.get_client_id('management')
+        client_secret = gs_obj.get_client_secret('management')
         if not client_id or not client_secret:
             dummy, action = request.env['ir.model.data'].get_object_reference(
                 request.cr,
@@ -139,8 +140,7 @@ class VersioningController(Website):
                 "url": '',
                 "action": action
             }
-        url = gm_obj.authorize_google_uri(from_url=kw.get('from_url'),
-                                          context=kw.get('local_context'))
+        url = gm_obj.authorize_google_uri(from_url=kw.get('from_url'))
         return {
             "status": "need_auth",
             "url": url

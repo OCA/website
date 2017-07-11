@@ -128,14 +128,14 @@ class Experiment(models.Model):
         exp = {
             'name': vals['name'],
             'objectiveMetric': self.env['website_version_ce.goals'].browse(
-                [vals['goal_id']]).google_ref,
+                vals['goal_id']).google_ref,
             'status': vals['state'],
             'variations': [
                 {'name': 'master', 'url': 'http://localhost/master'}]
         }
         version_list = vals.get('experiment_version_ids', [])
         for version in version_list:
-            if version == 0:
+            if version[0] == 0:
                 name = self.env['website_version_ce.version'].browse(
                     [version[2]['version_id']])[0].name
                 # We must give a URL for each version in the experiment

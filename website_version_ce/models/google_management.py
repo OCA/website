@@ -160,7 +160,7 @@ class GoogleManagement(models.AbstractModel):
             raise UserError(_("You must configure your account."))
         if datetime.strptime(
                 validity.split('.')[0], DEFAULT_SERVER_DATETIME_FORMAT) < \
-                (fields.Datetime.now() + timedelta(minutes=3)):
+                (datetime.now() + timedelta(minutes=3)):
             token = self.do_refresh_token()
         return token
 
@@ -174,7 +174,7 @@ class GoogleManagement(models.AbstractModel):
             rtoken, self.STR_SERVICE)
 
         icp.set_param('google_%s_token_validity' % self.STR_SERVICE,
-                      fields.Datetime.now() +
+                      datetime.now() +
                       timedelta(seconds=all_token.get('expires_in')))
         icp.set_param('google_%s_token' % self.STR_SERVICE,
                       all_token.get('access_token'))
@@ -203,7 +203,7 @@ class GoogleManagement(models.AbstractModel):
         vals['google_%s_rtoken' % self.STR_SERVICE] = all_token.get(
             'refresh_token')
         vals['google_%s_token_validity' % self.STR_SERVICE] = \
-            fields.Datetime.now() + \
+            datetime.now() + \
             timedelta(seconds=all_token.get('expires_in'))
         vals['google_%s_token' % self.STR_SERVICE] = all_token.get(
             'access_token')
@@ -211,7 +211,7 @@ class GoogleManagement(models.AbstractModel):
         icp.set_param('google_%s_rtoken' % self.STR_SERVICE, all_token.get(
             'refresh_token'))
         icp.set_param('google_%s_token_validity' % self.STR_SERVICE,
-                      fields.Datetime.now() + timedelta(
+                      datetime.now() + timedelta(
                           seconds=all_token.get('expires_in')))
         icp.set_param('google_%s_token' % self.STR_SERVICE, all_token.get(
             'access_token'))

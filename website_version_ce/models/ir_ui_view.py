@@ -52,14 +52,13 @@ class IrUiView(models.Model):
         (in fact with website_id)
         """
         self.ensure_one()
-        master_record = self.search([
+        master_records = self.search([
             ('key', '=', self.key),
             ('version_id', '=', False),
             ('website_id', '=', self.website_id.id),
-            ('limit', "=", 1)
         ])
-        if master_record:
-            master_record.unlink()
+        if master_records:
+            master_records.unlink()
         self.copy({'version_id': None})
 
     @api.multi
@@ -162,9 +161,9 @@ class IrUiView(models.Model):
         """ Switches between enabled and disabled statuses
         """
         recs = self.with_context(active_test=False)
-        for view in recs.browse(self.ids):
+        for view in recs:
             all_id = recs.search([('key', '=', view.key)])
-            for v in recs.browse(all_id):
+            for v in all_id:
                 v.write({'active': not v.active})
 
     @api.model

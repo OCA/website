@@ -72,7 +72,7 @@
                         <field name="state" widget="statusbar" statusbar_visible="running,paused,ended" clickable="True"/>
                     </header>
                     <sheet string="Exp">
-                        <button icon="fa-line-chart" name="website_version_ce.action_analytic" String="Statistics" action="action"
+                        <button icon="fa-line-chart" name="website_version_ce.action_analytic" string="Statistics" action="action"
                             type="action" class="pull-right" />
                         <div class="oe_title">
                             <field name="google_id" invisible="1"/>
