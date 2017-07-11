@@ -24,6 +24,7 @@ addon | version | summary
 [website_breadcrumb](website_breadcrumb/) | 10.0.1.0.0 | Let you have breadcrumbs in website pages
 [website_container_fluid](website_container_fluid/) | 10.0.1.0.0 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 10.0.1.0.0 | Show cookie notice according to cookie law
+[website_crm_privacy_policy](website_crm_privacy_policy/) | 10.0.1.0.0 | Website CRM privacy policy
 [website_crm_recaptcha](website_crm_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 10.0.1.0.0 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha field for Website Forms
@@ -45,7 +46,6 @@ addon | version | summary
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 (unported) | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 (unported) | Add Facebook comments on blog posts
 [website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 (unported) | Website blog Management
-[website_crm_privacy_policy](website_crm_privacy_policy/) | 8.0.1.0.0 (unported) | Website CRM privacy policy
 [website_forum_censored](website_forum_censored/) | 9.0.1.0.0 (unported) | Block phrases entered in forum posts and comments.
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
