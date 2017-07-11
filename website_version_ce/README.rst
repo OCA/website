@@ -55,6 +55,7 @@ Contributors
 * Odoo S.A. <https://www.odoo.com/>
 * Clouder SASU <https://goclouder.net/>
 * Nicolas Petit (Clouder) <https://github.com/nicolas-petit/>
+* Dave Lasley <dave@laslabs.com>
 
 Maintainer
 ----------

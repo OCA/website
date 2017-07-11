@@ -16,12 +16,10 @@ class IrQweb(models.AbstractModel):
     """
     _inherit = 'ir.qweb'
 
-    def render(self, cr, uid, id_or_xml_id, qwebcontext=None, loader=None,
-               context=None):
-        if context is None:
-            context = {}
-        website_id = context.get('website_id')
-        orm_exp_ver = self.pool.get["website_version_ce.experiment.version"]
+    @api.model
+    def render(self, id_or_xml_id, qwebcontext=None, loader=None):
+        website_id = self.env.context.get('website_id')
+        orm_exp_ver = self.env["website_version_ce.experiment.version"]
         if website_id:
             if 'experiment_id' in context:
                 # Search for a corresponding version
@@ -60,4 +58,5 @@ class IrQweb(models.AbstractModel):
                 limit=1, context=context)[0]
 
         return super(IrQweb, self).render(
-            cr, uid, id_or_xml_id, qwebcontext, loader=loader, context=context)
+            id_or_xml_id, qwebcontext, loader=loader,
+        )
