@@ -103,7 +103,7 @@ class website_blog(WebsiteBlog):
             current_blog_post_index = random.sample(all_post_ids, 1)[0]
         else:
            current_blog_post_index = all_post_ids.index(blog_post.id)
-        next_post_id = all_post_ids[0 if current_blog_post_index == len(all_post_ids) - 1 \
+        next_post_id = all_post_ids[0 if current_blog_post_index >= len(all_post_ids) - 1 \
                             else current_blog_post_index + 1]
         next_post = next_post_id and blog_post_obj.browse(next_post_id) or False
 
