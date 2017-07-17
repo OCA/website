@@ -6,7 +6,7 @@
 Website Markdown Snippet
 ========================
 
-This module adds Markdown functionality to the frontend of Odoo Website Builder in de form of a Markdown block.
+This module adds Markdown functionality to the frontend of Odoo Website Builder in the form of a Markdown block.
 https://en.wikipedia.org/wiki/Markdown
 
 Usage
