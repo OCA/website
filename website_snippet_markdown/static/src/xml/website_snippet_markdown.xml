@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <div t-name="website_snippet_markdown.dialog">
+        <textarea data-provide="markdown" rows="10"></textarea>
+    </div>
+</templates>

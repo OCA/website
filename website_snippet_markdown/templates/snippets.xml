@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Snippet menu -->
+    <template id="snippets" inherit_id="website.snippets" name="Markdown Snippets">
+        <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
+            <t t-snippet="website_snippet_markdown.markdown_snippet"
+               t-thumbnail="/website_snippet_markdown/static/src/img/snippet_markdown.png" />
+        </xpath>
+    </template>
+
+    <!-- Snippet options -->
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='background']" position="before">
+            <div data-js="markdown" data-selector=".o_markdown_snippet">
+                <li>
+                    <a href="#" data-change="true"><b>Change Content...</b></a>
+                </li>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Snippet -->
+    <template id="markdown_snippet" name="Markdown">
+        <section class="oe_snippet_body o_markdown_snippet mb32 container" data-options="false">
+        </section>
+    </template>
+</odoo>
