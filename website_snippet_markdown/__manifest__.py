@@ -6,7 +6,7 @@
     'name': 'Website Markdown Snippet',
     'category': 'Website',
     'version': '10.0.1.0.0',
-    'author': 'Onestein',
+    'author': 'Onestein', 'Odoo Community Association (OCA)",
     'license': 'AGPL-3',
     'website': 'http://www.onestein.eu',
     'depends': [
