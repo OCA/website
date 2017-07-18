@@ -1,21 +1,21 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :target: http://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
 ========================
 Website Markdown Snippet
 ========================
 
-This module adds Markdown functionality to the frontend of Odoo Website Builder in the form of a Markdown block.
-https://en.wikipedia.org/wiki/Markdown
+This module extends the functionality of Odoo Website Builder to support the Markdown syntax (https://en.wikipedia.org/wiki/Markdown)
+and to allow you to write in Markdown directly in the frontend of Odoo Website Builder
 
 Usage
 =====
-1. Add/Edit Page or Blog
-2. Add Block > Inner Content > Markdown
-3. Customize > Change Content
-4. Write in Markdown of copy your markdown code
-5. Hit "Save"
+#. Add/Edit Page or Blog in the frontend
+#. Add Block > Inner Content > Markdown
+#. Customize > Change Content
+#. Write in Markdown or copy your Markdown code
+#. Hit "Save"
 
 Your Markdown text will be converted to corresponding HTML.
 
@@ -39,6 +39,8 @@ Contributors
 
 * Dennis Sluijk <d.sluijk@onestein.nl>
 * Frank Schellenberg <f.schellenberg@onestein.nl>
+
+Do not contact contributors directly about support or help with technical issues.
 
 Maintainer
 ----------
