@@ -7,66 +7,91 @@ odoo.define('website_wow.website_wow_editor', function (require) {
 
     var s_options = require('web_editor.snippets.options');
 
-    function previewAnimation ($target) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        $target.removeClass('wow animated').css('animation-name', '');
-        $target.addClass('wow').addClass('animated').one(
-            animationEnd,
-            function () {
-                $(this).removeClass('wow animated').css('animation-name', '');
-            }
-        );
-    }
-
-    function setWowData (dataClass, $target) {
-
-        var wowData = dataClass.split('-');
-        var dataType = wowData[0].replace('o_wow_', '');
-        var dataVal = wowData[1];
-
-        // Note that `.data` cannot be used because it doesn't actually
-        // append to the HTML, so the attribute isn't saved.
-        if ($target.hasClass(dataClass)) {
-            $target.attr('data-wow-' + dataType, dataVal);
-        } else {
-            $target.attr('data-wow-' + dataType, '');
-        }
-
-    };
-
-    // Animations
-    s_options.registry.o_wow = s_options.Class.extend({
+    var Mixin = s_options.Class.extend({
 
         select_class: function (type, value, $li) {
             this._super.apply(this, arguments);
             if (type !== "click") {
                 return;
             }
-            previewAnimation(this.$target);
+            this.setWowData(this.$target, value);
+            this.previewAnimation(this.$target);
         },
 
         clean_for_save: function () {
-            if (this.$target.hasClass('o_wow_animate')) {
-                this.$target.addClass('wow');
-            } else {
-                this.$target.removeClass('wow');
-            }
-        }
-
-    });
-
-    // Duration
-    s_options.registry.o_wow_duration = s_options.Class.extend({
-
-        select_class: function (type, value, $li) {
-            this._super.apply(this, arguments);
-            if (type !== "click") {
-                return;
-            }
-            setWowData($li.data('select_class'), this.$target);
-            previewAnimation(this.$target);
+            this.cleanForSave(this.$target);
         },
 
+        clearAnimationStyles: function ($target) {
+            var styles = [
+                'visibility',
+                'animation-name',
+                'animation-duration',
+                'animation-delay',
+                'animation-offset',
+                'animation-iteration',
+            ];
+            $target.removeClass('wow animated');
+            _.each(styles, function(style) {
+                $target.css(style, '');
+            });
+        },
+
+        previewAnimation: function ($target) {
+            var self = this;
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            this.clearAnimationStyles($target);
+            $target.addClass('wow').addClass('animated').one(
+                animationEnd,
+                function () {
+                    self.clearAnimationStyles($(this));
+                }
+            );
+        },
+
+        cleanForSave: function ($target) {
+            if ($target.hasClass('o_wow_animate')) {
+                $target.addClass('wow');
+            } else {
+                $target.removeClass('wow');
+            }
+        },
+
+        setWowData: function ($target, dataClass) {
+
+            var wowData = dataClass.split('-');
+            var dataType = wowData[0].replace('o_wow_', '');
+            var dataVal = wowData[1];
+
+            if (!dataVal) {
+                return;
+            }
+
+            // Note that `.data` cannot be used because it doesn't actually
+            // append to the HTML, so the attribute isn't saved.
+            if ($target.hasClass(dataClass)) {
+                $target.attr('data-wow-' + dataType, dataVal);
+            } else {
+                $target.attr('data-wow-' + dataType, '');
+            }
+
+        }
+
     })
+
+    // Animations
+    s_options.registry.o_wow = Mixin.extend({});
+
+    // Duration
+    s_options.registry.o_wow_duration = Mixin.extend({});
+
+    // Delay
+    s_options.registry.o_wow_delay = Mixin.extend({});
+
+    // Offset
+    s_options.registry.o_wow_offset = Mixin.extend({});
+
+    // Iteration
+    s_options.registry.o_wow_iteration = Mixin.extend({});
 
 })
