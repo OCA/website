@@ -10,7 +10,7 @@ Provides animations for your Odoo website using WowJS, which is powered by `anim
 
 This is created as a replacement to Odoo's `website_animate` module, which uses proprietary
 animations build by Odoo for Odoo. Animate.css is a more widely used framework that is more
-efficient, and frankly more beautiful than the proprietary ones.
+efficient, better maintained, and contains significantly more animations.
 
 .. image:: static/description/screenshot.png?raw=true
    :alt: Data Sliders
@@ -39,7 +39,7 @@ Credits
 Images
 ------
 
-* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
+* Doge Icon - Pradoabr - http://pradoabr.deviantart.com/
 
 Contributors
 ------------
