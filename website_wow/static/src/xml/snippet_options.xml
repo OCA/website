@@ -21,7 +21,9 @@
     <section class="o_not-animable" name="My Static Element" />
     ===============================================
     -->
-    <template id="snippet_options" name="Options" inherit_id="website.snippet_options">
+    <template id="snippet_options"
+              name="WOW Options"
+              inherit_id="website.snippet_options">
 
         <xpath expr="(//div[@data-js])[last()]" position="after">
 
@@ -30,6 +32,7 @@
             <t t-set="o_wow_selector"
                t-value="', '.join([s + ':not(.o_not-animable)' for s in o_animate_elements])" />
 
+            <!-- Animations -->
             <div data-js="o_wow" t-att-data-selector="o_wow_selector">
                 <li class="dropdown-submenu o_wow_options">
                     <a href="#">
@@ -40,7 +43,7 @@
                             <a href="#">Disable Animation</a>
                         </li>
                         <li class="divider" />
-                        <li class="dropdown-submenu o_wow_category_attention_seekers">
+                        <li class="dropdown-submenu o_wow_type_attention_seekers">
                             <a href="#">Attention Seekers</a>
                             <ul class="dropdown-menu">
                                 <li data-select_class="o_wow_animate bounce">
@@ -72,7 +75,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown-submenu o_wow_category_attention_seekers">
+                        <li class="dropdown-submenu o_wow_type_bouncing_entrances">
                             <a href="#">Bouncing Entrances</a>
                             <ul class="dropdown-menu">
                                 <li data-select_class="o_wow_animate bounceIn">
@@ -92,7 +95,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown-submenu o_wow_category_attention_seekers">
+                        <li class="dropdown-submenu o_wow_type_bouncing_exits">
                             <a href="#">Bouncing Exits</a>
                             <ul class="dropdown-menu">
                                 <li data-select_class="o_wow_animate bounceOut">
@@ -116,6 +119,175 @@
                 </li>
             </div>
 
+            <!-- Durations -->
+            <div data-js="o_wow_duration" t-att-data-selector="o_wow_selector">
+                  <li class="dropdown-submenu">
+                      <a href="#">
+                          <i class="fa fa-clock">
+                              Wow Duration
+                          </i>
+                          <ul class="dropdown-menu o_wow_advanced_duration">
+                              <li data-select_class="o_wow_duration-1s">
+                                  <a href="#">1s</a>
+                              </li>
+                              <li data-select_class="o_wow_duration-2s">
+                                  <a href="#">2s</a>
+                              </li>
+                              <li data-select_class="o_wow_duration-3s">
+                                  <a href="#">3s</a>
+                              </li>
+                              <li data-select_class="o_wow_duration-4s">
+                                  <a href="#">4s</a>
+                              </li>
+                              <li data-select_class="o_wow_duration-5s">
+                                  <a href="#">5s</a>
+                              </li>
+                              <li data-select_class="o_wow_duration-6s">
+                                  <a href="#">6s</a>
+                              </li>
+                              <li data-select_class="o_wow_duration-7s">
+                                  <a href="#">7s</a>
+                              </li>
+                              <li data-select_class="o_wow_duration-8s">
+                                  <a href="#">8s</a>
+                              </li>
+                              <li data-select_class="o_wow_duration-9s">
+                                  <a href="#">9s</a>
+                              </li>
+                              <li data-select_class="o_wow_duration-10s">
+                                  <a href="#">10s</a>
+                              </li>
+                          </ul>
+                      </a>
+                  </li>
+            </div>
+            
+            <div data-js="o_wow_delay" t-att-data-selector="o_wow_selector">
+                  <li class="dropdown-submenu">
+                      <a href="#">
+                          <i class="fa fa-clock">
+                              Wow Delay
+                          </i>
+                          <ul class="dropdown-menu o_wow_advanced_delay">
+                              <li data-select_class="o_wow_delay-1s">
+                                  <a href="#">1s</a>
+                              </li>
+                              <li data-select_class="o_wow_delay-2s">
+                                  <a href="#">2s</a>
+                              </li>
+                              <li data-select_class="o_wow_delay-3s">
+                                  <a href="#">3s</a>
+                              </li>
+                              <li data-select_class="o_wow_delay-4s">
+                                  <a href="#">4s</a>
+                              </li>
+                              <li data-select_class="o_wow_delay-5s">
+                                  <a href="#">5s</a>
+                              </li>
+                              <li data-select_class="o_wow_delay-6s">
+                                  <a href="#">6s</a>
+                              </li>
+                              <li data-select_class="o_wow_delay-7s">
+                                  <a href="#">7s</a>
+                              </li>
+                              <li data-select_class="o_wow_delay-8s">
+                                  <a href="#">8s</a>
+                              </li>
+                              <li data-select_class="o_wow_delay-9s">
+                                  <a href="#">9s</a>
+                              </li>
+                              <li data-select_class="o_wow_delay-10s">
+                                  <a href="#">10s</a>
+                              </li>
+                          </ul>
+                      </a>
+                  </li>
+            </div>
+            
+            <div data-js="o_wow_offset" t-att-data-selector="o_wow_selector">
+                  <li class="dropdown-submenu">
+                      <a href="#">
+                          <i class="fa fa-clock">
+                              Wow Offset
+                          </i>
+                          <ul class="dropdown-menu o_wow_advanced_offset">
+                              <li data-select_class="o_wow_offset-1">
+                                  <a href="#">1</a>
+                              </li>
+                              <li data-select_class="o_wow_offset-2">
+                                  <a href="#">2</a>
+                              </li>
+                              <li data-select_class="o_wow_offset-3">
+                                  <a href="#">3</a>
+                              </li>
+                              <li data-select_class="o_wow_offset-4">
+                                  <a href="#">4</a>
+                              </li>
+                              <li data-select_class="o_wow_offset-5">
+                                  <a href="#">5</a>
+                              </li>
+                              <li data-select_class="o_wow_offset-6">
+                                  <a href="#">6</a>
+                              </li>
+                              <li data-select_class="o_wow_offset-7">
+                                  <a href="#">7</a>
+                              </li>
+                              <li data-select_class="o_wow_offset-8">
+                                  <a href="#">8</a>
+                              </li>
+                              <li data-select_class="o_wow_offset-9">
+                                  <a href="#">9</a>
+                              </li>
+                              <li data-select_class="o_wow_offset-10">
+                                  <a href="#">10</a>
+                              </li>
+                          </ul>
+                      </a>
+                  </li>
+            </div>
+
+            <div data-js="o_wow_iteration" t-att-data-selector="o_wow_selector">
+                  <li class="dropdown-submenu">
+                      <a href="#">
+                          <i class="fa fa-clock">
+                              Wow Iteration
+                          </i>
+                          <ul class="dropdown-menu o_wow_advanced_iteration">
+                              <li data-select_class="o_wow_iteration-1">
+                                  <a href="#">1</a>
+                              </li>
+                              <li data-select_class="o_wow_iteration-2">
+                                  <a href="#">2</a>
+                              </li>
+                              <li data-select_class="o_wow_iteration-3">
+                                  <a href="#">3</a>
+                              </li>
+                              <li data-select_class="o_wow_iteration-4">
+                                  <a href="#">4</a>
+                              </li>
+                              <li data-select_class="o_wow_iteration-5">
+                                  <a href="#">5</a>
+                              </li>
+                              <li data-select_class="o_wow_iteration-6">
+                                  <a href="#">6</a>
+                              </li>
+                              <li data-select_class="o_wow_iteration-7">
+                                  <a href="#">7</a>
+                              </li>
+                              <li data-select_class="o_wow_iteration-8">
+                                  <a href="#">8</a>
+                              </li>
+                              <li data-select_class="o_wow_iteration-9">
+                                  <a href="#">9</a>
+                              </li>
+                              <li data-select_class="o_wow_iteration-10">
+                                  <a href="#">10</a>
+                              </li>
+                          </ul>
+                      </a>
+                  </li>
+            </div>
+            
         </xpath>
 
     </template>
