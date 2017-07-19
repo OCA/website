@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2017 LasLabs Inc.
+    License GPL-3 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+
+<odoo>
+
+    <!-- Implement the same interface as Odoo SA in order to be somewhat cross-compatible:
+
+    How to define an animable element in your theme
+    ===============================================
+    <xpath expr="//t[@t-set='o_animate_elements']" position="after">
+        <t t-set="o_animate_elements" t-value="o_animate_elements + ['.myclass']"/>
+    </xpath>
+    ===============================================
+
+    To specifically exclude elements from the possibility of animations, use `o_not-animable` class:
+    ===============================================
+    <section class="o_not-animable" name="My Static Element" />
+    ===============================================
+    -->
+    <template id="snippet_options" name="Options" inherit_id="website.snippet_options">
+
+        <xpath expr="(//div[@data-js])[last()]" position="after">
+
+            <t t-set="o_animate_elements"
+               t-value="['.o_animable', 'section', 'img', '.fa', '[class^=\'col-md\']', '.btn']" />
+            <t t-set="o_wow_selector"
+               t-value="', '.join([s + ':not(.o_not-animable)' for s in o_animate_elements])" />
+
+            <div data-js="o_wow" t-att-data-selector="o_wow_selector">
+                <li class="dropdown-submenu o_wow_options">
+                    <a href="#">
+                        <i class="fa fa-rocket">Wow!</i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li data-select_class="">
+                            <a href="#">Disable Animation</a>
+                        </li>
+                        <li class="divider" />
+                        <li class="dropdown-submenu o_wow_category_attention_seekers">
+                            <a href="#">Attention Seekers</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate bounce">
+                                    <a href="#">Bounce</a>
+                                </li>
+                                <li data-select_class="o_wow_animate flash">
+                                    <a href="#">Flash</a>
+                                </li>
+                                <li data-select_class="o_wow_animate pulse">
+                                    <a href="#">Pulse</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rubberBand">
+                                    <a href="#">Rubber Band</a>
+                                </li>
+                                <li data-select_class="o_wow_animate shake">
+                                    <a href="#">Shake</a>
+                                </li>
+                                <li data-select_class="o_wow_animate swing">
+                                    <a href="#">Swing</a>
+                                </li>
+                                <li data-select_class="o_wow_animate tada">
+                                    <a href="#">Ta-Da</a>
+                                </li>
+                                <li data-select_class="o_wow_animate wobble">
+                                    <a href="#">Wobble</a>
+                                </li>
+                                <li data-select_class="o_wow_animate jello">
+                                    <a href="#">Jello</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_category_attention_seekers">
+                            <a href="#">Bouncing Entrances</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate bounceIn">
+                                    <a href="#">Bounce in</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceInDown">
+                                    <a href="#">Bounce in Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceInLeft">
+                                    <a href="#">Bounce in Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceInRight">
+                                    <a href="#">Bounce in Right</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceInUp">
+                                    <a href="#">Bounce in Up</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_category_attention_seekers">
+                            <a href="#">Bouncing Exits</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate bounceOut">
+                                    <a href="#">Bounce out</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceOutDown">
+                                    <a href="#">Bounce out Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceOutLeft">
+                                    <a href="#">Bounce out Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceOutRight">
+                                    <a href="#">Bounce out Right</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceOutUp">
+                                    <a href="#">Bounce out Up</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+        </xpath>
+
+    </template>
+
+</odoo>
