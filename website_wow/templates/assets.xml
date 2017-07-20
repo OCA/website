@@ -10,12 +10,12 @@
               name="WOW Frontend Assets"
               inherit_id="website.assets_frontend"
               >
-        <xpath expr="//link[last()]" position="after">
+        <xpath expr="." position="inside">
+
             <link href="/website_wow/static/lib/css/animate.css"
                   rel="stylesheet"
                   type="text/css" />
-        </xpath>
-        <xpath expr="//script[last()]" position="after">
+
             <script src="/website_wow/static/lib/js/wow.js"
                     type="application/javascript" />
             <script src="/website_wow/static/src/js/website_wow.js"
@@ -26,11 +26,6 @@
               name="WOW Editor Assets"
               inherit_id="website.assets_editor"
               >
-        <xpath expr="//link[last()]" position="after">
-            <link href="/website_wow/static/src/less/website_wow.editor.less"
-                  rel="stylesheet"
-                  type="text/less" />
-        </xpath>
         <xpath expr="//script[last()]" position="after">
             <script src="/website_wow/static/src/js/website_wow.editor.js"
                     type="application/javascript" />
