@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2015, 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<odoo>
+
+<template id="snippet_options" inherit_id="web_editor.snippet_options">
+    <xpath expr=".">
+        <div data-js="anchor"
+             data-selector="section, .carousel">
+            <li data-anchor_ask=""
+                data-only="click"
+                title="Use anchors to go directly to a section of your page, appending #anchor to the URL">
+                <a>
+                    <i class="fa fa-hashtag"/>
+                    Choose anchor
+                </a>
+            </li>
+        </div>
+    </xpath>
+</template>
+
+</odoo>
