@@ -15,6 +15,7 @@ python:
 env:
   global:
   - VERSION="10.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
+  - PHANTOMJS_VERSION="2.1.2" WEBSITE_REPO="1"
   - TRANSIFEX_USER='transbot@odoo-community.org'
   - secure: eNfbQI7Pkp3mjTFQgjrVVldmyE/Yn3+iCMVykhXppC85dJaCFMpjwPUfZa7p38tnnH7jhng2JL2tAXnJ4uOry0B3m9xYR7fNYXg/9uj1988FHvpDhfDFEKcMF8s70mr11HRijj6U8p6WDt/0ygD6aZ0LJzWzxhMFecFavOb6XOw=
   matrix:
@@ -25,12 +26,6 @@ env:
 
 virtualenv:
   system_site_packages: true
-
-before_install:
-  - rvm install ruby --latest
-  - rvm use ruby --latest
-  - gem install compass bootstrap-sass
-  - gem list
 
 install:
   - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
