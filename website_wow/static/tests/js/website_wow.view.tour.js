@@ -2,7 +2,7 @@
    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
 */
 
-odoo.define('website_wow.website_wow', function (require) {
+odoo.define('website_wow.view', function (require) {
     'use strict';
 
     var base = require('web_editor.base');
@@ -18,12 +18,18 @@ odoo.define('website_wow.website_wow', function (require) {
             this.wow.init();
         },
 
-        bindListeners: function () {
-
-        },
-
+        /* Use this method in child modules to control the WowJS settings.
+            The WowJS defaults are currently being returned, primarily to
+            serve as documentation.
+         */
         wowSettings: function () {
-            return {};
+            return {
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            };
         }
 
     }

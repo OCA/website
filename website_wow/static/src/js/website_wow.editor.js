@@ -2,7 +2,7 @@
    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
 */
 
-odoo.define('website_wow.website_wow_editor', function (require) {
+odoo.define('website_wow.editor', function (require) {
     'use strict';
 
     var s_options = require('web_editor.snippets.options');

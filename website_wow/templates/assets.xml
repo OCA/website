@@ -18,7 +18,7 @@
 
             <script src="/website_wow/static/lib/js/wow.js"
                     type="application/javascript" />
-            <script src="/website_wow/static/src/js/website_wow.js"
+            <script src="/website_wow/static/src/js/website_wow.view.js"
                     type="application/javascript" />
         </xpath>
     </template>
@@ -26,8 +26,10 @@
               name="WOW Editor Assets"
               inherit_id="website.assets_editor"
               >
-        <xpath expr="//script[last()]" position="after">
+        <xpath expr="." position="inside">
             <script src="/website_wow/static/src/js/website_wow.editor.js"
+                    type="application/javascript" />
+            <script src="/website_wow/static/tests/js/website_wow.editor.tour.js"
                     type="application/javascript" />
         </xpath>
     </template>
