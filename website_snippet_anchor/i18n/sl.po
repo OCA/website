@@ -3,15 +3,15 @@
 # * website_snippet_anchor
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: website (8.0)\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-05 01:59+0000\n"
-"PO-Revision-Date: 2015-12-04 14:11+0000\n"
-"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
-"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
+"POT-Creation-Date: 2017-07-21 10:04+0000\n"
+"PO-Revision-Date: 2017-07-21 10:04+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,55 +19,53 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #. module: website_snippet_anchor
+#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
+msgid ""
+"<i class=\"fa fa-hashtag\"/>\n"
+"                    Choose anchor"
+msgstr ""
+
+#. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:12
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:23
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:12
 #, python-format
 msgid "Anchor"
 msgstr "Sidro"
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:35
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:62
 #, python-format
-msgid "Anchor already exists: "
-msgstr "Sidro že obstaja:"
+msgid "Anchor '%s' already exists or is not valid"
+msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:10
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:10
 #, python-format
 msgid "Anchors are appended to the URL like http://localhost/#your-anchor"
 msgstr "Sidra so dodana URL povezavam, kot npr. http://localhost/#your-anchor"
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:15
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:22
 #, python-format
 msgid "Choose anchor"
 msgstr "Izbira sidra"
 
 #. module: website_snippet_anchor
-#. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:28
-#, python-format
-msgid "Name"
-msgstr "Naziv"
-
-#. module: website_snippet_anchor
-#: view:website:website.snippet_options
-msgid "Set anchor"
-msgstr "Nastavitev sidra"
-
-#. module: website_snippet_anchor
-#: view:website:website.snippet_options
+#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
 msgid ""
 "Use anchors to go directly to a section of your page, appending #anchor to "
 "the URL"
-msgstr "Uporabite sidra za neposreden prehod na del strani, tako, da dodate #anchor URL povezavi"
+msgstr ""
+"Uporabite sidra za neposreden prehod na del strani, tako, da dodate #anchor "
+"URL povezavi"
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:19
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:19
 #, python-format
 msgid "your-anchor"
 msgstr "vaše-sidro"
