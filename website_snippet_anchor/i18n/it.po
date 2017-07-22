@@ -3,15 +3,15 @@
 # * website_snippet_anchor
 # 
 # Translators:
-# Paolo Valier, 2016
+# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: website (8.0)\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2016-03-13 17:14+0000\n"
-"Last-Translator: Paolo Valier\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
+"POT-Creation-Date: 2017-07-21 10:04+0000\n"
+"PO-Revision-Date: 2017-07-21 10:04+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,55 +19,54 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_snippet_anchor
+#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
+msgid ""
+"<i class=\"fa fa-hashtag\"/>\n"
+"                    Choose anchor"
+msgstr ""
+
+#. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:12
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:23
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:12
 #, python-format
 msgid "Anchor"
 msgstr "Riferimento"
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:35
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:62
 #, python-format
-msgid "Anchor already exists: "
-msgstr "Il riferimento esiste già:"
+msgid "Anchor '%s' already exists or is not valid"
+msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:10
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:10
 #, python-format
 msgid "Anchors are appended to the URL like http://localhost/#your-anchor"
-msgstr "I Riferimenti vengono aggiunti all'URL così: http://localhost/#riferimento"
+msgstr ""
+"I Riferimenti vengono aggiunti all'URL così: http://localhost/#riferimento"
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:15
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:22
 #, python-format
 msgid "Choose anchor"
 msgstr "Scegli Riferimento"
 
 #. module: website_snippet_anchor
-#. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:28
-#, python-format
-msgid "Name"
-msgstr "Nome"
-
-#. module: website_snippet_anchor
-#: view:website:website.snippet_options
-msgid "Set anchor"
-msgstr "Imposta il riferimento"
-
-#. module: website_snippet_anchor
-#: view:website:website.snippet_options
+#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
 msgid ""
 "Use anchors to go directly to a section of your page, appending #anchor to "
 "the URL"
-msgstr "Usa i riferimenti per puntare direttamente a una sezione della pagina aggiungendo #riferimento alla URL"
+msgstr ""
+"Usa i riferimenti per puntare direttamente a una sezione della pagina "
+"aggiungendo #riferimento alla URL"
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:19
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:19
 #, python-format
 msgid "your-anchor"
 msgstr "tuo-riferimento"
