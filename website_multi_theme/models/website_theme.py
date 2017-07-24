@@ -35,19 +35,30 @@ class WebsiteTheme(models.Model):
 
     def _convert_assets(self):
         """Generate assets for converted themes"""
+        Asset = self.env["website.theme.asset"]
         for one in self.filtered("converted_theme_addon"):
-            # Drop all previous assets
-            one.asset_ids.unlink()
             # Get all views owned by the converted theme addon
             refs = self.env["ir.model.data"].search([
                 ("module", "=", one.converted_theme_addon),
                 ("model", "=", "ir.ui.view"),
             ])
+            existing = frozenset(one.mapped("asset_ids.name"))
+            expected = frozenset(refs.mapped("complete_name"))
+            dangling = tuple(existing - expected)
             # Create a new asset for each theme view
-            for ref in refs:
-                one.asset_ids |= self.env["website.theme.asset"].new({
-                    "name": ref.complete_name,
+            for ref in expected - existing:
+                _logger.debug("Creating asset %s for theme %s", ref, one.name)
+                one.asset_ids |= Asset.new({
+                    "name": ref,
                 })
+            # Delete all dangling assets
+            if dangling:
+                _logger.debug(
+                    "Removing dangling assets for theme %s: %s",
+                    one.name, dangling)
+                Asset.search([("name", "in", dangling)]).unlink()
+        # Turn all assets multiwebsite-only
+        Asset._find_and_deactivate_views()
 
 
 class WebsiteThemeAsset(models.Model):
@@ -72,24 +83,18 @@ class WebsiteThemeAsset(models.Model):
     view_id = fields.Many2one(
         comodel_name="ir.ui.view",
         string="Assets view",
-        compute="_compute_view_id",
-        store=True,
         help="View that will be enabled when this theme is used in any "
              "website, and disabled otherwise. Usually used to load assets.",
     )
 
-    @api.depends("name")
-    def _compute_view_id(self):
-        """Get a view record from the specified reference.
-
-        If a view is found, it will make sure it is disabled, to make it
-        multiwebsite-only.
-        """
-        for one in self:
+    @api.model
+    def _find_and_deactivate_views(self):
+        """Find available views and make them multiwebsite-only."""
+        for one in self.search([("view_id", "=", False)]):
             try:
                 one.view_id = self.env.ref(one.name)
                 _logger.debug(
-                    "Found asset with ref %s: %r",
+                    "Found view with ref %s: %r",
                     one.name,
                     one.view_id,
                 )
@@ -97,8 +102,11 @@ class WebsiteThemeAsset(models.Model):
                 one.view_id = False
                 _logger.debug("Ref not found: %s", one.name)
                 continue
-            if one.view_id.active:
-                # We need to remember this view was active
-                one.view_id.was_active = True
-                # Disable the main view, to make it multiwebsite-only
-                one.view_id.active = False
+        deactivate = self.mapped("view_id").filtered("active")
+        if deactivate:
+            _logger.debug("Deactivating views %s", deactivate.mapped("name"))
+            # Disable them and set them to be enabled for multi theme mode
+            deactivate.write({
+                "active": False,
+                "was_active": True,
+            })

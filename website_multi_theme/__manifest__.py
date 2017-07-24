@@ -23,7 +23,6 @@
         "data/themes_private.xml",
         "templates/assets.xml",
         "templates/patterns.xml",
-        "data/update.xml",
     ],
     "demo": [
         "demo/pages.xml",

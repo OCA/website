@@ -52,6 +52,7 @@ To configure this module, you need to:
 
 #. Go to *Website Admin > Configuration > Settings* and choose or create
     a *Website*.
+#. Press *Advanced > Multiwebsite theme > Reload*.
 #. In *Advanced > Multiwebsite theme*, pick one of the available themes.
 
 Once you save, any website that has no *Multiwebsite theme* selected will have,
@@ -118,7 +119,8 @@ Known issues / Roadmap
   * https://github.com/odoo/odoo/pull/17970
 * Theme picker should include some kind of thumbnail if possible.
 * If you install any of the supported themes after installing this addon, you
-  will have to reinstall this addon to make it notice the change.
+  will have to press *Reload* in the website config wizard to make it notice
+  the change.
 * If you install any unsupported theme along with this addon, it would possibly
   become the base for all those supported, which can easily lead to weird
   situations and errors.

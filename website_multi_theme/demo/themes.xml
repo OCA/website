@@ -9,8 +9,7 @@
     <!-- Assets that define the demo theme -->
     <template id="theme_demo"
               inherit_id="website.assets_frontend"
-              name="Demo multiwebsite theme"
-              active="True">
+              name="Demo multiwebsite theme">
         <xpath expr=".">
             <link
                 rel="stylesheet"
@@ -22,6 +21,8 @@
     <record model="website.theme" id="demo_multi">
         <field name="name">Multiwebsite Demo Theme</field>
     </record>
+
+    <!-- List provided assets  -->
     <record model="website.theme.asset" id="demo_multi_asset_1">
         <field name="name">website_multi_theme.theme_demo</field>
         <field name="theme_id" ref="demo_multi"/>
@@ -30,6 +31,6 @@
     <!-- Themes should always call this method after adding their stuff,
          to make users get immediate availability, insead of having to
          reinstall ``website_multi_theme``. -->
-    <function model="website" name="_multi_theme_update"/>
+    <function model="website.theme" name="_convert_assets"/>
 
 </odoo>

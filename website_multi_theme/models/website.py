@@ -173,14 +173,3 @@ class Website(models.Model):
                 website.display_name,
                 website.multi_theme_view_ids,
             )
-
-    @api.model
-    def _multi_theme_update(self):
-        """Apply multi website theme (de)activations on all websites."""
-        _logger.info("Reloading available multi-website themes")
-        # Reload available multi-website native themes
-        self.env["website.theme.asset"].search([])._compute_view_id()
-        # Reload available single-website converted themes
-        self.env["website.theme"].search([])._convert_assets()
-        # Recreate custom views for themes activated in any website
-        return self.search([])._multi_theme_activate()
