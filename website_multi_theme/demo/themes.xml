@@ -7,7 +7,7 @@
          developed. For further instructions, see README. -->
 
     <!-- Assets that define the demo theme -->
-    <template id="theme_demo"
+    <template id="theme_demo_assets_frontend"
               inherit_id="website.assets_frontend"
               name="Demo multiwebsite theme">
         <xpath expr=".">
@@ -24,13 +24,15 @@
 
     <!-- List provided assets  -->
     <record model="website.theme.asset" id="demo_multi_asset_1">
-        <field name="name">website_multi_theme.theme_demo</field>
+        <field name="name">website_multi_theme.theme_demo_assets_frontend</field>
         <field name="theme_id" ref="demo_multi"/>
     </record>
 
     <!-- Themes should always call this method after adding their stuff,
          to make users get immediate availability, insead of having to
-         reinstall ``website_multi_theme``. -->
-    <function model="website.theme" name="_convert_assets"/>
+         reload themes. -->
+    <function model="website.theme"
+              name="_convert_assets"
+              eval="([ref('demo_multi')])"/>
 
 </odoo>
