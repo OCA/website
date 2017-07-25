@@ -3,15 +3,15 @@
 # * website_snippet_marginless_gallery
 # 
 # Translators:
-# Mikhail - <expromt.core@gmail.com>, 2016
+# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: website (8.0)\n"
+"Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 11:34+0000\n"
-"PO-Revision-Date: 2016-01-15 21:24+0000\n"
-"Last-Translator: Mikhail - <expromt.core@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/oca/OCA-website-8-0/language/ru/)\n"
+"POT-Creation-Date: 2017-10-13 00:49+0000\n"
+"PO-Revision-Date: 2017-10-13 00:49+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Russian (https://www.transifex.com/oca/teams/23907/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,58 +19,56 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. module: website_snippet_marginless_gallery
-#: view:website:website.snippets
-msgid ""
-"All photos must have the same height or the\n"
-"                                gallery layout will be broken"
+#. openerp-web
+#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:49
+#, python-format
+msgid "%s is not a valid value"
 msgstr ""
 
 #. module: website_snippet_marginless_gallery
-#: view:website:website.snippet_options
+#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+msgid ""
+"All photos must have the same height or the\n"
+"                            gallery layout will be broken"
+msgstr ""
+
+#. module: website_snippet_marginless_gallery
+#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.snippet_options
 msgid "Change Images Height"
 msgstr "Изменить высоту изображений"
 
 #. module: website_snippet_marginless_gallery
+#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.snippet_options
+msgid "Do not trim images"
+msgstr ""
+
+#. module: website_snippet_marginless_gallery
 #. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:32
+#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:26
 #, python-format
 msgid "Height for all images in gallery"
 msgstr "Высота для всех изображений в галерее."
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:33
+#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:27
 #, python-format
 msgid "Image height in pixels"
 msgstr "Высота изображений в пикселях"
 
 #. module: website_snippet_marginless_gallery
-#: view:website:website.snippets
+#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 msgid "Lorem ipsum"
 msgstr ""
 
 #. module: website_snippet_marginless_gallery
-#: view:website:website.snippets
+#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna."
 msgstr ""
 
 #. module: website_snippet_marginless_gallery
-#: view:website:website.snippets
-msgid "Marginless Gallery"
-msgstr ""
-
-#. module: website_snippet_marginless_gallery
-#: view:website:website.snippets
+#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 msgid "Our Gallery"
-msgstr ""
-
-#. module: website_snippet_marginless_gallery
-#: view:website:website.snippet_options
-msgid ""
-"section,\n"
-"            .carousel,\n"
-"            .parallax,\n"
-"            .marginless-gallery .img"
 msgstr ""
