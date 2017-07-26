@@ -125,6 +125,14 @@ Known issues / Roadmap
   become the base for all those supported, which can easily lead to weird
   situations and errors.
 
+Required bug patch
+------------------
+
+You need to include this code in your Odoo instance for the addon to work.
+No workaround possible for this one:
+
+* https://github.com/odoo/odoo/pull/18462
+
 Credits
 =======
 
