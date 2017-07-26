@@ -90,7 +90,10 @@ class WebsiteThemeAsset(models.Model):
     @api.model
     def _find_and_deactivate_views(self):
         """Find available views and make them multiwebsite-only."""
-        for one in self.search([("view_id", "=", False)]):
+        linkable = self.search([
+            "|", ("view_id", "=", False), ("view_id.active", "=", True),
+        ])
+        for one in linkable:
             try:
                 one.view_id = self.env.ref(one.name)
                 _logger.debug(
@@ -101,12 +104,14 @@ class WebsiteThemeAsset(models.Model):
             except ValueError:
                 one.view_id = False
                 _logger.debug("Ref not found: %s", one.name)
-                continue
-        deactivate = self.mapped("view_id").filtered("active")
-        if deactivate:
-            _logger.debug("Deactivating views %s", deactivate.mapped("name"))
-            # Disable them and set them to be enabled for multi theme mode
-            deactivate.write({
-                "active": False,
-                "was_active": True,
-            })
+            else:
+                if one.view_id.active:
+                    _logger.debug("Deactivating view %s", one.name)
+                    # Disable it and set it to be enabled in multi theme mode
+                    one.view_id.write({
+                        "active": False,
+                        "was_active": True,
+                    })
+        # Clean Qweb cache
+        IrQweb = self.env["ir.qweb"]
+        IrQweb._get_asset_content.clear_cache(IrQweb)
