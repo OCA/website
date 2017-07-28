@@ -9,6 +9,31 @@ odoo.define('website_snippet_calendar', function(require) {
         base = require('web_editor.base'),
         _t = core._t;
 
+    function prepare_events(events, all_filters){
+        for(var i = 0; i < events.length; i++) {
+            events[i].start = Date.parseExact(events[i].start, "yyyy-MM-dd HH:mm:ss");
+            events[i].end = Date.parseExact(events[i].end, "yyyy-MM-dd HH:mm:ss");
+            var start_offset = events[i].start.getTimezoneOffset();
+            var end_offset = events[i].end.getTimezoneOffset();
+            start_offset = start_offset - (start_offset * 2);
+            end_offset = end_offset - (end_offset * 2);
+            events[i].start.addMinutes(start_offset);
+            events[i].end.addMinutes(end_offset);
+
+            for(var j = 0; j < events[i].attendees.length; j++) {
+                events[i].title += '<img title="' + events[i].attendees[j].name + '" class="attendee_head" src="/web/binary/image?model=res.partner&field=image_small&id=' + events[i].attendees[j].id + '" />';
+            }
+
+            if (all_filters[events[i].color] !== undefined) {
+                events[i].className = 'calendar_color_'+ all_filters[events[i].color];
+            }
+            else  {
+                events[i].className = 'calendar_color_'+ all_filters[-1];
+            }
+        }
+        return events;
+    };
+
     base.ready().done(function() {
         //Reset
         var $calendar = $('.s_calendar .calendar');
@@ -52,28 +77,7 @@ odoo.define('website_snippet_calendar', function(require) {
 
                         //Mutate data for calendar
                         var events = result.events;
-                        for(var i = 0; i < events.length; i++) {
-                            events[i].start = Date.parseExact(events[i].start, "yyyy-MM-dd HH:mm:ss");
-                            events[i].end = Date.parseExact(events[i].end, "yyyy-MM-dd HH:mm:ss");
-                            var start_offset = events[i].start.getTimezoneOffset();
-                            var end_offset = events[i].end.getTimezoneOffset();
-                            start_offset = start_offset - (start_offset * 2);
-                            end_offset = end_offset - (end_offset * 2);
-                            events[i].start.addMinutes(start_offset);
-                            events[i].end.addMinutes(end_offset);
-
-                            for(var j = 0; j < events[i].attendees.length; j++) {
-                                events[i].title += '<img title="' + events[i].attendees[j].name + '" class="attendee_head" src="/web/binary/image?model=res.partner&field=image_small&id=' + events[i].attendees[j].id + '" />';
-                            }
-
-                            if (all_filters[events[i].color] !== undefined) {
-                                events[i].className = 'calendar_color_'+ all_filters[events[i].color];
-                            }
-                            else  {
-                                events[i].className = 'calendar_color_'+ all_filters[-1];
-                            }
-                        }
-                        callback(events);
+                        callback(prepare_events(events, all_filters));
                     }
                 });
             },

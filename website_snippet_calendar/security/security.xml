@@ -2,7 +2,7 @@
 <!-- Copyright 2017 Onestein
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
-<openerp>
+<odoo>
     <data>
 
         <record id="website_snippet_calendar_event_public" model="ir.rule">
@@ -39,4 +39,4 @@
         </record>
 
     </data>
-</openerp>
+</odoo>
