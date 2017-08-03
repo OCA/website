@@ -14,12 +14,11 @@ class WebsiteAutocomplete(Website):
             model, domain, fields, limit,
         )
         self.record_ids = request.env[model].search(domain)
-        for field in fields:
-            if '.' in field:
-                for rec_id in self.record_ids:
-                    res[rec_id.id][field] = self._get_relation_data(
-                        rec_id, field,
-                    )
+        for field in filter(lambda f: '.' in f, fields):
+            for rec_id in self.record_ids:
+                res[rec_id.id][field] = self._get_relation_data(
+                    rec_id, field,
+                )
         return res
 
     def _get_relation_data(self, record_id, field_name):
