@@ -48,25 +48,26 @@ odoo.define('website_field_autocomplete_related.field_autocomplete', function(re
     start: function() {
       this._super();
       var self = this;
+      var relationGroup = this.$target.data('relate-send') || this.$target.data('relate-recv');
+      if (!relationGroup) {
+        return
+      }
       if (this.valueField != 'id') {
         this.valueField = 'id';
         this.fields.push('id');
       }
-      var relationGroup = this.$target.data('relate-send') || this.$target.data('relate-recv');
-      if (relationGroup) {
-        this.$related = $('*[data-relate-recv="' + relationGroup + '"]')
-          .add(this.$target);
-        this.$related.each(function() {
-          var $this = $(this);
-          var field = $this.data('recv-field') || $this.data('query-field');
-          if (field){
-            self.fields.push(field);
-          } 
-        });
-        this.$target.on('autocompleteselect', function(event, ui) {
-          self.autocompleteselect(event, ui);
-        });
-      }
+      this.$related = $('*[data-relate-recv="' + relationGroup + '"]')
+        .add(this.$target);
+      this.$related.each(function() {
+        var $this = $(this);
+        var field = $this.data('recv-field') || $this.data('query-field');
+        if (field){
+          self.fields.push(field);
+        }
+      });
+      this.$target.on('autocompleteselect', function(event, ui) {
+        self.autocompleteselect(event, ui);
+      });
     },
     
   });
