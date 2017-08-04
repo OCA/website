@@ -353,6 +353,10 @@
                               Wow Duration
                           </i>
                           <ul class="dropdown-menu o_wow_advanced_duration">
+                              <li data-select_class="">
+                                  <a href="#">Default</a>
+                              </li>
+                              <li class="divider" />
                               <li data-select_class="o_wow_duration-1s">
                                   <a href="#">1s</a>
                               </li>
@@ -395,6 +399,10 @@
                               Wow Delay
                           </i>
                           <ul class="dropdown-menu o_wow_advanced_delay">
+                              <li data-select_class="">
+                                  <a href="#">Default</a>
+                              </li>
+                              <li class="divider" />
                               <li data-select_class="o_wow_delay-1s">
                                   <a href="#">1s</a>
                               </li>
@@ -437,6 +445,10 @@
                               Wow Offset
                           </i>
                           <ul class="dropdown-menu o_wow_advanced_offset">
+                              <li data-select_class="">
+                                  <a href="#">Default</a>
+                              </li>
+                              <li class="divider" />
                               <li data-select_class="o_wow_offset-1">
                                   <a href="#">1</a>
                               </li>
@@ -479,6 +491,10 @@
                               Wow Iteration
                           </i>
                           <ul class="dropdown-menu o_wow_advanced_iteration">
+                              <li data-select_class="">
+                                  <a href="#">Default</a>
+                              </li>
+                              <li class="divider" />
                               <li data-select_class="o_wow_iteration-1">
                                   <a href="#">1</a>
                               </li>
