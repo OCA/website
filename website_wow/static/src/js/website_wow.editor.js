@@ -11,9 +11,6 @@ odoo.define('website_wow.editor', function (require) {
 
         select_class: function (type, value, $li) {
             this._super.apply(this, arguments);
-            if (type !== "click") {
-                return;
-            }
             this.setWowData(this.$target, value);
             this.previewAnimation(this.$target);
         },

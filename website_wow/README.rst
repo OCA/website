@@ -12,11 +12,16 @@ This is created as a replacement to Odoo's *website_animate* module, which uses 
 animations build by Odoo for Odoo. Animate.css is a more widely used framework that is more
 efficient, better maintained, and contains significantly more animations.
 
-.. image:: static/description/screenshot.png?raw=true
-   :alt: Data Sliders
-
 Usage
 =====
+
+Animations are in the "Customize" menu of the website editor.
+
+.. image:: static/description/Wow_Menu.png?raw=true
+   :alt: Wow Menu
+
+The actual animations are located in the "Wow!" section, and settings for the chosen animation
+are all prefixed with "Wow".
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot

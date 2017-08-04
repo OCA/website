@@ -36,7 +36,7 @@
             <div data-js="o_wow" t-att-data-selector="o_wow_selector">
                 <li class="dropdown-submenu o_wow_options">
                     <a href="#">
-                        <i class="fa fa-rocket">Wow!</i>
+                        <i class="fa fa-film">Wow!</i>
                     </a>
                     <ul class="dropdown-menu">
                         <li data-select_class="">
@@ -387,7 +387,7 @@
                       </a>
                   </li>
             </div>
-            
+
             <div data-js="o_wow_delay" t-att-data-selector="o_wow_selector">
                   <li class="dropdown-submenu">
                       <a href="#">
@@ -429,7 +429,7 @@
                       </a>
                   </li>
             </div>
-            
+
             <div data-js="o_wow_offset" t-att-data-selector="o_wow_selector">
                   <li class="dropdown-submenu">
                       <a href="#">
