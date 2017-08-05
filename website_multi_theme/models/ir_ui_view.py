@@ -42,3 +42,10 @@ class IrUiView(models.Model):
             model,
         )
         return filter(lambda item: item[1] in allowed_view_ids, result)
+
+    # workaround before PR is merged https://github.com/odoo/odoo/pull/18462
+    def _read_template_keys(self):
+        res = super(IrUiView, self)._read_template_keys()
+        if 'website_id' not in res:
+            res += ['website_id']
+        return res
