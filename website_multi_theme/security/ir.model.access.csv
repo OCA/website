@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_website_theme_public","Website theme","model_website_theme",,1,0,0,0
+"access_website_theme_asset_public","Website theme asset","model_website_theme_asset",,1,0,0,0
+"access_website_theme","Website theme manager","model_website_theme","website.group_website_designer",1,1,1,1
+"access_website_theme_asset","Website theme asset manager","model_website_theme_asset","website.group_website_designer",1,1,1,1

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+
+    <!-- Use this file as an example of how a multi-website theme should be
+         developed. For further instructions, see README. -->
+
+    <!-- Assets that define the demo theme -->
+    <template id="theme_demo_assets_frontend"
+              inherit_id="website.assets_frontend"
+              name="Demo multiwebsite theme">
+        <xpath expr=".">
+            <link
+                rel="stylesheet"
+                href="/website_multi_theme/static/src/css/demo.less"/>
+        </xpath>
+    </template>
+
+    <!-- Record that lets website admin to choose this theme -->
+    <record model="website.theme" id="demo_multi">
+        <field name="name">Multiwebsite Demo Theme</field>
+    </record>
+
+    <!-- List provided assets  -->
+    <record model="website.theme.asset" id="demo_multi_asset_1">
+        <field name="name">website_multi_theme.theme_demo_assets_frontend</field>
+        <field name="theme_id" ref="demo_multi"/>
+    </record>
+
+    <!-- Themes should always call this method after adding their stuff,
+         to make users get immediate availability, insead of having to
+         reload themes. -->
+    <function model="website.theme"
+              name="_convert_assets"
+              eval="([ref('demo_multi')])"/>
+
+</odoo>

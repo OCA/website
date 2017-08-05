@@ -14,6 +14,7 @@ python:
 
 env:
   global:
+  - WEBSITE_REPO="1"
   - VERSION="10.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
   - PHANTOMJS_VERSION="2.1.2" WEBSITE_REPO="1"
   - TRANSIFEX_USER='transbot@odoo-community.org'
