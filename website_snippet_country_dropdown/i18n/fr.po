@@ -4,13 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
+# Quentin THEURET <odoo@kerpeo.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-09 02:51+0000\n"
-"PO-Revision-Date: 2017-06-09 02:51+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"POT-Creation-Date: 2017-07-25 07:50+0000\n"
+"PO-Revision-Date: 2017-07-25 07:50+0000\n"
+"Last-Translator: Quentin THEURET <odoo@kerpeo.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: website_snippet_country_dropdown
 #: model:website.menu,name:website_snippet_country_dropdown.demo_page_link
 msgid "Country dropdown demo"
-msgstr ""
+msgstr "Démo de la liste déroulante des pays"
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
@@ -31,12 +32,12 @@ msgstr "Autre label"
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
 msgid "Submit (you will see the GET parameters in the URL)"
-msgstr ""
+msgstr "Envoyer (vous verrez les paramètres GET dans l'URL)"
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
 msgid "Test here the country dropdown snippet behavior"
-msgstr ""
+msgstr "Testez ici le comportement de la liste déroulante des pays"
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
@@ -50,6 +51,8 @@ msgstr "C'est un formulaire"
 msgid ""
 "Write the \"name\" attribute for the input what will be sent with the form."
 msgstr ""
+"Saisissez le \"nom\" de l'attribut pour l'entrée qui sera envoyée avec le "
+"formulaire."
 
 #. module: website_snippet_country_dropdown
 #. openerp-web
@@ -57,8 +60,9 @@ msgstr ""
 #, python-format
 msgid "You can modify the label directly with the website editor."
 msgstr ""
+"Vous pouvez modifier le libellé directement avec l'éditeur de sites Web."
 
 #. module: website_snippet_country_dropdown
 #: model:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
 msgid "Your Label"
-msgstr ""
+msgstr "Votre libellé"

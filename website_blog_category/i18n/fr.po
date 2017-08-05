@@ -4,13 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
+# Quentin THEURET <odoo@kerpeo.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-24 02:52+0000\n"
-"PO-Revision-Date: 2017-06-24 02:52+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"POT-Creation-Date: 2017-07-25 07:50+0000\n"
+"PO-Revision-Date: 2017-07-25 07:50+0000\n"
+"Last-Translator: Quentin THEURET <odoo@kerpeo.com>, 2017\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,40 +23,40 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_category_all_post_ids
 #: model:ir.ui.view,arch_db:website_blog_category.blog_category_template
 msgid "All Posts"
-msgstr ""
+msgstr "Tous les articles"
 
 #. module: website_blog_category
 #: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_form
 msgid "All Posts (Including Children)"
-msgstr ""
+msgstr "Tous les articles (incluant les articles enfants)"
 
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_category_blog_id
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #. module: website_blog_category
 #: model:ir.actions.act_window,name:website_blog_category.blog_category_action
 #: model:ir.ui.menu,name:website_blog_category.blog_category_menu
 #: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_tree
 msgid "Blog Categories"
-msgstr ""
+msgstr "Catégories du blog"
 
 #. module: website_blog_category
 #: model:ir.model,name:website_blog_category.model_blog_category
 #: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_form
 msgid "Blog Category"
-msgstr ""
+msgstr "Catégorie du blog"
 
 #. module: website_blog_category
 #: model:ir.model,name:website_blog_category.model_blog_post
 msgid "Blog Post"
-msgstr ""
+msgstr "Article de blog"
 
 #. module: website_blog_category
 #: model:ir.model,name:website_blog_category.model_blog_blog
 msgid "Blogs"
-msgstr ""
+msgstr "Blogs"
 
 #. module: website_blog_category
 #: code:addons/website_blog_category/models/blog_category.py:83
@@ -64,27 +65,29 @@ msgid ""
 "Cannot assign a parent/child relationship between categories in disparate "
 "blogs."
 msgstr ""
+"Impossible d'assigner une relation parent/enfant entre des catégories de "
+"blogs différents."
 
 #. module: website_blog_category
 #: model:ir.model.fields,help:website_blog_category.field_blog_category_name
 msgid "Canonical"
-msgstr ""
+msgstr "Canonique"
 
 #. module: website_blog_category
 #: model:ir.ui.view,arch_db:website_blog_category.blog_category_template
 msgid "Categories"
-msgstr ""
+msgstr "Catégories"
 
 #. module: website_blog_category
 #: sql_constraint:blog.category:0
 msgid "Category name already exists in this blog."
-msgstr ""
+msgstr "Le nom de cette catégorie existe déjà dans ce blog."
 
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_category_child_ids
 #: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_form
 msgid "Children"
-msgstr ""
+msgstr "Enfant"
 
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_category_create_uid
@@ -99,7 +102,7 @@ msgstr "Date"
 #. module: website_blog_category
 #: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_form
 msgid "Direct Posts"
-msgstr ""
+msgstr "Articles directs"
 
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_category_display_name
@@ -129,29 +132,29 @@ msgstr "Dernière mise à jour le"
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_category_name
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_category_parent_id
 msgid "Parent"
-msgstr ""
+msgstr "Parent"
 
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_category_post_count
 msgid "Post Count"
-msgstr ""
+msgstr "Nombre d'articles"
 
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_category_post_ids
 msgid "Posts"
-msgstr ""
+msgstr "Articles"
 
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_blog_website_category_ids
 msgid "Website Categories"
-msgstr ""
+msgstr "Catégories du site Web"
 
 #. module: website_blog_category
 #: model:ir.model.fields,field_description:website_blog_category.field_blog_post_website_category_id
 msgid "Website Category"
-msgstr ""
+msgstr "Catégorie du site Web"
