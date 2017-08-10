@@ -41,16 +41,6 @@ Following is an example:
            data-model="res.partner"
            />
 
-    <label for="company">Company</label>
-    <input type="text"
-           name="company"
-           class="js_website_autocomplete"
-           data-query-field="name"
-           data-relate-recv="res_partner"
-           data-relate-send="_"
-           data-model="res.company"
-           />
-
     <label for="name">Phone</label>
     <input type="text"
            name="phone"
