@@ -10,32 +10,35 @@
         <xpath expr="//div[@class='row']" position="after">
             <div class="row">
                 <h1>Partner Autocomplete Related:</h1>
+                <h4>The below autocomplete implementation links multiple fields to the same autocomplete logic.</h4>
                 <div class="row">
-                    <label for="name">Name</label>
+                    <label for="name">URL</label>
+                    <input type="text"
+                           name="url"
+                           class="js_website_autocomplete"
+                           data-query-field="url"
+                           data-relate-recv="act_url"
+                           data-model="ir.actions.act_url"
+                           />
+                </div>
+                <div class="row">
+                    <label for="phone">Name</label>
                     <input type="text"
                            name="name"
                            class="js_website_autocomplete"
                            data-query-field="name"
-                           data-relate-recv="res_partner"
-                           data-model="res.partner"
+                           data-relate-recv="act_url"
+                           data-model="ir.actions.act_url"
                            />
                 </div>
                 <div class="row">
-                    <label for="phone">Phone</label>
+                    <label for="street">Target</label>
                     <input type="text"
-                           name="phone"
+                           name="target"
                            class="js_website_autocomplete"
-                           data-query-field="phone"
-                           data-relate-recv="res_partner"
-                           data-model="res.partner"
-                           />
-                </div>
-                <div class="row">
-                    <label for="street">Street</label>
-                    <input type="text"
-                           name="street"
-                           data-query-field="street"
-                           data-relate-recv="res_partner"
+                           data-query-field="target"
+                           data-relate-recv="act_url"
+                           data-model="ir.actions.act_url"
                            />
                 </div>
             </div>
