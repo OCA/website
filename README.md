@@ -25,6 +25,7 @@ addon | version | summary
 [website_container_fluid](website_container_fluid/) | 10.0.1.0.0 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 10.0.1.0.0 | Show cookie notice according to cookie law
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 10.0.1.0.0 | Website CRM privacy policy
+[website_crm_quick_answer](website_crm_quick_answer/) | 10.0.1.0.0 | Add an automatic answer for contacts asking for info
 [website_crm_recaptcha](website_crm_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 10.0.1.0.0 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha field for Website Forms
