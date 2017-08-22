@@ -20,6 +20,9 @@
                     type="application/javascript" />
             <script src="/website_wow/static/src/js/website_wow.view.js"
                     type="application/javascript" />
+
+            <script src="/website_wow/static/tests/js/website_wow.editor.tour.js"
+                    type="application/javascript" />
         </xpath>
     </template>
     <template id="assets_editor"
@@ -28,8 +31,6 @@
               >
         <xpath expr="." position="inside">
             <script src="/website_wow/static/src/js/website_wow.editor.js"
-                    type="application/javascript" />
-            <script src="/website_wow/static/tests/js/website_wow.editor.tour.js"
                     type="application/javascript" />
         </xpath>
     </template>
