@@ -42,6 +42,7 @@ odoo.define('website_wow.tour_editor', function (require) {
         content: 'Click an animable element.',
         trigger: 'main h2:contains("Headline")',
         run: function () {
+            debugger;
             $('main h2:contains("Headline")').click();
         }
     }, {
