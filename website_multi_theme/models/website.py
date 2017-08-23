@@ -39,7 +39,7 @@ class Website(models.Model):
     def create(self, vals):
         result = super(Website, self).create(vals)
         if "multi_theme_id" in vals:
-            self._multi_theme_activate()
+            result._multi_theme_activate()
         return result
 
     def write(self, vals):
@@ -72,8 +72,8 @@ class Website(models.Model):
         except ValueError:
             pass
         else:
-            # If developing or testing, update view arch always
-            if not config.get("without_demo") or config.get("dev_mode"):
+            # If we develop and want xml reloading, update view arch always
+            if "xml" in config.get("dev_mode"):
                 result.arch = pattern.arch
             return result
         # Copy patterns only for current website
@@ -123,6 +123,11 @@ class Website(models.Model):
         for website in self:
             # Websites without multi theme need to clean their previous views
             if not website.multi_theme_id:
+                _logger.info(
+                    "Deleting multi website theme views for %s: %s",
+                    website.display_name,
+                    website.multi_theme_view_ids,
+                )
                 website.multi_theme_view_ids.unlink()
                 continue
             # Duplicate multi theme patterns for this website

@@ -18,6 +18,7 @@ class UICase(HttpCase):
             })
             # Create a 127.0.0.1 host, different to localhost
             ip = localhost.copy({
+                "name": "127.0.0.1",
                 "domain": "127.0.0.1",
                 "multi_theme_id": False,
             })
@@ -29,10 +30,10 @@ class UICase(HttpCase):
             })
 
     def test_localhost(self):
-        """Check localhost downloads its default assets."""
-        result = html.document_fromstring(
-            self.url_open("http://localhost:%d" % PORT).read()
-        )
+        """Check localhost downloads its multiwebsite-enabled assets."""
+        response = self.url_open("http://localhost:%d" % PORT)
+        self.assertEqual(response.getcode(), 200)
+        result = html.document_fromstring(response.read())
         self.assertFalse(result.xpath(
             "//head/link[contains(@href, 'web.assets_frontend')]"))
         self.assertTrue(result.xpath(
@@ -40,10 +41,10 @@ class UICase(HttpCase):
                'website_multi_theme.auto_assets_website')]"""))
 
     def test_127_0_0_1(self):
-        """Check 127.0.0.1 downloads its multiwebsite-enabled assets."""
-        result = html.document_fromstring(
-            self.url_open("http://127.0.0.1:%d" % PORT).read()
-        )
+        """Check 127.0.0.1 downloads its default assets."""
+        response = self.url_open("http://127.0.0.1:%d" % PORT)
+        self.assertEqual(response.getcode(), 200)
+        result = html.document_fromstring(response.read())
         self.assertTrue(result.xpath(
             "//head/link[contains(@href, 'web.assets_frontend')]"))
         self.assertFalse(result.xpath(
