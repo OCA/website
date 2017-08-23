@@ -44,10 +44,6 @@ Known issues / Roadmap
 Bug Tracker
 ===========
 
-
-Bug Tracker
-===========
-
 Bugs are tracked on `GitHub Issues
 <https://github.com/OCA/website/issues>`_. In case of trouble, please
 check there if your issue has already been reported. If you spotted it first,
@@ -60,7 +56,7 @@ Contributors
 ------------
 
 * Rafael Blasco <rafael.blasco@tecnativa.com>
-* Jairo Llopis <jairo.llopis8@tecnativa.com>
+* Jairo Llopis <jairo.llopis@tecnativa.com>
 * David Vidal <david.vidal@tecnativa.com>
 
 Maintainer
