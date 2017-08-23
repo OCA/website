@@ -22,23 +22,3 @@ class IrUiView(models.Model):
         help="Indicates if the view was originally active before converting "
              "the single website theme that owns it to multi website mode.",
     )
-
-    # TODO Remove when merged upstream
-    # HACK https://github.com/odoo/odoo/pull/17635
-    @api.model
-    def get_inheriting_views_arch(self, view_id, model):
-        """Skip inheriting views that belong to different websites.
-
-        :return list:
-            [(view_arch, view_id), ...]
-        """
-        website_id = self.env.context.get("website_id")
-        domain = [("website_id", "=", False)]
-        if website_id:
-            domain = ["|"] + domain + [("website_id", "=", website_id)]
-        allowed_view_ids = set(self.search(domain).ids)
-        result = super(IrUiView, self).get_inheriting_views_arch(
-            view_id,
-            model,
-        )
-        return filter(lambda item: item[1] in allowed_view_ids, result)
