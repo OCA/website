@@ -3,6 +3,7 @@
 # License APL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo.tests.common import HttpCase
+from odoo.tools import mute_logger
 
 
 class TestController(HttpCase):
@@ -11,6 +12,7 @@ class TestController(HttpCase):
         response = self.url_open(page)
         self.assertEqual(response.getcode(), code)
 
+    @mute_logger("odoo.addons.website.models.ir_ui_view")
     def test_unknown(self):
         """ It should return a 404 for unknown pages. """
         self._test_page('/legal/no-page', 404)
