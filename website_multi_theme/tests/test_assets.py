@@ -17,7 +17,7 @@ class UICase(HttpCase):
                 "multi_theme_id": env.ref("website_multi_theme.demo_multi").id,
             })
             # Create a 127.0.0.1 host, different to localhost
-            ip = localhost.copy({
+            ip = env["website"].create({
                 "name": "127.0.0.1",
                 "domain": "127.0.0.1",
                 "multi_theme_id": False,
