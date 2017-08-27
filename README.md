@@ -43,7 +43,7 @@ addon | version | summary
 [website_portal_purchase](website_portal_purchase/) | 9.0.1.0.0 | Add purchase orders and quotation in the frontend portal
 [website_portal_sale_v10](website_portal_sale_v10/) | 9.0.1.0.0 | Add your sales document in the frontend portal (sales order, quotations, invoices)
 [website_portal_v10](website_portal_v10/) | 9.0.1.0.0 | Account Management Frontend for your Customers
-[website_seo_redirection](website_seo_redirection/) | 9.0.1.1.0 | Redirect any controller to the URL of your dreams
+[website_seo_redirection](website_seo_redirection/) | 9.0.1.1.1 | Redirect any controller to the URL of your dreams
 [website_snippet_anchor](website_snippet_anchor/) | 9.0.1.0.0 | Allow to reach a concrete section in the page
 [website_snippet_big_button](website_snippet_big_button/) | 9.0.1.0.0 | A snippet that adds two big buttons
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 9.0.1.0.0 | Allow to select country in a dropdown
