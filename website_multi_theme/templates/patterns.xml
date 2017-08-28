@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+
+    <template
+        id="layout_pattern"
+        inherit_id="website.layout"
+        name="Template for replacing assets_frontend"
+        active="False">
+        <!-- Replace assets to make good use of caching -->
+        <xpath expr="//t[@t-call-assets='web.assets_frontend'][@t-js='false']"
+               position="attributes">
+            <attribute name="t-call-assets">{theme_view}</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call-assets='web.assets_frontend'][@t-css='false']"
+               position="attributes">
+            <attribute name="t-call-assets">{theme_view}</attribute>
+        </xpath>
+    </template>
+
+    <template
+        id="assets_pattern"
+        inherit_id="website.assets_frontend"
+        name="Empty assets_frontend pattern"
+        primary="True"
+        active="False">
+        <xpath expr="."/>
+    </template>
+
+</odoo>
