@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+
+    <record id="view_website_config_settings" model="ir.ui.view">
+        <field name="name">Add theme selector</field>
+        <field name="model">website.config.settings</field>
+        <field name="inherit_id" ref="website.view_website_config_settings"/>
+        <field name="arch" type="xml">
+            <field name="website_id" position="replace"/>
+            <field name="website_name" position="before">
+                <field name="website_id"/>
+            </field>
+            <field name="module_website_form_editor" position="after">
+                <label for="multi_theme_id"/>
+                <div>
+                    <field name="multi_theme_id" class="oe_inline"/>
+                    <button icon="fa-refresh"
+                            string="Reload"
+                            type="object"
+                            class="oe_inline"
+                            name="multi_theme_reload"/>
+                </div>
+            </field>
+        </field>
+    </record>
+
+</odoo>
