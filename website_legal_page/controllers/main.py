@@ -4,6 +4,8 @@
 
 from odoo import http
 from odoo.addons.website.controllers.main import Website
+from six import raise_from
+from werkzeug.exceptions import NotFound
 
 
 class Legal(Website):
@@ -16,4 +18,7 @@ class Legal(Website):
         website=True,
     )
     def show_legal_page(self, page, **kwargs):
-        return self.page('website_legal_page.%s' % page, **kwargs)
+        try:
+            return self.page('website_legal_page.%s' % page, **kwargs)
+        except ValueError as error:
+            raise_from(NotFound, error)
