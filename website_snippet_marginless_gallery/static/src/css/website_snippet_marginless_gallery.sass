@@ -1,0 +1,28 @@
+/*! Copyright 2015-2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+
+.row .img
+    .marginless-gallery &
+        // As the name of the module says...
+        margin: 0px
+
+        // Background changes depending on div and layout size
+        background:
+            size: cover
+            position: center
+            repeat: no-repeat
+
+        // Center inner text
+        display: table
+        text-align: center
+        > div
+            display: table-cell
+            vertical-align: middle
+
+        // Ensure images get displayed if content is removed
+        &:empty
+            display: block
+
+    // Do not trim images
+    .marginless-gallery-contain &
+        background-size: contain

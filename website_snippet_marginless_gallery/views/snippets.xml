@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2015-2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+    <template id="s_marginless_gallery" name="Marginless Gallery">
+        <section class="marginless-gallery mt16 mb32">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Our Gallery</h2>
+                        <h3 class="text-muted">
+                            All photos must have the same height or the
+                            gallery layout will be broken
+                        </h3>
+                    </div>
+                    <section class="img col-sm-6 col-md-3 oe_img_bg" style="background-image: url('/website/static/src/img/banner/wood.jpg');">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 col-md-3 oe_green">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 col-md-3 oe_img_bg" style="background-image: url('/website/static/src/img/banner/business_guy.jpg');">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 col-md-3 oe_blue_light">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 col-md-3 oe_blue">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 col-md-3 oe_orange">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 col-md-3 oe_purple">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 col-md-3 oe_black">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 col-md-3 oe_dark">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 col-md-3 oe_img_bg" style="background-image: url('/website/static/src/img/banner/mountains.jpg');">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 oe_red col-md-3">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="img col-sm-6 oe_img_bg col-md-3" style="background-image: url('/website/static/src/img/parallax/parallax_bg.jpg');">
+                        <div>
+                            <h3>Lorem ipsum</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']//div[@class='o_panel_body']">
+            <t
+                t-snippet="website_snippet_marginless_gallery.s_marginless_gallery"
+                t-thumbnail="/website_snippet_marginless_gallery/static/description/icon.png"/>
+        </xpath>
+    </template>
+
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr=".">
+            <div data-js="marginless_gallery"
+                 data-selector=".marginless-gallery">
+                <li data-change_images_height="" data-only="click">
+                    <a>Change Images Height</a>
+                </li>
+                <li data-toggle_class="marginless-gallery-contain">
+                    <a>Do not trim images</a>
+                </li>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>
