@@ -47,6 +47,7 @@ addon | version | summary
 [website_snippet_anchor](website_snippet_anchor/) | 9.0.1.0.0 | Allow to reach a concrete section in the page
 [website_snippet_big_button](website_snippet_big_button/) | 9.0.1.0.0 | A snippet that adds two big buttons
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 9.0.1.0.0 | Allow to select country in a dropdown
+[website_snippet_marginless_gallery](website_snippet_marginless_gallery/) | 9.0.1.0.0 | Add a snippet to have a marginless image gallery
 
 
 Unported addons
