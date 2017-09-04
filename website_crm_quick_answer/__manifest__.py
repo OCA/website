@@ -8,7 +8,6 @@
     'category': 'Customer Relationship Management',
     'version': '10.0.1.0.0',
     'depends': [
-        'marketing_campaign',
         'website_crm',
     ],
     'data': [
