@@ -14,8 +14,7 @@
     'data': [
         "data/automation.xml",
     ],
-    'author': 'Antiun Ingeniería S.L., '
-              'Tecnativa, '
+    'author': 'Tecnativa, '
               'Odoo Community Association (OCA)',
     'website': 'https://www.tecnativa.com',
     'license': 'AGPL-3',
