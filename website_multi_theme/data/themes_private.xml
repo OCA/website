@@ -66,9 +66,9 @@
         <field name="converted_theme_addon">theme_loftspace</field>
     </record>
 
-    <record model="website.theme" id="mongolia_multi">
-        <field name="name">Multiwebsite Mongolia Theme</field>
-        <field name="converted_theme_addon">theme_mongolia</field>
+    <record model="website.theme" id="monglia_multi">
+        <field name="name">Multiwebsite Monglia Theme</field>
+        <field name="converted_theme_addon">theme_monglia</field>
     </record>
 
     <record model="website.theme" id="nano_multi">
