@@ -11,13 +11,6 @@ odoo.define('website_wow.editor', function (require) {
 
         select_class: function (type, value, $li) {
             this._super.apply(this, arguments);
-            if (type !== 'click') {
-                /* This is required because allowing for animation previews creates a race condition
-                   with the click to save, if the click to save is performed while the animation
-                   preview is still displaying.
-                */
-                return;
-            }
             this.setWowData(this.$target, value);
             this.previewAnimation(this.$target);
         },
