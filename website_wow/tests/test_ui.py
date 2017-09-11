@@ -7,7 +7,10 @@ from odoo.tests import HttpCase
 
 class TestUi(HttpCase):
 
-    def test_subtotals(self):
+    post_install = True
+    at_install = False
+
+    def test_wow(self):
         tour_module = 'odoo.__DEBUG__.services["web_tour.tour"]'
         self.phantom_js(
             url_path='/',
