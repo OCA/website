@@ -19,19 +19,17 @@ odoo.define('website_wow.tour_editor', function (require) {
         run: 'drag_and_drop'
     }, {
         content: 'Click an animable element.',
-        trigger: 'main h2:contains("Headline")',
-        run: function () {
-            $('main h2:contains("Headline")').click();
-        }
+        trigger: 'main h2:contains("Headline"):first',
+        run: 'click'
     }, {
         content: 'Click the customize menu.',
-        trigger: 'a.btn[title="Customize"]',
+        trigger: 'a.btn[title=Customize]'
     }, {
         content: 'Check that animation preview works',
         trigger: 'li.snippet-option-o_wow',
         run: function () {
             var $bounce = $('li[data-select_class="o_wow_animate bounce"]');
-            var $div = $('main h2:contains("Headline")').parent();
+            var $div = $('main h2:contains("Headline"):first').parent();
             $bounce.find('a:first').click();
             if ( ! $div.hasClass('o_wow_animate') ) {
                 tour._consume_tour(
@@ -48,32 +46,32 @@ odoo.define('website_wow.tour_editor', function (require) {
         }
     }, {
         content: 'Click Save',
-        trigger: 'button[data-action=save]',
+        trigger: 'button[data-action=save]'
     }, {
         content: 'Check that `wow` class was added after save.',
-        trigger: 'div.o_wow_animate.bounce.wow',
+        trigger: 'div.o_wow_animate.bounce.wow'
     }, {
         content: 'Click Edit',
-        trigger: 'button[data-action="edit"]',
+        trigger: 'a[data-action=edit]'
+    }, {
+        content: "Create another animable element because Odoo sucks and won't " +
+                 "click the existing one from within a test.",
+        trigger: '#snippet_structure .oe_snippet:eq(1) .oe_snippet_thumbnail',
+        run: 'drag_and_drop'
     }, {
         content: 'Click an animable element.',
-        trigger: 'main h2:contains("Headline")',
+        trigger: 'main h2:contains("Headline"):first',
+        run: 'click'
     }, {
         content: 'Click the customize menu.',
-        trigger: 'a.btn[title="Customize"]',
-    }, {
-        content: 'Check that `Wow!` is present in customize menu',
-        trigger: 'li.snippet-option-o_wow_duration',
-        run: function () {
-            $('li.snippet-option-o_wow_duration').addClass('open');
-        }
+        trigger: 'a.btn[title="Customize"]'
     }, {
         content: 'Check that option sets data attribute.',
-        trigger: 'li.o_wow_duration-1s',
+        trigger: 'li.snippet-option-o_wow',
         run: function () {
-            var $duration = $('li.o_wow_duration-1s > a');
-            var $div = $('main h2:contains("Headline")');
-            $duration.click();
+            var $duration = $('li[data-select_class="o_wow_duration-1s"]');
+            var $div = $('main h2:contains("Headline"):first').parent();
+            $duration.find('a:first').click();
             if ( $div.data('wow-duration') != '1s' ) {
                 tour._consume_tour(
                     tour.running_tour,
