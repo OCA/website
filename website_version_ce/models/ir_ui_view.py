@@ -2,7 +2,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from lxml import etree
-from openerp import tools, fields, models, api
+from odoo import tools, fields, models, api
 
 
 class IrUiView(models.Model):
@@ -14,8 +14,6 @@ class IrUiView(models.Model):
 
     @api.multi
     def write(self, vals):
-        if self.env.context is None:
-            self.env.context = {}
 
         version_id = self.env.context.get('version_id')
         if version_id and \
@@ -92,14 +90,12 @@ class IrUiView(models.Model):
         keys=('lang', 'inherit_branding', 'editable', 'translatable',
               'edit_translations', 'website_id', 'version_id')
     )
-    def _read_template(self, cr, uid, view_id, context=None):
-        arch = self.read_combined(cr, uid, view_id, fields=['arch'],
-                                  context=context)['arch']
+    def _read_template(self, view_id):
+        arch = self.read_combined(view_id, fields=['arch'])['arch']
         arch_tree = etree.fromstring(arch)
 
-        if 'lang' in context:
-            arch_tree = self.translate_qweb(cr, uid, view_id, arch_tree,
-                                            context['lang'], context)
+        if 'lang' in self._context:
+            arch_tree = self.translate_qweb(view_id, arch_tree, self._context['lang'])
 
         self.distribute_branding(arch_tree)
         root = etree.Element('templates')

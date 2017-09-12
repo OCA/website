@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-#
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp.exceptions import Warning as UserError
-from openerp import models, fields, api
-from openerp.exceptions import ValidationError
-from openerp.tools.translate import _
+from odoo.exceptions import Warning as UserError
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError
+from odoo.tools.translate import _
 
 TOO_MUCH_EXPERIMENTS = 2
 OVERLAP_EXPERIMENT = 1
@@ -86,7 +86,7 @@ class Experiment(models.Model):
 
     @api.model
     def read_group(self, domain, fields, groupby, offset=0, limit=None,
-                   context=None, orderby=False, lazy=True):
+                   orderby=False, lazy=True):
         """ Override read_group to always display all states. """
         if groupby and groupby[0] == "state":
             # Default result structure
@@ -101,7 +101,7 @@ class Experiment(models.Model):
             # Get standard results
             read_group_res = super(Experiment, self).read_group(
                 domain, fields, groupby, offset=offset, limit=limit,
-                context=context, orderby=orderby, lazy=lazy)
+                orderby=orderby, lazy=lazy)
             # Update standard results with default results
             result = []
             for state_value, state_name in states:
@@ -116,7 +116,7 @@ class Experiment(models.Model):
         else:
             return super(Experiment, self).read_group(
                 domain, fields, groupby, offset=offset, limit=limit,
-                context=context, orderby=orderby, lazy=lazy)
+                orderby=orderby, lazy=lazy)
 
     @api.multi
     def _get_version_number(self):

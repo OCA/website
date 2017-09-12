@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-#
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp import http, fields
-from openerp.http import request
-from openerp.addons.website.controllers.main import Website
-from openerp.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from odoo import http, fields
+from odoo.http import request
+from odoo.addons.website.controllers.main import Website
 
 GOOGLE_ANALYTICS_CONFIGURED = 2
 GOOGLE_ANALYTICS_PARTIALLY_CONFIGURED = 1
@@ -130,8 +129,6 @@ class VersioningController(Website):
         client_secret = gs_obj.get_client_secret('management')
         if not client_id or not client_secret:
             dummy, action = request.env['ir.model.data'].get_object_reference(
-                request.cr,
-                request.uid,
                 'website_version_ce',
                 'action_config_settings_google_management'
             )

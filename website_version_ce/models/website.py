@@ -2,8 +2,8 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 import json
-from openerp import fields, models, api
-from openerp.http import request
+from odoo import fields, models, api
+from odoo.http import request
 import random
 
 

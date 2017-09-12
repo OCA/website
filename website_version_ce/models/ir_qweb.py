@@ -5,10 +5,10 @@
 Website-context rendering needs to add some metadata to rendered fields,
 as well as render a few fields differently.
 
-Also, adds methods to convert values back to openerp models.
+Also, adds methods to convert values back to odoo models.
 """
 
-from openerp import models
+from odoo import api, models
 
 
 class IrQweb(models.AbstractModel):
@@ -21,41 +21,40 @@ class IrQweb(models.AbstractModel):
         website_id = self.env.context.get('website_id')
         orm_exp_ver = self.env["website_version_ce.experiment.version"]
         if website_id:
-            if 'experiment_id' in context:
+            if 'experiment_id' in self._context:
                 # Search for a corresponding version
-                exp_ver_id = orm_exp_ver.search(cr, uid, [
+                exp_ver_id = orm_exp_ver.search([
                     ('version_id.view_ids.key', '=', id_or_xml_id),
                     ('experiment_id.state', '=', 'running'),
                     ('experiment_id.website_id.id', '=', website_id)
-                ], context=context)
+                ])
 
                 if exp_ver_id:
                     # Found version, check overlap
-                    exp_version = orm_exp_ver.browse(cr, uid, [exp_ver_id[0]],
-                                                     context=context)
+                    exp_version = orm_exp_ver.browse([exp_ver_id[0]])
                     exp = exp_version.experiment_id
                     # Avoid "google_id is unique" error at db reinitialization
-                    version_id = context.get('website_version_ce_experiment'
+                    version_id = self._context.get('website_version_ce_experiment'
                                              ).get(str(exp.google_id))
                     if version_id:
                         context['version_id'] = int(version_id)
 
             if isinstance(id_or_xml_id, (int, long)):
                 id_or_xml_id = self.pool["ir.ui.view"].browse(
-                    cr, uid, id_or_xml_id, context=context).key
+                    id_or_xml_id).key
 
             domain = [('key', '=', id_or_xml_id), '|',
                       ('website_id', '=', website_id),
                       ('website_id', '=', False)]
-            version_id = context.get('version_id')
+            version_id = self._context.get('version_id')
             domain += version_id \
                 and ['|', ('version_id', '=', False),
                      ('version_id', '=', version_id)] or \
                     [('version_id', '=', False)]
 
             id_or_xml_id = self.pool["ir.ui.view"].search(
-                cr, uid, domain, order='website_id, version_id',
-                limit=1, context=context)[0]
+                domain, order='website_id, version_id',
+                limit=1)[0]
 
         return super(IrQweb, self).render(
             id_or_xml_id, qwebcontext, loader=loader,

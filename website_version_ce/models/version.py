@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-#
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp import fields, models, api
-from openerp.exceptions import Warning as UserError
-from openerp.http import request
-from openerp.tools.translate import _
+from odoo import fields, models, api
+from odoo.exceptions import Warning as UserError
+from odoo.http import request
+from odoo.tools.translate import _
 
 
 class Version(models.Model):

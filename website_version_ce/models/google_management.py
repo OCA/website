@@ -3,10 +3,10 @@
 
 from datetime import datetime, timedelta
 import logging
-from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
-from openerp.exceptions import Warning as UserError
-from openerp import models, exceptions, api, fields
-from openerp.tools.translate import _
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from odoo.exceptions import Warning as UserError
+from odoo import models, exceptions, api, fields
+from odoo.tools.translate import _
 import simplejson
 
 _logger = logging.getLogger(__name__)
@@ -186,11 +186,11 @@ class GoogleManagement(models.AbstractModel):
                'https://www.googleapis.com/auth/analytics.edit'
 
     @api.model
-    def authorize_google_uri(self, from_url='http://www.odoo.com',
-                             context=None):
+    def authorize_google_uri(self, from_url='http://www.odoo.com'):
         url = self.pool['google.service']._get_authorize_uri(
-            self.env.cr, self.env.uid, from_url, self.STR_SERVICE,
-            scope=self.get_management_scope(), context=self.env.context)
+            from_url, self.STR_SERVICE,
+            scope=self.get_management_scope()
+        )
         return url
 
     # convert code from authorize into token

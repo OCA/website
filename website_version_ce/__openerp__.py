@@ -5,10 +5,10 @@
     'name': 'Website Versioning',
     'category': 'Website',
     'summary': 'Allow webpages versions and A/B testing.',
-    'version': '9.0.1.0.0',
+    'version': '10.0.1.0.0',
     'depends': ['website', 'marketing', 'google_account', 'mail'],
     'author': 'Odoo S.A., Clouder SASU, Odoo Community Association (OCA)',
-    "license": "LGPL-3",
+    'license': 'LGPL-3',
     'installable': True,
     'data': [
         'security/ir.model.access.csv',

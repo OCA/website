@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-#
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-import openerp.tests
+import odoo.tests
 
 
-@openerp.tests.common.at_install(False)
-@openerp.tests.common.post_install(True)
-class TestUi(openerp.tests.HttpCase):
+@odoo.tests.common.at_install(False)
+@odoo.tests.common.post_install(True)
+class TestUi(odoo.tests.HttpCase):
     def test_01_versioning(self):
         self.phantom_js(
             "/",

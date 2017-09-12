@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-#
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp import fields, models, api
+from odoo import fields, models, api
 
 
 class BaseConfigSettings(models.TransientModel):
