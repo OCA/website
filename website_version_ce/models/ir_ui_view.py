@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-#
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo import tools, fields, models, api
+from odoo import api, fields, models
 
 
 class IrUiView(models.Model):
@@ -9,7 +9,10 @@ class IrUiView(models.Model):
     _inherit = "ir.ui.view"
 
     version_id = fields.Many2one(
-        'website_version_ce.version', ondelete='cascade', string="Version")
+        'website_version_ce.version',
+        ondelete='cascade',
+        string="Version"
+    )
 
     @api.multi
     def write(self, vals):

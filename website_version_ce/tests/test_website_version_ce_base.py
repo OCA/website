@@ -12,7 +12,7 @@ class TestWebsiteVersionBase(common.TransactionCase):
         # Useful models
         self.orm_view = self.env['ir.ui.view']
         self.orm_version = self.env['website_version_ce.version']
-        ir_model_data_reg = self.registry('ir.model.data')
+        ir_model_data_reg = self.env["ir.model.data"]
 
         # Useful objects
         master_view = ir_model_data_reg.xmlid_to_object(
