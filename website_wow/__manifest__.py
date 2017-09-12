@@ -19,4 +19,7 @@
         "templates/assets.xml",
         "static/src/xml/snippet_options.xml",
     ],
+    "demo": [
+        "demo/assets_demo.xml",
+    ],
 }
