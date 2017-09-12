@@ -6,10 +6,9 @@
     'category': 'Website',
     'summary': 'Allow webpages versions and A/B testing.',
     'version': '10.0.1.0.0',
-    'depends': ['website', 'marketing', 'google_account', 'mail'],
+    'depends': ['website', 'google_account', 'mail'],
     'author': 'Odoo S.A., Clouder SASU, Odoo Community Association (OCA)',
     'license': 'LGPL-3',
-    'installable': True,
     'data': [
         'security/ir.model.access.csv',
         'views/website_version_ce_templates.xml',
@@ -22,5 +21,5 @@
         'data/demo.xml',
     ],
     'qweb': ['static/src/xml/*.xml'],
-    'application': False,
+    'installable': True,
 }

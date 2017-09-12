@@ -27,20 +27,20 @@ class IrQweb(models.AbstractModel):
                     ('version_id.view_ids.key', '=', id_or_xml_id),
                     ('experiment_id.state', '=', 'running'),
                     ('experiment_id.website_id.id', '=', website_id)
-                ])
+                ], limit=1)
 
                 if exp_ver_id:
                     # Found version, check overlap
-                    exp_version = orm_exp_ver.browse([exp_ver_id[0]])
-                    exp = exp_version.experiment_id
+                    exp = exp_ver_id.experiment_id
                     # Avoid "google_id is unique" error at db reinitialization
-                    version_id = self._context.get('website_version_ce_experiment'
-                                             ).get(str(exp.google_id))
+                    version_id = self._context.get(
+                        'website_version_ce_experiment'
+                    ).get(str(exp.google_id))
                     if version_id:
-                        context['version_id'] = int(version_id)
+                        self._context['version_id'] = int(version_id)
 
             if isinstance(id_or_xml_id, (int, long)):
-                id_or_xml_id = self.pool["ir.ui.view"].browse(
+                id_or_xml_id = self.env["ir.ui.view"].browse(
                     id_or_xml_id).key
 
             domain = [('key', '=', id_or_xml_id), '|',
@@ -52,10 +52,9 @@ class IrQweb(models.AbstractModel):
                      ('version_id', '=', version_id)] or \
                     [('version_id', '=', False)]
 
-            id_or_xml_id = self.pool["ir.ui.view"].search(
+            id_or_xml_id = self.env["ir.ui.view"].search(
                 domain, order='website_id, version_id',
-                limit=1)[0]
+                limit=1).id
 
         return super(IrQweb, self).render(
-            id_or_xml_id, qwebcontext, loader=loader,
-        )
+            id_or_xml_id, qwebcontext, loader=loader)

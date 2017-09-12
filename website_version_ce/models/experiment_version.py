@@ -15,9 +15,11 @@ class ExperimentVersion(models.Model):
     _name = "website_version_ce.experiment.version"
     _rec_name = "version_id"
 
-    version_id = fields.Many2one('website_version_ce.version',
-                                 string="Version", required=True,
-                                 ondelete='cascade')
+    version_id = fields.Many2one(
+        'website_version_ce.version',
+        string="Version", required=True,
+        ondelete='cascade'
+    )
     experiment_id = fields.Many2one(
         'website_version_ce.experiment',
         string="Experiment",

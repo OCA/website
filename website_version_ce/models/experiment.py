@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-#
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo.exceptions import Warning as UserError
+from odoo.exceptions import UserError
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 from odoo.tools.translate import _
@@ -137,7 +137,7 @@ class Experiment(models.Model):
         for version in version_list:
             if version[0] == 0:
                 name = self.env['website_version_ce.version'].browse(
-                    [version[2]['version_id']])[0].name
+                    version[2]['version_id']).name
                 # We must give a URL for each version in the experiment
                 exp['variations'].append(
                     {'name': name, 'url': 'http://localhost/' + name})

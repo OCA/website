@@ -2,7 +2,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from odoo import fields, models, api
-from odoo.exceptions import Warning as UserError
+from odoo.exceptions import UserError
 from odoo.http import request
 from odoo.tools.translate import _
 
