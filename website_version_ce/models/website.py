@@ -21,7 +21,9 @@ class Website(models.Model):
         version_id = request.context.get('version_id')
 
         if not version_id:
-            request.context['version_id'] = 0
+            ctx = request.context.copy()
+            ctx['version_id'] = 0
+            request.context = ctx
             return 0, ''
         return version_id, version.browse(version_id).name
 
@@ -57,15 +59,17 @@ class Website(models.Model):
                     if x < res[0]:
                         main_experiment[exp.google_id] = str(res[1])
                         break
-        request.context['website_version_ce_experiment'] = main_experiment
-        request.context['website_id'] = website.id
+        ctx = request.context.copy()
+        ctx['website_version_ce_experiment'] = main_experiment
+        ctx['website_id'] = website.id
 
         if 'version_id' in request.session:
-            request.context['version_id'] = request.session.get('version_id')
+            ctx['version_id'] = request.session.get('version_id')
         elif self.env['res.users'].has_group('base.group_website_publisher'):
-            request.context['version_id'] = 0
+            ctx['version_id'] = 0
         else:
-            request.context['experiment_id'] = 1
+            ctx['experiment_id'] = 1
+        request.context = ctx
         return website
 
     @api.model

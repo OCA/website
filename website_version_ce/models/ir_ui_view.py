@@ -84,24 +84,24 @@ class IrUiView(models.Model):
             xml_id = super(IrUiView, self).get_view_id(xml_id)
         return xml_id
 
-    @tools.ormcache_context(
-        'uid',
-        'view_id',
-        keys=('lang', 'inherit_branding', 'editable', 'translatable',
-              'edit_translations', 'website_id', 'version_id')
-    )
-    def _read_template(self, view_id):
-        arch = self.read_combined(view_id, fields=['arch'])['arch']
-        arch_tree = etree.fromstring(arch)
-
-        if 'lang' in self._context:
-            arch_tree = self.translate_qweb(view_id, arch_tree, self._context['lang'])
-
-        self.distribute_branding(arch_tree)
-        root = etree.Element('templates')
-        root.append(arch_tree)
-        arch = etree.tostring(root, encoding='utf-8', xml_declaration=True)
-        return arch
+    # @tools.ormcache_context(
+    #     'uid',
+    #     'view_id',
+    #     keys=('lang', 'inherit_branding', 'editable', 'translatable',
+    #           'edit_translations', 'website_id', 'version_id')
+    # )
+    # def _read_template(self, view_id):
+    #     arch = self.read_combined(view_id, fields=['arch'])['arch']
+    #     arch_tree = etree.fromstring(arch)
+    #
+    #     if 'lang' in self._context:
+    #         arch_tree = self.translate_qweb(view_id, arch_tree, self._context['lang'])
+    #
+    #     self.distribute_branding(arch_tree)
+    #     root = etree.Element('templates')
+    #     root.append(arch_tree)
+    #     arch = etree.tostring(root, encoding='utf-8', xml_declaration=True)
+    #     return arch
 
     # To take the right inheriting views
     @api.model

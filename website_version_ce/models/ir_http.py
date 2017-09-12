@@ -9,8 +9,9 @@ import json
 class IrHttp(models.AbstractModel):
     _inherit = 'ir.http'
 
-    def _dispatch(self):
-        x = super(IrHttp, self)._dispatch()
+    @classmethod
+    def _dispatch(cls):
+        x = super(IrHttp, cls)._dispatch()
         if request.context.get('website_version_ce_experiment'):
             data = json.dumps(
                 request.context['website_version_ce_experiment'],
