@@ -49,7 +49,7 @@ class Experiment(models.Model):
     goal_id = fields.Many2one('website_version_ce.goals', string="Objective",
                               required=True)
     color = fields.Integer('Color Index')
-    version_number = fields.Integer(compute='_get_version_number',
+    version_number = fields.Integer(compute='_compute_version_number',
                                     string='Version Number')
     sequence = fields.Integer(required=True, default=1)
     google_id = fields.Char(string="Google id")
@@ -119,7 +119,7 @@ class Experiment(models.Model):
                 orderby=orderby, lazy=lazy)
 
     @api.multi
-    def _get_version_number(self):
+    def _compute_version_number(self):
         for exp in self:
             exp.version_number = len(exp.experiment_version_ids) + 1
 

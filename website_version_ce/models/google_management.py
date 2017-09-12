@@ -4,10 +4,10 @@
 from datetime import datetime, timedelta
 import logging
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
-from odoo.exceptions import Warning as UserError
-from odoo import models, exceptions, api, fields
+from odoo.exceptions import UserError
+from odoo import models, exceptions, api
 from odoo.tools.translate import _
-import simplejson
+import json
 
 _logger = logging.getLogger(__name__)
 
@@ -67,7 +67,7 @@ class GoogleManagement(models.AbstractModel):
                    profile_id,
                    self.get_token())
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-        data_json = simplejson.dumps(data)
+        data_json = json.dumps(data)
         try:
             x = gs_pool._do_request(url, data_json, headers, type='POST')
             result = x[1]['id']
@@ -91,7 +91,7 @@ class GoogleManagement(models.AbstractModel):
             self.get_token()
         )
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-        data_json = simplejson.dumps(data)
+        data_json = json.dumps(data)
 
         return gs_pool._do_request(url, data_json, headers, type='PUT')
 
