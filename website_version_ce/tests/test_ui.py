@@ -11,6 +11,6 @@ class TestUi(odoo.tests.HttpCase):
         self.phantom_js(
             "/",
             "odoo.__DEBUG__.services['web_tour.tour'].run('versioning')",
-            "odoo.__DEBUG__.services['web_tour.tour'].tours.versioning",
+            "odoo.__DEBUG__.services['web_tour.tour'].tours.versioning.ready",
             login='admin'
         )
