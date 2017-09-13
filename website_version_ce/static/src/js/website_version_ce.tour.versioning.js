@@ -2,7 +2,7 @@ odoo.define('website_version_ce.tour', function (require) {
 'use strict';
 
 var core = require('web.core');
-var Tour = require('web.Tour');
+var Tour = require('web_tour.tour');
 
 var _t = core._t;
 
