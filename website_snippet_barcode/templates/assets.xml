@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<odoo>
+    <template id="assets_barcode_frontend" inherit_id="website.assets_frontend">
+        <xpath expr=".">
+            <script type="application/javascript"
+                    src="/website_snippet_barcode/static/src/js/website_snippet_barcode.js"
+                    />
+        </xpath>
+    </template>
+
+    <template id="assets_barcode_editor" inherit_id="website.assets_editor">
+        <xpath expr=".">
+            <script type="application/javascript"
+                    src="/website_snippet_barcode/static/src/js/website_snippet_barcode.editor.js"
+                    />
+        </xpath>
+    </template>
+
+    <template id="qunit_suite" inherit_id="web.qunit_suite">
+        <xpath expr="//t[@t-set='head']" position="inside">
+            <script type="application/javascript"
+                    src="/website_snippet_barcode/static/tests/js/website_snippet_barcode.js"
+                    />
+        </xpath>
+    </template>
+</odoo>
