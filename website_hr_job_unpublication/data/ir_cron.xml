@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo noupdate="1">
+
+    <record id="ir_cron_hr_job_auto_unpublish" model="ir.cron">
+        <field name="name">Hr Job Automatic Unpublication</field>
+        <field name="user_id" ref="base.user_root" />
+        <field name="active" eval="True"/>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+        <field name="nextcall"
+            eval="DateTime.today().strftime('%Y-%m-%d %H:%M:%S')" />
+        <field name="model">hr.job</field>
+        <field name="function" eval="'process_unpublish_hr_job'" />
+        <field name="args">()</field>
+    </record>
+
+</odoo>

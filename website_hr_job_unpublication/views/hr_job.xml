@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record  id="hr_job_form_view_unpublished" model="ir.ui.view">
+        <field name="name">hr.job.form (in website_hr_job_unpublication)</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="arch" type="xml">
+            <field name='no_of_recruitment' position="after">
+                <field name="unpublish_date"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_job_filter_unpublished" model="ir.ui.view">
+        <field name="name">hr.job.search</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_job_filter"/>
+        <field name="arch" type="xml">
+            <filter name='message_needaction' position="after">
+                <separator/>
+                <filter string="Not scheduled for unpublish" name="job_not_scheduled_for_unpublish" domain="[('unpublish_date','=',False),('website_published','=',True)]"/>
+                <filter string="With Unpublished Date" name="job_unpublish_date" domain="[('unpublish_date','!=',False)]"/>
+                <filter string="Will be unpublished" name="job_unpublish_date_gt_now" domain="[('unpublish_date','&gt;=',time.strftime('%Y-%m-%d 00:00:00')),('website_published','=',True)]"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>
