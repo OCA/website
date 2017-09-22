@@ -8,15 +8,18 @@
             <div id="wrap" class="oe_structure oe_empty">
                 <div class="container">
                     <div class="row">
-                        <div class="s_barcode col-md-4"
-                             data-type="QR"
-                             data-aspectratio="1"
-                             data-width="360"
-                             data-humanreadable="false"
-                             style="height: 360px;">
-                            <img class="img img-responsive"
-                                 alt="Barcode could not be rendered"
-                                 />
+                        <div class="col-md-4">
+                            <div>
+                                <div class="s_barcode o_barcode">
+                                    <div class="o_barcode_container">
+                                        <img class="o_barcode_img img img-responsive"
+                                             alt="Barcode could not be rendered" />
+                                    </div>
+                                    <div class="o_barcode_footer">
+                                        <p class="o_barcode_text o_default_snippet_text text-center"></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

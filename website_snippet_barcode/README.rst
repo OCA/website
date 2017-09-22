@@ -44,16 +44,13 @@ Barcode Options
 
 **Human Readable**
 
-* Some barcode types support a human-readable option, where the barcode value
-  is displayed in text below the barcode.
-* *Default: Disabled*
-
-Barcode Placement
------------------
-
-Barcodes placed adjacent to text or certain other types of page elements may
-not be resizable using the sizing arrows, but can still be sized and formatted
-with the website editor toolbar at the top of the page.
+* This setting controls the display of barcode values in human-readable format.
+* **None**: Human-readable value is not displayed.
+* **Text**: Display the human-readable value as a caption below the
+  image.
+* **Image**: *Not supported by all barcode types.* Include the human-readable
+  value in the generated image.
+* *Default: None*
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot

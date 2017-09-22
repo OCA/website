@@ -14,17 +14,15 @@ odoo.define('website_snippet_barcode.editor', function (require) {
             if (!this.$target.data('snippet-view')) {
                 this.$target.data('snippet-view', new Barcode(this.$target));
             }
-            this._handleResize();
             return this._super();
         },
 
         select_aspectratio: function (type, value) {
-            this._setOption('aspectratio', Number(value));
+            this._setOption('aspectratio', value);
         },
 
-        select_humanreadable: function (type) {
-            var toggled = String(!(this._getValue('humanreadable') === 'true'));
-            this._setOption('humanreadable', toggled);
+        select_humanreadable: function (type, value) {
+            this._setOption('humanreadable', value);
         },
 
         select_type: function (type, value) {
@@ -62,22 +60,6 @@ odoo.define('website_snippet_barcode.editor', function (require) {
             }
         },
 
-        _handleResize: function () {
-            // Image is re-rendered on mouseup, but the mousedown event handler
-            // is needed if the mouseup occurs outside the resize handle element
-            this.$overlay.find(".oe_handle:not(.size), .oe_handle.size .size").on(
-                'mousedown',
-                $.proxy(function () {
-                    // Remove height for better-looking editor resizing
-                    this.$target.css('height', '');
-                    $(document).on('mouseup.barcodeHandle', $.proxy(function () {
-                        this._setImageSize();
-                        $(document).off('.barcodeHandle');
-                    }, this));
-                }, this)
-            );
-        },
-
         _promptCustomValue: function () {
             website.prompt({
                 'window_title': 'Custom Barcode Value',
@@ -93,13 +75,9 @@ odoo.define('website_snippet_barcode.editor', function (require) {
             var dataKey = 'select_'+ option;
             this.$el.find(
                 '[data-' + dataKey + ']'
-            ).addBack().not('.dropdown-submenu').removeClass("active").filter(
+            ).removeClass("active").filter(
                 '[data-' + dataKey + '="' + active + '"]'
             ).addClass("active");
-        },
-
-        _setImageSize: function () {
-            this._setOption('width', this.$target.width());
         },
 
         _setOption: function (option, value) {

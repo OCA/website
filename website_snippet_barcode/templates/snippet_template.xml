@@ -15,7 +15,7 @@
             <div data-js="barcode"
                  data-selector=".s_barcode"
                  data-drop-near="p, h1, h2, h3, blockquote, .well, .s_panel, .oe_share"
-                 data-drop-in=".content, .row">
+                 data-drop-in=".content">
                 <li class="dropdown-submenu">
                     <a tabindex="-1" href="#"><i class="fa fa-barcode"/>Barcode Type</a>
                     <ul class="dropdown-menu" name="barcode-type">
@@ -50,16 +50,30 @@
                     </ul>
                 </li>
 
-                <li data-select_humanreadable="true">
-                    <a href="#"><i class="fa fa-user"/>Human Readable</a>
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#"><i class="fa fa-user"/>Human Readable</a>
+                    <ul class="dropdown-menu" name="barcode-humanreadable">
+                        <li data-select_humanreadable="none"><a href="#">None</a></li>
+                        <li class="divider"></li>
+                        <li data-select_humanreadable="text"><a href="#">Text</a></li>
+                        <li data-select_humanreadable="image"><a href="#">Image</a></li>
+                    </ul>
                 </li>
             </div>
         </xpath>
     </template>
 
     <template id="barcode_snippet" name="Barcode">
-        <div class="s_barcode col-md-12">
-            <img class="img img-responsive" alt="Barcode could not be rendered" />
+        <div class="s_barcode o_barcode">
+            <div class="o_barcode_container">
+                <img class="o_barcode_img img img-responsive"
+                     src="/report/barcode?type=QR&amp;value=https%3A%2F%2Fwww.github.com%2FOCA
+                         &amp;width=500&amp;height=500"
+                     alt="Barcode could not be rendered" />
+            </div>
+            <div class="o_barcode_footer">
+                <p class="o_barcode_text o_default_snippet_text text-center"></p>
+            </div>
         </div>
     </template>
 </odoo>

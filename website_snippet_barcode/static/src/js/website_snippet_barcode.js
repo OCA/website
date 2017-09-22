@@ -11,10 +11,9 @@ odoo.define('website_snippet_barcode', function (require) {
 
         defaults: {
             type: 'QR',
-            value: encodeURIComponent(window.location.href),
+            value: encodeURIComponent(window.location.href.split('#')[0]),
             aspectratio: '1',
-            width: '500',
-            humanreadable: 'false'
+            humanreadable: 'none'
         },
 
         start: function () {
@@ -24,25 +23,34 @@ odoo.define('website_snippet_barcode', function (require) {
         },
 
         renderBarcode: function () {
-            var options = _.defaults(this._getOptions(this.$target), this.defaults);
+            var options = _.defaults(this._getOptions(), this.defaults);
             var height = Math.round(options.width / options.aspectratio);
+            var humanreadableImage = Number(options.humanreadable === 'image');
             var barcodeSrc = '/report/barcode?type=' + options.type +
                              '&value=' + options.value +
                              '&width=' + options.width +
                              '&height=' + height +
-                             '&humanreadable=' + Number(options.humanreadable === 'true');
+                             '&humanreadable=' + humanreadableImage;
 
-            this.$target.find('img').attr('src', barcodeSrc);
             _.each(options, $.proxy(this._setDataAttribute, this));
-            // Set height to ensure proper editor overlay sizing
-            this.$target.height(height);
+            this.$target.find('.o_barcode_img').attr('src', barcodeSrc);
+            this._renderFooter(options.humanreadable, options.value);
         },
 
-        _getOptions: function ($target) {
-            return Object.keys(this.defaults).reduce(function (obj, key) {
-                obj[key] = $target.attr('data-' + key);
+        _getOptions: function () {
+            return _.reduce(Object.keys(this.defaults), function (obj, key) {
+                obj[key] = this.$target.attr('data-' + key);
                 return obj;
-            }, {});
+            }, {}, this);
+        },
+
+        _renderFooter: function (humanreadable, value) {
+            var $footer = this.$target.find('.o_barcode_text');
+            if (humanreadable === 'text') {
+                $footer.text(decodeURIComponent(value)).removeClass('hidden');
+            } else {
+                $footer.text('').addClass('hidden');
+            }
         },
 
         _setDataAttribute: function (value, key) {
