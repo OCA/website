@@ -25,7 +25,7 @@ var EditorVersion = Widget.extend({
         });
 
         this.$el.find('#version-menu-button').click(function() {
-            var view_id = parseInt($('html').data('view-xmlid'));
+            var view_id = parseInt($('html').attr('data-main-object').match(/\d+/));
             ajax.jsonRpc( '/website_version_ce/all_versions', 'call', {'view_id': view_id}).then(function (result) {
                 self.$el.find(".o_version_choice").remove();
                 self.$el.find(".first_divider").before(qweb.render("website_version_ce.all_versions", {versions:result}));
@@ -173,7 +173,7 @@ var EditorVersion = Widget.extend({
 
     create_experiment: function() {
         var self = this;
-        var view_id = parseInt($('html').data('view-xmlid'));
+        var view_id = parseInt($('html').attr('data-main-object').match(/\d+/));
         ajax.jsonRpc( '/website_version_ce/all_versions_all_goals', 'call', { 'view_id': view_id }).then(function (result) {
             var $wizardA = $(qweb.render("website_version_ce.create_experiment",{versions:result.tab_version, goals:result.tab_goal, config:result.check_conf}));
             $wizardA.appendTo($('body')).modal({"keyboard" :true});
