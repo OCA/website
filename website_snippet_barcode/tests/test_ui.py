@@ -6,19 +6,15 @@ from odoo.tests.common import HttpCase
 
 
 class UICase(HttpCase):
-    def test_ui_web(self):
-        """Test backend tests."""
+
+    post_install = True
+    at_install = False
+
+    def test_website_snippet_barcode_editor(self):
+        tour_module = 'odoo.__DEBUG__.services["web_tour.tour"]'
         self.phantom_js(
-            "/web/tests?debug=assets&module=module_name",
-            "",
+            url_path="/",
+            code='%s.run("website_snippet_barcode")' % tour_module,
+            ready='%s.tours.website_snippet_barcode.ready' % tour_module,
             login="admin",
         )
-
-    def test_ui_website(self):
-        """Test frontend tour."""
-        self.phantom_js(
-            url_path="/?debug=assets",
-            code="odoo.__DEBUG__.services['web.Tour']"
-                 ".run('test_module_name', 'test')",
-            ready="odoo.__DEBUG__.services['web.Tour'].tours.test_module_name",
-            login="admin")

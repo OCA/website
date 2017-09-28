@@ -21,6 +21,7 @@
         "templates/snippet_template.xml",
     ],
     "demo": [
+        "demo/assets_demo.xml",
         "demo/website_snippet_barcode_demo.xml",
     ],
 }
