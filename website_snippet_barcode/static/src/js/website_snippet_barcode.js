@@ -12,8 +12,8 @@ odoo.define('website_snippet_barcode', function (require) {
         defaults: {
             type: 'QR',
             value: encodeURIComponent(window.location.href.split('#')[0]),
-            aspectratio: '1',
-            humanreadable: 'none'
+            aspectRatio: '1',
+            humanReadable: 'none'
         },
 
         start: function () {
@@ -24,17 +24,17 @@ odoo.define('website_snippet_barcode', function (require) {
 
         renderBarcode: function () {
             var options = _.defaults(this._getOptions(), this.defaults);
-            var height = Math.round(options.width / options.aspectratio);
-            var humanreadableImage = Number(options.humanreadable === 'image');
+            var height = Math.round(options.width / options.aspectRatio);
+            var humanReadableImage = Number(options.humanReadable === 'image');
             var barcodeSrc = '/report/barcode?type=' + options.type +
                              '&value=' + options.value +
                              '&width=' + options.width +
                              '&height=' + height +
-                             '&humanreadable=' + humanreadableImage;
+                             '&humanreadable=' + humanReadableImage;
 
             _.each(options, $.proxy(this._setDataAttribute, this));
             this.$target.find('.o_barcode_img').attr('src', barcodeSrc);
-            this._renderFooter(options.humanreadable, options.value);
+            this._renderFooter(options.humanReadable, options.value);
         },
 
         _getOptions: function () {
@@ -44,9 +44,9 @@ odoo.define('website_snippet_barcode', function (require) {
             }, {}, this);
         },
 
-        _renderFooter: function (humanreadable, value) {
+        _renderFooter: function (humanReadable, value) {
             var $footer = this.$target.find('.o_barcode_text');
-            if (humanreadable === 'text') {
+            if (humanReadable === 'text') {
                 $footer.text(decodeURIComponent(value)).removeClass('hidden');
             } else {
                 $footer.text('').addClass('hidden');

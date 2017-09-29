@@ -18,11 +18,11 @@ odoo.define('website_snippet_barcode.editor', function (require) {
         },
 
         select_aspectratio: function (type, value) {
-            this._setOption('aspectratio', value);
+            this._setOption('aspectRatio', value);
         },
 
         select_humanreadable: function (type, value) {
-            this._setOption('humanreadable', value);
+            this._setOption('humanReadable', value);
         },
 
         select_type: function (type, value) {
@@ -44,7 +44,7 @@ odoo.define('website_snippet_barcode.editor', function (require) {
         },
 
         set_active: function () {
-            var dataOptions = ['type', 'value', 'aspectratio', 'humanreadable'];
+            var dataOptions = ['type', 'value', 'aspectRatio', 'humanReadable'];
             _.each(dataOptions, $.proxy(this._setActiveOption, this));
         },
 
