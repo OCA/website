@@ -19,7 +19,7 @@
 ##############################################################################
 {
     "name": "openstreetmap",
-    "version": "1.0",
+    "version": "10.0.1.0.0",
     "author": "Therp BV",
     "license": "AGPL-3",
     "category": "Website",
@@ -34,7 +34,4 @@
     "auto_install": False,
     "installable": True,
     "application": False,
-    "external_dependencies": {
-        'python': [],
-    },
 }
