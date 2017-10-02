@@ -1,0 +1,29 @@
+/* best way to  contain an image cross browser approved */
+
+
+div.blog_title_small
+{
+    border-top:0px;
+}
+
+
+div.blog_title_small h1
+{
+    font-size:54px;
+    font-weight:bold;
+    color:black;
+    text-align:center;
+}   
+
+div.blog_title_small p
+{
+    font-size 12px;
+}
+
+
+div.thumbnail
+{
+    margin: 5px 12px 5px 5px;
+}
+
+
