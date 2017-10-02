@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<odoo>
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']"
+               position="inside">
+            <t t-snippet="website_snippet_barcode.barcode_snippet"
+               t-thumbnail="/website_snippet_barcode/static/description/snippet_icon.png"
+               />
+        </xpath>
+
+        <xpath expr="//div[@id='snippet_options']" position="inside">
+            <div data-js="barcode"
+                 data-selector=".s_barcode"
+                 data-drop-near="p, h1, h2, h3, blockquote, .well, .s_panel, .oe_share"
+                 data-drop-in=".content">
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#"><i class="fa fa-barcode"/>Barcode Type</a>
+                    <ul class="dropdown-menu" name="barcode-type">
+                        <t t-foreach="['Codabar', 'Code11', 'Code128', 'EAN13', 'EAN8',
+                                       'Extended39', 'Extended93', 'FIM', 'I2of5', 'MSI', 'POSTNET',
+                                       'QR', 'Standard39', 'Standard93', 'UPCA', 'USPS_4State']"
+                           t-as="i">
+                            <li t-att-data-select_type='i'>
+                                <a href="#" t-esc="i" />
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#"><i class="fa fa-link"/>Barcode Value</a>
+                    <ul class="dropdown-menu" name="barcode-value">
+                        <li data-select_value="custom"><a href="#">Set Custom Value...</a></li>
+                        <li class="divider"></li>
+                        <li data-select_value="current"><a href="#">Current Page URI</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#"><i class="fa fa-picture-o"/>Aspect Ratio</a>
+                    <ul class="dropdown-menu" name="barcode-aspectratio">
+                        <t t-foreach="range(1, 6)" t-as="i">
+                            <li t-att-data-select_aspectratio='i'>
+                                <a href="#" t-esc='"1:%s" % i' />
+                            </li>
+                        </t>
+                    </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a tabindex="-1" href="#"><i class="fa fa-user"/>Human Readable</a>
+                    <ul class="dropdown-menu" name="barcode-humanreadable">
+                        <li data-select_humanreadable="none"><a href="#">None</a></li>
+                        <li class="divider"></li>
+                        <li data-select_humanreadable="text"><a href="#">Text</a></li>
+                        <li data-select_humanreadable="image"><a href="#">Image</a></li>
+                    </ul>
+                </li>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="barcode_snippet" name="Barcode">
+        <div class="s_barcode o_barcode">
+            <div class="o_barcode_container">
+                <img class="o_barcode_img img img-responsive"
+                     src="/report/barcode?type=QR&amp;value=https%3A%2F%2Fwww.github.com%2FOCA
+                         &amp;width=500&amp;height=500"
+                     alt="Barcode could not be rendered" />
+            </div>
+            <div class="o_barcode_footer">
+                <p class="o_barcode_text o_default_snippet_text text-center"></p>
+            </div>
+        </div>
+    </template>
+</odoo>
