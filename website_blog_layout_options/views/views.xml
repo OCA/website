@@ -12,7 +12,7 @@
                     <field name="background_image_show" />
                    </group>
                     <group>
-                        <button ame="set_all_posts" string="Set all posts to the same display type" type="object"/>
+                        <button name="set_all_posts" string="Set all posts to the same display type" type="object"/>
                     </group>
                 </field>
             </field>
