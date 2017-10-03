@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="assets_common" name="website_blog_tags_variable_dimension assets" inherit_id="web.assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/website_blog_tags_variable_dimension/static/src/css/website_blog_tags_variable_dimension.css"/>
+            </xpath>  
+        </template>
+
+       
+        <template id="opt_blog_rc_tags_var_dim_strucure" 
+            inherit_id="website_blog.index_right" customize_show="False" active="True">
+            <!-- note empty to keep cloud allways on top  -->
+            <xpath expr="//div[@id='blog_right_column']" position="inside">
+                <section>
+                </section>
+            </xpath>
+        </template>
+
+        <template id="opt_blog_rc_tags_var_dim" name="Variable Dimension Tag Cloud"
+            inherit_id="website_blog.index_right" active="False" customize_show="True">
+            <!-- note keep this tag cloud allways on top  -->
+            <xpath expr="//div[@id='blog_right_column']/section[1]" position="before">
+                <section class="mt32">
+                    <h4>Tags</h4>
+                    <ul class="nav nav-pills nav-stacked blog-tagcloud">
+                        <t t-set="random_tags" t-value="tags.randomize_recordset()"/>
+                        <t t-foreach="random_tags" t-as="nav_tag">
+                            <li t-att-class="'active' if tag and tag.id == nav_tag.id else None" 
+                                t-attf-style="font-size: {{nav_tag.font_size_in_cloud}}px;">
+                                <a t-attf-href="#{blog_url(tag=nav_tag)}">
+                                    <span t-attf-style="color:{{nav_tag.random_color}};"><t t-esc="nav_tag.name"/> (<t t-esc="nav_tag.tag_cardinality"/>)</span>
+                                </a>
+                            </li>
+                        </t>
+                    </ul>
+                </section>
+            </xpath>
+        </template>
+    </data>
+</openerp>
