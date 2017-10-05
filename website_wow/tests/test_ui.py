@@ -13,7 +13,7 @@ class TestUi(HttpCase):
     def test_wow(self):
         tour_module = 'odoo.__DEBUG__.services["web_tour.tour"]'
         self.phantom_js(
-            url_path='/',
+            url_path='/page/contactus?debug=assets&enable_editor=1',
             code='%s.run("website_wow_editor")' % tour_module,
             ready='%s.tours.website_wow_editor.ready' % tour_module,
             login='admin',
