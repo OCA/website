@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <!-- widget structure inferred from image floating widget it is placed in content and can be inside a text -->
+        <template id="openstreetmap_widget" inherit_id="website.snippets" name="openstreetmap">
+            <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside"> 
+                <!--this decides the category the snippet belongs to -->
+                <div name="openstreetmap_floating"> 
+                    <div class="oe_snippet_thumbnail"> <!-- definition of the snippet thumbnail -->
+                        <img class="oe_snippet_thumbnail_img" src="/website_openstreetmap/static/src/img/openstreetmap.png"/>
+                        <span class="oe_snippet_thumbnail_title">Openstreetmap Location Viewer</span>
+                    </div>
+                    <section class="oe_snippet_body para_large">
+                        <div class="container"> 
+                            <div class="row">     
+                                <div class="col-md-12 mb16 mt16">
+                                    <div class="o_image_floating o_margin_l pull-right">
+                                        <div class="o_container">
+                                            <a  t-att-href="res_company.openstreetmap_link()" target="_BLANK">
+                                                <img class="img img-rounded img-responsive" t-att-src="res_company.openstreetmap_img()" alt="Company Location"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </xpath>
+            <xpath expr="//div[@id='snippet_options']" position='inside'>
+                <!-- can edit several options from here -->             
+            </xpath>
+        </template>
+
+
+        <!-- overwrite old google map with emptyness -->
+        <template id="destroy_google" inherit_id="website.company_description">
+            <!-- could not impose invisible in the attribute link replacing -->
+            <xpath expr="//a[@t-att-href='res_company.google_map_link()']" position="attributes">
+                <attribute name="t-att-href">res_company.openstreetmap_link()</attribute>
+            </xpath>    
+            <xpath expr="//img[@t-att-src='res_company.google_map_img()']" position="attributes">
+                <attribute name="t-att-src">res_company.openstreetmap_img()</attribute>
+            </xpath>    
+        </template> 
+    </data>
+</openerp>
