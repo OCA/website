@@ -7,7 +7,7 @@
     'license': 'LGPL-3',
     'author': 'Odoo SA, MONK Software, Antiun Ingeniería S.L.',
     'website': (
-        'https://www.odoo.com/, http://www.wearemonk.com, '
+        'https://www.odoo.com/, http://www.monksoftware.it, '
         'https://github.com/OCA/website'
     ),
     'depends': [
