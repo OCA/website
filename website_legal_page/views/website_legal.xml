@@ -48,6 +48,11 @@
               </p>
             </div>
             <div>
+              <t t-if="res_company.company_registry">
+                <p>
+                  Company Registry: <span t-field="res_company.company_registry"/>
+                </p>
+              </t>
               <t t-if="res_company.vat">
                 <p>
                   VAT number: <span t-field="res_company.vat"/>
