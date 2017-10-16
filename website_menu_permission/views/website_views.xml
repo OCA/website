@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="add_menu_permission" model="ir.ui.view">
+    <field name="name">website_menu_permission: show flags</field>
+    <field name="model">website.menu</field>
+    <field name="inherit_id" ref="website.menu_tree"/>
+    <field name="arch" type="xml">
+      <field name="new_window" position="after">
+        <field name="user_logged"/>
+        <field name="user_not_logged"/>
+        <!-- TODO: add action to edit "advanced permissions" and play w/ groups -->
+      </field>
+    </field>
+  </record>
+
+</odoo>
