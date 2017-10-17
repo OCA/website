@@ -6,7 +6,7 @@
           inherit_id="website.layout_footer_copyright"
           name="Privacy policy Link">
     <xpath expr="//footer//div/span[@t-field='res_company.name']" position="after">
-        <span>- <a href="/legal/privacy-policy">Privacy Policy</a></span>
+        <span> - <a href="/legal/privacy-policy">Privacy Policy</a></span>
     </xpath>
 </template>
 
