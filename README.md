@@ -29,7 +29,7 @@ addon | version | summary
 [website_crm_recaptcha](website_crm_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 10.0.1.0.0 | Provides an autocomplete field for Website on any model
 [website_form_recaptcha](website_form_recaptcha/) | 10.0.1.0.0 | Provides a ReCaptcha field for Website Forms
-[website_legal_page](website_legal_page/) | 10.0.1.1.0 | Website Legal Page
+[website_legal_page](website_legal_page/) | 10.0.1.2.0 | Website Legal Page
 [website_logo](website_logo/) | 10.0.1.0.0 | Website company logo
 [website_multi_theme](website_multi_theme/) | 10.0.1.0.0 | Support different theme per website
 [website_no_crawler](website_no_crawler/) | 10.0.1.0.0 | Disables robots.txt for indexing by webcrawlers like Google
