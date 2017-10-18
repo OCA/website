@@ -118,15 +118,20 @@ class VersioningController(Website):
     @http.route('/website_version_ce/google_access', type='json', auth="user")
     def google_authorize(self, **kw):
         # Check if client_id and client_secret are set for Google
-        gs_obj = request.env['google.service'].with_context(
-            kw.get('local_context', {}),
-        )
+
         gm_obj = request.env['google.management'].with_context(
             kw.get('local_context', {}),
         )
 
-        client_id = gs_obj.get_client_id('management')
-        client_secret = gs_obj.get_client_secret('management')
+        client_id = request.env['ir.config_parameter'].sudo().get_param(
+            'google_management_client_id',
+            default=False
+        )
+        client_secret = request.env['ir.config_parameter'].sudo().get_param(
+            'google_management_client_secret',
+            default=False
+        )
+
         if not client_id or not client_secret:
             dummy, action = request.env['ir.model.data'].get_object_reference(
                 'website_version_ce',
