@@ -5,7 +5,8 @@
 odoo.define('website_form_recaptcha.recaptcha', function(require){
     "use strict";
 
-    var snippet_animation = require('web_editor.snippets.animation');
+    var ajax = require('web.ajax');
+    var snippet_animation = require('website.content.snippets.animation');
 
     snippet_animation.registry.form_builder_send = snippet_animation.registry.form_builder_send.extend({
 
@@ -13,21 +14,17 @@ odoo.define('website_form_recaptcha.recaptcha', function(require){
             var self = this;
             this._super();
             this.$captchas = self.$('.o_website_form_recaptcha');
-            $.ajax({
-                url: '/website/recaptcha/',
-                method: 'GET',
-                success: function(data){
-                    data = JSON.parse(data);
+            ajax.post('/website/recaptcha/', {}).then(
+                function (result) {
+                    var data = JSON.parse(result);
                     self.$captchas.append($(
                         '<div class="g-recaptcha" data-sitekey="' + data.site_key + '"></div>'
                     ));
                     if (self.$captchas.length) {
                         $.getScript('https://www.google.com/recaptcha/api.js');
                     }
-                },
-            });
+                }
+            );
         }
-
     });
-
 });

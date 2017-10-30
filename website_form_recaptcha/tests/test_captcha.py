@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2015-2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
@@ -64,7 +63,7 @@ class TestCaptcha(TransactionCase):
             self.model_obj.action_validate(*self.validate_vars)
         except ValidationError as e:
             self.assertEqual(
-                e[0], self.model_obj.ERROR_MAP[expect['error-codes'][0]]
+                e.name, self.model_obj._get_error_message([expect['error-codes'][0]])
             )
 
     @mock.patch(imp_requests)
@@ -77,7 +76,7 @@ class TestCaptcha(TransactionCase):
             self.model_obj.action_validate(*self.validate_vars)
         except ValidationError as e:
             self.assertEqual(
-                e[0], self.model_obj.ERROR_MAP[None]
+                e.name, self.model_obj._get_error_message()
             )
 
     @mock.patch(imp_requests)

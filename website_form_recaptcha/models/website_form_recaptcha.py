@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
 # Copyright 2015-2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp import models, api
-from openerp.exceptions import ValidationError
+from odoo import models, api, _
+from odoo.exceptions import ValidationError
 import requests
 
 
@@ -16,15 +15,18 @@ class WebsiteFormRecaptcha(models.AbstractModel):
     _description = 'Website Form Recaptcha Validations'
     URL = 'https://www.google.com/recaptcha/api/siteverify'
     RESPONSE_ATTR = 'g-recaptcha-response'
-    ERROR_MAP = {
-        'missing-input-secret': 'The secret parameter is missing.',
-        'invalid-input-secret':
-            'The secret parameter is invalid or malformed.',
-        'missing-input-response': 'The response parameter is missing.',
-        'invalid-input-response':
-            'The response parameter is invalid or malformed.',
-        None: 'There was a problem with the captcha entry.',
-    }
+
+    @api.model
+    def _get_error_message(self, errorcode=None):
+        map = {
+            'missing-input-secret': _('The secret parameter is missing.'),
+            'invalid-input-secret':
+                _('The secret parameter is invalid or malformed.'),
+            'missing-input-response': _('The response parameter is missing.'),
+            'invalid-input-response':
+                _('The response parameter is invalid or malformed.'),
+        }
+        return map.get(errorcode, _('There was a problem with the captcha entry.'))
 
     @api.model
     def action_validate(self, response, remote_ip):
@@ -38,10 +40,8 @@ class WebsiteFormRecaptcha(models.AbstractModel):
             True on success
         """
 
-        secret_key = self.env.ref(
-            'website_form_recaptcha.recaptcha_key_secret'
-        )
-        secret_key = secret_key.sudo().value
+        ICP = self.env['ir.config_parameter'].sudo()
+        secret_key = ICP.get_param('recaptcha.key.secret')
 
         # @TODO: Domain validation
         # domain_name = request.httprequest.environ.get(
@@ -57,12 +57,10 @@ class WebsiteFormRecaptcha(models.AbstractModel):
 
         for error in res.get('error-codes', []):
             raise ValidationError(
-                self.ERROR_MAP.get(
-                    error, self.ERROR_MAP[None]
-                )
+                self._get_error_message(error)
             )
 
         if not res.get('success'):
-            raise ValidationError(self.ERROR_MAP[None])
+            raise ValidationError(self._get_error_message())
 
         return True
