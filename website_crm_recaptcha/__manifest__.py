@@ -5,7 +5,7 @@
 {
     "name": "Website CRM - ReCaptcha",
     "summary": 'Provides a ReCaptcha validation in Website Contact Form',
-    "version": "10.0.1.0.0",
+    "version": "11.0.1.0.0",
     "category": "Website",
     "website": "https://laslabs.com/",
     "author": "LasLabs, Odoo Community Association (OCA)",
