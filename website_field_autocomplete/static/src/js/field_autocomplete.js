@@ -5,7 +5,8 @@
 odoo.define('website_field_autocomplete.field_autocomplete', function(require){
   "use strict";
 
-  var snippet_animation = require('web_editor.snippets.animation');
+  var ajax = require('web.ajax');
+  var snippet_animation = require('website.content.snippets.animation');
 
   snippet_animation.registry.field_autocomplete = snippet_animation.Class.extend({
 
@@ -21,16 +22,14 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
       if (this.add_domain) {
         domain = domain.concat(this.add_domain);
       }
-      return $.ajax({
-        dataType: 'json',
-        url: '/website/field_autocomplete/' + self.model,
-        method: 'GET',
-        data: {
-          domain: JSON.stringify(domain),
-          fields: JSON.stringify(self.fields),
-          limit: self.limit,
-        },
-      }).then(function(records) {
+      return ajax.post('/website/field_autocomplete/' + self.model,
+                       {
+                          domain: JSON.stringify(domain),
+                          fields: JSON.stringify(self.fields),
+                          limit: self.limit,
+                      })
+      .then(function(records) {
+          records = JSON.parse(records);
           var data = records.reduce(function(a, b) {
             a.push({label: b[self.displayField], value: b[self.valueField]});
             return a;

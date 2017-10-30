@@ -6,31 +6,47 @@
 -->
 
 <odoo>
-    <template id="field_autocomplete_demo" name="Field Autocomplete Demo"  page="True">
-        <t t-call="website.layout">
-            <div id="wrap" class="oe_structure oe_empty">
-                <div class="container">
-                    <h1>Website Menu Autocomplete:</h1>
-                    <div class="row">
-                        <label for="url">URL</label>
-                        <input type="text"
-                               name="url"
-                               class="js_website_autocomplete"
-                               data-query-field="name"
-                               data-display-field="name"
-                               data-value-field="url"
-                               data-limit="10"
-                               data-model="website.menu"
-                               />
+    <record id="field_autocomplete_demo" model="ir.ui.view">
+        <field name="name">Field Autocomplete Demo</field>
+        <field name="type">qweb</field>
+        <field name="key">website_field_autocomplete.demo_page</field>
+        <field name="arch" type="xml">
+            <t name="Demo" priority="29" t-name="website_field_autocomplete.demo_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+                        <div class="container">
+                            <h1>Website Menu Autocomplete:</h1>
+                            <div class="row">
+                                <label for="url">URL</label>
+                                <input type="text"
+                                       name="url"
+                                       class="js_website_autocomplete"
+                                       data-query-field="name"
+                                       data-display-field="name"
+                                       data-value-field="url"
+                                       data-limit="10"
+                                       data-model="website.menu"
+                                       />
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </t>
-    </template>
+                </t>
+            </t>
+        </field>
+    </record>
+
+    <record id="field_autocomplete_demo_page" model="website.page">
+        <field name="website_published">True</field>
+        <field name="url">/website_field_autocomplete_demo</field>
+        <field name="view_id" ref="field_autocomplete_demo" />
+    </record>
+
     <record id="field_autocomplete_demo_link" model="website.menu">
         <field name="name">AutoComplete</field>
-        <field name="url">/page/website_field_autocomplete.field_autocomplete_demo</field>
+        <field name="url">/website_field_autocomplete_demo</field>
         <field name="parent_id" ref="website.main_menu" />
         <field name="sequence" type="int">50</field>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="page_id" ref="field_autocomplete_demo_page" />
     </record>
 </odoo>
