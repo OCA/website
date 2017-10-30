@@ -1,12 +1,11 @@
-# -*- coding: utf-8 -*-
 # Copyright 2016-2017 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp import http
-from openerp.http import request
-from openerp.exceptions import ValidationError
+from odoo import http
+from odoo.http import request
+from odoo.exceptions import ValidationError
 
-from openerp.addons.website_form.controllers.main import WebsiteForm
+from odoo.addons.website_form.controllers.main import WebsiteForm
 
 import json
 
@@ -17,13 +16,13 @@ class WebsiteForm(WebsiteForm):
         '/website/recaptcha/',
         type='http',
         auth='public',
-        methods=['GET'],
+        methods=['POST'],
         website=True,
         multilang=False,
     )
     def recaptcha_public(self):
         return json.dumps({
-            'site_key': request.env['ir.config_parameter'].get_param(
+            'site_key': request.env['ir.config_parameter'].sudo().get_param(
                 'recaptcha.key.site'
             ),
         })
