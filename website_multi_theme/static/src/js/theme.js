@@ -28,5 +28,5 @@ odoo.define('website_multi_theme.theme', function(require){
 
     return {
         multi_theme_links: multi_theme_links,
-    }
+    };
 });

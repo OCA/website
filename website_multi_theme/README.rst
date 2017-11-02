@@ -109,6 +109,20 @@ scratch).
 This does not happen in demo or development instances, where views arch is
 always updated.
 
+How to test on runbot?
+----------------------
+
+* Open ``[[ Website ]] >> Configuration >> Settings``
+* Switch *Website* field from ``Website localhost`` to ``Website 0.0.0.0``
+* Click *fa-external-link* icon to edit the Website
+* At **Website Domain** field copy-paste build domain and add something right after the first dot, for example::
+
+      Original domain: 3308093-10-0-28910f.runbot2.odoo-community.org
+           New domain: 3308093-10-0-28910f.second-website.runbot2.odoo-community.org
+
+* Click ``[Save]`` to save changes at the Website
+* Now you can use unchanged build domain for website called ``Website localhost`` and updated domain for website called ``Website 0.0.0.0``
+
 Known issues / Roadmap
 ======================
 
@@ -121,12 +135,6 @@ Known issues / Roadmap
 * If you install any unsupported theme along with this addon, it would possibly
   become the base for all those supported, which can easily lead to weird
   situations and errors.
-* This addon will not work if your Odoo is not patched. Make sure it is updated
-  before installing. It must include these commits:
-
-  - https://github.com/odoo/odoo/commit/15bf41270d3abb607e7b623b59355594cad170cf
-  - https://github.com/odoo/odoo/commit/7c6714d7fee4125f037ef194f9cff5235a6c5320
-  - https://github.com/odoo/odoo/commit/48fe0a595308722a26afd5361432f24c610b4ba0
 
 Credits
 =======
@@ -137,6 +145,7 @@ Contributors
 * Rafael Blasco <rafael.blasco@tecnativa.com>
 * Antonio Espinosa <antonio.espinosa@tecnativa.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
+* `Ivan Yelizariev <https://it-projects.info/team/yelizariev>`__
 
 Maintainer
 ----------

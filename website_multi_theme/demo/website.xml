@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+    <record id="website.default_website" model="website">
+        <field name="multi_theme_id" ref="website_multi_theme.demo_multi"/>
+    </record>
+
+</odoo>
+

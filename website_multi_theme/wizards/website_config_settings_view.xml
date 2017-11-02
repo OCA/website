@@ -5,24 +5,44 @@
 
     <record id="view_website_config_settings" model="ir.ui.view">
         <field name="name">Add theme selector</field>
-        <field name="model">website.config.settings</field>
-        <field name="inherit_id" ref="website.view_website_config_settings"/>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
         <field name="arch" type="xml">
+            <!-- make website_id visible -->
             <field name="website_id" position="replace"/>
-            <field name="website_name" position="before">
-                <field name="website_id"/>
-            </field>
-            <field name="module_website_form_editor" position="after">
-                <label for="multi_theme_id"/>
-                <div>
-                    <field name="multi_theme_id" class="oe_inline"/>
-                    <button icon="fa-refresh"
-                            string="Reload"
-                            type="object"
-                            class="oe_inline"
-                            name="multi_theme_reload"/>
+            <xpath expr="//field[@name='website_name']/.." position="before">
+                <div class="row mt16">
+                    <label class="col-md-3 o_light_label" string="Website"/>
+                    <field name="website_id"/>
                 </div>
-            </field>
+            </xpath>
+
+            <!-- remove mt16 class from the div, because it's not on the top anymore -->
+            <xpath expr="//field[@name='website_name']/.." position="attributes">
+                <attribute name="class">row</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='webmaster_settings']" position="inside">
+                <div class="col-xs-12 col-md-6 o_setting_box" id="multi_theme">
+                    <div class="o_setting_right_pane">
+                        <label string="Multi-theme"/>
+                        <div class="content-group">
+                            <div class="mt16">
+                                <field name="multi_theme_id"/>
+                            </div>
+                        </div>
+                        <div class="content-group">
+                            <div class="mt16">
+                                <button icon="fa-refresh"
+                                        string="Reload"
+                                        type="object"
+                                        class="btn-link"
+                                        name="multi_theme_reload"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
         </field>
     </record>
 

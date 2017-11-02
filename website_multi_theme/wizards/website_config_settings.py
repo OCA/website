@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 
 
 class WebsiteConfigSettings(models.TransientModel):
-    _inherit = "website.config.settings"
+    _inherit = "res.config.settings"
 
     multi_theme_id = fields.Many2one(related="website_id.multi_theme_id")
 

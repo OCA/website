@@ -6,7 +6,7 @@
 {
     "name": "Website Multi Theme",
     "summary": "Support different theme per website",
-    "version": "10.0.1.0.0",
+    "version": "11.0.1.0.0",
     "category": "Website",
     "website": "https://www.tecnativa.com",
     "author": "Tecnativa, Odoo Community Association (OCA)",
@@ -27,6 +27,7 @@
     "demo": [
         "demo/pages.xml",
         "demo/themes.xml",
+        "demo/website.xml",
     ],
     "external_dependencies": {
         "bin": [
