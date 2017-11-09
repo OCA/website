@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Tecnativa - Jairo Llopis
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+
+<template>
+    <t t-name="website_form_builder.DefaultValueForm">
+        <form>
+            <t t-raw="widget.field_html"/>
+        </form>
+    </t>
+
+    <t t-name="website_form_builder.HiddenDataForm">
+        <form>
+            <div class="form-group">
+                <label for="model">Hidden data</label>
+                <textarea
+                    id="data"
+                    class="form-control"
+                    placeholder="field_name:Field value"
+                    rows="5"
+                ><t t-esc="widget.current_data"/></textarea>
+                <p class="help-block">
+                    This data will always be sent with the form. Format:
+<pre>some_string_field:Value for field one
+some_boolean_i_want_true:1
+some_boolean_i_want_false:
+some_date_field:2001-01-01
+some_datetime_field:2001-01-01 17:40:10
+some_numeric_field:30.4
+some_selection_field:selection_key
+</pre>
+                </p>
+            </div>
+        </form>
+    </t>
+
+    <t t-name="website_form_builder.ModelFieldForm">
+        <form>
+            <div class="form-group">
+                <label for="field">Choose the new field for the form</label>
+                <select id="field" class="form-control">
+                    <t t-foreach="widget.sorted_fields()" t-as="field_pair">
+                        <option t-att-value="field_pair[1]">
+                            <t t-esc="field_pair[0]"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </form>
+    </t>
+
+    <t t-name="website_form_builder.ParamsForm">
+        <form>
+            <div class="form-group">
+                <label for="model">Choose this form's action</label>
+                <select id="model" class="form-control">
+                    <t t-foreach="widget.models" t-as="model">
+                        <option
+                            t-att-value="model"
+                            t-att-selected="model === widget.chosen ? 'selected' : null"
+                        >
+                            <t t-esc="widget.models[model].website_form_label || widget.models[model].name"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </form>
+    </t>
+</template>
