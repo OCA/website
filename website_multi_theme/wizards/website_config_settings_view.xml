@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+
+    <record id="view_website_config_settings" model="ir.ui.view">
+        <field name="name">Add theme selector</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <!-- make website_id visible -->
+            <field name="website_id" position="replace"/>
+            <xpath expr="//field[@name='website_name']/.." position="before">
+                <div class="row mt16">
+                    <label class="col-md-3 o_light_label" string="Website"/>
+                    <field name="website_id"/>
+                </div>
+            </xpath>
+
+            <!-- remove mt16 class from the div, because it's not on the top anymore -->
+            <xpath expr="//field[@name='website_name']/.." position="attributes">
+                <attribute name="class">row</attribute>
+            </xpath>
+
+            <xpath expr="//div[@id='webmaster_settings']" position="inside">
+                <div class="col-xs-12 col-md-6 o_setting_box" id="multi_theme">
+                    <div class="o_setting_right_pane">
+                        <label string="Multi-theme"/>
+                        <div class="content-group">
+                            <div class="mt16">
+                                <field name="multi_theme_id"/>
+                            </div>
+                        </div>
+                        <div class="content-group">
+                            <div class="mt16">
+                                <button icon="fa-refresh"
+                                        string="Reload"
+                                        type="object"
+                                        class="btn-link"
+                                        name="multi_theme_reload"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
