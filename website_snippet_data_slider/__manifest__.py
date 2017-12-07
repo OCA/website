@@ -7,10 +7,10 @@
     "summary":
         "Abstract data slider for use on website."
         "  Primary use (and default implementation) is product slider.",
-    "version": "10.0.1.0.0",
+    "version": "11.0.1.0.0",
     "category": "Website",
     "website": "https://laslabs.com/",
-    "author": "LasLabs, Odoo Community Association (OCA)",
+    "author": "LasLabs, Odoo Community Association (OCA), Kaushal Prajapati",
     "license": "LGPL-3",
     "application": False,
     "installable": True,

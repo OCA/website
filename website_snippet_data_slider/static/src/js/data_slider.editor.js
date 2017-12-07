@@ -58,10 +58,10 @@ odoo.define('website_snippet_data_slider.snippet_editor', function(require){
     
     settings_callback: function(event, data){
       
-      data = JSON.parse(data);
+      data = data ? JSON.parse(data) : {};
       
       switch (event) {
-        case 'over':
+        case true:
           this.optionsBackup = this.options;
           this.do_options(data, event);
           break;
@@ -69,11 +69,7 @@ odoo.define('website_snippet_data_slider.snippet_editor', function(require){
         case 'reset':
           this.reset_options(this.optionsBackup);
           break;
-        
-        case 'click':
-          this.do_options(data, event);
-          break;
-          
+
       }
     },
     

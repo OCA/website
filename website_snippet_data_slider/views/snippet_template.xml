@@ -11,7 +11,7 @@
               inherit_id="website.snippets"
               name="Data Slider Snipper">
         
-        <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
+        <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
             <t t-snippet="website_snippet_data_slider.data_slider_snippet"
                t-thumbnail="/website_snippet_data_slider/static/description/widget_icon.png" />
         </xpath>

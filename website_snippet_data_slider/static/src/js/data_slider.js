@@ -5,7 +5,7 @@
 odoo.define('website_snippet_data_slider', function(require){
   "use strict";
     
-    var animation = require('web_editor.snippets.animation');
+    var animation = require('website.content.snippets.animation');
     
     var defaults = {
         lazyLoad: 'ondemand',
@@ -118,7 +118,7 @@ odoo.define('website_snippet_data_slider', function(require){
                 data: {
                     domain: JSON.stringify(this.domain),
                     fields: JSON.stringify(this.fields),
-                    limit: this.limit,
+                    limit: this.dataLimit,
                 },
                 success: $.proxy(this.handleRecords, this),
             });

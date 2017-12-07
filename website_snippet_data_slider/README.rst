@@ -57,7 +57,7 @@ Following are the setings that do not have configuration in the UI:
    :target: https://runbot.odoo-community.org/runbot/186/10.0
 
 Known Issues / Road Map
-======================
+=======================
 
 * Provide UI for data settings
 * Provide responsive settings & config
@@ -86,6 +86,7 @@ Contributors
 ------------
 
 * Dave Lasley <dave@laslabs.com>
+* Kaushal Prajapati <kbprajapati@live.com>
 
 Maintainer
 ----------
