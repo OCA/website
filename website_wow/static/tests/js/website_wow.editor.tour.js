@@ -9,7 +9,6 @@ odoo.define('website_wow.tour_editor', function (require) {
     var base = require("web_editor.base");
 
     tour.register("website_wow_editor", {
-        url: '/page/contactus?debug=assets&enable_editor=1',
         test: true,
         wait_for: base.ready(),
     }, [{
