@@ -8,7 +8,8 @@ odoo.define('website_wow.tour_editor', function (require) {
     var tour = require("web_tour.tour");
     var base = require("web_editor.base");
 
-    tour.register("website_wow_editor", {
+    tour.register("website_wow_tour_editor", {
+        url: '/?enable_editor=1',
         test: true,
         wait_for: base.ready(),
     }, [{

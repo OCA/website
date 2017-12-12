@@ -9,7 +9,7 @@ Website Wow
 Provides animations for your Odoo website using WowJS, which is powered by *animate.css*.
 
 This is created as a replacement to Odoo's *website_animate* module, which uses proprietary
-animations build by Odoo for Odoo. Animate.css is a more widely used framework that is more
+animations built by Odoo for Odoo. Animate.css is a more widely used framework that is more
 efficient, better maintained, and contains significantly more animations.
 
 Usage
@@ -28,7 +28,7 @@ are all prefixed with "Wow".
    :target: https://runbot.odoo-community.org/runbot/186/10.0
 
 Known Issues / Road Map
-======================
+=======================
 
 Bug Tracker
 ===========
