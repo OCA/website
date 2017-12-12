@@ -30,6 +30,13 @@ are all prefixed with "Wow".
 Known Issues / Road Map
 =======================
 
+* Tours for this module fail, because PhantomJS never sees the tour as ready. This is
+  deemed a PhantomJS issue, and the ``test_ui.py`` file is not actually imported. To
+  confirm that tests work for this module, go to ``/`` and enter the following into
+  your browser console::
+
+      odoo.__DEBUG__.services['web_tour.tour'].run('website_wow_tour_editor')
+
 Bug Tracker
 ===========
 
