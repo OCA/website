@@ -140,9 +140,9 @@ odoo.define("website_form_builder.tour", function (require) {
         {
             trigger: ".o_website_form_send",
         },
-        // {
-        //     trigger: "#o_website_form_result.text-danger",
-        // },
+        {
+            trigger: "#o_website_form_result.text-danger",
+        },
         {
             run: "text 🐵",
             trigger: "body:not(.editor_enable) .s_website_form[data-model_name='res.currency'] .has-error input[name=symbol]",
