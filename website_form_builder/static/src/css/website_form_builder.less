@@ -15,6 +15,10 @@
     }
 }
 
-body .modal.o_website_modal textarea.form-control {
-    height: auto;
+body .modal.o_website_modal {
+    textarea, select[multiple] {
+        &.form-control {
+            height: auto;
+        }
+    }
 }

@@ -54,7 +54,7 @@
                     <a tabindex="-1"><i class="fa fa-cogs"/> Change action</a>
                 </li>
                 <li data-only="click" data-ask_model_field="">
-                    <a tabindex="-1"><i class="fa fa-plus"/> Add model field</a>
+                    <a tabindex="-1"><i class="fa fa-plus"/> Add model fields</a>
                 </li>
                 <li class="dropdown-submenu">
                     <a tabindex="-1"><i class="fa fa-hand-spock-o"/> Add custom field</a>

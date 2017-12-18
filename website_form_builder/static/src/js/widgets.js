@@ -3,8 +3,6 @@
 
  odoo.define('website_form_builder.widgets', function (require) {
      "use strict";
-     // HACK https://github.com/eslint/eslint/issues/9857
-     /* eslint-disable no-useless-call */
 
     var ajax = require("web.ajax");
     var core = require('web.core');
@@ -35,7 +33,7 @@
                 title: _t("Set field's default value"),
                 size: "small",
             }, options);
-            return this._super.call(this, parent, _options);
+            return this._super(parent, _options);
         },
 
         /**
@@ -75,7 +73,7 @@
                 title: _t("Form Settings"),
                 size: "small",
             }, options);
-            return this._super.call(this, parent, _options);
+            return this._super(parent, _options);
         },
 
         /**
@@ -103,21 +101,25 @@
             this.fields = fields;
             this.blacklist = blacklist;
             var _options = $.extend({}, {
-                title: _t("Add Model Field"),
+                title: _t("Add Model Fields"),
                 size: "small",
             }, options);
-            return this._super.call(this, parent, _options);
+            return this._super(parent, _options);
         },
 
         /**
          * Save field dict
          */
         save: function () {
-            var name = this.$("#field").val();
-            this.final_data = {
-                name: name,
-                field: this.fields[name],
-            };
+            var names = this.$("#field").val();
+            this.final_data = [];
+            for (var n in names) {
+                var name = names[n];
+                this.final_data.push({
+                    name: name,
+                    field: this.fields[name],
+                });
+            }
             this._super.apply(this, arguments);
         },
 

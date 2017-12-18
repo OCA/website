@@ -41,14 +41,14 @@ msgstr "<i class=\"fa fa-hand-spock-o\"/> Añadir campo personalizado"
 
 #. module: website_form_builder
 #: model:ir.ui.view,arch_db:website_form_builder.snippet_options
-msgid "<i class=\"fa fa-plus\"/> Add model field"
+msgid "<i class=\"fa fa-plus\"/> Add model fields"
 msgstr "<i class=\"fa fa-plus\"/> Añadir campo del modelo"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/widgets.js:106
 #, python-format
-msgid "Add Model Field"
+msgid "Add Model Fields"
 msgstr "Añadir campo del modelo"
 
 #. module: website_form_builder

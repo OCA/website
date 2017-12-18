@@ -289,7 +289,9 @@ odoo.define('website_form_builder.snippets', function (require) {
             var form = new widgets.ModelFieldForm(
                 this, {}, fields, this.present_fields()
             );
-            form.on("save", this, this.add_model_field);
+            form.on("save", this, function (infos) {
+                _.map(infos, this.add_model_field, this);
+            });
             return form.open();
         },
 
