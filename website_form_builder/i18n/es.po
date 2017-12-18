@@ -6,28 +6,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-15 14:15+0000\n"
-"PO-Revision-Date: 2017-12-15 15:21+0100\n"
+"POT-Creation-Date: 2018-01-19 10:50+0000\n"
+"PO-Revision-Date: 2018-01-19 10:52+0000\n"
+"Last-Translator: Jairo Llopis <yajo.sk8@gmail.com>\n"
 "Language-Team: \n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.3\n"
-"Last-Translator: Jairo Llopis <yajo.sk8@gmail.com>\n"
-"Language: es_ES\n"
 
 #. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/js/snippets.js:286
+#: code:addons/website_form_builder/static/src/js/snippets.js:317
 #, python-format
 msgid "%s help block"
 msgstr "Bloque de ayuda para %s"
-
-#. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
-msgid "<i class=\"fa fa-asterisk\"/> Required"
-msgstr "<i class=\"fa fa-asterisk\"/> Obligatorio"
 
 #. module: website_form_builder
 #: model:ir.ui.view,arch_db:website_form_builder.snippet_options
@@ -36,62 +31,87 @@ msgstr "<i class=\"fa fa-cogs\"/> Cambiar acción"
 
 #. module: website_form_builder
 #: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "<i class=\"fa fa-eye-slash\"/> Hide field"
+msgstr "<i class=\"fa fa-eye-slash\"/> Esconder campo"
+
+#. module: website_form_builder
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "<i class=\"fa fa-hand-spock-o\"/> Add custom field"
+msgstr "<i class=\"fa fa-hand-spock-o\"/> Añadir campo personalizado"
+
+#. module: website_form_builder
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-plus\"/> Add model field"
 msgstr "<i class=\"fa fa-plus\"/> Añadir campo del modelo"
 
 #. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/js/widgets.js:122
+#: code:addons/website_form_builder/static/src/js/widgets.js:106
 #, python-format
 msgid "Add Model Field"
 msgstr "Añadir campo del modelo"
 
 #. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/xml/widgets.xml:40
+#: code:addons/website_form_builder/static/src/xml/widgets.xml:15
 #, python-format
 msgid "Choose the new field for the form"
 msgstr "Escoja el nuevo campo para el formulario"
 
 #. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/xml/widgets.xml:55
+#: code:addons/website_form_builder/static/src/xml/widgets.xml:30
 #, python-format
 msgid "Choose this form's action"
 msgstr "Escoja la acción de este formulario"
 
 #. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/js/snippets.js:279
+#: code:addons/website_form_builder/static/src/js/snippets.js:310
 #, python-format
 msgid "Custom %s field"
 msgstr "Campo %s personalizado"
 
 #. module: website_form_builder
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Date"
+msgstr "Fecha"
+
+#. module: website_form_builder
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Date and time"
+msgstr "Fecha y hora"
+
+#. module: website_form_builder
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Decimal number"
+msgstr "Número decimal"
+
+#. module: website_form_builder
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "File upload"
+msgstr "Subida de archivos"
+
+#. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/js/widgets.js:97
+#: code:addons/website_form_builder/static/src/js/widgets.js:75
 #, python-format
 msgid "Form Settings"
 msgstr "Configuración del formulario"
 
 #. module: website_form_builder
-#. openerp-web
-#: code:addons/website_form_builder/static/src/js/widgets.js:66
-#: code:addons/website_form_builder/static/src/xml/widgets.xml:15
-#, python-format
-msgid "Hidden data"
-msgstr "Datos escondidos"
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Long text"
+msgstr "Texto largo"
+
+#. module: website_form_builder
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Multiple selection"
+msgstr "Selección múltiple"
 
 #. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/js/web_module_name.tour.js:39
-#, python-format
-msgid "Instructions for end user."
-msgstr "Instrucciones para el usuario final."
-
-#. module: website_form_builder
-#. openerp-web
-#: code:addons/website_form_builder/static/src/js/snippets.js:282
+#: code:addons/website_form_builder/static/src/js/snippets.js:313
 #, python-format
 msgid "Option %d"
 msgstr "Opción %d"
@@ -102,39 +122,31 @@ msgid "Send"
 msgstr "Enviar"
 
 #. module: website_form_builder
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Set as required"
+msgstr "Hacer obligatorio"
+
+#. module: website_form_builder
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Set default value"
+msgstr "Establecer valor por defecto"
+
+#. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/js/widgets.js:30
+#: code:addons/website_form_builder/static/src/js/widgets.js:35
 #, python-format
 msgid "Set field's default value"
 msgstr "Establecer el valor por defecto para el campo"
 
 #. module: website_form_builder
-#. openerp-web
-#: code:addons/website_form_builder/static/src/js/web_module_name.tour.js:45
-#, python-format
-msgid "Text for continue button."
-msgstr "Texto para el botón de continuar."
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Short text"
+msgstr "Texto corto"
 
 #. module: website_form_builder
-#. openerp-web
-#: code:addons/website_form_builder/static/src/js/web_module_name.tour.js:20
-#, python-format
-msgid "The title of this step, appears in logs"
-msgstr ""
-
-#. module: website_form_builder
-#. openerp-web
-#: code:addons/website_form_builder/static/src/xml/widgets.xml:22
-#, python-format
-msgid "This data will always be sent with the form. Format:"
-msgstr "Esta información siempre se enviará con el formulario. Formato:"
-
-#. module: website_form_builder
-#. openerp-web
-#: code:addons/website_form_builder/static/src/js/web_module_name.tour.js:14
-#, python-format
-msgid "Try to demostrate how to create a tour"
-msgstr ""
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Single selection"
+msgstr "Selección única"
 
 #. module: website_form_builder
 #: model:ir.ui.view,arch_db:website_form_builder.view_model_form
@@ -142,29 +154,46 @@ msgid "Website Forms"
 msgstr "Formularios del sitio web"
 
 #. module: website_form_builder
-#. openerp-web
-#: code:addons/website_form_builder/static/src/xml/widgets.xml:21
-#, python-format
-msgid "field_name:Field value"
-msgstr "nombre_campo:Valor del campo"
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Whole number"
+msgstr "Número entero"
 
 #. module: website_form_builder
-#. openerp-web
-#: code:addons/website_form_builder/static/src/xml/widgets.xml:24
-#, python-format
-msgid ""
-"some_string_field:Value for field one\n"
-"some_boolean_i_want_true:1\n"
-"some_boolean_i_want_false:\n"
-"some_date_field:2001-01-01\n"
-"some_datetime_field:2001-01-01 17:40:10\n"
-"some_numeric_field:30.4\n"
-"some_selection_field:selection_key"
-msgstr ""
-"un_campo_de_texto:Valor para el campo uno\n"
-"un_campo_booleano_que_quiero_verdadero:1\n"
-"un_campo_booleano_que_quiero_falso:\n"
-"un_campo_de_fecha:2001-01-01\n"
-"un_campo_de_fecha_y_hora:2001-01-01 17:40:10\n"
-"un_campo_numerico:30.4\n"
-"un_campo_de_seleccion:selection_key"
+#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+msgid "Yes or not"
+msgstr "Sí o no"
+
+#~ msgid "<i class=\"fa fa-asterisk\"/> Required"
+#~ msgstr "<i class=\"fa fa-asterisk\"/> Obligatorio"
+
+#~ msgid "Hidden data"
+#~ msgstr "Datos escondidos"
+
+#~ msgid "Instructions for end user."
+#~ msgstr "Instrucciones para el usuario final."
+
+#~ msgid "Text for continue button."
+#~ msgstr "Texto para el botón de continuar."
+
+#~ msgid "This data will always be sent with the form. Format:"
+#~ msgstr "Esta información siempre se enviará con el formulario. Formato:"
+
+#~ msgid "field_name:Field value"
+#~ msgstr "nombre_campo:Valor del campo"
+
+#~ msgid ""
+#~ "some_string_field:Value for field one\n"
+#~ "some_boolean_i_want_true:1\n"
+#~ "some_boolean_i_want_false:\n"
+#~ "some_date_field:2001-01-01\n"
+#~ "some_datetime_field:2001-01-01 17:40:10\n"
+#~ "some_numeric_field:30.4\n"
+#~ "some_selection_field:selection_key"
+#~ msgstr ""
+#~ "un_campo_de_texto:Valor para el campo uno\n"
+#~ "un_campo_booleano_que_quiero_verdadero:1\n"
+#~ "un_campo_booleano_que_quiero_falso:\n"
+#~ "un_campo_de_fecha:2001-01-01\n"
+#~ "un_campo_de_fecha_y_hora:2001-01-01 17:40:10\n"
+#~ "un_campo_numerico:30.4\n"
+#~ "un_campo_de_seleccion:selection_key"
