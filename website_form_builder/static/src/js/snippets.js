@@ -424,18 +424,18 @@ odoo.define('website_form_builder.snippets', function(require){
             var domain = [], context = base.get_context();
             // Domain might contain un-evaluable literals
             try {
-                domain = new data.CompoundDomain(field.domain || []).eval()
+                domain = new data.CompoundDomain(field.domain || []).eval();
             } catch (error) {
-                console.warn("Cannot evaluate field domain, ignoring.")
+                console.warn("Cannot evaluate field domain, ignoring.");
             }
             // Context too
             try {
                 context = new data.CompoundContext(
                     base.get_context(),
                     field.context
-                ).eval()
+                ).eval();
             } catch (error) {
-                console.warn("Cannot evaluate field context, using user's.")
+                console.warn("Cannot evaluate field context, using user's.");
             }
             // Get results
             return new Model(field.relation).call("search_read", {

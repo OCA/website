@@ -9,8 +9,6 @@
             <script type="text/javascript"
                     src="/website_form_builder/static/src/js/snippets.js"/>
             <script type="text/javascript"
-                    src="/website_form_builder/static/src/js/tour.js"/>
-            <script type="text/javascript"
                     src="/website_form_builder/static/src/js/widgets.js"/>
             <link rel="stylesheet"
                   href="/website_form_builder/static/src/css/website_form_builder.less"/>

@@ -54,9 +54,15 @@ Known issues / Roadmap
   not much value while adding lots of complexity:
 
   * ``id``
-  * ``one2many``
-  * ``reference``
-  * ``serialized``
+  * ``create_uid``
+  * ``create_date``
+  * ``write_uid``
+  * ``write_date``
+  * ``__last_update``
+  * Any ``one2many`` fields
+  * Any ``reference`` fields
+  * Any ``serialized`` fields
+  * Any read-only fields
 
 * You should include https://github.com/odoo/odoo/pull/21628 in your
   installation to get a better UX when a user has already sent a form and

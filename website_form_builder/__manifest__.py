@@ -20,6 +20,7 @@
         "views/ir_model.xml",
     ],
     "demo": [
+        "demo/assets.xml",
         "demo/ir_model.xml",
     ],
 }
