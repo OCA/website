@@ -56,46 +56,6 @@
         },
     });
 
-    var HiddenDataForm = Dialog.extend({
-        template: "website_form_builder.HiddenDataForm",
-
-        /**
-         * Store current data before creating widget
-         *
-         * @param {Object} parent Widget where this dialog is attached
-         * @param {Object} options Dialog creation options
-         * @param {Object} current_data Preexisting form hidden data
-         * @returns {Dialog} New Dialog object
-         */
-        init: function (parent, options, current_data) {
-            this.current_data = "";
-            for (var key in current_data) {
-                this.current_data += key + ":" + current_data[key] + "\n";
-            }
-            var _options = $.extend({}, {
-                title: _t("Hidden data"),
-            }, options);
-            return this._super.call(this, parent, _options);
-        },
-
-        /**
-         * Save new hidden data
-         */
-        save: function () {
-            var data = this.$("#data").val().split("\n");
-            this.final_data = {};
-            for (var line in data) {
-                line = data[line];
-                var combination = line.match(/^([^:]+):(.*)$/);
-                if (!combination) {
-                    continue;
-                }
-                this.final_data[combination[1]] = combination[2];
-            }
-            this._super.apply(this, arguments);
-        },
-    });
-
     var ParamsForm = Dialog.extend({
         template: "website_form_builder.ParamsForm",
 
@@ -191,7 +151,6 @@
     _templates_loaded.done(function () {
         result.resolve({
             DefaultValueForm: DefaultValueForm,
-            HiddenDataForm: HiddenDataForm,
             ParamsForm: ParamsForm,
             ModelFieldForm: ModelFieldForm,
         });

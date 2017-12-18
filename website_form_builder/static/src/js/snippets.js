@@ -100,6 +100,22 @@ odoo.define('website_form_builder.snippets', function (require) {
                     this.$target.hasClass("o_required")
                 );
             }
+            // Ask for a default value if hiding a field without it
+            if (
+                type === "click" &&
+                value === "css_non_editable_mode_hidden" &&
+                this.$target.hasClass(value) &&
+                // Query to know if there's a default value
+                !this.$inputs.filter(
+                    // A selectable input is selected...
+                    ":checkbox[selected], :radio[selected]," +
+                    "select>option[selected]," +
+                    // ... or a fillable input is filled
+                    "input[value][value!=''],textarea:parent"
+                ).length
+            ) {
+                this.ask_default_value(type);
+            }
         },
 
         /**
@@ -217,41 +233,6 @@ odoo.define('website_form_builder.snippets', function (require) {
         drop_and_build_snippet: function () {
             this.ask_model();
             this._super.apply(this, arguments);
-        },
-
-        /**
-         * Let user set hidden data for the form.
-         *
-         * @param {String} type Event type
-         * @returns {Dialog} Opened dialog
-         */
-        ask_hidden_data: function (type) {
-            if (type === "reset") {
-                // Nothing to reset here
-                return;
-            }
-            var form = new widgets.HiddenDataForm(
-                this, {}, this.controller_data().hidden_data
-            );
-            form.on("save", this, this.set_hidden_data);
-            return form.open();
-        },
-
-        /**
-         * Set form's hidden data.
-         *
-         * @param {Object} new_data Mapping of hidden data for the form.
-         */
-        set_hidden_data: function (new_data) {
-            var old_data = this.controller_data().hidden_data;
-            for (var key in old_data) {
-                if (!(key in new_data)) {
-                    this.$form.removeAttr("data-form_field_" + key);
-                }
-            }
-            for (key in new_data) {
-                this.$form.attr("data-form_field_" + key, new_data[key]);
-            }
         },
 
         /**
