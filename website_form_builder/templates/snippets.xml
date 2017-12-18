@@ -65,7 +65,7 @@
                         <li data-only="click" data-add_custom_field="text">
                             <a tabindex="-1">Long text</a>
                         </li>
-                        <li data-only="click" data-add_custom_field="selection.radio">
+                        <li data-only="click" data-add_custom_field="selection-radio">
                             <a tabindex="-1">Single selection</a>
                         </li>
                         <li data-only="click" data-add_custom_field="many2many">

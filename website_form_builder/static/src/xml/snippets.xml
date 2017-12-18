@@ -179,7 +179,7 @@
     </t>
 
     <!-- Only used in custom fields -->
-    <t t-name="website_form_builder.field.selection.radio">
+    <t t-name="website_form_builder.field.selection-radio">
         <t t-call="website_form_builder.field_label">
             <t t-foreach="relational_data" t-as="option">
                 <div class="radio">

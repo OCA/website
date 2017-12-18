@@ -9,11 +9,11 @@ odoo.define("website_form_builder.tour", function (require) {
     var base = require("web_editor.base");
 
     function show_submenus() {
-        $(".oe_overlay .dropdown-menu").addClass("show");
+        $(".oe_overlay_options:visible .dropdown-menu").addClass("show");
     }
 
     function hide_submenus() {
-        $(".oe_overlay .dropdown-menu").removeClass("show");
+        $(".oe_overlay_options .dropdown-menu").removeClass("show");
     }
 
     var options = {
@@ -24,148 +24,133 @@ odoo.define("website_form_builder.tour", function (require) {
     },
     steps = [
         {
-            content: "Enter edit mode",
             trigger: "#oe_main_menu_navbar a[data-action=edit]",
         },
         {
-            content: "Add a new form",
             run: "drag_and_drop",
             trigger: ".oe_snippet:has(.o_website_form_builder) .oe_snippet_thumbnail",
         },
         {
-            content: 'Select "Country"',
-            run: "text res.partner.country",
+            run: "text res.country",
             trigger: ".modal-dialog #model",
         },
         {
-            content: "Save",
             trigger: ".modal-dialog .o_save_button",
         },
         {
-            content: "Select the form",
-            trigger: ".s_website_form[data-model_name='res.partner.country']",
+            trigger: ".s_website_form[data-model_name='res.country']",
         },
         {
-            content: "Customize it",
-            trigger: ".oe_overlay .oe_options",
+            trigger: ".oe_overlay_options:visible .btn:contains('Customize')",
         },
         {
-            content: "Add a model field",
-            trigger: ".oe_overlay [data-ask_model_field]",
+            trigger: ".oe_overlay_options:visible [data-ask_model_field]>a",
         },
         {
-            content: 'Select "Name"',
             run: "text name",
             trigger: ".modal-dialog #field",
         },
         {
-            content: "Save",
             trigger: ".modal-dialog .o_save_button",
         },
         {
-            content: "Select the new field",
             trigger: "input[name=name]",
         },
         {
-            content: "Delete it",
-            trigger: ".oe_overlay .oe_snippet_remove",
+            trigger: ".oe_overlay_options:visible .oe_snippet_remove",
         },
         {
-            content: "Select the form",
-            trigger: ".s_website_form[data-model_name='res.partner.country']",
+            trigger: ".s_website_form[data-model_name='res.country']",
         },
         {
-            content: "Customize it",
-            trigger: ".oe_overlay .oe_options",
+            trigger: ".oe_overlay_options:visible .btn:contains('Customize')",
         },
         {
-            content: "Add a model field",
-            trigger: ".oe_overlay [data-ask_model_field]",
+            trigger: ".oe_overlay_options:visible [data-ask_model_field]>a",
         },
         {
-            content: 'Select "Name"',
             run: "text name",
             trigger: ".modal-dialog #field",
         },
         {
-            content: "Customize it",
-            trigger: ".oe_overlay .oe_options",
+            trigger: ".modal-dialog .o_save_button",
         },
         {
-            content: "Set a default value",
-            trigger: ".oe_overlay [data-ask_default_value]",
+            trigger: ".form-field label[for=name]",
         },
         {
-            content: _.str.sprintf(
-                'Give the default name "%s"',
-                "Monkey Island"
-            ),
+            trigger: ".oe_overlay_options:visible .btn:contains('Customize')",
+        },
+        {
+            trigger: ".oe_overlay_options:visible [data-ask_default_value]>a",
+        },
+        {
             run: "text Monkey Island",
             trigger: ".modal-dialog [name=name]",
         },
         {
-            content: "Save",
             trigger: ".modal-dialog .o_save_button",
         },
         {
-            content: "Select the form",
-            trigger: ".s_website_form[data-model_name='res.partner.country']",
+            trigger: ".s_website_form[data-model_name='res.country']",
         },
         {
-            content: "Customize it",
-            trigger: ".oe_overlay .oe_options",
+            trigger: ".oe_overlay_options:visible .btn:contains('Customize')",
         },
         {
-            content: "Add a custom field",
             run: show_submenus,
-            trigger: ".oe_overlay .snippet-option-website_form_builder_form:has(.dropdown-menu)",
+            trigger: ".oe_overlay_options:visible .snippet-option-website_form_builder_form:has(.dropdown-menu)",
         },
         {
-            content: "Add a single selection field",
-            trigger: '.oe_overlay [data-add_custom_field="selection.radio"]',
+            trigger: '.oe_overlay_options:visible [data-add_custom_field="selection-radio"]>a',
         },
         {
-            content: "Customize it",
             run: hide_submenus,
-            trigger: ".oe_overlay .oe_options",
+            trigger: ".form-field-selection-radio",
         },
         {
-            content: "Change form action",
-            trigger: ".oe_overlay [data-ask_model]",
+            trigger: ".oe_overlay_options:visible .btn:contains('Customize')",
         },
         {
-            content: 'Select "Currency"',
+            trigger: ".oe_overlay_options:visible [data-ask_model]>a",
+        },
+        {
             run: "text res.currency",
             trigger: ".modal-dialog #model",
         },
         {
-            content: "Select the custom field",
-            trigger: ".form-field-selection.radio",
+            trigger: ".modal-dialog .o_save_button",
         },
         {
-            content: "Duplicate it",
-            trigger: ".oe_overlay .oe_snippet_clone",
+            trigger: ".form-field-selection-radio",
         },
         {
-            content: "Remove it",
-            trigger: ".oe_overlay .oe_snippet_remove",
+            trigger: ".oe_overlay_options:visible .oe_snippet_clone",
         },
         {
-            content: "Save the page",
-            run: "",
+            trigger: ".oe_overlay_options:visible .oe_snippet_remove",
+        },
+        {
             trigger: "#web_editor-top-edit [data-action=save]",
         },
         {
-            content: "Change the name",
             run: "text Monkey Island Dollars",
             trigger: "body:not(.editor_enable) .s_website_form[data-model_name='res.currency'] input[name=name]",
         },
         {
-            content: "Send the form",
+            trigger: ".o_website_form_send",
+        },
+        // {
+        //     trigger: "#o_website_form_result.text-danger",
+        // },
+        {
+            run: "text 🐵",
+            trigger: "body:not(.editor_enable) .s_website_form[data-model_name='res.currency'] .has-error input[name=symbol]",
+        },
+        {
             trigger: ".o_website_form_send",
         },
         {
-            content: "Success!",
             trigger: "#o_website_form_result.text-success",
         },
     ];
