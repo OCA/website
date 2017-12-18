@@ -13,7 +13,7 @@ class UICase(HttpCase):
             "website_form_builder.tour",
         )
         self.phantom_js(
-            url_path="/?enable_editor=1",
+            url_path="/",
             code="%s.run('%s')" % tour,
             ready="%s.tours['%s'].ready" % tour,
             login="admin",

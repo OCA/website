@@ -5,7 +5,7 @@
 <odoo>
     <!-- Enable forms to create countries -->
     <record id="base.model_res_country" model="ir.model">
-        <field name="website_form_access">True</field>
+        <field name="website_form_access" eval="True"/>
         <field name="website_form_label">Country</field>
     </record>
     <function model="ir.model.fields" name="formbuilder_whitelist">
@@ -17,7 +17,7 @@
 
     <!-- Enable forms to create currencies -->
     <record id="base.model_res_currency" model="ir.model">
-        <field name="website_form_access">True</field>
+        <field name="website_form_access" eval="True"/>
         <field name="website_form_label">Currency</field>
     </record>
     <function model="ir.model.fields" name="formbuilder_whitelist">

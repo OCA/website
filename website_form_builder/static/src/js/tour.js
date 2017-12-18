@@ -17,25 +17,29 @@ odoo.define("website_form_builder.tour", function (require) {
     }
 
     var options = {
-        url: "/?enable_editor=1",
+        url: "/",
         skip_enabled: true,
         test: true,
         wait_for: base.ready(),
     },
     steps = [
         {
+            content: "Enter edit mode",
+            trigger: "#oe_main_menu_navbar a[data-action=edit]",
+        },
+        {
             content: "Add a new form",
-            run: "drag_and_drop #wrap",
-            trigger: ".oe_snippet[name=Form]",
+            run: "drag_and_drop",
+            trigger: ".oe_snippet:has(.o_website_form_builder) .oe_snippet_thumbnail",
         },
         {
             content: 'Select "Country"',
             run: "text res.partner.country",
-            trigger: ".modal #model",
+            trigger: ".modal-dialog #model",
         },
         {
             content: "Save",
-            trigger: ".modal .o_save_button",
+            trigger: ".modal-dialog .o_save_button",
         },
         {
             content: "Select the form",
@@ -52,11 +56,11 @@ odoo.define("website_form_builder.tour", function (require) {
         {
             content: 'Select "Name"',
             run: "text name",
-            trigger: ".modal #field",
+            trigger: ".modal-dialog #field",
         },
         {
             content: "Save",
-            trigger: ".modal .o_save_button",
+            trigger: ".modal-dialog .o_save_button",
         },
         {
             content: "Select the new field",
@@ -81,7 +85,7 @@ odoo.define("website_form_builder.tour", function (require) {
         {
             content: 'Select "Name"',
             run: "text name",
-            trigger: ".modal #field",
+            trigger: ".modal-dialog #field",
         },
         {
             content: "Customize it",
@@ -97,11 +101,11 @@ odoo.define("website_form_builder.tour", function (require) {
                 "Monkey Island"
             ),
             run: "text Monkey Island",
-            trigger: ".modal [name=name]",
+            trigger: ".modal-dialog [name=name]",
         },
         {
             content: "Save",
-            trigger: ".modal .o_save_button",
+            trigger: ".modal-dialog .o_save_button",
         },
         {
             content: "Select the form",
@@ -132,7 +136,7 @@ odoo.define("website_form_builder.tour", function (require) {
         {
             content: 'Select "Currency"',
             run: "text res.currency",
-            trigger: ".modal #model",
+            trigger: ".modal-dialog #model",
         },
         {
             content: "Select the custom field",
