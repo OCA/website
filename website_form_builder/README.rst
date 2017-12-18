@@ -8,6 +8,17 @@ Website Form Builder
 
 This module provides websites the feature of adding custom forms in any page.
 
+Installation
+============
+
+Install some other addon that provides ``website_form`` support to
+benefit from this one's features. Hints:
+
+* ``website_crm``
+* ``website_form_project``
+* ``website_hr_recruitment``
+* ``website_sale``
+
 Configuration
 =============
 
@@ -30,7 +41,7 @@ To configure this module, you need to:
    fields. When you create a new website form, all its model fields are
    automatically whitelisted for the sake of improving the UX. If you want to
    have higher control, come back here after creating the form and blacklist
-   any fields you want.
+   any fields you want, although that will only work for custom fields.
 
 Usage
 =====
@@ -70,6 +81,14 @@ Known issues / Roadmap
 
 * To edit any ``<label>`` text, you need to click twice. Review the problem
   once https://bugzilla.mozilla.org/show_bug.cgi?id=853519 gets fixed.
+
+* You cannot edit base fields blacklisted status manually because
+  `Odoo forbids that for security
+  <https://github.com/OCA/website/pull/402#issuecomment-356930433>`_.
+
+* ``website_form`` works in unexpected and undocumented ways. If you plan to
+  add support in your addon, `this is a good place to start reading
+  <https://github.com/OCA/website/pull/402#discussion_r157441770>`_.
 
 Bug Tracker
 ===========
