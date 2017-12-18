@@ -93,6 +93,10 @@ Known issues / Roadmap
   add support in your addon, `this is a good place to start reading
   <https://github.com/OCA/website/pull/402#discussion_r157441770>`_.
 
+* If you add a custom file upload field to a form that creates records in
+  models that have no ``mail.thread`` inheritance, your users will be unable
+  to send the form.
+
 Bug Tracker
 ===========
 
