@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
     <template id="layout" inherit_id="website.layout">
         <xpath expr="//script[@id='tracking_code']" position="after">
-            <t t-if="website and website.piwik_analytics_id and website.piwik_analytics_host">
+            <t t-if="website and website.has_piwik_analytics and website.piwik_analytics_host">
                 <script type="text/javascript">
                     var _paq = _paq || [];
                     _paq.push(['trackPageView']);
