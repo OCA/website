@@ -8,12 +8,9 @@ Website legal page
 
 This module was written to provide common legal pages needed in any website:
 
-* **Legal advice**: Website propietary and disclaimers
-* **Terms of use**: Which services website offers and legal restrictions
-applied to them
-* **Privacy policy**: Company privacy policy applied to user data collected
-through the website
-
+* **Legal advice**: Website proprietary and disclaimers
+* **Terms of use**: Which services website offers and legal restrictions applied to them
+* **Privacy policy**: Company privacy policy applied to user data collected through the website
 
 Usage
 =====
@@ -84,6 +81,7 @@ Contributors
 * Jairo Llopis <jairo.llopis@tecnativa.com>
 * Dave Lasley <dave@laslabs.com>
 * Nicola Malcontenti <nicola.malcontenti@agilebg.com>
+* Nicolas JEUDY <https://github.com/njeudy>
 
 Maintainer
 ----------
