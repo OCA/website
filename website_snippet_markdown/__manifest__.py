@@ -20,4 +20,7 @@
     'qweb': [
         'static/src/xml/website_snippet_markdown.xml',
     ],
+    'demo': [
+        'demo/assets.xml'
+    ]
 }
