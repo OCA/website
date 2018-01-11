@@ -2,10 +2,9 @@
 <!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
-<openerp>
-<data>
+<odoo>
 
-<template id="demo_page" page="True" name="Anchor smooth scroll demo">
+<template id="demo_page_view" name="Anchor smooth scroll demo">
     <t t-call="website.layout">
         <div id="wrap" class="oe_structure oe_empty">
             <section class="jumbotron mt16 mb16" id="top">
@@ -31,7 +30,7 @@
                             <img
                                 alt="Odoo CMS - a big picture"
                                 class="img img-responsive"
-                                src="/website/static/src/img/big_picture.png"/>
+                                src="/website/static/src/img/backgrounds/building-profile.jpg"/>
                         </div>
                     </div>
                 </div>
@@ -46,7 +45,7 @@
                             <img
                                 alt="Odoo CMS - a big picture"
                                 class="img img-responsive"
-                                src="/website/static/src/img/big_picture.png"/>
+                                src="/website/static/src/img/backgrounds/building-profile.jpg"/>
                         </div>
                     </div>
                 </div>
@@ -68,12 +67,19 @@
     </t>
 </template>
 
-<record id="demo_page_link" model="website.menu">
-    <field name="name">Anchor smooth scroll demo</field>
+<record id="demo_page" model="website.page">
+    <field name="website_published">True</field>
     <field name="url">/page/website_anchor_smooth_scroll.demo_page</field>
-    <field name="parent_id" ref="website.main_menu" />
-    <field name="sequence" type="int">50</field>
+    <field name="view_id" ref="demo_page_view" />
 </record>
 
-</data>
-</openerp>
+<record id="menu_demo_page" model="website.menu">
+    <field name="name">Anchor smooth scroll demo</field>
+    <field name="url">page/website_anchor_smooth_scroll.demo_page</field>
+    <field name="parent_id" ref="website.main_menu" />
+    <field name="sequence" type="int">50</field>
+    <field name="website_id" ref="website.default_website"/>
+    <field name="page_id" ref="demo_page"/>
+</record>
+
+</odoo>
