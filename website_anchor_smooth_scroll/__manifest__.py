@@ -5,11 +5,12 @@
     'name': 'Smooth Scroll for Website Anchors',
     'summary': 'Replace default behavior for internal links (anchor only) with'
                ' smooth scroll',
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'category': 'Website',
     'website': 'https://www.tecnativa.com',
     'author': 'Tecnativa, '
               'LasLabs, '
+              'Nicolas JEUDY, '
               'Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'application': False,
