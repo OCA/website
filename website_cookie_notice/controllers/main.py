@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2015-2016 Lorenzo Battistini - Agile Business Group
 # Copyright 2015 Antiun Ingeniería S.L. <http://antiun.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
@@ -15,5 +14,5 @@ class CookieNotice(http.Controller):
         http.request.session["accepted_cookies"] = True
         http.request.env['ir.ui.view'].search([
             ('type', '=', 'qweb')
-            ]).clear_caches()
+        ]).clear_caches()
         return {'result': 'ok'}
