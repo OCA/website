@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2016 LasLabs Inc.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
@@ -7,8 +6,8 @@ from openerp import http
 from openerp.http import request
 from openerp.addons.website.controllers.main import Website
 
-
 import logging
+
 _logger = logging.getLogger(__name__)
 
 
@@ -34,6 +33,6 @@ class Website(Website):
             limit = int(limit)
         for rec_id in request.env[model].search(domain, limit=limit):
             res.append({
-                k: getattr(rec_id, k, None) for k in fields
+                k: rec_id[k] if k in rec_id._fields else None for k in fields
             })
         return json.dumps(res)

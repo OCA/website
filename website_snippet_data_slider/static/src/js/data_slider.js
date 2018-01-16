@@ -59,6 +59,7 @@ odoo.define('website_snippet_data_slider', function(require){
         },
         
         // Accepts a record object and appends to slick
+        // @TODO: Create element using pure js
         _handleRecord: function(record) {
             var $img = $('<img>');
             var $div = $('<div class="thumbnail">');

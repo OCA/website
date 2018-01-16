@@ -10,7 +10,7 @@
     "version": "11.0.1.0.0",
     "category": "Website",
     "website": "https://laslabs.com/",
-    "author": "LasLabs, Odoo Community Association (OCA), Kaushal Prajapati",
+    "author": "LasLabs, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
     "installable": True,
