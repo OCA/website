@@ -4,13 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Armando Vulcano Junior <vulcano@uol.com.br>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2016-11-29 03:55+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"POT-Creation-Date: 2017-10-13 00:48+0000\n"
+"PO-Revision-Date: 2017-10-13 00:48+0000\n"
+"Last-Translator: Armando Vulcano Junior <vulcano@uol.com.br>, 2017\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/23907/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:website_forum_censored.forum_censored_phrase_action
 #: model:ir.ui.menu,name:website_forum_censored.forum_censored_phrase_menu
 msgid "Censorship"
-msgstr ""
+msgstr "Censura"
 
 #. module: website_forum_censored
 #: model:ir.model.fields,field_description:website_forum_censored.field_forum_censored_phrase_create_uid
@@ -42,12 +43,12 @@ msgstr "Nome para Mostrar"
 #. module: website_forum_censored
 #: model:ir.model,name:website_forum_censored.model_forum_post
 msgid "Forum Post"
-msgstr ""
+msgstr "Postagem Forum"
 
 #. module: website_forum_censored
 #: model:ir.model,name:website_forum_censored.model_forum_tag
 msgid "Forum Tag"
-msgstr ""
+msgstr "Etiqueta Forum"
 
 #. module: website_forum_censored
 #: model:ir.model.fields,field_description:website_forum_censored.field_forum_censored_phrase_id
@@ -72,12 +73,12 @@ msgstr "Última atualização em"
 #. module: website_forum_censored
 #: model:ir.model.fields,field_description:website_forum_censored.field_forum_censored_phrase_phrase
 msgid "Phrase"
-msgstr ""
+msgstr "Frase"
 
 #. module: website_forum_censored
 #: model:ir.model.fields,field_description:website_forum_censored.field_forum_censored_phrase_replacement
 msgid "Replacement"
-msgstr ""
+msgstr "Substituição"
 
 #. module: website_forum_censored
 #: model:ir.model,name:website_forum_censored.model_forum_censored_phrase

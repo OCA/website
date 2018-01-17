@@ -3,71 +3,70 @@
 # * website_img_bg_style
 # 
 # Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2016
-# Armando Vulcano Junior <vulcano@uol.com.br>, 2017
+# Wahyu Setiawan <wahyusetiaaa@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-13 00:49+0000\n"
 "PO-Revision-Date: 2017-10-13 00:49+0000\n"
-"Last-Translator: Armando Vulcano Junior <vulcano@uol.com.br>, 2017\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/23907/pt_BR/)\n"
+"Last-Translator: Wahyu Setiawan <wahyusetiaaa@gmail.com>, 2017\n"
+"Language-Team: Indonesian (https://www.transifex.com/oca/teams/23907/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "100%"
-msgstr "100%"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "25%"
-msgstr "25%"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "50%"
-msgstr "50%"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "75%"
-msgstr "75%"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Auto"
-msgstr "Auto"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Background style"
-msgstr "Estilo de Fundo"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Bottom"
-msgstr "Baixo"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Center"
-msgstr "Centro"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Clipped"
-msgstr "Cortado"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Contain"
-msgstr "Contém"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
@@ -77,54 +76,54 @@ msgstr ""
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Horizontal"
-msgstr "Horizontal"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Left"
-msgstr "Esquerda"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "None"
-msgstr "Nenhum"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Position"
-msgstr "Posição"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Repeat"
-msgstr "Repetir"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Right"
-msgstr "Direit"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Rounded"
-msgstr "Arredondado"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Size"
-msgstr "Tamanho"
+msgstr "Ukuran"
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Spaced"
-msgstr "Espaçado"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Top"
-msgstr "Topo"
+msgstr ""
 
 #. module: website_img_bg_style
 #: model:ir.ui.view,arch_db:website_img_bg_style.snippet_options
 msgid "Vertical"
-msgstr "Vertical"
+msgstr ""

@@ -4,13 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
+# Armando Vulcano Junior <vulcano@uol.com.br>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2016-11-29 03:55+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"POT-Creation-Date: 2017-10-13 00:48+0000\n"
+"PO-Revision-Date: 2017-10-13 00:48+0000\n"
+"Last-Translator: Armando Vulcano Junior <vulcano@uol.com.br>, 2017\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/23907/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,6 +27,10 @@ msgid ""
 "                                        Done\n"
 "                                    </span>"
 msgstr ""
+"<span class=\"label label-default\">\n"
+"<i class=\"fa fa-fw fa-check\"/>\n"
+"Concluído\n"
+"</span>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
@@ -35,6 +40,10 @@ msgid ""
 "                                                                Waiting\n"
 "                                                            </span>"
 msgstr ""
+"<span class=\"label label-info supplier_orders_label_text_align\">\n"
+"<i class=\"fa fa-fw fa-clock-o\"/>\n"
+"Aguardando\n"
+"</span>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.order_list
@@ -44,6 +53,10 @@ msgid ""
 "                                        Invoiced\n"
 "                                    </span>"
 msgstr ""
+"<span class=\"label label-info\">\n"
+"<i class=\"fa fa-fw fa-pencil-square-o\"/>\n"
+"Faturada\n"
+"</span>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
@@ -53,6 +66,10 @@ msgid ""
 "                                                                Paid\n"
 "                                                            </span>"
 msgstr ""
+"<span class=\"label label-success supplier_orders_label_text_align\">\n"
+"<i class=\"fa fa-fw fa-check\"/>\n"
+"Pago\n"
+"</span>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
@@ -62,6 +79,10 @@ msgid ""
 "                                                    Not invoiced yet\n"
 "                                                </span>"
 msgstr ""
+"<span class=\"label label-warning supplier_orders_label_text_align\">\n"
+"<i class=\"fa fa-fw fa-pencil-square-o\"/>\n"
+"Não faturado ainda\n"
+"</span>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
@@ -71,56 +92,60 @@ msgid ""
 "                                                    Not received yet\n"
 "                                                </span>"
 msgstr ""
+"<span class=\"label label-warning supplier_orders_label_text_align\">\n"
+"<i class=\"fa fa-fw fa-truck\"/>\n"
+"Não recebido ainda\n"
+"</span>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Contact</strong>"
-msgstr ""
+msgstr "<strong>Contato</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Date:</strong>"
-msgstr ""
+msgstr "<strong>Data</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Invoices</strong>"
-msgstr ""
+msgstr "<strong>Faturas</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Invoicing Address</strong>"
-msgstr ""
+msgstr "<strong>Endereço Faturamento</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Product</strong>"
-msgstr ""
+msgstr "<strong>Produto</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Quantity</strong>"
-msgstr ""
+msgstr "<strong>Quantidade</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Shipping Address</strong>"
-msgstr ""
+msgstr "<strong>Endereço Entrega</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Subtotal</strong>"
-msgstr ""
+msgstr "<strong>Subtotal</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Total:</strong>"
-msgstr ""
+msgstr "<strong>Total</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "<strong>Unit Price</strong>"
-msgstr ""
+msgstr "<strong>Preço Unitário</strong>"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.purchase_backend_link
@@ -138,16 +163,18 @@ msgid ""
 "If you wish to access the complete application to manage your supplier "
 "orders, you can follow"
 msgstr ""
+"Se você deseja acessar o aplicativo completo para gerenciar seus pedidos de "
+"fornecedores, você pode seguir"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "My Orders"
-msgstr ""
+msgstr "Meus Pedidos"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "My Quotes"
-msgstr ""
+msgstr "Minhas Cotações"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
@@ -162,12 +189,12 @@ msgstr "Pedido de compra #"
 #. module: website_portal_purchase
 #: model:ir.actions.act_window,name:website_portal_purchase.action_orders_portal
 msgid "Purchase Orders"
-msgstr ""
+msgstr "Ordens de Compra"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
 msgid "Quotation"
-msgstr ""
+msgstr "Cotação"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_quotations
@@ -177,12 +204,12 @@ msgstr "Cotação #"
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.layout_orders
 msgid "Supplier Orders"
-msgstr ""
+msgstr "Pedidos Fornecedor"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.layout_quotes
 msgid "Supplier Quotes"
-msgstr ""
+msgstr "Cotações Fornecedor"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.orders_followup
@@ -193,13 +220,13 @@ msgstr "Impostos:"
 #: model:ir.ui.view,arch_db:website_portal_purchase.home_orders
 #: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_orders
 msgid "There are currently no supplier orders for your account."
-msgstr ""
+msgstr "Atualmente não há pedidos de fornecedor para sua conta."
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.home_quotes
 #: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_quotations
 msgid "There are currently no supplier quotes for your account."
-msgstr ""
+msgstr "Atualmente não há cotações de fornecedor para sua conta."
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.order_list
@@ -215,13 +242,13 @@ msgstr "Total sem impostos:"
 #: model:ir.ui.view,arch_db:website_portal_purchase.home_orders
 #: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_orders
 msgid "Your Supplier Orders"
-msgstr ""
+msgstr "Seus Pedido de Fornecedor"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.home_quotes
 #: model:ir.ui.view,arch_db:website_portal_purchase.portal_my_quotations
 msgid "Your Supplier Quotes"
-msgstr ""
+msgstr "Suas Cotações Fornecedor"
 
 #. module: website_portal_purchase
 #: model:ir.ui.view,arch_db:website_portal_purchase.purchases_backend_access

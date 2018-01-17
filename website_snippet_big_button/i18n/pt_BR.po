@@ -1,9 +1,8 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_field_autocomplete
+# * website_snippet_big_button
 # 
 # Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2016
 # Armando Vulcano Junior <vulcano@uol.com.br>, 2017
 msgid ""
 msgstr ""
@@ -19,17 +18,22 @@ msgstr ""
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#. module: website_field_autocomplete
-#: model:website.menu,name:website_field_autocomplete.field_autocomplete_demo_link
-msgid "AutoComplete"
-msgstr "Autocompletar"
+#. module: website_snippet_big_button
+#: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
+msgid "Continue searching"
+msgstr "Continue procurando"
 
-#. module: website_field_autocomplete
-#: model:ir.ui.view,arch_db:website_field_autocomplete.field_autocomplete_demo
-msgid "URL"
-msgstr "URL"
+#. module: website_snippet_big_button
+#: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
+msgid "I want another thing"
+msgstr "Eu quero outra coisa"
 
-#. module: website_field_autocomplete
-#: model:ir.ui.view,arch_db:website_field_autocomplete.field_autocomplete_demo
-msgid "Website Menu Autocomplete:"
-msgstr "Menu do site Autocompletar:"
+#. module: website_snippet_big_button
+#: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
+msgid "I want this"
+msgstr "Eu quero isso"
+
+#. module: website_snippet_big_button
+#: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
+msgid "Request budget"
+msgstr "Solicitar orçamento"

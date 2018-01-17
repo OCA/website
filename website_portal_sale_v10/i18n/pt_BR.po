@@ -4,14 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
-# Paulo Ricardo <ti@shoppingescritorio.com.br>, 2017
+# Armando Vulcano Junior <vulcano@uol.com.br>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 10:40+0000\n"
-"PO-Revision-Date: 2017-03-28 10:40+0000\n"
-"Last-Translator: Paulo Ricardo <ti@shoppingescritorio.com.br>, 2017\n"
+"POT-Creation-Date: 2017-10-13 00:49+0000\n"
+"PO-Revision-Date: 2017-10-13 00:49+0000\n"
+"Last-Translator: Armando Vulcano Junior <vulcano@uol.com.br>, 2017\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/23907/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -91,7 +91,7 @@ msgstr ""
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid "Amount Due"
-msgstr ""
+msgstr "Valor Vencimento"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
@@ -121,7 +121,7 @@ msgstr "Data da Ordem"
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_menu_sale
 msgid "Orders"
-msgstr ""
+msgstr "Pedidos"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
@@ -136,7 +136,7 @@ msgstr "Cotação #"
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_menu_sale
 msgid "Quotes"
-msgstr ""
+msgstr "Cotações"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
