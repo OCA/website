@@ -1,0 +1,358 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_multi_theme
+# 
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-16 03:45+0000\n"
+"PO-Revision-Date: 2018-01-16 03:45+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
+"Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_multi_theme
+#: model:ir.model.fields,help:website_multi_theme.field_website_theme_asset_ids
+msgid ""
+"Asset views that will be disabled by default and enabled only in websites "
+"that enable this theme in multiwebsite mode."
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_ids
+msgid "Assets"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_view_id
+msgid "Assets view"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_converted_theme_addon
+msgid "Converted Theme Addon"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_create_uid
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_create_date
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_display_name
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,help:website_multi_theme.field_website_theme_asset_name
+msgid ""
+"External ID of the assets view that inherits from `website.assets_frontend` "
+"and adds the theme requirements."
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_id
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_id
+msgid "ID"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,help:website_multi_theme.field_ir_ui_view_was_active
+#: model:ir.model.fields,help:website_multi_theme.field_website_page_was_active
+msgid ""
+"Indicates if the view was originally active before converting the single "
+"website theme that owns it to multi website mode."
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme___last_update
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_write_uid
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_write_date
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_ir_ui_view_multi_theme_generated
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_page_multi_theme_generated
+msgid "Multi Theme Generated"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.menu,name:website_multi_theme.menu_demo_page
+#: model:website.menu,name:website_multi_theme.menu_demo_page2
+msgid "Multi website theme demo page"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.ui.view,arch_db:website_multi_theme.view_website_config_settings
+msgid "Multi-theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.anelusia_multi
+msgid "Multiwebsite Anelusia Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.artists_multi
+msgid "Multiwebsite Artists Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.avantgarde_multi
+msgid "Multiwebsite Avantgarde Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.beauty_multi
+msgid "Multiwebsite Beauty Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.bewise_multi
+msgid "Multiwebsite Bewise Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.bistro_multi
+msgid "Multiwebsite Bistro Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.bookstore_multi
+msgid "Multiwebsite Bookstore Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.bootswatch_multi
+msgid "Multiwebsite Bootswatch Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.clean_multi
+msgid "Multiwebsite Clean Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.demo_multi
+msgid "Multiwebsite Demo Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.enark_multi
+msgid "Multiwebsite Enark Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.graphene_multi
+msgid "Multiwebsite Graphene Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.kea_multi
+msgid "Multiwebsite Kea Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.loftspace_multi
+msgid "Multiwebsite Loftspace Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.monglia_multi
+msgid "Multiwebsite Monglia Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.nano_multi
+msgid "Multiwebsite Nano Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.notes_multi
+msgid "Multiwebsite Notes Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.odoo_experts_multi
+msgid "Multiwebsite Odoo_experts Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.orchid_multi
+msgid "Multiwebsite Orchid Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.treehouse_multi
+msgid "Multiwebsite Treehouse Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.vehicle_multi
+msgid "Multiwebsite Vehicle Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.yes_multi
+msgid "Multiwebsite Yes Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:website.theme,name:website_multi_theme.zap_multi
+msgid "Multiwebsite Zap Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_res_config_settings_multi_theme_id
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_multi_theme_id
+msgid "Multiwebsite theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_multi_theme_view_ids
+msgid "Multiwebsite views"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,help:website_multi_theme.field_res_config_settings_multi_theme_id
+#: model:ir.model.fields,help:website_multi_theme.field_website_multi_theme_id
+msgid "Multiwebsite-compatible theme for this website"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_name
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_name
+msgid "Name"
+msgstr ""
+
+#. module: website_multi_theme
+#: sql_constraint:website.theme:0
+msgid "Name must be unique"
+msgstr ""
+
+#. module: website_multi_theme
+#: sql_constraint:website.theme.asset:0
+msgid "Name must be unique in each theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,help:website_multi_theme.field_website_theme_converted_theme_addon
+msgid ""
+"Name of the theme addon that is being converted from single to multi website"
+" mode."
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.ui.view,arch_db:website_multi_theme.view_website_config_settings
+msgid "Reload"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_theme_id
+msgid "Theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.ui.view,arch_db:website_multi_theme.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_multi_theme.demo_page_view
+#: model:website.page,arch_db:website_multi_theme.demo_page
+msgid "This is a demo page"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,help:website_multi_theme.field_website_theme_asset_view_id
+msgid ""
+"View that will be enabled when this theme is used in any website, and "
+"disabled otherwise. Usually used to load assets."
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,help:website_multi_theme.field_website_multi_theme_view_ids
+msgid "Views generated by the multiwebsite theme just for this website"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_ir_ui_view_was_active
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_page_was_active
+msgid "Was Active"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,help:website_multi_theme.field_ir_ui_view_multi_theme_generated
+#: model:ir.model.fields,help:website_multi_theme.field_website_page_multi_theme_generated
+msgid "Was this view autogenerated by website_multi_theme?"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model,name:website_multi_theme.model_website
+#: model:ir.ui.view,arch_db:website_multi_theme.view_website_config_settings
+msgid "Website"
+msgstr "Webseite"
+
+#. module: website_multi_theme
+#: model:ir.ui.view,arch_db:website_multi_theme.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_multi_theme.demo_page_view
+#: model:website.page,arch_db:website_multi_theme.demo_page
+msgid "Website domain:"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.ui.view,arch_db:website_multi_theme.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_multi_theme.demo_page_view
+#: model:website.page,arch_db:website_multi_theme.demo_page
+msgid ""
+"You should see the button with a ugly green border if this website has "
+"enabled the demo theme."
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model,name:website_multi_theme.model_ir_qweb
+msgid "ir.qweb"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model,name:website_multi_theme.model_ir_ui_view
+msgid "ir.ui.view"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model,name:website_multi_theme.model_res_config_settings
+msgid "res.config.settings"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model,name:website_multi_theme.model_website_theme
+msgid "website.theme"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model,name:website_multi_theme.model_website_theme_asset
+msgid "website.theme.asset"
+msgstr ""

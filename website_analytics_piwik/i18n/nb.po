@@ -3,14 +3,16 @@
 # * website_analytics_piwik
 # 
 # Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2018
+# Jorunn D. Newth <jdn@eyenetworks.no>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: website (8.0)\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2015-09-25 08:26+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: Norwegian Bokmål (http://www.transifex.com/oca/OCA-website-8-0/language/nb/)\n"
+"POT-Creation-Date: 2018-01-16 03:45+0000\n"
+"PO-Revision-Date: 2018-01-16 03:45+0000\n"
+"Last-Translator: Jorunn D. Newth <jdn@eyenetworks.no>, 2018\n"
+"Language-Team: Norwegian Bokmål (https://www.transifex.com/oca/teams/23907/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -18,29 +20,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_analytics_piwik
-#: field:website,piwik_analytics_host:0
-#: field:website.config.settings,piwik_analytics_host:0
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings_has_piwik_analytics
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_website_has_piwik_analytics
+msgid "Piwik Analytics"
+msgstr "Piwik Analytics"
+
+#. module: website_analytics_piwik
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings_piwik_analytics_host
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_website_piwik_analytics_host
 msgid "Piwik host"
-msgstr ""
+msgstr "Piwik host"
 
 #. module: website_analytics_piwik
-#: field:website,piwik_analytics_id:0
-#: field:website.config.settings,piwik_analytics_id:0
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings_piwik_analytics_id
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_website_piwik_analytics_id
 msgid "Piwik website ID"
-msgstr ""
+msgstr "Piwik nettsted-ID"
 
 #. module: website_analytics_piwik
-#: help:website,piwik_analytics_id:0
-#: help:website.config.settings,piwik_analytics_id:0
+#: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings_piwik_analytics_id
+#: model:ir.model.fields,help:website_analytics_piwik.field_website_piwik_analytics_id
 msgid "The ID Piwik uses to identify the website"
-msgstr ""
+msgstr "Identifikatoren Piwik bruker for nettstedet"
 
 #. module: website_analytics_piwik
-#: help:website,piwik_analytics_host:0
-#: help:website.config.settings,piwik_analytics_host:0
+#: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings_piwik_analytics_host
+#: model:ir.model.fields,help:website_analytics_piwik.field_website_piwik_analytics_host
 msgid ""
 "The host/path your Piwik installation is accessible by on the internet. Do not include a protocol here!\n"
 "So http[s]://[this field]/piwik.php should resolve to your piwik.php"
+msgstr ""
+"Filbane til der Piwik er tilgjengelig via internett. Ikke ta med protokollen her!\n"
+"Du trenger bare: http[s]://[dette feltet]/piwik.php "
+
+#. module: website_analytics_piwik
+#: model:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
+msgid "Track visits in Piwik Analytics"
 msgstr ""
 
 #. module: website_analytics_piwik
@@ -49,7 +64,12 @@ msgid "Website"
 msgstr "Nettsted"
 
 #. module: website_analytics_piwik
-#: view:website:website_analytics_piwik.view_website_form
-#: view:website.config.settings:website_analytics_piwik.view_website_config_settings
+#: model:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
+#: model:ir.ui.view,arch_db:website_analytics_piwik.view_website_form
 msgid "host.name/piwik"
+msgstr ""
+
+#. module: website_analytics_piwik
+#: model:ir.model,name:website_analytics_piwik.model_res_config_settings
+msgid "res.config.settings"
 msgstr ""
