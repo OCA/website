@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-25 13:32+0000\n"
-"PO-Revision-Date: 2017-04-25 10:42+0000\n"
+"POT-Creation-Date: 2017-09-04 11:27+0000\n"
+"PO-Revision-Date: 2017-11-23 23:27+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Romanian (http://www.transifex.com/oca/OCA-website-8-0/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -215,7 +215,7 @@ msgstr ""
 #: field:slide.slide,category_id:0
 #, python-format
 msgid "Category"
-msgstr ""
+msgstr "Categorie"
 
 #. module: website_slides
 #: field:slide.category,channel_id:0
@@ -734,7 +734,7 @@ msgstr ""
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: field:slide.tag,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nume"
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_published

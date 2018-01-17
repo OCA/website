@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-10-05 06:28+0000\n"
+"POT-Creation-Date: 2017-09-04 11:26+0000\n"
+"PO-Revision-Date: 2017-09-22 19:39+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Croatian (Croatia) (http://www.transifex.com/oca/OCA-website-8-0/language/hr_HR/)\n"
 "MIME-Version: 1.0\n"
@@ -97,7 +97,7 @@ msgstr ""
 #: view:website:website_product_supplier.product
 #: view:website:website_product_supplier.product_table
 msgid "Name"
-msgstr ""
+msgstr "Naziv"
 
 #. module: website_product_supplier
 #: view:website:website_product_supplier.product_table

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-24 11:46+0000\n"
-"PO-Revision-Date: 2017-06-30 08:53+0000\n"
+"POT-Creation-Date: 2017-09-04 11:26+0000\n"
+"PO-Revision-Date: 2017-09-22 17:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/oca/OCA-website-8-0/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -30,12 +30,12 @@ msgstr ""
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Aangemaakt door"
 
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Aangemaakt op"
 
 #. module: website_country_localized_pages
 #: view:ir.ui.view:website_country_localized_pages.view_view_form
@@ -60,12 +60,12 @@ msgstr "Laatst gewijzigd op"
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Laatst bijgewerkt door"
 
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Laatst bijgewerkt op"
 
 #. module: website_country_localized_pages
 #: field:ir.ui.view.country.line,localized_view_id:0

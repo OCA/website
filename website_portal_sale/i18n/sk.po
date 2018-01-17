@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-25 13:32+0000\n"
-"PO-Revision-Date: 2017-03-23 20:10+0000\n"
+"POT-Creation-Date: 2017-09-04 11:26+0000\n"
+"PO-Revision-Date: 2017-10-16 18:32+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Slovak (http://www.transifex.com/oca/OCA-website-8-0/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
 msgid "Cancelled"
-msgstr ""
+msgstr "Zrušené"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
@@ -113,7 +113,7 @@ msgstr ""
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Product"
-msgstr ""
+msgstr "Produkt"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

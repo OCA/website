@@ -1,0 +1,58 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_sale_survey
+# 
+# Translators:
+# Jan Prokop <jprokop@creativehome.sk>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-04 11:26+0000\n"
+"PO-Revision-Date: 2017-09-04 11:26+0000\n"
+"Last-Translator: Jan Prokop <jprokop@creativehome.sk>, 2017\n"
+"Language-Team: Slovak (https://www.transifex.com/oca/teams/23907/sk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sk\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. module: website_sale_survey
+#: field:survey.survey,default_for_website_sales:0
+msgid "Default for Website Sales"
+msgstr ""
+
+#. module: website_sale_survey
+#: help:survey.survey,default_for_website_sales:0
+msgid ""
+"If checked this survey could be done by customer after payment, no more than"
+" one survey could be set as default."
+msgstr ""
+
+#. module: website_sale_survey
+#: code:addons/website_sale_survey/models/survey.py:23
+#, python-format
+msgid "No more than one survey could be set as default."
+msgstr ""
+
+#. module: website_sale_survey
+#: field:survey.user_input,sale_order_id:0
+msgid "Sale Order"
+msgstr ""
+
+#. module: website_sale_survey
+#: model:ir.model,name:website_sale_survey.model_sale_order
+msgid "Sales Order"
+msgstr "Objednávka predaja"
+
+#. module: website_sale_survey
+#: model:ir.model,name:website_sale_survey.model_survey_survey
+#: field:sale.order,survey_id:0 view:website:website_sale.confirmation
+msgid "Survey"
+msgstr ""
+
+#. module: website_sale_survey
+#: model:ir.model,name:website_sale_survey.model_survey_user_input
+msgid "Survey User Input"
+msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"POT-Creation-Date: 2017-09-04 11:25+0000\n"
 "PO-Revision-Date: 2016-05-05 17:30+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-website-8-0/language/pt_BR/)\n"
@@ -25,12 +25,12 @@ msgstr ""
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "It works for any links to #anchors in your website!"
-msgstr ""
+msgstr "Ele funciona para todos os links para #ancora em seu site!"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "More dummy content"
-msgstr ""
+msgstr "Mais conteúdo básico"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
@@ -40,29 +40,29 @@ msgstr "Odoo CMS - Uma imagem grande"
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Press the button below and enjoy a smooth experience."
-msgstr ""
+msgstr "Pressione o botão abaixo e aproveite uma experiência suave."
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to bottom"
-msgstr ""
+msgstr "Rolar para baixo"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to top"
-msgstr ""
+msgstr "Rolar para cima"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Smooth? Nice."
-msgstr ""
+msgstr "Suave? Bom;"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "This is dummy content"
-msgstr ""
+msgstr "Este é conteúdo básico"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Try smooth scrolling. Easily."
-msgstr ""
+msgstr "Tente rolando suavemente. Facilmente."

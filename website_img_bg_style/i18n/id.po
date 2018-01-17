@@ -1,0 +1,108 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_img_bg_style
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-04 11:26+0000\n"
+"PO-Revision-Date: 2016-06-03 22:59+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Indonesian (http://www.transifex.com/oca/OCA-website-8-0/language/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Auto"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Background style"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Bottom"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Center"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Clipped"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Contain"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Cover"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Horizontal"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Left"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "None"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Position"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Repeat"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Right"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Rounded"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Size"
+msgstr "Ukuran"
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Spaced"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Top"
+msgstr ""
+
+#. module: website_img_bg_style
+#: view:website:website.snippet_options
+msgid "Vertical"
+msgstr ""

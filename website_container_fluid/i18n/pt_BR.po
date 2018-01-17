@@ -4,12 +4,13 @@
 # 
 # Translators:
 # danimaribeiro <danimaribeiro@gmail.com>, 2016
+# danimaribeiro <danimaribeiro@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 02:17+0000\n"
-"PO-Revision-Date: 2016-03-05 18:12+0000\n"
+"POT-Creation-Date: 2017-09-04 11:25+0000\n"
+"PO-Revision-Date: 2017-11-07 22:09+0000\n"
 "Last-Translator: danimaribeiro <danimaribeiro@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-website-8-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +67,7 @@ msgstr "Tipo de largura do container"
 #. module: website_container_fluid
 #: model:website.menu,name:website_container_fluid.demo_page_link
 msgid "Container width type demo"
-msgstr ""
+msgstr "Demonstração Tipo de largura do container"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -78,22 +79,22 @@ msgstr "Deletar as imagens abaixo ou mudar para uma imagem que ilustra sua mensa
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "Feature One"
-msgstr ""
+msgstr "Característica Um"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "Feature Three"
-msgstr ""
+msgstr "Característica Tres"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "Feature Two"
-msgstr ""
+msgstr "Característica Dois"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "First Feature"
-msgstr ""
+msgstr "Primeira Característica"
 
 #. module: website_container_fluid
 #: view:website:website.snippet_options
@@ -113,17 +114,17 @@ msgstr "Mais de 500 projetos com sucesso"
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "Odoo - Sample 1 for three columns"
-msgstr ""
+msgstr "Odoo - Exemplo 1 para três colunas"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "Odoo - Sample 2 for three columns"
-msgstr ""
+msgstr "Odoo - Exemplo 1 para três colunas"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "Odoo - Sample 3 for three columns"
-msgstr ""
+msgstr "Odoo - Exemplo 3 para três colunas"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -148,7 +149,7 @@ msgstr "Responsivo"
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "Second Feature"
-msgstr ""
+msgstr "Segunda Característica"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -168,7 +169,7 @@ msgstr "Eles tem um tamanho fixo dependendo do tamanho da tela"
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
 msgid "Third Feature"
-msgstr ""
+msgstr "Terceira Característica"
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
@@ -176,7 +177,7 @@ msgid ""
 "To add a fourth column, reduce the size of these three columns using the "
 "right icon of each block. Then, duplicate one of the column to create a new "
 "one as a copy."
-msgstr ""
+msgstr "Para incluir uma quarta coluna, reduza o tamanho destas três colunas usando o ícone da direita de cada bloco. Depois, duplique uma das das colunas para criar uma nova como uma cópia."
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page

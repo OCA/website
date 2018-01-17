@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-25 13:32+0000\n"
-"PO-Revision-Date: 2017-04-25 10:39+0000\n"
+"POT-Creation-Date: 2017-09-04 11:26+0000\n"
+"PO-Revision-Date: 2017-11-23 23:27+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Galician (http://www.transifex.com/oca/OCA-website-8-0/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr "Produto"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Quantity"
-msgstr ""
+msgstr "Cantidade"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup

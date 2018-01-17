@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-06 02:53+0000\n"
-"PO-Revision-Date: 2016-05-01 19:59+0000\n"
+"POT-Creation-Date: 2017-09-04 11:26+0000\n"
+"PO-Revision-Date: 2017-11-07 22:25+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-website-8-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +47,7 @@ msgstr "Este campo serve para o logo do site mostrado no cabeçalho. Tamanho rec
 msgid ""
 "This field holds the logo for this website, showed in header.Recommended "
 "size is 180x50"
-msgstr ""
+msgstr "Este campo mantém o logo para este website, mostrado no cabeçalho. Tamanho recomendado é 180x50"
 
 #. module: website_logo
 #: model:ir.model,name:website_logo.model_website

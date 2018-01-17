@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-24 07:36+0000\n"
-"PO-Revision-Date: 2016-12-27 08:24+0000\n"
+"POT-Creation-Date: 2017-09-04 11:27+0000\n"
+"PO-Revision-Date: 2017-11-23 23:27+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Vietnamese (Viet Nam) (http://www.transifex.com/oca/OCA-website-8-0/language/vi_VN/)\n"
 "MIME-Version: 1.0\n"
@@ -734,7 +734,7 @@ msgstr ""
 #: view:slide.slide:website_slides.view_slide_slide_form
 #: field:slide.tag,name:0
 msgid "Name"
-msgstr ""
+msgstr "Tên"
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_published
@@ -1525,7 +1525,7 @@ msgstr ""
 #: code:addons/website_slides/static/src/xml/website_slides.xml:70
 #, python-format
 msgid "or"
-msgstr ""
+msgstr "hoặc"
 
 #. module: website_slides
 #: view:website:website_slides.slides_search

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-10-11 09:47+0000\n"
+"POT-Creation-Date: 2017-09-04 11:27+0000\n"
+"PO-Revision-Date: 2017-11-23 23:25+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Indonesian (http://www.transifex.com/oca/OCA-website-8-0/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -574,7 +574,7 @@ msgstr ""
 msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
-msgstr ""
+msgstr "Memegang ringkasan Chatter (jumlah pesan, ...). Ringkasan ini langsung dalam format html agar bisa dimasukkan dalam pandangan kanban."
 
 #. module: website_slides
 #: view:website:website_slides.slides_channel_header
@@ -634,7 +634,7 @@ msgstr ""
 #: field:slide.channel,message_is_follower:0
 #: field:slide.slide,message_is_follower:0
 msgid "Is a Follower"
-msgstr ""
+msgstr "Ini Adalah Pengikut"
 
 #. module: website_slides
 #: field:slide.channel,message_last_post:0
@@ -1165,7 +1165,7 @@ msgstr ""
 #. module: website_slides
 #: field:slide.channel,message_summary:0 field:slide.slide,message_summary:0
 msgid "Summary"
-msgstr ""
+msgstr "Ringkasan"
 
 #. module: website_slides
 #: view:slide.tag:website_slides.view_slide_tag_form
