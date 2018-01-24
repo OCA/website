@@ -1,6 +1,7 @@
 # Copyright 2017 LasLabs Inc.
 # License APL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+import unittest
 from odoo.tests.common import HttpCase
 from odoo.tools import mute_logger
 
