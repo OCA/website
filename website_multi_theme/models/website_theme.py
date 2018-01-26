@@ -32,13 +32,22 @@ class WebsiteTheme(models.Model):
              "in websites that enable this theme in multiwebsite mode.",
     )
 
+    dependency_ids = fields.Many2many(
+        'ir.module.module',
+        string="Dependencies",
+        help="Theme-like dependencies. "
+        "Add modules here if you got error \"The style compilation failed\"."
+    )
+
     def _convert_assets(self):
         """Generate assets for converted themes"""
         Asset = self.env["website.theme.asset"]
         for one in self.filtered("converted_theme_addon"):
             # Get all views owned by the converted theme addon
+            module_names = [one.converted_theme_addon]
+            module_names += one.dependency_ids.mapped('name')
             refs = self.env["ir.model.data"].search([
-                ("module", "=", one.converted_theme_addon),
+                ("module", "in", module_names),
                 ("model", "=", "ir.ui.view"),
             ])
             existing = frozenset(one.mapped("asset_ids.name"))
@@ -46,6 +55,11 @@ class WebsiteTheme(models.Model):
             dangling = tuple(existing - expected)
             # Create a new asset for each theme view
             for ref in expected - existing:
+                view = self.env.ref(ref, raise_if_not_found=False)
+                if view and view.type != 'qweb':
+                    # skip backend views
+                    continue
+
                 _logger.debug("Creating asset %s for theme %s", ref, one.name)
                 one.asset_ids |= Asset.new({
                     "name": ref,
