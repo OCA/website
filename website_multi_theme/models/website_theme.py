@@ -46,6 +46,17 @@ class WebsiteTheme(models.Model):
             dangling = tuple(existing - expected)
             # Create a new asset for each theme view
             for ref in expected - existing:
+                view = self.env.ref(ref, raise_if_not_found=False)
+                if view and (view.type != 'qweb' or not view.inherit_id):
+                    # * Skip non-qweb (backend) views
+                    # * Skip views without inherit_id, because those have new
+                    #   template definition only and after appliying
+                    #   multi-theme for several websites it will be copied and
+                    #   then it leads to error on compilation <t t-call="..."/>
+                    #   -- more than one template is found, while singleton
+                    #   is expected
+                    continue
+
                 _logger.debug("Creating asset %s for theme %s", ref, one.name)
                 one.asset_ids |= Asset.new({
                     "name": ref,
