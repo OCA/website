@@ -3,11 +3,11 @@
     :alt: License: AGPL-3
 
 =====================
-Website Canoncial URL
+Website Canonical URL
 =====================
 
 This module is a SEO booster that adds a HTML tag in the header that contains a
-`canoncial URL <https://support.google.com/webmasters/answer/139066>`_ for the
+`canonical URL <https://support.google.com/webmasters/answer/139066>`_ for the
 current page, no matter what query it gets, and `rel=next and rel=prev links
 <https://webmasters.googleblog.com/2011/09/pagination-with-relnext-and-relprev.html>`_
 wherever a pager is found.
