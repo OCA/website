@@ -1,0 +1,51 @@
+/* Theme css */
+
+.custom-file-input input {
+    visibility: hidden;
+    width: 100%;
+}
+
+#file_input_multi{
+    display: none;
+}
+
+.image-thumb {
+    max-width: 90px;
+}
+
+.image_main{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+#base_multi_image .carousel-indicators{
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    z-index: 15;
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+}
+
+#base_multi_image .carousel-indicators li{
+    display: inline-block;
+    width: 120px;
+    height: 100px;
+    margin: 1px;
+    text-indent: 0px;
+    border: 1px solid #000;
+    border-radius: 0px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+}
+
+#base_multi_image .existing-attachment-cell{
+    height: 0px;
+    width: 110px;
+    margin-left: 5px;
+}
