@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Tecnativa - Jairo Llopis
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+
+<template>
+    <t t-name="website_form_builder.DefaultValueForm">
+        <form>
+            <t t-raw="widget.field_html"/>
+        </form>
+    </t>
+
+    <t t-name="website_form_builder.ModelFieldForm">
+        <form>
+            <div class="form-group">
+                <label for="field">Choose the new field for the form</label>
+                <select id="field" class="form-control" multiple="">
+                    <t t-foreach="widget.sorted_fields()" t-as="field_pair">
+                        <option t-att-value="field_pair[1]">
+                            <t t-esc="field_pair[0]"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </form>
+    </t>
+
+    <t t-name="website_form_builder.ParamsForm">
+        <form>
+            <div class="form-group">
+                <label for="model">Choose this form's action</label>
+                <select id="model" class="form-control">
+                    <t t-foreach="widget.models" t-as="model">
+                        <option
+                            t-att-value="model"
+                            t-att-selected="model === widget.chosen ? 'selected' : null"
+                        >
+                            <t t-esc="widget.models[model].website_form_label || widget.models[model].name"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </form>
+    </t>
+</template>
