@@ -56,7 +56,7 @@ class Version(models.Model):
         copy_l = self.env['ir.ui.view']
         ir_ui_view = self.env['ir.ui.view']
         for view in self.view_ids:
-            master_id = ir_ui_view .search([
+            master_id = ir_ui_view.search([
                 ('key', '=', view.key),
                 ('version_id', '=', False),
                 ('website_id', '=', view.website_id.id)
