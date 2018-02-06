@@ -175,5 +175,9 @@ odoo.define('website_snippet_preset', function(require) {
             this.trigger('save', this.$('input[name="name"]').val());
         }
     });
-    return EnterNameDialog;
+
+    return {
+        'EnterNameDialog': EnterNameDialog,
+        'OverwriteDialog': OverwriteDialog
+    }
 });
