@@ -5,19 +5,16 @@
 <templates id="template" xml:space="preserve">
 
 <t t-extend="web_editor.dialog.link">
-    <t t-jquery="form>.link-style:has(#link-preview)" t-operation="before">
-        <div class="form-horizontal"
-             title="Anchors are appended to the URL like http://localhost/#your-anchor">
-            <div class="form-group">
-                <label for="anchor" class="col-sm-2 control-label">
-                    Anchor
-                </label>
-                <div class="col-sm-10">
-                    <input id="anchor"
-                           type="text"
-                           placeholder="your-anchor"
-                           class="form-control"/>
-                </div>
+    <t t-jquery="form .form-group:has(.o_link_dialog_color)" t-operation="before">
+        <div class="form-group">
+            <label for="anchor" class="col-sm-3 control-label">
+                Anchor
+            </label>
+            <div class="col-sm-9">
+                <input id="anchor"
+                       type="text"
+                       placeholder="your-anchor"
+                       class="form-control"/>
             </div>
         </div>
     </t>
