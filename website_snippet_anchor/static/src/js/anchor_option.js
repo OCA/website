@@ -5,20 +5,16 @@
 odoo.define("website_snippet_anchor.anchor_option", function (require) {
     var core = require("web.core"),
         options = require("web_editor.snippets.options"),
-        website = require("website.website"),
+        utils = require("website.utils"),
         sprintf = _.str.sprintf,
         _t = core._t;
 
     // Option to have anchors in snippets
     options.registry.anchor = options.Class.extend({
         // Let user choose anchor name
-        anchor_ask: function (type, window_title) {
-            // Only react on clicks, not on resets or other events
-            if (type != "click") {
-                return $.Deferred().reject();
-            }
+        anchor_ask: function (window_title) {
             // Ask the anchor to the user
-            return website.prompt({
+            return utils.prompt({
                 "window_title": window_title || _t("Choose anchor"),
                 "input": _t("Anchor"),
                 "default": this.$target.attr("id"),
@@ -57,7 +53,6 @@ odoo.define("website_snippet_anchor.anchor_option", function (require) {
             if (!this.anchor_valid(new_anchor)) {
                 $dialog.modal("hide");
                 return this.anchor_ask(
-                    "click",
                     sprintf(
                         _t("Anchor '%s' already exists or is not valid"),
                         new_anchor

@@ -19,22 +19,18 @@ odoo.define("website_snippet_anchor.link_dialog", function (require) {
             var $anchor = this.$("#anchor");
 
             if (test !== false && $anchor.val()) {
-                var $url_source = this.$el
-                                  .find(".active input.url-source:input"),
-                    style = this.$el
-                            .find("input[name='link-style-type']:checked")
-                            .val(),
-                    size = this.$el
-                           .find("input[name='link-style-size']:checked")
-                           .val(),
-                    classes = (style && style.length ? "btn " : "") +
-                              style + " " + size;
+                var $e = this.$('.active input.url-source');
+                if (!$e.length) {
+                    $e = this.$('input.url-source:first');
+                }
+                var val = $e.val();
+                var isNewWindow = this.$('input.window-new').prop('checked');
+                var label = this.$('#o_link_dialog_label_input').val() || val;
+                var style = this.$("input[name='link-style-type']:checked").val() || '';
+                var size = this.$("select.link-style").val() || '';
+                var classes = (this.data.className || "") + (style && style.length ? " btn " : "") + style + " " + size;
 
-                return new $.Deferred().resolve(
-                    $url_source.val() + "#" + $anchor.val(),
-                    this.$("input.window-new").prop("checked"),
-                    this.$("#link-text").val() || $url_source.val(),
-                    classes);
+                return $.Deferred().resolve($e.val() + '#' + $anchor.val(), isNewWindow, label, classes);
             } else {
                 return this._super.apply(this, arguments);
             }

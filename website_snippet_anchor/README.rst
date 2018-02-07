@@ -1,6 +1,6 @@
-.. image:: https://img.shields.io/badge/licence-LGPL--3-blue.svg
-   :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
-   :alt: License: LGPL-3
+.. image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+   :target: https://www.gnu.org/licenses/agpl
+   :alt: License: AGPL-3
 
 ====================
 Set Snippet's Anchor
@@ -21,25 +21,24 @@ Valid character ranges for anchors are: ``[A-Z][a-z][0-9]_-``
 
 To add an anchor to any element, you need to:
 
-* Edit any web page.
-* Go to *Add blocks > Structure*.
-* Insert any block in your page.
-* Click on the snippet's option *Customize > Choose anchor*.
-* Set an anchor. If it is already used or has an invalid format, you will be
-  asked to use another.
+#. Edit any web page.
+#. Go to *Add blocks > Structure*.
+#. Insert any block in your page.
+#. Click on the snippet's option *Customize > Choose anchor*.
+#. Set an anchor. If it is already used or has an invalid format, you will be asked to use another.
 
 To link to any page's anchor, you need to:
 
-* Edit any web page.
-* Select some text.
-* Press *Link* in the editor toolbar.
-* Choose a page in the opened dialog.
-* Set an anchor there too (without ``#`` symbol).
-* Press *Save*.
+#. Edit any web page.
+#. Select some text.
+#. Press *Link* in the editor toolbar.
+#. Choose a page in the opened dialog.
+#. Set an anchor there too (without ``#`` symbol).
+#. Press *Save*.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/10.0
+   :target: https://runbot.odoo-community.org/runbot/186/11.0
 
 Bug Tracker
 ===========
@@ -62,6 +61,9 @@ Contributors
 
 * Rafael Blasco <rafael.blasco@tecnativa.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
+* Dennis Sluijk <d.sluijk@onestein.nl>
+
+Do not contact contributors directly about support or help with technical issues.
 
 Maintainer
 ----------
