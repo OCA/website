@@ -4,10 +4,10 @@
 {
     "name": "Set Snippet's Anchor",
     "summary": "Allow to reach a concrete section in the page",
-    "version": "10.0.1.0.0",
+    "version": "11.0.1.0.0",
     "category": "Website",
-    "website": "https://www.tecnativa.com",
-    "author": "Tecnativa, Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/website",
+    "author": "Tecnativa, Onestein, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
     "installable": True,
