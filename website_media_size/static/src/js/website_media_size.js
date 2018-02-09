@@ -13,7 +13,8 @@ odoo.define('website_media_size', function(require) {
             var res = this._super.apply(this, arguments);
             this.include_file_size(this.imageDialog);
             this.include_file_size(this.documentDialog);
-            this.search(); // FIXME
+             // FIXME
+            this.search();
             return res;
         },
         include_file_size: function(obj) {
