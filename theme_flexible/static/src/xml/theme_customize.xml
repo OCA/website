@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<template>
+    <t t-name="theme_flexible.TabColor">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Color</th>
+                <th>Lighter</th>
+                <th>Light</th>
+                <th>Dark</th>
+                <th>Darker</th>
+            </tr>
+            <tr>
+                <th>Alpha</th>
+                <td>
+                    <div class="input-group colorpicker-component">
+                        <input type="text" name="color_alpha" class="form-control"/>
+                        <span class="input-group-addon"><i></i></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_alpha_lighter" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_alpha_light" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_alpha_dark" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_alpha_darker" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Beta</th>
+                <td>
+                    <div class="input-group colorpicker-component">
+                        <input type="text" name="color_beta" class="form-control"/>
+                        <span class="input-group-addon"><i></i></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_beta_lighter" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_beta_light" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_beta_dark" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_beta_darker" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Gamma</th>
+                <td>
+                    <div class="input-group colorpicker-component">
+                        <input type="text" name="color_gamma" class="form-control"/>
+                        <span class="input-group-addon"><i></i></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_gamma_lighter" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_gamma_light" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_gamma_dark" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_gamma_darker" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Delta</th>
+                <td>
+                    <div class="input-group colorpicker-component">
+                        <input type="text" name="color_delta" class="form-control"/>
+                        <span class="input-group-addon"><i></i></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_delta_lighter" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_delta_light" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_delta_dark" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_delta_darker" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Epsilon</th>
+                <td>
+                    <div class="input-group colorpicker-component">
+                        <input type="text" name="color_epsilon" class="form-control"/>
+                        <span class="input-group-addon"><i></i></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_epsilon_lighter" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_epsilon_light" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_epsilon_dark" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group">
+                        <input type="number" name="amount_epsilon_darker" class="form-control"/>
+                        <div class="input-group-addon">%</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </t>
+
+    <t t-name="theme_flexible.TabFont">
+        <table class="table">
+            <tr>
+                <th>Type</th>
+                <th>Font Family</th>
+                <th>Weight</th>
+                <th><i class="fa fa-italic"></i></th>
+                <th><i class="fa fa-underline"></i></th>
+                <th><i class="fa fa-google"></i></th>
+            </tr>
+            <tr>
+                <td>Normal</td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" name="font_normal" class="form-control"/>
+                        <span class="input-group-addon select-google-font" data-type="normal" title="Select Google Font">
+                            <i class="fa fa-external-link"></i>
+                        </span>
+                    </div>
+                </td>
+                <td><input type="number" name="font_normal_weight" class="form-control"/></td>
+                <td><input type="checkbox" name="font_normal_italic" /></td>
+                <td><input type="checkbox" name="font_normal_underline"/></td>
+                <td><input type="checkbox" name="font_normal_google" /></td>
+            </tr>
+            <tr>
+                <td>Code</td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" name="font_code" class="form-control"/>
+                        <span class="input-group-addon select-google-font" data-type="code" title="Select Google Font">
+                            <i class="fa fa-external-link"></i>
+                        </span>
+                    </div>
+                </td>
+                <td><input type="number" name="font_code_weight" class="form-control"/></td>
+                <td><input type="checkbox" name="font_code_italic" /></td>
+                <td><input type="checkbox" name="font_code_underline"/></td>
+                <td><input type="checkbox" name="font_code_google" /></td>
+            </tr>
+            <tr>
+                <td>Header 1</td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" name="font_header_1" class="form-control"/>
+                        <span class="input-group-addon select-google-font" data-type="header_1" title="Select Google Font">
+                            <i class="fa fa-external-link"></i>
+                        </span>
+                    </div>
+                </td>
+                <td><input type="number" name="font_header_1_weight" class="form-control"/></td>
+                <td><input type="checkbox" name="font_header_1_italic" /></td>
+                <td><input type="checkbox" name="font_header_1_underline"/></td>
+                <td><input type="checkbox" name="font_header_1_google" /></td>
+            </tr>
+            <tr>
+                <td>Header 2</td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" name="font_header_2" class="form-control"/>
+                        <span class="input-group-addon select-google-font" data-type="header_2" title="Select Google Font">
+                            <i class="fa fa-external-link"></i>
+                        </span>
+                    </div>
+                </td>
+                <td><input type="number" name="font_header_2_weight" class="form-control"/></td>
+                <td><input type="checkbox" name="font_header_2_italic" /></td>
+                <td><input type="checkbox" name="font_header_2_underline"/></td>
+                <td><input type="checkbox" name="font_header_2_google" /></td>
+            </tr>
+            <tr>
+                <td>Header 3</td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" name="font_header_3" class="form-control"/>
+                        <span class="input-group-addon select-google-font" data-type="header_3" title="Select Google Font">
+                            <i class="fa fa-external-link"></i>
+                        </span>
+                    </div>
+                </td>
+                <td><input type="number" name="font_header_3_weight" class="form-control"/></td>
+                <td><input type="checkbox" name="font_header_3_italic" /></td>
+                <td><input type="checkbox" name="font_header_3_underline"/></td>
+                <td><input type="checkbox" name="font_header_3_google" /></td>
+            </tr>
+            <tr>
+                <td>Header 4</td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" name="font_header_4" class="form-control"/>
+                        <span class="input-group-addon select-google-font" data-type="header_4" title="Select Google Font">
+                            <i class="fa fa-external-link"></i>
+                        </span>
+                    </div>
+                </td>
+                <td><input type="number" name="font_header_4_weight" class="form-control"/></td>
+                <td><input type="checkbox" name="font_header_4_italic" /></td>
+                <td><input type="checkbox" name="font_header_4_underline"/></td>
+                <td><input type="checkbox" name="font_header_4_google" /></td>
+            </tr>
+            <tr>
+                <td>Header 5</td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" name="font_header_5" class="form-control"/>
+                        <span class="input-group-addon select-google-font" data-type="header_5" title="Select Google Font">
+                            <i class="fa fa-external-link"></i>
+                        </span>
+                    </div>
+                </td>
+                <td><input type="number" name="font_header_5_weight" class="form-control"/></td>
+                <td><input type="checkbox" name="font_header_5_italic" /></td>
+                <td><input type="checkbox" name="font_header_5_underline"/></td>
+                <td><input type="checkbox" name="font_header_5_google" /></td>
+            </tr>
+            <tr>
+                <td>Header 6</td>
+                <td>
+                    <div class="input-group">
+                        <input type="text" name="font_header_6" class="form-control"/>
+                        <span class="input-group-addon select-google-font" data-type="header_6" title="Select Google Font">
+                            <i class="fa fa-external-link"></i>
+                        </span>
+                    </div>
+                </td>
+                <td><input type="number" name="font_header_6_weight" class="form-control"/></td>
+                <td><input type="checkbox" name="font_header_6_italic" /></td>
+                <td><input type="checkbox" name="font_header_6_underline"/></td>
+                <td><input type="checkbox" name="font_header_6_google" /></td>
+            </tr>
+        </table>
+    </t>
+
+    <t t-name="theme_flexible.TabMenu">
+        <div>
+            <div class="form-group">
+                <label>Company Logo / Website Name Alignment</label>
+                <select name="menu_logo" class="form-control">
+                    <option value="left_text">Left / Name</option>
+                    <option value="right_text">Right / Name</option>
+                    <option value="left_logo">Left / Logo</option>
+                    <option value="right_logo">Right / Logo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Menu Alignment</label>
+                <select name="menu_alignment" class="form-control">
+                    <option value="left">Left</option>
+                    <option value="center">Center</option>
+                    <option value="right">Right</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Sticky</label>
+                <input name="menu_sticky" type="checkbox" />
+            </div>
+            <div class="form-group">
+                <label>Background Color</label>
+                <div class="input-group colorpicker-component">
+                    <input name="menu_bg" type="text" class="form-control"/>
+                    <span class="input-group-addon"><i></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Font Color</label>
+                <div class="input-group colorpicker-component">
+                    <input name="menu_color" type="text" class="form-control"/>
+                    <span class="input-group-addon"><i></i></span>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="theme_flexible.TabLayout">
+        <div>
+            <div class="form-group">
+                <label>Layout</label>
+                <select name="layout" class="form-control">
+                    <option value="full_width">Full Width</option>
+                    <option value="boxed">Boxed</option>
+                    <option value="postcard">Postcard</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Block Corner Radius</label>
+                <input name="snippet_border_radius" type="number" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label>Background Color</label>
+                <div class="input-group colorpicker-component">
+                    <input name="bg_color" type="text" class="form-control"/>
+                    <span class="input-group-addon"><i></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Footer Color</label>
+                <div class="input-group colorpicker-component">
+                    <input name="footer_bg_color" type="text" class="form-control"/>
+                    <span class="input-group-addon"><i></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Link Color</label>
+                <div class="input-group colorpicker-component">
+                    <input name="anchor_color" type="text" class="form-control"/>
+                    <span class="input-group-addon"><i></i></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Link Color In Footer</label>
+                <div class="input-group colorpicker-component">
+                    <input name="anchor_footer_color" type="text" class="form-control"/>
+                    <span class="input-group-addon"><i></i></span>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="theme_flexible.SelectGoogleFont">
+        <div>
+            <div class="form-group">
+                <label>Font</label>
+                <input type="text" class="form-control" name="font"/>
+            </div>
+            <div class="form-group">
+                <label>Variant</label>
+                <select name="variant" class="form-control">
+                </select>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="theme_flexible.NoGoogleAPIKey">
+        <p>
+            Please set your Google Fonts API key in the website settings.
+            You can get your API key <a target="new" href="https://developers.google.com/fonts/docs/developer_api#APIKey">here</a>.
+        </p>
+    </t>
+</template>

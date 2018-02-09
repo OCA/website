@@ -1,0 +1,19 @@
+/* Copyright 2018 Onestein
+ * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
+
+.navbar-fixed-top {
+     transition: all 0s ease;
+     top: -100px;
+     z-index: 1000;
+}
+
+.navbar-fixed-top.stick {
+    top: 0px;
+    transition: all 0.5s ease;
+}
+
+.navbar-collapse > .navbar-center {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+}
