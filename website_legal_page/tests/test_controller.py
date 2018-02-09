@@ -11,9 +11,6 @@ class TestController(HttpCase):
         response = self.url_open(page, timeout=20)
         self.assertEqual(response.status_code, code)
 
-    # HACK https://github.com/odoo/odoo/issues/22438
-    # TODO Remove when fixed
-    @unittest.expectedFailure
     @mute_logger("odoo.addons.website.models.ir_ui_view")
     def test_unknown(self):
         """ It should return a 404 for unknown pages. """
