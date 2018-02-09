@@ -4,7 +4,7 @@
 
 <template>
     <t t-extend="web_editor.dialog.image.existing.content">
-        <t t-jquery=".o_existing_attachment_remove" t-operation="after">
+        <t t-jquery=".o_attachment_border" t-operation="before">
             <t t-if="attachment.type != 'url'">
                 <span class="o_existing_attachment_size"><t t-esc="Math.ceil(attachment.file_size / 1024)"/> kB</span>
             </t>
