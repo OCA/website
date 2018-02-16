@@ -6,7 +6,7 @@
     <template id="assets_frontend_anchor" inherit_id="website.assets_frontend">
         <xpath expr=".">
             <style type="text/less">
-                <t t-if="website">
+                <t t-if="website and website.theme_flexible_id">
                     <!-- Sets the anchor color in the body (main) -->
                     <t t-if="website.theme_flexible_id.anchor_color">
                         #wrapwrap main a {

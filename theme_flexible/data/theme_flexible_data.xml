@@ -5,4 +5,6 @@
 <odoo>
     <record id="default_theme_flexible" model="theme.flexible">
     </record>
+    <record id="default_theme_flexible2" model="theme.flexible">
+    </record>
 </odoo>
