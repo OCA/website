@@ -2,7 +2,7 @@
  * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
 
 odoo.define('website_media_size', function(require) {
-"use strict";
+    "use strict";
 
     var MediaDialog = require('web_editor.widget').MediaDialog;
     var weContext = require("web_editor.context");
