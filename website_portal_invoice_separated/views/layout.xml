@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <!-- Show purchase documents only for supplier users -->
+    <template id="portal_layout_purchase"
+              name="Show only for suppliers"
+              inherit_id="website_portal_purchase.portal_layout">
+        <xpath expr="//t[@name='supplier_menu']" position="attributes">
+            <attribute name="t-if">user.commercial_partner_id.supplier</attribute>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home_purchase"
+              name="Show only for suppliers"
+              inherit_id="website_portal_purchase.portal_my_home">
+        <xpath expr="//t[@name='supplier_home']" position="attributes">
+            <attribute name="t-if">user.commercial_partner_id.supplier</attribute>
+        </xpath>
+    </template>
+
+    <!-- Show sale documents only for customer users -->
+    <template id="portal_layout_sale"
+              name="Show only for suppliers"
+              inherit_id="website_portal_sale_v10.portal_my_home_menu_sale">
+        <xpath expr="//a[@href='/my/quotes']/.." position="attributes">
+            <attribute name="t-if">user.commercial_partner_id.customer</attribute>
+        </xpath>
+        <xpath expr="//a[@href='/my/orders']/.." position="attributes">
+            <attribute name="t-if">user.commercial_partner_id.customer</attribute>
+        </xpath>
+        <xpath expr="//a[@href='/my/invoices']/.." position="attributes">
+            <attribute name="t-if">user.commercial_partner_id.customer</attribute>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home_sale"
+              name="Show only for suppliers"
+              inherit_id="website_portal_sale_v10.portal_my_home_sale">
+        <xpath expr="//a[@href='/my/quotes']/.." position="attributes">
+            <attribute name="t-if">user.commercial_partner_id.customer</attribute>
+        </xpath>
+        <xpath expr="//a[@href='/my/orders']/.." position="attributes">
+            <attribute name="t-if">user.commercial_partner_id.customer</attribute>
+        </xpath>
+        <xpath expr="//a[@href='/my/invoices']/.." position="attributes">
+            <attribute name="t-if">user.commercial_partner_id.customer</attribute>
+        </xpath>
+    </template>
+</odoo>

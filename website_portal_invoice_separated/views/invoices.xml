@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <template id="layout_invoices"
+              name="Invoices"
+              inherit_id="website_portal_purchase.portal_layout"
+              customize_show="True"
+              active="True">
+        <xpath expr="//t[@name='supplier_menu']">
+            <li>
+                <a href="/my/purchase/invoices">Supplier Invoices</a>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="home_invoices"
+              name="Invoices"
+              inherit_id="website_portal_purchase.portal_my_home"
+              customize_show="True"
+              active="True">
+        <xpath expr="//t[@name='supplier_home']">
+            <h3 class="page-header">
+                <a href="/my/purchase/invoices">
+                    Your Supplier Invoices
+                    <small class="ml8">
+                        <t t-if="supplier_order_count">
+                            <span class='badge'>
+                                <t t-esc="supplier_order_count"/>
+                            </span>
+                        </t>
+                        <t t-if="not supplier_order_count">
+                            There are currently no supplier invoices for your account.
+                        </t>
+                    </small>
+                </a>
+            </h3>
+        </xpath>
+    </template>
+
+    <template id="portal_my_purchase_invoices"
+              inherit_id="website_portal_sale_v10.portal_my_invoices"
+              name="My Supplier Invoices and Payments"
+              primary="True">
+        <xpath expr="//h3" position="replace">
+            <h3 class="page-header">Your Supplier Invoices and Payments</h3>
+        </xpath>
+        <xpath expr="//thead//th[5]">
+            <t>Orders #</t>
+        </xpath>
+        <xpath expr="//a[@t-if=&quot;invoice.state == 'open'&quot;]"
+               position="replace">
+            <t t-foreach="invoice.invoice_line_ids.mapped('purchase_id')"
+               t-as="order">
+               <a t-attf-href="/my/purchase/orders/#{slug(order)}"
+                  class="label label-default">
+                    <i class="fa fa-fw fa-pencil-square-o"/>
+                    <t t-esc="order.display_name"/>
+                </a>
+            </t>
+        </xpath>
+    </template>
+</odoo>
