@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+<template id="portal_my_products" name="Supplier Products">
+    <t t-call="website_portal_v10.portal_layout">
+        <h3 class="page-header">Your Products</h3>
+        <t t-if="not products">
+            <p>There are currently no products for your account.</p>
+        </t>
+        <div class="row mt16 mb16">
+            <div class="col-md-4 mt8">
+                <t t-if="products">
+                    <t t-call="website_portal_purchase_product.search"/>
+                </t>
+            </div>
+            <div class="col-md-4 col-md-offset-4 mt8">
+                <t t-call="website_portal_purchase_product.tree_actions"/>
+            </div>
+            <t t-if="products">
+                <div class="col-xs-12 table-responsive mt8">
+                    <t t-call="website_portal_purchase_product.product_table"/>
+                </div>
+            </t>
+        </div>
+    </t>
+</template>
+
+<template id="product_table" name="Supplier Product Table">
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>Picture</th>
+                <th>Name</th>
+                <th class="text-right">Price</th>
+                <th class="text-right">Stock</th>
+                <th class="text-center">Published</th>
+                <th class="text-center">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr t-foreach="products" t-as="product">
+                <td>
+                    <a itemprop="url"
+                       t-attf-href="/my/purchase/products/#{slug(product)}">
+                        <span t-field="product.image"
+                              t-field-options='{"widget": "image", "class": "img-thumbnail"}'/>
+                    </a>
+                </td>
+                <td>
+                    <a t-attf-href="/my/purchase/products/#{slug(product)}">
+                        <span t-field="product.name"/>
+                    </a>
+                </td>
+                <td class="text-right">
+                    <t t-call="website_sale.product_price"/>
+                </td>
+                <td class="text-right">
+                    <span t-field="product.qty_available"/>
+                </td>
+                <td class="text-center">
+                    <span t-if="product.website_published">
+                        <i class="fa fa-check"/>
+                    </span>
+                    <span t-if="not product.website_published">
+                        <i class="fa fa-close"/>
+                    </span>
+                </td>
+                <td class="text-center">
+                    <a class="btn btn-danger"
+                       t-attf-href="/my/purchase/products/#{slug(product)}/disable?redirect=#{quote_plus(request.httprequest.url)}"
+                       title="Delete">
+                        <i class="fa fa-trash"/>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div t-if="pager" class="o_portal_pager text-center">
+        <t t-call="website.pager"/>
+    </div>
+</template>
+
+<template id="search" name="Search In Products">
+    <form action="/my/purchase/products" method="get">
+        <div class="input-group">
+            <input
+                type="search"
+                name="search"
+                class="form-control"
+                placeholder="Search..."
+                t-att-value="search"/>
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary" title="Search">
+                    <i class="fa fa-search"/>
+                </button>
+            </span>
+        </div>
+    </form>
+</template>
+
+<template id="tree_actions" name="Website Product Supplier Tree Actions">
+    <a href="/my/purchase/products/new"
+       class="btn btn-primary btn-wide">
+        <i class="fa fa-plus"/>
+        <span>Add new product</span>
+    </a>
+</template>
+
+</odoo>

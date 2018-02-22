@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+<template id="layout_products"
+          name="Products"
+          inherit_id="website_portal_purchase.portal_layout"
+          customize_show="True"
+          active="True">
+    <xpath expr="//t[@name='supplier_menu']">
+        <li>
+            <a href="/my/purchase/products">Supplier Products</a>
+        </li>
+    </xpath>
+</template>
+
+<template id="home_products"
+          name="Products"
+          inherit_id="website_portal_purchase.portal_my_home"
+          customize_show="True"
+          active="True">
+    <xpath expr="//t[@name='supplier_home']">
+        <h3 class="page-header">
+            <a href="/my/purchase/products">
+                Your Supplier Products
+                <small class="ml8">
+                    <t t-if="supplier_product_count">
+                        <span class='badge'>
+                            <t t-esc="supplier_product_count"/>
+                        </span>
+                    </t>
+                    <t t-if="not supplier_product_count">
+                        There are currently no supplier products for your account.
+                    </t>
+                </small>
+            </a>
+        </h3>
+    </xpath>
+</template>
+
+</odoo>

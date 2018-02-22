@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="product" inherit_id="website_sale.product">
+    <xpath expr="//div[@id='website_published_button']">
+        <!-- TODO -->
+        <t t-if="user_id.commercial_partner_id.supplier and product.with_context(no_access_error=True).check_access_rule('write')"
+           groups="base.group_portal">
+            <a t-attf-href="/my/purchase/products/#{slug(product)}"
+                class="btn btn-primary">
+                Edit in website portal
+            </a>
+        </t>
+    </xpath>
+</template>
+
+</odoo>

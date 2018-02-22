@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="assets_frontend" inherit_id="website.assets_frontend"
+          name="website_portal_purchase_product assets">
+    <xpath expr="." position="inside">
+        <link rel="stylesheet"
+              href="/website_portal_purchase_product/static/src/sass/website_portal_purchase_product.sass"/>
+        <script src="/website_portal_purchase_product/static/src/js/tour.js"/>
+    </xpath>
+</template>
+
+</odoo>

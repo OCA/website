@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_template,Access product template,product.model_product_template,base.group_portal,1,1,1,0
+access_product_product,Access product product,product.model_product_product,base.group_portal,1,1,1,0
+access_product_uom,Access product UOM,product.model_product_uom,base.group_portal,1,1,1,0
+access_product_supplierinfo,Access product supplier info,product.model_product_supplierinfo,base.group_portal,1,1,1,1
+access_stock_warehouse,Access warehouse,stock.model_stock_warehouse,base.group_portal,1,0,0,0
+access_stock_location,Access location,stock.model_stock_location,base.group_portal,1,0,0,0
+access_stock_quant,Access quant,stock.model_stock_quant,base.group_portal,1,0,0,0
+access_ir_translation,Access translations,base.model_ir_translation,base.group_portal,1,1,1,1
