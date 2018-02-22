@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<templates>
+    <t t-name="website_portal_purchase_product_sale_packaging_price.row">
+        <div class="row">
+            <div class="col-sm-4 mt4 mb4">
+                <label t-attf-for="packaging_#{packaging.id}_name">
+                    Package name
+                </label>
+                <input t-attf-id="packaging_#{packaging.id}_name"
+                       class="form-control"
+                       t-attf-name="packaging_#{packaging.id}_name"
+                       placeholder="E.g. Six pack"
+                       required="required"
+                       t-att-value="packaging.name"/>
+            </div>
+            <div class="col-sm-4 mt4 mb4">
+                <label t-attf-for="packaging_#{packaging.id}_package_material_id">
+                    Package material
+                </label>
+                <select t-attf-id="packaging_#{packaging.id}_package_material_id"
+                        class="form-control"
+                        t-attf-name="packaging_#{packaging.id}_package_material_id">
+                    <option
+                        value=""
+                        t-att-selected="packaging.package_material_id ? null : 'selected'"/>
+                    <t t-foreach="material_ids" t-as="material">
+                        <option
+                            t-att-value="material.id"
+                            t-att-selected="material.id == packaging.package_material_id[0] ? 'selected' : null">
+                            <t t-esc="material.display_name"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+            <div class="col-sm-4 mt4 mb4">
+                <label t-attf-for="packaging_#{packaging.id}_qty">
+                    Quantity per package
+                </label>
+                <div class="input-group">
+                    <input t-attf-id="packaging_#{packaging.id}_qty"
+                           class="form-control"
+                           t-attf-name="packaging_#{packaging.id}_qty"
+                           placeholder="E.g. 3"
+                           t-att-value="packaging.qty"/>
+                    <span class="input-group-addon">
+                        <t>units</t>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-5 mt4 mb4">
+                <label t-attf-for="packaging_#{packaging.id}_weight">
+                    Package weight
+                </label>
+                <div class="input-group">
+                    <input t-attf-id="packaging_#{packaging.id}_weight"
+                           class="form-control"
+                           t-attf-name="packaging_#{packaging.id}_weight"
+                           placeholder="E.g. 1.55"
+                           type="number"
+                           min="0"
+                           step="0.01"
+                           t-att-value="packaging.weight"/>
+                    <span class="input-group-addon">
+                        <t>kg.</t>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-5 mt4 mb4">
+                <label t-attf-for="packaging_#{packaging.id}_list_price">
+                    Price per package
+                </label>
+                <div class="input-group">
+                    <t t-if="currency.position == 'before'">
+                        <span class="input-group-addon">
+                            <t t-esc="currency.symbol"/>
+                        </span>
+                    </t>
+                    <input t-attf-id="packaging_#{packaging.id}_list_price"
+                           class="form-control"
+                           t-attf-name="packaging_#{packaging.id}_list_price"
+                           placeholder="E.g. 1.55"
+                           type="number"
+                           min="0"
+                           step="0.01"
+                           t-att-value="packaging.list_price"/>
+                    <t t-if="currency.position == 'after'">
+                        <span class="input-group-addon">
+                            <t t-esc="currency.symbol"/>
+                        </span>
+                    </t>
+                </div>
+            </div>
+            <div class="col-sm-2 mt4 mb4">
+                <label class="hidden-xs">&#160;</label>
+                <button type="button"
+                        class="btn btn-danger btn-wide js_packaging_delete">
+                    <div class="fa fa-trash"/>
+                    <span class="visible-xs-inline">
+                        <t>
+                            Remove above packaging
+                        </t>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </t>
+</templates>
