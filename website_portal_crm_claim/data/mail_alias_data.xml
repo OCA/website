@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo noupdate="1">
+
+<record id="mail_alias_claim" model="mail.alias">
+    <field name="alias_model_id" ref="crm_claim.model_crm_claim"/>
+    <field name="alias_name">claims</field>
+    <field name="alias_contact">everyone</field>
+</record>
+
+</odoo>

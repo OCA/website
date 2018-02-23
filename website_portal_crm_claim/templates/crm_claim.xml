@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+<template id="portal_my_claims" name="My Claims">
+    <t t-call="website_portal_v10.portal_layout">
+        <h3 class="page-header">Your Claims</h3>
+        <t t-if="not claims">
+            <p>There are currently no claims for your account.</p>
+        </t>
+        <t t-if="mailto">
+            <div class="alert alert-info" role="alert">
+                Create a new claim by sending us an email to
+                <a t-att-href="mailto" t-field="alias.display_name"/>
+            </div>
+        </t>
+        <t t-if="claims">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Reporter</th>
+                    </tr>
+                </thead>
+                <t t-foreach="claims" t-as="claim">
+                    <tr>
+                        <td>
+                            <a t-attf-href="/my/claims/#{slug(claim)}"
+                               t-field="claim.name"/>
+                            <span class="label label-default pull-right"
+                                  t-field="claim.stage_id"/>
+                        </td>
+                        <td>
+                            <span t-field="claim.partner_id"/>
+                        </td>
+                    </tr>
+                </t>
+            </table>
+            <div t-if="pager" class="o_portal_pager text-center">
+                <t t-call="website.pager"/>
+            </div>
+        </t>
+    </t>
+</template>
+
+<template id="claims_followup" name="Claim Page">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div class="container">
+                <div class="oe_structure">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <ol class="breadcrumb mt8">
+                                <li><a href="/my/home">My Account</a></li>
+                                <li>Claim <span t-field="claim.id"/></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4>
+                                        Claim <span t-field="claim.id"/> -
+                                        <span t-field="claim.name"/>
+                                        <a class="btn btn-info"
+                                           t-attf-href="/web#return_label=Website&amp;model=crm.claim&amp;id=#{claim.id}&amp;view_type=form"
+                                           groups="base.group_user">Edit Claim</a>
+                                        <span t-field="claim.stage_id"
+                                              class="pull-right label label-info"
+                                              title="Current state of this claim"/>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="mb8">
+                                <strong>Date:</strong>
+                                <span t-field="claim.date"
+                                      t-field-options='{"widget": "date"}'/>
+                            </div>
+                            <div class='row'>
+                                <div class="col-md-6" t-if="claim.user_id">
+                                    <h5>Assigned to</h5>
+                                    <div>
+                                        <address
+                                            t-field="claim.user_id"
+                                            t-field-options='{"widget": "contact", "fields": ["name"], "no_marker": true}'/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" t-if="claim.partner_id">
+                                    <h5>Reported by</h5>
+                                    <div>
+                                        <address t-field="claim.partner_id" t-field-options='{"widget": "contact", "fields": ["name", "email"], "no_marker": true}'/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" t-if="claim.ref">
+                                    <h5>Reference</h5>
+                                    <div>
+                                        <span t-field="claim.ref.display_name"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" t-if="claim.resolution">
+                                    <h5>Resolution</h5>
+                                    <div>
+                                        <span t-field="claim.resolution"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt32">
+                        <div class="col-md-12">
+                            <h4>Message and communication history</h4>
+                        </div>
+                        <div class="col-md-10 col-md-offset-1 mt16">
+                            <t t-call="website_mail.message_thread">
+                                <t t-set="object" t-value="claim"/>
+                                <t t-set="chatter_mode" t-value="'json'"/>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+
+</odoo>
