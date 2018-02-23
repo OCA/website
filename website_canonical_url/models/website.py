@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# © initOS GmbH 2016
+# Copyright initOS GmbH 2016
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, api
-from openerp.http import request
+from odoo import models, api
+from odoo.http import request
 from urlparse import urlparse, urlunparse
 
 
-class website(models.Model):
+class Website(models.Model):
     _inherit = 'website'
 
     @api.multi
