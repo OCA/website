@@ -10,12 +10,16 @@ In Website Builder, eCommerce, Blog, etc. Odoo add parameters in URLs, like cate
 page or sorting. This is a bad thing for SEO because it creates DUST (Duplicate URL, 
 Same Text) and Duplicate Content. That is to say, multiple URLs that leads to the same 
 page search engine's index.
+
 This module doesn't prevent Odoo to generate such URLs, but it helps to reduce the 
-index size by adding canonical URLs for each page. It insert a HTML tag in the header 
-that contains a `canonical URL <https://support.google.com/webmasters/answer/139066>`_ 
+search engine's index size by adding canonical URLs for each page :
+It insert a HTML tag in the html header that contains a `canonical URL <https://support.google.com/webmasters/answer/139066>`_ 
 for the current page, no matter what query it gets, and `rel=next and rel=prev links
 <https://webmasters.googleblog.com/2011/09/pagination-with-relnext-and-relprev.html>`_
 wherever a pager is found.
+
+The canonical URLs are absolute ; the domain name is the one you've setup for your company.
+You may want to check the domain in Settings / Technical / System Parameters / web.base.url 
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
