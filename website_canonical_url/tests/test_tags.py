@@ -9,7 +9,7 @@ from lxml.html import document_fromstring
 class UICase(HttpCase):
     def setUp(self):
         super(UICase, self).setUp()
-        self.url = "/page/website_canonical_url.canonical_demo"
+        self.url = "/../page/website_canonical_url.canonical_demo"
         self.get = "?ultimate_answer=42"
         self.url_get = "%s%s" % (self.url, self.get)
         self.url_data = self.url_open(self.url_get)
@@ -25,7 +25,7 @@ class UICase(HttpCase):
         node = self.doc.xpath("/html/head/link[@rel='next']")[0]
         self.assertEqual(
             node.attrib["href"],
-            "%s/../page/3%s" % (self.url, self.get),
+            "%s/page/3%s" % (self.url, self.get),
         )
 
     def test_pager_prev(self):
