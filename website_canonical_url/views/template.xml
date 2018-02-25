@@ -11,6 +11,7 @@
                 <t t-set="canonical_url"
                    t-value="website.get_canonical_url(request)"/>
                 <t t-if="canonical_url">
+                    <!-- The url contains "/../" but it is valid -->
                     <link rel="canonical" t-attf-href="{{request.httprequest.url_root}}..{{canonical_url}}"/>
                 </t>
                 <t t-if="pager and pager.get('page_count', 0) > 1">
