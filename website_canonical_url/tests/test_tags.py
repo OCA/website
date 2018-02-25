@@ -25,7 +25,7 @@ class UICase(HttpCase):
         node = self.doc.xpath("/html/head/link[@rel='next']")[0]
         self.assertEqual(
             node.attrib["href"],
-            "%s/page/3%s" % (self.url, self.get),
+            "%s/../page/3%s" % (self.url, self.get),
         )
 
     def test_pager_prev(self):
