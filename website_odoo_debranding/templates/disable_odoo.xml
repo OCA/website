@@ -7,7 +7,7 @@
               customize_show="True"
               name="Remove Odoo Promotional Link"
               priority="20">
-        <xpath expr="//div[@class='pull-right']" position="replace">
+        <xpath expr="//div[hasclass('pull-right')]" position="replace">
             <div class="pull-right"/>
         </xpath>
     </template>
