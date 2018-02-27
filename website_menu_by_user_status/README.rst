@@ -9,34 +9,17 @@ Website Menu By User Status
 The module manages display website menu entries, depending if the user is
 logged or not.
 The selection of the display status can be chosen logged and/or not.
-Extends features and view of website.menu model.
-But for modules that install new routes like _your_wesite_/shop or _your_wesite_/event
-the redirection will not work in such cases.
-
-Installation
-============
-
-To install this module, just click to install butto
-
-Configuration
-=============
-
-#. you must activate the developer mode
 
 Usage
 =====
 
-To use this module, you need to edit website menu pages list view that can be found at :
-Website Admin > Configuration > Settings > Configure website menus
+To use this module, you need to:
+
+#. Go to Website > Configuration > Settings > Pages.
+#. Select the page for which you would like to hide the menu.
+#. In the `Related Menu Items` table, check whether the menu item is visible for logged/unlogged users.
 
 #. remove default filter to edit website menu line
-
-The module inherit from website.menu to add 2 booleans fields, user_logged
-and user_not_logged.
-On top of that, website.layout template is extended to include a condition
-that drive if the menu is built or not.
-It has been choose to not only hide the menu to avoid to easily get around
-by editing the html DOM.
 
 Bug Tracker
 ===========
@@ -46,23 +29,22 @@ Bugs are tracked on `GitHub Issues
 check there if your issue has already been reported. If you spotted it first,
 help us smash it by providing detailed and welcomed feedback.
 
+Credits
+=======
+
 Images
 ------
 
-* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
-
+* Odoo Community Association: `Icon <https://odoo-community.org/logo.png>`_.
 
 Contributors
 ------------
 * Bruno Joliveau <bruno.joliveau@savoirfairelinux.com>
 * Jordi Riera <jordi.riera@savoirfairelinux.com>
 * Meyomesse Gilles <meyomesse.gilles@gmail.com>
+* David Dufresne
 
-More information
-----------------
-Module developed and tested with Odoo version 10.0
-For questions, please contact our support services
-<support@savoirfairelinux.com>
+Do not contact contributors directly about support or help with technical issues.
 
 Maintainer
 ----------
