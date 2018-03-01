@@ -4,9 +4,9 @@
 odoo.define('website_media_size', function(require) {
     "use strict";
 
-    var MediaDialog = require('web_editor.widget').MediaDialog;
-    var weContext = require("web_editor.context");
-    var Widget = require('web.Widget');
+    var web_editor_widget = require('web_editor.widget');
+    var MediaDialog = web_editor_widget.MediaDialog;
+    var ImageDialog = web_editor_widget.ImageDialog;
 
     MediaDialog.include({
         xmlDependencies: MediaDialog.prototype.xmlDependencies.concat(
@@ -19,11 +19,9 @@ odoo.define('website_media_size', function(require) {
         }
     });
 
-    // ImageDialog of the web_editor.widget module is not available
-    Widget.include({
+    ImageDialog.include({
         _rpc: function(params, options) {
-            if (this.template === 'web_editor.dialog.image' &&
-                params.model === 'ir.attachment' &&
+            if (params.model === 'ir.attachment' &&
                 params.method === 'search_read') {
                 params.kwargs.fields.push('file_size');
             }
