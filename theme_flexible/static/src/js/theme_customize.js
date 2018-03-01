@@ -10,6 +10,98 @@ odoo.define('theme_flexible.theme_customize', function(require) {
     var qweb = core.qweb;
     var _t = core._t;
 
+    var SelectGoogleFontDialog = Dialog.extend({
+        init: function(parent, api_key) {
+            var self = this;
+            self.select = $.Deferred();
+            self.api_key = api_key;
+            var options = {
+                title: _t('Select Google Font'),
+                $content: $(qweb.render('theme_flexible.SelectGoogleFont')),
+                buttons: [
+                    {text: _t("Select"), classes: 'btn-primary', click: this.selectClicked.bind(this) },
+                    {text: _t("Cancel"), classes: 'btn-default', close: true}
+                ]
+            };
+            return this._super(parent, options);
+        },
+        open: function() {
+            this._super.apply(this, arguments);
+            return this.select.promise();
+        },
+        willStart: function() {
+            var self = this;
+            var get_fonts = this.loadGoogleFonts().done(function(fonts) {
+                self.fonts = fonts;
+            });
+            return $.when(this._super.apply(this, arguments), get_fonts);
+        },
+        loadGoogleFonts: function() {
+            var self = this;
+            var font_get = $.Deferred();
+            $.get('https://www.googleapis.com/webfonts/v1/webfonts?key=' + self.api_key, function(fonts) {
+                font_get.resolve(fonts.items);
+            }).fail(function() {
+                font_get.reject();
+            });
+            return font_get.promise();
+        },
+        start: function() {
+            var res = this._super.apply(this, arguments);
+            var self = this;
+            var source = function(q, cb) {
+                var reg = new RegExp(q, 'i');
+                var matches = [];
+                $.each(self.fonts, function(i, font) {
+                    if (reg.test(font.family)) {
+                        matches.push(font);
+                    }
+                });
+                cb(matches);
+            };
+
+            this.$('input[name="font"]').typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 0
+            }, {
+                name: 'fonts',
+                source: source,
+                display: function(font) {
+                    return font.family;
+                }
+            });
+            this.$('input[name="font"]').bind('typeahead:select', function(ev, font) {
+                self.$('select[name="variant"]').html('');
+                $.each(font.variants, function(i, variant) {
+                    self.$('select[name="variant"]').append(
+                        $("<option></option>").attr('value', variant).html(variant)
+                    );
+                });
+            });
+            return res;
+        },
+        selectClicked: function() {
+            var family = this.$('input[name="font"]').typeahead('val');
+            var variant = this.$('select[name="variant"]').val();
+            if (variant === null) {
+                return;
+            }
+            var italic = variant.indexOf('italic') !== -1;
+            var weight = 400;
+            if (variant === 'regular' || variant === 'italic') {
+                weight = 400;
+            } else {
+                weight = parseInt(variant.replace('italic', ''), 10);
+            }
+
+            this.select.resolve({
+                family: family,
+                weight: weight,
+                italic: italic
+            });
+        }
+    });
 
     ThemeCustomizeDialog.include({
         theme: null,
@@ -132,100 +224,6 @@ odoo.define('theme_flexible.theme_customize', function(require) {
                 self.$('input[name="font_' + type + '_google"]').prop('checked', true);
 
                 dialog.close();
-            });
-        }
-    });
-
-
-    var SelectGoogleFontDialog = Dialog.extend({
-        init: function(parent, api_key) {
-            var self = this;
-            self.select = $.Deferred();
-            self.api_key = api_key;
-            var options = {
-                title: _t('Select Google Font'),
-                $content: $(qweb.render('theme_flexible.SelectGoogleFont')),
-                buttons: [
-                    {text: _t("Select"), classes: 'btn-primary', click: this.selectClicked.bind(this) },
-                    {text: _t("Cancel"), classes: 'btn-default', close: true}
-                ]
-            };
-            return this._super(parent, options);
-        },
-        open: function() {
-            this._super.apply(this, arguments);
-            return this.select.promise();
-        },
-        willStart: function() {
-            var self = this;
-            var get_fonts = this.loadGoogleFonts().done(function(fonts) {
-                self.fonts = fonts;
-            });
-            return $.when(this._super.apply(this, arguments), get_fonts);
-        },
-        loadGoogleFonts: function() {
-            var self = this;
-            var font_get = $.Deferred();
-            $.get('https://www.googleapis.com/webfonts/v1/webfonts?key=' + self.api_key, function(fonts) {
-                font_get.resolve(fonts.items);
-            }).fail(function() {
-                font_get.reject();
-            });
-            return font_get.promise();
-        },
-        start: function() {
-            var res = this._super.apply(this, arguments);
-            var self = this;
-            var source = function(q, cb) {
-                var reg = new RegExp(q, 'i');
-                var matches = [];
-                $.each(self.fonts, function(i, font) {
-                    if (reg.test(font.family)) {
-                        matches.push(font);
-                    }
-                });
-                cb(matches);
-            };
-
-            this.$('input[name="font"]').typeahead({
-                hint: true,
-                highlight: true,
-                minLength: 0
-            }, {
-                name: 'fonts',
-                source: source,
-                display: function(font) {
-                    return font.family;
-                }
-            });
-            this.$('input[name="font"]').bind('typeahead:select', function(ev, font) {
-                self.$('select[name="variant"]').html('');
-                $.each(font.variants, function(i, variant) {
-                    self.$('select[name="variant"]').append(
-                        $("<option></option>").attr('value', variant).html(variant)
-                    );
-                });
-            });
-            return res;
-        },
-        selectClicked: function() {
-            var family = this.$('input[name="font"]').typeahead('val');
-            var variant = this.$('select[name="variant"]').val();
-            if (variant === null) {
-                return;
-            }
-            var italic = variant.indexOf('italic') !== -1;
-            var weight = 400;
-            if (variant === 'regular' || variant === 'italic') {
-                weight = 400;
-            } else {
-                weight = parseInt(variant.replace('italic', ''));
-            }
-
-            this.select.resolve({
-                family: family,
-                weight: weight,
-                italic: italic
             });
         }
     });
