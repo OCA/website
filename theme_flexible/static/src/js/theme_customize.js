@@ -61,15 +61,18 @@ odoo.define('theme_flexible.theme_customize', function(require) {
                         break;
 
                     default:
-                        if(theme[name] === false) theme[name] = '';
-                        if(input.parent().hasClass('colorpicker-component')) {
-                            if(theme[name])
-                                input.parent().colorpicker({'color': theme[name]});
-                            else
-                                input.parent().colorpicker();
+                        if(theme[name] === false) {
+                            theme[name] = '';
                         }
-                        else
+                        if(input.parent().hasClass('colorpicker-component')) {
+                            if(theme[name]) {
+                                input.parent().colorpicker({'color': theme[name]});
+                            } else {
+                                input.parent().colorpicker();
+                            }
+                        } else {
                             input.val(theme[name]);
+                        }
                         break;
                 }
             }
@@ -208,10 +211,12 @@ odoo.define('theme_flexible.theme_customize', function(require) {
         selectClicked: function() {
             var family = this.$('input[name="font"]').typeahead('val');
             var variant = this.$('select[name="variant"]').val();
-            if (variant == null) return;
+            if (variant === null) {
+                return;
+            }
             var italic = variant.indexOf('italic') !== -1;
             var weight = 400;
-            if (variant == 'regular' || variant == 'italic') {
+            if (variant === 'regular' || variant === 'italic') {
                 weight = 400;
             } else {
                 weight = parseInt(variant.replace('italic', ''));

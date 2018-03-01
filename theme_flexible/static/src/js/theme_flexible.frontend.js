@@ -10,7 +10,7 @@ odoo.define('theme_flexible.frontend', function(require) {
         var header = $('header');
         var navbar = $('header > .navbar');
 
-        if (navbar.attr('data-do-stick') == '1') {
+        if (navbar.attr('data-do-stick') === '1') {
             var navbar_clone = navbar.clone();
             navbar_clone.addClass('navbar-fixed-top');
             header.append(navbar_clone);
