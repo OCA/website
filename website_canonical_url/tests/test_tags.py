@@ -11,7 +11,7 @@ class UICase(HttpCase):
         super(UICase, self).setUp()
         self.root = 'http://' + self.xmlrpc_db._ServerProxy__host
         self.url = "/page/website_canonical_url.canonical_demo"
-        self.url_absolute = self.root + "/../page/website_canonical_url.canonical_demo"
+        self.url_absolute = self.root + self.url
         self.get = "?ultimate_answer=42"
         self.url_get = "%s%s" % (self.url, self.get)
         self.url_data = self.url_open(self.url_get)
