@@ -25,5 +25,5 @@ class TestThemeFlexible(TransactionCase):
         self.theme.font_header_1_weight = 700
         self.theme.font_header_1_google = True
 
-        self.assertEquals(self.theme.google_query,
-                          'Mina:700|Lato:400i')
+        self.assertTrue(self.theme.google_query == 'Lato:400i|Mina:700' or
+                        self.theme.google_query == 'Mina:700|Lato:400i')
