@@ -4,9 +4,9 @@
 
 <odoo>
     <record id="website.default_website" model="website">
-        <field name="theme_flexible_id" ref="theme_flexible.default_theme_flexible"/>
+        <field name="theme_flexible_id" ref="website_theme_flexible.default_theme_flexible"/>
     </record>
     <record id="website.website2" model="website">
-        <field name="theme_flexible_id" ref="theme_flexible.default_theme_flexible2"/>
+        <field name="theme_flexible_id" ref="website_theme_flexible.default_theme_flexible2"/>
     </record>
 </odoo>

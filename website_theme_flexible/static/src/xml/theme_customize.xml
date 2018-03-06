@@ -3,7 +3,7 @@
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 
 <template>
-    <t t-name="theme_flexible.TabColor">
+    <t t-name="website_theme_flexible.TabColor">
         <table class="table">
             <tr>
                 <th>Name</th>
@@ -181,7 +181,7 @@
         </table>
     </t>
 
-    <t t-name="theme_flexible.TabFont">
+    <t t-name="website_theme_flexible.TabFont">
         <table class="table">
             <tr>
                 <th>Type</th>
@@ -314,7 +314,7 @@
         </table>
     </t>
 
-    <t t-name="theme_flexible.TabMenu">
+    <t t-name="website_theme_flexible.TabMenu">
         <div>
             <div class="form-group">
                 <label>Company Logo / Website Name Alignment</label>
@@ -354,7 +354,7 @@
         </div>
     </t>
 
-    <t t-name="theme_flexible.TabLayout">
+    <t t-name="website_theme_flexible.TabLayout">
         <div>
             <div class="form-group">
                 <label>Layout</label>
@@ -399,7 +399,7 @@
         </div>
     </t>
 
-    <t t-name="theme_flexible.SelectGoogleFont">
+    <t t-name="website_theme_flexible.SelectGoogleFont">
         <div>
             <div class="form-group">
                 <label>Font</label>
@@ -413,7 +413,7 @@
         </div>
     </t>
 
-    <t t-name="theme_flexible.NoGoogleAPIKey">
+    <t t-name="website_theme_flexible.NoGoogleAPIKey">
         <p>
             Please set your Google Fonts API key in the website settings.
             You can get your API key <a target="new" href="https://developers.google.com/fonts/docs/developer_api#APIKey">here</a>.

@@ -1,7 +1,7 @@
 /* Copyright 2018 Onestein
  * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
 
-odoo.define('theme_flexible.frontend', function(require) {
+odoo.define('website_theme_flexible.frontend', function(require) {
 "use strict";
 
     var base = require('web_editor.base');

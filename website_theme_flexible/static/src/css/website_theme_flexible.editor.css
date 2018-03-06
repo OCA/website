@@ -4,3 +4,7 @@
 header .navbar-fixed-top.stick {
     top: 34px;
 }
+
+.dropdown-menu .colorpicker {
+    display: block;
+}

@@ -30,16 +30,16 @@
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane" id="tab-layout">
-                                    <t t-call="theme_flexible.TabLayout"/>
+                                    <t t-call="website_theme_flexible.TabLayout"/>
                                 </div>
                                 <div class="tab-pane" id="tab-colors">
-                                    <t t-call="theme_flexible.TabColor"/>
+                                    <t t-call="website_theme_flexible.TabColor"/>
                                 </div>
                                 <div class="tab-pane" id="tab-fonts">
-                                    <t t-call="theme_flexible.TabFont"/>
+                                    <t t-call="website_theme_flexible.TabFont"/>
                                 </div>
                                 <div class="tab-pane" id="tab-menu">
-                                    <t t-call="theme_flexible.TabMenu"/>
+                                    <t t-call="website_theme_flexible.TabMenu"/>
                                 </div>
                             </div>
                         </div>

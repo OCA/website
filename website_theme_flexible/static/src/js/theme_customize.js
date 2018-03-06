@@ -1,7 +1,7 @@
 /* Copyright 2018 Onestein
  * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
 
-odoo.define('theme_flexible.theme_customize', function(require) {
+odoo.define('website_theme_flexible.theme_customize', function(require) {
     "use strict";
     var ThemeCustomizeDialog = require('website.theme');
     var ctx = require('web_editor.context');
@@ -17,7 +17,7 @@ odoo.define('theme_flexible.theme_customize', function(require) {
             self.api_key = api_key;
             var options = {
                 title: _t('Select Google Font'),
-                $content: $(qweb.render('theme_flexible.SelectGoogleFont')),
+                $content: $(qweb.render('website_theme_flexible.SelectGoogleFont')),
                 buttons: [
                     {text: _t("Select"), classes: 'btn-primary', click: this.selectClicked.bind(this) },
                     {text: _t("Cancel"), classes: 'btn-default', close: true}
@@ -106,7 +106,7 @@ odoo.define('theme_flexible.theme_customize', function(require) {
     ThemeCustomizeDialog.include({
         theme: null,
         website: null,
-        xmlDependencies: ['/theme_flexible/static/src/xml/theme_customize.xml'],
+        xmlDependencies: ['/website_theme_flexible/static/src/xml/theme_customize.xml'],
         events: {
             'click .btn-apply': 'apply',
             'click .btn-close': 'close',
@@ -197,11 +197,11 @@ odoo.define('theme_flexible.theme_customize', function(require) {
                 var href = '/website/theme_customize_reload'+
                     '?href='+encodeURIComponent(window.location.href)+
                     '&enable='+encodeURIComponent([
-                        'theme_flexible.assets_frontend_menu',
-                        'theme_flexible.assets_frontend_colors',
-                        'theme_flexible.assets_frontend_fonts',
-                        'theme_flexible.assets_frontend_layout',
-                        'theme_flexible.layout'
+                        'website_theme_flexible.assets_frontend_menu',
+                        'website_theme_flexible.assets_frontend_colors',
+                        'website_theme_flexible.assets_frontend_fonts',
+                        'website_theme_flexible.assets_frontend_layout',
+                        'website_theme_flexible.layout'
                     ])+
                     '&disable=';
                 window.location.href = href;
@@ -211,7 +211,7 @@ odoo.define('theme_flexible.theme_customize', function(require) {
             var self = this;
             if (!self.website.google_font_api_key) {
                 return Dialog.alert(this, '', {
-                    $content: $(qweb.render('theme_flexible.NoGoogleAPIKey'))
+                    $content: $(qweb.render('website_theme_flexible.NoGoogleAPIKey'))
                 });
             }
             var $btn = $(e.currentTarget);

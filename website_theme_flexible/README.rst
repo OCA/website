@@ -15,25 +15,25 @@ Screenshots
 Layout options
 --------------
 
-.. image:: /theme_flexible/static/description/screenshot1.png
+.. image:: /website_theme_flexible/static/description/screenshot1.png
    :alt: Layout
 
 Menu options
 ------------
 
-.. image:: /theme_flexible/static/description/screenshot2.png
+.. image:: /website_theme_flexible/static/description/screenshot2.png
    :alt: Menu
 
 Color options
 --------------
 
-.. image:: /theme_flexible/static/description/screenshot3.png
+.. image:: /website_theme_flexible/static/description/screenshot3.png
    :alt: Colors
 
 Font options
 -------------
 
-.. image:: /theme_flexible/static/description/screenshot4.png
+.. image:: /website_theme_flexible/static/description/screenshot4.png
    :alt: Fonts
 
 Configuration
@@ -43,7 +43,7 @@ To configure this module, you need to:
 
 #. If you want to use the Google Fonts wizard set your API key in the Website Settings
 
-.. image:: /theme_flexible/static/description/screenshot0.png
+.. image:: /website_theme_flexible/static/description/screenshot0.png
    :alt: API key menu location
 
 Usage
