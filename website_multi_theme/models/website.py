@@ -48,6 +48,10 @@ class Website(models.Model):
             self._multi_theme_activate()
         return result
 
+    def _find_duplicate_view_for_website(self, origin_view, website):
+        xmlid = VIEW_KEY % (website.id, origin_view.id)
+        return self.env.ref(xmlid, raise_if_not_found=False)
+
     def _duplicate_view_for_website(self, pattern, xmlid, override_key):
         """Duplicate a view pattern and enable it only for current website.
 
@@ -169,6 +173,25 @@ class Website(models.Model):
                         copied_view.inherit_id = custom_layout
                         data.attrib["inherit_id"] = custom_layout.key
                     copied_view.arch = etree.tostring(data)
+                else:
+                    theme_module_name \
+                        = website.multi_theme_id.converted_theme_addon
+
+                    parent_view = copied_view.inherit_id
+                    parent_view_module = parent_view.model_data_id.module
+                    copied_parent = None
+
+                    if parent_view_module == theme_module_name:
+                        # it inherits view of the same module,
+                        # which might be copied
+                        copied_parent = self._find_duplicate_view_for_website(
+                            parent_view, website
+                        )
+
+                    if copied_parent:
+                        copied_view.inherit_id = copied_parent
+                        data.attrib["inherit_id"] = copied_parent.key
+
                 custom_views |= copied_view
             # Delete any custom view that should exist no more
             (website.multi_theme_view_ids - custom_views).unlink()
