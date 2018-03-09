@@ -160,13 +160,12 @@ class Website(models.Model):
                     False
                 )
                 # Applied views must inherit from custom assets or layout
-                if (copied_view.inherit_id and
-                        copied_view.inherit_id < main_views):
+                if copied_view.inherit_id & main_views:
                     data = etree.fromstring(copied_view.arch)
-                    if copied_view.inherit_id < main_assets_frontend:
+                    if copied_view.inherit_id & main_assets_frontend:
                         copied_view.inherit_id = custom_assets
                         data.attrib["inherit_id"] = custom_assets.key
-                    elif copied_view.inherit_id < main_layout:
+                    elif copied_view.inherit_id & main_layout:
                         copied_view.inherit_id = custom_layout
                         data.attrib["inherit_id"] = custom_layout.key
                     copied_view.arch = etree.tostring(data)
