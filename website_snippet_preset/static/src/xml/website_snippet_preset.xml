@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<template>
+    <t t-extend="web_editor.snippet_overlay">
+        <t t-jquery=".oe_options" t-operation="append">
+            <div class="o_snippet_preset dropdown btn-group">
+                <a href="#" data-toggle="dropdown" class="btn btn-primary btn-sm" title="Presets">Presets</a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="o_snippet_preset_save"><a href="#">Save Current</a></li>
+                    <li class="dropdown-submenu">
+                        <a href="#">Load</a>
+                        <ul class="dropdown-menu o_snippet_preset_load">
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </t>
+    </t>
+
+    <t t-name="website_snippet_preset.Item">
+        <li>
+            <a href="#"><t t-esc="record.name"/><i class="fa fa-trash-o o_snippet_preset_del"/></a>
+        </li>
+    </t>
+
+    <t t-name="website_snippet_preset.EnterNameDialog">
+        <div>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" t-attf-value="{{name}}" name="name" class="form-control"/>
+            </div>
+        </div>
+    </t>
+</template>
