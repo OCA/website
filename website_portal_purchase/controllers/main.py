@@ -3,12 +3,15 @@
 # (c) 2015 Antiun Ingeniería S.L. - Carlos Dauden
 # License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
 
-from openerp.http import request, route
-from openerp.exceptions import AccessError
-from openerp.addons.website_portal_v10.controllers.main import WebsiteAccount
+from odoo import http, _
+from odoo.exceptions import AccessError
+from odoo.http import request
+
+from odoo.addons.website_portal.controllers.main import website_account
 
 
-class PortalPurchaseWebsiteAccount(WebsiteAccount):
+class PortalPurchaseWebsiteAccount(website_account):
+
     def _purchase_order_domain(self, quotation):
         """Generate a domain for ``purchase.order`` objects.
 
@@ -64,7 +67,7 @@ class PortalPurchaseWebsiteAccount(WebsiteAccount):
 
         return values
 
-    @route()
+    @http.route()
     def account(self):
         """Add purchases documents to main account page."""
         response = super(PortalPurchaseWebsiteAccount, self).account()
@@ -82,33 +85,33 @@ class PortalPurchaseWebsiteAccount(WebsiteAccount):
 
         return response
 
-    @route(["/my/purchase/quotes", "/my/purchase/quotes/page/<int:page>"],
+    @http.route(["/my/purchase/quotes", "/my/purchase/quotes/page/<int:page>"],
            type="http", auth="user", website=True)
     def portal_my_purchase_quotes(self, page=1, date_begin=None, date_end=None,
                                   **kwargs):
         """List subscribed purchase quotes."""
-        return request.website.render(
+        return request.render(
             "website_portal_purchase.portal_my_quotations",
             self._prepare_purchase_orders_values(
                 True, page, date_begin, date_end))
 
-    @route(["/my/purchase/orders", "/my/purchase/orders/page/<int:page>"],
+    @http.route(["/my/purchase/orders", "/my/purchase/orders/page/<int:page>"],
            type="http", auth="user", website=True)
     def portal_my_purchase_orders(self, page=1, date_begin=None, date_end=None,
                                   **kwargs):
         """List subscribed purchase orders."""
-        return request.website.render(
+        return request.render(
             "website_portal_purchase.portal_my_orders",
             self._prepare_purchase_orders_values(
                 False, page, date_begin, date_end))
 
-    @route(["/my/purchase/orders/<model('purchase.order'):order>"],
+    @http.route(["/my/purchase/orders/<model('purchase.order'):order>"],
            type="http", auth="user", website=True)
     def purchase_orders_followup(self, order=None, **kw):
         order_invoice_lines = {
             il.product_id.id: il.invoice_id
             for il in order.invoice_ids.mapped("invoice_line_ids")}
-        return request.website.render(
+        return request.render(
             "website_portal_purchase.orders_followup",
             {
                 "order": order.sudo(),
