@@ -7,11 +7,11 @@
     'name': 'Website Portal for Purchases',
     'category': 'Website',
     'summary': "Add purchase orders and quotation in the frontend portal",
-    'version': '9.0.1.0.0',
+    'version': '10.0.1.0.0',
     'depends': [
         'auth_supplier',
         'purchase',
-        'website_portal_v10',
+        'website_portal',
     ],
     'data': [
         'security/ir.model.access.csv',
@@ -27,5 +27,5 @@
               'Odoo Community Association (OCA)',
     'website': 'http://www.tecnativa.com',
     'license': 'LGPL-3',
-    'installable': False,
+    'installable': True,
 }
