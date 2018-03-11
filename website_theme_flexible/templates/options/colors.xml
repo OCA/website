@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="assets_frontend_colors" inherit_id="website.assets_frontend">
+        <xpath expr=".">
+            <style type="text/less">
+                <t t-if="website and website.theme_flexible_id">
+
+                @color-alpha: <t t-esc="website.theme_flexible_id.color_alpha"/>;
+                @color-beta: <t t-esc="website.theme_flexible_id.color_beta"/>;
+                @color-gamma: <t t-esc="website.theme_flexible_id.color_gamma"/>;
+                @color-delta: <t t-esc="website.theme_flexible_id.color_delta"/>;
+                @color-epsilon: <t t-esc="website.theme_flexible_id.color_epsilon"/>;
+
+                @color-alpha-lighter   : lighten( @color-alpha, <t t-esc="website.theme_flexible_id.amount_alpha_lighter"/>%);
+                @color-alpha-light     : lighten( @color-alpha, <t t-esc="website.theme_flexible_id.amount_alpha_light"/>%);
+                @color-alpha-dark      : darken( @color-alpha, <t t-esc="website.theme_flexible_id.amount_alpha_dark"/>%);
+                @color-alpha-darker    : darken( @color-alpha, <t t-esc="website.theme_flexible_id.amount_alpha_darker"/>%);
+
+                @color-beta-lighter    : lighten( @color-beta, <t t-esc="website.theme_flexible_id.amount_beta_lighter"/>%);
+                @color-beta-light      : lighten( @color-beta, <t t-esc="website.theme_flexible_id.amount_beta_light"/>%);
+                @color-beta-dark       : darken( @color-beta, <t t-esc="website.theme_flexible_id.amount_beta_dark"/>%);
+                @color-beta-darker     : darken( @color-beta, <t t-esc="website.theme_flexible_id.amount_beta_darker"/>%);
+
+                @color-gamma-lighter   : lighten( @color-gamma, <t t-esc="website.theme_flexible_id.amount_gamma_lighter"/>%);
+                @color-gamma-light     : lighten( @color-gamma, <t t-esc="website.theme_flexible_id.amount_gamma_light"/>%);
+                @color-gamma-dark      : darken( @color-gamma, <t t-esc="website.theme_flexible_id.amount_gamma_dark"/>%);
+                @color-gamma-darker    : darken( @color-gamma, <t t-esc="website.theme_flexible_id.amount_gamma_darker"/>%);
+
+                @color-delta-lighter   : lighten( @color-delta, <t t-esc="website.theme_flexible_id.amount_delta_lighter"/>%);
+                @color-delta-light     : lighten( @color-delta, <t t-esc="website.theme_flexible_id.amount_delta_light"/>%);
+                @color-delta-dark      : darken( @color-delta, <t t-esc="website.theme_flexible_id.amount_delta_dark"/>%);
+                @color-delta-darker    : darken( @color-delta, <t t-esc="website.theme_flexible_id.amount_delta_darker"/>%);
+
+                @color-epsilon-lighter : lighten( @color-epsilon, <t t-esc="website.theme_flexible_id.amount_epsilon_lighter"/>%);
+                @color-epsilon-light   : lighten( @color-epsilon, <t t-esc="website.theme_flexible_id.amount_epsilon_light"/>%);
+                @color-epsilon-dark    : darken( @color-epsilon, <t t-esc="website.theme_flexible_id.amount_epsilon_dark"/>%);
+                @color-epsilon-darker  : darken( @color-epsilon, <t t-esc="website.theme_flexible_id.amount_epsilon_darker"/>%);
+
+                .o-create-color-classes(~'alpha-lighter', @color-alpha-lighter);
+                .o-create-color-classes(~'alpha-light', @color-alpha-light);
+                .o-create-color-classes(~'alpha-dark', @color-alpha-dark);
+                .o-create-color-classes(~'alpha-darker', @color-alpha-darker);
+
+                .o-create-color-classes(~'beta-lighter', @color-beta-lighter);
+                .o-create-color-classes(~'beta-light', @color-beta-light);
+                .o-create-color-classes(~'beta-dark', @color-beta-dark);
+                .o-create-color-classes(~'beta-darker', @color-beta-darker);
+
+                .o-create-color-classes(~'gamma-lighter', @color-gamma-lighter);
+                .o-create-color-classes(~'gamma-light', @color-gamma-light);
+                .o-create-color-classes(~'gamma-dark', @color-gamma-dark);
+                .o-create-color-classes(~'gamma-darker', @color-gamma-darker);
+
+                .o-create-color-classes(~'delta-lighter', @color-delta-lighter);
+                .o-create-color-classes(~'delta-light', @color-delta-light);
+                .o-create-color-classes(~'delta-dark', @color-delta-dark);
+                .o-create-color-classes(~'delta-darker', @color-delta-darker);
+
+                .o-create-color-classes(~'epsilon-lighter', @color-epsilon-lighter);
+                .o-create-color-classes(~'epsilon-light', @color-epsilon-light);
+                .o-create-color-classes(~'epsilon-dark', @color-epsilon-dark);
+                .o-create-color-classes(~'epsilon-darker', @color-epsilon-darker);
+
+                </t>
+            </style>
+        </xpath>
+    </template>
+</odoo>

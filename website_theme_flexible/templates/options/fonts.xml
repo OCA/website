@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="assets_frontend_fonts" inherit_id="website.assets_frontend">
+        <xpath expr=".">
+            <t t-if="website and website.theme_flexible_id">
+                <t t-if="website.theme_flexible_id.google_query">
+                    <style type="text/less">
+                        @import url("//fonts.googleapis.com/css?family=<t t-esc="website.theme_flexible_id.google_query"/>");
+                    </style>
+                </t>
+
+                <t t-if="website.theme_flexible_id.font_normal">
+                    <style type="text/less">
+                        body #wrapwrap {
+                            font-family: '<t t-esc="website.theme_flexible_id.font_normal"/>';
+                            <t t-if="website.theme_flexible_id.font_normal_underline">
+                                text-decoration: underline;
+                            </t>
+                            <t t-if="website.theme_flexible_id.font_normal_italic">
+                                font-style: italic;
+                            </t>
+                            font-weight: <t t-esc="website.theme_flexible_id.font_normal_weight"/>;
+                        }
+                    </style>
+                </t>
+                <t t-if="website.theme_flexible_id.font_code">
+                    <style type="text/less">
+                        body #wrapwrap pre {
+                            font-family: '<t t-esc="website.theme_flexible_id.font_code"/>';
+                            <t t-if="website.theme_flexible_id.font_code_underline">
+                                text-decoration: underline;
+                            </t>
+                            <t t-if="website.theme_flexible_id.font_code_italic">
+                                font-style: italic;
+                            </t>
+                            font-weight: <t t-esc="website.theme_flexible_id.font_code_weight"/>;
+                        }
+                    </style>
+                </t>
+                <t t-if="website.theme_flexible_id.font_header_1">
+                    <style type="text/less">
+                        body #wrapwrap h1, body #wrapwrap .h1 {
+                            font-family: '<t t-esc="website.theme_flexible_id.font_header_1"/>';
+                            <t t-if="website.theme_flexible_id.font_header_1_underline">
+                                text-decoration: underline;
+                            </t>
+                            <t t-if="website.theme_flexible_id.font_header_1_italic">
+                                font-style: italic;
+                            </t>
+                            font-weight: <t t-esc="website.theme_flexible_id.font_header_1_weight"/>;
+                        }
+                    </style>
+                </t>
+                <t t-if="website.theme_flexible_id.font_header_2">
+                    <style type="text/less">
+                        body #wrapwrap h2, body #wrapwrap .h2 {
+                            font-family: '<t t-esc="website.theme_flexible_id.font_header_2"/>';
+                            <t t-if="website.theme_flexible_id.font_header_2_underline">
+                                text-decoration: underline;
+                            </t>
+                            <t t-if="website.theme_flexible_id.font_header_2_italic">
+                                font-style: italic;
+                            </t>
+                            font-weight: <t t-esc="website.theme_flexible_id.font_header_2_weight"/>;
+                        }
+                    </style>
+                </t>
+                <t t-if="website.theme_flexible_id.font_header_3">
+                    <style type="text/less">
+                        body #wrapwrap h3, body #wrapwrap .h3 {
+                            font-family: '<t t-esc="website.theme_flexible_id.font_header_3"/>';
+                            <t t-if="website.theme_flexible_id.font_header_3_underline">
+                                text-decoration: underline;
+                            </t>
+                            <t t-if="website.theme_flexible_id.font_header_3_italic">
+                                font-style: italic;
+                            </t>
+                            font-weight: <t t-esc="website.theme_flexible_id.font_header_3_weight"/>;
+                        }
+                    </style>
+                </t>
+                <t t-if="website.theme_flexible_id.font_header_4">
+                    <style type="text/less">
+                        body #wrapwrap h4, body #wrapwrap .h4 {
+                            font-family: '<t t-esc="website.theme_flexible_id.font_header_4"/>';
+                            <t t-if="website.theme_flexible_id.font_header_4_underline">
+                                text-decoration: underline;
+                            </t>
+                            <t t-if="website.theme_flexible_id.font_header_4_italic">
+                                font-style: italic;
+                            </t>
+                            font-weight: <t t-esc="website.theme_flexible_id.font_header_4_weight"/>;
+                        }
+                    </style>
+                </t>
+                <t t-if="website.theme_flexible_id.font_header_5">
+                    <style type="text/less">
+                        body #wrapwrap h5, body #wrapwrap .h5 {
+                            font-family: '<t t-esc="website.theme_flexible_id.font_header_5"/>';
+                            <t t-if="website.theme_flexible_id.font_header_5_underline">
+                                text-decoration: underline;
+                            </t>
+                            <t t-if="website.theme_flexible_id.font_header_5_italic">
+                                font-style: italic;
+                            </t>
+                            font-weight: <t t-esc="website.theme_flexible_id.font_header_5_weight"/>;
+                        }
+                    </style>
+                </t>
+                <t t-if="website.theme_flexible_id.font_header_6">
+                    <style type="text/less">
+                        body #wrapwrap h6, body #wrapwrap .h6 {
+                            font-family: '<t t-esc="website.theme_flexible_id.font_header_6"/>';
+                            <t t-if="website.theme_flexible_id.font_header_6_underline">
+                                text-decoration: underline;
+                            </t>
+                            <t t-if="website.theme_flexible_id.font_header_6_italic">
+                                font-style: italic;
+                            </t>
+                            font-weight: <t t-esc="website.theme_flexible_id.font_header_6_weight"/>;
+                        }
+                    </style>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>

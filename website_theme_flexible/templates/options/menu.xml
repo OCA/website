@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="layout" inherit_id="website.layout">
+        <!-- Sticky -->
+        <xpath expr="//header/div" position="attributes">
+            <attribute name="t-attf-data-do-stick">{{website and website.theme_flexible_id and website.theme_flexible_id.menu_sticky and 1 or 0}}</attribute>
+        </xpath>
+
+        <!-- Logo / text position -->
+        <xpath expr="//header//div[hasclass('navbar-header')]" position="replace">
+            <t t-if="website and website.theme_flexible_id">
+                <t t-if="website.theme_flexible_id.menu_logo == 'left_text'">
+                    <div class="navbar-left">
+                        <a class="navbar-brand" href="/" t-field="website.name">My Website</a>
+                    </div>
+                </t>
+                <t t-elif="website.theme_flexible_id.menu_logo == 'left_logo'">
+                    <div class="navbar-left">
+                        <a href="/" class="navbar-brand logo">
+                            <span t-field="res_company.logo" t-options="{'widget': 'image'}" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+                        </a>
+                    </div>
+                </t>
+                <t t-elif="website.theme_flexible_id.menu_logo == 'right_text'">
+                    <div class="navbar-right">
+                        <a class="navbar-brand" href="/" t-field="website.name">My Website</a>
+                    </div>
+                </t>
+                <t t-elif="website.theme_flexible_id.menu_logo == 'right_logo'">
+                    <div class="navbar-right">
+                        <a href="/" class="navbar-brand logo">
+                            <span t-field="res_company.logo" t-options="{'widget': 'image'}" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+                        </a>
+                    </div>
+                </t>
+            </t>
+            <t t-else="">
+                <div class="navbar-left">
+                    <a href="/" class="navbar-brand logo">
+                        <span t-field="res_company.logo" t-options="{'widget': 'image'}" t-att-alt="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+                    </a>
+                </div>
+            </t>
+        </xpath>
+
+        <!-- Menu alignment -->
+        <xpath expr="//ul[@id='top_menu']" position="attributes">
+            <attribute name="t-attf-class">{{website and website.theme_flexible_id and website.theme_flexible_id.menu_alignment == 'right' and 'nav navbar-nav navbar-right' or website.theme_flexible_id and website.theme_flexible_id.menu_alignment == 'center' and 'nav navbar-nav navbar-center' or website.theme_flexible_id and website.theme_flexible_id.menu_alignment == 'left' and 'nav navbar-nav navbar-left' or 'nav navbar-nav navbar-right'}}</attribute>
+        </xpath>
+        <xpath expr="//header//div[hasclass('navbar-collapse')]" position="attributes">
+            <attribute name="t-attf-class">{{website and website.theme_flexible_id and website.theme_flexible_id.menu_alignment == 'center' and 'collapse navbar-collapse navbar-top-collapse text-center' or 'collapse navbar-collapse navbar-top-collapse'}}</attribute>
+        </xpath>
+    </template>
+    <template id="assets_frontend_menu" inherit_id="website.assets_frontend">
+        <xpath expr=".">
+            <style type="text/less">
+                <t t-if="website and website.theme_flexible_id">
+                    <t t-if="website.theme_flexible_id.menu_bg">
+                        @navbar-default-bg: <t t-esc="website.theme_flexible_id.menu_bg"/>;
+                    </t>
+                    <t t-if="website.theme_flexible_id.menu_color">
+                        @navbar-default-link-color: <t t-esc="website.theme_flexible_id.menu_color"/>;
+                        @navbar-default-link-hover-color: darken(<t t-esc="website.theme_flexible_id.menu_color"/>, 10%);
+                        @navbar-default-link-active-color: darken(<t t-esc="website.theme_flexible_id.menu_color"/>, 10%);
+                    </t>
+                </t>
+            </style>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <record id="default_theme_flexible" model="theme.flexible">
+    </record>
+    <record id="default_theme_flexible2" model="theme.flexible">
+    </record>
+</odoo>

@@ -1,0 +1,39 @@
+/* Copyright 2018 Onestein
+ * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
+
+#theme_customize_modal .tab-pane {
+    padding: 10px;
+}
+
+#theme_customize_modal .modal-body,
+#theme_customize_modal .modal-header,
+#theme_customize_modal .modal-footer {
+    font-family: Arial;
+    font-weight: normal;
+}
+
+#theme_customize_modal .modal-dialog {
+    min-width: 30%;
+}
+
+#theme_customize_modal label {
+    text-align: left;
+}
+
+#theme_customize_modal .nav-tabs li {
+    float: right;
+}
+
+#theme_customize_modal h4 {
+    text-align: right;
+}
+
+#theme_customize_modal .select-google-font {
+    cursor: pointer;
+}
+
+#theme_customize_modal .tab-pane > div {
+    width: 100%;
+    max-width: 100%;
+    display: table;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="colorpicker" inherit_id="web_editor.colorpicker">
+        <xpath expr="//colorpicker/div[@data-name='theme']/button[@data-color='alpha']" position="after">
+            <button class="o_small" data-color="alpha-lighter"/>
+            <button class="o_small" data-color="alpha-light"/>
+            <button class="o_small" data-color="alpha-dark"/>
+            <button class="o_small" data-color="alpha-darker"/>
+        </xpath>
+        <xpath expr="//colorpicker/div[@data-name='theme']/button[@data-color='beta']" position="after">
+            <button class="o_small" data-color="beta-lighter"/>
+            <button class="o_small" data-color="beta-light"/>
+            <button class="o_small" data-color="beta-dark"/>
+            <button class="o_small" data-color="beta-darker"/>
+        </xpath>
+        <xpath expr="//colorpicker/div[@data-name='theme']/button[@data-color='gamma']" position="after">
+            <button class="o_small" data-color="gamma-lighter"/>
+            <button class="o_small" data-color="gamma-light"/>
+            <button class="o_small" data-color="gamma-dark"/>
+            <button class="o_small" data-color="gamma-darker"/>
+        </xpath>
+        <xpath expr="//colorpicker/div[@data-name='theme']/button[@data-color='delta']" position="after">
+            <button class="o_small" data-color="delta-lighter"/>
+            <button class="o_small" data-color="delta-light"/>
+            <button class="o_small" data-color="delta-dark"/>
+            <button class="o_small" data-color="delta-darker"/>
+        </xpath>
+        <xpath expr="//colorpicker/div[@data-name='theme']/button[@data-color='epsilon']" position="after">
+            <button class="o_small" data-color="epsilon-lighter"/>
+            <button class="o_small" data-color="epsilon-light"/>
+            <button class="o_small" data-color="epsilon-dark"/>
+            <button class="o_small" data-color="epsilon-darker"/>
+        </xpath>
+    </template>
+</odoo>

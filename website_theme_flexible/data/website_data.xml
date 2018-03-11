@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <record id="website.default_website" model="website">
+        <field name="theme_flexible_id" ref="website_theme_flexible.default_theme_flexible"/>
+    </record>
+    <record id="website.website2" model="website">
+        <field name="theme_flexible_id" ref="website_theme_flexible.default_theme_flexible2"/>
+    </record>
+</odoo>

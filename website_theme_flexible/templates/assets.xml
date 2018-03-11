@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="assets_editor" inherit_id="website.assets_editor">
+        <xpath expr=".">
+            <!-- Colorpicker -->
+            <script type="text/javascript"
+                    src="/website_theme_flexible/static/lib/bootstrap-colorpicker/bootstrap-colorpicker.js"/>
+
+            <link rel="stylesheet" type="text/css"
+                  href="/website_theme_flexible/static/lib/bootstrap-colorpicker/bootstrap-colorpicker.css"/>
+
+            <!-- Typeahead -->
+            <script type="text/javascript"
+                    src="/website_theme_flexible/static/lib/typeahead/typeahead.js"/>
+            <link rel="stylesheet" type="text/css"
+                  href="/website_theme_flexible/static/lib/typeahead-bootstrap-css/typeaheadjs.css"/>
+
+            <script type="text/javascript"
+                    src="/website_theme_flexible/static/src/js/theme_customize.js"/>
+
+            <link rel="stylesheet" type="text/css"
+                  href="/website_theme_flexible/static/src/css/theme_customize.css"/>
+            <link rel="stylesheet" type="text/css"
+                  href="/website_theme_flexible/static/src/css/website_theme_flexible.editor.css"/>
+
+        </xpath>
+    </template>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr=".">
+            <script type="text/javascript"
+                    src="/website_theme_flexible/static/src/js/website_theme_flexible.frontend.js"/>
+
+            <link rel="stylesheet" type="text/css"
+                  href="/website_theme_flexible/static/src/css/website_theme_flexible.frontend.css"/>
+        </xpath>
+    </template>
+</odoo>

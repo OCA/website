@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="assets_frontend_anchor" inherit_id="website.assets_frontend">
+        <xpath expr=".">
+            <style type="text/less">
+                <t t-if="website and website.theme_flexible_id">
+                    <!-- Sets the anchor color in the body (main) -->
+                    <t t-if="website.theme_flexible_id.anchor_color">
+                        #wrapwrap main a {
+                            color: <t t-esc="website.theme_flexible_id.anchor_color"/>;
+                        }
+                        #wrapwrap main a:hover,
+                        #wrapwrap main a:focus {
+                            color: darken(<t t-esc="website.theme_flexible_id.anchor_color"/>, 10%);
+                        }
+                    </t>
+                    <t t-if="website.theme_flexible_id.anchor_footer_color">
+                        #wrapwrap footer a {
+                            color: <t t-esc="website.theme_flexible_id.anchor_footer_color"/>;
+                        }
+                        #wrapwrap footer a:hover,
+                        #wrapwrap footer a:focus {
+                            color: darken(<t t-esc="website.theme_flexible_id.anchor_footer_color"/>, 10%);
+                            text-decoration: underline;
+                        }
+                    </t>
+                </t>
+            </style>
+        </xpath>
+    </template>
+</odoo>
