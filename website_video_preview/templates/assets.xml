@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_editor" inherit_id="website.assets_editor">
+        <xpath expr=".">
+            <script type="text/javascript"
+                    src="/website_video_preview/static/src/js/website_video_preview.editor.js"/>
+        </xpath>
+    </template>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr=".">
+            <script type="text/javascript"
+                    src="/website_video_preview/static/src/js/website_video_preview.frontend.js"/>
+
+            <link href="/website_video_preview/static/src/less/website_video_preview.less"
+                  type="text/less" rel="stylesheet"/>
+        </xpath>
+    </template>
+</odoo>
