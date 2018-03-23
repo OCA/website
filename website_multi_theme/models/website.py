@@ -163,15 +163,12 @@ class Website(models.Model):
                     False
                 )
                 # Applied views must inherit from custom assets or layout
+                new_parent = None
                 if copied_view.inherit_id & main_views:
-                    data = etree.fromstring(copied_view.arch)
                     if copied_view.inherit_id & main_assets_frontend:
-                        copied_view.inherit_id = custom_assets
-                        data.attrib["inherit_id"] = custom_assets.key
+                        new_parent = custom_assets
                     elif copied_view.inherit_id & main_layout:
-                        copied_view.inherit_id = custom_layout
-                        data.attrib["inherit_id"] = custom_layout.key
-                    copied_view.arch = etree.tostring(data)
+                        new_parent = custom_layout
                 else:
                     theme_module_name \
                         = website.multi_theme_id.converted_theme_addon
@@ -188,8 +185,14 @@ class Website(models.Model):
                         )
 
                     if copied_parent:
-                        copied_view.inherit_id = copied_parent
-                        data.attrib["inherit_id"] = copied_parent.key
+                        new_parent = copied_parent
+
+                if new_parent:
+                    copied_view.inherit_id = new_parent
+
+                    data = etree.fromstring(copied_view.arch)
+                    data.attrib["inherit_id"] = new_parent.key
+                    copied_view.arch = etree.tostring(data)
 
                 custom_views |= copied_view
             # Delete any custom view that should exist no more
