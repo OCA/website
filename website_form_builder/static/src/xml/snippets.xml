@@ -50,7 +50,9 @@
                     class="o_website_form_input"
                     value="1"
                 />
-                <t t-esc="field.string"/>
+                <span>
+                    <t t-esc="field.string"/>
+                </span>
             </label>
         </t>
     </t>
@@ -210,5 +212,15 @@
                 type="text"
             />
         </t>
+    </t>
+
+    <t t-name="website_form_builder.section.send">
+        <div class="form-group">
+            <button type="button"
+                    class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">
+                Send
+            </button>
+            <span id="o_website_form_result"/>
+        </div>
     </t>
 </template>
