@@ -188,6 +188,7 @@ odoo.define('website_form_builder.snippets', function (require) {
 
         clean_for_save: function () {
             var fields = this.present_fields();
+            this.ensure_section_send();
             // Sync HTML metadata of custom fields with UI
             this.$("[data-model-field=false]").each(function () {
                 var $el = $(this),
@@ -233,6 +234,33 @@ odoo.define('website_form_builder.snippets', function (require) {
         drop_and_build_snippet: function () {
             this.ask_model();
             this._super.apply(this, arguments);
+            this.ensure_section_send();
+        },
+
+        /**
+         * Make sure it has a section to send and receive feedback.
+         */
+        ensure_section_send: function () {
+            var send_section = this.$(
+                ".form-group:has(.o_website_form_send)" +
+                           ":has(#o_website_form_result)"
+            );
+            if (send_section.is(":visible")) {
+                return;
+            }
+            // Remove possibly garbagey section
+            this.$(".o_website_form_fields+.form-group").remove();
+            _templates_loaded.done($.proxy(this, "_add_section_send"));
+        },
+
+        /**
+         * Append a section to send and receive feedback.
+         */
+        _add_section_send: function () {
+            this.$("form").append(core.qweb.render(
+                "website_form_builder.section.send",
+                {option: this}
+            ));
         },
 
         /**
