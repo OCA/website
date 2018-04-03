@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="layout" inherit_id="website.layout">
+        <!-- Remove js -->
+        <xpath expr="//t[@t-call-assets='web.assets_common'][@t-css='false']" position="attributes">
+            <attribute name="t-js">false</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call-assets='web.assets_frontend'][@t-css='false']" position="attributes">
+            <attribute name="t-js">false</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call-assets='web_editor.summernote'][@t-css='false']" position="attributes">
+            <attribute name="t-js">false</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call-assets='web_editor.assets_editor'][@t-css='false']" position="attributes">
+            <attribute name="t-js">false</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call-assets='website.assets_editor'][@t-css='false']" position="attributes">
+            <attribute name="t-js">false</attribute>
+        </xpath>
+
+        <!-- When the is user a publisher add js to top of the page (below the fold is not relevant here) -->
+        <xpath expr="//t[@t-call-assets='website.assets_editor'][@t-css='false']" position="after">
+            <t groups="website.group_website_publisher">
+                <t t-call-assets="web.assets_common" t-css="false"/>
+                <t t-call-assets="web.assets_frontend" t-css="false"/>
+                <t t-call-assets="web_editor.summernote" t-css="false"/>
+                <t t-call-assets="web_editor.assets_editor" t-css="false"/>
+                <t t-call-assets="website.assets_editor" t-css="false"/>
+            </t>
+        </xpath>
+
+        <!-- Add to bottom of page -->
+        <xpath expr="//div[@id='wrapwrap']" position="after">
+            <t groups="!website.group_website_publisher">
+                <t t-call-assets="web.assets_common" t-css="false"/>
+                <t t-call-assets="web.assets_frontend" t-css="false"/>
+            </t>
+        </xpath>
+    </template>
+</odoo>
