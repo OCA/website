@@ -3,7 +3,7 @@
 
 import logging
 
-from odoo import fields, models
+from odoo import fields, models, api
 
 _logger = logging.getLogger(__name__)
 
@@ -13,6 +13,7 @@ class WebsiteConfigSettings(models.TransientModel):
 
     multi_theme_id = fields.Many2one(related="website_id.multi_theme_id")
 
+    @api.model
     def multi_theme_reload(self):
         """Update multiwebsite themes when loading a new wizard."""
         _logger.info("Reloading available multi-website themes")
