@@ -41,8 +41,12 @@ class WebsiteTheme(models.Model):
                 ("module", "=", one.converted_theme_addon),
                 ("model", "=", "ir.ui.view"),
             ])
+            views = self.env["ir.ui.view"].search([
+                ("id", "in", refs.mapped("res_id")),
+                ("type", "=", "qweb"),
+            ])
             existing = frozenset(one.mapped("asset_ids.name"))
-            expected = frozenset(refs.mapped("complete_name"))
+            expected = frozenset(views.mapped("xml_id"))
             dangling = tuple(existing - expected)
             # Create a new asset for each theme view
             for ref in expected - existing:
