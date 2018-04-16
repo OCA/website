@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_crm_privacy_policy
-# 
+#
 # Translators:
 # Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
 msgid ""
@@ -11,26 +11,20 @@ msgstr ""
 "POT-Creation-Date: 2015-10-14 08:34+0000\n"
 "PO-Revision-Date: 2015-10-18 04:18+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
-"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/"
+"language/sl/)\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
 
-#. module: website_crm_privacy_policy
-#: view:website:website.contactus
-msgid "I have read and accept the"
-msgstr "Prebral sem in sprejemam"
+#~ msgid "I have read and accept the"
+#~ msgstr "Prebral sem in sprejemam"
 
-#. module: website_crm_privacy_policy
-#: view:website:website.contactus
-msgid "Privacy Policy"
-msgstr "pravila in pogoje o zasebnosti"
+#~ msgid "Privacy Policy"
+#~ msgstr "pravila in pogoje o zasebnosti"
 
-#. module: website_crm_privacy_policy
-#. openerp-web
-#: code:addons/website_crm_privacy_policy/static/src/js/scripts.js:43
-#, python-format
-msgid "You must accept our Privacy Policy."
-msgstr "Sprejeti morate naša pravila o zasebnosti."
+#~ msgid "You must accept our Privacy Policy."
+#~ msgstr "Sprejeti morate naša pravila o zasebnosti."
