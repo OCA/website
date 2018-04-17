@@ -1,10 +1,10 @@
-.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===============
+================
 HotJar analytics
-===============
+================
 
 This module allows to simply configure your odoo website for using Hotjar_.
 
@@ -35,6 +35,7 @@ Contributors
 ------------
 
 * Miguel Ruiz <miguel.ruiz@jarsa.com.mx>
+* Isabel Esparza <isabel.esparza@jarsa.com.mx>
 
 Maintainer
 ----------
