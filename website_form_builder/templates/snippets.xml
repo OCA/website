@@ -23,13 +23,6 @@
                         disappearing when emptied
                     </div>
                 </div>
-                <div class="form-group">
-                    <button type="button"
-                            class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">
-                        Send
-                    </button>
-                    <span id="o_website_form_result"/>
-                </div>
             </form>
         </section>
     </template>
