@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2018 Simone Orsi <simone.orsi@camptocamp.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
@@ -79,6 +78,8 @@ class URLCase(SavepointCase):
         )
 
     def test_canonical_relative_url_home_special_case(self):
+        # set page url on 1st menu item
+        self.website.menu_id.child_id[0].url = '/page/homepage'
         req = FakeRequest(self.website, '/page/homepage?foo=baz', lang='it_IT')
         self.website.default_lang_id = self.env.ref('base.lang_it')
         self.assertEqual(
@@ -87,7 +88,9 @@ class URLCase(SavepointCase):
         )
 
     def test_canonical_relative_url_home_special_case_lang_no_match(self):
-        req = FakeRequest(self.website, '/page/homepage?foo=baz')
+        # set page url on 1st menu item
+        self.website.menu_id.child_id[0].url = '/page/homepage'
+        req = FakeRequest(self.website, 'page/homepage?foo=baz')
         self.website.default_lang_id = self.env.ref('base.lang_it')
         self.assertEqual(
             self.website._get_canonical_relative_url(req=req),
@@ -112,6 +115,8 @@ class URLCase(SavepointCase):
         )
 
     def test_canonical_url_home_special_case(self):
+        # set page url on 1st menu item
+        self.website.menu_id.child_id[0].url = '/page/homepage'
         self.website.canonical_domain = 'https://oh.yeah'
         req = FakeRequest(self.website, '/page/homepage?foo=baz')
         self.assertEqual(
@@ -120,6 +125,8 @@ class URLCase(SavepointCase):
         )
 
     def test_canonical_url_home_special_case_no_match(self):
+        # set page url on 1st menu item
+        self.website.menu_id.child_id[0].url = '/page/homepage'
         self.website.canonical_domain = 'https://oh.yeah'
         req = FakeRequest(
             self.website, '/page/homepage?foo=baz', lang='it_IT')

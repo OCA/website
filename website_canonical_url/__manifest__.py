@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright initOS GmbH 2016
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
@@ -9,7 +8,7 @@
               "Camptocamp, Odoo Community Association (OCA)",
     'website': "https://github.com/OCA/website",
     'category': 'Website',
-    'version': '10.0.1.1.0',
+    'version': '11.0.1.0.0',
     'license': 'AGPL-3',
     'depends': [
         'website',
