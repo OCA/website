@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
 # Copyright 2018 Simone Orsi <simone.orsi@camptocamp.com>
 # Copyright initOS GmbH 2016
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import models, api, fields, exceptions, _
 from odoo.http import request
-from urlparse import urlparse, urljoin
+from urllib.parse import urlparse, urljoin
 
 
 class Website(models.Model):
