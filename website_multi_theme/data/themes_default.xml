@@ -20,7 +20,7 @@
     </record>
 
     <!-- This method prepare assets and applies default theme for all websites -->
-    <function model="website.config.settings"
+    <function model="res.config.settings"
               name="multi_theme_reload"
               />
 </odoo>

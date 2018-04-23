@@ -34,13 +34,11 @@ class IrUiView(models.Model):
     )
 
     @api.model
-    def _customize_template_get_views(self, key, full=False, bundles=False):
+    def get_related_views(self, key, bundles=False):
         """This method is used to prepare items
            in 'Customize' menu of website Editor"""
-        views = super(IrUiView, self)._customize_template_get_views(
-            key, full=full, bundles=bundles
+        views = super(IrUiView, self).get_related_views(
+            key, bundles=bundles
         )
-        if full:
-            return views
         current_website = request.website
         return views.filtered(lambda v: v.website_id == current_website)
