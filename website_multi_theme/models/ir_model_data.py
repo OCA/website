@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
@@ -36,5 +35,5 @@ class IrModelData(models.Model):
                 _logger.debug('Call multi_theme_reload '
                               'after creating Customize View "%s"',
                               vals.get('name'))
-                self.env['website.config.settings'].multi_theme_reload()
+                self.env['res.config.settings'].multi_theme_reload()
         return res
