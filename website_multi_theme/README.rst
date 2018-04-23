@@ -117,7 +117,7 @@ Known issues / Roadmap
 * Theme picker should include some kind of thumbnail if possible.
 * If you install any of the supported themes after installing this addon, you
   will have to press *Reload* in the website config wizard to make it notice
-  the change.
+  the change. The same is true when you install any module with ``customize_show="True"``
 * If you install any unsupported theme along with this addon, it would possibly
   become the base for all those supported, which can easily lead to weird
   situations and errors.
@@ -137,6 +137,7 @@ Contributors
 * Rafael Blasco <rafael.blasco@tecnativa.com>
 * Antonio Espinosa <antonio.espinosa@tecnativa.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
+* Ivan Yelizariev <https://it-projects.info/team/yelizariev>
 
 Maintainer
 ----------
