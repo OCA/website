@@ -87,9 +87,7 @@ class Website(models.Model):
             return result
         # Copy patterns only for current website
         key = xmlid if override_key else pattern.key
-        result = pattern.with_context(
-            duplicate_view_for_website=True
-        ).copy({
+        result = pattern.copy({
             "active": pattern.was_active,
             "arch_fs": False,
             "key": key,
@@ -99,7 +97,9 @@ class Website(models.Model):
         })
         # Assign external IDs to new views
         module, name = xmlid.split(".")
-        self.env["ir.model.data"].create({
+        self.env["ir.model.data"].with_context(
+            duplicate_view_for_website=True
+        ).create({
             "model": result._name,
             "module": module,
             "name": name,
