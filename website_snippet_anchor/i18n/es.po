@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_anchor
+# 
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-21 10:04+0000\n"
+"PO-Revision-Date: 2017-07-21 10:04+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_snippet_anchor
+#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
+msgid ""
+"<i class=\"fa fa-hashtag\"/>\n"
+"                    Choose anchor"
+msgstr ""
+
+#. module: website_snippet_anchor
+#. openerp-web
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:23
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:12
+#, python-format
+msgid "Anchor"
+msgstr "Ancla"
+
+#. module: website_snippet_anchor
+#. openerp-web
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:62
+#, python-format
+msgid "Anchor '%s' already exists or is not valid"
+msgstr ""
+
+#. module: website_snippet_anchor
+#. openerp-web
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:10
+#, python-format
+msgid "Anchors are appended to the URL like http://localhost/#your-anchor"
+msgstr "Las anclas se añaden a la URL como http://localhost/#su-ancla"
+
+#. module: website_snippet_anchor
+#. openerp-web
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:22
+#, python-format
+msgid "Choose anchor"
+msgstr "Escoja ancla"
+
+#. module: website_snippet_anchor
+#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
+msgid ""
+"Use anchors to go directly to a section of your page, appending #anchor to "
+"the URL"
+msgstr ""
+"Use las anclas para ir directamente a una sección de su página, añadiendo "
+"#ancla a la URL"
+
+#. module: website_snippet_anchor
+#. openerp-web
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:19
+#, python-format
+msgid "your-anchor"
+msgstr "su-ancla"

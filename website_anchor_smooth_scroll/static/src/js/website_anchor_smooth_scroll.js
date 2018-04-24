@@ -6,7 +6,7 @@ odoo.define('website_anchor_smooth_scroll.website_anchor_smooth_scroll', functio
 
 function website_anchor_smooth_scroll(event) {
     event.preventDefault();
-    var target = $(event.target.hash);
+    var target = $(event.currentTarget.hash);
 
     return $('html, body')
     .stop()

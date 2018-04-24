@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2015, 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<templates id="template" xml:space="preserve">
+
+<t t-extend="web_editor.dialog.link">
+    <t t-jquery="form .form-group:has(.o_link_dialog_color)" t-operation="before">
+        <div class="form-group">
+            <label for="anchor" class="col-sm-3 control-label">
+                Anchor
+            </label>
+            <div class="col-sm-9">
+                <input id="anchor"
+                       type="text"
+                       placeholder="your-anchor"
+                       class="form-control"/>
+            </div>
+        </div>
+    </t>
+</t>
+
+</templates>
