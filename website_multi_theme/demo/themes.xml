@@ -30,6 +30,72 @@
         <field name="theme_id" ref="demo_multi"/>
     </record>
 
+    <!-- Website snippets -->
+    <template id="snippet_selection" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']/div[contains(@class, 'o_panel_body')]/t[@t-snippet='website.s_cover']" position="after">
+            <t t-snippet="website_multi_theme.s_demo1" t-thumbnail="/website_multi_theme/static/src/img/snippets/s_demo.png"/>
+            <t t-snippet="website_multi_theme.s_demo2" t-thumbnail="/website_multi_theme/static/src/img/snippets/s_demo.png"/>
+        </xpath>
+    </template>
+
+    <template id="s_demo1" name="Demo Cat">
+        <section class="s_demo1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <pre>
+               /\____/\    __
+             .'  """"  `,-'  `--.__
+        __,- :   -  -  ;  " ::     `-. -.__
+     ,-sssss `._  `' _,'"     ,'~~~::`.sssss-.
+    |ssssss ,' ,_`--'_    __,' ::  `  `.ssssss|
+   |sssssss `-._____~ `,,'_______,---_;; ssssss|
+    |ssssssssss     `--'~{__   ____   ,'ssssss|
+     `-ssssssssssssssssss ~~~~~~~~~~~~ ssss.-'
+          `---.sssssssssssssssssssss.---' Susie Oviatt
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="s_demo2" name="Demo Dog">
+        <section class="s_demo2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <pre>
+               ____
+            ,-'-,  `---._
+     _______(0} `, , ` , )
+     V           ; ` , ` (                            ,'~~~~~~`,
+     `.____,- '  (,  `  , )                          :`,-'""`. ";
+       `-------._);  ,  ` `,                         \;:      )``:
+              )  ) ; ` ,,  :                          ``      : ';
+             (  (`;:  ; ` ;:\                                 ;;;,
+             (:  )``;:;;)`'`'`--.    _____     ____       _,-';;`
+             :`  )`;)`)`'   :    "~~~     ~~~~~    ~~~`--',.;;;'
+             `--;~~~~~      `  ,  ", """,  "  "   "` ",, \ ;``
+               ( ;         ,   `                ;      `; ;
+               (; ; ;      `                   ,`       ` :
+                (; /            ;   ;          ` ;     ; :
+                ;(_; ;  :   ; ; `; ;` ; ; ,,,""";}     `;
+                : `; `; `  :  `  `,,;,''''   );;`);     ;
+                ;' :;   ; : ``'`'           (;` :( ; ,  ;
+                |, `;; ,``                  `)`; `(; `  `;
+                ;  ;;  ``:                   `).:` \;,   `.
+             ,-'   ;`;;:;`                   ;;'`;;  `)   )
+              ~~~,-`;`;,"                    ~~~~~  ,-'   ;  Targon
+                 """"""                             `"""""
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
     <!-- Themes should always call this method after adding their stuff,
          to make users get immediate availability, insead of having to
          reload themes. -->
