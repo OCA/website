@@ -25,7 +25,7 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
     }
 
     tour.register("website_snippet_barcode", {
-        url: '/?debug=assets&enable_editor=1',
+        url: '/?enable_editor=1',
         test: true,
         wait_for: base.ready()
     }, [{
