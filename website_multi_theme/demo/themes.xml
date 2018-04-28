@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
 <odoo>
 
@@ -20,6 +21,7 @@
     <!-- Record that lets website admin to choose this theme -->
     <record model="website.theme" id="demo_multi">
         <field name="name">Multiwebsite Demo Theme</field>
+        <field name="dependency_ids" eval="[(4, ref('website_multi_theme.theme_default'))]"/>
     </record>
 
     <!-- List provided assets  -->

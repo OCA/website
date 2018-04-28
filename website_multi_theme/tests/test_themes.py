@@ -25,6 +25,29 @@ class TestThemes(TransactionCase):
         })
         return view
 
+    def test_dependency(self):
+        """Test that dependency's views are copied too"""
+        theme = self.env.ref('website_multi_theme.demo_multi')
+        website = self.env.ref("website.default_website")
+        dep_view = self.env.ref('website.footer_custom')
+
+        theme._convert_assets()
+        # setting multi_theme_id calls _multi_theme_activate
+        website.multi_theme_id = theme
+
+        self.assertTrue(
+            website._find_duplicated_view_for_website(dep_view),
+            "Dependency's view was not copied")
+
+        theme.write({'dependency_ids': [(5, 0, 0)]})
+
+        theme._convert_assets()
+        website._multi_theme_activate()
+
+        self.assertFalse(
+            website._find_duplicated_view_for_website(dep_view),
+            "The dependency is removed, but its view still has duplicate")
+
     def test_copied_parent(self):
         """Test a case, when copied view has to reference
         to copied parent instead of original one"""

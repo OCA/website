@@ -8,14 +8,8 @@
         <field name="name">Default Theme</field>
     </record>
 
-    <template id="theme_default_dummy" name="Dummy asset for Default Theme">
-        <!-- It's empty, but we have to have one, because otherwise multi-theme
-             magic is not applied for themes without any views -->
-    </template>
-
-
-    <record model="website.theme.asset" id="theme_default_asset">
-        <field name="name">website_multi_theme.theme_default_dummy</field>
+    <record model="website.theme.asset" id="theme_default_asset_footer_custom">
+        <field name="name">website.footer_custom</field>
         <field name="theme_id" ref="theme_default"/>
     </record>
 
