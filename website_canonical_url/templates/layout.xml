@@ -6,7 +6,7 @@
     <template id="canonical_url_link"
               inherit_id="website.layout"
               name="Canonical URL">
-        <xpath expr="//t[@t-set='head_website']" position="after">
+        <xpath expr="//t[@t-set='head_website']" position="inside">
             <t t-if="request and website">
                 <t t-set="canonical_url"
                    t-value="website.get_canonical_url(request)"/>
@@ -14,10 +14,10 @@
                     <link rel="canonical" t-att-href="canonical_url"/>
                 </t>
                 <t t-if="pager and pager.get('page_count', 0) > 1">
-                    <link t-if="pager['page']['num'] != 1"
+                    <link t-if="pager['page']['num'] != pager['page_start']['num']"
                           rel="prev"
                           t-att-href="url_for(pager['page_previous']['url'])"/>
-                    <link t-if="pager['page']['num'] != pager['page_count']"
+                    <link t-if="pager['page']['num'] != pager['page_end']['num']"
                           rel="next"
                           t-att-href="url_for(pager['page_next']['url'])"/>
                 </t>
