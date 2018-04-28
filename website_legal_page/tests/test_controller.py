@@ -9,7 +9,7 @@ from odoo.tools import mute_logger
 class TestController(HttpCase):
 
     def _test_page(self, page, code=200):
-        response = self.url_open(page, timeout=20)
+        response = self.url_open(page, timeout=40)
         self.assertEqual(response.getcode(), code)
 
     @mute_logger("odoo.addons.website.models.ir_ui_view")
