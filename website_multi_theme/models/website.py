@@ -5,7 +5,6 @@
 
 import logging
 
-from lxml import etree
 from odoo import api, models, fields
 from odoo.tools import config
 
@@ -23,7 +22,7 @@ class Website(models.Model):
     multi_theme_id = fields.Many2one(
         string="Multiwebsite theme",
         comodel_name='website.theme',
-        domain=[("asset_ids.view_id", "!=", False)],
+        domain=[("has_assets", "=", True)],
         help="Multiwebsite-compatible theme for this website",
         default=lambda self: self.env.ref('website_multi_theme.theme_default',
                                           raise_if_not_found=False)
@@ -50,10 +49,13 @@ class Website(models.Model):
             self._multi_theme_activate()
         return result
 
-    def _find_duplicate_view_for_website(self, origin_view, website):
-        xmlid = VIEW_KEY % (website.id, origin_view.id)
+    @api.multi
+    def _find_duplicated_view_for_website(self, origin_view):
+        self.ensure_one()
+        xmlid = VIEW_KEY % (self.id, origin_view.id)
         return self.env.ref(xmlid, raise_if_not_found=False)
 
+    @api.multi
     def _duplicate_view_for_website(self, pattern, xmlid, override_key):
         """Duplicate a view pattern and enable it only for current website.
 
@@ -162,8 +164,10 @@ class Website(models.Model):
                 "active": True,
             })
             # Duplicate all theme's views for this website
-            for origin_view in website.mapped(
-                    "multi_theme_id.asset_ids.view_id"):
+            for origin_view in website\
+                    .multi_theme_id\
+                    .get_assets()\
+                    .mapped("view_id"):
                 copied_view = website._duplicate_view_for_website(
                     origin_view,
                     VIEW_KEY % (website.id, origin_view.id),
@@ -182,23 +186,26 @@ class Website(models.Model):
                     # check if parent was copied, so we need inherit that
                     # instead of original parent, which is deactivated and not
                     # used
-                    copied_parent = self._find_duplicate_view_for_website(
-                        parent_view, website
+                    copied_parent = website._find_duplicated_view_for_website(
+                        parent_view
                     )
 
                     if copied_parent:
                         new_parent = copied_parent
 
                 if new_parent:
-                    copied_view.inherit_id = new_parent
-
-                    data = etree.fromstring(copied_view.arch)
-                    data.attrib["inherit_id"] = new_parent.key
-                    copied_view.arch = etree.tostring(data)
+                    copied_view._replace_parent(new_parent)
 
                 custom_views |= copied_view
             # Delete any custom view that should exist no more
-            (website.multi_theme_view_ids - custom_views).unlink()
+            views_to_remove = website.multi_theme_view_ids - custom_views
+            # Removed views could be a copied parent for others
+            # So, replace to original parent first
+            for view in self.env['ir.ui.view'].search([
+                    ('inherit_id', 'in', views_to_remove.ids)
+            ]):
+                view._replace_parent(view.inherit_id.origin_view_id)
+            views_to_remove.unlink()
             _logger.info(
                 "Updated multi website theme views for %s: %s",
                 website.display_name,

@@ -25,6 +25,16 @@ class WebsiteTheme(models.Model):
         help="Name of the theme addon that is being converted from single to "
              "multi website mode.",
     )
+    dependency_ids = fields.Many2many(
+        "website.theme",
+        "website_theme_dependency_rel",
+        "theme1", "theme2",
+        string="Sub-themes",
+        help="If theme is splitted in different theme-modules, "
+        "they should be in this list. \"Default theme\" should be here too "
+        "in order to make some features (e.g. footer) "
+        "work on each website independently",
+    )
     asset_ids = fields.One2many(
         comodel_name="website.theme.asset",
         inverse_name="theme_id",
@@ -32,6 +42,30 @@ class WebsiteTheme(models.Model):
         help="Asset views that will be disabled by default and enabled only "
              "in websites that enable this theme in multiwebsite mode.",
     )
+    has_assets = fields.Boolean(compute='_compute_has_assets', store=True)
+
+    @api.multi
+    @api.depends('dependency_ids', 'asset_ids')
+    def _compute_has_assets(self):
+        for r in self:
+            r.has_assets = bool(r.get_assets())
+
+    @api.multi
+    def upstream_dependencies(self):
+        """Returns the theme and all its dependencies"""
+        themes = self
+        while True:
+            new_deps = themes.mapped('dependency_ids') - themes
+            if new_deps:
+                themes |= new_deps
+            else:
+                break
+        return themes
+
+    @api.multi
+    def get_assets(self):
+        """Assets of the theme and all its dependencies"""
+        return self.upstream_dependencies().mapped('asset_ids')
 
     def _convert_assets(self):
         """Generate assets for converted themes"""
