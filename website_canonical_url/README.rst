@@ -1,4 +1,4 @@
-.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 
@@ -13,17 +13,41 @@ page search engine's index.
 
 This module doesn't prevent Odoo to generate such URLs, but it helps to reduce the
 search engine's index size by adding canonical URLs for each page :
-It insert a HTML tag in the html header that contains a `canonical URL <https://support.google.com/webmasters/answer/139066>`_
-for the current page, no matter what query it gets, and `rel=next and rel=prev links
+It insert a HTML tag in the html header
+that contains a `canonical URL <https://support.google.com/webmasters/answer/139066>`_
+for the current page, no matter what query string is.
+Additionally you'll have `rel=next and rel=prev links 
 <https://webmasters.googleblog.com/2011/09/pagination-with-relnext-and-relprev.html>`_
-wherever a pager is found.
+whenever a pager is found.
 
-The canonical URLs are absolute ; the domain name is the one you've setup for your company.
-You may want to check the domain in Settings / Technical / System Parameters / web.base.url
+
+Configuration
+-------------
+
+Canonical URL is absolute. The domain name by default matches
+
+"Settings / Technical / System Parameters / web.base.url"
+
+This might not be enough to make sure that you have always one and only one URL
+to access your resources.
+
+You can force the domain by setting "Canonical domain" field into website settings.
+
+
+How to verify
+-------------
+
+To check this on your website inspect the source of a page: 
+you'll find canonical and prev/next "<link />" elements inside "<head />".
+
+On a demo site (like Runbot) you can go to "/page/website_canonical_url.canonical_demo"
+and inspect page's source.
+
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
    :target:  https://runbot.odoo-community.org/runbot/186/10.0
+
 
 Bug Tracker
 ===========
@@ -43,6 +67,7 @@ Contributors
 * Rami Alwafaie <rami.alwafaie@initos.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
 * Xavier Brochard <zeroheure@zeroheure.info>
+* Simone Orsi <simone.orsi@camptocamp.com>
 
 Maintainer
 ----------
