@@ -3,6 +3,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 import logging
+from lxml import etree
 
 from odoo import fields, models, api
 from odoo.http import request
@@ -42,3 +43,11 @@ class IrUiView(models.Model):
         )
         current_website = request.website
         return views.filtered(lambda v: v.website_id == current_website)
+
+    @api.multi
+    def _replace_parent(self, new_parent):
+        for view in self:
+            view.inherit_id = new_parent
+            data = etree.fromstring(view.arch)
+            data.attrib["inherit_id"] = new_parent.key
+            view.arch = etree.tostring(data)
