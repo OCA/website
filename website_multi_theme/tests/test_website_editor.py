@@ -18,7 +18,7 @@ class WebsiteEditor(HttpCase):
         # more than one copy of snippet
         env.ref("website.default_website").multi_theme_id = theme
         env.ref("website.website2").multi_theme_id = theme
-        env["website.config.settings"].multi_theme_reload()
+        env["res.config.settings"].multi_theme_reload()
 
         # run tour from module "website", where Edit button is clicked, so
         # snippets are loaded
