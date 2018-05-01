@@ -130,6 +130,7 @@ class WebsiteTheme(models.Model):
 
 class WebsiteThemeAsset(models.Model):
     _name = "website.theme.asset"
+    _order = 'view_priority,view_id,id'
     _sql_constraints = [
         ("name_theme_uniq", "UNIQUE(name, theme_id)",
          "Name must be unique in each theme"),
@@ -153,7 +154,11 @@ class WebsiteThemeAsset(models.Model):
         help="View that will be enabled when this theme is used in any "
              "website, and disabled otherwise. Usually used to load assets.",
     )
-
+    view_priority = fields.Integer(
+        related='view_id.priority',
+        store=True,
+        readonly=True,
+    )
     auto = fields.Boolean(
         string="Auto-generated",
         help="Created automatically from theme view",
