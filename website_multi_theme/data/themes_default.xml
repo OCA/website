@@ -16,5 +16,6 @@
     <!-- This method prepare assets and applies default theme for all websites -->
     <function model="website.config.settings"
               name="multi_theme_reload"
+              eval="([],)"
               />
 </odoo>
