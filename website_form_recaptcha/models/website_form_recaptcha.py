@@ -55,10 +55,9 @@ class WebsiteFormRecaptcha(models.AbstractModel):
         }
         res = requests.post(self.URL, data=data).json()
 
-        for error in res.get('error-codes', []):
-            raise ValidationError(
-                self._get_error_message(error)
-            )
+        error_msg = "\n".join(self._get_error_message(error) for error in res.get('error-codes', []))
+        if error_msg:
+            raise ValidationError(error_msg)
 
         if not res.get('success'):
             raise ValidationError(self._get_error_message())
