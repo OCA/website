@@ -202,9 +202,13 @@ class Website(models.Model):
             views_to_remove = website.multi_theme_view_ids - custom_views
             # Removed views could be a copied parent for others
             # So, replace to original parent first
-            for view in self.env['ir.ui.view'].search([
-                    ('inherit_id', 'in', views_to_remove.ids)
-            ]):
+            views_to_replace_parent = \
+                self.env['ir.ui.view']\
+                    .with_context(active_test=False)\
+                    .search([
+                        ('inherit_id', 'in', views_to_remove.ids)
+                    ])
+            for view in views_to_replace_parent:
                 view._replace_parent(view.inherit_id.origin_view_id)
             views_to_remove.unlink()
             _logger.info(
