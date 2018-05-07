@@ -26,7 +26,8 @@ class WebsiteFormRecaptcha(models.AbstractModel):
             'invalid-input-response':
                 _('The response parameter is invalid or malformed.'),
         }
-        return map.get(errorcode, _('There was a problem with the captcha entry.'))
+        return map.get(errorcode, _('There was a problem with '
+                                    'the captcha entry.'))
 
     @api.model
     def action_validate(self, response, remote_ip):
@@ -55,7 +56,8 @@ class WebsiteFormRecaptcha(models.AbstractModel):
         }
         res = requests.post(self.URL, data=data).json()
 
-        error_msg = "\n".join(self._get_error_message(error) for error in res.get('error-codes', []))
+        error_msg = "\n".join(self._get_error_message(error)
+                              for error in res.get('error-codes', []))
         if error_msg:
             raise ValidationError(error_msg)
 
