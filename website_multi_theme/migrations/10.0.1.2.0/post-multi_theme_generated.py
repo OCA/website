@@ -26,17 +26,18 @@ def migrate(cr, version):
         # * LAYOUT_KEY = MODULE + ".auto_layout_website_%d"
         # * ASSETS_KEY = MODULE + ".auto_assets_website_%d"
         # * VIEW_KEY = MODULE + ".auto_view_%d_%d"
-        name = view.model_data_id.name
+        name = view.model_data_id.name or ''
+        origin_view_id = 0
         if 'auto_view_' in name:
             origin_view_id = int(name.split('_')[-1])
         elif 'auto_layout_website_' in name:
             origin_view_id = env.ref("website_multi_theme.layout_pattern").id
         elif 'auto_assets_website_' in name:
             origin_view_id = env.ref("website_multi_theme.assets_pattern").id
-
-        _logger.debug('set origin_view_id %s for view %s',
-                      origin_view_id, view.id)
-        view.write({'origin_view_id': origin_view_id})
+        if origin_view_id:
+            _logger.debug('set origin_view_id %s for view %s',
+                          origin_view_id, view.id)
+            view.write({'origin_view_id': origin_view_id})
 
     # remove column
     cr.execute("ALTER TABLE ir_ui_view DROP COLUMN multi_theme_generated_tmp")
