@@ -13,6 +13,7 @@ setuptools.setup(
         'odoo11-addon-website_anchor_smooth_scroll',
         'odoo11-addon-website_cookie_notice',
         'odoo11-addon-website_crm_privacy_policy',
+        'odoo11-addon-website_form_recaptcha',
         'odoo11-addon-website_js_below_the_fold',
         'odoo11-addon-website_legal_page',
         'odoo11-addon-website_media_size',
