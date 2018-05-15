@@ -68,6 +68,7 @@ Contributors
 * Nicola Malcontenti <nicola.malcontenti@agilebg.com>
 * Rafael Blasco <rafael.blasco@tecnativa.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
+* Wolfgang Pichler <wpichler@callino.at>
 
 Maintainer
 ----------

@@ -9,8 +9,7 @@
 
 
 <template id="message" name="Cookies notice">
-    <div t-if="request and
-        not request.session.get('accepted_cookies')"
+    <div t-if="request and not request.httprequest.cookies.get('accepted_cookies')"
         id="website_cookie_notice"
         class="container-fluid bg-warning cc-cookies">
         <div class="container">
