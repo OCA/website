@@ -85,6 +85,8 @@ To configure this module, you need to:
     a *Website*.
 #. Press *Advanced > Multiwebsite theme > Reload*.
 #. In *Advanced > Multiwebsite theme*, pick one of the available themes.
+#. Via Edit button (``fa-external-link``) add *Default Theme* to *Sub-themes* of
+   the selected theme to make multi-footer work.
 
 Once you save, any website that has no *Multiwebsite theme* selected will have,
 the default plain Bootstrap theme, and those that do have one will get it.
@@ -93,7 +95,7 @@ Of course, your Odoo instance must be reachable by all of the provided host
 names, or nobody will ever see the effect. But that is most likely configured
 through your DNS provider and/or proxy, so it is not a matter of this addon.
 
-If you want to test this behavior, think that ``localhost`` and ``127.0.0.1``
+If you want to test this behavior, think that ``localhost`` and ``0.0.0.0``
 are different host names.
 
 Usage
