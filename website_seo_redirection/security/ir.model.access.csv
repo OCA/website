@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"read_everyone","Public users need to find redirections","model_website_seo_redirection",,1,0,0,0
+"write_website_designer","Website managers can set SEO redirections","model_website_seo_redirection","website.group_website_designer",1,1,1,1

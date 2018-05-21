@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+<record id="website_seo_redirection_form_view" model="ir.ui.view">
+    <field name="name">Website SEO Redirection Form</field>
+    <field name="model">website.seo.redirection</field>
+    <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="origin"/>
+                    <field name="destination"/>
+                    <field name="relocate_controller"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+<record id="website_seo_redirection_tree_view" model="ir.ui.view">
+    <field name="name">Website SEO Redirection Tree</field>
+    <field name="model">website.seo.redirection</field>
+    <field name="arch" type="xml">
+        <tree editable="top">
+            <field name="origin"/>
+            <field name="destination"/>
+            <field name="relocate_controller"/>
+        </tree>
+    </field>
+</record>
+
+<record id="website_seo_redirection_search_view" model="ir.ui.view">
+    <field name="name">Website SEO Redirection Search</field>
+    <field name="model">website.seo.redirection</field>
+    <field name="arch" type="xml">
+        <search>
+            <field name="origin"/>
+            <field name="destination"/>
+        </search>
+    </field>
+</record>
+
+<act_window
+    id="website_seo_redirection_action_open"
+    name="SEO Redirections"
+    res_model="website.seo.redirection"/>
+
+<menuitem
+    id="website_seo_redirection_menu"
+    action="website_seo_redirection_action_open"
+    groups="website.group_website_designer"
+    parent="website.menu_website_configuration"
+    sequence="110"/>
+
+</odoo>
