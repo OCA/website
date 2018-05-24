@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     'name': 'Website Form Metadata',
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'category': 'Website',
     'website': 'https://github.com/OCA/website',
     'author': 'Tecnativa, '
