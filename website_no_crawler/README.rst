@@ -28,7 +28,7 @@ To view the results, visit /robots.txt on your site.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/10.0
+   :target: https://runbot.odoo-community.org/runbot/186/11.0
 
 Known issues / Roadmap
 ======================
