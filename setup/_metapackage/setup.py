@@ -19,6 +19,7 @@ setuptools.setup(
         'odoo10-addon-website_crm_recaptcha',
         'odoo10-addon-website_field_autocomplete',
         'odoo10-addon-website_form_builder',
+        'odoo10-addon-website_form_metadata',
         'odoo10-addon-website_form_recaptcha',
         'odoo10-addon-website_legal_page',
         'odoo10-addon-website_logo',
