@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2015 Agile Business Group - Lorenzo Battistini
 # Copyright 2016 Tecnativa - Antonio Espinosa
 # Copyright 2017 Tecnativa - David Vidal
@@ -6,13 +5,13 @@
 {
     'name': 'Website logo',
     'summary': 'Website company logo',
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'category': 'Website',
     'author': "Agile Business Group, "
               "LasLabs, "
               "Tecnativa, "
               "Odoo Community Association (OCA)",
-    'website': 'http://www.agilebg.com',
+    'website': 'https://github.com/OCA/website',
     'license': 'AGPL-3',
     'depends': [
         'website',
@@ -21,8 +20,6 @@
         'views/res_config_view.xml',
         'views/website_view.xml',
         'views/website_templates.xml',
-    ],
-    'qweb': [
     ],
     'installable': True,
     'auto_install': False,
