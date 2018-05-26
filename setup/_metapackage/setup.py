@@ -14,6 +14,7 @@ setuptools.setup(
         'odoo11-addon-website_cookie_notice',
         'odoo11-addon-website_crm_privacy_policy',
         'odoo11-addon-website_crm_recaptcha',
+        'odoo11-addon-website_form_metadata',
         'odoo11-addon-website_form_recaptcha',
         'odoo11-addon-website_js_below_the_fold',
         'odoo11-addon-website_legal_page',
