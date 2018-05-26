@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
-
 import functools
 import logging
-from cStringIO import StringIO
+import io
+import base64
 
 from odoo import _, http, SUPERUSER_ID
 from odoo.http import request
@@ -26,7 +25,7 @@ class Website(http.Controller):
                        """)
         row = cr.fetchone()
         if row and row[0]:
-            return StringIO(str(row[0]).decode('base64')), row[1]
+            return io.BytesIO(base64.b64decode(row[0])), row[1]
         return False, False
 
     @http.route([
