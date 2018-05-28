@@ -12,7 +12,7 @@
     'application': False,
     'installable': True,
     'depends': [
-        'website',
+        'website_form',
     ],
     'data': [
         'views/res_config_view.xml',

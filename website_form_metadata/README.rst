@@ -27,6 +27,8 @@ forms and record into the record created from such form. This module unveils
 it.
 
 
+**Table of contents**
+
 .. contents::
    :local:
 
