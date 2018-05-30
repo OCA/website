@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-# © 2015 Antiun Ingeniería, S.L.
+# Copyright 2015 Tecnativa
+# Copyright 2016 Alessio Gerace - Agile Business Group
+# Copyright 2018 Lorenzo Battistini - Agile Business Group
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp.http import request
-from openerp.addons.auth_signup.controllers.main import AuthSignupHome
+from odoo.http import request
+from odoo.addons.auth_signup.controllers.main import AuthSignupHome
 from . import exceptions
 
 

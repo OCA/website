@@ -21,9 +21,9 @@ To enable users to create accounts:
 
 To customize the legal pages, visit these **after installing the module**:
 
-* `Legal advice </page/legal>`_.
-* `Privacy policy </page/privacy>`_.
-* `Terms of use </page/terms>`_.
+* `Legal advice </legal/advice>`_.
+* `Privacy policy </legal/privacy-policy>`_.
+* `Terms of use </legal/terms-of-use>`_.
 
 Usage
 =====
@@ -39,7 +39,7 @@ backend user form.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/9.0
+   :target: https://runbot.odoo-community.org/runbot/186/10.0
 
 For further information, please visit:
 
@@ -67,6 +67,7 @@ Contributors
 * Rafael Blasco <rafaelbn@antiun.com>
 * Jairo Llopis <yajo.sk8@gmail.com>
 * Alessio Gerace <alessio.gerace@agilebg.com>
+* Lorenzo Battistini <lorenzo.battistini@agilebg.com>
 
 
 Maintainer
