@@ -1,4 +1,4 @@
-odoo.define('website_img_dimensions', function(require) {
+odoo.define('website_img_dimension', function(require) {
     "use strict";
     var Class = require('web.Class');
     var web_editor_base = require('web_editor.base');
