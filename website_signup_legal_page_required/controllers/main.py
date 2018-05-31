@@ -14,7 +14,18 @@ class ForceLegalTerms(AuthSignupHome):
         """Force accepting legal terms to open an account."""
         if request.params.get("accepted_legal_terms"):
             values["accepted_legal_terms"] = True
-            return super(ForceLegalTerms, self)._signup_with_values(
+            res = super(ForceLegalTerms, self)._signup_with_values(
                 token, values, *args, **kwargs)
+            environ = request.httprequest.headers.environ
+            metadata = "Website legal terms acceptance metadata: "
+            metadata += "<br/>".join(
+                "%s: %s" % (val, environ.get(val)) for val in (
+                    "REMOTE_ADDR",
+                    "HTTP_USER_AGENT",
+                    "HTTP_ACCEPT_LANGUAGE",
+                )
+            )
+            request.env.user.partner_id.message_post(body=metadata)
+            return res
         else:
             raise exceptions.LegalTermsNotAcceptedError()
