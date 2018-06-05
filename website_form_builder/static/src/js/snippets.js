@@ -5,12 +5,13 @@ odoo.define('website_form_builder.snippets', function (require) {
     "use strict";
 
     var ajax = require("web.ajax");
-    var base = require('web_editor.base');
     var core = require('web.core');
-    var data = require("web.data");
-    var Model = require('web.Model');
+    var Context = require('web.Context');
+    var Domain = require('web.Domain');
+    var weContext = require("web_editor.context");
     var options = require('web_editor.snippets.options');
     var widgets = require("website_form_builder.widgets");
+    var ServicesMixin = require('web.ServicesMixin');
     var _t = core._t;
 
     var _fields_asked = {},
@@ -27,22 +28,25 @@ odoo.define('website_form_builder.snippets', function (require) {
      *
      * @returns {$.Deferred} Indicates models were loaded.
      */
-    function available_models() {
+    function available_models(servicesMixin) {
         if (!_models_asked) {
-            new Model("ir.model").call("search_read", {
-                domain: [
-                    ["website_form_access", "=", true],
-                ],
-                fields: [
-                    "name",
-                    "model",
-                    "website_form_label",
-                ],
-                order: "website_form_label",
-                context: base.get_context(),
-            }).done(function (models_list) {
-                _models_def.resolve(_.indexBy(models_list, "model"));
-            });
+            servicesMixin._rpc({
+                    model: 'ir.model',
+                    method: 'search_read',
+                    kwargs: {
+                        domain: [
+                            ["website_form_access", "=", true],
+                        ],
+                        fields: [
+                            "name",
+                            "model",
+                            "website_form_label",
+                        ],
+                        order: [{name: 'website_form_label', asc: true}],
+                        context: weContext.get()}
+                }).done(function (models_list) {
+                    _models_def.resolve(_.indexBy(models_list, "model"));
+                });
             _models_asked = true;
         }
         return _models_def;
@@ -54,15 +58,18 @@ odoo.define('website_form_builder.snippets', function (require) {
      * @param {String} model Model technical name.
      * @returns {$.Deferred} Indicates fields were loaded.
      */
-    function authorized_fields(model) {
+    function authorized_fields(model, servicesMixin) {
         if (!_fields_asked[model]) {
             _fields_def[model] = $.Deferred();
-            available_models().done(function (models) {
-                new Model("ir.model").call(
-                    "get_authorized_fields", [models[model].id], {
-                        context: base.get_context()
+            available_models(servicesMixin).done(function (models) {
+                servicesMixin._rpc({
+                    model: 'ir.model',
+                    method: "get_authorized_fields",
+                    args: [models[model].model],
+                    kwargs: {
+                        context: weContext.get(),
                     }
-                ).done($.proxy(
+                }).done($.proxy(
                     _fields_def[model].resolve,
                     _fields_def[model]
                 ));
@@ -91,7 +98,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                 .children("span").prop("contentEditable", true);
         },
 
-        toggle_class: function (type, value) {
+        toggleClass: function (type, value) {
             this._super.apply(this, arguments);
             // Toggle field required attribute to match the container class
             if (type === "reset" || value === "o_required") {
@@ -186,7 +193,7 @@ odoo.define('website_form_builder.snippets', function (require) {
             this.$form = this.$("form.s_website_form");
         },
 
-        clean_for_save: function () {
+        cleanForSave: function () {
             var fields = this.present_fields();
             this.ensure_section_send();
             // Sync HTML metadata of custom fields with UI
@@ -214,14 +221,15 @@ odoo.define('website_form_builder.snippets', function (require) {
             this.$(".has-error").removeClass("has-error");
             if (fields.length) {
                 // Whitelist model fields found in current form
-                new Model("ir.model.fields").call(
-                    "formbuilder_whitelist", [this.controller_data().model_name, fields], {
-                        context: base.get_context()
-                    }, {
-                        // Do not save until done
-                        async: false
-                    }
-                );
+                this._rpc({
+                    model: 'ir.model.fields',
+                    method: 'formbuilder_whitelist',
+                    args: [this.controller_data().model_name, fields],
+                    kwargs: {
+                        context: weContext.get(),
+                    },
+                    async: false
+                });
             } else {
                 // No fields? Destroy snippet before saving
                 this.$target.remove();
@@ -231,7 +239,7 @@ odoo.define('website_form_builder.snippets', function (require) {
         /**
          * Ask for a model or remove snippet.
          */
-        drop_and_build_snippet: function () {
+        onBuilt: function () {
             this.ask_model();
             this._super.apply(this, arguments);
             this.ensure_section_send();
@@ -274,7 +282,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                 // Nothing to reset here
                 return;
             }
-            return available_models().done($.proxy(this._ask_model, this));
+            return available_models(this).done($.proxy(this._ask_model, this));
         },
 
         /**
@@ -302,7 +310,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                 // Nothing to reset here
                 return;
             }
-            return authorized_fields(this.controller_data().model_name).done(
+            return authorized_fields(this.controller_data().model_name, this).done(
                 $.proxy(this._ask_model_field, this)
             );
         },
@@ -416,7 +424,7 @@ odoo.define('website_form_builder.snippets', function (require) {
             this.$form.attr("data-model_name", model);
             // Model changed? Load new fields and reset snippet
             if (previous_model !== model) {
-                authorized_fields(model)
+                authorized_fields(model, this)
                     .done($.proxy(this.reset_model_fields, this));
             }
         },
@@ -494,18 +502,18 @@ odoo.define('website_form_builder.snippets', function (require) {
          */
         relational_options: function (field) {
             var domain = [],
-                context = base.get_context();
+                context = weContext.get();
             // Domain might contain un-evaluable literals
             try {
-                domain = new data.CompoundDomain(field.domain || []).eval();
+                domain = new Domain(field.domain || [], weContext.get()).toArray();
             } catch (error) {
                 // eslint-disable-next-line no-console
                 console.warn("Cannot evaluate field domain, ignoring.");
             }
             // Context too
             try {
-                context = new data.CompoundContext(
-                    base.get_context(),
+                context = new Context(
+                    weContext.get(),
                     field.context
                 ).eval();
             } catch (error) {
@@ -513,11 +521,15 @@ odoo.define('website_form_builder.snippets', function (require) {
                 console.warn("Cannot evaluate field context, using user's.");
             }
             // Get results
-            return new Model(field.relation).call("search_read", {
-                domain: domain,
-                fields: ["display_name"],
-                order: "display_name",
-                context: context,
+            return this._rpc({
+                model: field.relation,
+                method: 'search_read',
+                kwargs: {
+                    domain: domain,
+                    fields: ["display_name"],
+                    order: [{name: "display_name", asc: true}],
+                    context: context,
+                }
             });
         },
     });
