@@ -23,12 +23,12 @@ msgstr ""
 msgid ""
 ". To disable them, configure your browser properly. If you keep using this "
 "website, you are accepting those."
-msgstr ""
+msgstr ". Um diese zu deaktivieren, müssen Sie Ihren Browser entsprechend konfigurieren. Falls Sie fortfahren, akzeptieren Sie diese automatisch."
 
 #. module: website_cookie_notice
 #: model:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "OK"
-msgstr ""
+msgstr "Ok"
 
 #. module: website_cookie_notice
 #: model:ir.ui.view,arch_db:website_cookie_notice.message
