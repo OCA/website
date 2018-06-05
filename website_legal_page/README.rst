@@ -15,7 +15,9 @@ This module was written to provide common legal pages needed in any website:
 Usage
 =====
 
-Website editor can change easily any text of these pages using website builder
+Website editor can change easily any text of these pages using website builder.
+After installation you have to enable the links in the footer using the customize menu.
+If you use a custom footer, then you maybe have to adapt the views legal_advice_link, privacy_policy_link, terms_of_use_link 
 
 
 Known issues / Roadmap
@@ -82,6 +84,8 @@ Contributors
 * Dave Lasley <dave@laslabs.com>
 * Nicola Malcontenti <nicola.malcontenti@agilebg.com>
 * Nicolas JEUDY <https://github.com/njeudy>
+* Wolfgang Pichler <wpichler@callino.at>
+
 
 Maintainer
 ----------
