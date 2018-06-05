@@ -5,6 +5,7 @@
     'summary': 'Disables robots.txt for indexing by webcrawlers like Google',
     'license': 'AGPL-3',
     'version': '11.0.1.0.0',
+    'website': 'https://github.com/OCA/website',
     'author': "B-Informed B.V.,Odoo Community Association (OCA)",
     'category': 'Website',
     'depends': [
@@ -13,7 +14,5 @@
     'data': [
         'views/disable_robots.xml',
     ],
-    'demo': [],
-    'test': [],
     'installable': True,
 }
