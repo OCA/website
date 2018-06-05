@@ -13,13 +13,14 @@
             <link rel="stylesheet"
                   href="/website_form_builder/static/src/css/website_form_builder.less"/>
 
-            <!-- TODO: Fix upstream -->
             <script type="text/javascript"
-                    src="/web/static/src/js/framework/data.js"/>
+                    src="/web/static/src/js/core/domain.js"/>
+            <script type="text/javascript"
+                    src="/web/static/src/js/core/context.js"/>
             <script type="text/javascript"
                     src="/web/static/lib/py.js/lib/py.js"/>
             <script type="text/javascript"
-                    src="/web/static/src/js/framework/pyeval.js"/>
+                    src="/web/static/src/js/core/pyeval.js"/>
         </xpath>
     </template>
 

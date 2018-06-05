@@ -160,7 +160,7 @@
     <t t-name="website_form_builder.field.monetary">
         <!-- TODO Find a way to sanely guess the default currency and position
              to use a beautiful Bootstrap input group instead -->
-        <t t-call="website_form_builder.float"/>
+        <t t-call="website_form_builder.field.float"/>
     </t>
 
     <!-- Only used in model fields -->
