@@ -3,7 +3,7 @@ This module makes it easier to manage multiple websites in one database.
 Features
 --------
 
-* Adds configuration menu items
-* Better list view for websites
+* Adds configuration menu for websites
+* Improves the list view of websites with extra fields
 * Easy switch between websites
-* Change website of page in page properties
+* Change the website of pages in the page properties dialog
