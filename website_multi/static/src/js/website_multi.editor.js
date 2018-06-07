@@ -58,7 +58,7 @@ odoo.define('website_multi.editor', function(require) {
         save: function() {
             var website_ids = [];
             this.$('#website_ids input[type="checkbox"]:checked').each(function() {
-                website_ids.push(parseInt($(this).attr('data-id')));
+                website_ids.push(parseInt($(this).attr('data-id'), 10));
             });
 
             this._rpc({
@@ -96,6 +96,6 @@ odoo.define('website_multi.editor', function(require) {
 
     return {
         'SwitchWebsiteMenu': SwitchWebsiteMenu
-    }
+    };
 
 });
