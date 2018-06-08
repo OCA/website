@@ -25,7 +25,7 @@
 </template>
 
 <template id="cookiebanner" inherit_id="website.layout">
-    <xpath expr="//header" position="before">
+    <xpath expr="//header" position="inside">
         <t t-call="website_cookie_notice.message"/>
     </xpath>
 </template>
