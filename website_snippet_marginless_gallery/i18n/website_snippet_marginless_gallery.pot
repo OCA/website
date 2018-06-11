@@ -1,23 +1,17 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_snippet_marginless_gallery
+#	* website_snippet_marginless_gallery
 #
-# Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-13 00:49+0000\n"
-"PO-Revision-Date: 2017-10-13 00:49+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
-"Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
-"Language: sl\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: \n"
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
@@ -28,50 +22,46 @@ msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-msgid ""
-"All photos must have the same height or the\n"
+msgid "All photos must have the same height or the\n"
 "                            gallery layout will be broken"
 msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.snippet_options
 msgid "Change Images Height"
-msgstr "Spremeni višino slik"
+msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.snippet_options
 msgid "Do not trim images"
-msgstr "Ne obrezuj slik"
+msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
 #: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:26
 #, python-format
 msgid "Height for all images in gallery"
-msgstr "Višina za vse slike v galeriji"
+msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
 #: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:27
 #, python-format
 msgid "Image height in pixels"
-msgstr "Višina slik v pikslih"
+msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 msgid "Lorem ipsum"
-msgstr "Lorem ipsum"
+msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-msgid ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
-"tempor incididunt ut labore et dolore magna."
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
 msgstr ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
-"tempor incididunt ut labore et dolore magna."
 
 #. module: website_snippet_marginless_gallery
 #: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 msgid "Our Gallery"
-msgstr "Naša galerija"
+msgstr ""
+
