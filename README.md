@@ -30,6 +30,7 @@ addon | version | summary
 [website_crm_quick_answer](website_crm_quick_answer/) | 9.0.1.0.0 | Add an automatic answer for contacts asking for info
 [website_crm_recaptcha](website_crm_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha validation in Website Contact Form
 [website_field_autocomplete](website_field_autocomplete/) | 9.0.1.0.1 | Provides an autocomplete field for Website on any model
+[website_form_metadata](website_form_metadata/) | 9.0.1.0.0 | Website Form Metadata
 [website_form_recaptcha](website_form_recaptcha/) | 9.0.1.0.0 | Provides a ReCaptcha field for Website Forms
 [website_forum_censored](website_forum_censored/) | 9.0.1.0.0 | Block phrases entered in forum posts and comments.
 [website_google_tag_manager](website_google_tag_manager/) | 9.0.1.0.0 | Add support for Google Tag Manager
