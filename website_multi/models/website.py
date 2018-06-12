@@ -7,7 +7,7 @@ from odoo import models, fields
 class Website(models.Model):
     _inherit = 'website'
 
-    # Replaces the web.base.url system parameter
+    # Replaces the web.base.url system parameter to generate e.g. the sitemap.xml and rss feed properly
     base_url = fields.Char(
         string='Base Url'
     )

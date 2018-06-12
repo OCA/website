@@ -74,17 +74,16 @@ odoo.define('website_multi.editor', function(require) {
     var SwitchWebsiteMenu = WebsiteNavbarActionWidget.extend({
         start: function () {
             var $current_website = this.$('.current-website');
-            $current_website.html(location.hostname);
+            $current_website.html(window.location.hostname);
 
             var $dropdown_menu = this.$('.dropdown-menu');
             rpc.query({
                 model: 'website',
                 method: 'search_read',
-                fields: ['domain']
+                fields: ['domain', 'base_url']
             }).then(function (websites) {
                 _.each(websites, function(website) {
-                    var url = location.port ? 'http://' + website.domain + ':' + location.port : 'http://' + website.domain;
-                    $dropdown_menu.append('<li><a href="' + url + '">' + website.domain + '</a></li>');
+                    $dropdown_menu.append('<li><a href="' + website.base_url + '">' + website.domain + '</a></li>');
                 });
             });
 
