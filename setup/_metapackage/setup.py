@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo9-addon-website_crm_quick_answer',
         'odoo9-addon-website_crm_recaptcha',
         'odoo9-addon-website_field_autocomplete',
+        'odoo9-addon-website_form_metadata',
         'odoo9-addon-website_form_recaptcha',
         'odoo9-addon-website_forum_censored',
         'odoo9-addon-website_google_tag_manager',
