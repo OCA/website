@@ -3,7 +3,8 @@
 
 {
     'name': 'Multiple Websites',
-    'summary': 'This module makes it easier to manage multiple websites in one database.',
+    'summary': 'This module makes it easier to manage multiple websites'
+               ' in one database.',
     'category': 'Website',
     'version': '11.0.1.0.0',
     'author': 'Onestein, Odoo Community Association (OCA)',
@@ -20,7 +21,7 @@
 
         'templates/assets.xml',
         'templates/user_navbar_templates.xml',
-        
+
         'menuitems.xml'
     ],
     'qweb': [
