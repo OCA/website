@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="layout" inherit_id="website.layout">
+        <xpath expr="//script[@id='tracking_code']" position="after">
+            <t t-if="website and website.addthis_enabled and website.addthis_pubid">
+                <t t-if="website.addthis_adv_config">
+                    <script type="text/javascript" t-raw="website.addthis_adv_config">
+                        // example
+                        var addthis_config = addthis_config||{};
+                        addthis_config.data_track_clickback = true;
+                    </script>
+                </t>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <script type="text/javascript"
+                        t-attf-src="//s7.addthis.com/js/300/addthis_widget.js#pubid=#{website.addthis_pubid}"></script>
+           </t>
+        </xpath>
+    </template>
+
+</odoo>

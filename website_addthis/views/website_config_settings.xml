@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_website_config_settings" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="google_analytics_setting" position="after">
+                <div class="col-xs-12 col-md-6 o_setting_box" id="addthis">
+                    <div class="o_setting_left_pane">
+                        <field name="addthis_enabled"/>
+                    </div>
+                    <div class="o_setting_right_pane" style="overflow:hidden">
+                        <label for="addthis_enabled"/>
+                        <div class="text-muted">
+                            Configure AddThis integration
+                        </div>
+                        <div class="content-group" attrs="{'invisible': [('addthis_enabled', '=', False)]}">
+                            <div class="row mt16">
+                                <label class="col-md-3 o_light_label" for="addthis_pubid"/>
+                                <field name="addthis_pubid" placeholder="ra-XXXXXXXXX" />
+                            </div>
+                        </div>
+                        <div class="content-group" attrs="{'invisible': [('addthis_enabled', '=', False)]}" groups="base.group_no_one">
+                            <div class="row mt16">
+                                <label class="col-md-3 o_light_label" for="addthis_adv_config"/>
+                                <field name="addthis_adv_config" />
+                            </div>
+                            <div class="row col-md-12">
+                                <div class="alert alert-info mt8">
+                                    <p><strong>Configuration example:</strong></p>
+                                    <code>var addthis_config = addthis_config||{};
+                                    addthis_config.data_track_clickback = true;</code>
+                                </div>
+                                <div class="alert alert-warning">
+                                    <p><strong>Caution:</strong> here you must put valid JS otherwise you can break your website.</p>
+                                    <p>Make sure to check that your pages are loading properly after changing this.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>
