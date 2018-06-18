@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <record model="ir.ui.view" id="view_view_form_extend">
+        <field name="name">view_view_form_extend</field>
+        <field name="model">ir.ui.view</field>
+        <field name="inherit_id" ref="website.view_view_form_extend"/>
+        <field name="arch" type="xml">
+
+            <!-- Makes it easier to duplicate e.g. the footer for other websites -->
+            <xpath expr="//field[@name='website_id']" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
