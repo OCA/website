@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_crm_privacy_policy
-# 
+#
 # Translators:
 # Rudolf Schnapka <rs@techno-flex.de>, 2016
 msgid ""
@@ -11,26 +11,19 @@ msgstr ""
 "POT-Creation-Date: 2016-02-25 14:25+0000\n"
 "PO-Revision-Date: 2016-02-24 22:30+0000\n"
 "Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
-"Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
+"Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/"
+"de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. module: website_crm_privacy_policy
-#: view:website:website.contactus
-msgid "I have read and accept the"
-msgstr "Gelesen und Zustimmung zum"
+#~ msgid "I have read and accept the"
+#~ msgstr "Gelesen und Zustimmung zum"
 
-#. module: website_crm_privacy_policy
-#: view:website:website.contactus
-msgid "Privacy Policy"
-msgstr "Regelwerk zur Privatsphäre"
+#~ msgid "Privacy Policy"
+#~ msgstr "Regelwerk zur Privatsphäre"
 
-#. module: website_crm_privacy_policy
-#. openerp-web
-#: code:addons/website_crm_privacy_policy/static/src/js/scripts.js:43
-#, python-format
-msgid "You must accept our Privacy Policy."
-msgstr "Sie müssen unser Regelwerk zur Privatsphäre akzeptieren."
+#~ msgid "You must accept our Privacy Policy."
+#~ msgstr "Sie müssen unser Regelwerk zur Privatsphäre akzeptieren."
