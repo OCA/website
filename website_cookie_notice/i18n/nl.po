@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_cookie_notice
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
 msgid ""
@@ -9,33 +9,154 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2016-11-29 03:55+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"PO-Revision-Date: 2020-12-12 15:36+0000\n"
+"Last-Translator: Bosd <evbokhoven@gmail.com>\n"
 "Language-Team: Dutch (https://www.transifex.com/oca/teams/23907/nl/)\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: nl\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.cookie_message
 msgid ""
-". To disable them, configure your browser properly. If you keep using this "
-"website, you are accepting those."
+"<span>We use cookies in this website. Read about them in our cookies policy. "
+"To disable them, configure your browser properly. If you keep using this "
+"website, you are accepting those.</span>"
 msgstr ""
+"<span>We gebruiken cookies op deze website. Lees over ons cookiebeleid om "
+"meer te weten te komen. Configureer uw browser om ze uit te schakelen. Als u "
+"deze website blijft gebruiken, accepteert u deze.</span>"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid ""
+"<strong>First party cookies</strong>&amp;nbsp;are cookies set by the "
+"website\n"
+"                you’re visiting. Only that website can read them. In "
+"addition, a\n"
+"                website might potentially use external services, which also "
+"set their\n"
+"                own cookies, known as <strong>third-party cookies.</strong>"
+msgstr ""
+"<strong>First party cookies</strong>&amp;nbsp;zijn cookies gebruikt door de "
+"website\n"
+"                die je bezoekt. Enkel die website kan deze gebruiken. Als "
+"aanvulling kan een website gebuiken maken van externe diensten die hun eigen "
+"cookies gebuiken, de zogenaamde <strong>third-party cookies.</strong>"
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid ""
+"A cookie is a small text file that a website stores on your computer or "
+"mobile device when you visit the site."
+msgstr ""
+"Een cookie is een klein tekstbestand dat een website op uw computer of "
+"mobiel apparaat opslaat als u de website bezoekt."
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid "Cookies Policy"
+msgstr "Cookiebeleid"
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid ""
+"Cookies can also be used to establish anonymised statistics about the "
+"browsing experience on our sites."
+msgstr ""
+"Cookies kunnen ook gebruikt worden om geanonimiseerde statistieken bij te "
+"houden over uw browse-ervaring op onze websites."
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid ""
+"Every time you visit our websites, you will be prompted to <strong>accept "
+"cookies.</strong>"
+msgstr ""
+"U wordt elke keer dat u onze websites bezoekt gevraagd om <strong>cookies te "
+"accepteren.</strong>"
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid "How do we use cookies?"
+msgstr "Hoe gebruiken wij cookies?"
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid ""
+"However, to view some of our pages, you will have to accept cookies from "
+"external organisations. &amp;nbsp;"
+msgstr ""
+"Echter, op sommige pagina's wordt er gevraagd om cookies van externe "
+"organisaties te accepteren. &amp;nbsp;"
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.cookie_message_container
 msgid "OK"
 msgstr "OK"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
-msgid "We use cookies in this website. Read about them in our"
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid ""
+"Persistent cookies&amp;nbsp;are cookies saved on your computer and that are\n"
+"                not deleted automatically when you quit your browser, unlike "
+"a&amp;nbsp;session\n"
+"                cookie,&amp;nbsp;which is deleted when you quit your browser."
 msgstr ""
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
-msgid "privacy policy"
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid ""
+"That way, you don’t have to re-enter them when browsing around the site "
+"during the same visit."
 msgstr ""
+"Op deze manier hoeft u niet tijdens uw bezoek deze elke keer opnieuw in te "
+"voeren."
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid "The <strong>3 types of first-party cookie</strong> we use are to:"
+msgstr ""
+"De <strong>drie soorten first-party cookies</strong> die wij gebruiken zijn "
+"om:"
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid ""
+"The purpose is to enable the site to remember your preferences (such as user "
+"name, language, etc.) for a certain period of time."
+msgstr ""
+"Het doel is om de website in staat te stellen om voor een bepaalde tijd uw "
+"voorkeuren (zoals gebruikersnaam, taal, enzovoorts) te onthouden."
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid ""
+"This websites mostly use “first-party cookies”. These are cookies set and "
+"controlled by us, not by any external organisation."
+msgstr ""
+"De websites gebruiken vooral “first-party cookies”. Dit zijn cookies die "
+"door ons beheerd worden en dus niet door een externe organisatie."
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid "What are cookies?"
+msgstr "Wat zijn cookies?"
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid "gather analytics data (about user behaviour)"
+msgstr "verzamel analytische gegevens (over gebruikersgedrag)"
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid "make our websites operational"
+msgstr "maak onze websites operationeel"
+
+#. module: website_cookie_notice
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
+msgid "store visitor preferences"
+msgstr "Onthoud bezoekersvoorkeuren"
