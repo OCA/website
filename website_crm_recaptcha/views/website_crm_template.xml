@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2016-2017 LasLabs Inc.
+    License AGPL-3 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+
+<odoo>
+    <template id="contactus_form"
+              inherit_id="website_crm.contactus_form"
+              name="Contact Form Captcha">
+        <xpath expr="//div[hasclass('form-field')][last()]" position="after">
+            <div class="form-group form-field o_website_form_required_custom">
+                <label class="col-md-3 col-sm-4 control-label" for="g-recaptcha-response">Human?</label>
+                <div class="col-md-7 col-sm-8">
+                    <span class="o_website_form_recaptcha" />
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

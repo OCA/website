@@ -6,7 +6,7 @@
     <template
         id="layout_pattern"
         inherit_id="website.layout"
-        name="Template for replacing assets_frontend"
+        name="Main layout"
         active="False">
         <!-- Replace assets to make good use of caching -->
         <xpath expr="//t[@t-call-assets='web.assets_frontend'][@t-js='false']"

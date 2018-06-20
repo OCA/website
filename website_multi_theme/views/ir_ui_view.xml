@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+
+    <record model="ir.ui.view" id="view_view_form_extend">
+        <field name="model">ir.ui.view</field>
+        <field name="inherit_id" ref="base.view_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//notebook" position="inside">
+                <page string="Multi-website"
+                      name="multiwebsite_origin_view"
+                      attrs="{'invisible': [('multitheme_copy_ids', '=', [])]}">
+                    <group>
+                        <field name="was_active" groups="base.group_no_one"/>
+                    </group>
+                    <separator string="Copies"/>
+                    <field name="multitheme_copy_ids"/>
+                </page>
+                <page string="Multi-website"
+                      name="multiwebsite_copied_view"
+                      attrs="{'invisible': [('origin_view_id', '=', False)]}">
+                    <group string="Original view">
+                        <field name="origin_view_id"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

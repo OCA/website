@@ -8,6 +8,37 @@ Website Multi Theme
 
 Allow the website admin to set a different theme for each website.
 
+The *theme* might be not just a theme-module, but any set of themes and even
+particular views from any module (e.g. view ``website.custom_footer`` from
+``website`` module). It also means, that *theme* is not just a styling, but
+a content as well.
+
+How it works
+============
+
+Core idea is as following
+
+* Find views created by *theme-module* and mark them as *multi-views* (``website.theme.asset``) additionally to one specified manually via XML (see `demo/themes.xml <demo/themes.xml>`_ as an example). The method `_convert_assets <models/website_theme.py>`_ is responsible for it.
+
+* Set ``active`` to ``False`` for *multi-views*. See method `_find_and_deactivate_views <models/website_theme.py>`_.
+
+* Apply *Multi-theme* (record in new model ``website.theme``) to the specific
+  website. See method `_multi_theme_activate <models/website.py>`_
+
+  * Make some magic with technical views ``website.assets_frontend`` and ``website.layout``.
+
+    * Duplicate *patterns* from `templates/patterns.xml <templates/patterns.xml>`_
+    * In ``layout_pattern`` replace ``{theme_view}`` placeholder to a duplicate
+      of ``assets_pattern``
+    * Corresponding duplicated *pattern* will be used as a new value for
+      ``inherit_id`` field in duplicated *multi-views* that originally extend
+      ``web.assets_frontend``, ``website.assets_frontend`` or
+      ``website.layout``.
+
+  * Duplicate *multi-views* of the *multi-theme* and its *dependencies* (other
+    *multi-themes*). In duplicates, the field ``inherit_id`` is changed to other
+    duplicated views or duplicated *patterns* when possible
+
 Installation
 ============
 
@@ -54,6 +85,8 @@ To configure this module, you need to:
     a *Website*.
 #. Press *Advanced > Multiwebsite theme > Reload*.
 #. In *Advanced > Multiwebsite theme*, pick one of the available themes.
+#. Via Edit button (``fa-external-link``) add *Default Theme* to *Sub-themes* of
+   the selected theme to make multi-footer work.
 
 Once you save, any website that has no *Multiwebsite theme* selected will have,
 the default plain Bootstrap theme, and those that do have one will get it.
@@ -62,7 +95,7 @@ Of course, your Odoo instance must be reachable by all of the provided host
 names, or nobody will ever see the effect. But that is most likely configured
 through your DNS provider and/or proxy, so it is not a matter of this addon.
 
-If you want to test this behavior, think that ``localhost`` and ``127.0.0.1``
+If you want to test this behavior, think that ``localhost`` and ``0.0.0.0``
 are different host names.
 
 Usage
@@ -145,7 +178,7 @@ Contributors
 * Rafael Blasco <rafael.blasco@tecnativa.com>
 * Antonio Espinosa <antonio.espinosa@tecnativa.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
-* `Ivan Yelizariev <https://it-projects.info/team/yelizariev>`__
+* Ivan Yelizariev <https://it-projects.info/team/yelizariev>
 
 Maintainer
 ----------

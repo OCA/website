@@ -12,7 +12,7 @@ odoo.define('website_multi_theme.theme', function(require){
     }
 
     theme.include({
-        update_style: function (enable, disable, reload) {
+        update_style: function () {
             var links = multi_theme_links();
             if (links.length) {
                 // Placeholder for dynamically-loaded assets upstream

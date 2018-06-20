@@ -57,7 +57,7 @@ Images
 Contributors
 ------------
 
-* Rafael Blasco <rafabn@antiun.com>
+* Rafael Blasco <rafael.blasco@tecnativa.com>
 * Jairo Llopis <yajo.sk8@gmail.com>
 
 Maintainer

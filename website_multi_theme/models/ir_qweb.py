@@ -1,4 +1,5 @@
 # Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+# Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 from odoo import models
@@ -21,3 +22,9 @@ class IrQweb(models.AbstractModel):
             if self.env.ref(alt_xmlid, False):
                 xmlid = alt_xmlid
         return super(IrQweb, self)._get_asset(xmlid, *args, **kwargs)
+
+    # Workaround for https://github.com/odoo/odoo/pull/24429
+    def _compile_directive_snippet(self, el, options):
+        return super(IrQweb, self.with_context(
+            search_multi_website_snippet=options.get('website_id')
+        ))._compile_directive_snippet(el, options)
