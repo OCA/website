@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="assets_editor" inherit_id="website.assets_editor">
+        <xpath expr="." position="inside">
+            <script src="/website_img_dimension/static/src/js/website_img_dimension.tooltip.js"></script>
+        </xpath>
+    </template>
+</odoo>
