@@ -1,0 +1,78 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_adv_image_optimization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_adv_image_optimization
+#. openerp-web
+#: code:addons/website_adv_image_optimization/static/src/js/website_adv_image_optimization.js:25
+#, python-format
+msgid "Advanced Optimization (for images)"
+msgstr ""
+
+#. module: website_adv_image_optimization
+#. openerp-web
+#: code:addons/website_adv_image_optimization/static/src/js/website_adv_image_optimization.js:28
+#, python-format
+msgid "Apply"
+msgstr ""
+
+#. module: website_adv_image_optimization
+#. openerp-web
+#: code:addons/website_adv_image_optimization/static/src/js/website_adv_image_optimization.js:29
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: website_adv_image_optimization
+#. openerp-web
+#: code:addons/website_adv_image_optimization/static/src/xml/website_adv_image_optimization.xml:32
+#, python-format
+msgid "Compression Options"
+msgstr ""
+
+#. module: website_adv_image_optimization
+#. openerp-web
+#: code:addons/website_adv_image_optimization/static/src/xml/website_adv_image_optimization.xml:25
+#, python-format
+msgid "Height"
+msgstr ""
+
+#. module: website_adv_image_optimization
+#. openerp-web
+#: code:addons/website_adv_image_optimization/static/src/xml/website_adv_image_optimization.xml:36
+#, python-format
+msgid "JPEG Compression (1-100)"
+msgstr ""
+
+#. module: website_adv_image_optimization
+#. openerp-web
+#: code:addons/website_adv_image_optimization/static/src/xml/website_adv_image_optimization.xml:34
+#, python-format
+msgid "PNG files are compressed with the standard Odoo upload optimization"
+msgstr ""
+
+#. module: website_adv_image_optimization
+#. openerp-web
+#: code:addons/website_adv_image_optimization/static/src/xml/website_adv_image_optimization.xml:14
+#, python-format
+msgid "Resize Options"
+msgstr ""
+
+#. module: website_adv_image_optimization
+#. openerp-web
+#: code:addons/website_adv_image_optimization/static/src/xml/website_adv_image_optimization.xml:19
+#, python-format
+msgid "Width"
+msgstr ""
+
