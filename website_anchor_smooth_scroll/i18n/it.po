@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_anchor_smooth_scroll
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
 msgid ""
@@ -12,58 +12,76 @@ msgstr ""
 "PO-Revision-Date: 2016-08-26 16:36+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_anchor_smooth_scroll
-#: model:website.menu,name:website_anchor_smooth_scroll.website_anchor_smooth_scroll_menu
-msgid "Anchor Smooth Scroll Demo"
+#: model:website.menu,name:website_anchor_smooth_scroll.menu_demo_page
+msgid "Anchor smooth scroll demo"
 msgstr ""
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
+#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "It works for any links to #anchors in your website!"
 msgstr ""
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
+#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "More dummy content"
 msgstr ""
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
+#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Odoo CMS - a big picture"
 msgstr "Odoo CMS - un'immagine grande"
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
+#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Press the button below and enjoy a smooth experience."
 msgstr ""
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
+#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to bottom"
 msgstr "Scorri in basso"
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
+#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to top"
 msgstr "Scorri in alto"
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
+#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Smooth? Nice."
 msgstr ""
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
+#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "This is dummy content"
 msgstr ""
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
+#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Try smooth scrolling. Easily."
 msgstr ""
