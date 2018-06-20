@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_analytics_piwik
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2018
 msgid ""
@@ -12,10 +12,10 @@ msgstr ""
 "PO-Revision-Date: 2018-01-16 03:45+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_analytics_piwik
@@ -46,11 +46,14 @@ msgstr "L'ID che Piwik utilizza per identificare il sito"
 #: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings_piwik_analytics_host
 #: model:ir.model.fields,help:website_analytics_piwik.field_website_piwik_analytics_host
 msgid ""
-"The host/path your Piwik installation is accessible by on the internet. Do not include a protocol here!\n"
+"The host/path your Piwik installation is accessible by on the internet. Do "
+"not include a protocol here!\n"
 "So http[s]://[this field]/piwik.php should resolve to your piwik.php"
 msgstr ""
-"L'host/percorso da cui la tua installazione Piwik è accessibile da internet. Non includere qui il protocollo!\n"
-"Sicché http[s]://[questo campo]/piwik.php dovrebbe puntare al tuo file piwik.php"
+"L'host/percorso da cui la tua installazione Piwik è accessibile da internet. "
+"Non includere qui il protocollo!\n"
+"Sicché http[s]://[questo campo]/piwik.php dovrebbe puntare al tuo file piwik."
+"php"
 
 #. module: website_analytics_piwik
 #: model:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
