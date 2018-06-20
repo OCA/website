@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="user_navbar" inherit_id="website.user_navbar">
+        <xpath expr="//ul[hasclass('o_menu_systray')]/li[1]" position="before">
+            <li id="switch-website">
+                <a class="btn btn-primary btn-xs dropdown-toggle css_edit_dynamic" data-toggle="dropdown">
+                    <span class="current-website"></span>
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                </ul>
+            </li>
+        </xpath>
+    </template>
+</odoo>

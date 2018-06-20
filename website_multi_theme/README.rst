@@ -179,6 +179,7 @@ Contributors
 * Antonio Espinosa <antonio.espinosa@tecnativa.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
 * Ivan Yelizariev <https://it-projects.info/team/yelizariev>
+* Dennis Sluijk <d.sluijk@onestein.nl>
 
 Maintainer
 ----------
