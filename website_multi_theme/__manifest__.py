@@ -9,7 +9,8 @@
     "version": "11.0.1.4.0",
     "category": "Website",
     "website": "https://www.tecnativa.com",
-    "author": "Tecnativa, IT-Projects LLC, Onestein, Odoo Community Association (OCA)",
+    "author": "Tecnativa, IT-Projects LLC, Onestein, "
+              "Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
     "installable": True,
