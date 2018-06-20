@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_analytics_piwik
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
@@ -12,36 +12,49 @@ msgstr ""
 "PO-Revision-Date: 2017-06-01 03:03+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
 "Language-Team: Serbian (https://www.transifex.com/oca/teams/23907/sr/)\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sr\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. module: website_analytics_piwik
-#: model:ir.model.fields,field_description:website_analytics_piwik.field_website_config_settings_piwik_analytics_host
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings_has_piwik_analytics
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_website_has_piwik_analytics
+msgid "Piwik Analytics"
+msgstr ""
+
+#. module: website_analytics_piwik
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings_piwik_analytics_host
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_website_piwik_analytics_host
 msgid "Piwik host"
 msgstr ""
 
 #. module: website_analytics_piwik
-#: model:ir.model.fields,field_description:website_analytics_piwik.field_website_config_settings_piwik_analytics_id
+#: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings_piwik_analytics_id
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_website_piwik_analytics_id
 msgid "Piwik website ID"
 msgstr ""
 
 #. module: website_analytics_piwik
-#: model:ir.model.fields,help:website_analytics_piwik.field_website_config_settings_piwik_analytics_id
+#: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings_piwik_analytics_id
 #: model:ir.model.fields,help:website_analytics_piwik.field_website_piwik_analytics_id
 msgid "The ID Piwik uses to identify the website"
 msgstr ""
 
 #. module: website_analytics_piwik
-#: model:ir.model.fields,help:website_analytics_piwik.field_website_config_settings_piwik_analytics_host
+#: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings_piwik_analytics_host
 #: model:ir.model.fields,help:website_analytics_piwik.field_website_piwik_analytics_host
 msgid ""
-"The host/path your Piwik installation is accessible by on the internet. Do not include a protocol here!\n"
+"The host/path your Piwik installation is accessible by on the internet. Do "
+"not include a protocol here!\n"
 "So http[s]://[this field]/piwik.php should resolve to your piwik.php"
+msgstr ""
+
+#. module: website_analytics_piwik
+#: model:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
+msgid "Track visits in Piwik Analytics"
 msgstr ""
 
 #. module: website_analytics_piwik
@@ -56,6 +69,6 @@ msgid "host.name/piwik"
 msgstr ""
 
 #. module: website_analytics_piwik
-#: model:ir.model,name:website_analytics_piwik.model_website_config_settings
-msgid "website.config.settings"
+#: model:ir.model,name:website_analytics_piwik.model_res_config_settings
+msgid "res.config.settings"
 msgstr ""
