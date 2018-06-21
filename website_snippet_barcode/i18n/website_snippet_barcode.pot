@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_snippet_barcode
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.snippets
+msgid "<i class=\"fa fa-barcode\"/>Barcode Type"
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.snippets
+msgid "<i class=\"fa fa-link\"/>Barcode Value"
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.snippets
+msgid "<i class=\"fa fa-picture-o\"/>Aspect Ratio"
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.snippets
+msgid "<i class=\"fa fa-user\"/>Human Readable"
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:website.menu,name:website_snippet_barcode.website_snippet_barcode_demo
+msgid "Barcode"
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.barcode_demo
+#: model:ir.ui.view,arch_db:website_snippet_barcode.barcode_snippet
+msgid "Barcode could not be rendered"
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.snippets
+msgid "Current Page URI"
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.snippets
+msgid "Image"
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.snippets
+msgid "None"
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.snippets
+msgid "Set Custom Value..."
+msgstr ""
+
+#. module: website_snippet_barcode
+#: model:ir.ui.view,arch_db:website_snippet_barcode.snippets
+msgid "Text"
+msgstr ""
+
