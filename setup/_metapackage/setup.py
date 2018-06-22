@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-website Odoo addons",
     version=version,
     install_requires=[
+        'odoo11-addon-website_addthis',
         'odoo11-addon-website_adv_image_optimization',
         'odoo11-addon-website_analytics_piwik',
         'odoo11-addon-website_anchor_smooth_scroll',
@@ -18,6 +19,7 @@ setuptools.setup(
         'odoo11-addon-website_form_recaptcha',
         'odoo11-addon-website_js_below_the_fold',
         'odoo11-addon-website_legal_page',
+        'odoo11-addon-website_logo',
         'odoo11-addon-website_media_size',
         'odoo11-addon-website_menu_by_user_status',
         'odoo11-addon-website_multi_theme',
