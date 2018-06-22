@@ -22,6 +22,7 @@ addon | version | summary
 [website_anchor_smooth_scroll](website_anchor_smooth_scroll/) | 10.0.1.0.0 | Replace default behavior for internal links (anchor only) with smooth scroll
 [website_blog_category](website_blog_category/) | 10.0.1.0.0 | Website Blog - Categories
 [website_breadcrumb](website_breadcrumb/) | 10.0.1.0.0 | Let you have breadcrumbs in website pages
+[website_canonical_url](website_canonical_url/) | 10.0.1.1.0 | Canonical URL in Website Headers
 [website_container_fluid](website_container_fluid/) | 10.0.1.0.0 | Let you choose between fixed or fluid containers
 [website_cookie_notice](website_cookie_notice/) | 10.0.1.0.0 | Show cookie notice according to cookie law
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 10.0.1.0.0 | Website CRM privacy policy
