@@ -12,6 +12,7 @@ setuptools.setup(
         'odoo10-addon-website_anchor_smooth_scroll',
         'odoo10-addon-website_blog_category',
         'odoo10-addon-website_breadcrumb',
+        'odoo10-addon-website_canonical_url',
         'odoo10-addon-website_container_fluid',
         'odoo10-addon-website_cookie_notice',
         'odoo10-addon-website_crm_privacy_policy',
