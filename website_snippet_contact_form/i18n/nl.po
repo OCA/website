@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_snippet_contact_form
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
@@ -10,12 +10,23 @@ msgstr ""
 "POT-Creation-Date: 2015-11-23 10:22+0000\n"
 "PO-Revision-Date: 2015-11-18 10:33+0000\n"
 "Last-Translator: <>\n"
-"Language-Team: Dutch (http://www.transifex.com/oca/OCA-website-8-0/language/nl/)\n"
+"Language-Team: Dutch (http://www.transifex.com/oca/OCA-website-8-0/language/"
+"nl/)\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "+1 541 754 3010"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Allow"
+msgstr ""
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
@@ -29,7 +40,22 @@ msgstr "E-mail"
 
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
+msgid "File Upload"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website_snippet_contact_form.validation_error_page
+msgid "Go Back"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
 msgid "I have read and accept the"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Not Allow"
 msgstr ""
 
 #. module: website_snippet_contact_form
@@ -55,6 +81,16 @@ msgstr ""
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Tell us something!"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website.snippets
+msgid "Upload file"
+msgstr ""
+
+#. module: website_snippet_contact_form
+#: view:website:website_snippet_contact_form.validation_error_page
+msgid "Validation Error!"
 msgstr ""
 
 #. module: website_snippet_contact_form
