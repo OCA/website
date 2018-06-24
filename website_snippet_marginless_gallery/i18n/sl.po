@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_snippet_marginless_gallery
-# 
+#
 # Translators:
 # Matjaž Mozetič <m.mozetic@matmoz.si>, 2015-2016
 msgid ""
@@ -11,19 +11,23 @@ msgstr ""
 "POT-Creation-Date: 2016-02-25 14:25+0000\n"
 "PO-Revision-Date: 2016-02-27 16:56+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
-"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/language/sl/)\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-website-8-0/"
+"language/sl/)\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets
 msgid ""
 "All photos must have the same height or the\n"
 "                                gallery layout will be broken"
-msgstr "Vse fotografije morajo imeti enako višino, da se\n                                postavitev galerije ne pokvari"
+msgstr ""
+"Vse fotografije morajo imeti enako višino, da se\n"
+"                                postavitev galerije ne pokvari"
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippet_options
@@ -59,7 +63,9 @@ msgstr "Lorem ipsum"
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna."
-msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna."
 
 #. module: website_snippet_marginless_gallery
 #: view:website:website.snippets
@@ -78,4 +84,8 @@ msgid ""
 "            .carousel,\n"
 "            .parallax,\n"
 "            .marginless-gallery .img"
-msgstr "section,\n            .carousel,\n            .parallax,\n            .marginless-gallery .img"
+msgstr ""
+"section,\n"
+"            .carousel,\n"
+"            .parallax,\n"
+"            .marginless-gallery .img"
