@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_portal_sale_v10
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
 # ITGeeker <alanljj@qq.com>, 2017
@@ -12,11 +12,12 @@ msgstr ""
 "POT-Creation-Date: 2017-03-28 10:40+0000\n"
 "PO-Revision-Date: 2017-03-28 10:40+0000\n"
 "Last-Translator: ITGeeker <alanljj@qq.com>, 2017\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/oca/teams/23907/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/oca/teams/23907/"
+"zh_CN/)\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: website_portal_sale_v10
@@ -30,26 +31,26 @@ msgid ""
 "<span class=\"label label-danger\"><i class=\"fa fa-fw fa-warning\"/> "
 "Problem</span>"
 msgstr ""
-"<span class=\"label label-danger\"><i class=\"fa fa-fw fa-warning\"/> "
-"问题</span>"
+"<span class=\"label label-danger\"><i class=\"fa fa-fw fa-warning\"/> 问题</"
+"span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
 msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"Done</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Done</"
+"span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"完成</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> 完成</"
+"span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"Paid</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Paid</"
+"span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"支付</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> 支付</"
+"span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
@@ -57,8 +58,8 @@ msgid ""
 "<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> "
 "Expired</span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-"
-"clock-o\"/>过期</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/>过期</"
+"span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
@@ -67,8 +68,8 @@ msgid ""
 "<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> "
 "Cancelled</span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> "
-"取消</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> 取消</"
+"span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
@@ -76,8 +77,8 @@ msgid ""
 "<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> "
 "Invoiced</span>"
 msgstr ""
-"<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> "
-"已开票</span>"
+"<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> 已开票</"
+"span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
@@ -85,8 +86,8 @@ msgid ""
 "<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> Waiting "
 "for Payment</span>"
 msgstr ""
-"<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> "
-"等待付款</span>"
+"<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> 等待付款"
+"</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices

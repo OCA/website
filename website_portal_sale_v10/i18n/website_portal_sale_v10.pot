@@ -1,92 +1,58 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_portal_sale_v10
+#	* website_portal_sale_v10
 #
-# Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 10:40+0000\n"
-"PO-Revision-Date: 2017-03-28 10:40+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
-"Language-Team: Croatian (https://www.transifex.com/oca/teams/23907/hr/)\n"
-"Language: hr\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: \n"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid "<i class=\"fa fa-arrow-circle-right\"/> Pay Now"
-msgstr "<i class=\"fa fa-arrow-circle-right\"/> Plati odmah"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
-msgid ""
-"<span class=\"label label-danger\"><i class=\"fa fa-fw fa-warning\"/> "
-"Problem</span>"
+msgid "<span class=\"label label-danger\"><i class=\"fa fa-fw fa-warning\"/> Problem</span>"
 msgstr ""
-"<span class=\"label label-danger\"><i class=\"fa fa-fw fa-warning\"/> "
-"Problem</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
-msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Done</"
-"span>"
+msgid "<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Done</span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Gotovo</"
-"span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
-msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Paid</"
-"span>"
+msgid "<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Paid</span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"Plaćeno</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
-msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> "
-"Expired</span>"
+msgid "<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> Expired</span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-clock-o\"/> "
-"Isteklo</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
-msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> "
-"Cancelled</span>"
+msgid "<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> Cancelled</span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-remove\"/> "
-"Otkazano</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
-msgid ""
-"<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> "
-"Invoiced</span>"
+msgid "<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> Invoiced</span>"
 msgstr ""
-"<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> Izdani "
-"računi</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
-msgid ""
-"<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> Waiting "
-"for Payment</span>"
+msgid "<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> Waiting for Payment</span>"
 msgstr ""
-"<span class=\"label label-info\"><i class=\"fa fa-fw fa-clock-o\"/> Čeka "
-"plaćanje</span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
@@ -96,17 +62,17 @@ msgstr ""
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid "Due Date"
-msgstr "Datum dospijeća"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid "Invoice #"
-msgstr "Račun "
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid "Invoice Date"
-msgstr "Datum fakture"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_menu_sale
@@ -116,7 +82,7 @@ msgstr ""
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
 msgid "Order Date"
-msgstr "Datum narudžbe"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_menu_sale
@@ -126,12 +92,12 @@ msgstr ""
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid "Pay Now"
-msgstr "Plati odmah"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
 msgid "Quotation #"
-msgstr "Ponuda "
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_menu_sale
@@ -141,51 +107,52 @@ msgstr ""
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
 msgid "Sale Order #"
-msgstr "Prodajni nalog"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid "There are currently no invoices for your account."
-msgstr "Trenutno nemate računa."
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
 msgid "There are currently no orders for your account."
-msgstr "Trenutno nemate narudžbi."
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
 msgid "There are currently no quotes for your account."
-msgstr "Trenutno nemate upita."
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
 msgid "Total"
-msgstr "Ukupno"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
 msgid "Valid Until"
-msgstr "Vrijedi do"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid "Your Invoices and Payments"
-msgstr "Vaši računi i plaćanja"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
 msgid "Your Orders"
-msgstr "Vaše Narudžbe"
+msgstr ""
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
 msgid "Your Quotes"
-msgstr "Vaši Upiti"
+msgstr ""
+

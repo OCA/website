@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_portal_sale_v10
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
 # Rudolf Schnapka <rs@techno-flex.de>, 2017
@@ -13,10 +13,10 @@ msgstr ""
 "PO-Revision-Date: 2017-03-28 10:40+0000\n"
 "Last-Translator: Rudolf Schnapka <rs@techno-flex.de>, 2017\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_portal_sale_v10
@@ -36,8 +36,8 @@ msgstr ""
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
 msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"Done</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Done</"
+"span>"
 msgstr ""
 "<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
 "Erledigt</span>"
@@ -45,8 +45,8 @@ msgstr ""
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"Paid</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Paid</"
+"span>"
 msgstr ""
 "<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
 "Bezahlt</span>"

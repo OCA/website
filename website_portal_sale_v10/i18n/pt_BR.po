@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_portal_sale_v10
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
 # Armando Vulcano Junior <vulcano@uol.com.br>, 2017
@@ -12,11 +12,12 @@ msgstr ""
 "POT-Creation-Date: 2017-10-13 00:49+0000\n"
 "PO-Revision-Date: 2017-10-13 00:49+0000\n"
 "Last-Translator: Armando Vulcano Junior <vulcano@uol.com.br>, 2017\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/23907/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
+"teams/23907/pt_BR/)\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_portal_sale_v10
@@ -36,20 +37,20 @@ msgstr ""
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_orders
 msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"Done</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Done</"
+"span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"Pronto</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Pronto</"
+"span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_invoices
 msgid ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"Paid</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Paid</"
+"span>"
 msgstr ""
-"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> "
-"Pago</span>"
+"<span class=\"label label-default\"><i class=\"fa fa-fw fa-check\"/> Pago</"
+"span>"
 
 #. module: website_portal_sale_v10
 #: model:ir.ui.view,arch_db:website_portal_sale_v10.portal_my_quotations
