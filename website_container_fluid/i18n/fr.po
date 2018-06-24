@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_container_fluid
-# 
+#
 # Translators:
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2016
 msgid ""
@@ -11,11 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2017-02-07 17:41+0000\n"
 "PO-Revision-Date: 2017-02-19 08:51+0000\n"
 "Last-Translator: Christophe CHAUVET <christophe.chauvet@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/"
+"fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_container_fluid
@@ -37,8 +38,7 @@ msgstr ""
 #: view:website:website_container_fluid.demo_page
 msgid ""
 "Adapt these three columns to fit you design need. To duplicate, delete or "
-"move columns, select the column and use the top icons to perform your "
-"action."
+"move columns, select the column and use the top icons to perform your action."
 msgstr ""
 
 #. module: website_container_fluid
@@ -176,7 +176,10 @@ msgid ""
 "To add a fourth column, reduce the size of these three columns using the "
 "right icon of each block. Then, duplicate one of the column to create a new "
 "one as a copy."
-msgstr "Pour ajouter une quatrième colonne, réduisez la taille de ces trois colonnes à l'aide de l'icône à droite de chaque bloc. Ensuite, dupliquer l'une des colonnes pour en créer une nouvelle."
+msgstr ""
+"Pour ajouter une quatrième colonne, réduisez la taille de ces trois colonnes "
+"à l'aide de l'icône à droite de chaque bloc. Ensuite, dupliquer l'une des "
+"colonnes pour en créer une nouvelle."
 
 #. module: website_container_fluid
 #: view:website:website_container_fluid.demo_page
