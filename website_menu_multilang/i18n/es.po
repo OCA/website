@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_menu_multilang
-# 
+#
 # Translators:
 # Antonio Trueba, 2016
 # Carles Antolí <carlesantoli@hotmail.com>, 2015
@@ -12,11 +12,12 @@ msgstr ""
 "POT-Creation-Date: 2016-02-25 14:25+0000\n"
 "PO-Revision-Date: 2016-02-23 12:28+0000\n"
 "Last-Translator: Antonio Trueba\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/"
+"language/es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_menu_multilang
@@ -34,4 +35,6 @@ msgstr "Menú Website"
 msgid ""
 "Website languages this menu should be available for. If kept empty, it will "
 "be available for all languages"
-msgstr "Idiomas del sitio web para los que este menú estará disponible. Si está vacío, estará disponible a todos los idiomas."
+msgstr ""
+"Idiomas del sitio web para los que este menú estará disponible. Si está "
+"vacío, estará disponible a todos los idiomas."
