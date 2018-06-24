@@ -1,61 +1,55 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_calendar_snippet
+#	* website_calendar_snippet
 #
-# Translators:
-# danimaribeiro <danimaribeiro@gmail.com>, 2016
-# danimaribeiro <danimaribeiro@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: website (8.0)\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-29 12:59+0000\n"
-"PO-Revision-Date: 2016-03-05 18:12+0000\n"
-"Last-Translator: danimaribeiro <danimaribeiro@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-"
-"website-8-0/language/pt_BR/)\n"
-"Language: pt_BR\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: \n"
 
 #. module: website_calendar_snippet
 #. openerp-web
 #: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:70
 #, python-format
 msgid "All day"
-msgstr "Todo o dia"
+msgstr ""
 
 #. module: website_calendar_snippet
 #: view:website:website.snippets
 msgid "Calendar"
-msgstr "Calendário"
+msgstr ""
 
 #. module: website_calendar_snippet
 #. openerp-web
 #: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:75
 #, python-format
 msgid "Day"
-msgstr "Dia"
+msgstr ""
 
 #. module: website_calendar_snippet
 #. openerp-web
 #: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:73
 #, python-format
 msgid "Month"
-msgstr "Mês"
+msgstr ""
 
 #. module: website_calendar_snippet
 #. openerp-web
 #: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:72
 #, python-format
 msgid "Today"
-msgstr "Hoje"
+msgstr ""
 
 #. module: website_calendar_snippet
 #. openerp-web
 #: code:addons/website_calendar_snippet/static/src/js/website_calendar_block.js:74
 #, python-format
 msgid "Week"
-msgstr "Semana"
+msgstr ""
+
