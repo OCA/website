@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_signup_legal_page_required
-# 
+#
 # Translators:
 # danimaribeiro <danimaribeiro@gmail.com>, 2016
 # danimaribeiro <danimaribeiro@gmail.com>, 2016
@@ -12,11 +12,12 @@ msgstr ""
 "POT-Creation-Date: 2016-05-06 02:53+0000\n"
 "PO-Revision-Date: 2016-05-01 20:00+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-website-8-0/language/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-"
+"website-8-0/language/pt_BR/)\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: pt_BR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_signup_legal_page_required
@@ -29,12 +30,24 @@ msgstr ""
 msgid ""
 ",\n"
 "                the"
-msgstr ",\no"
+msgstr ""
+",\n"
+"o"
 
 #. module: website_signup_legal_page_required
 #: field:res.users,accepted_legal_terms:0
 msgid "Accepted legal terms"
 msgstr "Termos legais aceito"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,activation:0
+msgid "Activation"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,opportunity_assigned_ids:0
+msgid "Assigned Opportunities"
+msgstr ""
 
 #. module: website_signup_legal_page_required
 #: field:res.users,property_stock_customer:0
@@ -47,9 +60,41 @@ msgid "Did the user accept our legal terms when opening the account?"
 msgstr "O usuário aceitou nossos termos quando abriu a conta?"
 
 #. module: website_signup_legal_page_required
+#: help:res.users,partner_weight:0
+msgid ""
+"Gives the probability to assign a lead to this partner. (0 means no "
+"assignation.)"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,grade_id:0
+msgid "Grade"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,partner_weight:0
+msgid "Grade Weight"
+msgstr ""
+
+#. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "I accept the"
 msgstr "Eu aceito o"
+
+#. module: website_signup_legal_page_required
+#: field:res.users,implemented_partner_ids:0
+msgid "Implementation References"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,assigned_partner_id:0
+msgid "Implemented by"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,date_review:0
+msgid "Latest Partner Review"
+msgstr ""
 
 #. module: website_signup_legal_page_required
 #: field:res.users,opportunity_ids:0
@@ -62,8 +107,18 @@ msgid "Meetings"
 msgstr ""
 
 #. module: website_signup_legal_page_required
+#: field:res.users,date_review_next:0
+msgid "Next Partner Review"
+msgstr ""
+
+#. module: website_signup_legal_page_required
 #: field:res.users,opportunity_count:0
 msgid "Opportunity"
+msgstr ""
+
+#. module: website_signup_legal_page_required
+#: field:res.users,date_partnership:0
+msgid "Partnership Date"
 msgstr ""
 
 #. module: website_signup_legal_page_required
