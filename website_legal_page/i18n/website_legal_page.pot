@@ -1,71 +1,65 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_legal_page
+#	* website_legal_page
 #
-# Translators:
-# Claudio Araujo Santos <claudioaraujosantos@gmail.com>, 2016
-# danimaribeiro <danimaribeiro@gmail.com>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: website (9.0)\n"
+"Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-04 02:41+0000\n"
-"PO-Revision-Date: 2016-07-07 19:26+0000\n"
-"Last-Translator: Claudio Araujo Santos <claudioaraujosantos@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-"
-"website-9-0/language/pt_BR/)\n"
-"Language: pt_BR\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: \n"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid ", and the"
-msgstr ", e as"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid ", the"
-msgstr ", a"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "I accept the"
-msgstr "Eu aceito o"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.legal_advice_link
 msgid "Legal advice"
-msgstr "Aviso legal"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy_policy_link
 msgid "Privacy policy"
-msgstr "Política de privacidade"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.terms_of_use_link
 msgid "Terms of use"
-msgstr "Termos de uso"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "legal advice"
-msgstr "aviso legal"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "of this website."
-msgstr "deste site"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "privacy policy"
-msgstr "política de privacidade"
+msgstr ""
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "terms of use"
-msgstr "Termos de uso"
+msgstr ""
+
