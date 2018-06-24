@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_hr_department
-# 
+#
 # Translators:
 # Carles Antolí <carlesantoli@hotmail.com>, 2016
 msgid ""
@@ -11,11 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2016-02-25 14:25+0000\n"
 "PO-Revision-Date: 2016-02-23 17:18+0000\n"
 "Last-Translator: Carles Antolí <carlesantoli@hotmail.com>\n"
-"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/language/ca/)\n"
+"Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/"
+"language/ca/)\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_hr_department
@@ -43,9 +44,12 @@ msgstr "Els nostres departaments"
 #. module: website_hr_department
 #: view:website:website_hr_department.departments
 msgid ""
-"Our products are designed for small to medium size companies willing to optimize\n"
+"Our products are designed for small to medium size companies willing to "
+"optimize\n"
 "                                        their performance."
-msgstr "Els nostres productes estan dissenyats per a petites i mitjanes empreses que vulguin optimitzar el seu rendiment."
+msgstr ""
+"Els nostres productes estan dissenyats per a petites i mitjanes empreses que "
+"vulguin optimitzar el seu rendiment."
 
 #. module: website_hr_department
 #: field:hr.department,public_info:0
@@ -56,9 +60,13 @@ msgstr "Informació pública"
 #: view:website:website_hr_department.departments
 msgid ""
 "We are a team of passionate people whose goal is to improve everyone's\n"
-"                                        life through disruptive products. We build great products to solve your\n"
+"                                        life through disruptive products. We "
+"build great products to solve your\n"
 "                                        business problems."
-msgstr "Som un equip de persones apassionades amb l'objectiu de millorar la vida de tots a través dels nostres productes. Construïm grans productes per resoldre els seus problemes al negoci."
+msgstr ""
+"Som un equip de persones apassionades amb l'objectiu de millorar la vida de "
+"tots a través dels nostres productes. Construïm grans productes per resoldre "
+"els seus problemes al negoci."
 
 #. module: website_hr_department
 #: model:ir.actions.act_url,name:website_hr_department.action_open_website
