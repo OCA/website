@@ -8,14 +8,14 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-21 12:22+0100\n"
 "PO-Revision-Date: 2015-12-21 12:22+0100\n"
+"Last-Translator: Jairo Llopis <j.llopis@grupoesoc.es>\n"
 "Language-Team: \n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.8.5\n"
-"Last-Translator: Jairo Llopis <j.llopis@grupoesoc.es>\n"
-"Language: es_ES\n"
 
 #. module: website_breadcrumb
 #: view:website:website_breadcrumb.breadcrumb
