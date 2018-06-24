@@ -1,24 +1,20 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_canonical_url
+#	* website_canonical_url
 #
-# Translators:
-# Loic <loic.richard2@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-07 01:09+0000\n"
-"PO-Revision-Date: 2016-07-07 01:09+0000\n"
-"Last-Translator: Loic <loic.richard2@gmail.com>, 2016\n"
-"Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
-"Language: fr\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: \n"
 
 #. module: website_canonical_url
 #: model:ir.model,name:website_canonical_url.model_website
 msgid "Website"
-msgstr "Site Internet"
+msgstr ""
+
