@@ -18,12 +18,12 @@ msgstr ""
 #. module: website_legal_page
 #: view:website:website.privacy
 msgid "(\"us\", \"we\", or \"our\") operates"
-msgstr "(\nos\",\"nosotros"\"o \"nuestro\") opera"
+msgstr "(\"nos\", \"nosotros\" o \"nuestro\") opera"
 
 #. module: website_legal_page
 #: view:website:website.terms
 msgid "(\"us\", \"we\", or \"our\")."
-msgstr "(\"nos\", \"nosotros\", or \"nuestro\")."
+msgstr "(\"nos\", \"nosotros\", o \"nuestro\")."
 
 #. module: website_legal_page
 #: view:website:website.privacy
