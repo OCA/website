@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_anchor_smooth_scroll
-# 
+#
 # Translators:
 # Christophe CHAUVET <christophe.chauvet@gmail.com>, 2016
 msgid ""
@@ -11,11 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2016-07-29 17:03+0000\n"
 "PO-Revision-Date: 2016-07-30 14:14+0000\n"
 "Last-Translator: Christophe CHAUVET <christophe.chauvet@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/"
+"fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_anchor_smooth_scroll
@@ -26,7 +27,8 @@ msgstr "Démonstration d'une ancre à défilement fluide"
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "It works for any links to #anchors in your website!"
-msgstr "Celà fonctionne pour tous les liens des #ancres de votre site internet!"
+msgstr ""
+"Celà fonctionne pour tous les liens des #ancres de votre site internet!"
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
@@ -41,7 +43,8 @@ msgstr "Odoo CMS - une grande image"
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
 msgid "Press the button below and enjoy a smooth experience."
-msgstr "Appuyez sur le bouton ci-dessous et profitez d'une expérience agréable."
+msgstr ""
+"Appuyez sur le bouton ci-dessous et profitez d'une expérience agréable."
 
 #. module: website_anchor_smooth_scroll
 #: view:website:website_anchor_smooth_scroll.demo_page
