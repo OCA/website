@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_snippet_anchor
-# 
+#
 # Translators:
 # Rudolf Schnapka <rs@techno-flex.de>, 2016
 msgid ""
@@ -11,11 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2016-02-25 14:25+0000\n"
 "PO-Revision-Date: 2016-02-23 18:17+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/de/)\n"
+"Language-Team: German (http://www.transifex.com/oca/OCA-website-8-0/language/"
+"de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_snippet_anchor
@@ -63,7 +64,9 @@ msgstr "Setze Anker"
 msgid ""
 "Use anchors to go directly to a section of your page, appending #anchor to "
 "the URL"
-msgstr "Verwenden Sie Anker, um direkt zu Abschnitten auf Ihrer Seite zu springen, indem Sie #-Anker an die URL anfügen"
+msgstr ""
+"Verwenden Sie Anker, um direkt zu Abschnitten auf Ihrer Seite zu springen, "
+"indem Sie #-Anker an die URL anfügen"
 
 #. module: website_snippet_anchor
 #. openerp-web
