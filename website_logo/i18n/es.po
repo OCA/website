@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_logo
-# 
+#
 # Translators:
 # Antonio Espinosa <antonioea@antiun.com>, 2015
 # Antonio Trueba, 2016
@@ -15,11 +15,12 @@ msgstr ""
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
 "PO-Revision-Date: 2016-10-18 06:57+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/language/es/)\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/OCA-website-8-0/"
+"language/es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_logo
@@ -43,14 +44,18 @@ msgstr "Logo"
 msgid ""
 "This field holds the logo for this website, showed in header. Recommended "
 "size is 180x50"
-msgstr "Este campo define el logo para este sitio web, mostrado en la cabecera. Tamaño recomendado 180x50"
+msgstr ""
+"Este campo define el logo para este sitio web, mostrado en la cabecera. "
+"Tamaño recomendado 180x50"
 
 #. module: website_logo
 #: help:website.config.settings,logo:0
 msgid ""
 "This field holds the logo for this website, showed in header.Recommended "
 "size is 180x50"
-msgstr "Este campo contiene el logo para este sitio web, mostrado en la cabecera. El tamaño recomendado en 180x50."
+msgstr ""
+"Este campo contiene el logo para este sitio web, mostrado en la cabecera. El "
+"tamaño recomendado en 180x50."
 
 #. module: website_logo
 #: model:ir.model,name:website_logo.model_website
