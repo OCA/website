@@ -1,29 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_backend_views
+#	* website_backend_views
 #
-# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: website (8.0)\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2015-09-25 08:26+0000\n"
 "Last-Translator: <>\n"
-"Language-Team: Polish (http://www.transifex.com/oca/OCA-website-8-0/language/"
-"pl/)\n"
-"Language: pl\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: \n"
 
 #. module: website_backend_views
 #: view:website:website_backend_views.demo_index
-msgid ""
-"And of course, you can do whatever you want with the rest of the page. Maybe "
-"hide the manager's buttons and provide a nicer UI for saving?"
+msgid "And of course, you can do whatever you want with the rest of the page. Maybe hide the manager's buttons and provide a nicer UI for saving?"
 msgstr ""
 
 #. module: website_backend_views
@@ -34,25 +26,26 @@ msgstr ""
 #. module: website_backend_views
 #: field:website.qweb,create_uid:0
 msgid "Created by"
-msgstr "Utworzone przez"
+msgstr ""
 
 #. module: website_backend_views
 #: field:website.qweb,create_date:0
 msgid "Created on"
-msgstr "Utworzono"
+msgstr ""
 
 #. module: website_backend_views
 #: field:website.qweb,write_uid:0
 msgid "Last Updated by"
-msgstr "Ostatnio modyfikowane przez"
+msgstr ""
 
 #. module: website_backend_views
 #: field:website.qweb,write_date:0
 msgid "Last Updated on"
-msgstr "Ostatnia zmiana"
+msgstr ""
 
 #. module: website_backend_views
 #: code:addons/website_backend_views/controllers/demo.py:29
 #, python-format
 msgid "You need to install this module in demo mode for this url to work!"
 msgstr ""
+
