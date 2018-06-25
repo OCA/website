@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_signup_legal_page_required
-# 
+#
 # Translators:
 # Paolo Valier, 2016
 # Paolo Valier, 2016
@@ -12,93 +12,35 @@ msgstr ""
 "POT-Creation-Date: 2016-05-10 17:45+0000\n"
 "PO-Revision-Date: 2016-05-12 12:04+0000\n"
 "Last-Translator: Paolo Valier\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/language/it/)\n"
+"Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
+"language/it/)\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_signup_legal_page_required
-#: field:res.users,meeting_count:0
-msgid "# Meetings"
-msgstr ""
-
-#. module: website_signup_legal_page_required
-#: view:website:auth_signup.fields
+#: model:ir.ui.view,arch_db:website_signup_legal_page_required.signup_view
 msgid ""
 ",\n"
 "                the"
 msgstr ", l'"
 
 #. module: website_signup_legal_page_required
-#: field:res.users,accepted_legal_terms:0
+#: model:ir.model.fields,field_description:website_signup_legal_page_required.field_res_users_accepted_legal_terms
 msgid "Accepted legal terms"
 msgstr "Accetta i Termini legali"
 
 #. module: website_signup_legal_page_required
-#: field:res.users,property_stock_customer:0
-msgid "Customer Location"
-msgstr "Località Cliente"
-
-#. module: website_signup_legal_page_required
-#: help:res.users,accepted_legal_terms:0
+#: model:ir.model.fields,help:website_signup_legal_page_required.field_res_users_accepted_legal_terms
 msgid "Did the user accept our legal terms when opening the account?"
 msgstr "L'utente ha accettato i Termini legali creando l'account?"
 
 #. module: website_signup_legal_page_required
-#: view:website:auth_signup.fields
+#: model:ir.ui.view,arch_db:website_signup_legal_page_required.signup_view
 msgid "I accept the"
 msgstr "Accetto le"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,opportunity_ids:0
-msgid "Leads and Opportunities"
-msgstr "Lead e Opportunità"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,meeting_ids:0
-msgid "Meetings"
-msgstr "Riunioni"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,opportunity_count:0
-msgid "Opportunity"
-msgstr "Opportunità"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,phonecall_count:0 field:res.users,phonecall_ids:0
-msgid "Phonecalls"
-msgstr "Chiamate telefoniche"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,website_published:0
-msgid "Publish"
-msgstr "Pubblica"
-
-#. module: website_signup_legal_page_required
-#: help:res.users,website_published:0
-msgid "Publish on the website"
-msgstr "Pubblica sul sito web"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,property_stock_supplier:0
-msgid "Supplier Location"
-msgstr "Località del Fornitore"
-
-#. module: website_signup_legal_page_required
-#: help:res.users,property_stock_customer:0
-msgid ""
-"This stock location will be used, instead of the default one, as the "
-"destination location for goods you send to this partner"
-msgstr ""
-
-#. module: website_signup_legal_page_required
-#: help:res.users,property_stock_supplier:0
-msgid ""
-"This stock location will be used, instead of the default one, as the source "
-"location for goods you receive from the current partner"
-msgstr ""
 
 #. module: website_signup_legal_page_required
 #: model:ir.model,name:website_signup_legal_page_required.model_res_users
@@ -106,62 +48,74 @@ msgid "Users"
 msgstr "Utenti"
 
 #. module: website_signup_legal_page_required
-#: field:res.users,website_description:0
-msgid "Website Partner Full Description"
-msgstr "Descrizione lunga Partner sito web"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,website_short_description:0
-msgid "Website Partner Short Description"
-msgstr "Descrizione breve Partner sito web"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,website_meta_description:0
-msgid "Website meta description"
-msgstr "Meta descrizione sito web"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,website_meta_keywords:0
-msgid "Website meta keywords"
-msgstr "Keywords sto web"
-
-#. module: website_signup_legal_page_required
-#: field:res.users,website_meta_title:0
-msgid "Website meta title"
-msgstr "Meta titolo sito web"
-
-#. module: website_signup_legal_page_required
-#: code:addons/website_signup_legal_page_required/exceptions.py:10
+#: code:addons/website_signup_legal_page_required/controllers/exceptions.py:13
 #, python-format
 msgid "You must accept our legal terms."
 msgstr "Devi accettare i Termini legali."
 
 #. module: website_signup_legal_page_required
-#: view:website:auth_signup.fields
+#: model:ir.ui.view,arch_db:website_signup_legal_page_required.signup_view
 msgid "and the"
 msgstr "e le "
 
 #. module: website_signup_legal_page_required
-#: view:website:auth_signup.fields
+#: model:ir.ui.view,arch_db:website_signup_legal_page_required.signup_view
 msgid "legal advice"
 msgstr "informazioni legali"
 
 #. module: website_signup_legal_page_required
-#: view:website:auth_signup.fields
+#: model:ir.ui.view,arch_db:website_signup_legal_page_required.signup_view
 msgid "of this website."
 msgstr "di questo sito."
 
 #. module: website_signup_legal_page_required
-#: view:website:auth_signup.fields
+#: model:ir.ui.view,arch_db:website_signup_legal_page_required.signup_view
 msgid "privacy policy"
 msgstr "informativa sulla privacy"
 
 #. module: website_signup_legal_page_required
-#: view:website:auth_signup.fields
+#: model:ir.ui.view,arch_db:website_signup_legal_page_required.signup_view
 msgid "terms of use"
 msgstr "condizioni d'uso"
 
-#. module: website_signup_legal_page_required
-#: field:res.users,self:0
-msgid "unknown"
-msgstr "sconosciuto"
+#~ msgid "Customer Location"
+#~ msgstr "Località Cliente"
+
+#~ msgid "Leads and Opportunities"
+#~ msgstr "Lead e Opportunità"
+
+#~ msgid "Meetings"
+#~ msgstr "Riunioni"
+
+#~ msgid "Opportunity"
+#~ msgstr "Opportunità"
+
+#~ msgid "Phonecalls"
+#~ msgstr "Chiamate telefoniche"
+
+#~ msgid "Publish"
+#~ msgstr "Pubblica"
+
+#~ msgid "Publish on the website"
+#~ msgstr "Pubblica sul sito web"
+
+#~ msgid "Supplier Location"
+#~ msgstr "Località del Fornitore"
+
+#~ msgid "Website Partner Full Description"
+#~ msgstr "Descrizione lunga Partner sito web"
+
+#~ msgid "Website Partner Short Description"
+#~ msgstr "Descrizione breve Partner sito web"
+
+#~ msgid "Website meta description"
+#~ msgstr "Meta descrizione sito web"
+
+#~ msgid "Website meta keywords"
+#~ msgstr "Keywords sto web"
+
+#~ msgid "Website meta title"
+#~ msgstr "Meta titolo sito web"
+
+#~ msgid "unknown"
+#~ msgstr "sconosciuto"
