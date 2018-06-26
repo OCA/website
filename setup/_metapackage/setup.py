@@ -30,6 +30,7 @@ setuptools.setup(
         'odoo10-addon-website_sale_hide_empty_category',
         'odoo10-addon-website_sale_line_total',
         'odoo10-addon-website_seo_redirection',
+        'odoo10-addon-website_signup_legal_page_required',
         'odoo10-addon-website_snippet_anchor',
         'odoo10-addon-website_snippet_barcode',
         'odoo10-addon-website_snippet_country_dropdown',
