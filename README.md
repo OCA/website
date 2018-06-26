@@ -40,6 +40,7 @@ addon | version | summary
 [website_sale_hide_empty_category](website_sale_hide_empty_category/) | 10.0.1.0.0 | Hide any Product Categories that are empty
 [website_sale_line_total](website_sale_line_total/) | 10.0.1.0.0 | Adds separate columns for unit price and total price
 [website_seo_redirection](website_seo_redirection/) | 10.0.1.0.0 | Redirect any controller to the URL of your dreams
+[website_signup_legal_page_required](website_signup_legal_page_required/) | 10.0.1.0.0 | Force the user to accept the legal terms to open an account
 [website_snippet_anchor](website_snippet_anchor/) | 10.0.1.0.0 | Allow to reach a concrete section in the page
 [website_snippet_barcode](website_snippet_barcode/) | 10.0.1.0.0 | Generates barcodes for advertising content
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 10.0.1.0.0 | Allow to select country in a dropdown
