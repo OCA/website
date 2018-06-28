@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Tecnativa - Jairo Llopis
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+
+<template>
+    <t t-name="website_form_builder.field_wrapper">
+        <div
+            t-attf-class="form-group form-field #{field.required ? 'o_required' : ''} form-field-#{field.type}"
+            t-att-data-model-field="model_field"
+            t-att-data-optional="!field.required"
+        >
+            <t t-raw="0"/>
+            <t t-if="field.help">
+                <p class="help-block">
+                    <t t-esc="field.help"/>
+                </p>
+            </t>
+        </div>
+    </t>
+
+    <t t-name="website_form_builder.field_label">
+        <t t-call="website_form_builder.field_wrapper">
+            <label class="control-label" t-att-for="name">
+                <span>
+                    <t t-esc="field.string"/>
+                </span>
+            </label>
+            <t t-raw="0"/>
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.binary">
+        <t t-call="website_form_builder.field_label">
+            <input
+                t-att-name="name"
+                t-att-required="required_att"
+                type="file"
+                class="o_website_form_input"
+            />
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.boolean">
+        <t t-call="website_form_builder.field_wrapper">
+            <label class="control-label" t-att-for="name">
+                <input
+                    t-att-name="name"
+                    t-att-required="required_att"
+                    type="checkbox"
+                    class="o_website_form_input"
+                    value="1"
+                />
+                <span>
+                    <t t-esc="field.string"/>
+                </span>
+            </label>
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.char">
+        <t t-call="website_form_builder.field_label">
+            <input
+                t-att-name="name"
+                t-att-required="required_att"
+                class="form-control o_website_form_input"
+                t-att-maxlength="field.size || null"
+                type="text"
+            />
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.date">
+        <t t-call="website_form_builder.field_label">
+            <input
+                t-att-name="name"
+                t-att-required="required_att"
+                class="form-control o_website_form_input o_website_form_date"
+                type="text"
+            />
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.datetime">
+        <t t-call="website_form_builder.field_label">
+            <input
+                t-att-name="name"
+                t-att-required="required_att"
+                class="form-control o_website_form_input o_website_form_datetime"
+                type="text"
+            />
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.float">
+        <t t-call="website_form_builder.field_label">
+            <input
+                t-att-name="name"
+                t-att-required="required_att"
+                class="form-control o_website_form_input"
+                type="number"
+                step="0.01"
+            />
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.html">
+        <!-- TODO Use a safe HTML widget instead -->
+        <t t-call="website_form_builder.text"/>
+    </t>
+
+    <t t-name="website_form_builder.field.integer">
+        <t t-call="website_form_builder.field_label">
+            <input
+                t-att-name="name"
+                t-att-required="required_att"
+                class="form-control o_website_form_input"
+                type="number"
+            />
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.many2many">
+        <t t-call="website_form_builder.field_label">
+            <t t-foreach="relational_data" t-as="option">
+                <div class="checkbox">
+                    <label class="control-label">
+                        <input
+                            t-att-name="name"
+                            t-att-required="required_att"
+                            t-att-value="option.id"
+                            type="checkbox"
+                            class="o_website_form_input"
+                        />
+                        <span>
+                            <t t-esc="option.display_name"/>
+                        </span>
+                    </label>
+                </div>
+            </t>
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.many2one">
+        <t t-call="website_form_builder.field_label">
+            <select
+                t-att-name="name"
+                t-att-required="required_att"
+                class="form-control o_website_form_input"
+            >
+                <option/>
+                <t t-foreach="relational_data" t-as="option">
+                    <option t-att-value="option.id">
+                        <t t-esc="option.display_name"/>
+                    </option>
+                </t>
+            </select>
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.monetary">
+        <!-- TODO Find a way to sanely guess the default currency and position
+             to use a beautiful Bootstrap input group instead -->
+        <t t-call="website_form_builder.field.float"/>
+    </t>
+
+    <!-- Only used in model fields -->
+    <t t-name="website_form_builder.field.selection">
+        <t t-call="website_form_builder.field_label">
+            <select
+                t-att-name="name"
+                t-att-required="required_att"
+                class="form-control o_website_form_input"
+            >
+                <t t-foreach="field.selection" t-as="option">
+                    <option t-att-value="option[0]">
+                        <t t-esc="option[1]"/>
+                    </option>
+                </t>
+            </select>
+        </t>
+    </t>
+
+    <!-- Only used in custom fields -->
+    <t t-name="website_form_builder.field.selection-radio">
+        <t t-call="website_form_builder.field_label">
+            <t t-foreach="relational_data" t-as="option">
+                <div class="radio">
+                    <label class="control-label">
+                        <input
+                            t-att-name="name"
+                            t-att-required="required_att"
+                            t-att-value="option.id"
+                            type="radio"
+                            class="o_website_form_input"
+                        />
+                        <span>
+                            <t t-esc="option.display_name"/>
+                        </span>
+                    </label>
+                </div>
+            </t>
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.field.text">
+        <t t-call="website_form_builder.field_label">
+            <textarea
+                t-att-name="name"
+                t-att-required="required_att"
+                class="form-control o_website_form_input"
+                t-att-maxlength="field.size || null"
+                type="text"
+            />
+        </t>
+    </t>
+
+    <t t-name="website_form_builder.section.send">
+        <div class="form-group">
+            <button type="button"
+                    class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">
+                Send
+            </button>
+            <span id="o_website_form_result"/>
+        </div>
+    </t>
+</template>

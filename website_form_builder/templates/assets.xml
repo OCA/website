@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Tecnativa - Jairo Llopis
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <template id="assets_editor" inherit_id="website.assets_editor">
+        <xpath expr=".">
+            <script type="text/javascript"
+                    src="/website_form_builder/static/src/js/snippets.js"/>
+            <script type="text/javascript"
+                    src="/website_form_builder/static/src/js/widgets.js"/>
+            <link rel="stylesheet"
+                  href="/website_form_builder/static/src/css/website_form_builder.less"/>
+
+            <script type="text/javascript"
+                    src="/web/static/src/js/core/domain.js"/>
+            <script type="text/javascript"
+                    src="/web/static/src/js/core/context.js"/>
+            <script type="text/javascript"
+                    src="/web/static/lib/py.js/lib/py.js"/>
+            <script type="text/javascript"
+                    src="/web/static/src/js/core/pyeval.js"/>
+        </xpath>
+    </template>
+
+</odoo>
