@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <!-- Inherited Template For WebSite Portal My Account -->
+
+    <template id="website_portal_enhanced_layout" name="custom frontend portal" inherit_id="website_portal.my_account_link">
+        <xpath expr="//ul[@class='dropdown-menu js_usermenu']" position="replace">
+            <ul class="dropdown-menu js_usermenu profile-dropdown" role="menu">
+                <div class="my-profile">
+                    <div class="pic">
+                        <a href="/my/account">
+                            <div name="pic" t-field="user_id.partner_id.image" t-field-options='{"widget": "image"}'/>
+                        </a>
+                        <div class="upload">
+                            <a href="/my/account"><i class="fa fa-camera"/>Upload</a>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                            <span class="user-name" t-esc="user_id.name"/>
+                        <div class="edit-info">
+                            <a href="/my/home" data-toggle="tooltip" data-placement="bottom" title="View Profile"><i class="edit-icon fa fa-user"/></a>
+                            <a href="/my/account" data-toggle="tooltip" data-placement="bottom" title="Edit Profile"><i class=" edit-icon fa fa-pencil"/></a>
+                        </div>
+                    </div>
+                </div>
+                <li class="divider"/>
+                <ul class="logout">
+                    <li>
+                        <a t-attf-href="/web/session/logout?redirect=/" role="menuitem">
+                            <i class="icon-off fa fa-power-off inner-icon"></i>
+                            <span class="font">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </xpath>
+    </template>
+
+    </data>
+</openerp>
