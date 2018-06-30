@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+
+        <template id="snippet_selection" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_content']" position="inside">
+                <div>
+                    <div class="oe_snippet_thumbnail">
+                        <img src="/website_snippet_breadcrumb/static/src/img/snippets/s_breadcrumb.png"
+                             class="oe_snippet_thumbnail_img"/>
+                        <span class="oe_snippet_thumbnail_title">
+                            Breadcrumb
+                        </span>
+                    </div>
+                    <section class="oe_snippet_body website_snippet_breadcrumb" data-revert-order='true' data-include-self='false'>
+                        <div class="parametricTemplate">
+                          <ol class="breadcrumb">
+                              <li>
+                                  Dynamic Breadcrumb: The content will be replaced after saving the page
+                              </li>
+                          </ol>
+                            <!-- the template call code is injected via javascript 
+                                 the class is parametricTemplate in order to 
+                                 override odoo's normal behaviour 
+                                 (no t tags allowed except for t-field) -->
+                        </div>
+                    </section>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="snippet_option" inherit_id="website.snippets" name="show_breadcrumb">
+             <xpath expr="//div[@id='snippet_options']" position="inside">
+                 <div data-snippet-option-id="website_snippet_breadcrumb" data-selector=".website_snippet_breadcrumb"
+                     data-selector-siblings="p, h1, h2, h3, blockquote, .well, .panel, .oe_share"
+                     data-selector-children=".content">
+                     <li>
+                         <a href="#" class="button js_website_snippet_breadcrumb_settings">Change breadcrumb options</a>
+                     </li>
+                 </div>
+             </xpath>
+        </template>
+    </data>
+</openerp>
