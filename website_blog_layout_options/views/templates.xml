@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <template id="frontend_elements_layout" inherit_id="website.assets_frontend" name="elements for the frontend">
+            <xpath expr="." position="inside">
+                <link rel='stylesheet'
+                    href='/website_blog_layout_options/static/src/css/website_blog_layout_options.css'/>
+                <script type="text/javascript" 
+                    src="/website_blog_layout_options/static/src/js/website_blog_layout_options_frontend.js"/>
+            </xpath>
+        </template>
+        <template id="editor_elements_layout" inherit_id="website.assets_editor" name="elements for the backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" 
+                    src="/website_blog_layout_options/static/src/js/website_blog_layout_options_editor.js"/>
+            </xpath>
+        </template>
+        <template id="blog_teaser" inherit_id="website_blog.blog_post_short" name="blogTeaser">
+            <xpath expr="//span[@t-field='blog_post.create_date']" position="replace"/>
+            <xpath expr="//span[@t-field='blog_post.author_id']" position="replace"/>
+            <xpath expr="//h2[@t-field='blog_post.name']" position="after">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <t t-if="blog_post.display_type == 'complete'">
+                                <t t-if="not blog_post.thumbnail">
+                                    <div class="pull-left" />
+                                </t>
+                                <t t-if="blog_post.thumbnail">
+                                    <div  class="pull-left thumbnail"
+                                        style = "margin: 0px 6px 0px 0px;"
+                                        t-field="blog_post.thumbnail.datas"
+                                        t-field-options = '{"widget": "image", "class" : "o_image_floating o_margin_s pull left", "max_width" : 64 }'
+                                        />
+                                </t>
+                                <div t-field="blog_post.content"/>
+                            </t>
+                            <t t-if="blog_post.display_type == 'teaser'">
+                                <t t-if="blog_post.thumbnail">
+                                    <div  class="pull-left thumbnail"
+                                        style = "margin: 0px 10px 10px 0px;"
+                                        t-field="blog_post.thumbnail.datas"
+                                        t-field-options = '{"widget": "image",  "max_width" : 250 }'
+                                        />
+                                </t>
+                                <t t-if="not blog_post.thumbnail">
+                                    <div class="pull-left">
+                                    </div>
+                                </t>
+                                <p t-esc="blog_post.teaser" />
+                                <a t-attf-href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post)}">
+                                </a>
+                            </t>
+                        </div>
+                        <div class="col-md-9">
+                            <span class="glyphicon glyphicon-user"
+                                aria-hidden="true"></span>
+                            <span t-field="blog_post.author_id" style="display: inline-block;"/>
+                            <span class="glyphicon glyphicon-calendar"
+                                aria-hidden="true"></span>
+                            <span t-field="blog_post.create_date"
+                                style="display: inline-block;"
+                                t-field-options='{"format": "MMMM yyyy"}'/>
+                            <span class="fa fa-tags"/>
+                            <t t-foreach="blog_post.tag_ids" t-as="one_tag">
+                                <a t-attf-href="#{blog_url(tag=one_tag)}" t-esc="one_tag.name"/> &amp;nbsp;
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+            <!-- ALLWAYS REMOVE SUBTITLES -->
+            <xpath expr="//h4[@t-field='blog_post.subtitle']" position="replace">
+                <span></span>
+            </xpath>
+            <xpath expr="//span[@t-field='blog_post.author_avatar']" position="replace">
+                <span/>
+            </xpath>
+        </template>
+
+        <template id="show_post_complete_layout_options"
+            inherit_id="website_blog.blog_post_complete">
+            <xpath expr="//div[@id='blog_content']" position="before">
+                <t t-if="blog_post.thumbnail">
+                    <div class="pull-right"
+                        style = "margin: 0px 6px 0px 18px;"
+                        t-field="blog_post.thumbnail.datas"
+                        t-field-options = '{"widget": "image",  "max_width" : 256 }'
+                        />
+                </t>
+            </xpath>
+            <xpath expr="//div[contains(@class, 'js_fullheight')]" position="before">
+                <t t-if="blog_post.background_image_show == 'small_image'">
+                    <div class="js_smallheight"/>
+                </t>
+                <t t-if="blog_post.background_image_show == 'big_image' or not blog_post.background_image_show">
+                    <div/>
+                </t>
+            </xpath>
+
+
+            <!--only footer-->
+            <xpath expr="//div[contains(@class,'cover_footer')]"  position="attributes">
+                <attribute name="t-attf-style">background-image: url(#{next_post.background_image});min-height:275px;max-height:275px;</attribute>
+            </xpath>
+
+            <!--remove subtitle from footer-->
+            <xpath
+                expr="//div[contains(@class,'cover_footer')]/div[@class='blog_title']/h2"
+                position="replace">
+                <h2/>
+            </xpath>
+
+            <!--make footer avatar bigger and set next to name -->
+            <xpath
+                expr="//div[contains(@class,'cover_footer')]/div[@class='blog_title']/div/span[@t-field='next_post.author_avatar']"
+                position="attributes">
+                <attribute name="t-field-options">
+                    {"widget": "image", "class": "img-circle", "style":"width: 70px; margin-right: 10px; display:inline-block"} </attribute>
+            </xpath>
+
+            <xpath
+                expr="//div[contains(@class,'cover_footer')]/div[@class='blog_title']/div/span[@t-field='next_post.author_id']"
+                position="attributes">
+                <attribute name="style">display:inline-block;font-size:24px;
+                </attribute>
+            </xpath>
+
+            <!-- Just remove, read next -->
+            <xpath
+                expr="//div[contains(@class,'cover_footer')]/div[@class='blog_title']/p"
+                position="replace">
+                <p>
+                </p>
+            </xpath>
+
+
+            <!-- reducing title elements for compact layout, explitly
+                 pointing XPath to leave footer the same -->
+            <xpath expr="//div[@id='title']/div[@class='blog_title']" position="replace" >
+                <div class="blog_title"> </div>
+            </xpath>
+
+
+            <xpath expr="//div[@id='title']" position="after" >
+                <div class='blog_title_small'>
+                    <h1 t-field="blog_post.name" id="blog_post_name" t-att-data-blog-id="blog_post.id" style="color:black;"/>
+                    <p class="post-meta text-muted text-center" name="blog_post_data"/>
+                </div>
+            </xpath>
+
+        </template>
+
+        <template id="blog_show_cat_title"
+            name="Blog category title show"
+            inherit_id="website_blog.blog_post_short">
+            <xpath expr="//h3[@t-field='blog.subtitle']" position="replace">
+                <t t-if="current_category">
+                    <h1>Posts for Category: <t t-esc="current_category.name" /> </h1>
+                </t>
+                <t t-if="not current_category">
+                    <h3 t-field="blog.subtitle"/>
+                </t>
+            </xpath>
+        </template>
+
+        <template id="opt_blog_rc_categories"
+            name="Blog category list"
+            active="False"
+            inherit_id = "website_blog.index_right"
+            customize_show="True">
+            <!-- give the element Id in order to identify it in the next xpath in a future-proof way -->
+            <xpath expr="//div[@id='blog_right_column']" position="inside">
+                <section class="mt32">
+                    <h4>Categories  (<t t-esc="len(categories)"/> )</h4>
+                    <ul class="nav nav-pills nav-stacked">
+                        <t t-foreach="categories" t-as="nav_cat">
+                            <li t-attf-style="display: list-item;">
+                                <a t-attf-href="#{blog_url('',['blog', 'tag', 'cat'], blog=blog, tag=None, cat=nav_cat.id)}">
+                                    <b><span t-field="nav_cat.name"/></b>
+                                    <span class="pull-right badge" t-esc="len(nav_cat.post_ids)" /> posts
+                                </a>
+                            </li>
+                        </t>
+                    </ul>
+                </section>
+            </xpath>
+        </template>
+
+
+    </data>
+</openerp>

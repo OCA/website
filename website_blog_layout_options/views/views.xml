@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="blog_configuration" model="ir.ui.view">
+            <field name="model">blog.blog</field>
+            <field name="inherit_id" ref="website_blog.view_blog_blog_form"/>
+            <field name="arch" type="xml">
+                <field name="description" position="after">
+                   <group>
+                    <field name="thumbnail_width"/>
+                     <field name="display_type"/>
+                    <field name="background_image_show" />
+                   </group>
+                    <group>
+                        <button name="set_all_posts" string="Set all posts to the same display type" type="object"/>
+                    </group>
+                </field>
+            </field>
+        </record>
+
+        <record id="blog_post_configuration" model="ir.ui.view">
+            <field name="name">blog_post_extended_types</field>
+            <field name="model">blog.post</field>
+            <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+            <field name="arch" type="xml">
+                <field name="subtitle" position="after">
+                    <field name="background_image_show" />
+                    <field name="thumbnail_binary" widget="image" />
+                    <field name="display_type"/>
+                    <p/>
+                    <group name="teaser" attrs="{'invisible': [('display_type', '!=', 'teaser')]}" colspan="4">
+                        <field name="teaser"/>
+                    </group>
+                    <p/>
+                    <button 
+                       type="object" 
+                       name="extract_teaser"  
+                       string="Generate a teaser from content" 
+                       class="oe_link"/>
+                </field>
+                <field name="visits" position="after">
+                    <field name="content" widget="html"/>
+                </field>
+
+                <field name="content" position="after">
+                    <field name="category_id"/>
+                </field>
+
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="blog_cat_tree">
+            <field name="name">blog_cat_tree</field>
+            <field name="model">blog.category</field>
+            <field name="arch" type="xml">
+                <tree string="Category List" create="true">
+                    <field name="name"/>
+                    <field name="post_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="blog_cat_form">
+            <field name="name">blog_cat_form</field>
+            <field name="model">blog.category</field>
+            <field name="arch" type="xml">
+                <form string="Category Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <label for="post_ids" string="Used in: "/>
+                        <field name="post_ids"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_category">
+            <field name="name">Blog Categories</field>
+            <field name="res_model">blog.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="view_id" ref="blog_cat_tree"/>
+        </record>
+
+        <menuitem id="menu_blog_cat" parent="website_blog.menu_wiki" name="Blog Categories" action="action_category" sequence="41" />
+
+    </data>
+</openerp>
