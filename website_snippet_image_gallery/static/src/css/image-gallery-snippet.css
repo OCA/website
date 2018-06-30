@@ -1,0 +1,32 @@
+.custom-gallery img {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+    margin-bottom:20px;
+}
+
+.custom-gallery img:hover {
+  filter: none; /* IE6-9 */
+  -webkit-filter: grayscale(0);
+}
+
+/*Media query for set image height */
+
+/* Custom, iPhone Retina */ 
+    @media (max-width: 748px) {
+        .custom-gallery img{
+        	height:100px ! important;
+        }
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media (max-width : 480px) {
+		.custom-gallery img{
+        	height:100px ! important;
+        }
+    }
+    /* Small Devices, Tablets */
+    @media (max-width : 768px) {
+		.custom-gallery img{
+        	height:100px ! important;
+        }
+    }

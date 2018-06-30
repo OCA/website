@@ -1,0 +1,9 @@
+<openerp>
+    <data>
+        <template id="mystyle" name="My style" inherit_id="website.assets_frontend">
+            <xpath expr="." position="inside">
+                <link href="/website_snippet_image_gallery/static/src/css/image-gallery-snippet.css" rel="stylesheet" type="text/css"/>
+            </xpath>
+        </template>
+    </data>
+</openerp>

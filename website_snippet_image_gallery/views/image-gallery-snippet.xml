@@ -1,0 +1,45 @@
+<openerp>
+    <data> 
+    <template id="snippet_photo_gallery" name="customer carousel" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']" position="inside">
+            <div>
+                <div class="oe_snippet_thumbnail">
+                    <img class="oe_snippet_thumbnail_img" src="/website_snippet_image_gallery/static/src/img/image-block.png"/>
+                    <span class="oe_snippet_thumbnail_title">Photo gallery</span>
+                </div>
+                <section class="oe_snippet_body ">
+                    <div class="container-fluid oe_structure"></div>
+                        <div class="container">
+                            <div class="custom-gallery row mt16">
+                                <div class="col-md-3 col-sm-4 col-xs-6 ">
+                                    <img class="img-responsive" src="/website_snippet_image_gallery/static/src/img/Free Nature Photo.jpg" style="height: 175px; width: 300px;"/>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ">
+                                    <img class="img-responsive" src="/website_snippet_image_gallery/static/src/img/Grandview_Nature_Preserve.jpg" style="height: 175px; width: 300px;"/>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ">
+                                    <img class="img-responsive" src="/website_snippet_image_gallery/static/src/img/NEC1-300x200.jpg" style="height: 175px; width: 300px;" />
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ">
+                                    <img class="img-responsive" src="/website_snippet_image_gallery/static/src/img/painting_of_nature_by_dhikagraph-d2ynalq.jpg" style="height: 175px; width: 300px;"/>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ">
+                                    <img class="img-responsive" src="/website_snippet_image_gallery/static/src/img/Grandview_Nature_Preserve.jpg" style="height: 175px; width: 300px;"/>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ">
+                                    <img class="img-responsive" src="/website_snippet_image_gallery/static/src/img/painting_of_nature_by_dhikagraph-d2ynalq.jpg" style="height: 175px; width: 300px;"/>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ">
+                                    <img class="img-responsive" src="/website_snippet_image_gallery/static/src/img/Free Nature Photo.jpg" style="height: 175px; width: 300px;"/>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 ">
+                                    <img class="img-responsive" src="/website_snippet_image_gallery/static/src/img/NEC1-300x200.jpg" style="height: 175px; width: 300px;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</openerp>
