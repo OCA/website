@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_website_hotjar_config_settings" model="ir.ui.view">
+        <field name="model">website.config.settings</field>
+        <field name="inherit_id" ref="website.view_website_config_settings" />
+        <field name="arch" type="xml">
+            <div name="google_analytics_key" position="after">
+                <field name="hotjar_analytics_id" />
+            </div>
+        </field>
+    </record>
+</odoo>

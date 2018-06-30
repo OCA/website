@@ -1,0 +1,39 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_analytics_hotjar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-17 20:56+0000\n"
+"PO-Revision-Date: 2018-04-17 20:56+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_analytics_hotjar
+#: model:ir.model.fields,field_description:website_analytics_hotjar.field_website_config_settings_hotjar_analytics_id
+#: model:ir.model.fields,field_description:website_analytics_hotjar.field_website_hotjar_analytics_id
+msgid "Hotjar Site ID"
+msgstr "Hotjar Site ID"
+
+#. module: website_analytics_hotjar
+#: model:ir.model.fields,help:website_analytics_hotjar.field_website_config_settings_hotjar_analytics_id
+#: model:ir.model.fields,help:website_analytics_hotjar.field_website_hotjar_analytics_id
+msgid "The ID Hotjar uses to identify the website"
+msgstr "El ID de Hotjar se usa para identificar el sitio web"
+
+#. module: website_analytics_hotjar
+#: model:ir.model,name:website_analytics_hotjar.model_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: website_analytics_hotjar
+#: model:ir.model,name:website_analytics_hotjar.model_website_config_settings
+msgid "website.config.settings"
+msgstr "website.config.settings"
+
