@@ -13,7 +13,7 @@
               'Antiun Ingenieria S.L., '
               'Odoo Community Association (OCA) ',
     'website': 'https://www.odoo.com/, '
-               'http://www.wearemonk.com, '
+               'http://www.monksoftware.it, '
                'http://www.antiun.com',
     'depends': [
         'sale',
