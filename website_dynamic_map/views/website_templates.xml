@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<template id="company_description"
+          name="Add Google map options"
+          inherit_id="website.company_description">
+    <xpath expr="//img[@t-att-src='res_company.google_map_img()']" position="attributes">
+        <attribute name="t-att-src">res_company.google_map_img(zoom=res_company.google_map_zoom)</attribute>
+    </xpath>
+    <xpath expr="//a[@t-att-href='res_company.google_map_link()']" position="after">
+        <div t-if="res_company.google_map_type == 'dynamic'">
+            <t t-set="map_src" t-value="res_company.google_map_img(zoom=res_company.google_map_zoom)"/>
+            <iframe width="298"
+                    height="298"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    t-att-src="map_src">
+            </iframe>
+        </div>
+    </xpath>
+    <xpath expr="//a[@t-att-href='res_company.google_map_link()']" position="attributes">
+        <attribute name="t-att-href">res_company.google_map_link(zoom=res_company.google_map_zoom)</attribute>
+        <attribute name="t-if">res_company.google_map_type == 'static'</attribute>
+    </xpath>
+
+</template>
+
+
+</data>
+</openerp>
