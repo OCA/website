@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_twitter_feed_admin,twitter.feed.admin,model_twitter_feed,,1,1,1,1
+access_twitter_theme_admin,twitter.theme.admin,model_twitter_theme,,1,1,1,1
+access_twitter_user_admin,twitter.user.admin,model_twitter_user,,1,1,1,1
+access_twitter_tweet_admin,twitter.tweet.admin,model_twitter_tweet,,1,1,1,1

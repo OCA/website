@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id = "twitter_noext_js" inherit_id="website.assets_editor" name="Twitternoextjsinclude">
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/website_twitter_js_self_hosted/static/src/js/website_twitter_js_self_hosted.js"> </script>
+            </xpath>
+        </template>
+
+        <template id="twitter_feed_no_ext_links_widget" inherit_id="website.snippets"
+            name="show_twitter_feed_no_ext_links" >
+            <xpath expr="//div[@id='snippet_content']" position="inside">
+                <div>
+                    <div class="oe_snippet_thumbnail">
+                        <img 
+                            class="oe_snippet_thumbnail_img" 
+                            src="/website_twitter_js_self_hosted/static/src/img/blocks/block_show_twitter_js_self_hosted.png"/>
+                        <span class="oe_snippet_thumbnail_title">Twitter Feed </span>
+                    </div>
+                    <!-- note very important the jq_tweet_feed_entry class
+                             which will be the data-selector in options -->
+                        <section class="oe_snippet_body jq_tweet_feed_entry jq_tweet_theme_entry" >
+                            <div class="parametricTemplate" >
+                                <!-- js will inject our template here -->
+                            </div>
+                        </section>
+                    </div>
+                </xpath>
+
+
+                <xpath expr="//div[@id='snippet_options']" position="inside">
+                    <div data-snippet-option-id="jstweetfeed" data-selector=".jq_tweet_feed_entry"
+                        data-selector-siblings="p, h1, h2, h3, blockquote, .well, .panel, .oe_share"
+                        data-selector-children=".content">
+                        <li class="dropdown-submenu" data-required="false">
+                            <a tabindex="-1" href="#">Choose Twitter Feed</a>
+                            <t t-set="feeds" t-value="request.env['twitter.feed'].search([])"/>
+                            <t t-set="themes" t-value="request.env['twitter.theme'].search([])"/>
+                            <ul class="dropdown-menu">
+                                <t t-foreach="feeds" t-as="feed"> 
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="#"> <t t-esc="feed.twitter_screen_name" /></a>
+                                        <ul class="dropdown-menu">
+                                            <t t-foreach="themes" t-as="theme">
+                                                <li t-attf-data-value="#{feed.id}_#{theme.id}">
+                                                    <a><t t-esc="theme.name"/> Theme</a>
+                                                </li>
+                                            </t>
+                                        </ul>
+                                    </li>
+                                </t>
+                            </ul>
+                        </li>
+                    </div>
+                </xpath>
+            </template>
+
+
+            <template id="twitter_feed_content">
+                <t t-set="selected_tweetfeed_rec" t-value="request.env['twitter.feed'].browse(tweetfeed_id)"/>
+                <t t-set="theme_rec" t-value="request.env['twitter.theme'].browse(tweettheme_id)"/>
+                <t t-if="not theme_rec">
+                    <t t-set="theme_rec" t-value="selected_tweetfeed_rec.theme"/>
+                </t>
+                <t t-set="tweets" t-value="selected_tweetfeed_rec.get_tweets()"/>
+                <div t-if="tweets">
+                    <ul t-attf-style="background: #{theme_rec.twitter_feed_background}; list-style-type: none;">
+                        <t t-if="theme_rec.twitter_show_title">
+                            <h5 t-attf-style="color: #{theme_rec.twitter_text_color};"> <b> <t t-esc="selected_tweetfeed_rec.name"/></b> </h5>
+                        </t>
+                        <t t-foreach="tweets" t-as="tweet">
+                            <t t-if="tweet.text">
+                                <li>
+                                    <div t-attf-style="background: #{theme_rec.twitter_tweet_header_background};"> 
+                                        <t t-if="theme_rec.twitter_show_author">
+                                            <div style="display:inline-block;">
+                                                <b> <t t-esc="tweet.author"/> </b>
+                                            </div>
+                                        </t>
+                                        <t t-if="theme_rec.twitter_show_date">
+                                            <div style="display:inline-block;width:20px;">
+                                            </div>
+                                            <div style="display:inline-block;">
+                                                <b><t t-esc="tweet.tweet_create_date"/> </b>
+                                            </div>
+                                        </t>
+                                    </div>
+                                    <div 
+                                        t-attf-style="background: #{theme_rec.twitter_tweet_text_background};color: #{theme_rec.twitter_text_color};">
+                                        <t t-raw="tweet.text"/> 
+                                    </div>
+                                </li>
+                            </t>
+                        </t>
+                    </ul>
+                </div>
+                <div t-if="not tweets">
+                    <p> No tweets in the selected feed!!!!</p> 
+                </div>
+            </template>
+
+        </data>
+    </openerp>
