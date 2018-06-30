@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="base_location_map" name="Map">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <section class="mb0">
+                        <div class="container">
+                            <div class="row">
+                                <div id="base_location_map" style="height: 70vh" />
+                            </div>
+                        </div>
+                    </section>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.13.1/OpenLayers.js"></script>
+                    <script>
+                        map = new OpenLayers.Map('base_location_map');
+                        map.addLayer(new OpenLayers.Layer.OSM());
+
+                        var markers = new OpenLayers.Layer.Markers("Markers");
+                        map.addLayer(markers);
+
+                        var set_pointer = function(e)
+                        {
+                            e.currentTarget.style.cursor = 'pointer';
+                        },
+                        goto_record = function(e)
+                        {
+                            window.location = this._url;
+                        };
+
+                        <t t-foreach="records" t-as="record">
+                        var marker = new OpenLayers.Marker(
+                            new OpenLayers.LonLat(
+                                <t t-raw="record.longitude or 0" />,
+                                <t t-raw="record.latitude or 0" />
+                            )
+                            .transform(
+                                new OpenLayers.Projection("EPSG:4326"),
+                                map.getProjectionObject()
+                            )
+                        );
+                        marker._url = "<t t-raw="record._get_location_url().replace('&quot;', '\\&quot;')" />";
+                        marker.events.register(
+                            'mouseover', marker, set_pointer
+                        );
+                        marker.events.register(
+                            'click', marker, goto_record
+                        );
+                        markers.addMarker(marker);
+                        </t>
+                        var bounds = markers.getDataExtent()
+                        map.zoomToExtent(
+                            bounds.scale(1.02, bounds.getCenterPixel())
+                        );
+                    </script>
+                </div>
+            </t>
+        </template>
+        <template
+            id="opt_blog_rc_map" name="Show in map"
+            inherit_id="website_blog.index_right" active="False"
+            customize_show="True"
+        >
+            <xpath expr="//div[@id='blog_right_column']" position="inside">
+                <section class="mt32">
+                    <h4>Show in map</h4>
+                    <ul class="nav nav-pills nav-stacked">
+                        <t t-foreach="blogs" t-as="blog">
+                            <li style="display: inline-block">
+                                <a t-attf-href="/blogmap/#{blog.id}">
+                                    <span t-field="blog.name"/>
+                                </a>
+                            </li>
+                        </t>
+                    </ul>
+                </section>
+            </xpath>
+        </template>
+    </data>
+</openerp>
