@@ -8,6 +8,12 @@
     
     website.editor.VideoDialog.include({
         events: _.extend({}, website.editor.VideoDialog.prototype.events, {
+            // Display Uploaded Video
+            'click .play_video-class':function(e){
+
+     document.getElementById("display_video").innerHTML = "<video width='1000' controls style='margin-top:25px;'>" +'<source src="http://localhost:8069/web/binary/saveas?model=ir.attachment&field=datas&id='+this.get('attachment_id')+'" type="video/mp4">' + "</video>" ;         
+       
+            },
             'click .o_website_upload_video_btn': function (e) {
                 e.preventDefault();
                 var filepicker = this.$el.find('input[type=file]');
@@ -18,6 +24,7 @@
                 return false;
             },
             'change input[type=file]': 'video_selected'
+
         }),
         video_selected: function(e) {
             var self = this;
