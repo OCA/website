@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2017 LasLabs Inc.
+    License GPL-3 or later (http://www.gnu.org/licenses/gpl.html).
+-->
+
+<odoo>
+    <template id="assets_frontend"
+              name="WOW Frontend Assets"
+              inherit_id="website.assets_frontend"
+              >
+        <xpath expr="." position="inside">
+
+            <link href="/website_wow/static/lib/css/animate.css"
+                  rel="stylesheet"
+                  type="text/css" />
+
+            <script src="/website_wow/static/lib/js/wow.js"
+                    type="application/javascript" />
+            <script src="/website_wow/static/src/js/website_wow.view.js"
+                    type="application/javascript" />
+
+        </xpath>
+    </template>
+    <template id="assets_editor"
+              name="WOW Editor Assets"
+              inherit_id="website.assets_editor"
+              >
+        <xpath expr="." position="inside">
+            <script src="/website_wow/static/src/js/website_wow.editor.js"
+                    type="application/javascript" />
+        </xpath>
+    </template>
+</odoo>

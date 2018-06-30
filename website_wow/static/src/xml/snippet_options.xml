@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright 2017 LasLabs Inc.
+    License GPL-3 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+
+<odoo>
+
+    <!-- Implement the same interface as Odoo SA in order to be somewhat cross-compatible:
+
+    How to define an animable element in your theme
+    ===============================================
+    <xpath expr="//t[@t-set='o_animate_elements']" position="after">
+        <t t-set="o_animate_elements" t-value="o_animate_elements + ['.myclass']"/>
+    </xpath>
+    ===============================================
+
+    To specifically exclude elements from the possibility of animations, use `o_not-animable` class:
+    ===============================================
+    <section class="o_not-animable" name="My Static Element" />
+    ===============================================
+    -->
+    <template id="snippet_options"
+              name="WOW Options"
+              inherit_id="website.snippet_options">
+
+        <xpath expr="(//div[@data-js])[last()]" position="after">
+
+            <t t-set="o_animate_elements"
+               t-value="['.o_animable', 'section', 'img', '.fa', '[class^=\'col-md\']', '.btn']" />
+            <t t-set="o_wow_selector"
+               t-value="', '.join([s + ':not(.o_not-animable)' for s in o_animate_elements])" />
+
+            <!-- Animations -->
+            <div data-js="o_wow" t-att-data-selector="o_wow_selector">
+                <li class="dropdown-submenu o_wow_options">
+                    <a href="#">
+                        <i class="fa fa-film" />Wow!
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li data-select_class="">
+                            <a href="#">Disable Animation</a>
+                        </li>
+                        <li class="divider" />
+                        <li class="dropdown-submenu o_wow_type_attention_seekers">
+                            <a href="#">Attention Seekers</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate bounce">
+                                    <a href="#">Bounce</a>
+                                </li>
+                                <li data-select_class="o_wow_animate flash">
+                                    <a href="#">Flash</a>
+                                </li>
+                                <li data-select_class="o_wow_animate pulse">
+                                    <a href="#">Pulse</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rubberBand">
+                                    <a href="#">Rubber Band</a>
+                                </li>
+                                <li data-select_class="o_wow_animate shake">
+                                    <a href="#">Shake</a>
+                                </li>
+                                <li data-select_class="o_wow_animate swing">
+                                    <a href="#">Swing</a>
+                                </li>
+                                <li data-select_class="o_wow_animate tada">
+                                    <a href="#">Ta-Da</a>
+                                </li>
+                                <li data-select_class="o_wow_animate wobble">
+                                    <a href="#">Wobble</a>
+                                </li>
+                                <li data-select_class="o_wow_animate jello">
+                                    <a href="#">Jello</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_bouncing_entrances">
+                            <a href="#">Bouncing Entrances</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate bounceIn">
+                                    <a href="#">Bounce In</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceInDown">
+                                    <a href="#">Bounce In Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceInLeft">
+                                    <a href="#">Bounce In Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceInRight">
+                                    <a href="#">Bounce In Right</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceInUp">
+                                    <a href="#">Bounce In Up</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_bouncing_exits">
+                            <a href="#">Bouncing Exits</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate bounceOut">
+                                    <a href="#">Bounce Out</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceOutDown">
+                                    <a href="#">Bounce Out Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceOutLeft">
+                                    <a href="#">Bounce Out Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceOutRight">
+                                    <a href="#">Bounce Out Right</a>
+                                </li>
+                                <li data-select_class="o_wow_animate bounceOutUp">
+                                    <a href="#">Bounce Out Up</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_fading_entrances">
+                            <a href="#">Fading Entrances</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate fadeIn">
+                                    <a href="#">Fade In</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeInDown">
+                                    <a href="#">Fade In Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeInDownBig">
+                                    <a href="#">Fade In Down Big</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeInLeft">
+                                    <a href="#">Fade In Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeInLeftBig">
+                                    <a href="#">Fade In Left Big</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeInRight">
+                                    <a href="#">Fade In Right</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeInRightBig">
+                                    <a href="#">Fade In Right Big</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeInUp">
+                                    <a href="#">Fade In Up</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeInUpBig">
+                                    <a href="#">Fade In Up Big</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_fading_exits">
+                            <a href="#">Fading Exits</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate fadeOut">
+                                    <a href="#">Fade Out</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeOutDown">
+                                    <a href="#">Fade Out Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeOutDownBig">
+                                    <a href="#">Fade Out Down Big</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeOutLeft">
+                                    <a href="#">Fade Out Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeOutLeftBig">
+                                    <a href="#">Fade Out Left Big</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeOutRight">
+                                    <a href="#">Fade Out Right</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeOutRightBig">
+                                    <a href="#">Fade Out Right Big</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeOutUp">
+                                    <a href="#">Fade Out Up</a>
+                                </li>
+                                <li data-select_class="o_wow_animate fadeOutUpBig">
+                                    <a href="#">Fade Out Up Big</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_flippers">
+                            <a href="#">Flippers</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate flip">
+                                    <a href="#">Flip</a>
+                                </li>
+                                <li data-select_class="o_wow_animate flipInX">
+                                    <a href="#">Flip In X</a>
+                                </li>
+                                <li data-select_class="o_wow_animate flipInY">
+                                    <a href="#">Flip In Y</a>
+                                </li>
+                                <li data-select_class="o_wow_animate flipOutX">
+                                    <a href="#">Flip Out X</a>
+                                </li>
+                                <li data-select_class="o_wow_animate flipOutY">
+                                    <a href="#">Flip Out Y</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_lightspeed">
+                            <a href="#">Lightspeed</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate lightSpeedIn">
+                                    <a href="#">Lightspeed In</a>
+                                </li>
+                                <li data-select_class="o_wow_animate lightSpeedOut">
+                                    <a href="#">Lightspeed Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_rotating_entrances">
+                            <a href="#">Rotating Entrances</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate rotateIn">
+                                    <a href="#">Rotate In</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rotateInDownLeft">
+                                    <a href="#">Rotate In Down Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rotateInDownRight">
+                                    <a href="#">Rotate In Down Right</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rotateInUpLeft">
+                                    <a href="#">Rotate In Up Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rotateInUpRight">
+                                    <a href="#">Rotate In Up Right</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_rotating_exits">
+                            <a href="#">Rotating Exits</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate rotateOut">
+                                    <a href="#">Rotate Out</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rotateOutDownLeft">
+                                    <a href="#">Rotate Out Down Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rotateOutDownRight">
+                                    <a href="#">Rotate Out Down Right</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rotateOutUpLeft">
+                                    <a href="#">Rotate Out Up Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rotateOutUpRight">
+                                    <a href="#">Rotate Out Up Right</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_sliding_entrances">
+                            <a href="#">Sliding Entrances</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate slideInUp">
+                                    <a href="#">Slide In Up</a>
+                                </li>
+                                <li data-select_class="o_wow_animate slideInDown">
+                                    <a href="#">Slide In Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate slideInLeft">
+                                    <a href="#">Slide In Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate slideInRight">
+                                    <a href="#">Slide In Right</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_sliding_exits">
+                            <a href="#">Sliding Exits</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate slideOutUp">
+                                    <a href="#">Slide Out Up</a>
+                                </li>
+                                <li data-select_class="o_wow_animate slideOutDown">
+                                    <a href="#">Slide Out Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate slideOutLeft">
+                                    <a href="#">Slide Out Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate slideOutRight">
+                                    <a href="#">Slide Out Right</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_zoom_entrances">
+                            <a href="#">Zoom Entrances</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate zoomIn">
+                                    <a href="#">Zoom In</a>
+                                </li>
+                                <li data-select_class="o_wow_animate zoomInUp">
+                                    <a href="#">Zoom In Up</a>
+                                </li>
+                                <li data-select_class="o_wow_animate zoomInDown">
+                                    <a href="#">Zoom In Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate zoomInLeft">
+                                    <a href="#">Zoom In Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate zoomInRight">
+                                    <a href="#">Zoom In Right</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_zoom_exits">
+                            <a href="#">Zoom Exits</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate zoomOut">
+                                    <a href="#">Zoom Out</a>
+                                </li>
+                                <li data-select_class="o_wow_animate zoomOutUp">
+                                    <a href="#">Zoom Out Up</a>
+                                </li>
+                                <li data-select_class="o_wow_animate zoomOutDown">
+                                    <a href="#">Zoom Out Down</a>
+                                </li>
+                                <li data-select_class="o_wow_animate zoomOutLeft">
+                                    <a href="#">Zoom Out Left</a>
+                                </li>
+                                <li data-select_class="o_wow_animate zoomOutRight">
+                                    <a href="#">Zoom Out Right</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu o_wow_type_specials">
+                            <a href="#">Specials</a>
+                            <ul class="dropdown-menu">
+                                <li data-select_class="o_wow_animate hinge">
+                                    <a href="#">Hinge</a>
+                                </li>
+                                <li data-select_class="o_wow_animate jackInTheBox">
+                                    <a href="#">Jack-In-The-Box</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rollIn">
+                                    <a href="#">Roll In</a>
+                                </li>
+                                <li data-select_class="o_wow_animate rollOut">
+                                    <a href="#">Roll Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+            <!-- Durations -->
+            <div data-js="o_wow_duration" t-att-data-selector="o_wow_selector">
+                  <li class="dropdown-submenu">
+                      <a href="#">
+                          <i class="fa fa-clock-o" />Wow Duration
+                      </a>
+                      <ul class="dropdown-menu o_wow_advanced_duration">
+                          <li data-select_class="">
+                              <a href="#">Default</a>
+                          </li>
+                          <li class="divider" />
+                          <li data-select_class="o_wow_duration-1s">
+                              <a href="#">1s</a>
+                          </li>
+                          <li data-select_class="o_wow_duration-2s">
+                              <a href="#">2s</a>
+                          </li>
+                          <li data-select_class="o_wow_duration-3s">
+                              <a href="#">3s</a>
+                          </li>
+                          <li data-select_class="o_wow_duration-4s">
+                              <a href="#">4s</a>
+                          </li>
+                          <li data-select_class="o_wow_duration-5s">
+                              <a href="#">5s</a>
+                          </li>
+                          <li data-select_class="o_wow_duration-6s">
+                              <a href="#">6s</a>
+                          </li>
+                          <li data-select_class="o_wow_duration-7s">
+                              <a href="#">7s</a>
+                          </li>
+                          <li data-select_class="o_wow_duration-8s">
+                              <a href="#">8s</a>
+                          </li>
+                          <li data-select_class="o_wow_duration-9s">
+                              <a href="#">9s</a>
+                          </li>
+                          <li data-select_class="o_wow_duration-10s">
+                              <a href="#">10s</a>
+                          </li>
+                      </ul>
+                  </li>
+            </div>
+
+            <div data-js="o_wow_delay" t-att-data-selector="o_wow_selector">
+                  <li class="dropdown-submenu">
+                      <a href="#">
+                          <i class="fa fa-hourglass-start" />Wow Delay
+                      </a>
+                      <ul class="dropdown-menu o_wow_advanced_delay">
+                          <li data-select_class="">
+                              <a href="#">Default</a>
+                          </li>
+                          <li class="divider" />
+                          <li data-select_class="o_wow_delay-1s">
+                              <a href="#">1s</a>
+                          </li>
+                          <li data-select_class="o_wow_delay-2s">
+                              <a href="#">2s</a>
+                          </li>
+                          <li data-select_class="o_wow_delay-3s">
+                              <a href="#">3s</a>
+                          </li>
+                          <li data-select_class="o_wow_delay-4s">
+                              <a href="#">4s</a>
+                          </li>
+                          <li data-select_class="o_wow_delay-5s">
+                              <a href="#">5s</a>
+                          </li>
+                          <li data-select_class="o_wow_delay-6s">
+                              <a href="#">6s</a>
+                          </li>
+                          <li data-select_class="o_wow_delay-7s">
+                              <a href="#">7s</a>
+                          </li>
+                          <li data-select_class="o_wow_delay-8s">
+                              <a href="#">8s</a>
+                          </li>
+                          <li data-select_class="o_wow_delay-9s">
+                              <a href="#">9s</a>
+                          </li>
+                          <li data-select_class="o_wow_delay-10s">
+                              <a href="#">10s</a>
+                          </li>
+                      </ul>
+                  </li>
+            </div>
+
+            <div data-js="o_wow_offset" t-att-data-selector="o_wow_selector">
+                  <li class="dropdown-submenu">
+                      <a href="#">
+                          <i class="fa fa-arrows-alt" />Wow Offset
+                      </a>
+                      <ul class="dropdown-menu o_wow_advanced_offset">
+                          <li data-select_class="">
+                              <a href="#">Default</a>
+                          </li>
+                          <li class="divider" />
+                          <li data-select_class="o_wow_offset-1">
+                              <a href="#">1</a>
+                          </li>
+                          <li data-select_class="o_wow_offset-2">
+                              <a href="#">2</a>
+                          </li>
+                          <li data-select_class="o_wow_offset-3">
+                              <a href="#">3</a>
+                          </li>
+                          <li data-select_class="o_wow_offset-4">
+                              <a href="#">4</a>
+                          </li>
+                          <li data-select_class="o_wow_offset-5">
+                              <a href="#">5</a>
+                          </li>
+                          <li data-select_class="o_wow_offset-6">
+                              <a href="#">6</a>
+                          </li>
+                          <li data-select_class="o_wow_offset-7">
+                              <a href="#">7</a>
+                          </li>
+                          <li data-select_class="o_wow_offset-8">
+                              <a href="#">8</a>
+                          </li>
+                          <li data-select_class="o_wow_offset-9">
+                              <a href="#">9</a>
+                          </li>
+                          <li data-select_class="o_wow_offset-10">
+                              <a href="#">10</a>
+                          </li>
+                      </ul>
+                  </li>
+            </div>
+
+            <div data-js="o_wow_iteration" t-att-data-selector="o_wow_selector">
+                  <li class="dropdown-submenu">
+                      <a href="#">
+                          <i class="fa fa-recycle" />Wow Iteration
+                      </a>
+                      <ul class="dropdown-menu o_wow_advanced_iteration">
+                          <li data-select_class="">
+                              <a href="#">Default</a>
+                          </li>
+                          <li class="divider" />
+                          <li data-select_class="o_wow_iteration-1">
+                              <a href="#">1</a>
+                          </li>
+                          <li data-select_class="o_wow_iteration-2">
+                              <a href="#">2</a>
+                          </li>
+                          <li data-select_class="o_wow_iteration-3">
+                              <a href="#">3</a>
+                          </li>
+                          <li data-select_class="o_wow_iteration-4">
+                              <a href="#">4</a>
+                          </li>
+                          <li data-select_class="o_wow_iteration-5">
+                              <a href="#">5</a>
+                          </li>
+                          <li data-select_class="o_wow_iteration-6">
+                              <a href="#">6</a>
+                          </li>
+                          <li data-select_class="o_wow_iteration-7">
+                              <a href="#">7</a>
+                          </li>
+                          <li data-select_class="o_wow_iteration-8">
+                              <a href="#">8</a>
+                          </li>
+                          <li data-select_class="o_wow_iteration-9">
+                              <a href="#">9</a>
+                          </li>
+                          <li data-select_class="o_wow_iteration-10">
+                              <a href="#">10</a>
+                          </li>
+                      </ul>
+                  </li>
+            </div>
+            
+        </xpath>
+
+    </template>
+
+</odoo>
