@@ -10,14 +10,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-03 11:18+0000\n"
-"PO-Revision-Date: 2017-06-03 11:18+0000\n"
-"Last-Translator: Marc Tormo i Bochaca <mtbochaca@gmail.com>, 2017\n"
+"PO-Revision-Date: 2018-07-03 14:04+0000\n"
+"Last-Translator: mtbochaca <mtbochaca@gmail.com>\n"
 "Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
@@ -27,7 +28,7 @@ msgstr "Afegir Contacte"
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.tree_actions
 msgid "Add new contact"
-msgstr "Afegir un nou contacte "
+msgstr "Afegir un nou contacte"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_menu_contacts
@@ -43,7 +44,7 @@ msgstr "Esborrar"
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
 msgid "Edit Contact"
-msgstr "Editar Contacte "
+msgstr "Editar Contacte"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
@@ -59,12 +60,12 @@ msgstr "Camps no disponibles: %s"
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
 msgid "Mobile"
-msgstr "Mòbil "
+msgstr "Mòbil"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
 msgid "My Contacts"
-msgstr "Els meus contactes "
+msgstr "Els meus contactes"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
@@ -74,7 +75,7 @@ msgstr "Nom"
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
 msgid "New Contact"
-msgstr "Nou contacte "
+msgstr "Nou contacte"
 
 #. module: website_portal_contact
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
@@ -105,4 +106,4 @@ msgstr "Actualment no hi ha contactes al seu compte."
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
 #: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
 msgid "Your Contacts"
-msgstr "Els vostres contactes "
+msgstr "Els vostres contactes"
