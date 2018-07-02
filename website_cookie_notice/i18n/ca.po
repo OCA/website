@@ -10,14 +10,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-03-28 10:41+0000\n"
-"PO-Revision-Date: 2017-03-28 10:41+0000\n"
-"Last-Translator: Marc Tormo i Bochaca <mtbochaca@gmail.com>, 2017\n"
+"PO-Revision-Date: 2018-07-02 14:19+0000\n"
+"Last-Translator: mtbochaca <mtbochaca@gmail.com>\n"
 "Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #. module: website_cookie_notice
 #: model:ir.ui.view,arch_db:website_cookie_notice.message
@@ -25,6 +26,8 @@ msgid ""
 ". To disable them, configure your browser properly. If you keep using this "
 "website, you are accepting those."
 msgstr ""
+". Per desactivar-les, configureu correctament el vostre navegador. Si "
+"continueu navegant per aquest lloc web, entendrem que les esteu acceptant."
 
 #. module: website_cookie_notice
 #: model:ir.ui.view,arch_db:website_cookie_notice.message
