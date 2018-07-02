@@ -10,49 +10,50 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-10 03:48+0000\n"
-"PO-Revision-Date: 2017-01-10 03:48+0000\n"
-"Last-Translator: Carles Antoli <carlesantoli@hotmail.com>, 2017\n"
+"PO-Revision-Date: 2018-07-02 16:24+0000\n"
+"Last-Translator: mtbochaca <mtbochaca@gmail.com>\n"
 "Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:77
 #, python-format
 msgid "%s must start with `/`"
-msgstr ""
+msgstr "%s ha de començar amb `/`"
 
 #. module: website_seo_redirection
 #: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid ", but"
-msgstr ""
+msgstr ", però"
 
 #. module: website_seo_redirection
 #: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "/page/website_seo_redirection.sample_page"
-msgstr ""
+msgstr "/page/website_seo_redirection.sample_page"
 
 #. module: website_seo_redirection
 #: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "/seo/sample"
-msgstr ""
+msgstr "/seo/sample"
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:13
 #, python-format
 msgid "BEWARE!"
-msgstr ""
+msgstr "COMPTE!"
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:8
 #, python-format
 msgid "Change the URL"
-msgstr ""
+msgstr "Canvia la URL"
 
 #. module: website_seo_redirection
 #: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_create_uid
@@ -67,14 +68,14 @@ msgstr "Creat el"
 #. module: website_seo_redirection
 #: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_destination
 msgid "Destination URL"
-msgstr ""
+msgstr "URL de destinació"
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:22
 #, python-format
 msgid "Destination URL:"
-msgstr ""
+msgstr "URL de destinació:"
 
 #. module: website_seo_redirection
 #: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_display_name
@@ -84,25 +85,25 @@ msgstr "Veure el nom"
 #. module: website_seo_redirection
 #: sql_constraint:website.seo.redirection:0
 msgid "Duplicated original URL"
-msgstr ""
+msgstr "URL original duplicada"
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:149
 #, python-format
 msgid "Duplicated redirection."
-msgstr ""
+msgstr "Re-direcció duplicada."
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:33
 #, python-format
 msgid "E.g.: /some/good-url"
-msgstr ""
+msgstr "E.x.: /alguna/bona-url"
 
 #. module: website_seo_redirection
 #: model:ir.model,name:website_seo_redirection.model_ir_http
 msgid "HTTP routing"
-msgstr ""
+msgstr "Ruta HTTP"
 
 #. module: website_seo_redirection
 #: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_id
@@ -118,6 +119,9 @@ msgid ""
 "some URL that is already in use, could be interferring with other page and "
 "bad things could happen..."
 msgstr ""
+"Si necessiteu una URL especial per aquesta pàgina, la podeu definir aquí, "
+"però si poseu alguna URL que ja s'utilitzi, pot interferir amb l'altra "
+"pàgina i coses dolentes podrien succeir..."
 
 #. module: website_seo_redirection
 #: model:ir.model.fields,help:website_seo_redirection.field_website_seo_redirection_relocate_controller
@@ -127,12 +131,16 @@ msgid ""
 "requests be redirected, but a new controller should be available in the "
 "destination URL if you do not want a 404 error."
 msgstr ""
+"Si re-ubiqueu el controlador, la mateixa pàgina que es trobava a l'URL "
+"original ara estarà a la destinació. En cas contrari, això només farà que "
+"les sol·licituds es re-dirigeixin, però un nou controlador ha d'estar "
+"disponible a l'URL de destinació si no voleu un error 404."
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:81
 #, python-format
 msgid "Invalid character found in %s: `%s`"
-msgstr ""
+msgstr "S'ha trobat un caràcter no vàlid a %s: `%s`"
 
 #. module: website_seo_redirection
 #: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection___last_update
@@ -153,78 +161,78 @@ msgstr "Darrera Actualització el"
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:109
 #, python-format
 msgid "No origin found for this redirection."
-msgstr ""
+msgstr "No s'ha trobat cap origen per a aquesta re-direcció."
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:147
 #, python-format
 msgid "No redirection target found."
-msgstr ""
+msgstr "No s'ha trobat cap objectiu de re-direcció."
 
 #. module: website_seo_redirection
 #: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_origin
 #: model:website.menu,name:website_seo_redirection.sample_origin_menu
 msgid "Original URL"
-msgstr ""
+msgstr "URL Original"
 
 #. module: website_seo_redirection
 #: model:ir.model.fields,help:website_seo_redirection.field_website_seo_redirection_destination
 msgid "Path where the controller will be found now."
-msgstr ""
+msgstr "Ruta on es troba el controlador ara mateix."
 
 #. module: website_seo_redirection
 #: model:ir.model.fields,help:website_seo_redirection.field_website_seo_redirection_origin
 msgid "Path where the original controller was found."
-msgstr ""
+msgstr "Ruta on estava el controlador original."
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:68
 #, python-format
 msgid "Recursive redirection is forbidden."
-msgstr ""
+msgstr "Es prohibeix la re-direcció recursiva."
 
 #. module: website_seo_redirection
 #: sql_constraint:website.seo.redirection:0
 msgid "Recursive redirection."
-msgstr ""
+msgstr "Re-direcció recursiva."
 
 #. module: website_seo_redirection
 #: model:website.menu,name:website_seo_redirection.sample_destination_menu
 msgid "Redirected URL"
-msgstr ""
+msgstr "URL re-direccionada"
 
 #. module: website_seo_redirection
 #: model:ir.model.fields,field_description:website_seo_redirection.field_website_seo_redirection_relocate_controller
 msgid "Relocate controller"
-msgstr ""
+msgstr "Desplaça el controlador"
 
 #. module: website_seo_redirection
 #: model:ir.actions.act_window,name:website_seo_redirection.website_seo_redirection_action_open
 #: model:ir.ui.menu,name:website_seo_redirection.website_seo_redirection_menu
 msgid "SEO Redirections"
-msgstr ""
+msgstr "Re-direccions SEO"
 
 #. module: website_seo_redirection
 #: model:website.menu,name:website_seo_redirection.sample_menu
 msgid "SEO Sample"
-msgstr ""
+msgstr "Exemple SEO"
 
 #. module: website_seo_redirection
 #: model:ir.model,name:website_seo_redirection.model_website_seo_redirection
 msgid "SEO controller redirections"
-msgstr ""
+msgstr "Re-direccions de controlador SEO"
 
 #. module: website_seo_redirection
 #: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "The original URL for this page is"
-msgstr ""
+msgstr "La URL original d'aquesta pàgina és"
 
 #. module: website_seo_redirection
 #. openerp-web
 #: code:addons/website_seo_redirection/static/src/xml/website_seo.xml:33
 #, python-format
 msgid "URL without domain name, all lower case, hyphenated."
-msgstr ""
+msgstr "URL sense el nom del domini, tot en minúscules, amb guió."
 
 #. module: website_seo_redirection
 #: model:ir.model,name:website_seo_redirection.model_website
@@ -234,15 +242,15 @@ msgstr "Lloc web"
 #. module: website_seo_redirection
 #: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "Welcome, this is SEO."
-msgstr ""
+msgstr "Benvinguts, això és un SEO."
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:85
 #, python-format
 msgid "You cannot redirect an URL to itself."
-msgstr ""
+msgstr "No podeu re-dirigir una URL cap a ella mateixa."
 
 #. module: website_seo_redirection
 #: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
 msgid "is beautier, right?"
-msgstr ""
+msgstr "és més bonic, oi?"
