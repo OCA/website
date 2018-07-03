@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="website_supplier_form_view">
+        <field name="name">Website Supplier</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="website_partner.view_partners_form_website"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='website_published']" position="after">
+                <field name="website_supplier_published" class="pull-left" widget="website_button"
+                    attrs="{'invisible': [('supplier','=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
