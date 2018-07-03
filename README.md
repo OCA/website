@@ -56,7 +56,7 @@ Unported addons
 ---------------
 addon | version | summary
 --- | --- | ---
-[website_analytics_piwik](website_analytics_piwik/) | 8.0.1.0.0 (unported) | Track website users using piwik
+[website_analytics_piwik](website_analytics_piwik/) | 9.0.1.0.0  | Track website users using piwik
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 (unported) | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 (unported) | Add Facebook comments on blog posts
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
