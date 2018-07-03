@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <template id="assets_partner_rating"
+            inherit_id="website.assets_frontend"
+            name="website_partner_rating_comments">
+            <xpath expr="." position="inside">
+                <script type="text/javascript"
+                    src="/website_partner_rating/static/src/js/comment_priority.js">
+                </script>
+                <script>
+                    $.fn.stars4= function() { return $(this).each(
+                    function() { $(this).html( $('
+                    <span />
+                    ').width( Math.max(0, (Math.min(5,
+                    blog_rate_value1))) * 17)); }); }
+                </script>
+                <link rel='stylesheet'
+                    href='/website_partner_rating/static/src/css/partner_rating.css' />
+                <style>h1 { width:100%; display:inline-block; }</style>
+            </xpath>
+        </template>
+
+
+
+
+        <template id="website_partner_content_comment"
+            inherit_id="website_crm_partner_assign.partner"
+            name="Partner Rating Top">
+            <xpath expr="//div[@class='col-md-5']" position="after">
+
+                <input id="total_comment"
+                    t-att-value="len(partner.website_message_ids)" name="total_comment"
+                    type="hidden" />
+                <a href="#comment">
+                    <div>
+                        <div class="average_product_class"
+                            id="rate_tooltip">
+                            <div
+                                style="float:left;margin-bottom: -40px;" id="shop_rate_star">
+
+                                <p class="rate_average_shop">
+                                    <span class="stars3">
+                                        <span style="width: 50.25px;"></span>
+                                    </span>
+                                </p>
+
+                            </div>
+
+                            <div class="review_font">
+                                <span id="product_average"
+                                    style="margin-left:100px;font-weight:bold;color:black"
+                                    t-field="partner.partner_rate" />
+
+                                <input id="total_comment"
+                                    t-att-value="len(partner.website_message_ids)"
+                                    name="total_comment" type="hidden">
+                                </input>
+                                <t t-if="partner.partner_rate &lt;=0">
+                                    <span
+                                        style="font-size:10px;color:black;">
+                                        (Be the first one to rate)
+                                    </span>
+                                </t>
+                                <span>(</span>
+                                <span id="total_comment_span"
+                                    name="total_comment_span">
+                                    <t
+                                        t-esc="len(partner.website_message_ids)">
+                                    </t>
+                                </span>
+                                <t
+                                    t-if="len(partner.website_message_ids) &lt;= 1">
+                                    Review
+                                </t>
+                                <t
+                                    t-if="len(partner.website_message_ids) > 1">
+                                    Reviews
+                                </t>
+                                <span>)</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+
+
+            </xpath>
+
+
+        </template>
+
+        <template id="website_crm_partner_assign.references_block"
+            name="Partner References Block">
+            <t
+                t-if="any([p.website_published for p in partner.implemented_partner_ids])">
+                <h3 id="references">References</h3>
+                <div t-foreach="partner.implemented_partner_ids"
+                    t-as="reference" class="media">
+                    <t t-if="reference.website_published">
+                        <a class="pull-left"
+                            t-attf-href="/customers/#{slug(reference)}">
+                            <span t-field="reference.image_small"
+                                t-field-options='{"widget": "image", "class": "center-block"}' />
+                        </a>
+                        <div class="media-body"
+                            style="min-height: 64px;">
+                            <a class="media-heading"
+                                t-attf-href="/customers/#{slug(reference)}">
+                                <span t-field="reference.self" />
+                            </a>
+                            <div
+                                t-field='reference.website_short_description' />
+                        </div>
+                    </t>
+                </div>
+            </t>
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <t t-if="len(partner.website_message_ids) &lt;= 1"
+                style="color:#168D93">
+                <t t-esc="len(partner.website_message_ids)" />
+                review
+            </t>
+            <t t-if="len(partner.website_message_ids) > 1"
+                style="color:#168D93">
+                <t t-esc="len(partner.website_message_ids)" />
+                reviews
+            </t>
+
+
+            <ul class="media-list" id="comments-list">
+                <div id="paginationdemo" class="demo">
+                    <t t-set="total_pages"
+                        t-value="len(partner.website_message_ids)/10" />
+                    <t t-foreach="total_pages+1" t-as="page">
+                        <t t-set="page_next" t-value="page+1" />
+                        <div t-att-id="'p%s' %page_next"
+                            class="pagedemo _current">
+                            <li
+                                t-foreach="partner.website_message_ids[(page*10):(((page_next)*10))]"
+                                t-as="message" class="medianew">
+                                <span class="pull-left">
+                                    <img
+                                        class="media-object img img-circle"
+                                        t-att-src="website.image_url(message, 'author_avatar')"
+                                        style="width: 30px" />
+                                </span>
+
+
+
+
+
+
+                                <div class="media-body oe_msg">
+                                    <div
+                                        class="media-body oe_msg_content">
+                                        <t
+                                            t-call="website.publish_short">
+                                            <t t-set="object"
+                                                t-value="message" />
+                                        </t>
+                                        <input
+                                            t-att-id="'partner-actual-rate-%s' %message.id"
+                                            t-att-value="message.message_rate" name="message_rate"
+                                            type="hidden" />
+
+
+                                        <input
+                                            t-att-id="'actual-rate-%s' %message.id"
+                                            t-att-value="message.message_rate" name="message_rate"
+                                            type="hidden" />
+                                        <t
+                                            t-if="message.message_rate >=0">
+                                            <input id="message_id"
+                                                t-att-value="message.id" name="message_id" type="hidden" />
+                                            <div class="starRating1">
+                                                <div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                                <input
+                                                                    t-att-id="'rate1-%s' %message.id" type="radio"
+                                                                    t-att-name="'rate-%s' %message.id" value="1">
+                                                                    <label
+                                                                        for="rating1">
+                                                                        <span>
+                                                                            1
+                                                                        </span>
+                                                                    </label>
+                                                                </input>
+                                                            </div>
+                                                            <input
+                                                                t-att-id="'rate2-%s' %message.id" type="radio"
+                                                                t-att-name="'rate-%s' %message.id" value="2">
+                                                                <label
+                                                                    for="rating2">
+                                                                    <span>
+                                                                        2
+                                                                    </span>
+                                                                </label>
+                                                            </input>
+                                                        </div>
+                                                        <input
+                                                            t-att-id="'rate3-%s' %message.id" type="radio"
+                                                            t-att-name="'rate-%s' %message.id" value="3">
+                                                            <label
+                                                                for="rating3">
+                                                                <span>
+                                                                    3
+                                                                </span>
+                                                            </label>
+                                                        </input>
+                                                    </div>
+                                                    <input
+                                                        t-att-id="'rate4-%s' %message.id" type="radio"
+                                                        t-att-name="'rate-%s' %message.id" value="4">
+                                                        <label
+                                                            for="rating4">
+                                                            <span>
+                                                                4
+                                                            </span>
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <input
+                                                    t-att-id="'rate5-%s' %message.id" type="radio"
+                                                    t-att-name="'rate-%s' %message.id" value="5">
+                                                    <label
+                                                        for="rating5">
+                                                        <span>5</span>
+                                                    </label>
+                                                </input>
+                                            </div>
+                                        </t>
+
+
+                                        <t
+                                            t-if="message.message_rate > 0">
+                                            <input
+                                                id="partner_message_id" t-att-value="message.id"
+                                                name="partner_message_id" type="hidden" />
+
+                                        </t>
+                                        <div class="product_short"
+                                            t-field="message.short_description" />
+                                        <h5 class="media-heading"
+                                            style="display:inline;margin-left:6px !important;color:antiquewhite;">
+
+                                            <span
+                                                class="review_class_rating">
+                                                Reviewed by
+                                            </span>
+                                            <span
+                                                t-field="message.author_id">
+                                            </span>
+
+                                        </h5>
+
+                                        <div
+                                            class="product_long css_product_long" t-field="message.body" />
+                                        <span
+                                            class="posted_on_product_rate_date">
+                                            (Posted on
+                                            <span
+                                                t-field="message.create_date"
+                                                t-field-options='{"format": "d MMMM, y"}' />
+                                            )
+                                        </span>
+                                        <div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </t>
+                    <div id="demo5"></div>
+                </div>
+                <p class="post_your_review">
+                    Submit your review about this Partner
+                </p>
+
+            </ul>
+
+
+            <hr class="mb32" />
+            <t t-if="website.user_id == user_id">
+                <p
+                    style="margin-top: 48px !important;
+margin-bottom: -10px;">
+                    Please
+                    <a
+                        t-attf-href="/web/login?redirect=/partners/#{slug(partner)}">
+                        Sign in
+                    </a>
+                    to rate this Partner
+                </p>
+                <form id="comment"
+                    t-attf-action="/partners/partner/comment/#{partner.id}"
+                    method="POST">
+                    <!--/blog/#{ slug(blog) }/post/#{ slug(blog_post) }#comments" -->
+                    <div class="media">
+                        <span class="pull-left">
+                            <img class="img img-circle media-object"
+                                t-att-src="website.image_url(user_id.partner_id, 'image_small')"
+                                style="width: 30px" />
+                        </span>
+                        <div class="media-body">
+                            <div class="comment_rate">
+                                <div class="cancel_rating_class"
+                                    title="Cancel Rating">
+                                    <a title="Cancel Rating"></a>
+                                </div>
+                                <input id="message_rate"
+                                    name="message_rate" class="form-control" type="hidden" />
+
+                                <div class="starRating" id="star">
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <input id="rating11"
+                                                        type="radio" name="rating" value="1">
+                                                        <label
+                                                            for="rating11">
+                                                            <span>
+                                                                1
+                                                            </span>
+                                                        </label>
+                                                    </input>
+                                                </div>
+                                                <input id="rating12"
+                                                    type="radio" name="rating" value="2">
+                                                    <label
+                                                        for="rating12">
+                                                        <span>2</span>
+                                                    </label>
+                                                </input>
+                                            </div>
+                                            <input id="rating13"
+                                                type="radio" name="rating" value="3">
+                                                <label for="rating13">
+                                                    <span>3</span>
+                                                </label>
+                                            </input>
+                                        </div>
+                                        <input id="rating14"
+                                            type="radio" name="rating" value="4">
+                                            <label for="rating14">
+                                                <span>4</span>
+                                            </label>
+                                        </input>
+                                    </div>
+                                    <input id="rating15" type="radio"
+                                        name="rating" value="5">
+                                        <label for="rating15">
+                                            <span>5</span>
+                                        </label>
+                                    </input>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pull-left mb32" style="width: 75%">
+                        <input type="text" rows="1" readonly="true"
+                            name="short_description" style="margin-bottom:10px;"
+                            class="form-control"
+                            placeholder="Write your overall feelings about this Partner..">
+                        </input>
+                        <textarea rows="3" name="comment"
+                            readonly="true" class="form-control"
+                            placeholder="Write long Description...">
+                        </textarea>
+                        <a disabled="True"
+                            class="btn btn-primary mt8 a-submit">
+                            Post Your Review
+                        </a>
+                    </div>
+                </form>
+            </t>
+            <t t-if="website.user_id != user_id">
+                <form id="comment"
+                    t-attf-action="/partners/partner/comment/#{partner.id}"
+                    method="POST">
+                    <!--<span t-esc="partner.id"/>-->
+                    <div class="pull-left mb32" style="width: 75%">
+                        <div class="set_star">
+                            <div class="cancel_rating_class"
+                                title="Cancel Rating">
+                                <a title="Cancel Rating"></a>
+                            </div>
+
+                            <div class="starRating" id="star">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <input id="rating21"
+                                                    type="radio" name="review" value="1">
+                                                    <label
+                                                        for="rating21">
+                                                        <span>1</span>
+                                                    </label>
+                                                </input>
+                                            </div>
+                                            <input id="rating22"
+                                                type="radio" name="review" value="2">
+                                                <label for="rating22">
+                                                    <span>2</span>
+                                                </label>
+                                            </input>
+                                        </div>
+                                        <input id="rating23"
+                                            type="radio" name="review" value="3">
+                                            <label for="rating23">
+                                                <span>3</span>
+                                            </label>
+                                        </input>
+                                    </div>
+                                    <input id="rating24" type="radio"
+                                        name="review" value="4">
+                                        <label for="rating24">
+                                            <span>4</span>
+                                        </label>
+                                    </input>
+                                </div>
+                                <input id="rating25" type="radio"
+                                    name="review" value="5">
+                                    <label for="rating25">
+                                        <span>5</span>
+                                    </label>
+                                </input>
+                            </div>
+
+                        </div>
+                        <input type="hidden" id="blog_post_id"
+                            name="message_rate" class="form-control"
+                            style="margin-bottom:10px;" />
+                        <input type="text" rows="1"
+                            name="short_description"
+                            style="margin-bottom:10px;text-shadow: 1px 1px 1px #ccc;"
+                            class="form-control"
+                            placeholder="Write your overall feelings about this Partner..">
+                        </input>
+                        <textarea rows="3" name="comment"
+                            class="form-control" placeholder="Write long Description...">
+                        </textarea>
+                        <input class="btn btn-primary mt8 a-submit"
+                            type="submit" value="Post Your Review" />
+                    </div>
+                </form>
+            </t>
+        </template>
+    </data>
+</openerp>
