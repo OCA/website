@@ -26,6 +26,7 @@ AddThis integration
 |badge1| |badge2| |badge3| |badge4| |badge5| 
 
 Integrate  `AddThis.com <https://www.addthis.com>`_ in your Odoo website.
+
 **Table of contents**
 
 .. contents::
