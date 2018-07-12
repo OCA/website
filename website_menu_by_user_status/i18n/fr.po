@@ -14,44 +14,41 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: website_menu_by_user_status
+#: code:addons/website_menu_by_user_status/models/website_menu.py:17
 #: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu_user_logged
+#, python-format
 msgid "If checked, the menu will be displayed when the user is logged."
-msgstr ""
+msgstr "Si coché, le menu sera affiché lorsque l'utilisateur est connecté."
 
 #. module: website_menu_by_user_status
 #: code:addons/website_menu_by_user_status/models/website_menu.py:25
 #: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu_user_not_logged
 #, python-format
 msgid "If checked, the menu will be displayed when the user is not logged."
-msgstr ""
-
-#. module: website_menu_by_user_status
-#: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu_user_not_logged
-msgid "If checked, the menu will be displayed when the user is not logged."
-msgstr ""
+msgstr "Si coché, le menu sera affiché lorsque l'utilisateur n'est pas connecté."
 
 #. module: website_menu_by_user_status
 #: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu_group_ids
 msgid "If filled, the menu item is only visible to the users from one of the selected groups."
-msgstr ""
+msgstr "Si rempli, l'élément de menu sera seulement visible pour les utilisateurs appartenant à l'un groupes sélectionnés."
 
 #. module: website_menu_by_user_status
 #: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu_group_ids
 msgid "Group"
-msgstr ""
+msgstr "Groupe"
 
 #. module: website_menu_by_user_status
 #: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu_user_logged
 msgid "User Logged"
-msgstr ""
+msgstr "Utilisateur connecté"
 
 #. module: website_menu_by_user_status
 #: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu_user_not_logged
 msgid "User Not Logged"
-msgstr ""
+msgstr "Utilisateur non connecté"
 
 #. module: website_menu_by_user_status
 #: model:ir.model,name:website_menu_by_user_status.model_website_menu
 msgid "Website Menu"
-msgstr ""
+msgstr "Menu du site web"
 
