@@ -2,7 +2,7 @@
 # Copyright 2018 Numigi
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models, _
+from odoo import api, fields, models
 
 
 class WebsiteMenu(models.Model):
@@ -21,7 +21,8 @@ class WebsiteMenu(models.Model):
     user_not_logged = fields.Boolean(
         string="User Not Logged",
         default=True,
-        help="If checked, the menu will be displayed when the user is not logged."
+        help="If checked, the menu will be displayed "
+             "when the user is not logged."
     )
 
     @api.one
