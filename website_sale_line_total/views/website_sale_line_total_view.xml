@@ -27,4 +27,39 @@
         </xpath>
     </template>
 
+    <template id="add_payment_item_line_total" inherit_id="website_sale.payment">
+        <xpath expr="//table[@id='cart_products']/tbody/tr/td[span[contains(@t-field,'line.price_reduce_tax')]]" position="attributes">
+            <attribute name="id">td-unit_price</attribute>
+        </xpath>
+        <xpath expr="//table[@id='cart_products']/tbody/tr/td[div[contains(@t-esc,'line.product_uom_qty')]]" position="attributes">
+            <attribute name="id">td-qty</attribute>
+        </xpath>
+
+        <xpath expr="//table[@id='cart_products']/thead/tr/th[@width='120']" position="before">
+            <th width="130" class="text-center">Unit Price</th>
+        </xpath>
+
+        <xpath expr="//td[@id='td-unit_price']" position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+
+        <xpath expr="//td[@id='td-qty']" position="before">
+            <td class="text-center" id="td-unit_price" name="unit_price">
+                <span t-field="line.price_reduce_taxexcl" style="white-space: nowrap;"
+                      t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}"
+                      groups="sale.group_show_price_subtotal"/>
+                <span t-field="line.price_reduce_taxinc" style="white-space: nowrap;"
+                      t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}"
+                      groups="sale.group_show_price_total"/>
+            </td>
+        </xpath>
+
+        <xpath expr="//td[@id='td-qty']" position="after">
+            <td class="text-center" id="td-price" name="price">
+                <span t-esc="line.price_subtotal"
+                      t-options="{'widget': 'monetary', 'from_currency': website_sale_order.pricelist_id.currency_id, 'display_currency': website.currency_id}"/>
+            </td>
+        </xpath>
+    </template>
+
 </odoo>

@@ -4,7 +4,7 @@
 {
     "name": "Website Sale Line Total",
     "summary": "Adds separate columns for unit price and total price",
-    "version": "10.0.1.0.0",
+    "version": "10.0.1.1.0",
     "category": "E-commerce",
     "website": "https://www.github.com/OCA/website",
     "author": "SMDrugstore, Odoo Community Association (OCA)",

@@ -8,7 +8,7 @@ Website Sale Line Total
 
 This module extends the functionality of website_sale by adding
 separate columns for "Unit Price" and the total "Price" (based on
-quantity) in the shopping cart lines at checkout.
+quantity) in the shopping cart lines at checkout and payment.
 
 Usage
 =====
@@ -17,8 +17,9 @@ To use this module, you need to:
 
 #. Go to the "Shop" section of the website
 #. Put more than one of the same item into your shopping cart
-#. Go to your shopping cart to view the "Unit Price" and "Price" columns
-#. Toggle the quantity to watch the "Price" column change
+#. Go to your shopping cart at checkout to view the "Unit Price" and "Price" columns
+   and toggle the quantity to watch the "Price" column change
+#. Go to your shopping cart at payment to view the "Unit Price" and "Price" columns
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
