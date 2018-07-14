@@ -30,7 +30,7 @@ images on the website.
 
 This module can be useful when you're e.g. optimizing your website.
 
-.. image:: /website_img_dimension/static/description/screenshot.png
+.. image:: https://raw.githubusercontent.com/website_img_dimension/static/description/screenshot.png
    :alt: Screenshot of tooltip
 
 **Table of contents**
