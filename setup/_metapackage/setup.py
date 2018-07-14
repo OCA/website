@@ -19,6 +19,7 @@ setuptools.setup(
         'odoo11-addon-website_form_builder',
         'odoo11-addon-website_form_metadata',
         'odoo11-addon-website_form_recaptcha',
+        'odoo11-addon-website_img_dimension',
         'odoo11-addon-website_js_below_the_fold',
         'odoo11-addon-website_legal_page',
         'odoo11-addon-website_logo',
