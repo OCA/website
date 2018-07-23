@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+
+    <!-- Use this file as an example of how a multi-website theme should be
+         developed. For further instructions, see README. -->
+
+    <!-- Assets that define the demo theme -->
+    <template id="theme_demo_assets_frontend"
+              inherit_id="website.assets_frontend"
+              name="Demo multiwebsite theme">
+        <xpath expr=".">
+            <link
+                rel="stylesheet"
+                href="/website_multi_theme/static/src/css/demo.less"/>
+        </xpath>
+    </template>
+
+    <!-- Record that lets website admin to choose this theme -->
+    <record model="website.theme" id="demo_multi">
+        <field name="name">Multiwebsite Demo Theme</field>
+        <field name="dependency_ids" eval="[(4, ref('website_multi_theme.theme_default'))]"/>
+    </record>
+
+    <!-- List provided assets  -->
+    <record model="website.theme.asset" id="demo_multi_asset_1">
+        <field name="name">website_multi_theme.theme_demo_assets_frontend</field>
+        <field name="theme_id" ref="demo_multi"/>
+    </record>
+
+    <!-- Website snippets -->
+    <template id="snippet_selection" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']/div[contains(@class, 'o_panel_body')]/t[@t-snippet='website.s_cover']" position="after">
+            <t t-snippet="website_multi_theme.s_demo1" t-thumbnail="/website_multi_theme/static/src/img/snippets/s_demo.png"/>
+            <t t-snippet="website_multi_theme.s_demo2" t-thumbnail="/website_multi_theme/static/src/img/snippets/s_demo.png"/>
+        </xpath>
+    </template>
+
+    <template id="s_demo1" name="Demo Cat">
+        <section class="s_demo1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <pre>
+               /\____/\    __
+             .'  """"  `,-'  `--.__
+        __,- :   -  -  ;  " ::     `-. -.__
+     ,-sssss `._  `' _,'"     ,'~~~::`.sssss-.
+    |ssssss ,' ,_`--'_    __,' ::  `  `.ssssss|
+   |sssssss `-._____~ `,,'_______,---_;; ssssss|
+    |ssssssssss     `--'~{__   ____   ,'ssssss|
+     `-ssssssssssssssssss ~~~~~~~~~~~~ ssss.-'
+          `---.sssssssssssssssssssss.---' Susie Oviatt
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="s_demo2" name="Demo Dog">
+        <section class="s_demo2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <pre>
+               ____
+            ,-'-,  `---._
+     _______(0} `, , ` , )
+     V           ; ` , ` (                            ,'~~~~~~`,
+     `.____,- '  (,  `  , )                          :`,-'""`. ";
+       `-------._);  ,  ` `,                         \;:      )``:
+              )  ) ; ` ,,  :                          ``      : ';
+             (  (`;:  ; ` ;:\                                 ;;;,
+             (:  )``;:;;)`'`'`--.    _____     ____       _,-';;`
+             :`  )`;)`)`'   :    "~~~     ~~~~~    ~~~`--',.;;;'
+             `--;~~~~~      `  ,  ", """,  "  "   "` ",, \ ;``
+               ( ;         ,   `                ;      `; ;
+               (; ; ;      `                   ,`       ` :
+                (; /            ;   ;          ` ;     ; :
+                ;(_; ;  :   ; ; `; ;` ; ; ,,,""";}     `;
+                : `; `; `  :  `  `,,;,''''   );;`);     ;
+                ;' :;   ; : ``'`'           (;` :( ; ,  ;
+                |, `;; ,``                  `)`; `(; `  `;
+                ;  ;;  ``:                   `).:` \;,   `.
+             ,-'   ;`;;:;`                   ;;'`;;  `)   )
+              ~~~,-`;`;,"                    ~~~~~  ,-'   ;  Targon
+                 """"""                             `"""""
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+    <!-- Themes should always call this method after adding their stuff,
+         to make users get immediate availability, insead of having to
+         reload themes. -->
+    <function model="website.theme"
+              name="_convert_assets"
+              eval="([ref('demo_multi')])"/>
+
+</odoo>

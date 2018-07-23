@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+
+    <!-- To enable these themes, install their corresponding private addon
+         from https://www.odoo.com/apps/themes. Support for these themes
+         is not guaranteed, use at your own risk. -->
+    <record model="website.theme" id="anelusia_multi">
+        <field name="name">Multiwebsite Anelusia Theme</field>
+        <field name="converted_theme_addon">theme_anelusia</field>
+    </record>
+
+    <record model="website.theme" id="artists_multi">
+        <field name="name">Multiwebsite Artists Theme</field>
+        <field name="converted_theme_addon">theme_artists</field>
+    </record>
+
+    <record model="website.theme" id="avantgarde_multi">
+        <field name="name">Multiwebsite Avantgarde Theme</field>
+        <field name="converted_theme_addon">theme_avantgarde</field>
+    </record>
+
+    <record model="website.theme" id="beauty_multi">
+        <field name="name">Multiwebsite Beauty Theme</field>
+        <field name="converted_theme_addon">theme_beauty</field>
+    </record>
+
+    <record model="website.theme" id="bewise_multi">
+        <field name="name">Multiwebsite Bewise Theme</field>
+        <field name="converted_theme_addon">theme_bewise</field>
+    </record>
+
+    <record model="website.theme" id="bistro_multi">
+        <field name="name">Multiwebsite Bistro Theme</field>
+        <field name="converted_theme_addon">theme_bistro</field>
+    </record>
+
+    <record model="website.theme" id="bookstore_multi">
+        <field name="name">Multiwebsite Bookstore Theme</field>
+        <field name="converted_theme_addon">theme_bookstore</field>
+    </record>
+
+    <record model="website.theme" id="clean_multi">
+        <field name="name">Multiwebsite Clean Theme</field>
+        <field name="converted_theme_addon">theme_clean</field>
+    </record>
+
+    <record model="website.theme" id="enark_multi">
+        <field name="name">Multiwebsite Enark Theme</field>
+        <field name="converted_theme_addon">theme_enark</field>
+    </record>
+
+    <record model="website.theme" id="graphene_multi">
+        <field name="name">Multiwebsite Graphene Theme</field>
+        <field name="converted_theme_addon">theme_graphene</field>
+    </record>
+
+    <record model="website.theme" id="kea_multi">
+        <field name="name">Multiwebsite Kea Theme</field>
+        <field name="converted_theme_addon">theme_kea</field>
+    </record>
+
+    <record model="website.theme" id="loftspace_multi">
+        <field name="name">Multiwebsite Loftspace Theme</field>
+        <field name="converted_theme_addon">theme_loftspace</field>
+    </record>
+
+    <record model="website.theme" id="monglia_multi">
+        <field name="name">Multiwebsite Monglia Theme</field>
+        <field name="converted_theme_addon">theme_monglia</field>
+    </record>
+
+    <record model="website.theme" id="nano_multi">
+        <field name="name">Multiwebsite Nano Theme</field>
+        <field name="converted_theme_addon">theme_nano</field>
+    </record>
+
+    <record model="website.theme" id="notes_multi">
+        <field name="name">Multiwebsite Notes Theme</field>
+        <field name="converted_theme_addon">theme_notes</field>
+    </record>
+
+    <record model="website.theme" id="odoo_experts_multi">
+        <field name="name">Multiwebsite Odoo_experts Theme</field>
+        <field name="converted_theme_addon">theme_odoo_experts</field>
+    </record>
+
+    <record model="website.theme" id="orchid_multi">
+        <field name="name">Multiwebsite Orchid Theme</field>
+        <field name="converted_theme_addon">theme_orchid</field>
+    </record>
+
+    <record model="website.theme" id="treehouse_multi">
+        <field name="name">Multiwebsite Treehouse Theme</field>
+        <field name="converted_theme_addon">theme_treehouse</field>
+    </record>
+
+    <record model="website.theme" id="vehicle_multi">
+        <field name="name">Multiwebsite Vehicle Theme</field>
+        <field name="converted_theme_addon">theme_vehicle</field>
+    </record>
+
+    <record model="website.theme" id="yes_multi">
+        <field name="name">Multiwebsite Yes Theme</field>
+        <field name="converted_theme_addon">theme_yes</field>
+    </record>
+
+    <record model="website.theme" id="zap_multi">
+        <field name="name">Multiwebsite Zap Theme</field>
+        <field name="converted_theme_addon">theme_zap</field>
+    </record>
+
+</odoo>

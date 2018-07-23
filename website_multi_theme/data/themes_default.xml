@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Ivan Yelizariev <https://it-projects.info/team/yelizariev>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+    <!-- Default theme. It's basically a workaround for "Multi-customization"
+         feature which requires theme be set -->
+    <record model="website.theme" id="theme_default">
+        <field name="name">Default Theme</field>
+    </record>
+
+    <record model="website.theme.asset" id="theme_default_asset_footer_custom">
+        <field name="name">website.footer_custom</field>
+        <field name="theme_id" ref="theme_default"/>
+    </record>
+
+    <!-- This method prepare assets and applies default theme for all websites -->
+    <function model="website.config.settings"
+              name="multi_theme_reload"
+              eval="([],)"
+              />
+</odoo>

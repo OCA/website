@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<odoo>
+
+    <template id="categories_recursive" name="Blog Category list">
+        <li t-att-class="'active' if c.id == int(category or 0) else None" t-if="c.post_count">
+            <a t-attf-href="/blog/#{ slug(blog) }/category/#{ slug(c) }/">
+                <t t-esc="c.name"/>
+                <span class="pull-right badge" t-esc="c.post_count"/>
+            </a>
+            <ul t-if="c.child_ids" class="nav nav-pills nav-stacked nav-hierarchy">
+                <t t-foreach="c.child_ids" t-as="c">
+                    <t t-call="website_blog_category.categories_recursive" />
+                </t>
+            </ul>
+        </li>
+    </template>
+
+    <template id="blog_category_template"
+              name="Categories"
+              inherit_id="website_blog.index_right"
+              active="False"
+              customize_show="True">
+
+        <xpath expr="//div[@id='main_column']" position="attributes">
+            <attribute name="class">col-sm-8</attribute>
+        </xpath>
+
+        <xpath expr="//div[@id='blog_right_column']" position="inside">
+            <section class="mt32 website_blog_categories">
+                <h4 class="title">Categories</h4>
+                <ul class="nav nav-pills nav-stacked mt16">
+                    <li t-att-class=" '' if category else 'active' ">
+                        <a t-attf-href="/blog/#{ slug(blog) }/" class="o_not_editable">
+                            All Posts
+                        </a>
+                    </li>
+                    <t t-foreach="blog.website_category_ids.filtered(lambda r: not r.parent_id)" t-as="c">
+                        <t t-call="website_blog_category.categories_recursive" />
+                    </t>
+                </ul>
+            </section>
+        </xpath>
+
+    </template>
+
+</odoo>

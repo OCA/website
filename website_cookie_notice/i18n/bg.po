@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_cookie_notice
+#
+# Translators:
+# Kaloyan Naumov <kaloyan@lumnus.net>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-29 03:55+0000\n"
+"PO-Revision-Date: 2016-11-29 03:55+0000\n"
+"Last-Translator: Kaloyan Naumov <kaloyan@lumnus.net>, 2016\n"
+"Language-Team: Bulgarian (https://www.transifex.com/oca/teams/23907/bg/)\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_cookie_notice
+#: model:ir.ui.view,arch_db:website_cookie_notice.message
+msgid ""
+". To disable them, configure your browser properly. If you keep using this "
+"website, you are accepting those."
+msgstr ". Ако продължите да използвате уебсайта, значи сте съгласни."
+
+#. module: website_cookie_notice
+#: model:ir.ui.view,arch_db:website_cookie_notice.message
+msgid "OK"
+msgstr "Приемам"
+
+#. module: website_cookie_notice
+#: model:ir.ui.view,arch_db:website_cookie_notice.message
+msgid "We use cookies in this website. Read about them in our"
+msgstr "Този сайт използва бисквитки. Можете да прочетете повече в нашата"
+
+#. module: website_cookie_notice
+#: model:ir.ui.view,arch_db:website_cookie_notice.message
+msgid "privacy policy"
+msgstr "политика за личните данни"

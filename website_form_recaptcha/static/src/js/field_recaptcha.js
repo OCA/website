@@ -26,6 +26,13 @@ odoo.define('website_form_recaptcha.recaptcha', function(require){
                     }
                 },
             });
+        },
+
+        update_status: function(status) {
+            this._super(status);
+            if (status === 'error') {
+                if (window.grecaptcha) grecaptcha.reset();
+            }
         }
 
     });

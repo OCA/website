@@ -6,14 +6,14 @@
 {
     "name": "Website Snippet Country Code Dropdown",
     "summary": "Allow to select country in a dropdown",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Website",
     "website": "http://www.tecnativa.com",
     "author": "Tecnativa, "
               "Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
-    'installable': False,
+    'installable': True,
     "depends": [
         "website",
     ],
@@ -24,5 +24,6 @@
     ],
     "demo": [
         "demo/pages.xml",
+        "demo/assets.xml",
     ],
 }

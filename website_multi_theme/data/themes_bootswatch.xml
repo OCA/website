@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+
+    <!-- To use this theme, install theme_bootswatch -->
+    <record model="website.theme" id="bootswatch_multi">
+        <field name="name">Multiwebsite Bootswatch Theme</field>
+        <field name="converted_theme_addon">theme_bootswatch</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_container_fluid
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-05 16:29+0000\n"
+"PO-Revision-Date: 2017-01-05 16:29+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "<b>A Small Subtitle</b>"
+msgstr ""
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "A Punchy Headline"
+msgstr "Un titolo incisivo"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "A small explanation of this great"
+msgstr "Un breve spiegazione"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid ""
+"Adapt these three columns to fit you design need. To duplicate, delete or "
+"move columns, select the column and use the top icons to perform your action."
+msgstr ""
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.snippet_options
+msgid "Always 100% of available space"
+msgstr "Sempre il 100% dello spazio disponibile"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid ""
+"Choose a vibrant image and write an inspiring paragraph about it. It does "
+"not have to be long, but it should reinforce your image."
+msgstr ""
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Contact us »"
+msgstr "Contattaci »"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.snippet_options
+msgid "Container width type"
+msgstr "Tipo di larghezza del contenitore"
+
+#. module: website_container_fluid
+#: model:website.menu,name:website_container_fluid.demo_page_link
+msgid "Container width type demo"
+msgstr "Demo tipo di larghezza del contenitore"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid ""
+"Delete the above image or replace it with a picture that illustrates your "
+"message. Click on the picture to change it's <em>rounded corner</em> style."
+msgstr ""
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Feature One"
+msgstr "Caratteristica Uno"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Feature Three"
+msgstr "Caratteristica Tre"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Feature Two"
+msgstr "Caratteristica Due"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "First Feature"
+msgstr "Prima Caratteristica"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.snippet_options
+msgid "Fixed, based on screen size"
+msgstr "Fissa, basata sulla dimensione dello schermo"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.snippet_options
+msgid "Fluid"
+msgstr "Fluida"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "More than 500 successful projects"
+msgstr "Più di 500 progetti conclusi con successo"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Odoo - Sample 1 for three columns"
+msgstr "Odoo - Esempio 1 per tre colonne"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Odoo - Sample 2 for three columns"
+msgstr "Odoo - Esempio 2 per tre colonne"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Odoo - Sample 3 for three columns"
+msgstr "Odoo - Esempio 3 per tre colonne"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Odoo CMS - Gallery sample"
+msgstr "Odoo CMS - Esempio Galleria"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Odoo CMS - a big picture"
+msgstr "Odoo CMS - un'immagine grande"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Our Customer References"
+msgstr "Le nostre referenze"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.snippet_options
+msgid "Responsive"
+msgstr "Responsive"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Second Feature"
+msgstr "Seconda Caratteristica"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Tell what's the value for the"
+msgstr ""
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "These are responsive containers"
+msgstr "Questi sono container responsive"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "They have a fixed width depending on the screen size"
+msgstr "Hanno una larghezza fissa in base alla dimensione dello schermo"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Third Feature"
+msgstr "Terza Caratteristica"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid ""
+"To add a fourth column, reduce the size of these three columns using the "
+"right icon of each block. Then, duplicate one of the column to create a new "
+"one as a copy."
+msgstr ""
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "Write what the customer would like to know,"
+msgstr "Scrivi ciò che il cliente vorrebbe sapere,"
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "customer for this feature."
+msgstr ""
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "feature, in clear words."
+msgstr ""
+
+#. module: website_container_fluid
+#: model:ir.ui.view,arch_db:website_container_fluid.demo_page
+msgid "not what you want to show."
+msgstr ""

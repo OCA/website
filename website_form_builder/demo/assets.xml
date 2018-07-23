@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Tecnativa - Jairo Llopis
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <template id="demo_assets_editor" inherit_id="website.assets_editor">
+        <xpath expr=".">
+            <script type="text/javascript"
+                    src="/website_form_builder/static/src/js/tour.js"/>
+        </xpath>
+    </template>
+
+</odoo>

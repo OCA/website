@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+    <template id="demo_page" page="True" name="Multi website theme demo page">
+        <t t-call="website.layout">
+            <section class="jumbotron s_big_message" style="background-image: url('/web/image/website.s_background_image_01');">
+                <div class="container">
+                    <div class="row">
+                        <div class="mb32 col-md-offset-1 col-md-8">
+                            <h1>This is a demo page</h1>
+                            <p>You should see the button with a ugly green border if this website has enabled the demo theme.</p>
+                            <a class="btn btn-primary btn-lg" href="#">
+                                Website domain:
+                                <span id="website_domain"
+                                      t-esc="website.domain"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </t>
+    </template>
+
+    <record id="demo_page_link" model="website.menu">
+        <field name="name">Multi website theme demo page</field>
+        <field name="url">/page/website_multi_theme.demo_page</field>
+        <field name="parent_id" ref="website.main_menu" />
+        <field name="sequence" type="int">50</field>
+    </record>
+
+</odoo>

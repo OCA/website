@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<odoo>
+    <template id="barcode_demo" name="Barcode Demo" page="True">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div>
+                                <div class="s_barcode o_barcode">
+                                    <div class="o_barcode_container">
+                                        <img class="o_barcode_img img img-responsive"
+                                             alt="Barcode could not be rendered" />
+                                    </div>
+                                    <div class="o_barcode_footer">
+                                        <p class="o_barcode_text o_default_snippet_text text-center"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <record id="website_snippet_barcode_demo" model="website.menu">
+        <field name="name">Barcode</field>
+        <field name="url">/page/website_snippet_barcode.barcode_demo</field>
+        <field name="parent_id" ref="website.main_menu" />
+        <field name="sequence" type="int">60</field>
+    </record>
+</odoo>

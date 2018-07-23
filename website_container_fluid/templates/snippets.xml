@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+    <template id="snippet_options"
+              inherit_id="website.snippet_options"
+              name="Container width type chooser">
+        <xpath expr=".">
+            <div data-js="container_fluid"
+                 data-selector=".container, .container-fluid, .carousel, .carousel .item">
+                <li class="dropdown-submenu">
+                    <a>Container width type</a>
+                    <ul class="dropdown-menu">
+                        <li data-select_class="container"
+                            title="Fixed, based on screen size">
+                            <a>Responsive</a>
+                        </li>
+                        <li data-select_class="container-fluid"
+                            title="Always 100% of available space">
+                            <a>Fluid</a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

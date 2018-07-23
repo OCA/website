@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License LGPL-3 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<odoo>
+    <template id="assets_barcode_editor_demo" inherit_id="website.assets_editor">
+        <xpath expr=".">
+            <script type="application/javascript"
+                    src="/website_snippet_barcode/static/tests/js/website_snippet_barcode.editor.tour.js"
+                    />
+        </xpath>
+    </template>
+</odoo>

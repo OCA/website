@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2015 Tecnativa
+     Copyright 2016 Alessio Gerace - Agile Business Group
+     Copyright 2018 Lorenzo Battistini - Agile Business Group
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+
+<template id="signup_view"
+          name="Force legal terms"
+          inherit_id="auth_signup.fields"
+          customize_show="True">
+    <xpath expr="./div[last()]" position="after">
+        <div class="form-group field-accepted_legal_terms">
+            <label for="accepted_legal_terms" class="control-label">
+                <input type="checkbox"
+                       name="accepted_legal_terms"
+                       id="accepted_legal_terms"
+                       required="required"/>
+                <span id="legal_terms_msg">I accept the <a href="/legal/advice">legal advice</a>,
+                the <a href="/legal/privacy-policy">privacy policy</a>
+                and the <a href="/legal/terms-of-use">terms of use</a>
+                of this website.</span>
+            </label>
+        </div>
+    </xpath>
+
+</template>
+
+</odoo>

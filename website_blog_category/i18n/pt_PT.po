@@ -1,0 +1,158 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_blog_category
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-24 02:52+0000\n"
+"PO-Revision-Date: 2017-06-24 02:52+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Portuguese (Portugal) (https://www.transifex.com/oca/"
+"teams/23907/pt_PT/)\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_all_post_ids
+#: model:ir.ui.view,arch_db:website_blog_category.blog_category_template
+msgid "All Posts"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_form
+msgid "All Posts (Including Children)"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_blog_id
+msgid "Blog"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.actions.act_window,name:website_blog_category.blog_category_action
+#: model:ir.ui.menu,name:website_blog_category.blog_category_menu
+#: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_tree
+msgid "Blog Categories"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model,name:website_blog_category.model_blog_category
+#: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_form
+msgid "Blog Category"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model,name:website_blog_category.model_blog_post
+msgid "Blog Post"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model,name:website_blog_category.model_blog_blog
+msgid "Blogs"
+msgstr ""
+
+#. module: website_blog_category
+#: code:addons/website_blog_category/models/blog_category.py:83
+#, python-format
+msgid ""
+"Cannot assign a parent/child relationship between categories in disparate "
+"blogs."
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,help:website_blog_category.field_blog_category_name
+msgid "Canonical"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.ui.view,arch_db:website_blog_category.blog_category_template
+msgid "Categories"
+msgstr ""
+
+#. module: website_blog_category
+#: sql_constraint:blog.category:0
+msgid "Category name already exists in this blog."
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_child_ids
+#: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_form
+msgid "Children"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: website_blog_category
+#: model:ir.ui.view,arch_db:website_blog_category.blog_category_view_form
+msgid "Direct Posts"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_display_name
+msgid "Display Name"
+msgstr "Nome a Apresentar"
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category___last_update
+msgid "Last Modified on"
+msgstr "Última Modificação Em"
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_write_uid
+msgid "Last Updated by"
+msgstr "Atualizado pela última vez por"
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_write_date
+msgid "Last Updated on"
+msgstr "Atualizado pela última vez em"
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_name
+msgid "Name"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_parent_id
+msgid "Parent"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_post_count
+msgid "Post Count"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_category_post_ids
+msgid "Posts"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_blog_website_category_ids
+msgid "Website Categories"
+msgstr ""
+
+#. module: website_blog_category
+#: model:ir.model.fields,field_description:website_blog_category.field_blog_post_website_category_id
+msgid "Website Category"
+msgstr ""

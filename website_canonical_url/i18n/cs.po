@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_canonical_url
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2016-11-25 01:52+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"Language-Team: Czech (https://www.transifex.com/oca/teams/23907/cs/)\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. module: website_canonical_url
+#: model:ir.model.fields,field_description:website_canonical_url.field_website_canonical_domain
+#: model:ir.model.fields,field_description:website_canonical_url.field_website_config_settings_canonical_domain
+msgid "Canonical domain"
+msgstr ""
+
+#. module: website_canonical_url
+#: model:ir.model.fields,help:website_canonical_url.field_website_canonical_domain
+#: model:ir.model.fields,help:website_canonical_url.field_website_config_settings_canonical_domain
+msgid ""
+"Canonical domain is used to build unique canonical URLs to make SEO happy."
+msgstr ""
+
+#. module: website_canonical_url
+#: code:addons/website_canonical_url/models/website.py:23
+#, python-format
+msgid "Canonical domain must contain protocol `http(s)://`"
+msgstr ""
+
+#. module: website_canonical_url
+#: model:ir.ui.view,arch_db:website_canonical_url.canonical_demo
+msgid "Check source code to see pager and canonical URL."
+msgstr ""
+
+#. module: website_canonical_url
+#: model:ir.model,name:website_canonical_url.model_website
+msgid "Website"
+msgstr "Webová stránka"
+
+#. module: website_canonical_url
+#: model:ir.ui.view,arch_db:website_canonical_url.view_website_config_settings
+#: model:ir.ui.view,arch_db:website_canonical_url.view_website_form
+msgid "https://mydomain.com"
+msgstr ""
+
+#. module: website_canonical_url
+#: model:ir.model,name:website_canonical_url.model_website_config_settings
+msgid "website.config.settings"
+msgstr ""
