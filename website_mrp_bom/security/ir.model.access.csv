@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_website_mrp_bom_read,mrp_bom read,website_mrp_bom.model_mrp_bom,base.group_public,1,0,0,0
+access_website_mrp_bom_line_read,mrp_bom_line read,mrp.model_mrp_bom_line,base.group_public,1,0,0,0
+access_website_mrp_bom_product_product_read,mrp_bom_product_product read,product.model_product_product,,1,0,0,0
+access_website_mrp_bom_product_template_read,mrp_bom_product_template_read,product.model_product_template,,1,0,0,0

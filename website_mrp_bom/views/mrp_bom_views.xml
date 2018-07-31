@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="mrp_bom_form_view">
+        <field name="name">mrp.bom.website.form</field>
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button class="oe_stat_button" name="website_publish_button"
+                    type="object" icon="fa-globe" groups="mrp.group_mrp_manager">
+                    <field name="website_published" widget="website_button"/>
+                </button>
+            </div>
+        </field>
+    </record>
+
+</odoo>
