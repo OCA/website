@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="mrp_bom_page" name="MRP BoM Page">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="bom-page">
+                    <div class="oe_structure"/>
+                    <div class="container">
+                        <div class="row">
+                            <t t-call="website_mrp_bom.mrp_bom_detail_header"/>
+                            <t t-call="website_mrp_bom.mrp_bom_detail_table"/>
+                        </div>
+                    </div>
+                    <div class="oe_structure"/>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="mrp_bom_detail_header" name="MRP BoM Details Header">
+        <div class="bom-header">
+            <h1 class="col-md-12 text-center" id="mrp_bom_name" t-field="bom.product_tmpl_id.name"/>
+            <div class="col-md-4">
+                <t t-if="bom.product_tmpl_id">
+                    <div t-field="bom.product_tmpl_id.image" t-options='{"widget": "image", "class": "center-block mb16", "max_width": 128}'/>
+                </t>
+            </div>
+            <div class="col-md-8 mt32">
+                <t t-if="bom.website_description">
+                    <div t-field="bom.website_description"/>
+                </t>
+            </div>
+        </div>
+    </template>
+
+    <template id="mrp_bom_detail_table" name="MRP BoM Details Table">
+        <div class="bom-table">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th/>
+                            <th>Quantity</th>
+                            <t t-if="has_published_bom">
+                                <th>BoM</th>
+                            </t>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="bom.bom_line_ids" t-as="line">
+                            <tr style="font-weight: bold;">
+                                <td class="prod-img">
+                                    <span t-field="line.sudo().product_id.product_tmpl_id.image" t-options='{"widget": "image", "class": "center-block mb8", "max_width": 64}'/>
+                                </td>
+                                <td class="prod-name">
+                                    <t t-if="line.sudo().product_id.product_tmpl_id.website_product_published">
+                                        <a t-att-href="line.sudo().product_id.product_tmpl_id.website_product_url" style="display: block">
+                                            <span t-field="line.sudo().product_id.product_tmpl_id.name"/>
+                                        </a>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-field="line.sudo().product_id.product_tmpl_id.name"/>
+                                    </t>
+                                    <t t-if="line.sudo().product_id.product_tmpl_id.website_published and line.sudo().product_id.product_tmpl_id.sale_ok">
+                                        <a t-att-href="line.sudo().product_id.product_tmpl_id.website_url" style="display: block">
+                                            <span>Buy now</span>
+                                        </a>
+                                    </t>
+                                </td>
+                                <td class="prod-qty">
+                                    <span t-field="line.product_qty"/>
+                                    <span groups="product.group_uom" t-field="line.product_uom_id.name"/>
+                                </td>
+
+                                <t t-if="has_published_bom">
+                                    <t t-if="line.sudo().product_id.bom_ids">
+                                        <t t-if="line.sudo().product_id.bom_ids[0].website_published">
+                                            <td class="prod-bom">
+                                        <a t-attf-href="/components/#{ slug(line.sudo().product_id.bom_ids[0]) }" style="display: block">
+                                                    <span class="fa fa-search"/>
+                                                </a>
+                                            </td>
+                                        </t>
+                                    </t>
+                                    <t t-else="">
+                                        <td class="prod-bom"/>
+                                    </t>
+                                </t>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+</odoo>
