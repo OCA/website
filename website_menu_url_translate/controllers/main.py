@@ -28,10 +28,11 @@ class Website(openerp.addons.web.controllers.main.Home):
         search_res = trans.search([('lang', '=', str(lang)),
                                    ('src', '=', str(page_url))])
 
-        if search_res.value:
-            r = search_res.value
-        else:
-            r = search_res.src
+        if search_res:
+            if search_res[0].value:
+                r = search_res[0].value
+            else:
+                r = search_res[0].src
 
         if not r:
             ans = trans.search([('value', '=', str(page_url))])
@@ -40,11 +41,11 @@ class Website(openerp.addons.web.controllers.main.Home):
                 ans2 = trans.search([('src', '=', str(src)),
                                      ('lang', '=', str(lang))])
 
-                if ans2 and ans2.id:
+                if ans2 and ans2[0].id:
                     if ans2.value:
-                        r = ans2.value
+                        r = ans2[0].value
                     else:
-                        r = ans2.src
+                        r = ans2[0].src
                 else:
                     r = ans[0].src
         redirect = werkzeug.utils.redirect(r or ('/%s' % lang), 303)
