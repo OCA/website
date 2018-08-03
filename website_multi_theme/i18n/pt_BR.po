@@ -9,21 +9,22 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-16 03:45+0000\n"
-"PO-Revision-Date: 2018-01-16 03:45+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
-"teams/23907/pt_BR/)\n"
+"PO-Revision-Date: 2018-08-04 13:33+0000\n"
+"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/"
+"23907/pt_BR/)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.1.1\n"
 
 #. module: website_multi_theme
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_410
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_410
 msgid "&amp;times;"
-msgstr ""
+msgstr "&amp;vezes;"
 
 #. module: website_multi_theme
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_410
@@ -32,18 +33,20 @@ msgid ""
 ",\n"
 "                                updated:"
 msgstr ""
+",\n"
+"                                atualizado:"
 
 #. module: website_multi_theme
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_410
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_410
 msgid ", author:"
-msgstr ""
+msgstr ", autor:"
 
 #. module: website_multi_theme
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_410
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_410
 msgid ", updated:"
-msgstr ""
+msgstr ", atualizado:"
 
 #. module: website_multi_theme
 #: model:ir.ui.view,arch_db:website_multi_theme.s_demo1
@@ -63,7 +66,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_324
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_324
 msgid "<b>Sign in</b>"
-msgstr ""
+msgstr "<b>Registro</b>"
 
 #. module: website_multi_theme
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_544
@@ -72,12 +75,14 @@ msgid ""
 "<span class=\"btn btn-primary btn-lg o_website_form_send\">Send</span>\n"
 "                                <span id=\"o_website_form_result\"/>"
 msgstr ""
+"<span class=\"btn btn-primary btn-lg o_website_form_send\">Enviar</span>\n"
+"                                <span id=\"o_website_form_result\"/>"
 
 #. module: website_multi_theme
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_402
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_402
 msgid "About us"
-msgstr ""
+msgstr "Sobre nós"
 
 #. module: website_multi_theme
 #: model:ir.model.fields,help:website_multi_theme.field_website_theme_asset_ids
@@ -85,6 +90,8 @@ msgid ""
 "Asset views that will be disabled by default and enabled only in websites "
 "that enable this theme in multiwebsite mode."
 msgstr ""
+"Visualizações de ativos que serão desativadas por padrão e ativadas somente "
+"em sites que ativam esse tema no modo de vários sites."
 
 #. module: website_multi_theme
 #: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_ids
