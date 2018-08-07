@@ -4,7 +4,6 @@
 
 <odoo>
     <record model="ir.ui.view" id="website_pages_tree_view">
-        <field name="name">website_pages_tree_view</field>
         <field name="model">website.page</field>
         <field name="inherit_id" ref="website.website_pages_tree_view"/>
         <field name="arch" type="xml">
