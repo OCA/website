@@ -75,6 +75,7 @@ Contributors
 ------------
 
 * Jairo Llopis <yajo.sk8@gmail.com>
+* Yenthe Van Ginneken, Odoo Experts (yenthe@odooexperts.nl)
 
 Maintainer
 ----------
