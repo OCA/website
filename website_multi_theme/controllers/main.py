@@ -26,3 +26,9 @@ class WebsiteMultiTheme(Website):
             for xml_id in group
         ] for group in res]
         return res
+
+    @route()
+    def get_switchable_related_views(self, key):
+        new_context = dict(request.env.context, current_website_only=True)
+        request.context = new_context
+        return super(WebsiteMultiTheme, self).get_switchable_related_views(key)
