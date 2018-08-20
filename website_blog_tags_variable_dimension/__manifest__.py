@@ -7,6 +7,7 @@
     "author": "Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
+    "summary": "Adds an option to add a tag cloud to the blog right column",
     "depends": [
         'website_blog',
     ],
