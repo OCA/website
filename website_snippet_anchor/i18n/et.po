@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_snippet_anchor
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
@@ -10,55 +10,45 @@ msgstr ""
 "POT-Creation-Date: 2016-12-17 06:53+0000\n"
 "PO-Revision-Date: 2015-12-03 10:39+0000\n"
 "Last-Translator: <>\n"
-"Language-Team: Estonian (http://www.transifex.com/oca/OCA-website-8-0/language/et/)\n"
+"Language-Team: Estonian (http://www.transifex.com/oca/OCA-website-8-0/"
+"language/et/)\n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_snippet_anchor
+#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
+msgid ""
+"<i class=\"fa fa-hashtag\"/>\n"
+"                    Choose anchor"
+msgstr ""
+
+#. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:12
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:19
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:10
 #, python-format
 msgid "Anchor"
 msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:35
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:57
 #, python-format
-msgid "Anchor already exists: "
+msgid "Anchor '%s' already exists or is not valid"
 msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:10
-#, python-format
-msgid "Anchors are appended to the URL like http://localhost/#your-anchor"
-msgstr ""
-
-#. module: website_snippet_anchor
-#. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:15
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:18
 #, python-format
 msgid "Choose anchor"
 msgstr ""
 
 #. module: website_snippet_anchor
-#. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/website_snippet_anchor.js:28
-#, python-format
-msgid "Name"
-msgstr "Nimi"
-
-#. module: website_snippet_anchor
-#: view:website:website.snippet_options
-msgid "Set anchor"
-msgstr ""
-
-#. module: website_snippet_anchor
-#: view:website:website.snippet_options
+#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
 msgid ""
 "Use anchors to go directly to a section of your page, appending #anchor to "
 "the URL"
@@ -66,7 +56,10 @@ msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/website_snippet_anchor.xml:19
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:17
 #, python-format
 msgid "your-anchor"
 msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Nimi"

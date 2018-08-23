@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_analytics_piwik
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2018
 # Frank Schellenberg <opensource@schellenberg.nl>, 2018
@@ -12,11 +12,12 @@ msgstr ""
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
 "PO-Revision-Date: 2018-01-27 03:46+0000\n"
 "Last-Translator: Frank Schellenberg <opensource@schellenberg.nl>, 2018\n"
-"Language-Team: Dutch (Netherlands) (https://www.transifex.com/oca/teams/23907/nl_NL/)\n"
+"Language-Team: Dutch (Netherlands) (https://www.transifex.com/oca/"
+"teams/23907/nl_NL/)\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_analytics_piwik
@@ -47,10 +48,12 @@ msgstr "De ID welke Matomo gebruikt om de website te identificeren"
 #: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings_piwik_analytics_host
 #: model:ir.model.fields,help:website_analytics_piwik.field_website_piwik_analytics_host
 msgid ""
-"The host/path your Piwik installation is accessible by on the internet. Do not include a protocol here!\n"
+"The host/path your Piwik installation is accessible by on the internet. Do "
+"not include a protocol here!\n"
 "So http[s]://[this field]/piwik.php should resolve to your piwik.php"
 msgstr ""
-"Het host/pad naar de Matomo installatie welke beschikbaar is op het internet. Voeg het protocol niet toe!\n"
+"Het host/pad naar de Matomo installatie welke beschikbaar is op het "
+"internet. Voeg het protocol niet toe!\n"
 "Dus http[s]://[dit veld]/matomo.php zal de matomo.php ophalen"
 
 #. module: website_analytics_piwik

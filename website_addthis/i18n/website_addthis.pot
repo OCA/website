@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_addthis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_addthis
+#: model:ir.ui.view,arch_db:website_addthis.view_website_config_settings
+msgid "<code>var addthis_config = addthis_config||{};\n"
+"                                    addthis_config.data_track_clickback = true;</code>"
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.ui.view,arch_db:website_addthis.view_website_config_settings
+msgid "<strong>Caution:</strong> here you must put valid JS otherwise you can break your website."
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.ui.view,arch_db:website_addthis.view_website_config_settings
+msgid "<strong>Configuration example:</strong>"
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.model.fields,help:website_addthis.field_res_config_settings_addthis_adv_config
+#: model:ir.model.fields,help:website_addthis.field_website_addthis_adv_config
+msgid "Add your custom JS settings."
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.model.fields,field_description:website_addthis.field_res_config_settings_addthis_enabled
+#: model:ir.model.fields,field_description:website_addthis.field_website_addthis_enabled
+msgid "AddThis.com"
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.model.fields,field_description:website_addthis.field_res_config_settings_addthis_adv_config
+#: model:ir.model.fields,field_description:website_addthis.field_website_addthis_adv_config
+msgid "Advanced JS config"
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.ui.view,arch_db:website_addthis.view_website_config_settings
+msgid "Configure AddThis integration"
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.ui.view,arch_db:website_addthis.view_website_config_settings
+msgid "Make sure to check that your pages are loading properly after changing this."
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.model.fields,field_description:website_addthis.field_res_config_settings_addthis_pubid
+#: model:ir.model.fields,field_description:website_addthis.field_website_addthis_pubid
+msgid "Public ID"
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.model,name:website_addthis.model_website
+msgid "Website"
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.ui.view,arch_db:website_addthis.view_website_config_settings
+#: model:ir.ui.view,arch_db:website_addthis.view_website_form
+msgid "ra-XXXXXXXXX"
+msgstr ""
+
+#. module: website_addthis
+#: model:ir.model,name:website_addthis.model_res_config_settings
+msgid "res.config.settings"
+msgstr ""
+

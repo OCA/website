@@ -42,7 +42,12 @@ class IrUiView(models.Model):
             key, bundles=bundles
         )
         current_website = request.website
-        return views.filtered(lambda v: v.website_id == current_website)
+        current_website_only = self.env.context.get('current_website_only')
+        return views.filtered(
+            lambda v:
+            not v.website_id and not current_website_only
+            or v.website_id == current_website
+        )
 
     @api.multi
     def _replace_parent(self, new_parent):

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>Website Form Builder</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7952 2016-07-26 18:15:59Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+.subscript {
+  vertical-align: sub;
+  font-size: smaller }
+
+.superscript {
+  vertical-align: super;
+  font-size: smaller }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left, table.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right, table.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+.align-top    {
+  vertical-align: top }
+
+.align-middle {
+  vertical-align: middle }
+
+.align-bottom {
+  vertical-align: bottom }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="website-form-builder">
+<h1 class="title">Website Form Builder</h1>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! This file is generated by oca-gen-addon-readme !!
+!! changes will be overwritten.                   !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+<p><a class="reference external" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external" href="http://www.gnu.org/licenses/lgpl-3.0-standalone.html"><img alt="License: LGPL-3" src="https://img.shields.io/badge/licence-LGPL--3-blue.png" /></a> <a class="reference external" href="https://github.com/OCA/website/tree/11.0/website_form_builder"><img alt="OCA/website" src="https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github" /></a> <a class="reference external" href="https://translation.odoo-community.org/projects/website-11-0/website-11-0-website_form_builder"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external" href="https://runbot.odoo-community.org/runbot/186/11.0"><img alt="Try me on Runbot" src="https://img.shields.io/badge/runbot-Try%20me-875A7B.png" /></a></p>
+<p>This module provides websites the feature of adding custom forms in any page.</p>
+<p><strong>Table of contents</strong></p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#installation" id="id1">Installation</a></li>
+<li><a class="reference internal" href="#configuration" id="id2">Configuration</a></li>
+<li><a class="reference internal" href="#usage" id="id3">Usage</a></li>
+<li><a class="reference internal" href="#known-issues-roadmap" id="id4">Known issues / Roadmap</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="id5">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="id6">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="id7">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="id8">Contributors</a></li>
+<li><a class="reference internal" href="#other-credits" id="id9">Other credits</a><ul>
+<li><a class="reference internal" href="#images" id="id10">Images</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#maintainers" id="id11">Maintainers</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h1><a class="toc-backref" href="#id1">Installation</a></h1>
+<p>Install some other addon that provides <tt class="docutils literal">website_form</tt> support to
+benefit from this one’s features. Hints:</p>
+<ul class="simple">
+<li><tt class="docutils literal">website_crm</tt></li>
+<li><tt class="docutils literal">website_form_project</tt></li>
+<li><tt class="docutils literal">website_hr_recruitment</tt></li>
+<li><tt class="docutils literal">website_sale</tt></li>
+</ul>
+</div>
+<div class="section" id="configuration">
+<h1><a class="toc-backref" href="#id2">Configuration</a></h1>
+<p>To configure this module, you need to:</p>
+<ol class="arabic simple">
+<li>Have <em>Administration / Settings</em> privileges.</li>
+<li>Go to <em>Settings &gt; Activate developer mode</em>.</li>
+<li>Go to <em>Settings &gt; Technical &gt; Database Structure &gt; Models</em>.</li>
+<li>Search for the model you want to manage website form access for.</li>
+<li>When you find it, it will have a <em>Website Forms</em> section where you can:<ul>
+<li>Allow the model to get forms, by checking <em>Allowed to use in forms</em>.</li>
+<li>Give the model forms a better name in <em>Label for form action</em>.</li>
+<li>Choose the field where to store custom fields data in <em>Field for custom
+form data</em>. If you leave this one empty and the model is a mail thread,
+a new message will be appended with that custom data.</li>
+</ul>
+</li>
+<li>In the <em>Fields</em> tab, there’s a new column called <em>Blacklisted in web forms</em>.
+It’s a security feature that forbids form submitters to write to those
+fields. When you create a new website form, all its model fields are
+automatically whitelisted for the sake of improving the UX. If you want to
+have higher control, come back here after creating the form and blacklist
+any fields you want, although that will only work for custom fields.</li>
+</ol>
+</div>
+<div class="section" id="usage">
+<h1><a class="toc-backref" href="#id3">Usage</a></h1>
+<p>To use this module, you need to:</p>
+<ol class="arabic simple">
+<li>Go to any of your website pages.</li>
+<li>Edit it.</li>
+<li>Drag and drop the <em>Form</em> snippet into the page.</li>
+<li>Use the snippet overlay to add, edit and remove fields.</li>
+<li>If you want to set a hidden field, make sure you set a valid default value
+on it, or users may get hidden errors and they might even be unable to send
+the form!</li>
+</ol>
+</div>
+<div class="section" id="known-issues-roadmap">
+<h1><a class="toc-backref" href="#id4">Known issues / Roadmap</a></h1>
+<ul class="simple">
+<li>These type of fields will not appear, they are forbidden since they make no
+sense in this module’s context, or a correct implementation would be adding
+not much value while adding lots of complexity:<ul>
+<li><tt class="docutils literal">id</tt></li>
+<li><tt class="docutils literal">create_uid</tt></li>
+<li><tt class="docutils literal">create_date</tt></li>
+<li><tt class="docutils literal">write_uid</tt></li>
+<li><tt class="docutils literal">write_date</tt></li>
+<li><tt class="docutils literal">__last_update</tt></li>
+<li>Any <tt class="docutils literal">one2many</tt> fields</li>
+<li>Any <tt class="docutils literal">reference</tt> fields</li>
+<li>Any <tt class="docutils literal">serialized</tt> fields</li>
+<li>Any read-only fields</li>
+</ul>
+</li>
+<li>You should include <a class="reference external" href="https://github.com/odoo/odoo/pull/21628">https://github.com/odoo/odoo/pull/21628</a> in your
+installation to get a better UX when a user has already sent a form and
+cannot resend it.</li>
+<li>To edit any <tt class="docutils literal">&lt;label&gt;</tt> text, you need to click twice. Review the problem
+once <a class="reference external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=853519">https://bugzilla.mozilla.org/show_bug.cgi?id=853519</a> gets fixed.</li>
+<li>You cannot edit base fields blacklisted status manually because
+<a class="reference external" href="https://github.com/OCA/website/pull/402#issuecomment-356930433">Odoo forbids that for security</a>.</li>
+<li><tt class="docutils literal">website_form</tt> works in unexpected and undocumented ways. If you plan to
+add support in your addon, <a class="reference external" href="https://github.com/OCA/website/pull/402#discussion_r157441770">this is a good place to start reading</a>.</li>
+<li>If you add a custom file upload field to a form that creates records in
+models that have no <tt class="docutils literal">mail.thread</tt> inheritance, your users will be unable
+to send the form.</li>
+</ul>
+</div>
+<div class="section" id="bug-tracker">
+<h1><a class="toc-backref" href="#id5">Bug Tracker</a></h1>
+<p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/website/issues">GitHub Issues</a>.
+In case of trouble, please check there if your issue has already been reported.
+If you spotted it first, help us smashing it by providing a detailed and welcomed
+<a class="reference external" href="https://github.com/OCA/website/issues/new?body=module:%20website_form_builder%0Aversion:%2011.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<p>Do not contact contributors directly about support or help with technical issues.</p>
+</div>
+<div class="section" id="credits">
+<h1><a class="toc-backref" href="#id6">Credits</a></h1>
+<div class="section" id="authors">
+<h2><a class="toc-backref" href="#id7">Authors</a></h2>
+<ul class="simple">
+<li>Tecnativa</li>
+</ul>
+</div>
+<div class="section" id="contributors">
+<h2><a class="toc-backref" href="#id8">Contributors</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.tecnativa.com">Tecnativa</a>:
+* Jairo Llopis &lt;<a class="reference external" href="mailto:jairo.llopis&#64;tecnativa.com">jairo.llopis&#64;tecnativa.com</a>&gt;</li>
+</ul>
+</div>
+<div class="section" id="other-credits">
+<h2><a class="toc-backref" href="#id9">Other credits</a></h2>
+<div class="section" id="images">
+<h3><a class="toc-backref" href="#id10">Images</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="https://openclipart.org/detail/281632/form">https://openclipart.org/detail/281632/form</a></li>
+<li><a class="reference external" href="https://openclipart.org/detail/224192/simple-grey-small-pencil-icon-white-background">https://openclipart.org/detail/224192/simple-grey-small-pencil-icon-white-background</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="maintainers">
+<h2><a class="toc-backref" href="#id11">Maintainers</a></h2>
+<p>This module is maintained by the OCA.</p>
+<a class="reference external image-reference" href="https://odoo-community.org"><img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" /></a>
+<p>OCA, or the Odoo Community Association, is a nonprofit organization whose
+mission is to support the collaborative development of Odoo features and
+promote its widespread use.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/OCA/website/tree/11.0/website_form_builder">OCA/website</a> project on GitHub.</p>
+<p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

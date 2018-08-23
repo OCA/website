@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record id="view_website_form" model="ir.ui.view">
+    <field name="name">Add theme selection</field>
+    <field name="model">website</field>
+    <field name="inherit_id" ref="website.view_website_form"/>
+    <field name="arch" type="xml">
+        <div name="domain" position="after">
+            <div name="logo">
+                <separator string="Logo"/>
+                <group name="logo">
+                    <field name="logo" widget="image" nolabel="1"/>
+                </group>
+            </div>
+        </div>
+    </field>
+</record>
+
+</odoo>
