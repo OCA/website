@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <template id="assets_frontend" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/website_lazy_load_image/static/lib/jquery.lazy.js" />
+            <script type="text/javascript" src="/website_lazy_load_image/static/src/js/frontend.js" />
+        </xpath>
+    </template>
+
+</odoo>
