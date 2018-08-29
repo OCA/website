@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
-"PO-Revision-Date: 2018-08-29 16:38+0000\n"
+"PO-Revision-Date: 2018-08-30 19:24+0000\n"
 "Last-Translator: Axel-G <git@r5d.de>\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "Language: de\n"
@@ -67,7 +67,7 @@ msgstr ""
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid ", and the"
-msgstr ", und die"
+msgstr "und die"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
@@ -212,7 +212,7 @@ msgstr "Sammlung und Verwendung von Informationen"
 #: model:ir.ui.view,arch_db:website_legal_page.legal_advice_link
 #: model:website.page,arch_db:website_legal_page.advise_page
 msgid "Legal Advice"
-msgstr "Impressum"
+msgstr "Rechtliche Hinweise (Impressum)"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
@@ -310,9 +310,9 @@ msgstr ""
 "Eigentum oder unter  \n"
 "                                                unserer Kontrolle stehen. "
 "Wir haben keine \n"
-"                                                 Kontrolle über diese Seiten "
+"                                                Kontrolle über diese Seiten "
 "und übernehmen \n"
-"                                                 keine Verantwortung für den "
+"                                                keine Verantwortung für den "
 "Inhalt,  \n"
 "                                                Datenschutzrichtlinien oder "
 "Praktiken von  \n"
@@ -320,16 +320,15 @@ msgstr ""
 "Dritter. Sie stimmen  \n"
 "                                                zu, dass wir weder direkt "
 "noch indirekt für Schäden \n"
-"                                                 oder Verluste "
-"verantwortlich oder haftbar sind,  \n"
+"                                                oder Verluste verantwortlich "
+"oder haftbar sind,  \n"
 "                                                die durch oder in Verbindung "
 "mit der Nutzung  \n"
 "                                                oder dem Vertrauen auf "
 "Inhalte, Waren oder  \n"
 "                                                Dienstleistungen durch "
 "solche Websites verursacht  \n"
-"                                                werden. \n"
-"                                                Wir empfehlen Ihnen "
+"                                                werden. Wir empfehlen Ihnen "
 "dringend, die allgemeinen  \n"
 "                                                Geschäftsbedingungen und "
 "Datenschutzrichtlinien von  \n"
@@ -647,7 +646,7 @@ msgstr ""
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "legal advice"
-msgstr "Impressum"
+msgstr "Rechtliche Hinweise (Impressum)"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
