@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<templates>
+
+    <t t-name="website_multi_theme.SwitchWebsiteMenu">
+        <li><a href="#" t-att-data-href="website.base_url or ''"><t t-esc="website.domain"/></a></li>
+    </t>
+
+</templates>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <record model="ir.ui.view" id="view_website_form">
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='domain']" position="inside">
+                <field name="company_id"/>
+                <field name="favicon" widget="image"/>
+                <field name="base_url"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_configure_multi_website" model="ir.actions.act_window">
+        <field name="name">Websites</field>
+        <field name="res_model">website</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

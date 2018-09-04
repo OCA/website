@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <record model="ir.ui.view" id="website_pages_tree_view">
+        <field name="model">website.page</field>
+        <field name="inherit_id" ref="website.website_pages_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="website_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

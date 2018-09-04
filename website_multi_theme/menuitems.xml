@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <menuitem id="menu_configure_multi_website"
+        parent="website.menu_website_global_configuration"
+        action="action_configure_multi_website"/>
+
+    <menuitem id="menu_configure_menu_website"
+        parent="website.menu_website_global_configuration"
+        action="action_configure_menu_website"/>
+</odoo>

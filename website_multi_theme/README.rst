@@ -13,6 +13,12 @@ particular views from any module (e.g. view ``website.custom_footer`` from
 ``website`` module). It also means, that *theme* is not just a styling, but
 a content as well.
 
+It adds controls to make managing multiple websites easier:
+
+* Drop-down list to switch to a different website.
+* Change the related website of pages in the page properties dialog with checkboxes.
+* Adds the field `website_ids` to the `website.page` tree.
+
 How it works
 ============
 
@@ -82,7 +88,7 @@ Configuration
 To configure this module, you need to:
 
 #. Go to *Website Admin > Configuration > Settings* and choose or create
-    a *Website*.
+   a *Website*.
 #. Press *Advanced > Multiwebsite theme > Reload*.
 #. In *Advanced > Multiwebsite theme*, pick one of the available themes.
 #. Via Edit button (``fa-external-link``) add *Default Theme* to *Sub-themes* of
@@ -108,7 +114,7 @@ To use this module, you need to:
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/10.0
+   :target: https://runbot.odoo-community.org/runbot/186/11.0
 
 Development FAQ
 ===============
@@ -179,6 +185,7 @@ Contributors
 * Antonio Espinosa <antonio.espinosa@tecnativa.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
 * Ivan Yelizariev <https://it-projects.info/team/yelizariev>
+* Dennis Sluijk <d.sluijk@onestein.nl>
 
 Maintainer
 ----------

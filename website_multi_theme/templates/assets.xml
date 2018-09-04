@@ -10,6 +10,12 @@
             <script
                 type="text/javascript"
                 src="/website_multi_theme/static/src/js/theme.js"/>
+            <script
+                type="text/javascript"
+                src="/website_multi_theme/static/src/js/switch_website_menu.js"/>
+            <script
+                type="text/javascript"
+                src="/website_multi_theme/static/src/js/page_properties_dialog.js"/>
         </xpath>
     </template>
 

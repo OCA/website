@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<templates>
+    <t t-extend="website.pagesMenu.page_info">
+        <t t-jquery="#basic_page_info" t-operation="append">
+            <div class="form-group" id="website_ids">
+                <label class="control-label col-sm-3">Websites</label>
+                <div class="col-sm-9">
+
+                </div>
+            </div>
+        </t>
+    </t>
+
+    <t t-name="website_multi_theme.WebsiteCheckbox">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" t-att-checked="checked ? 'checked' : undefined" t-attf-data-id="{{ id }}" />
+                <t t-esc="domain"/>
+            </label>
+        </div>
+    </t>
+</templates>

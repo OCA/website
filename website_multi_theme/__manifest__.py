@@ -6,10 +6,11 @@
 {
     "name": "Website Multi Theme",
     "summary": "Support different theme per website",
-    "version": "11.0.1.4.2",
+    "version": "11.0.1.5.0",
     "category": "Website",
     "website": "https://www.tecnativa.com",
-    "author": "Tecnativa, IT-Projects LLC, Odoo Community Association (OCA)",
+    "author": "Tecnativa, IT-Projects LLC, Onestein, "
+              "Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
     "installable": True,
@@ -23,8 +24,13 @@
         "data/themes_private.xml",
         "templates/assets.xml",
         "templates/patterns.xml",
+        "templates/user_navbar.xml",
         "data/themes_default.xml",
         "views/ir_ui_view.xml",
+        "views/website_view.xml",
+        "views/website_page_view.xml",
+        "views/website_menu_view.xml",
+        "menuitems.xml",
         "data/ir_module_category.xml",
     ],
     "demo": [
