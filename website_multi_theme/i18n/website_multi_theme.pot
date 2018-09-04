@@ -58,10 +58,17 @@ msgid "<b>Sign in</b>"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_549
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_549
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_553
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_553
 msgid "<span class=\"btn btn-primary btn-lg o_website_form_send\">Send</span>\n"
 "                                <span id=\"o_website_form_result\"/>"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.ui.view,arch_db:website_multi_theme.user_navbar
+msgid "<span class=\"current-website\"/>\n"
+"                    <span class=\"caret\"/>\n"
+"                    <span class=\"sr-only\">Toggle Dropdown</span>"
 msgstr ""
 
 #. module: website_multi_theme
@@ -88,6 +95,11 @@ msgstr ""
 #. module: website_multi_theme
 #: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_auto
 msgid "Auto-generated"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.model.fields,field_description:website_multi_theme.field_website_base_url
+msgid "Base Url"
 msgstr ""
 
 #. module: website_multi_theme
@@ -155,8 +167,8 @@ msgid "Duplicates of this view"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_549
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_549
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_553
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_553
 msgid "Email"
 msgstr ""
 
@@ -233,6 +245,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_asset_write_date
 #: model:ir.model.fields,field_description:website_multi_theme.field_website_theme_write_date
 msgid "Last Updated on"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.actions.act_window,name:website_multi_theme.action_configure_menu_website
+#: model:ir.ui.menu,name:website_multi_theme.menu_configure_menu_website
+msgid "Menus"
 msgstr ""
 
 #. module: website_multi_theme
@@ -441,8 +459,8 @@ msgid "Our products are designed for small to medium size companies willing to o
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_549
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_549
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_553
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_553
 msgid "Phone Number"
 msgstr ""
 
@@ -462,8 +480,8 @@ msgid "Sub-themes"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_549
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_549
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_553
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_553
 msgid "Subject"
 msgstr ""
 
@@ -504,6 +522,13 @@ msgid "This is a demo page"
 msgstr ""
 
 #. module: website_multi_theme
+#. openerp-web
+#: code:addons/website_multi_theme/static/src/js/switch_website_menu.js:48
+#, python-format
+msgid "To use this menu you'll have to set the `Base Url` of the website in the configuration menu (Website > Configuration > Websites)."
+msgstr ""
+
+#. module: website_multi_theme
 #: model:ir.model.fields,help:website_multi_theme.field_ir_ui_view_origin_view_id
 #: model:ir.model.fields,help:website_multi_theme.field_website_page_origin_view_id
 msgid "View from where this one was copied for multi-website"
@@ -536,6 +561,7 @@ msgstr ""
 #. module: website_multi_theme
 #: model:ir.model,name:website_multi_theme.model_website
 #: model:ir.ui.view,arch_db:website_multi_theme.view_website_config_settings
+#: model:ir.ui.view,arch_db:website_multi_theme.website_menu_search
 msgid "Website"
 msgstr ""
 
@@ -547,6 +573,15 @@ msgid "Website domain:"
 msgstr ""
 
 #. module: website_multi_theme
+#. openerp-web
+#: code:addons/website_multi_theme/static/src/xml/page_properties_dialog.xml:9
+#: model:ir.actions.act_window,name:website_multi_theme.action_configure_multi_website
+#: model:ir.ui.menu,name:website_multi_theme.menu_configure_multi_website
+#, python-format
+msgid "Websites"
+msgstr ""
+
+#. module: website_multi_theme
 #: model:ir.ui.view,arch_db:website_multi_theme.demo_page_ir_ui_view
 #: model:ir.ui.view,arch_db:website_multi_theme.demo_page_view
 #: model:website.page,arch_db:website_multi_theme.demo_page
@@ -554,20 +589,20 @@ msgid "You should see the button with a ugly green border if this website has en
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_549
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_549
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_553
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_553
 msgid "Your Company"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_549
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_549
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_553
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_553
 msgid "Your Name"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_549
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_549
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_553
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_553
 msgid "Your Question"
 msgstr ""
 
