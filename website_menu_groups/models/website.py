@@ -18,13 +18,10 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp import models, fields, api, _
+from openerp import models, fields
 
-import logging
-_logger = logging.getLogger(__name__)
 
-class Partner(models.Model):
+class Website(models.Model):
     _inherit = 'website.menu'
-    
+
     group_ids = fields.Many2many(comodel_name='res.groups', string='Groups')
-    

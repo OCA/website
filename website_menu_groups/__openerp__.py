@@ -18,20 +18,18 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
 {
     'name': 'Website Menu Groups',
-    'version': '0.1',
-    'category': '',
-    'description': """""",
-    'author': 'Vertel AB',
+    'version': '8.0.1.0.0',
+    'category': 'Website',
+    'author': 'Vertel AB,Odoo Community Association (OCA)',
+    'license': 'AGPL-3',
     'website': 'http://www.vertel.se',
     'depends': ['website'],
     'data': [
-        'website_view.xml',
+        'views/website_menu.xml',
         'security/website_security.xml',
-        ],
+    ],
     'application': False,
     'installable': True,
 }
-# vim:expandtab:smartindent:tabstop=4s:softtabstop=4:shiftwidth=4:
