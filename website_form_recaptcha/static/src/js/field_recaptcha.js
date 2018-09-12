@@ -13,19 +13,21 @@ odoo.define('website_form_recaptcha.recaptcha', function(require){
             var self = this;
             this._super();
             this.$captchas = self.$('.o_website_form_recaptcha');
-            $.ajax({
-                url: '/website/recaptcha/',
-                method: 'GET',
-                success: function(data){
-                    data = JSON.parse(data);
-                    self.$captchas.append($(
-                        '<div class="g-recaptcha" data-sitekey="' + data.site_key + '"></div>'
-                    ));
-                    if (self.$captchas.length) {
-                        $.getScript('https://www.google.com/recaptcha/api.js');
-                    }
-                },
-            });
+            if(this.$captchas.length > 0) {
+                $.ajax({
+                    url: '/website/recaptcha/',
+                    method: 'GET',
+                    success: function(data){
+                        data = JSON.parse(data);
+                        self.$captchas.html($(
+                            '<div class="g-recaptcha" data-sitekey="' + data.site_key + '"></div>'
+                        ));
+                        if (self.$captchas.length) {
+                            $.getScript('https://www.google.com/recaptcha/api.js');
+                        }
+                    },
+                });
+            };
         },
 
         update_status: function(status) {
