@@ -8,7 +8,6 @@
         <field name="inherit_id" ref="website.view_website_form"/>
         <field name="arch" type="xml">
             <xpath expr="//group[@name='domain']" position="inside">
-                <field name="company_id"/>
                 <field name="favicon" widget="image"/>
                 <field name="base_url"/>
             </xpath>
