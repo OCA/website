@@ -6,7 +6,7 @@
 {
     "name": "Website Multi Theme",
     "summary": "Support different theme per website",
-    "version": "11.0.1.5.0",
+    "version": "11.0.1.6.0",
     "category": "Website",
     "website": "https://www.tecnativa.com",
     "author": "Tecnativa, IT-Projects LLC, Onestein, "
