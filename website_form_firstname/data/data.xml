@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Denis Mudarisov (IT-Projects LLC)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <data>
+        <function model="ir.model.fields" name="formbuilder_whitelist">
+            <value>res.partner</value>
+            <value eval="[
+                'firstname', 'lastname'
+            ]"/>
+        </function>
+    </data>
+</odoo>
