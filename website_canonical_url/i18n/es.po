@@ -9,20 +9,21 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-07 01:09+0000\n"
-"PO-Revision-Date: 2016-07-07 01:09+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"PO-Revision-Date: 2018-09-27 11:22+0000\n"
+"Last-Translator: Cris <cristina.marrod@gmail.com>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.1.1\n"
 
 #. module: website_canonical_url
 #: model:ir.model.fields,field_description:website_canonical_url.field_website_canonical_domain
 #: model:ir.model.fields,field_description:website_canonical_url.field_website_config_settings_canonical_domain
 msgid "Canonical domain"
-msgstr ""
+msgstr "Dominio canónico"
 
 #. module: website_canonical_url
 #: model:ir.model.fields,help:website_canonical_url.field_website_canonical_domain
@@ -30,17 +31,19 @@ msgstr ""
 msgid ""
 "Canonical domain is used to build unique canonical URLs to make SEO happy."
 msgstr ""
+"El dominio canónica es usado para construir URL's canónicas únicas y hacer "
+"mejor SEO."
 
 #. module: website_canonical_url
 #: code:addons/website_canonical_url/models/website.py:23
 #, python-format
 msgid "Canonical domain must contain protocol `http(s)://`"
-msgstr ""
+msgstr "El dominio canónico debe contener el protocolo `http(s)://`"
 
 #. module: website_canonical_url
 #: model:ir.ui.view,arch_db:website_canonical_url.canonical_demo
 msgid "Check source code to see pager and canonical URL."
-msgstr ""
+msgstr "Revisa el código fuente para ver la URL canónica."
 
 #. module: website_canonical_url
 #: model:ir.model,name:website_canonical_url.model_website
@@ -51,9 +54,9 @@ msgstr "Sitio web"
 #: model:ir.ui.view,arch_db:website_canonical_url.view_website_config_settings
 #: model:ir.ui.view,arch_db:website_canonical_url.view_website_form
 msgid "https://mydomain.com"
-msgstr ""
+msgstr "https://mydomain.com"
 
 #. module: website_canonical_url
 #: model:ir.model,name:website_canonical_url.model_website_config_settings
 msgid "website.config.settings"
-msgstr ""
+msgstr "website.config.settings"
