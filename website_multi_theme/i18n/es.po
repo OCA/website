@@ -10,14 +10,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
-"PO-Revision-Date: 2018-01-27 03:46+0000\n"
-"Last-Translator: Alberte Moço, 2018\n"
+"PO-Revision-Date: 2018-09-27 12:40+0000\n"
+"Last-Translator: Cris Martín <cristina.marrod@gmail.com>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.1.1\n"
 
 #. module: website_multi_theme
 #: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_410
@@ -653,7 +654,7 @@ msgstr ""
 #. module: website_multi_theme
 #: model:ir.model,name:website_multi_theme.model_res_config_settings
 msgid "res.config.settings"
-msgstr ""
+msgstr "website.config.settings"
 
 #. module: website_multi_theme
 #: model:ir.model,name:website_multi_theme.model_website_theme
