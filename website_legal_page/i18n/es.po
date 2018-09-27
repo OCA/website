@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-16 11:37+0000\n"
 "PO-Revision-Date: 2018-09-27 11:02+0000\n"
-"Last-Translator: David Vidal <david.vidal@tecnativa.com>\n"
+"Last-Translator: Cris <cristina.marrod@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -205,7 +205,6 @@ msgstr "Infomación acerca de la recopilación y uso de datos"
 #: model:ir.ui.view,arch_db:website_legal_page.advise_page_ir_ui_view
 #: model:ir.ui.view,arch_db:website_legal_page.legal_advice_link
 #: model:website.page,arch_db:website_legal_page.advise_page
-#, fuzzy
 msgid "Legal Advice"
 msgstr "Aviso Legal"
 
@@ -373,7 +372,6 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model:ir.ui.view,arch_db:website_legal_page.privacy_policy_link
 #: model:website.page,arch_db:website_legal_page.privacy_page
-#, fuzzy
 msgid "Privacy Policy"
 msgstr "Política de Privacidad"
 
@@ -417,7 +415,6 @@ msgstr "El propietario de esta web es"
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
 #: model:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model:website.page,arch_db:website_legal_page.privacy_page
-#, fuzzy
 msgid ""
 "The security of your Personal Information is important to us, but\n"
 "                                                remember that no method of\n"
@@ -429,11 +426,17 @@ msgid ""
 "                                                we cannot guarantee\n"
 "                                                its absolute security."
 msgstr ""
-"La seguridad de su Información personal es importante para nosotros, pero "
-"recuerde que ningún método de la transmisión sobre Internet o método de "
-"almacenaje electrónico, es 100% seguro. Si bien nos esforzamos por utilizar "
-"medios comercialmente aceptables para proteger su información personal, no "
-"podemos garantizar su seguridad."
+"La seguridad de su Información personal es importante para nosotros, pero\n"
+"                                                recuerde que ningún método "
+"de la\n"
+"                                                transmisión en Internet o "
+"método de almacenaje electrónico, es 100%\n"
+"                                                seguro. Aunque nos "
+"esforzamos por\n"
+"                                                utilizar medios "
+"comercialmente aceptables para proteger su información personal, \n"
+"                                                no podemos garantizar que "
+"sea absolutamente seguridad.  "
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -457,7 +460,6 @@ msgstr "NIF:"
 #: model:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model:ir.ui.view,arch_db:website_legal_page.terms_page_ir_ui_view
 #: model:website.page,arch_db:website_legal_page.terms_page
-#, fuzzy
 msgid ""
 "We may terminate or suspend access to our Service immediately, without\n"
 "                                                prior notice or liability,\n"
@@ -473,7 +475,6 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
 #: model:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model:website.page,arch_db:website_legal_page.privacy_page
-#, fuzzy
 msgid ""
 "We may update this Privacy Policy from time to time. We will notify\n"
 "                                                you of any changes by "
