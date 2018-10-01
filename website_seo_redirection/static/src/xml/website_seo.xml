@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<templates id="template" xml:space="preserve">
+    <t t-extend="website.seo_configuration">
+        <t t-jquery=".js_seo_tips" t-operation="after">
+            <section>
+                <h3 class="page-header">
+                    Change the URL
+                </h3>
+                <div class="form-horizontal">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            BEWARE!
+                        </div>
+                        <div class="panel-body">
+                            If you need a special URL for this page, you can set it here, but if you set some URL that is already in use, could be interferring with other page and bad things could happen...
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-lg-2"
+                               for="js_website_seo_redirection">
+                            Destination URL:
+                        </label>
+                        <div class="col-lg-8">
+                            <input
+                                id="js_website_seo_redirection"
+                                type="url"
+                                class="form-control"
+                                name="destination"
+                                title="URL without domain name, all lower case, hyphenated."
+                                placeholder="E.g.: /some/good-url"
+                                pattern="^/[a-z0-9/-]+$"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </t>
+    </t>
+</templates>

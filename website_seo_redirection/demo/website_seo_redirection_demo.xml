@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+
+<template id="sample_page" page="True">
+    <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty">
+            <section class="jumbotron mt16 mb16">
+                <div class="container">
+                    <h1>Welcome, this is SEO.</h1>
+                    <p>
+                        The original URL for this page is
+                        <a href="/page/website_seo_redirection.sample_page"
+                           id="origin">
+                            /page/website_seo_redirection.sample_page
+                        </a>, but
+                        <a href="/seo/sample" id="destination">/seo/sample</a>
+                        is beautier, right?
+                     </p>
+                </div>
+            </section>
+        </div>
+    </t>
+</template>
+
+<record id="sample_menu" model="website.menu">
+    <field name="name">SEO Sample</field>
+    <field name="parent_id" ref="website.main_menu"/>
+</record>
+
+<record id="sample_origin_menu" model="website.menu">
+    <field name="name">Original URL</field>
+    <field name="url">/page/website_seo_redirection.sample_page</field>
+    <field name="parent_id" ref="sample_menu"/>
+</record>
+
+<record id="sample_destination_menu" model="website.menu">
+    <field name="name">Redirected URL</field>
+    <field name="url">/seo/sample</field>
+    <field name="parent_id" ref="sample_menu"/>
+</record>
+
+<record id="sample_redirection" model="website.seo.redirection">
+    <field name="origin">/page/website_seo_redirection.sample_page</field>
+    <field name="destination">/seo/sample</field>
+</record>
+
+<record id="sample_redirection_no_relocate" model="website.seo.redirection">
+    <field name="origin">/seo/sample/no-relocate</field>
+    <field name="destination">/seo/sample</field>
+    <field name="relocate_controller" eval="False"/>
+</record>
+
+</odoo>
