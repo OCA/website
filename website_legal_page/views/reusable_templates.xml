@@ -3,10 +3,12 @@
 
     <!-- Base templates for submodules -->
     <template id="acceptance_full">
-        I accept the <a href="/legal/advice">legal advice</a>, the
-        <a href="/legal/privacy-policy">privacy policy</a>, and the
-        <a href="/legal/terms-of-use">terms of use</a>
-        of this website.
+        <span class="acceptance_full">
+            I accept the <a href="/legal/advice">legal advice</a>, the
+            <a href="/legal/privacy-policy">privacy policy</a>, and the
+            <a href="/legal/terms-of-use">terms of use</a>
+            of this website.
+        </span>
     </template>
 
 </odoo>

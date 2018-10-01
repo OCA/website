@@ -5,7 +5,7 @@
 {
     'name': "Website Legal Page",
     'category': 'Website',
-    'version': '11.0.1.2.0',
+    'version': '12.0.1.0.0',
     'depends': [
         'website',
     ],
@@ -15,8 +15,7 @@
         'views/website_privacy.xml',
         'views/website_terms.xml',
     ],
-    'author': 'Antiun Ingeniería S.L., '
-              'Tecnativa, '
+    'author': 'Tecnativa, '
               'LasLabs, '
               'Nicolas JEUDY, '
               'Odoo Community Association (OCA)',
