@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="layout" inherit_id="website.layout">
+            <header position="attributes">
+                <attribute name="style">display: none</attribute>
+            </header>
+            <footer position="attributes">
+                <attribute name="style">display: none</attribute>
+            </footer>
+        </template>
+    </data>
+</openerp>
