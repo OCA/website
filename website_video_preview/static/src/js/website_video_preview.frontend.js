@@ -8,6 +8,7 @@ odoo.define('website_video_preview.frontend', function(require) {
             'click [data-iframe-src]': '_onPreviewClick',
             'click .play_button': '_onPlayButtonClick',
         },
+
         start: function() {
             var src = this.$target.find('img.video_preview').attr('data-iframe-src');
             if (!src) {
@@ -19,16 +20,19 @@ odoo.define('website_video_preview.frontend', function(require) {
                 this.playVideo(this.$target.find('img.video_preview').attr('data-iframe-src'));
             }
         },
+
         _onPlayButtonClick: function(e) {
             var $img = $(e.currentTarget);
             var src = $img.parent().find('[data-iframe-src]').attr('data-iframe-src');
             this.playVideo(src);
         },
+
         _onPreviewClick: function(e) {
             var $img = $(e.currentTarget);
             var src = $img.attr('data-iframe-src');
             this.playVideo(src);
         },
+
         playVideo: function(src) {
             var $iframe = $('<iframe class="o_video_dialog_iframe" frameborder="0"></iframe>');
             $iframe.attr('src', src.replace('autoplay=0', 'autoplay=1'));
@@ -36,6 +40,7 @@ odoo.define('website_video_preview.frontend', function(require) {
             this.$target.find('img.video_preview').addClass('hidden');
             this.$target.find('img.play_button').addClass('hidden');
         },
+
         stopVideo: function() {
             this.$target.find('iframe').remove();
             this.$target.find('img.video_preview').removeClass('hidden');
