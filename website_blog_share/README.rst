@@ -24,7 +24,7 @@ NB: even if you have to go to one specific blog post, the set up is valid for al
    :target: https://runbot.odoo-community.org/runbot/186/8.0
 
 Know issues / Roadmap
-====================
+=====================
 * Share blog configuration valid for all blog posts. No individual configuration for each blog
 
 
