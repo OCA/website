@@ -30,6 +30,7 @@ setuptools.setup(
         'odoo8-addon-website_event_register_free',
         'odoo8-addon-website_event_register_free_with_sale',
         'odoo8-addon-website_form_recaptcha',
+        'odoo8-addon-website_hide',
         'odoo8-addon-website_hr_contact',
         'odoo8-addon-website_hr_department',
         'odoo8-addon-website_img_bg_style',
