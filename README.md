@@ -40,6 +40,7 @@ addon | version | summary
 [website_event_register_free](website_event_register_free/) | 8.0.1.1.0 | Avoid shopping chart when registering for free events
 [website_event_register_free_with_sale](website_event_register_free_with_sale/) | 8.0.1.1.0 | Combine free and paid tickets on events
 [website_form_recaptcha](website_form_recaptcha/) | 8.0.1.0.0 | Provides a ReCaptcha field for Website Forms
+[website_hide](website_hide/) | 8.0.1.0.0 | Hide the website from the frontend
 [website_hr_contact](website_hr_contact/) | 8.0.1.0.0 | Display your hr address book in your website
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 | Display the structure of your departments and their members.
 [website_img_bg_style](website_img_bg_style/) | 8.0.1.0.0 | Let you change styles of snippets background images
