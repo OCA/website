@@ -22,7 +22,7 @@ To use this module, you need to:
 * Drag the *Marginless Gallery* snippet anywhere in your page.
 * Choose a fixed height for all your images. This is required to maintain a
   solid layout. Must be a number.
-    * If you still do not want the fixed height (maybe because your theme
+* If you still do not want the fixed height (maybe because your theme
       applies it), just leave blank and press *Continue*.
 
 To change images, you need to:
