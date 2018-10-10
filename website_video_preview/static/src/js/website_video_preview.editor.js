@@ -93,7 +93,7 @@ odoo.define('website_video_preview.editor', function(require) {
          * @returns {String}
          */
         _getYoutubePreviewImage: function(id) {
-            return 'https://img.youtube.com/vi/' + id + '/sddefault.jpg';
+            return 'https://img.youtube.com/vi/' + id + '/0.jpg';
         },
 
         /**
