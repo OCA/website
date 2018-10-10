@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-website Odoo addons",
     version=version,
     install_requires=[
+        'odoo12-addon-website_legal_page',
         'odoo12-addon-website_odoo_debranding',
     ],
     classifiers=[
