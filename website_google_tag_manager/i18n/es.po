@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * website_google_tag_manager
-# 
+#
 # Translators:
 # Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 # OCA Transbot <transbot@odoo-community.org>, 2016
@@ -13,11 +13,17 @@ msgstr ""
 "PO-Revision-Date: 2016-12-24 04:16+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_google_tag_manager
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings_google_tag_manager_key
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_website_google_tag_manager_key
+msgid "Container ID"
+msgstr ""
 
 #. module: website_google_tag_manager
 #: model:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
@@ -26,10 +32,20 @@ msgid "GTM-XXXXX"
 msgstr "GTM-XXXXX"
 
 #. module: website_google_tag_manager
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_website_config_settings_google_tag_manager_key
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_website_google_tag_manager_key
-msgid "Google Tag Manager Key"
+#: model:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
+#, fuzzy
+msgid "Google Tag Manager"
 msgstr "Clave del gestor de etiquetas de Google"
+
+#. module: website_google_tag_manager
+#: model:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
+msgid "How to get my GTM container ID"
+msgstr ""
+
+#. module: website_google_tag_manager
+#: model:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
+msgid "Manage all your tags without editing code."
+msgstr ""
 
 #. module: website_google_tag_manager
 #: model:ir.model,name:website_google_tag_manager.model_website
@@ -37,6 +53,7 @@ msgid "Website"
 msgstr "Sitio web"
 
 #. module: website_google_tag_manager
-#: model:ir.model,name:website_google_tag_manager.model_website_config_settings
-msgid "website.config.settings"
+#: model:ir.model,name:website_google_tag_manager.model_res_config_settings
+#, fuzzy
+msgid "res.config.settings"
 msgstr "website.config.settings"
