@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Slides',
-    'version': '8.0.2.0.0',
+    'version': '8.0.2.0.1',
     'license': 'LGPL-3',
     'summary': 'Share and Publish Videos, Presentations and Documents',
     'category': 'Website',
