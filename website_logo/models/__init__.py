@@ -1,0 +1,1 @@
+from . import res_config_inerit,website_inherit
