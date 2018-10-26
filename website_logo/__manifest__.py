@@ -1,6 +1,6 @@
 {
     'name': 'logo per website',
-    'version': '1.0',
+    'version': '12.0',
     'summary': 'one logo for each website',
     'description': 'this module make you configure a logo for each website ',
     'category': 'website',
