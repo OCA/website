@@ -4,7 +4,7 @@
     'summary': 'one logo for each website',
     'description': 'this module make you configure a logo for each website ',
     'category': 'website',
-    'author': 'author':"EslAmer, " 
+    'author':"EslAmer, " 
 		"Agile Business Group, "
               "LasLabs, "
               "Tecnativa, "
