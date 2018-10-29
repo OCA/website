@@ -51,6 +51,7 @@ Contributors
 * Lorenzo Battistini <lorenzo.battistini@agilebg.com>
 * Antonio Espinosa <antonio.espinosa@tecnativa.com>
 * David Vidal <david.vidal@tecnativa.com>
+* Eslam Amer <esla.amer@gmail.com>
 
 Maintainer
 ----------
