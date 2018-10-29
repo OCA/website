@@ -1,17 +1,24 @@
+# Copyright 2015 Agile Business Group - Lorenzo Battistini
+# Copyright 2016 Tecnativa - Antonio Espinosa
+# Copyright 2017 Tecnativa - David Vidal
+# Copyright 2018 eslaAmer - Eslam Amer
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
 {
-    'name': 'logo per website',
-    'version': '12.0',
-    'summary': 'one logo for each website',
-    'description': 'this module make you configure a logo for each website ',
+    'name': 'Website logo',
+    'summary': 'Website company logo',
+    'version': '12.0.1.0.0',
     'category': 'website',
-    'author':"EslAmer, " 
-		"Agile Business Group, "
+    'author': "EslAmer, "
+              "Agile Business Group, "
               "LasLabs, "
               "Tecnativa, "
               "Odoo Community Association (OCA)",
+    'website': 'https://github.com/OCA/website',
+    'license': 'AGPL-3',
     'depends': ['website'],
     'data': ['views/res_config_website_inherit.xml',
              'data/template.xml'],
     'installable': True,
-
+    'auto_install': False,
 }
