@@ -8,5 +8,7 @@ from odoo import fields, models
 
 class Config(models.TransientModel):
     _inherit = 'res.config.settings'
-    logo = fields.Binary(related='website_id.logo',
-                                 readonly=False)
+
+    logo = fields.Binary(
+        related='website_id.logo',
+        readonly=False)
