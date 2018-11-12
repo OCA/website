@@ -43,6 +43,10 @@ class Website(models.Model):
     def _get_canonical_relative_url(self, req=None):
         req = req or request
         url = req.httprequest.path
+        if 'website.seo.redirection' in self.env:
+            redirect = self.env['website.seo.redirection'].search([('origin', '=', url)], limit=1)
+            if redirect:
+                url = redirect.destination
         lang_path = '/'
         if req.lang != req.website.default_lang_code:
             lang_path = '/%s/' % req.lang
