@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="website_snippet_timeline.website_snippet_timeline"
+               t-thumbnail="/website_snippet_timeline/static/src/img/snippet.png" />
+
+            <t t-snippet="website_snippet_timeline.website_snippet_timeline_item"
+               t-thumbnail="/website_snippet_timeline/static/src/img/snippet-item.png" />
+        </xpath>
+    </template>
+
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-selector=".snippet_timeline_item"
+                 data-js="timeline_item"
+                 data-drop-in=".snippet_timeline ul" data-drop-near=".snippet_timeline ul > li">
+            </div>
+
+            <div data-js="margin-y"
+                 data-selector=".snippet_timeline_item">
+            </div>
+        </xpath>
+    </template>
+
+    <template id="website_snippet_timeline_item" name="Timeline - Item">
+        <li class="snippet_timeline_item mb64 o_animable">
+            <div class="timeline-image">
+                <img class="img-circle img-responsive"
+                     src="/website/static/src/img/backgrounds/city.jpg" />
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <p class="h3">2009-2011</p>
+                    <p class="h4">Our Humble Beginnings</p>
+                </div>
+                <div class="timeline-body">
+                    <p>Lorem ipsum dolor sit ametqui quibusdam.</p>
+                </div>
+            </div>
+        </li>
+    </template>
+
+    <template id="website_snippet_timeline" name="Timeline">
+        <section class="snippet_timeline mt32 mb32" data-name="Timeline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="timeline">
+                            <li class="snippet_timeline_item mb64 o_animable">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive"
+                                         src="/website/static/src/img/backgrounds/city.jpg" />
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <p class="h3">2009-2011</p>
+                                        <p class="h4">Our Humble Beginnings</p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Lorem ipsum dolor sit ametqui quibusdam.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="snippet_timeline_item mb64  o_animable">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive"
+                                         src="/website/static/src/img/backgrounds/peak.jpg" />
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <p class="h3">March 2011</p>
+                                        <p class="h4">An Agency is Born</p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Lorem ipsum dolor sit ametqui quibusdam.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="snippet_timeline_item mb64 o_animable">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive"
+                                         src="/website/static/src/img/backgrounds/panama-sky.jpg" />
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <p class="h3">December 2012</p>
+                                        <p class="h4">Transition to Full Service</p>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>Lorem ipsum dolor sit ametqui quibusdam.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
