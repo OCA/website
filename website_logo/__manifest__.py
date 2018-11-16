@@ -9,8 +9,7 @@
     'summary': 'Website company logo',
     'version': '12.0.1.0.0',
     'category': 'website',
-    'author': "EslAmer, "
-              "Agile Business Group, "
+    'author': "Agile Business Group, "
               "LasLabs, "
               "Tecnativa, "
               "Odoo Community Association (OCA)",
