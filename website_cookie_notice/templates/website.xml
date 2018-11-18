@@ -12,10 +12,10 @@
     <div t-if="request and
         not request.session.get('accepted_cookies')"
         id="website_cookie_notice"
-        class="container-fluid bg-warning cc-cookies">
+        class="container-fluid cc-cookies alert alert-warning" role="alert">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10">We use cookies in this website. Read about them in our <a href="/legal/privacy-policy">privacy policy</a>. To disable them, configure your browser properly. If you keep using this website, you are accepting those.</div>
+                <div class="col-sm-10">We use cookies in this website. Read about them in our <a href="/legal/privacy-policy" class="alert-link">privacy policy</a>. To disable them, configure your browser properly. If you keep using this website, you are accepting those.</div>
                 <div class="col-sm-2 text-center">
                     <a class="btn btn-primary" href="#">OK</a>
                 </div>
