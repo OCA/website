@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2014 Jorge Camacho <jcamacho@trey.es>
 # Copyright 2015 Antonio Espinosa <antonioea@antiun.com>
 # Copyright 2016-2018 Vicent Cubells <vicent.cubells@tecnativa.com>
@@ -6,7 +5,7 @@
 {
     "name": "Website CRM privacy policy",
     "category": "Website",
-    "version": "11.0.1.0.0",
+    "version": "12.0.1.0.0",
     "website": "https://github.com/OCA/website",
     "author": "Trey, "
               "Tecnativa, "
