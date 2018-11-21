@@ -8,6 +8,7 @@
         </xpath>
         <xpath expr="//header//a[hasclass('navbar-brand')]" position="attributes">
             <attribute name="class" add="invisible" separator=" "/>
+            <attribute name="style" add="Max-width:0px;margin:0px;" />
         </xpath>
     </template>
 </odoo>
