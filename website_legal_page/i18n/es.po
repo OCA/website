@@ -7,14 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-16 11:37+0000\n"
-"PO-Revision-Date: 2015-06-16 11:37+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2018-11-23 16:57+0000\n"
+"Last-Translator: Josenv <jose@comunitea.com>\n"
 "Language-Team: \n"
-"Language: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.2.2\n"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
@@ -47,12 +48,12 @@ msgstr "sin tener en cuenta su conflicto de disposiciones legales."
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid ", and the"
-msgstr ""
+msgstr ", y los"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid ", the"
-msgstr ""
+msgstr ", la"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -134,7 +135,7 @@ msgstr "Jurisdicción"
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "I accept the"
-msgstr ""
+msgstr "Acepto el"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
@@ -152,7 +153,6 @@ msgstr "Infomación acerca de la recopilación y uso"
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.advice
 #: model:ir.ui.view,arch_db:website_legal_page.legal_advice_link
-#, fuzzy
 msgid "Legal Advice"
 msgstr "Aviso Legal"
 
@@ -432,9 +432,8 @@ msgstr "Aviso Legal"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
-#, fuzzy
 msgid "of this website."
-msgstr "El propietario de esta web es"
+msgstr "de este sitio web."
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
