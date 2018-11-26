@@ -2,15 +2,16 @@
  * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
  */
 
-odoo.define('website_form_recaptcha.recaptcha', function(require){
+odoo.define('website_form_recaptcha.recaptcha', function (require) {
     "use strict";
 
     var ajax = require('web.ajax');
     var snippet_animation = require('website.content.snippets.animation');
+    var form_builder_send = snippet_animation.registry.form_builder_send;
 
-    snippet_animation.registry.form_builder_send = snippet_animation.registry.form_builder_send.extend({
+    snippet_animation.registry.form_builder_send = form_builder_send.extend({
 
-        start: function() {
+        start: function () {
             var self = this;
             this._super();
             this.$captchas = self.$('.o_website_form_recaptcha');
@@ -18,13 +19,14 @@ odoo.define('website_form_recaptcha.recaptcha', function(require){
                 function (result) {
                     var data = JSON.parse(result);
                     self.$captchas.append($(
-                        '<div class="g-recaptcha" data-sitekey="' + data.site_key + '"></div>'
+                        '<div class="g-recaptcha" data-sitekey="' +
+                        data.site_key + '"></div>'
                     ));
                     if (self.$captchas.length) {
                         $.getScript('https://www.google.com/recaptcha/api.js');
                     }
                 }
             );
-        }
+        },
     });
 });
