@@ -11,7 +11,7 @@ odoo.define('website_anchor_smooth_scroll', function(require) {
 
     var smooth_scroll = function(event) {
         event.preventDefault();
-        var anchor_fragment = event.target.hash;
+        var anchor_fragment = event.target.hash || this.hash;
 
         // Do this before scrolling so that browser history accurately reflects scroll position at time of click 
         history.pushState(null, document.title, anchor_fragment);
