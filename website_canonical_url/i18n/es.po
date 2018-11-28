@@ -20,14 +20,26 @@ msgstr ""
 "X-Generator: Weblate 3.1.1\n"
 
 #. module: website_canonical_url
+#: model:ir.model.fields,field_description:website_canonical_url.field_res_config_settings_canonical_domain
 #: model:ir.model.fields,field_description:website_canonical_url.field_website_canonical_domain
-#: model:ir.model.fields,field_description:website_canonical_url.field_website_config_settings_canonical_domain
+#, fuzzy
+msgid "Canonical Domain"
+msgstr "Dominio canónico"
+
+#. module: website_canonical_url
+#: model:website.menu,name:website_canonical_url.canonical_demo_menu
+#, fuzzy
+msgid "Canonical URL demo"
+msgstr "Dominio canónico"
+
+#. module: website_canonical_url
+#: model:ir.ui.view,arch_db:website_canonical_url.res_config_settings_view_form
 msgid "Canonical domain"
 msgstr "Dominio canónico"
 
 #. module: website_canonical_url
+#: model:ir.model.fields,help:website_canonical_url.field_res_config_settings_canonical_domain
 #: model:ir.model.fields,help:website_canonical_url.field_website_canonical_domain
-#: model:ir.model.fields,help:website_canonical_url.field_website_config_settings_canonical_domain
 msgid ""
 "Canonical domain is used to build unique canonical URLs to make SEO happy."
 msgstr ""
@@ -35,13 +47,15 @@ msgstr ""
 "mejor SEO."
 
 #. module: website_canonical_url
-#: code:addons/website_canonical_url/models/website.py:23
+#: code:addons/website_canonical_url/models/website.py:22
 #, python-format
 msgid "Canonical domain must contain protocol `http(s)://`"
 msgstr "El dominio canónico debe contener el protocolo `http(s)://`"
 
 #. module: website_canonical_url
-#: model:ir.ui.view,arch_db:website_canonical_url.canonical_demo
+#: model:ir.ui.view,arch_db:website_canonical_url.canonical_demo_page_ir_ui_view
+#: model:ir.ui.view,arch_db:website_canonical_url.canonical_demo_view
+#: model:website.page,arch_db:website_canonical_url.canonical_demo_page
 msgid "Check source code to see pager and canonical URL."
 msgstr "Revisa el código fuente para ver la URL canónica."
 
@@ -51,12 +65,13 @@ msgid "Website"
 msgstr "Sitio web"
 
 #. module: website_canonical_url
-#: model:ir.ui.view,arch_db:website_canonical_url.view_website_config_settings
+#: model:ir.ui.view,arch_db:website_canonical_url.res_config_settings_view_form
 #: model:ir.ui.view,arch_db:website_canonical_url.view_website_form
 msgid "https://mydomain.com"
 msgstr "https://mydomain.com"
 
 #. module: website_canonical_url
-#: model:ir.model,name:website_canonical_url.model_website_config_settings
-msgid "website.config.settings"
+#: model:ir.model,name:website_canonical_url.model_res_config_settings
+#, fuzzy
+msgid "res.config.settings"
 msgstr "website.config.settings"
