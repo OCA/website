@@ -1,5 +1,5 @@
 ==========================
-Website Google Tag Manager
+Google Tag Manager Support
 ==========================
 
 .. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -20,21 +20,24 @@ Website Google Tag Manager
     :target: https://translation.odoo-community.org/projects/website-11-0/website-11-0-website_google_tag_manager
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/111/11.0
+    :target: https://runbot.odoo-community.org/runbot/186/11.0
     :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module allows to configure your Odoo website to support
-the `Google Tag Manager <https://marketingplatform.google.com/about/tag-manager/>`_ tool.
+This module allows to configure your Odoo website to support the
+`Google Tag Manager <https://marketingplatform.google.com/about/tag-manager/>`_
+tool.
 
 **Table of contents**
 
 .. contents::
    :local:
 
-CONFIGURATION
+Configuration
 =============
+
+To configure this module, you need to:
 
 #. Go to **Website > Configuration > Settings**
 #. Check 'Google Tag Manager' option.
@@ -53,13 +56,20 @@ Do not contact contributors directly about support or help with technical issues
 Credits
 =======
 
+Authors
+~~~~~~~
+
+* ABF OSIELL
+* Tecnativa
+
 Contributors
 ~~~~~~~~~~~~
+
 * `Sebastien Alix <sebastien.alix@osiell.com>`_
 
-* `Tecnativa <https://www.tecnativa.com>`_:
+* `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Cristina Martin
+  * Cristina Martin R.
 
 Maintainers
 ~~~~~~~~~~~
