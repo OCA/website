@@ -47,7 +47,7 @@ you'll see an additiona field "Advanced JS config".
 
 You can use this to add further settings via JS variables.
 
- .. image:: ./images/addthis-adv-config.png
+ .. image:: https://raw.githubusercontent.com/OCA/website/11.0/website_addthis/images/addthis-adv-config.png
 
 Usage
 =====
