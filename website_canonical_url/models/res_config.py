@@ -8,4 +8,6 @@ class WebsiteConfigSettings(models.TransientModel):
 
     _inherit = 'res.config.settings'
 
-    canonical_domain = fields.Char(related='website_id.canonical_domain')
+    canonical_domain = fields.Char(
+        related='website_id.canonical_domain',
+        readonly=False)

@@ -8,7 +8,7 @@
               "Camptocamp, Odoo Community Association (OCA)",
     'website': "https://github.com/OCA/website",
     'category': 'Website',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'license': 'AGPL-3',
     'depends': [
         'website',

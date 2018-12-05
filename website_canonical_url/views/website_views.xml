@@ -19,7 +19,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='website_name']/.." position="after">
                 <div class="row">
-                    <label class="col-md-3 o_light_label" string="Canonical domain" />
+                    <label class="col-md-3 o_light_label" string="Canonical domain" for="canonical_domain"/>
                     <field name="canonical_domain" placeholder="https://mydomain.com" />
                 </div>
             </xpath>
