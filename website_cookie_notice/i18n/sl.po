@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_cookie_notice
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-01 01:34+0000\n"
+"PO-Revision-Date: 2017-07-01 01:34+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
+
+#. module: website_cookie_notice
+#: model:ir.ui.view,arch_db:website_cookie_notice.message
+msgid ""
+". To disable them, configure your browser properly. If you keep using this "
+"website, you are accepting those."
+msgstr ""
+". Da bi jih onemogočili, temu primerno nastavite svoj brskalnik. Če boste "
+"nadaljevali z uporabo te spletne strani, smatramo, da jih sprejemate."
+
+#. module: website_cookie_notice
+#: model:ir.ui.view,arch_db:website_cookie_notice.message
+msgid "OK"
+msgstr ""
+
+#. module: website_cookie_notice
+#: model:ir.ui.view,arch_db:website_cookie_notice.message
+msgid "We use cookies in this website. Read about them in our"
+msgstr "Naša spletna stran uporablja piškotke. Več o njih preberite v naših"
+
+#. module: website_cookie_notice
+#: model:ir.ui.view,arch_db:website_cookie_notice.message
+msgid "privacy policy"
+msgstr "pravilih o zasebnosti"
