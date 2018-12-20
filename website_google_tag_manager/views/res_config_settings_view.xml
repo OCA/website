@@ -9,18 +9,18 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="website.res_config_settings_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[@id='google_maps_setting']" position="after">
+            <div id="google_maps_setting" position="before">
                 <div class="col-xs-12 col-md-6 o_setting_box" id="google_tag_manager_setting">
                     <div class="o_setting_right_pane">
                         <label for="google_tag_manager_key" string="Google Tag Manager"/>
+                        <span class="fa fa-lg fa-globe" title="Values set here are website-specific." groups="website.group_multi_website"/>
                         <div class="text-muted">
                            Manage all your tags without editing code.
                         </div>
                         <div class="content-group">
                             <div class="row mt16">
-                                <label class="col-md-4 o_light_label" for="google_tag_manager_key"/>
-                                <field name="google_tag_manager_key" placeholder="GTM-XXXXX"
-                                       attrs="{'required': [('google_management_client_id', '!=', False)]}"/>
+                                <label class="col-lg-4 o_light_label" for="google_tag_manager_key"/>
+                                <field name="google_tag_manager_key" placeholder="GTM-XXXXX"/>
                             </div>
                         </div>
 
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-            </xpath>
+            </div>
         </field>
     </record>
 
