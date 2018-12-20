@@ -10,4 +10,5 @@ class ResConfigSettings(models.TransientModel):
 
     google_tag_manager_key = fields.Char(
         'Container ID',
-        related='website_id.google_tag_manager_key')
+        related='website_id.google_tag_manager_key',
+        readonly=False)
