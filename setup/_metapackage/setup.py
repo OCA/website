@@ -11,6 +11,7 @@ setuptools.setup(
         'odoo12-addon-website_canonical_url',
         'odoo12-addon-website_cookie_notice',
         'odoo12-addon-website_crm_privacy_policy',
+        'odoo12-addon-website_google_tag_manager',
         'odoo12-addon-website_legal_page',
         'odoo12-addon-website_odoo_debranding',
     ],
