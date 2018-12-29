@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid ""
 ". To disable them, configure your browser properly. If you keep using this "
 "website, you are accepting those."
@@ -29,16 +29,16 @@ msgstr ""
 "sito implica l'accettazione degli stessi."
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "OK"
 msgstr "OK"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "We use cookies in this website. Read about them in our"
 msgstr "Questo sito utilizza cookie. Leggi di più nell'"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "privacy policy"
 msgstr "Informativa sulla Privacy"
