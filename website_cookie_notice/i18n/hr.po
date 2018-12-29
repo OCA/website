@@ -20,23 +20,23 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid ""
 ". To disable them, configure your browser properly. If you keep using this "
 "website, you are accepting those."
 msgstr ""
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "OK"
 msgstr "OK"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "We use cookies in this website. Read about them in our"
 msgstr ""
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "privacy policy"
 msgstr ""
