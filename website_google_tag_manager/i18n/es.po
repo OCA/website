@@ -20,30 +20,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_google_tag_manager
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings_google_tag_manager_key
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_website_google_tag_manager_key
+#: model:ir.model,name:website_google_tag_manager.model_res_config_settings
+#, fuzzy
+msgid "Config Settings"
+msgstr "website.config.settings"
+
+#. module: website_google_tag_manager
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings__google_tag_manager_key
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_website__google_tag_manager_key
 msgid "Container ID"
 msgstr ""
 
 #. module: website_google_tag_manager
-#: model:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
-#: model:ir.ui.view,arch_db:website_google_tag_manager.view_website_form
+#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "GTM-XXXXX"
 msgstr "GTM-XXXXX"
 
 #. module: website_google_tag_manager
-#: model:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
+#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 #, fuzzy
 msgid "Google Tag Manager"
 msgstr "Clave del gestor de etiquetas de Google"
 
 #. module: website_google_tag_manager
-#: model:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
+#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "How to get my GTM container ID"
 msgstr ""
 
 #. module: website_google_tag_manager
-#: model:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
+#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "Manage all your tags without editing code."
 msgstr ""
 
@@ -51,9 +56,3 @@ msgstr ""
 #: model:ir.model,name:website_google_tag_manager.model_website
 msgid "Website"
 msgstr "Sitio web"
-
-#. module: website_google_tag_manager
-#: model:ir.model,name:website_google_tag_manager.model_res_config_settings
-#, fuzzy
-msgid "res.config.settings"
-msgstr "website.config.settings"
