@@ -19,23 +19,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid ""
 ". To disable them, configure your browser properly. If you keep using this "
 "website, you are accepting those."
 msgstr ". Ако продължите да използвате уебсайта, значи сте съгласни."
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "OK"
 msgstr "Приемам"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "We use cookies in this website. Read about them in our"
 msgstr "Този сайт използва бисквитки. Можете да прочетете повече в нашата"
 
 #. module: website_cookie_notice
-#: model:ir.ui.view,arch_db:website_cookie_notice.message
+#: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
 msgid "privacy policy"
 msgstr "политика за личните данни"
