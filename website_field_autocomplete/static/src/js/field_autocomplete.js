@@ -19,7 +19,8 @@ odoo.define('website_field_autocomplete.field_autocomplete', function(require){
       var self = this;
       var domain = [[this.queryField, 'ilike', request.term]];
       if (this.add_domain) {
-        domain = domain.concat(this.add_domain);
+        var add_domain = JSON.parse(this.add_domain.replace(/\'/g, '"'));
+        domain = domain.concat(add_domain);
       }
       return $.ajax({
         dataType: 'json',
