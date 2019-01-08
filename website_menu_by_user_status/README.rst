@@ -21,6 +21,14 @@ To use this module, you need to:
 
 #. remove default filter to edit website menu line
 
+Roadmap
+=======
+
+Point to improve
+
+* 2 flags will just toggle specific groups automatically [based on https://github.com/OCA/website/tree/11.0/website_menu_permission]
+
+
 Bug Tracker
 ===========
 
@@ -43,6 +51,7 @@ Contributors
 * Jordi Riera <jordi.riera@savoirfairelinux.com>
 * Meyomesse Gilles <meyomesse.gilles@gmail.com>
 * David Dufresne
+* Kaushal Prajapati <kbprajapati@live.com>
 
 Do not contact contributors directly about support or help with technical issues.
 
