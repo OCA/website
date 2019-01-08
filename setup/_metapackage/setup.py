@@ -32,6 +32,7 @@ setuptools.setup(
         'odoo11-addon-website_odoo_debranding',
         'odoo11-addon-website_snippet_anchor',
         'odoo11-addon-website_snippet_preset',
+        'odoo11-addon-website_snippet_timeline',
     ],
     classifiers=[
         'Programming Language :: Python',
