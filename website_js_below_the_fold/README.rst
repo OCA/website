@@ -28,7 +28,7 @@ This is a technical module and have no graphical interface whatsoever.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/11.0
+   :target: https://runbot.odoo-community.org/runbot/186/12.0
 
 Bug Tracker
 ===========
@@ -45,6 +45,7 @@ Contributors
 ------------
 
 * Dennis Sluijk <d.sluijk@onestein.nl>
+* Kaushal Prajapati <kbprajapati@live.com>
 
 Do not contact contributors directly about support or help with technical issues.
 
