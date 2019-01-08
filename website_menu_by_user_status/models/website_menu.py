@@ -12,7 +12,7 @@ class WebsiteMenu(models.Model):
     _inherit = 'website.menu'
 
     user_logged = fields.Boolean(
-        string="User Logged",
+        string="Visible for logged Users",
         default=True,
         help=_("If checked, "
                "the menu will be displayed when the user is logged "
@@ -20,7 +20,7 @@ class WebsiteMenu(models.Model):
     )
 
     user_not_logged = fields.Boolean(
-        string="User Not Logged",
+        string="Visible for public Users",
         default=True,
         help=_("If checked, "
                "the menu will be displayed when the user is not logged "
