@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
-"PO-Revision-Date: 2018-01-27 03:46+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
+"PO-Revision-Date: 2019-01-08 13:41+0000\n"
+"Last-Translator: paolovalier <paolo@valier.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.3\n"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
@@ -111,7 +112,7 @@ msgstr ""
 #: model:website.page,arch_db:website_legal_page.privacy_page
 #: model:website.page,arch_db:website_legal_page.terms_page
 msgid "Contact Us"
-msgstr ""
+msgstr "Contattaci"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
@@ -144,7 +145,7 @@ msgstr ""
 #: model:website.page,arch_db:website_legal_page.privacy_page
 #: model:website.page,arch_db:website_legal_page.terms_page
 msgid "Email address:"
-msgstr ""
+msgstr "Indirizzo email:"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -156,7 +157,7 @@ msgstr ""
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "I accept the"
-msgstr ""
+msgstr "Accetto le"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
@@ -181,7 +182,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_legal_page.legal_advice_link
 #: model:website.page,arch_db:website_legal_page.advise_page
 msgid "Legal Advice"
-msgstr ""
+msgstr "Informazioni legali"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
@@ -285,7 +286,7 @@ msgstr ""
 #: model:website.page,arch_db:website_legal_page.privacy_page
 #: model:website.page,arch_db:website_legal_page.terms_page
 msgid "Phone number:"
-msgstr ""
+msgstr "Numero di telefono:"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -302,7 +303,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_legal_page.privacy_policy_link
 #: model:website.page,arch_db:website_legal_page.privacy_page
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Informativa sulla privacy"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
@@ -323,7 +324,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_legal_page.terms_page_ir_ui_view
 #: model:website.page,arch_db:website_legal_page.terms_page
 msgid "Terms of Use (\"Terms\")"
-msgstr ""
+msgstr "Condizioni d'uso (\"Termini\")"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -338,7 +339,7 @@ msgstr "Condizioni d'uso"
 #: model:ir.ui.view,arch_db:website_legal_page.advise_page_ir_ui_view
 #: model:website.page,arch_db:website_legal_page.advise_page
 msgid "The owner of this website is"
-msgstr ""
+msgstr "Il proprietario di questo sito web è"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.privacy-policy
@@ -370,7 +371,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_legal_page.advise_page_ir_ui_view
 #: model:website.page,arch_db:website_legal_page.advise_page
 msgid "VAT number:"
-msgstr ""
+msgstr "Partita IVA:"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -464,7 +465,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_legal_page.advise_page_ir_ui_view
 #: model:website.page,arch_db:website_legal_page.advise_page
 msgid "You can contact us at:"
-msgstr ""
+msgstr "Ci puoi contattare a:"
 
 #. module: website_legal_page
 #: model:ir.ui.view,arch_db:website_legal_page.terms-of-use
