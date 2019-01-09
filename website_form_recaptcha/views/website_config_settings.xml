@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2018 Simone Orsi - Camptocamp SA
+    License AGPL-3 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+
+    <record id="view_website_config_settings" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="google_analytics_setting" position="after">
+                <div class="col-xs-12 col-md-6 o_setting_box" id="recaptcha">
+                    <div class="o_setting_right_pane" style="overflow:hidden">
+                        <label class="o_form_label" string="reCaptcha" />
+                        <div class="text-muted">
+                            Protect your forms using reCaptcha control.
+                        </div>
+                        <div class="content-group">
+                            <div class="row mt16">
+                                <label class="col-md-3 o_light_label" for="recaptcha_key_site"/>
+                                <field name="recaptcha_key_site" />
+                            </div>
+                            <div class="row mt16">
+                                <label class="col-md-3 o_light_label" for="recaptcha_key_secret"/>
+                                <field name="recaptcha_key_secret" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>

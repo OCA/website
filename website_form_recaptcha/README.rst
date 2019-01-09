@@ -19,6 +19,8 @@ Configuration
 Usage
 =====
 
+TODO: move to readme fragment + add info on website settings
+
 To use this module, you need to:
 
 * Already have a form-enabled model
@@ -60,6 +62,7 @@ Contributors
 
 * Dave Lasley <dave@laslabs.com>
 * Mykhailo Panarin <m.panarin@mobilunity.com>
+* Simone Orsi <simone.orsi@camptocamp.com>
 
 Maintainer
 ----------
