@@ -1,12 +1,13 @@
 # Copyright 2015-2017 LasLabs Inc.
+# Copyright 2019 Simone Orsi - Camptocamp SA
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp.tests.common import TransactionCase
-from openerp.exceptions import ValidationError
+from odoo.tests.common import TransactionCase
+from odoo.exceptions import ValidationError
 import mock
 
 imp_model = \
-    'openerp.addons.website_form_recaptcha.models.website_form_recaptcha'
+    'odoo.addons.website_form_recaptcha.models.website_form_recaptcha'
 imp_requests = '%s.requests' % imp_model
 
 
@@ -19,13 +20,14 @@ class TestCaptcha(TransactionCase):
             'website_form_recaptcha.recaptcha_key_secret'
         ).value
         self.validate_vars = 'T1', 'T2'
+        self.website = self.env['website'].search([], limit=1)
 
     @mock.patch(imp_requests)
     def test_post_with_proper_data(self, mk):
         mk.post.side_effect = StopIteration
         exp1, exp2 = self.validate_vars
         try:
-            self.model_obj.action_validate(exp1, exp2)
+            self.model_obj.validate_response(exp1, exp2, website=self.website)
         except StopIteration:
             pass
         mk.post.assert_called_once_with(self.model_obj.URL, data={
@@ -40,8 +42,8 @@ class TestCaptcha(TransactionCase):
             'success': True,
         }
         mk.post().json.return_value = expect
-        self.assertTrue(self.model_obj.action_validate(
-            *self.validate_vars
+        self.assertTrue(self.model_obj.validate_response(
+            *self.validate_vars, website=self.website
         ))
 
     @mock.patch(imp_requests)
@@ -51,7 +53,8 @@ class TestCaptcha(TransactionCase):
         }
         mk.post().json.return_value = expect
         with self.assertRaises(ValidationError):
-            self.model_obj.action_validate(*self.validate_vars)
+            self.model_obj.validate_response(
+                *self.validate_vars, website=self.website)
 
     @mock.patch(imp_requests)
     def test_known_error_lookup(self, mk):
@@ -60,7 +63,8 @@ class TestCaptcha(TransactionCase):
         }
         mk.post().json.return_value = expect
         try:
-            self.model_obj.action_validate(*self.validate_vars)
+            self.model_obj.validate_response(
+                *self.validate_vars, website=self.website)
         except ValidationError as e:
             self.assertEqual(
                 e.name,
@@ -74,7 +78,8 @@ class TestCaptcha(TransactionCase):
         }
         mk.post().json.return_value = expect
         try:
-            self.model_obj.action_validate(*self.validate_vars)
+            self.model_obj.validate_response(
+                *self.validate_vars, website=self.website)
         except ValidationError as e:
             self.assertEqual(
                 e.name, self.model_obj._get_error_message()
@@ -87,4 +92,23 @@ class TestCaptcha(TransactionCase):
         }
         mk.post().json.return_value = expect
         with self.assertRaises(ValidationError):
-            self.model_obj.action_validate(*self.validate_vars)
+            self.model_obj.validate_response(
+                *self.validate_vars, website=self.website)
+
+    def test_get_credentials(self):
+        # by default retrieve global value from config params
+        creds = self.model_obj._get_api_credentials(website=self.website)
+        self.assertEqual(creds, {
+            'site_key': 'Obtain from Google',
+            'secret_key': 'Obtain from Google',
+        })
+        # customize on the website
+        self.website.write({
+            'recaptcha_key_site': '1234567890',
+            'recaptcha_key_secret': '0123456789',
+        })
+        creds = self.model_obj._get_api_credentials(website=self.website)
+        self.assertEqual(creds, {
+            'site_key': '1234567890',
+            'secret_key': '0123456789',
+        })
