@@ -15,7 +15,7 @@ Configuration
 
 To enable users to create accounts:
 
-* Go to *Settings > Configuration > General settings*.
+* Go to *Settings > Configuration > General settings > Website*.
 * Enable *Allow external users to sign up*.
 * Enable *Activate the customer portal*.
 

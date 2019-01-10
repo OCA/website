@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2015 Tecnativa
 # Copyright 2016 Alessio Gerace - Agile Business Group
 # Copyright 2018 Lorenzo Battistini - Agile Business Group
@@ -6,12 +5,12 @@
 
 {
     "name": "Require accepting legal terms",
-    "summary": "Force the user to accept the legal terms to open an account",
-    "version": "10.0.1.0.0",
+    "summary": "Force the user to accept the legal terms to open an account.",
+    "version": "12.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Antiun Ingeniería S.L.,"
-    " Agile Business Group, Odoo Community Association (OCA)",
+    " Agile Business Group, José Luis Sandoval Alaguna, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": [
         "website_legal_page",

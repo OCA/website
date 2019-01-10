@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2015 Tecnativa
 # Copyright 2016 Alessio Gerace - Agile Business Group
 # Copyright 2018 Lorenzo Battistini - Agile Business Group
