@@ -40,6 +40,23 @@ msgid "Models"
 msgstr "Modelos"
 
 #. module: website_form_recaptcha
+#: model:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+msgid "Protect your forms using reCaptcha control."
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings_recaptcha_key_secret
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_recaptcha_key_secret
+msgid "Recaptcha Key Secret"
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings_recaptcha_key_site
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_recaptcha_key_site
+msgid "Recaptcha Key Site"
+msgstr ""
+
+#. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_ir_model_website_form_recaptcha
 msgid "Require ReCaptcha"
 msgstr "Requiere ReCaptcha"
@@ -50,36 +67,52 @@ msgid "Requires successful ReCaptcha for form submission."
 msgstr "Requiere ReCaptcha validado para el envío de formularios."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:27
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:28
 #, python-format
 msgid "The response parameter is invalid or malformed."
 msgstr "El parámetro de respuesta es inválido o incorrecto."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:25
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:26
 #, python-format
 msgid "The response parameter is missing."
 msgstr "El parámetro de respuesta no se encuentra."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:24
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:25
 #, python-format
 msgid "The secret parameter is invalid or malformed."
 msgstr "El parámetro \"secret\" es inválido o incorrecto."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:22
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:23
 #, python-format
 msgid "The secret parameter is missing."
 msgstr "El parámetro \"secret\" no se encuentra."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:29
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:30
 #, python-format
 msgid "There was a problem with the captcha entry."
 msgstr "Hubo un problema con la entrada de captcha."
 
 #. module: website_form_recaptcha
+#: model:ir.model,name:website_form_recaptcha.model_website
+msgid "Website"
+msgstr ""
+
+#. module: website_form_recaptcha
 #: model:ir.model,name:website_form_recaptcha.model_website_form_recaptcha
 msgid "Website Form Recaptcha Validations"
 msgstr "Validaciones de Formulario de Recaptcha del sitio web"
+
+#. module: website_form_recaptcha
+#: model:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+#, fuzzy
+msgid "reCaptcha"
+msgstr "Requiere ReCaptcha"
+
+#. module: website_form_recaptcha
+#: model:ir.model,name:website_form_recaptcha.model_res_config_settings
+msgid "res.config.settings"
+msgstr ""
