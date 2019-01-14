@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+<odoo>
 
 <template id="event_organizer" inherit_id="website_event.event_left_column"
           active="True" customize_show="True" name="Filter by Organizer">
     <xpath expr="//div[@id='left_column']" position="inside">
-        <ul class="nav nav-pills nav-stacked mt32">
+        <ul class="nav nav-pills flex-column mt32">
             <t t-foreach="organizers" t-as="organizer">
                 <li t-if="organizer['organizer_id']"
-                    t-att-class="searches.get('organizer') == str(organizer['organizer_id'] and organizer['organizer_id'][0]) and 'active' or ''">
-                    <a t-attf-href="/event?{{ keep_query('country', 'date', 'type', organizer=organizer['organizer_id'][0])}}">
+                    class="nav-item">
+                    <a t-attf-href="/event?{{ keep_query('country', 'date', 'type', organizer=organizer['organizer_id'][0])}}"
+                       t-attf-class="nav-link #{searches.get('organizer') == str(organizer['organizer_id'] and organizer['organizer_id'][0]) and 'active' or ''}">
                         <t t-esc="organizer['organizer_id'][1]"/>
                         <span class="badge pull-right"> <t t-esc="organizer['organizer_id_count']"/></span>
                     </a>
@@ -44,12 +44,11 @@
 </template>
 
 <template id="index" inherit_id="website_event.index" name="Index Organizer">
-    <xpath expr="//ol[contains(@class,'breadcrumb')]" position="inside">
+    <xpath expr="//ol[hasclass('breadcrumb')]" position="inside">
         <li t-if="current_organizer">
             <t t-esc="current_organizer"/>
         </li>
     </xpath>
 </template>
 
-</data>
-</openerp>
+</odoo>

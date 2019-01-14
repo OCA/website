@@ -1,16 +1,13 @@
-# -*- coding: utf-8 -*-
-# (c) 2015 Incaser Informatica S.L. - Sergio Teruel
-# (c) 2015 Incaser Informatica S.L. - Carlos Dauden
+# Copyright 2019 Tecnativa - Sergio Teruel
+# Copyright 2019 Tecnativa - Carlos Dauden
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-from openerp.addons.web import http
-from openerp.addons.web.http import request
-from openerp.tools.translate import _
-
-from openerp.addons.website_event.controllers.main import website_event
+from odoo import _, http
+from odoo.http import request
+from odoo.addons.website_event.controllers.main import WebsiteEventController
 
 
-class WebsiteEventOrganizer(website_event):
+class WebsiteEventOrganizer(WebsiteEventController):
 
     @http.route(
         ['/event', '/event/page/<int:page>'],
