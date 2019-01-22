@@ -4,7 +4,7 @@
 {
     "name": "Website Form - ReCaptcha",
     "summary": 'Provides a ReCaptcha field for Website Forms',
-    "version": "11.0.1.2.0",
+    "version": "11.0.1.2.1",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "LasLabs, Odoo Community Association (OCA)",
