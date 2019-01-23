@@ -33,6 +33,7 @@ setuptools.setup(
         'odoo11-addon-website_snippet_anchor',
         'odoo11-addon-website_snippet_preset',
         'odoo11-addon-website_snippet_timeline',
+        'odoo11-addon-website_video_preview',
     ],
     classifiers=[
         'Programming Language :: Python',
