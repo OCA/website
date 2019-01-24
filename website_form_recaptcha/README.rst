@@ -76,6 +76,14 @@ Known issues / Roadmap
 Changelog
 =========
 
+11.0.1.2.1 (Unreleased)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* Fix handling of request attribute
+* Add backward compatibility for recent API refactoring
+
+  [simahawk]
+
 11.0.1.2.0 (2019-01-10)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
