@@ -67,8 +67,8 @@ msgid "<b>Sign in</b>"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_562
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_562
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
 msgid ""
 "<span class=\"btn btn-primary btn-lg o_website_form_send\">Send</span>\n"
 "                                <span id=\"o_website_form_result\"/>"
@@ -180,8 +180,8 @@ msgid "Duplicates of this view"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_562
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_562
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
 msgid "Email"
 msgstr ""
 
@@ -485,8 +485,8 @@ msgid ""
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_562
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_562
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
 msgid "Phone Number"
 msgstr ""
 
@@ -506,8 +506,8 @@ msgid "Sub-themes"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_562
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_562
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
 msgid "Subject"
 msgstr ""
 
@@ -623,21 +623,21 @@ msgid ""
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_562
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_562
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
 msgid "Your Company"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_562
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_562
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
 #, fuzzy
 msgid "Your Name"
 msgstr "Nombre"
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_562
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_562
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
 msgid "Your Question"
 msgstr ""
 
