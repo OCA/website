@@ -19,8 +19,10 @@ env:
   - PHANTOMJS_VERSION="2.1.2" WEBSITE_REPO="1"
   matrix:
   - LINT_CHECK="1"
-  - TESTS="1" ODOO_REPO="odoo/odoo" MAKEPOT="1"
-  - TESTS="1" ODOO_REPO="OCA/OCB"
+  - TESTS="1" ODOO_REPO="odoo/odoo" EXCLUDE="website_hide" MAKEPOT="1"
+  - TESTS="1" ODOO_REPO="OCA/OCB" EXCLUDE="website_hide"
+  - TESTS="1" ODOO_REPO="odoo/odoo" INCLUDE="website_hide"
+  - TESTS="1" ODOO_REPO="OCA/OCB" INCLUDE="website_hide"
 
 virtualenv:
   system_site_packages: true
