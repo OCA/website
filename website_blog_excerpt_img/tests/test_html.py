@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
 # Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 import json
 import logging
 from lxml import html
-from openerp.tests.common import HttpCase
+from odoo.tests.common import HttpCase
 
 _logger = logging.getLogger(__name__)
 
@@ -138,9 +137,3 @@ class HTMLCase(HttpCase):
         self.assertEqual(self.text(container), "Really boring")
         with self.assertRaises(IndexError):
             self.image(container)
-
-    def test_text_excerpt(self):
-        """Lots of words get truncated."""
-        container = self.container("Post 7")
-        text = self.text(container)
-        self.assertEqual(len(text.split()), 80)

@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
    :alt: License: LGPL-3
 
-=======================
-Excerpt + Image in Blog
-=======================
+=========================
+Excerpt and Image in Blog
+=========================
 
 This module extends the functionality of blogs to support having a more
 attractive layout that automatically displays an excerpt of each post, a "Read
@@ -26,7 +26,7 @@ To use this module, you need to:
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/9.0
+   :target: https://runbot.odoo-community.org/runbot/186/12.0
 
 Known issues / Roadmap
 ======================

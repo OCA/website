@@ -1,14 +1,15 @@
-# -*- coding: utf-8 -*-
-# © 2016 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+# Copyright 2016 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+# Copyright 2019 Tecnativa - Cristina Martin R.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 {
-    "name": "Excerpt + Image in Blog",
+    "name": "Blog List view",
     "summary": "New layout for blog summary, including an excerpt and image",
-    "version": "9.0.1.0.0",
+    "version": "12.0.1.0.0",
     "category": "Website",
-    "website": "https://grupoesoc.es",
+    "website": "https://github.com/OCA/website",
     "author": "Grupo ESOC Ingeniería de Servicios, "
-              "Odoo Community Association (OCA)",
+              "Odoo Community Association (OCA), "
+              "Tecnativa",
     "license": "LGPL-3",
     "application": False,
     "installable": True,
@@ -18,10 +19,8 @@
     "depends": [
         "website_blog",
         "html_image_url_extractor",
-        "html_text",
     ],
     "data": [
-        "templates/assets.xml",
         "templates/blog.xml",
     ],
 }

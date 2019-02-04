@@ -1,9 +1,8 @@
-# -*- coding: utf-8 -*-
 # Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 import json
-from openerp import models
+from odoo import models
 
 
 class BlogPost(models.Model):
@@ -31,10 +30,3 @@ class BlogPost(models.Model):
             return next(Converter.imgs_from_html(html, 1))
         except StopIteration:
             return None
-
-    def content_excerpt(self, length=80):
-        """Get the blog post content excerpt."""
-        return self.env['ir.fields.converter'].text_from_html(
-            self.content,
-            length,
-        )
