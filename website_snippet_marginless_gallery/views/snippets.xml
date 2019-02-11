@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Copyright 2015-2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+<!-- Copyright 2015-2017 Tecnativa - Jairo Llopis <jairo.llopis@tecnativa.com>
+     Copyright 2019 Tecnativa - Cristina Martin R.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
 
     <template id="s_marginless_gallery" name="Marginless Gallery">
-        <section class="marginless-gallery mt16 mb32">
+        <section class="marginless-gallery pt32 pb32 text-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2>Our Gallery</h2>
-                        <h3 class="text-muted">
-                            All photos must have the same height or the
-                            gallery layout will be broken
-                        </h3>
+                    <div class="col-lg-12 text-center">
+                        <h2 class="o_default_snippet_text pb16"><b>Our Gallery</b></h2>
+                        <p class="lead o_default_snippet_text pb32">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                        </p>
                     </div>
-                    <section class="img col-sm-6 col-md-3 oe_img_bg" style="background-image: url('/website/static/src/img/banner/wood.jpg');">
+                    <section class="col-lg-3 col-12 pt32 pb32 oe_img_bg" style="background-image: url('/website/static/src/img/library/bridge.jpg');">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 col-md-3 oe_green">
+                    <section class="col-lg-3 col-12 pt32 pb32 bg-alpha">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 col-md-3 oe_img_bg" style="background-image: url('/website/static/src/img/banner/business_guy.jpg');">
+                    <section class="col-lg-3 col-12 pt32 pb32 oe_img_bg" style="background-image: url('/website/static/src/img/library/mobile.jpg');">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 col-md-3 oe_blue_light">
+                    <section class="col-lg-3 col-12 pt32 pb32 bg-beta">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 col-md-3 oe_blue">
+                    <section class="col-lg-3 col-12 pt32 pb32 bg-gamma">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 col-md-3 oe_orange">
+                    <section class="col-lg-3 col-12 pt32 pb32 bg-epsilon">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 col-md-3 oe_purple">
+                    <section class="col-lg-3 col-12 pt32 pb32 bg-delta">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 col-md-3 oe_black">
+                    <section class="col-lg-3 col-12 pt32 pb32 bg-alpha">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 col-md-3 oe_dark">
+                    <section class="col-lg-3 col-12 pt32 pb32 bg-beta">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 col-md-3 oe_img_bg" style="background-image: url('/website/static/src/img/banner/mountains.jpg');">
+                    <section class="col-lg-3 col-12 pt32 pb32 oe_img_bg" style="background-image: url('/website/static/src/img/library/shop.jpg');">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 oe_red col-md-3">
+                    <section class="col-lg-3 col-12 pt32 pb32 bg-gamma">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
-                    <section class="img col-sm-6 oe_img_bg col-md-3" style="background-image: url('/website/static/src/img/parallax/parallax_bg.jpg');">
+                    <section class="col-lg-3 col-12 pt32 pb32 oe_img_bg" style="background-image: url('/website/static/src/img/library/wine.jpg');">
                         <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                             </p>
                         </div>
                     </section>
@@ -116,24 +116,10 @@
     </template>
 
     <template id="snippets" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_feature']//div[@class='o_panel_body']">
+        <xpath expr="//div[@id='snippet_feature']//div[hasclass('o_panel_body')]">
             <t
                 t-snippet="website_snippet_marginless_gallery.s_marginless_gallery"
-                t-thumbnail="/website_snippet_marginless_gallery/static/description/icon.png"/>
-        </xpath>
-    </template>
-
-    <template id="snippet_options" inherit_id="website.snippet_options">
-        <xpath expr=".">
-            <div data-js="marginless_gallery"
-                 data-selector=".marginless-gallery">
-                <li data-change_images_height="" data-only="click">
-                    <a>Change Images Height</a>
-                </li>
-                <li data-toggle_class="marginless-gallery-contain">
-                    <a>Do not trim images</a>
-                </li>
-            </div>
+                t-thumbnail="/website_snippet_marginless_gallery/static/description/s_website_marginless_gallery.png"/>
         </xpath>
     </template>
 
