@@ -18,45 +18,16 @@ Usage
 To use this module, you need to:
 
 * Edit any page in your website.
-* Go to *Insert blocks > Features*.
-* Drag the *Marginless Gallery* snippet anywhere in your page.
-* Choose a fixed height for all your images. This is required to maintain a
-  solid layout. Must be a number.
-
-  * If you still do not want the fixed height (maybe because your theme
-    applies it), just leave blank and press *Continue*.
+* Go to **Insert blocks > Features**.
+* Drag the **Marginless Gallery** snippet anywhere in your page.
 
 To change images, you need to:
 
 * Select any image block in the snippet you just created.
-* Go to *Customize > Background* and choose any background you want.
+* Go to **Customize > Background** and choose any background you want.
 
   * Backgrounds will be centered and cover the whole element in any layout.
 
-To change the images height, you need to:
-
-* Select any block inside the snippet you just created.
-* Go to the top parent.
-* Go to *Customize > Change Images Height*.
-* Input a number and press *Continue*.
-
-To avoid trimming the images, you need to:
-
-* Select any block inside the snippet you just created.
-* Go to the top parent.
-* Go to *Customize > Do not trim images*.
-
-Known issues / Roadmap
-======================
-
-* If you do not set a fixed height to all your images in the snippet, it will
-  get an ugly layout. Right now we manually set the height, but whenever
-  Bootstrap 4 starts being used in Odoo with its flexbox support, this will not
-  be needed anymore.
-
-* Improve it using `Masonry <http://desandro.github.io/masonry/>`_ like the
-  `Graphene theme  <https://theme-graphene.odoo.com/page/blocks>`_ does. It
-  should allow to set arbitrary heights to images with a beautiful layout.
 
 Bug Tracker
 ===========
@@ -73,7 +44,10 @@ Credits
 Contributors
 ------------
 
-* Jairo Llopis <j.llopis@grupoesoc.es>
+* `Tecnativa <https://www.tecnativa.com>`__:
+
+  * Jairo Llopis
+  * Cristina Martin R.
 
 Maintainer
 ----------

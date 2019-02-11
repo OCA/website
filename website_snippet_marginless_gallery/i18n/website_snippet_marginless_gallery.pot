@@ -14,50 +14,13 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: website_snippet_marginless_gallery
-#. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:49
-#, python-format
-msgid "%s is not a valid value"
-msgstr ""
-
-#. module: website_snippet_marginless_gallery
-#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-msgid "All photos must have the same height or the\n"
-"                            gallery layout will be broken"
-msgstr ""
-
-#. module: website_snippet_marginless_gallery
-#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.snippet_options
-msgid "Change Images Height"
-msgstr ""
-
-#. module: website_snippet_marginless_gallery
-#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.snippet_options
-msgid "Do not trim images"
-msgstr ""
-
-#. module: website_snippet_marginless_gallery
-#. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:26
-#, python-format
-msgid "Height for all images in gallery"
-msgstr ""
-
-#. module: website_snippet_marginless_gallery
-#. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:27
-#, python-format
-msgid "Image height in pixels"
-msgstr ""
-
-#. module: website_snippet_marginless_gallery
 #: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 msgid "Lorem ipsum"
 msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
 msgstr ""
 
 #. module: website_snippet_marginless_gallery
@@ -65,3 +28,12 @@ msgstr ""
 msgid "Our Gallery"
 msgstr ""
 
+#. module: website_snippet_marginless_gallery
+#: code:addons/website/static/src/js/website_snippet_marginless_gallery.tour.js:19
+msgid "<b>Click Edit</b> to start designing your homepage."
+msgstr ""
+
+#. module: website_snippet_marginless_gallery
+#: code:addons/website/static/src/js/website_snippet_marginless_gallery.tour.js:24
+msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
+msgstr ""
