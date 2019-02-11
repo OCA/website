@@ -21,57 +21,49 @@ msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:49
+#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.tour.js:18
 #, python-format
-msgid "%s is not a valid value"
+msgid "<b>Click Edit</b> to start designing your homepage."
 msgstr ""
 
 #. module: website_snippet_marginless_gallery
-#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-msgid ""
-"All photos must have the same height or the\n"
-"                            gallery layout will be broken"
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+#, fuzzy
+#| msgid "Our Gallery"
+msgid "<b>Our Gallery</b>"
+msgstr "Naša galerija"
+
+#. module: website_snippet_marginless_gallery
+#. openerp-web
+#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.tour.js:23
+#, python-format
+msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
 msgstr ""
 
 #. module: website_snippet_marginless_gallery
-#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.snippet_options
-msgid "Change Images Height"
-msgstr "Spremeni višino slik"
-
-#. module: website_snippet_marginless_gallery
-#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.snippet_options
-msgid "Do not trim images"
-msgstr "Ne obrezuj slik"
-
-#. module: website_snippet_marginless_gallery
-#. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:26
-#, python-format
-msgid "Height for all images in gallery"
-msgstr "Višina za vse slike v galeriji"
-
-#. module: website_snippet_marginless_gallery
-#. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.editor.js:27
-#, python-format
-msgid "Image height in pixels"
-msgstr "Višina slik v pikslih"
-
-#. module: website_snippet_marginless_gallery
-#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 msgid "Lorem ipsum"
 msgstr "Lorem ipsum"
 
 #. module: website_snippet_marginless_gallery
-#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-msgid ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
-"tempor incididunt ut labore et dolore magna."
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+#, fuzzy
+#| msgid ""
+#| "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+#| "tempor incididunt ut labore et dolore magna."
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
 msgstr ""
 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna."
 
-#. module: website_snippet_marginless_gallery
-#: model:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-msgid "Our Gallery"
-msgstr "Naša galerija"
+#~ msgid "Change Images Height"
+#~ msgstr "Spremeni višino slik"
+
+#~ msgid "Do not trim images"
+#~ msgstr "Ne obrezuj slik"
+
+#~ msgid "Height for all images in gallery"
+#~ msgstr "Višina za vse slike v galeriji"
+
+#~ msgid "Image height in pixels"
+#~ msgstr "Višina slik v pikslih"
