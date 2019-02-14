@@ -60,6 +60,7 @@ Contributors
 * Carlos Dauden <carlos@incaser.es>
 * Sergio Teruel <sergio@incaser.es>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
+* Alexandre Díaz <dev@redneboa.es>
 
 Maintainer
 ----------

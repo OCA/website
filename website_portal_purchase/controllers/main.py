@@ -5,10 +5,10 @@
 
 from openerp.http import request, route
 from openerp.exceptions import AccessError
-from openerp.addons.website_portal_v10.controllers.main import WebsiteAccount
+from openerp.addons.website_portal.controllers.main import website_account
 
 
-class PortalPurchaseWebsiteAccount(WebsiteAccount):
+class PortalPurchaseWebsiteAccount(website_account):
     def _purchase_order_domain(self, quotation):
         """Generate a domain for ``purchase.order`` objects.
 
@@ -87,7 +87,7 @@ class PortalPurchaseWebsiteAccount(WebsiteAccount):
     def portal_my_purchase_quotes(self, page=1, date_begin=None, date_end=None,
                                   **kwargs):
         """List subscribed purchase quotes."""
-        return request.website.render(
+        return request.render(
             "website_portal_purchase.portal_my_quotations",
             self._prepare_purchase_orders_values(
                 True, page, date_begin, date_end))
@@ -97,7 +97,7 @@ class PortalPurchaseWebsiteAccount(WebsiteAccount):
     def portal_my_purchase_orders(self, page=1, date_begin=None, date_end=None,
                                   **kwargs):
         """List subscribed purchase orders."""
-        return request.website.render(
+        return request.render(
             "website_portal_purchase.portal_my_orders",
             self._prepare_purchase_orders_values(
                 False, page, date_begin, date_end))
@@ -108,7 +108,7 @@ class PortalPurchaseWebsiteAccount(WebsiteAccount):
         order_invoice_lines = {
             il.product_id.id: il.invoice_id
             for il in order.invoice_ids.mapped("invoice_line_ids")}
-        return request.website.render(
+        return request.render(
             "website_portal_purchase.orders_followup",
             {
                 "order": order.sudo(),
