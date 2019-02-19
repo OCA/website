@@ -16,13 +16,10 @@ Usage
 To use this module, you need to:
 
 * Edit any web page.
-* Go to *Insert Blocks > Big Buttons*.
+* Go to **Insert Blocks > Big Buttons**.
 * Drag it anywhere.
 
-The link that the button will follow is located in the big text part. You can
-change it and the whole button action will change too. If there are more than 1
-link inside the button, clicking on the outer button will trigger the action
-found in the first link
+You can edit the link anywhere on the button.
 
 Theming
 =======
@@ -31,7 +28,7 @@ This section has class ``big-buttons``. Use it to style it.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/9.0
+   :target: https://runbot.odoo-community.org/runbot/186/12.0
 
 Bug Tracker
 ===========
@@ -52,7 +49,11 @@ Images
 Contributors
 ------------
 
-* Jairo Llopis <yajo.sk8@gmail.com>
+* `Tecnativa <https://www.tecnativa.com>`__:
+
+  * Jairo Llopis
+  * Cristina Martin R.
+
 
 Maintainer
 ----------
