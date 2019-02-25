@@ -18,8 +18,9 @@ odoo.define('website_form_recaptcha.recaptcha', function (require) {
             "fil", "fi", "fr", "fr-CA", "gl", "ka", "de", "de-AT", "de-CH",
             "el", "gu", "iw", "hi", "hu", "is", "id", "it", "ja", "kn", "ko",
             "lo", "lv", "lt", "ms", "ml", "mr", "mn", "no", "fa", "pl", "pt",
-            "pt-BR", "pt-PT", "ro", "ru", "sr", "si", "sk", "sl", "es", "es-419",
-            "sw", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi", "zu",
+            "pt-BR", "pt-PT", "ro", "ru", "sr", "si", "sk", "sl", "es",
+            "es-419", "sw", "sv", "ta", "te", "th", "tr", "uk", "ur", "vi",
+            "zu",
         ],
         recaptcha_js_url: "https://www.google.com/recaptcha/api.js",
         start: function () {
@@ -28,7 +29,7 @@ odoo.define('website_form_recaptcha.recaptcha', function (require) {
             this.$captchas = self.$('.o_website_form_recaptcha');
             this.handle_captcha();
         },
-        handle_captcha: function() {
+        handle_captcha: function () {
             var self = this;
             return ajax.post('/website/recaptcha/', {}).then(
                 function (result) {
@@ -43,21 +44,21 @@ odoo.define('website_form_recaptcha.recaptcha', function (require) {
         _get_captcha_elem: function (data) {
             return $('<div/>', {
                 'class': 'g-recaptcha',
-                'data-sitekey': data.site_key
+                'data-sitekey': data.site_key,
             });
         },
-        _get_captcha_script_url: function() {
+        _get_captcha_script_url: function () {
             var lang = $("html").attr("lang").replace("_", "-");
             if (this.captcha_languages.includes(lang)) {
-                // lookup for specific localization (ie: fr-FR)
+                // Lookup for specific localization (ie: fr-FR)
                 return this.recaptcha_js_url + "?hl=" + lang;
             }
             if (this.captcha_languages.includes(lang.slice(0, 2))) {
-                // fallback to main lang
+                // Fallback to main lang
                 return this.recaptcha_js_url + "?hl=" + lang.slice(0, 2);
             }
-            // if both failed -> let google handle it itself (picks browser language)
+            // If both failed -> let google pick browser language
             return this.recaptcha_js_url;
-        }
+        },
     });
 });

@@ -9,10 +9,8 @@
 <odoo noupdate="1">
     <record id="recaptcha_key_site" model="ir.config_parameter">
         <field name="key">recaptcha.key.site</field>
-        <field name="value">Obtain from Google</field>
     </record>
     <record id="recaptcha_key_secret" model="ir.config_parameter">
         <field name="key">recaptcha.key.secret</field>
-        <field name="value">Obtain from Google</field>
     </record>
 </odoo>
