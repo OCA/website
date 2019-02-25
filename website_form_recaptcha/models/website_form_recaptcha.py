@@ -2,7 +2,7 @@
 # Copyright 2019 Simone Orsi - Camptocamp SA
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import models, api, http, _
+from odoo import _, api, http, models
 from odoo.exceptions import ValidationError
 import logging
 import requests
@@ -35,20 +35,11 @@ class WebsiteFormRecaptcha(models.AbstractModel):
         return mapping.get(errorcode, _('There was a problem with '
                                         'the captcha entry.'))
 
-    def _get_api_params(self):
-        ICP = self.env['ir.config_parameter'].sudo()
-        return {
-            'site_key': ICP.get_param('recaptcha.key.site'),
-            'secret_key': ICP.get_param('recaptcha.key.secret'),
-        }
-
     def _get_api_credentials(self, website=None):
-        # defaults
-        params = self._get_api_params()
         # website override
         website = website or http.request.website
-        site_key = website.recaptcha_key_site or params['site_key']
-        secret_key = website.recaptcha_key_secret or params['secret_key']
+        site_key = website.recaptcha_key_site
+        secret_key = website.recaptcha_key_secret
         return {
             'site_key': site_key,
             'secret_key': secret_key,
@@ -112,32 +103,3 @@ class WebsiteFormRecaptcha(models.AbstractModel):
         # Store reCAPTCHA's token in the current request object
         setattr(request, self.REQUEST_TOKEN, req_value)
         return validated
-
-    # TODO: backward compat, remove in v12
-    @api.model
-    def action_validate(self, req_value, ip_addr, website=None):
-        """Backward compatibility for old implementation.
-
-        Prior to API refactoring in this module (see f46d879a)
-        pre-validation steps were made in the controller
-        and were calling `action_validate`. This method is deprecated now.
-
-        In such cases your code looked like:
-
-            try:
-                captcha_obj.action_validate(
-                    values.get(captcha_obj.RESPONSE_ATTR), ip_addr
-                )
-                # Store reCAPTCHA's token in the current request object
-                setattr(request, captcha_obj.RESPONSE_ATTR,
-                        values.get(captcha_obj.RESPONSE_ATTR))
-            except ValidationError:
-                raise ValidationError([captcha_obj.RESPONSE_ATTR])
-
-        Note: the request token name to store validated value
-        is now defined into `REQUEST_TOKEN`.
-        """
-        _logger.warning(
-            '`action_validate` is deprecated: use `validate_request`'
-        )
-        return self.validate_response(req_value, ip_addr, website=website)
