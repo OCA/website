@@ -10,5 +10,4 @@ class User(models.Model):
     _inherit = "res.users"
 
     accepted_legal_terms = fields.Boolean(
-        default=False,
         help="Did the user accept our legal terms when opening the account?")
