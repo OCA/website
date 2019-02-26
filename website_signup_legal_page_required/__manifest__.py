@@ -9,8 +9,7 @@
     "version": "12.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
-    "author": "Antiun Ingeniería S.L.,"
-    " Agile Business Group, José Luis Sandoval Alaguna, Odoo Community Association (OCA)",
+    "author": "José Luis Sandoval Alaguna, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": [
         "website_legal_page",
