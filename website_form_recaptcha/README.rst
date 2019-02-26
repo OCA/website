@@ -76,6 +76,13 @@ Known issues / Roadmap
 Changelog
 =========
 
+12.0.1.0.0 (2019-02-26)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* Migrate to v12
+
+  [mreficent]
+
 11.0.1.2.1 (Unreleased)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
