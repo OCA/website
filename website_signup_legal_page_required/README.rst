@@ -68,6 +68,7 @@ Contributors
 * Jairo Llopis <yajo.sk8@gmail.com>
 * Alessio Gerace <alessio.gerace@agilebg.com>
 * Lorenzo Battistini <lorenzo.battistini@agilebg.com>
+* José Luis Sandoval Alaguna <alagunasalahaddin@live.com>
 
 
 Maintainer
