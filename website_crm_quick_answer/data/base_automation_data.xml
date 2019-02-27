@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>
+
+        <record id="email_template" model="mail.template">
+            <field name="name">Quick response to website contact form</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="use_default_to" eval="True"/>
+            <field name="email_from">${object.company_id.email}</field>
+            <field name="lang">${object.env.context.get("lang")}</field>
+            <field name="subject">Thanks for your request</field>
+            <field name="body_html" type="html">
+                <div>Dear <b>${object.partner_id and object.partner_id.name or object.contact_name}</b>,
+                    <br/>
+                    <br/>
+                    <h3>Thanks for contacting us!</h3>
+                    <p>
+                        We have received your request and will answer you as soon as
+                        possible.
+                    </p>
+                    <p>Please, be patient. Best regards.</p>
+                    <p>Thanks,</p>
+                </div>
+            </field>
+        </record>
+
+    </data>
+
+    <data>
+
+        <record id="automated_action" model="base.automation">
+            <field name="name">Quick response to website contact form</field>
+            <field name="model_id" ref="crm.model_crm_lead"/>
+            <field name="state">email</field>
+            <field name="trigger">on_create</field>
+            <field name="active" eval="True"/>
+            <field name="template_id" ref="email_template"/>
+            <field name="filter_domain">[["medium_id.name","=","Website"]]</field>
+        </record>
+
+    </data>
+</odoo>
