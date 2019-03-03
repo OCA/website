@@ -21,6 +21,13 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. module: website_google_tag_manager
+#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
+msgid ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+msgstr ""
+
+#. module: website_google_tag_manager
 #: model:ir.model,name:website_google_tag_manager.model_res_config_settings
 msgid "Config Settings"
 msgstr ""
