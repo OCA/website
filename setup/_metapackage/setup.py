@@ -14,6 +14,7 @@ setuptools.setup(
         'odoo12-addon-website_google_tag_manager',
         'odoo12-addon-website_legal_page',
         'odoo12-addon-website_odoo_debranding',
+        'odoo12-addon-website_snippet_marginless_gallery',
     ],
     classifiers=[
         'Programming Language :: Python',
