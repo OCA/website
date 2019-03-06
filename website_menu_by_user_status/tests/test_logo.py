@@ -8,18 +8,17 @@ from odoo.tests import SavepointCase
 
 class TestWebsiteMenu(SavepointCase):
 
-    @classmethod
-    def setUpClass(cls):
-        super(cls).setUpClass()
-        cls.page = cls.env.ref('website.contactus_page')
-        cls.page.is_visible = False
+    def setUp(self):
+        super(TestWebsiteMenu, self).setUp()
+        self.page = self.env.ref('website.contactus_page')
+        self.page.is_visible = False
 
-        cls.menu = cls.env.ref('website.menu_contactus')
-        cls.menu.user_logged = False
-        cls.menu.user_not_logged = False
+        self.menu = self.env.ref('website.menu_contactus')
+        self.menu.user_logged = False
+        self.menu.user_not_logged = False
 
-        cls.public_user = cls.env.ref('base.public_user')
-        cls.demo_user = cls.env.ref('base.user_demo')
+        self.public_user = self.env.ref('base.public_user')
+        self.demo_user = self.env.ref('base.user_demo')
 
     def test_visible_user_logged_demo(self):
         self.page.is_visible = True
