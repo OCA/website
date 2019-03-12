@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: website_breadcrumb
-#: model:ir.ui.view,arch_db:website_breadcrumb.breadcrumb
+#: model_terms:ir.ui.view,arch_db:website_breadcrumb.breadcrumb
 msgid "Home"
 msgstr "首页"
 
