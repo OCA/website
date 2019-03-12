@@ -20,7 +20,7 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #. module: website_breadcrumb
-#: model:ir.ui.view,arch_db:website_breadcrumb.breadcrumb
+#: model_terms:ir.ui.view,arch_db:website_breadcrumb.breadcrumb
 msgid "Home"
 msgstr "المنزل"
 
