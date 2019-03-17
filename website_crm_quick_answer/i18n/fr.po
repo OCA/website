@@ -20,22 +20,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_crm_quick_answer
-#: model:ir.actions.server,body_html:website_crm_quick_answer.server_action
 #: model:mail.template,body_html:website_crm_quick_answer.email_template
 #, fuzzy
 msgid ""
-"<p>\n"
-"                    Dear\n"
-"                    <b>${object.partner_id and object.partner_id.name or\n"
-"                 object.contact_name}</b>,\n"
-"                </p>\n"
-"                <h3>Thanks for contacting us!</h3>\n"
-"                <p>\n"
-"                    We have received your request and will answer you as "
+"<div>Dear <b>${object.partner_id and object.partner_id.name or object."
+"contact_name}</b>,\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <h3>Thanks for contacting us!</h3>\n"
+"                    <p>\n"
+"                        We have received your request and will answer you as "
 "soon as\n"
-"                    possible.\n"
-"                </p>\n"
-"                <p>Please, be patient. Best regards.</p>\n"
+"                        possible.\n"
+"                    </p>\n"
+"                    <p>Please, be patient. Best regards.</p>\n"
+"                    <p>Thanks,</p>\n"
+"                </div>\n"
 "            "
 msgstr ""
 "<p>\n"
@@ -52,17 +52,15 @@ msgstr ""
 "    "
 
 #. module: website_crm_quick_answer
-#: model:ir.filters,name:website_crm_quick_answer.website_form_leads_filter
-msgid "Coming from the website contact form"
-msgstr "En provenance du formulaire de contact du site"
-
-#. module: website_crm_quick_answer
-#: model:ir.actions.server,name:website_crm_quick_answer.server_action
+#: model:base.automation,name:website_crm_quick_answer.automated_action
+#: model:ir.actions.server,name:website_crm_quick_answer.automated_action_ir_actions_server
 msgid "Quick response to website contact form"
 msgstr "Une réponse rapide sur le site formulaire de contact"
 
 #. module: website_crm_quick_answer
-#: model:ir.actions.server,subject:website_crm_quick_answer.server_action
 #: model:mail.template,subject:website_crm_quick_answer.email_template
 msgid "Thanks for your request"
 msgstr "Nous vous remercions pour votre demande"
+
+#~ msgid "Coming from the website contact form"
+#~ msgstr "En provenance du formulaire de contact du site"
