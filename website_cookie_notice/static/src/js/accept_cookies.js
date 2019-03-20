@@ -11,7 +11,8 @@ odoo.define('website_cookie_notice.cookie_notice', function (require) {
     base.ready().done(function() {
         $(".cc-cookies .btn-primary").click(function(e) {
             e.preventDefault();
-            document.cookie = 'accepted_cookies=1; path=/';
+            // max-age to store cookie for one year.
+            document.cookie = 'accepted_cookies=1; path=/; max-age=31536000';
             $(e.target).closest(".cc-cookies").hide("fast");
         });
     });

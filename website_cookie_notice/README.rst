@@ -69,6 +69,7 @@ Contributors
 * Rafael Blasco <rafael.blasco@tecnativa.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
 * Wolfgang Pichler <wpichler@callino.at>
+* Andrius Laukavičius <dev@focusate.eu> (Focusate)
 
 Maintainer
 ----------
