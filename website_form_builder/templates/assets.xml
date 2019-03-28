@@ -10,8 +10,6 @@
                     src="/website_form_builder/static/src/js/snippets.js"/>
             <script type="text/javascript"
                     src="/website_form_builder/static/src/js/widgets.js"/>
-            <link rel="stylesheet"
-                  href="/website_form_builder/static/src/css/website_form_builder.less"/>
 
             <script type="text/javascript"
                     src="/web/static/src/js/core/domain.js"/>
@@ -21,6 +19,13 @@
                     src="/web/static/lib/py.js/lib/py.js"/>
             <script type="text/javascript"
                     src="/web/static/src/js/core/pyeval.js"/>
+        </xpath>
+    </template>
+
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr=".">
+            <link rel="stylesheet"
+                  href="/website_form_builder/static/src/css/website_form_builder.less"/>
         </xpath>
     </template>
 
