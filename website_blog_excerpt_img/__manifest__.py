@@ -2,13 +2,13 @@
 # Copyright 2019 Tecnativa - Cristina Martin R.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 {
-    "name": "Blog List view",
-    "summary": "New layout for blog summary, including an excerpt and image",
+    "name": "Blog Post List Excerpt+Image Layout",
+    "summary": "New layout for blog posts list, "
+               "and autoselect social share image when no cover is selected",
     "version": "12.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
-    "author": "Grupo ESOC Ingeniería de Servicios, "
-              "Odoo Community Association (OCA), "
+    "author": "Odoo Community Association (OCA), "
               "Tecnativa",
     "license": "LGPL-3",
     "application": False,

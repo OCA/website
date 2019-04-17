@@ -1,48 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2016 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
-     Copyright 2019 Tecnativa - Cristina Martin R.
+<!-- Copyright 2019 Tecnativa - Jairo Llopis
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
 
 <odoo>
 
-    <template id="blog_post_short"
-              inherit_id="website_blog.blog_post_short">
-        <!-- Entries are Bootstrap rows -->
-        <xpath expr="//div[@t-as='blog_post']" position="attributes">
-            <attribute name="class">row bg-100 mb32 pb32</attribute>
-        </xpath>
-        <xpath expr="//h2/.." position="attributes">
-            <attribute name="class">col-lg-12 pt32</attribute>
-        </xpath>
-        <xpath expr="//div[@name='blog_post_data']/.." position="attributes">
-            <attribute name="class">text-muted col-8 mb16</attribute>
-        </xpath>
-        <xpath expr="//h2/.." position="after">
-            <h4 t-field="blog_post.subtitle" class="col-lg-12 text-muted mb32"></h4>
-        </xpath>
+    <template
+        active="True"
+        customize_show="True"
+        id="seo_image_floating"
+        inherit_id="website_blog.blog_post_short"
+        name="Floating social share image"
+        priority="50"
+    >
 
-        <!-- Image -->
-        <xpath expr="//div[@name='blog_post_data']/.." position="before">
-            <t t-set="image_url" t-value="blog_post.main_image()"/>
-            <div t-if="image_url" class="excerpt-img col-lg-4">
-                <!-- Use cover image if available -->
-                <img class="img img-responsive img-thumbnail"
-                     t-att-src="image_url"/>
+        <xpath expr="//*[hasclass('o_blog_post_teaser')]/.." position="replace">
+            <div class="row">
+                <!-- Wrap text content with a .row element -->
+                <div class="col">$0</div>
+
+                <!-- Insert social share thumbnail next to teaser -->
+                <div class="col-5 text-center">
+                    <t t-set="blog_post_meta" t-value="blog_post.get_website_meta()" />
+                    <img
+                        class="excerpt-img img-thumbnail"
+                        t-if="blog_post_meta['opengraph_meta']['og:image']"
+                        t-att-src="blog_post_meta['opengraph_meta']['og:image']"
+                    />
+                </div>
             </div>
         </xpath>
+
+        <!-- Move the <hr> element to the end of the post -->
+        <xpath expr="//*[@name='blog_post']">
+            <xpath expr="//*[@name='blog_post']//hr" position="move"/>
+        </xpath>
+
         <!-- Read more button -->
-        <xpath expr="//div[@class='o_sharing_links']" position="inside">
-        <div class="float-right">
+        <xpath expr="//*[hasclass('o_sharing_links')]" position="inside">
+            <div class="float-right">
                 <a t-attf-href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post) }"
                     class="btn btn-primary o_default_snippet_text">
                     Read more
                 </a>
-        </div>
+            </div>
         </xpath>
-        <xpath expr="//hr" position="attributes">
-            <attribute name="invisible">1</attribute>
-        </xpath>
-
     </template>
 
 </odoo>
