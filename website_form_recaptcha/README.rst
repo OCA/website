@@ -23,7 +23,7 @@ Website Form - ReCaptcha
     :target: https://runbot.odoo-community.org/runbot/186/12.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5|
+|badge1| |badge2| |badge3| |badge4| |badge5| 
 
 Adds a ReCaptcha field widget for website forms (extends the `website_form` module).
 
@@ -148,6 +148,7 @@ Authors
 ~~~~~~~
 
 * LasLabs
+* Tecnativa
 
 Contributors
 ~~~~~~~~~~~~
@@ -159,6 +160,7 @@ Contributors
 * `Tecnativa <https://www.tecnativa.com>`__:
 
   * Cristina Martin R.
+  * Jairo Llopis
 
 Maintainers
 ~~~~~~~~~~~
