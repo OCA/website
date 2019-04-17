@@ -20,21 +20,31 @@ msgstr ""
 "%100==4 ? 2 : 3);\n"
 
 #. module: website_snippet_big_button
-#: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
-msgid "Continue searching"
-msgstr "Nadaljuj z iskanjem"
+#: model_terms:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
+msgid ""
+"<span class=\"h3 d-block\">I want another thing</span>\n"
+"                            <i class=\"fa fa-thumbs-o-down fa-5x mt16 mb16\"/"
+">\n"
+"                            <span class=\"d-block\">Continue searching</span>"
+msgstr ""
 
 #. module: website_snippet_big_button
-#: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
-msgid "I want another thing"
-msgstr "Želim nekaj drugega"
+#: model_terms:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
+msgid ""
+"<span class=\"h3 d-block\">I want this</span>\n"
+"                            <i class=\"fa fa-thumbs-o-up fa-5x mt16 mb16\"/"
+">\n"
+"                            <span class=\"d-block\">Request budget</span>"
+msgstr ""
 
-#. module: website_snippet_big_button
-#: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
-msgid "I want this"
-msgstr "Želim to"
+#~ msgid "Continue searching"
+#~ msgstr "Nadaljuj z iskanjem"
 
-#. module: website_snippet_big_button
-#: model:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
-msgid "Request budget"
-msgstr "Zahtevaj proračun"
+#~ msgid "I want another thing"
+#~ msgstr "Želim nekaj drugega"
+
+#~ msgid "I want this"
+#~ msgstr "Želim to"
+
+#~ msgid "Request budget"
+#~ msgstr "Zahtevaj proračun"
