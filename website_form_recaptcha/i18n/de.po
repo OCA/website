@@ -1,0 +1,119 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_form_recaptcha
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2016
+# Ermin Trevisan <trevi@twanda.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-13 02:52+0000\n"
+"PO-Revision-Date: 2018-08-31 11:24+0000\n"
+"Last-Translator: Axel-G <git@r5d.de>\n"
+"Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.1.1\n"
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha_display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha_id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha___last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: website_form_recaptcha
+#: model:ir.model,name:website_form_recaptcha.model_ir_model
+msgid "Models"
+msgstr "Modelle"
+
+#. module: website_form_recaptcha
+#: model:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+msgid "Protect your forms using reCaptcha control."
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings_recaptcha_key_secret
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_recaptcha_key_secret
+msgid "Recaptcha Key Secret"
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings_recaptcha_key_site
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_recaptcha_key_site
+msgid "Recaptcha Key Site"
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_ir_model_website_form_recaptcha
+msgid "Require ReCaptcha"
+msgstr "ReCaptcha benötigt"
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,help:website_form_recaptcha.field_ir_model_website_form_recaptcha
+msgid "Requires successful ReCaptcha for form submission."
+msgstr "Zum senden des Formulars wird das ReCaptcha benötigt."
+
+#. module: website_form_recaptcha
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:33
+#, python-format
+msgid "The response parameter is invalid or malformed."
+msgstr "Die Antwort ist nicht korrekt."
+
+#. module: website_form_recaptcha
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:31
+#, python-format
+msgid "The response parameter is missing."
+msgstr "Die Antwort fehlt."
+
+#. module: website_form_recaptcha
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:30
+#, python-format
+msgid "The secret parameter is invalid or malformed."
+msgstr "Der Geheimparameter ist fehlerhaft."
+
+#. module: website_form_recaptcha
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:28
+#, python-format
+msgid "The secret parameter is missing."
+msgstr "Der Geheimparameter fehlt."
+
+#. module: website_form_recaptcha
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:35
+#, python-format
+msgid "There was a problem with the captcha entry."
+msgstr "Probleme mit dem Captch-Eintrag."
+
+#. module: website_form_recaptcha
+#: model:ir.model,name:website_form_recaptcha.model_website
+msgid "Website"
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model:ir.model,name:website_form_recaptcha.model_website_form_recaptcha
+msgid "Website Form Recaptcha Validations"
+msgstr "ReCaptcha Formular-Überprüfungen"
+
+#. module: website_form_recaptcha
+#: model:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+#, fuzzy
+msgid "reCaptcha"
+msgstr "ReCaptcha benötigt"
+
+#. module: website_form_recaptcha
+#: model:ir.model,name:website_form_recaptcha.model_res_config_settings
+msgid "res.config.settings"
+msgstr ""
