@@ -16,11 +16,10 @@ class TestCaptcha(TransactionCase):
     def setUp(self):
         super(TestCaptcha, self).setUp()
         self.model_obj = self.env['website.form.recaptcha']
-        self.secret_key = self.env.ref(
-            'website_form_recaptcha.recaptcha_key_secret'
-        ).value
         self.validate_vars = 'T1', 'T2'
-        self.website = self.env['website'].search([], limit=1)
+        self.website = self.env['website'].get_current_website()
+        self.website.recaptcha_key_site = "test-site"
+        self.website.recaptcha_key_secret = "test-secret"
 
     @mock.patch(imp_requests)
     def test_post_with_proper_data(self, mk):
@@ -31,7 +30,7 @@ class TestCaptcha(TransactionCase):
         except StopIteration:
             pass
         mk.post.assert_called_once_with(self.model_obj.URL, data={
-            'secret': self.secret_key,
+            'secret': self.website.recaptcha_key_secret,
             'response': exp1,
             'remoteip': exp2,
         })
@@ -126,85 +125,3 @@ class TestCaptcha(TransactionCase):
                 request, {self.model_obj.RESPONSE_ATTR: 'validate_me'}
             )
             mocked.assert_called_with('validate_me', '1.2.3.4')
-
-    def test_get_credentials(self):
-        # by default retrieve global value from config params
-        creds = self.model_obj._get_api_credentials(website=self.website)
-        self.assertEqual(creds, {
-            'site_key': 'Obtain from Google',
-            'secret_key': 'Obtain from Google',
-        })
-        # customize on the website
-        self.website.write({
-            'recaptcha_key_site': '1234567890',
-            'recaptcha_key_secret': '0123456789',
-        })
-        creds = self.model_obj._get_api_credentials(website=self.website)
-        self.assertEqual(creds, {
-            'site_key': '1234567890',
-            'secret_key': '0123456789',
-        })
-
-    # TODO: backward compat tests for `action_validate`` remove all in v12
-    # START OF BACKWARD COMPAT TESTS
-
-    @mock.patch(imp_requests)
-    def test_valid_backward(self, mk):
-        expect = {
-            'success': True,
-        }
-        mk.post().json.return_value = expect
-        self.assertTrue(self.model_obj.action_validate(
-            *self.validate_vars, website=self.website
-        ))
-
-    @mock.patch(imp_requests)
-    def test_known_error_raises_backward(self, mk):
-        expect = {
-            'error-codes': ['missing-input-secret'],
-        }
-        mk.post().json.return_value = expect
-        with self.assertRaises(ValidationError):
-            self.model_obj.action_validate(
-                *self.validate_vars, website=self.website)
-
-    @mock.patch(imp_requests)
-    def test_known_error_lookup_backward(self, mk):
-        expect = {
-            'error-codes': ['missing-input-secret'],
-        }
-        mk.post().json.return_value = expect
-        try:
-            self.model_obj.action_validate(
-                *self.validate_vars, website=self.website)
-        except ValidationError as e:
-            self.assertEqual(
-                e.name,
-                self.model_obj._get_error_message(expect['error-codes'][0])
-            )
-
-    @mock.patch(imp_requests)
-    def test_unknown_error_lookup_backward(self, mk):
-        expect = {
-            'error-codes': ['derp'],
-        }
-        mk.post().json.return_value = expect
-        try:
-            self.model_obj.action_validate(
-                *self.validate_vars, website=self.website)
-        except ValidationError as e:
-            self.assertEqual(
-                e.name, self.model_obj._get_error_message()
-            )
-
-    @mock.patch(imp_requests)
-    def test_no_success_raises_backward(self, mk):
-        expect = {
-            'success': False,
-        }
-        mk.post().json.return_value = expect
-        with self.assertRaises(ValidationError):
-            self.model_obj.action_validate(
-                *self.validate_vars, website=self.website)
-
-    # END OF BACKWARD COMPAT TESTS
