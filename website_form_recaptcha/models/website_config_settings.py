@@ -27,6 +27,6 @@ class ResConfigSettings(models.TransientModel):
         self.has_google_recaptcha = bool(self.recaptcha_key_site)
 
     def _inverse_has_google_recaptcha(self):
-        if not self._compute_has_google_recaptcha:
+        if not self.has_google_recaptcha:
             self.recaptcha_key_site = False
             self.recaptcha_key_secret = False
