@@ -13,6 +13,7 @@ To link to any page's anchor, you need to:
 #. Edit any web page.
 #. Select some text.
 #. Press **Link** in the editor toolbar.
-#. Choose a page in the opened dialog.
-#. Set an anchor there too (without ``#`` symbol).
+#. Write the anchor, in the *URL or Email* field, prefixed by the ``#`` symbol.
+   You have some suggestions below that field that indicate you which anchors
+   are available in the current page.
 #. Press **Save**.

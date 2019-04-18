@@ -2,55 +2,30 @@
  * Copyright 2019 Tecnativa - Cristina Martin R.
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). */
 
-"use strict";
 odoo.define("website_snippet_anchor.link_dialog", function (require) {
-    var core = require("web.core");
+    "use strict";
     var widget = require("web_editor.widget");
 
-    // Load QWeb js snippets
-    core.qweb.add_template(
-        "/website_snippet_anchor/static/src/xml/link_dialog.xml");
-
-    // Add anchor to link dialog
+    /**
+     * Add anchor features to link dialog
+     */
     widget.LinkDialog.include({
-        /**
-         * Allow the user to use only an anchor.
-         */
-        get_data: function (test) {
-            var $anchor = this.$("#anchor");
-
-            if (test !== false && $anchor.val()) {
-                var $e = this.$('.active input.url-source');
-                if (!$e.length) {
-                    $e = this.$('input.url-source:first');
-                }
-                var val = $e.val();
-                var isNewWindow = this.$('input.window-new').prop('checked');
-                var label = this.$('#o_link_dialog_label_input').val() || val;
-                var style = this.$("input[name='link-style-type']:checked").val() || '';
-                var size = this.$("select.link-style").val() || '';
-                var classes = (this.data.className || "") + (style && style.length ? " btn " : "") + style + " " + size;
-
-                return $.Deferred().resolve($e.val() + '#' + $anchor.val(), isNewWindow, label, classes);
-            } else {
-                return this._super.apply(this, arguments);
-            }
-        },
+        xmlDependencies: widget.LinkDialog.prototype.xmlDependencies.concat(
+            ['/website_snippet_anchor/static/src/xml/link_dialog.xml']
+        ),
 
         /**
-         * Put data in its corresponding place in the link dialog.
+         * Know current anchors in this page.
          *
-         * When user edits an existing link that contains an anchor, put it
-         * in its dedicated field.
+         * @returns {Array}
+         * List of current anchors.
          */
-        bind_data: function () {
-            var url = this.data.url || "",
-                url_parts = url.split("#", 2);
-            if (url_parts.length > 1) {
-                this.data.url = url_parts[0];
-                this.$("#anchor").val(url_parts[1]);
-            }
-            return this._super.apply(this, arguments);
+        currentAnchors: function () {
+            var anchors = [];
+            $("#wrapwrap, #wrap, #wrap [id]").each(function () {
+                anchors.push($(this).attr("id"));
+            });
+            return anchors;
         },
     });
 });

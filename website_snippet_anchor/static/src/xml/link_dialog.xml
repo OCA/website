@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2015, 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
-     Copyright 2019 Tecnativa - Cristina Martin R.
+<!-- Copyright 2015-2019 Jairo Llopis <jairo.llopis@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
 
 <templates id="template" xml:space="preserve">
 
-<t t-extend="web_editor.dialog.link">
-    <t t-jquery="form .form-group:has(.o_link_dialog_color)" t-operation="before">
-        <div class="form-group row">
-            <label class="col-form-label col-md-3" for="o_link_dialog_anchor_input">URL or Email</label>
-            <div class="col-md-9">
-                <input type="text" name="anchor" class="form-control" id="o_link_dialog_anchor_input" placeholder="your-anchor"/>
-            </div>
-        </div>
+    <t t-extend="web_editor.dialog.link">
+        <t t-jquery="#o_link_dialog_url_input" t-operation="after">
+            <small>
+                To link to a section of this page, you can use any of these available anchors:
+                <t t-foreach="widget.currentAnchors()" t-as="anchor">
+                    <code>#<t t-esc="anchor"/></code>
+                    <span t-if="!anchor_last">, </span>
+                </t>
+            </small>
+        </t>
     </t>
-</t>
 
 </templates>
