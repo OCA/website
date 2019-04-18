@@ -14,5 +14,9 @@
     'data': [
         'views/website_event.xml',
     ],
+    'demo': [
+        'demo/assets.xml',
+        'demo/event_demo.xml',
+    ],
     'installable': True,
 }

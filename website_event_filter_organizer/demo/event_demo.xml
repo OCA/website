@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- event.event -->
+    <record id="event_organizer_0" model="event.event">
+        <field name="name">Event One</field>
+        <field name="user_id" ref="base.user_admin"/>
+        <field eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 8:00:00')" name="date_begin"/>
+        <field eval="(DateTime.now() + timedelta(days=5)).strftime('%Y-%m-%d 18:00:00')" name="date_end"/>
+        <field name="seats_availability">limited</field>
+        <field name="seats_max">500</field>
+        <field name="organizer_id" ref="base.res_partner_1"/>
+        <field name="website_published" eval="True"/>
+        <field name="event_type_id" ref="event.event_type_1"/>
+        <field name="description"><![CDATA[
+<div class="oe_structure">
+    <center><strong>Test 01</strong></center>
+</div>
+]]>
+        </field>
+    </record>
+
+    <record id="event_organizer_2" model="event.event">
+        <field name="name">Event Two</field>
+        <field name="user_id" ref="base.user_admin"/>
+        <field eval="(DateTime.today()+ timedelta(days=5)).strftime('%Y-%m-%d 7:00:00')" name="date_begin"/>
+        <field eval="(DateTime.today()+ timedelta(days=5)).strftime('%Y-%m-%d 16:30:00')" name="date_end"/>
+        <field name="event_type_id" ref="event.event_type_2"/>
+        <field name="address_id" ref="base.res_partner_4"/>
+        <field name="seats_availability">limited</field>
+        <field name="seats_max">200</field>
+        <field name="organizer_id" ref="base.res_partner_2"/>
+        <field name="website_published" eval="True"/>
+        <field name="description"><![CDATA[
+<div class="oe_structure">
+    <center><strong>Test 02</strong></center>
+</div>
+]]>
+        </field>
+    </record>
+
+</odoo>

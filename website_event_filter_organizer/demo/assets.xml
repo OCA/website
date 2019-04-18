@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_frontend" name="website_event_filter_organizer assets" inherit_id="web.assets_frontend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/website_event_filter_organizer/static/src/js/tour.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>
