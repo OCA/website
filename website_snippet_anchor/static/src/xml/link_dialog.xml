@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2015-2019 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="web_editor.dialog.link">
+        <t t-jquery="#o_link_dialog_url_input" t-operation="after">
+            <small>
+                To link to a section of this page, you can use any of these available anchors:
+                <t t-foreach="widget.currentAnchors()" t-as="anchor">
+                    <code>#<t t-esc="anchor"/></code>
+                    <span t-if="!anchor_last">, </span>
+                </t>
+            </small>
+        </t>
+    </t>
+
+</templates>
