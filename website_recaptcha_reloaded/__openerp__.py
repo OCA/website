@@ -18,27 +18,28 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{'name': 'Website reCAPTCHA Reloaded',
- 'version': '1.0',
- 'category': 'Website',
- 'depends': ['website'],
- 'author': 'Tech Receptives',
- 'license': 'AGPL-3',
- 'website': 'https://www.techreceptives.com',
- 'description': """
-Odoo Website reCAPTCHA Reloaded
-================================
-This modules allows you to integrate Google reCAPTCHA v2.0 to your website forms.
-You can configure your Google reCAPTCHA site and public keys
-in "Settings" -> "Website Settings"
+{
+    'name': 'Website reCAPTCHA Reloaded',
+    'version': '1.0',
+    'category': 'Website',
+    'depends': ['website'],
+    'author': 'Tech Receptives',
+    'license': 'AGPL-3',
+    'website': 'https://www.techreceptives.com',
+    'description': """
+    Odoo Website reCAPTCHA Reloaded
+    ================================
+    This modules allows you to integrate Google reCAPTCHA v2.0 to your website
+    forms. You can configure your Google reCAPTCHA site and public keys
+    in "Settings" -> "Website Settings"
 
-You will need to install various website_<module>_recaptcha modules 
-to use it in your various pages.
-""",
- 'data': [
-          'views/website_view.xml',
-          'views/res_config.xml',
- ],
- 'installable': True,
- 'auto_install': False
+    You will need to install various website_<module>_recaptcha modules
+    to use it in your various pages.
+    """,
+    'data': [
+              'views/website_view.xml',
+              'views/res_config.xml',
+     ],
+    'installable': False,
+    'auto_install': False
 }
