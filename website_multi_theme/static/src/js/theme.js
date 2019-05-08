@@ -1,7 +1,7 @@
 /* Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
 
-odoo.define('website_multi_theme.theme', function(require){
+odoo.define('website_multi_theme.theme', function (require) {
     "use strict";
 
     var theme = require('website.theme');
@@ -23,7 +23,7 @@ odoo.define('website_multi_theme.theme', function(require){
             return this._super.apply(this, arguments).done(function () {
                 links.remove();
             });
-        }
+        },
     });
 
     return {
