@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2014 Jorge Camacho <jcamacho@trey.es>
 # Copyright 2015 Antonio Espinosa <antonioea@antiun.com>
 # Copyright 2016-2018 Vicent Cubells <vicent.cubells@tecnativa.com>
