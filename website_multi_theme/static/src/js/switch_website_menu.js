@@ -1,8 +1,8 @@
 /* Copyright 2018 Onestein
  * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
 
-odoo.define('website_multi_theme.SwitchWebsiteMenu', function(require) {
-'use strict';
+odoo.define('website_multi_theme.SwitchWebsiteMenu', function (require) {
+    'use strict';
 
     var navbar = require('website.navbar');
     var WebsiteNavbarActionWidget = navbar.WebsiteNavbarActionWidget;
@@ -13,9 +13,11 @@ odoo.define('website_multi_theme.SwitchWebsiteMenu', function(require) {
     var _t = core._t;
 
     var SwitchWebsiteMenu = WebsiteNavbarActionWidget.extend({
-        xmlDependencies: ['/website_multi_theme/static/src/xml/switch_website_menu.xml'],
+        xmlDependencies: [
+            '/website_multi_theme/static/src/xml/switch_website_menu.xml',
+        ],
         events: _.extend({}, WebsiteNavbarActionWidget.prototype.events, {
-            'click .dropdown-menu a': '_onWebsiteClicked'
+            'click .dropdown-menu a': '_onWebsiteClicked',
         }),
         start: function () {
             var $current_website = this.$('.current-website');
@@ -25,12 +27,12 @@ odoo.define('website_multi_theme.SwitchWebsiteMenu', function(require) {
             rpc.query({
                 model: 'website',
                 method: 'search_read',
-                fields: ['domain', 'base_url']
+                fields: ['domain', 'base_url'],
             }).then(function (websites) {
-                _.each(websites, function(website) {
+                _.each(websites, function (website) {
                     $dropdown_menu.append(
                         $(qweb.render('website_multi_theme.SwitchWebsiteMenu', {
-                            'website': website
+                            'website': website,
                         }))
                     );
                 });
@@ -38,7 +40,7 @@ odoo.define('website_multi_theme.SwitchWebsiteMenu', function(require) {
 
             return this._super.apply(this, arguments);
         },
-        _onWebsiteClicked: function(e) {
+        _onWebsiteClicked: function (e) {
             e.preventDefault();
             var $a = $(e.target);
             if ($a.attr('data-href')) {
@@ -46,10 +48,11 @@ odoo.define('website_multi_theme.SwitchWebsiteMenu', function(require) {
             } else {
                 Dialog.alert(this,
                     _t("To use this menu you'll have to set the `Base Url` " +
-                       "of the website in the configuration menu (Website > Configuration > Websites).")
+                        "of the website in the configuration menu " +
+                        "(Website > Configuration > Websites).")
                 );
             }
-        }
+        },
     });
 
     navbar.websiteNavbarRegistry.add(SwitchWebsiteMenu, '#switch-website');
