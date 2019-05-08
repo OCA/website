@@ -3,8 +3,7 @@
 
 from mock import patch
 from odoo.tests.common import TransactionCase
-from odoo.addons.website_adv_image_optimization.controllers.main \
-    import MainController
+from ..controllers.main import MainController
 
 
 class TestController(TransactionCase):
