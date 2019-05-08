@@ -28,7 +28,7 @@ odoo.define('website_lazy_load_image.lazy_image_loader', function (require) {
         all_finished: null,
 
         /**
-         * @constructor
+         * @class
          * @param {String} selector The selector for the elements to lazy load.
          */
         init: function (selector) {
