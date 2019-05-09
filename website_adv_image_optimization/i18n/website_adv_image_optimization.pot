@@ -22,14 +22,14 @@ msgstr ""
 
 #. module: website_adv_image_optimization
 #. openerp-web
-#: code:addons/website_adv_image_optimization/static/src/js/website_adv_image_optimization.js:28
+#: code:addons/website_adv_image_optimization/static/src/js/website_adv_image_optimization.js:34
 #, python-format
 msgid "Apply"
 msgstr ""
 
 #. module: website_adv_image_optimization
 #. openerp-web
-#: code:addons/website_adv_image_optimization/static/src/js/website_adv_image_optimization.js:29
+#: code:addons/website_adv_image_optimization/static/src/js/website_adv_image_optimization.js:38
 #, python-format
 msgid "Cancel"
 msgstr ""
