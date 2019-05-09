@@ -5,7 +5,7 @@
 {
     'name': 'Website logo',
     'summary': 'Website company logo',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Website',
     'author': "Agile Business Group, "
               "LasLabs, "
@@ -18,7 +18,6 @@
     ],
     'data': [
         'views/res_config_view.xml',
-        'views/website_view.xml',
         'views/website_templates.xml',
     ],
     'installable': True,
