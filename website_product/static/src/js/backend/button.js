@@ -33,7 +33,7 @@ odoo.define('website_product.backend.button', function (require) {
             this._super.apply(this, arguments);
 
             var $value = this.$('.o_value');
-            var published = (this.value === true);
+            var published = this.value === true;
             $value.html(published ? _t("Published") : _t("Unpublished"))
                 .toggleClass('text-danger', !published)
                 .toggleClass('text-success', published);

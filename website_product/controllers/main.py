@@ -23,6 +23,7 @@ class WebsiteProductPage(http.Controller):
 
     @http.route(['/catalog/publish'],
                 type='json', auth="public", website=True)
+    # pylint: disable=W0622
     def publish(self, id, object):  # noqa
         Model = request.env[object]  # noqa
         record = Model.browse(int(id))  # noqa
