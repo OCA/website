@@ -1,12 +1,14 @@
-odoo.define('website_video_preview.editor', function(require) {
+odoo.define('website_video_preview.editor', function (require) {
     "use strict";
 
     var VideoDialog = require('web_editor.widget').VideoDialog;
 
     /**
-     * Adds the ability to show a preview of the video instead of loading the player.
+     * Adds the ability to show a preview of the video
+     * instead of loading the player.
      *
-     * To extend this with other providers you simply have to add a entry in video_preview e.g.::
+     * To extend this with other providers
+     * you simply have to add a entry in video_preview e.g.::
      *
      *     this.video_preview.vim = {
      *         // The location of the image of the play button you want to show
@@ -21,29 +23,29 @@ odoo.define('website_video_preview.editor', function(require) {
         video_review: null,
 
         /**
-         * @constructor
+         * @class
          * @override
          */
-        init: function() {
+        init: function () {
             this._super.apply(this, arguments);
             this.video_preview = {
                 'yt': {
-                    'button': '/website_video_preview/static/src/img/yt_button.png',
+                    "button": "/website_video_preview/" +
+                        "static/src/img/yt_button.png",
                     'getVideoId': this._getYoutubeVideoId,
-                    'getPreviewImage': this._getYoutubePreviewImage
-                }
-            }
+                    'getPreviewImage': this._getYoutubePreviewImage,
+                },
+            };
         },
 
         /**
          * @override
          */
-        save: function() {
+        save: function () {
             var res = this._super.apply(this, arguments);
             var videoId = this.$content.attr('data-video-id');
             var type = this.$content.attr('data-video-type');
             if (videoId && type in this.video_preview) {
-                var meta = this.video_preview[type];
 
                 // Build preview
                 var $media = $(res);
@@ -63,9 +65,10 @@ odoo.define('website_video_preview.editor', function(require) {
          * @private
          * @returns {jQuery}
          */
-        _createPlayButtonNode: function(type) {
+        _createPlayButtonNode: function (type) {
             var meta = this.video_preview[type];
-            var $play_button = $('<img class="play_button" src="' + meta.button + '"/>');
+            var $play_button = $(
+                "<img/>", {"class": "play_button", "src": meta.button});
             return $play_button;
         },
 
@@ -77,7 +80,7 @@ odoo.define('website_video_preview.editor', function(require) {
          * @private
          * @returns {jQuery}
          */
-        _createPreviewImageNode: function(type, id) {
+        _createPreviewImageNode: function (type, id) {
             var meta = this.video_preview[type];
             var $preview_img = $('<img class="video_preview" />');
             $preview_img.attr('src', meta.getPreviewImage(id));
@@ -92,7 +95,7 @@ odoo.define('website_video_preview.editor', function(require) {
          * @private
          * @returns {String}
          */
-        _getYoutubePreviewImage: function(id) {
+        _getYoutubePreviewImage: function (id) {
             return 'https://img.youtube.com/vi/' + id + '/0.jpg';
         },
 
@@ -103,8 +106,10 @@ odoo.define('website_video_preview.editor', function(require) {
          * @private
          * @returns {String} The video ID
          */
-        _getYoutubeVideoId: function(url) {
-            var regex = /^(?:(?:https?:)?\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+        _getYoutubeVideoId: function (url) {
+            var regex = new RegExp(["^(?:(?:https?:)?//)?(?:www.)?",
+                "(?:youtu.be/|youtube.com/(?:embed/|v/|",
+                "watch?v=|watch?.+&v=))((w|-){11})(?:S+)?$"].join(""));
             var matches = url.match(regex);
             return matches[1];
         },
@@ -112,7 +117,7 @@ odoo.define('website_video_preview.editor', function(require) {
         /**
          * @override
          */
-        _createVideoNode: function(url, options) {
+        _createVideoNode: function (url, options) {
             var res = this._super(url, options);
 
             if (res.type in this.video_preview) {
@@ -121,6 +126,6 @@ odoo.define('website_video_preview.editor', function(require) {
                 res.$video.attr('data-video-id', meta.getVideoId(url));
             }
             return res;
-        }
+        },
     });
 });
