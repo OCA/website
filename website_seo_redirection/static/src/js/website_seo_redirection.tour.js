@@ -1,6 +1,6 @@
 /* © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
-odoo.define('website_seo_redirection.tour', function(require) {
+odoo.define('website_seo_redirection.tour', function (require) {
     'use strict';
 
     var tour = require('web_tour.tour');

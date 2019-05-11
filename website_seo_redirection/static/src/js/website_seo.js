@@ -1,6 +1,6 @@
 /* © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
-odoo.define('website_seo_redirection.website_seo', function(require) {
+odoo.define('website_seo_redirection.website_seo', function (require) {
     "use strict";
     var ajax = require("web.ajax");
     var base = require("web_editor.base");
@@ -37,7 +37,7 @@ odoo.define('website_seo_redirection.website_seo', function(require) {
             );
         },
         redirect_if_required: function (result) {
-            if (result != "no-reload") {
+            if (result !== "no-reload") {
                 document.location =
                     this.$seo_redirection.val() + document.location.search;
             }
