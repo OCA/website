@@ -1,6 +1,6 @@
 /* Copyright 2017 LasLabs Inc.
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
-odoo.define('website_blog_category.tour', function(require) {
+odoo.define('website_blog_category.tour', function (require) {
     'use strict';
 
     var tour = require('web_tour.tour');
