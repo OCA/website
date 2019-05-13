@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     Copyright 2019 Alexandre Díaz <alexandre.diaz@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
 
-<template id="demo_page" page="True" name="Country dropdown snippet test">
+<template id="country_dropdown_demo_view" name="Country dropdown snippet test">
     <t t-call="website.layout">
         <div id="wrap" class="oe_structure oe_empty">
             <section>
@@ -16,6 +17,7 @@
                             </h3>
                             <form action="" class="form-horizontal">
                                 <t t-call="website_snippet_country_dropdown.dropdown_element_form">
+                                    <t t-set="complete_field" t-value="'demo_field'" />
                                     <t t-set="label_country_dropdown">
                                         Other label
                                     </t>
@@ -32,11 +34,18 @@
     </t>
 </template>
 
-<record id="demo_page_link" model="website.menu">
+<record id="country_dropdown_demo_page" model="website.page">
+    <field name="website_published">True</field>
+    <field name="url">/website_snippet_country_dropdown.demo_page</field>
+    <field name="view_id" ref="country_dropdown_demo_view" />
+</record>
+
+<record id="country_dropdown_demo_page_link" model="website.menu">
     <field name="name">Country dropdown demo</field>
-    <field name="url">/page/website_snippet_country_dropdown.demo_page</field>
+    <field name="url">/website_snippet_country_dropdown.demo_page</field>
     <field name="parent_id" ref="website.main_menu" />
     <field name="sequence" type="int">50</field>
+    <field name="page_id" ref="country_dropdown_demo_page" />
 </record>
 
 </odoo>

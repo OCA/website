@@ -17,27 +17,31 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: website_snippet_country_dropdown
-#: model:website.menu,name:website_snippet_country_dropdown.demo_page_link
+#: model:website.menu,name:website_snippet_country_dropdown.country_dropdown_demo_page_link
 msgid "Country dropdown demo"
 msgstr "Country dropdown demo"
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Other label"
 msgstr "Other label"
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Submit (you will see the GET parameters in the URL)"
 msgstr ""
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Test here the country dropdown snippet behavior"
 msgstr "Test here the country dropdown snippet behavior"
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "This is a form"
 msgstr "This is a form"
 
@@ -58,7 +62,7 @@ msgid "You can modify the label directly with the website editor."
 msgstr "You can modify the label directly with the website editor."
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
 msgid "Your Label"
 msgstr "Your Label"
 
