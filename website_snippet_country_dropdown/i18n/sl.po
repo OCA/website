@@ -20,27 +20,31 @@ msgstr ""
 "%100==4 ? 2 : 3);\n"
 
 #. module: website_snippet_country_dropdown
-#: model:website.menu,name:website_snippet_country_dropdown.demo_page_link
+#: model:website.menu,name:website_snippet_country_dropdown.country_dropdown_demo_page_link
 msgid "Country dropdown demo"
 msgstr "Demo spustnega seznama držav"
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Other label"
 msgstr "Druga oznaka"
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Submit (you will see the GET parameters in the URL)"
 msgstr ""
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Test here the country dropdown snippet behavior"
 msgstr "Tu testirajte obnašanje spustnega odseka"
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.demo_page
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "This is a form"
 msgstr "To je obrazec"
 
@@ -60,6 +64,6 @@ msgid "You can modify the label directly with the website editor."
 msgstr "Oznako lahko spremenite neposredno z urejevalnikom spletne strani."
 
 #. module: website_snippet_country_dropdown
-#: model:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
 msgid "Your Label"
 msgstr "Vaša oznaka"
