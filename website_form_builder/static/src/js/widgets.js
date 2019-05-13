@@ -1,8 +1,8 @@
 /* Copyright 2017 Tecnativa - Jairo Llopis
  * License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). */
 
- odoo.define('website_form_builder.widgets', function (require) {
-     "use strict";
+odoo.define('website_form_builder.widgets', function (require) {
+    "use strict";
 
     var ajax = require("web.ajax");
     var core = require('web.core');
