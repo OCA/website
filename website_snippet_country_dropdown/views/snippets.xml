@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- © 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
-     © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+<!-- Copyright 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
+     Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo>
 
 <template id="dropdown_element_form"
           name="Country Dropdown Input">
-    <div t-attf-class="form-group #{extra_class or ''} o_country_dropdown"
+    <div t-attf-class="form-group #{extra_class or ''} o_country_dropdown row"
          t-ignore="true">
-        <label class="col-md-3 col-sm-4 control-label" for="complete_field">
-            <span t-if="label_country_dropdown" t-esc="label_country_dropdown"/>
-            <span t-if="not label_country_dropdown">Your Label</span>
-        </label>
+         <label class="col-md-2 col-sm-3 col-form-label" t-att-for="complete_field">
+             <span t-if="label_country_dropdown" t-esc="label_country_dropdown"/>
+             <span t-if="not label_country_dropdown">Your Label</span>
+         </label>
         <div class="col-md-7 col-sm-8">
             <t t-call="website_snippet_country_dropdown.country_dropdown">
                 <t t-raw="0"/>
@@ -24,28 +24,24 @@
     <t t-set="default_value" t-value="default_value or ''"/>
     <t t-set="countries" t-value="request.env['res.country'].search([])"/>
     <t t-set="default_country" t-value="default_country or countries.search([('code', '=', default_value[:2])]) or request.env.user.country_id or website.company_id.country_id or countries[:1]"/>
-    <div class="input-group col-md-12 js_country_dropdown" t-ignore="true">
-        <div class="input-group-btn flag-button">
+    <div class="input-group js_country_dropdown" t-ignore="true">
+        <div class="input-group-prepend flag-button">
             <button type="button" id="btn_vat_code"
-                    class="btn btn-default dropdown-toggle js_btn_country_code form-control"
+                    class="btn btn-outline-secondary dropdown-toggle js_btn_country_code form-control"
                     data-toggle="dropdown" t-att-data-country_code="default_country.code">
                 <img id="img_code_vat" class="js_img_country_code"
                      t-attf-src="/website/image/res.country/#{default_country.id}/image/30x20"
                      />
-                <span class="caret"/>
             </button>
-            <ul class="dropdown-menu scrollable-menu">
+            <div class="dropdown-menu scrollable-menu" id="dropdown-countries">
                 <t t-foreach="countries" t-as="country">
-                    <li t-att-id="country.code" t-att-data-country_id="country.id"
-                        class="js_select_country_code">
-                        <a>
-                            <img t-attf-src="/website/image/res.country/#{country.id}/image/30x20"
-                                 width="30" height="20"/>
-                            <span t-esc="country.name"/>
-                        </a>
-                    </li>
+                    <a href="#" t-att-id="country.code" t-att-data-country_id="country.id"
+                        class="dropdown-item js_select_country_code">
+                        <img t-att-data-country-id="country.id" width="30" height="20"/>
+                        <span t-esc="country.name"/>
+                    </a>
                 </t>
-            </ul>
+            </div>
         </div>
         <input id="complete_field" type="hidden" class="js_complete_field_post"
                t-att-name="complete_field" t-att-value="default_value"/>
