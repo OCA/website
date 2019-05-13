@@ -11,7 +11,6 @@ odoo.define('website_form_builder.snippets', function (require) {
     var weContext = require("web_editor.context");
     var options = require('web_editor.snippets.options');
     var widgets = require("website_form_builder.widgets");
-    var ServicesMixin = require('web.ServicesMixin');
     var _t = core._t;
 
     var _fields_asked = {},
@@ -26,27 +25,27 @@ odoo.define('website_form_builder.snippets', function (require) {
     /**
      * Lazily ask just once for models.
      *
+     * @param {Object} servicesMixin
      * @returns {$.Deferred} Indicates models were loaded.
      */
-    function available_models(servicesMixin) {
+    function available_models (servicesMixin) {
         if (!_models_asked) {
             servicesMixin._rpc({
-                    model: 'ir.model',
-                    method: 'search_read',
-                    kwargs: {
-                        domain: [
-                            ["website_form_access", "=", true],
-                        ],
-                        fields: [
-                            "name",
-                            "model",
-                            "website_form_label",
-                        ],
-                        order: [{name: 'website_form_label', asc: true}],
-                        context: weContext.get()}
-                }).done(function (models_list) {
-                    _models_def.resolve(_.indexBy(models_list, "model"));
-                });
+                model: 'ir.model',
+                method: 'search_read',
+                kwargs: {domain: [
+                    ["website_form_access", "=", true],
+                ],
+                fields: [
+                    "name",
+                    "model",
+                    "website_form_label",
+                ],
+                order: [{name: 'website_form_label', asc: true}],
+                context: weContext.get()},
+            }).done(function (models_list) {
+                _models_def.resolve(_.indexBy(models_list, "model"));
+            });
             _models_asked = true;
         }
         return _models_def;
@@ -56,9 +55,10 @@ odoo.define('website_form_builder.snippets', function (require) {
      * Lazily load just once authorized fields for given model.
      *
      * @param {String} model Model technical name.
+     * @param {Object} servicesMixin
      * @returns {$.Deferred} Indicates fields were loaded.
      */
-    function authorized_fields(model, servicesMixin) {
+    function authorized_fields (model, servicesMixin) {
         if (!_fields_asked[model]) {
             _fields_def[model] = $.Deferred();
             available_models(servicesMixin).done(function (models) {
@@ -68,7 +68,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                     args: [models[model].model],
                     kwargs: {
                         context: weContext.get(),
-                    }
+                    },
                 }).done($.proxy(
                     _fields_def[model].resolve,
                     _fields_def[model]
@@ -80,6 +80,7 @@ odoo.define('website_form_builder.snippets', function (require) {
     }
 
     var Field = options.Class.extend({
+
         /**
          * Disables the action buttons forbidden for current field.
          *
@@ -228,7 +229,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                     kwargs: {
                         context: weContext.get(),
                     },
-                    async: false
+                    "async": false,
                 });
             } else {
                 // No fields? Destroy snippet before saving
@@ -310,7 +311,8 @@ odoo.define('website_form_builder.snippets', function (require) {
                 // Nothing to reset here
                 return;
             }
-            return authorized_fields(this.controller_data().model_name, this).done(
+            return authorized_fields(this.controller_data()
+                .model_name, this).done(
                 $.proxy(this._ask_model_field, this)
             );
         },
@@ -442,7 +444,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                 if (fields[name].required) {
                     this.add_model_field({
                         name: name,
-                        field: fields[name]
+                        field: fields[name],
                     });
                 }
             }
@@ -464,7 +466,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                 relational_data = this.relational_options(info.field);
             }
             return $.when(template, info.name, info.field, relational_data,
-                    true, _templates_loaded)
+                true, _templates_loaded)
                 .done($.proxy(this._add_field, this));
         },
 
@@ -505,7 +507,8 @@ odoo.define('website_form_builder.snippets', function (require) {
                 context = weContext.get();
             // Domain might contain un-evaluable literals
             try {
-                domain = new Domain(field.domain || [], weContext.get()).toArray();
+                domain = new Domain(
+                    field.domain || [], weContext.get()).toArray();
             } catch (error) {
                 // eslint-disable-next-line no-console
                 console.warn("Cannot evaluate field domain, ignoring.");
@@ -529,7 +532,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                     fields: ["display_name"],
                     order: [{name: "display_name", asc: true}],
                     context: context,
-                }
+                },
             });
         },
     });
