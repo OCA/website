@@ -22,6 +22,7 @@ setuptools.setup(
         'odoo12-addon-website_odoo_debranding',
         'odoo12-addon-website_snippet_anchor',
         'odoo12-addon-website_snippet_big_button',
+        'odoo12-addon-website_snippet_country_dropdown',
         'odoo12-addon-website_snippet_marginless_gallery',
     ],
     classifiers=[
