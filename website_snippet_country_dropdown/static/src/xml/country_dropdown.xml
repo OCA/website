@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- © 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
+     © 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<templates>
+
+<t t-name="website_snippet_country_dropdown.helper">
+    <div class="row mt8">
+        <div class="col-sm-9 col-sm-offset-3">
+            <div class="alert alert-info">
+                <p>Write the "name" attribute for the input what will be sent with the form.</p>
+                <p>You can modify the label directly with the website editor.</p>
+            </div>
+        </div>
+    </div>
+</t>
+
+</templates>
