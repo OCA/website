@@ -19,7 +19,7 @@ msgstr ""
 
 #. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/js/snippets.js:355
+#: code:addons/website_form_builder/static/src/js/snippets.js:357
 #, python-format
 msgid "%s help block"
 msgstr "Bloque de ayuda para %s"
@@ -67,7 +67,7 @@ msgstr "Escoja la acción de este formulario"
 
 #. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/js/snippets.js:348
+#: code:addons/website_form_builder/static/src/js/snippets.js:350
 #, python-format
 msgid "Custom %s field"
 msgstr "Campo %s personalizado"
@@ -111,7 +111,7 @@ msgstr "Selección múltiple"
 
 #. module: website_form_builder
 #. openerp-web
-#: code:addons/website_form_builder/static/src/js/snippets.js:351
+#: code:addons/website_form_builder/static/src/js/snippets.js:353
 #, python-format
 msgid "Option %d"
 msgstr "Opción %d"
