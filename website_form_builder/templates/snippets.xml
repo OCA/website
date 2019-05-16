@@ -18,7 +18,7 @@
                 method="post"
             >
                 <div class="o_website_form_fields">
-                    <div class="o_not_editable hidden" t-translation="off">
+                    <div class="o_not_editable d-none" t-translation="off">
                         This placeholder prevents its parent from
                         disappearing when emptied
                     </div>
@@ -43,47 +43,47 @@
                 data-js="website_form_builder_form"
                 data-selector=".o_website_form_builder"
             >
-                <li data-ask_model="" data-no-preview="true">
-                    <a tabindex="-1"><i class="fa fa-cogs"/> Change action</a>
-                </li>
-                <li data-ask_model_field="" data-no-preview="true">
-                    <a tabindex="-1"><i class="fa fa-plus"/> Add model fields</a>
-                </li>
-                <li class="dropdown-submenu">
-                    <a tabindex="-1"><i class="fa fa-hand-spock-o"/> Add custom field</a>
-                    <ul class="dropdown-menu">
-                        <li data-add_custom_field="char" data-no-preview="true">
-                            <a tabindex="-1">Short text</a>
-                        </li>
-                        <li data-add_custom_field="text" data-no-preview="true">
-                            <a tabindex="-1">Long text</a>
-                        </li>
-                        <li data-add_custom_field="selection-radio" data-no-preview="true">
-                            <a tabindex="-1">Single selection</a>
-                        </li>
-                        <li data-add_custom_field="many2many" data-no-preview="true">
-                            <a tabindex="-1">Multiple selection</a>
-                        </li>
-                        <li data-add_custom_field="boolean" data-no-preview="true">
-                            <a tabindex="-1">Yes or not</a>
-                        </li>
-                        <li data-add_custom_field="integer" data-no-preview="true">
-                            <a tabindex="-1">Whole number</a>
-                        </li>
-                        <li data-add_custom_field="float" data-no-preview="true">
-                            <a tabindex="-1">Decimal number</a>
-                        </li>
-                        <li data-add_custom_field="date" data-no-preview="true">
-                            <a tabindex="-1">Date</a>
-                        </li>
-                        <li data-add_custom_field="datetime" data-no-preview="true">
-                            <a tabindex="-1">Date and time</a>
-                        </li>
-                        <li data-add_custom_field="binary" data-no-preview="true">
-                            <a tabindex="-1">File upload</a>
-                        </li>
-                    </ul>
-                </li>
+                <a href="#" class="dropdown-item" tabindex="-1" data-ask_model="" data-no-preview="true">
+                    <i class="fa fa-cogs"/> Change action
+                </a>
+                <a href="#" class="dropdown-item" tabindex="-1" data-ask_model_field="" data-no-preview="true">
+                    <i class="fa fa-plus"/> Add model fields
+                </a>
+                <div class="dropdown-submenu">
+                    <a href="#" tabindex="-1" class="dropdown-item"><i class="fa fa-hand-spock-o"/> Add custom field</a>
+                    <div class="dropdown-menu">
+                        <a href="#" tabindex="-1" data-add_custom_field="char" data-no-preview="true" class="dropdown-item">
+                            Short text
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="text" data-no-preview="true" class="dropdown-item">
+                            Long text
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="selection-radio" data-no-preview="true" class="dropdown-item">
+                            Single selection
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="many2many" data-no-preview="true" class="dropdown-item">
+                            Multiple selection
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="boolean" data-no-preview="true" class="dropdown-item">
+                            Yes or not
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="integer" data-no-preview="true" class="dropdown-item">
+                            Whole number
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="float" data-no-preview="true" class="dropdown-item">
+                            Decimal number
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="date" data-no-preview="true" class="dropdown-item">
+                            Date
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="datetime" data-no-preview="true" class="dropdown-item">
+                            Date and time
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="binary" data-no-preview="true" class="dropdown-item">
+                            File upload
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!-- Enable moving fields around and deleting them by default -->
@@ -102,16 +102,16 @@
 
             <!-- Allow user to set additional required fields -->
             <div data-selector=".o_website_form_builder .form-field[data-optional=true]">
-                <li data-toggle-class="o_required">
-                    <a tabindex="-1">Set as required</a>
-                </li>
+                <a href="#" tabindex="-1" data-toggle-class="o_required" class="dropdown-item">
+                    Set as required
+                </a>
             </div>
 
             <!-- Allow to hide fields -->
             <div data-selector=".o_website_form_builder .form-field">
-                <li data-toggle-class="css_non_editable_mode_hidden">
-                    <a tabindex="-1"><i class="fa fa-eye-slash"/> Hide field</a>
-                </li>
+                <a href="#" tabindex="-1" data-toggle-class="css_non_editable_mode_hidden" class="dropdown-item">
+                    <i class="fa fa-eye-slash"/> Hide field
+                </a>
             </div>
 
             <!-- Cannot remove required model fields -->
@@ -133,9 +133,9 @@
                 data-js="website_form_builder_field"
                 data-selector=".o_website_form_builder .form-field:not(.form-field-binary)"
             >
-                <li data-ask_default_value="" data-no-preview="true">
-                    <a tabindex="-1">Set default value</a>
-                </li>
+                <a href="#" tabindex="-1" data-ask_default_value="" data-no-preview="true" class="dropdown-item">
+                    Set default value
+                </a>
             </div>
         </xpath>
     </template>

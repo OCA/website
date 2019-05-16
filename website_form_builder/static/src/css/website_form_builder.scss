@@ -6,7 +6,7 @@
         > label::after {
             // TODO Fix
             content: '*';
-            color: @brand-danger;
+            color: $danger;
         }
     }
 

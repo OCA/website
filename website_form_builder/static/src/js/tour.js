@@ -1,4 +1,5 @@
 /* Copyright 2017 Tecnativa - Jairo Llopis
+   Copyright 2019 Tecnativa - Alexandre Díaz
  * License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). */
 
 odoo.define("website_form_builder.tour", function (require) {
@@ -37,7 +38,7 @@ odoo.define("website_form_builder.tour", function (require) {
                 trigger: ".modal-dialog #model",
             },
             {
-                trigger: ".modal-dialog .o_save_button",
+                trigger: ".modal-dialog .btn-primary:contains('Save')",
             },
             {
                 trigger: ".s_website_form[data-model_name='res.country']",
@@ -47,14 +48,14 @@ odoo.define("website_form_builder.tour", function (require) {
                     ".oe_overlay_options:visible .btn:contains('Customize')",
             },
             {
-                trigger: ".oe_overlay_options:visible [data-ask_model_field]>a",
+                trigger: ".oe_overlay_options:visible [data-ask_model_field]",
             },
             {
                 run: "text name",
                 trigger: ".modal-dialog #field",
             },
             {
-                trigger: ".modal-dialog .o_save_button",
+                trigger: ".modal-dialog .btn-primary:contains('Save')",
             },
             {
                 trigger: "input[name=name]",
@@ -70,14 +71,14 @@ odoo.define("website_form_builder.tour", function (require) {
                     ".oe_overlay_options:visible .btn:contains('Customize')",
             },
             {
-                trigger: ".oe_overlay_options:visible [data-ask_model_field]>a",
+                trigger: ".oe_overlay_options:visible [data-ask_model_field]",
             },
             {
                 run: "text name",
                 trigger: ".modal-dialog #field",
             },
             {
-                trigger: ".modal-dialog .o_save_button",
+                trigger: ".modal-dialog .btn-primary:contains('Save')",
             },
             {
                 trigger: ".form-field label[for=name]",
@@ -88,14 +89,14 @@ odoo.define("website_form_builder.tour", function (require) {
             },
             {
                 trigger:
-                    ".oe_overlay_options:visible [data-ask_default_value]>a",
+                    ".oe_overlay_options:visible [data-ask_default_value]",
             },
             {
                 run: "text Monkey Island",
                 trigger: ".modal-dialog [name=name]",
             },
             {
-                trigger: ".modal-dialog .o_save_button",
+                trigger: ".modal-dialog .btn-primary:contains('Save')",
             },
             {
                 trigger: ".s_website_form[data-model_name='res.country']",
@@ -114,7 +115,7 @@ odoo.define("website_form_builder.tour", function (require) {
             {
                 trigger:
                     '.oe_overlay_options:visible ' +
-                    '[data-add_custom_field="selection-radio"]>a',
+                    '[data-add_custom_field="selection-radio"]',
             },
             {
                 run: hide_submenus,
@@ -125,14 +126,14 @@ odoo.define("website_form_builder.tour", function (require) {
                     ".oe_overlay_options:visible .btn:contains('Customize')",
             },
             {
-                trigger: ".oe_overlay_options:visible [data-ask_model]>a",
+                trigger: ".oe_overlay_options:visible [data-ask_model]",
             },
             {
                 run: "text res.currency",
                 trigger: ".modal-dialog #model",
             },
             {
-                trigger: ".modal-dialog .o_save_button",
+                trigger: ".modal-dialog .btn-primary:contains('Save')",
             },
             {
                 trigger: ".form-field-selection-radio",
@@ -147,11 +148,11 @@ odoo.define("website_form_builder.tour", function (require) {
                 trigger: "#web_editor-top-edit [data-action=save]",
             },
             {
-                run: "text Monkey Island Dollars",
+                run: "text MID",
                 trigger:
                     "body:not(.editor_enable) " +
-                    ".s_website_form[data-model_name='res.currency']" +
-                    " input[name=name]",
+                    ".s_website_form[data-model_name='res.currency'] " +
+                    "input[name=name]",
             },
             {
                 trigger: ".o_website_form_send",
@@ -164,7 +165,7 @@ odoo.define("website_form_builder.tour", function (require) {
                 trigger:
                     "body:not(.editor_enable) " +
                     ".s_website_form[data-model_name='res.currency'] " +
-                    ".has-error input[name=symbol]",
+                    ".o_has_error input[name=symbol]",
             },
             {
                 trigger: ".o_website_form_send",
