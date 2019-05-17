@@ -6,9 +6,9 @@ odoo.define("website_snippet_country_dropdown.dropdown", function (require) {
     "use strict";
     var animation = require("web_editor.snippets.animation");
 
-    return animation.registry.countryDropdown = animation.Class.extend({
+    animation.registry.countryDropdown = animation.Class.extend({
         selector: ".js_country_dropdown",
-        start: function (editable_mode) {
+        start: function () {
             this.$flag_selector = this.$('.js_select_country_code');
             this.$img_code = this.$('.js_img_country_code');
             this.$btn_country_code = this.$('.js_btn_country_code');
@@ -22,14 +22,14 @@ odoo.define("website_snippet_country_dropdown.dropdown", function (require) {
                 $.proxy(this.on_change_no_country_field, this)
             );
         },
-        set_value: function (event){
+        set_value: function (event) {
             this.country_code = event.currentTarget.id;
             this.$flag_selector.val(event.currentTarget.id);
             this.$img_code.attr(
                 "src",
-                "/website/image/res.country/"
-                + event.currentTarget.dataset.country_id
-                +"/image/30x20"
+                "/website/image/res.country/" +
+                event.currentTarget.dataset.country_id+
+                "/image/30x20"
             );
             this.$btn_country_code.val(event.currentTarget.dataset.country_id);
             this.$country_code_field.val(event.currentTarget.id);
@@ -39,14 +39,16 @@ odoo.define("website_snippet_country_dropdown.dropdown", function (require) {
                 this.$no_country_field.val()
             );
         },
-        join_value: function (country_code, value){
+        join_value: function (country_code, value) {
             this.$complete_field_post.val(country_code.concat(value));
         },
-        on_change_no_country_field: function (event) {
+        on_change_no_country_field: function () {
             return this.join_value(
                 this.$country_code_field.val(),
                 this.$no_country_field.val()
             );
         },
     });
+
+    return animation.registry.countryDropdown;
 });
