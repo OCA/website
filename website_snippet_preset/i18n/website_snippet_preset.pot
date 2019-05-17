@@ -15,9 +15,9 @@ msgstr ""
 
 #. module: website_snippet_preset
 #. openerp-web
-#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:141
+#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:17
 #, python-format
-msgid "<p>Preset with this name already exists. Do you want to overwrite it?</p>"
+msgid "<p>Preset with this name already exists.Do you want to overwrite it?</p>"
 msgstr ""
 
 #. module: website_snippet_preset
@@ -27,7 +27,7 @@ msgstr ""
 
 #. module: website_snippet_preset
 #. openerp-web
-#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:169
+#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:61
 #, python-format
 msgid "Cancel"
 msgstr ""
@@ -49,7 +49,7 @@ msgstr ""
 
 #. module: website_snippet_preset
 #. openerp-web
-#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:163
+#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:49
 #, python-format
 msgid "Enter Name"
 msgstr ""
@@ -91,21 +91,21 @@ msgstr ""
 
 #. module: website_snippet_preset
 #. openerp-web
-#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:144
+#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:28
 #, python-format
 msgid "No"
 msgstr ""
 
 #. module: website_snippet_preset
 #. openerp-web
-#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:143
+#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:23
 #, python-format
 msgid "Overwrite"
 msgstr ""
 
 #. module: website_snippet_preset
 #. openerp-web
-#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:140
+#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:16
 #, python-format
 msgid "Overwrite?"
 msgstr ""
@@ -119,7 +119,7 @@ msgstr ""
 
 #. module: website_snippet_preset
 #. openerp-web
-#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:168
+#: code:addons/website_snippet_preset/static/src/js/website_snippet_preset.js:56
 #, python-format
 msgid "Save"
 msgstr ""
