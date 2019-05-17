@@ -26,15 +26,15 @@ odoo.define("website_snippet_country_dropdown.tour_demo_page", function (require
     {
         content: "Validate Text",
         trigger: '#no_country_field',
-        run: function(){
+        run: function () {
             // This function allow to evaluate a hidden html element
             // Impossible to do it through trigger
             var complete_field = $("#complete_field").val();
-            if(complete_field !== country_code_test + vat_number_test){
+            if (complete_field !== country_code_test + vat_number_test) {
                 // Abort test if the value is wrong
                 console.log("error");
             }
 
-        }
+        },
     }]);
-})
+});
