@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Tecnativa - Jairo Llopis
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <!-- Snippets body -->
+    <template id="s_website_form" name="Form">
+        <section class="container readable o_website_form_builder">
+            <form
+                accept-charset="UTF-8"
+                action="/website_form/"
+                class="s_website_form col-md-12 mt32"
+                data-model_name=""
+                data-force_action=""
+                data-success_page=""
+                enctype="multipart/form-data"
+                method="post"
+            >
+                <div class="o_website_form_fields">
+                    <div class="o_not_editable d-none" t-translation="off">
+                        This placeholder prevents its parent from
+                        disappearing when emptied
+                    </div>
+                </div>
+            </form>
+        </section>
+    </template>
+
+    <!-- Add snippets to menu -->
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//*[@id='snippet_structure']//*[hasclass('o_panel_body')]">
+            <t t-snippet="website_form_builder.s_website_form"
+               t-thumbnail="/website_form_builder/static/description/icon.png"/>
+        </xpath>
+    </template>
+
+    <!-- Add snippets options -->
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr=".">
+            <!-- The form itself -->
+            <div
+                data-js="website_form_builder_form"
+                data-selector=".o_website_form_builder"
+            >
+                <a href="#" class="dropdown-item" tabindex="-1" data-ask_model="" data-no-preview="true">
+                    <i class="fa fa-cogs"/> Change action
+                </a>
+                <a href="#" class="dropdown-item" tabindex="-1" data-ask_model_field="" data-no-preview="true">
+                    <i class="fa fa-plus"/> Add model fields
+                </a>
+                <div class="dropdown-submenu">
+                    <a href="#" tabindex="-1" class="dropdown-item"><i class="fa fa-hand-spock-o"/> Add custom field</a>
+                    <div class="dropdown-menu">
+                        <a href="#" tabindex="-1" data-add_custom_field="char" data-no-preview="true" class="dropdown-item">
+                            Short text
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="text" data-no-preview="true" class="dropdown-item">
+                            Long text
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="selection-radio" data-no-preview="true" class="dropdown-item">
+                            Single selection
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="many2many" data-no-preview="true" class="dropdown-item">
+                            Multiple selection
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="boolean" data-no-preview="true" class="dropdown-item">
+                            Yes or not
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="integer" data-no-preview="true" class="dropdown-item">
+                            Whole number
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="float" data-no-preview="true" class="dropdown-item">
+                            Decimal number
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="date" data-no-preview="true" class="dropdown-item">
+                            Date
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="datetime" data-no-preview="true" class="dropdown-item">
+                            Date and time
+                        </a>
+                        <a href="#" tabindex="-1" data-add_custom_field="binary" data-no-preview="true" class="dropdown-item">
+                            File upload
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enable moving fields around and deleting them by default -->
+            <div
+                data-selector=".o_website_form_builder .form-field"
+                data-drop-in=".o_website_form_builder .o_website_form_fields"
+            />
+            <div
+                data-selector=".o_website_form_builder .form-field .checkbox"
+                data-drop-near=".o_website_form_builder .form-field .checkbox"
+            />
+            <div
+                data-selector=".o_website_form_builder .form-field .radio"
+                data-drop-near=".o_website_form_builder .form-field .radio"
+            />
+
+            <!-- Allow user to set additional required fields -->
+            <div data-selector=".o_website_form_builder .form-field[data-optional=true]">
+                <a href="#" tabindex="-1" data-toggle-class="o_required" class="dropdown-item">
+                    Set as required
+                </a>
+            </div>
+
+            <!-- Allow to hide fields -->
+            <div data-selector=".o_website_form_builder .form-field">
+                <a href="#" tabindex="-1" data-toggle-class="css_non_editable_mode_hidden" class="dropdown-item">
+                    <i class="fa fa-eye-slash"/> Hide field
+                </a>
+            </div>
+
+            <!-- Cannot remove required model fields -->
+            <div
+                data-js="website_form_builder_field"
+                data-selector=".o_website_form_builder .form-field[data-model-field=true][data-optional=false]"
+                data-disable=".oe_snippet_remove"
+            />
+
+            <!-- Cannot duplicate model fields -->
+            <div
+                data-js="website_form_builder_field"
+                data-selector=".o_website_form_builder .form-field[data-model-field=true]"
+                data-disable=".oe_snippet_clone"
+            />
+
+            <!-- Allow to set default values -->
+            <div
+                data-js="website_form_builder_field"
+                data-selector=".o_website_form_builder .form-field:not(.form-field-binary)"
+            >
+                <a href="#" tabindex="-1" data-ask_default_value="" data-no-preview="true" class="dropdown-item">
+                    Set default value
+                </a>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

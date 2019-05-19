@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 Tecnativa - Jairo Llopis
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <!-- Enable forms to create countries -->
+    <record id="base.model_res_country" model="ir.model">
+        <field name="website_form_access" eval="True"/>
+        <field name="website_form_label">Country</field>
+    </record>
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>res.country</value>
+        <value eval="[
+            'name',
+        ]"/>
+    </function>
+
+    <!-- Enable forms to create currencies -->
+    <record id="base.model_res_currency" model="ir.model">
+        <field name="website_form_access" eval="True"/>
+        <field name="website_form_label">Currency</field>
+    </record>
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>res.currency</value>
+        <value eval="[
+            'name',
+        ]"/>
+    </function>
+</odoo>
