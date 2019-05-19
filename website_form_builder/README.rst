@@ -117,6 +117,8 @@ Known issues / Roadmap
   models that have no ``mail.thread`` inheritance, your users will be unable
   to send the form.
 
+* This module it's incompatible with 'website_form_recaptcha' module.
+
 Bug Tracker
 ===========
 
