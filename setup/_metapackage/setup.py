@@ -15,6 +15,7 @@ setuptools.setup(
         'odoo12-addon-website_crm_privacy_policy',
         'odoo12-addon-website_crm_quick_answer',
         'odoo12-addon-website_crm_recaptcha',
+        'odoo12-addon-website_form_builder',
         'odoo12-addon-website_form_recaptcha',
         'odoo12-addon-website_google_tag_manager',
         'odoo12-addon-website_js_below_the_fold',
