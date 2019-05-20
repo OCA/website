@@ -25,22 +25,22 @@ msgid "%s help block"
 msgstr "Bloque de ayuda para %s"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-cogs\"/> Change action"
 msgstr "<i class=\"fa fa-cogs\"/> Cambiar acción"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-eye-slash\"/> Hide field"
 msgstr "<i class=\"fa fa-eye-slash\"/> Esconder campo"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-hand-spock-o\"/> Add custom field"
 msgstr "<i class=\"fa fa-hand-spock-o\"/> Añadir campo personalizado"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-plus\"/> Add model fields"
 msgstr "<i class=\"fa fa-plus\"/> Añadir campo del modelo"
 
@@ -73,22 +73,22 @@ msgid "Custom %s field"
 msgstr "Campo %s personalizado"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Date"
 msgstr "Fecha"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Date and time"
 msgstr "Fecha y hora"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Decimal number"
 msgstr "Número decimal"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "File upload"
 msgstr "Subida de archivos"
 
@@ -100,12 +100,12 @@ msgid "Form Settings"
 msgstr "Configuración del formulario"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Long text"
 msgstr "Texto largo"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Multiple selection"
 msgstr "Selección múltiple"
 
@@ -124,12 +124,12 @@ msgid "Send"
 msgstr "Enviar"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Set as required"
 msgstr "Hacer obligatorio"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Set default value"
 msgstr "Establecer valor por defecto"
 
@@ -141,26 +141,26 @@ msgid "Set field's default value"
 msgstr "Establecer el valor por defecto para el campo"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Short text"
 msgstr "Texto corto"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Single selection"
 msgstr "Selección única"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.view_model_form
+#: model_terms:ir.ui.view,arch_db:website_form_builder.view_model_form
 msgid "Website Forms"
 msgstr "Formularios del sitio web"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Whole number"
 msgstr "Número entero"
 
 #. module: website_form_builder
-#: model:ir.ui.view,arch_db:website_form_builder.snippet_options
+#: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Yes or not"
 msgstr "Sí o no"
