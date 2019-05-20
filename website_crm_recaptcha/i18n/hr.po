@@ -20,6 +20,6 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. module: website_crm_recaptcha
-#: model:ir.ui.view,arch_db:website_crm_recaptcha.contactus_form
+#: model_terms:ir.ui.view,arch_db:website_crm_recaptcha.contactus_form
 msgid "Human?"
 msgstr "Čovjek?"
