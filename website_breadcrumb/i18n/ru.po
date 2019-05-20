@@ -21,7 +21,7 @@ msgstr ""
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. module: website_breadcrumb
-#: model:ir.ui.view,arch_db:website_breadcrumb.breadcrumb
+#: model_terms:ir.ui.view,arch_db:website_breadcrumb.breadcrumb
 msgid "Home"
 msgstr "Домой"
 
