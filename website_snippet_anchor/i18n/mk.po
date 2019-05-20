@@ -19,46 +19,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;\n"
 
 #. module: website_snippet_anchor
-#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
-msgid ""
-"<i class=\"fa fa-hashtag\"/>\n"
-"                    Choose anchor"
+#: model_terms:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
+msgid "<i class=\"fa fa-hashtag\"/>Choose anchor"
 msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:19
-#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:10
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:29
 #, python-format
 msgid "Anchor"
 msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:57
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:74
 #, python-format
 msgid "Anchor '%s' already exists or is not valid"
 msgstr ""
 
 #. module: website_snippet_anchor
 #. openerp-web
-#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:18
+#: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:28
 #, python-format
 msgid "Choose anchor"
 msgstr ""
 
 #. module: website_snippet_anchor
-#: model:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
+#. openerp-web
+#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:9
+#, python-format
 msgid ""
-"Use anchors to go directly to a section of your page, appending #anchor to "
-"the URL"
+"To link to a section of this page, you can use any of these available "
+"anchors:"
 msgstr ""
 
 #. module: website_snippet_anchor
-#. openerp-web
-#: code:addons/website_snippet_anchor/static/src/xml/link_dialog.xml:17
-#, python-format
-msgid "your-anchor"
+#: model_terms:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
+msgid ""
+"Use anchors to go directly to a section of your page, appending #anchor to "
+"the URL"
 msgstr ""
 
 #~ msgid "Name"
