@@ -546,7 +546,7 @@ msgstr ""
 
 #. module: website_multi_theme
 #. openerp-web
-#: code:addons/website_multi_theme/static/src/js/switch_website_menu.js:48
+#: code:addons/website_multi_theme/static/src/js/switch_website_menu.js:50
 #, python-format
 msgid ""
 "To use this menu you'll have to set the `Base Url` of the website in the "
