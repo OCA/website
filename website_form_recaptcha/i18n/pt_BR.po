@@ -21,17 +21,42 @@ msgstr ""
 "X-Generator: Weblate 3.1.1\n"
 
 #. module: website_form_recaptcha
-#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha_display_name
+#: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                            How to get my reCaptcha Key"
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+msgid ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model:ir.model,name:website_form_recaptcha.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha__display_name
 msgid "Display Name"
 msgstr "Mostrar Nome"
 
 #. module: website_form_recaptcha
-#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha_id
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings__has_google_recaptcha
+#, fuzzy
+msgid "Google reCaptcha"
+msgstr "Exigir ReCaptcha"
+
+#. module: website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha__id
 msgid "ID"
 msgstr "ID"
 
 #. module: website_form_recaptcha
-#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha___last_update
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha____last_update
 msgid "Last Modified on"
 msgstr "Modificada pela última vez"
 
@@ -41,29 +66,29 @@ msgid "Models"
 msgstr "Modelos"
 
 #. module: website_form_recaptcha
-#: model:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+#: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid "Protect your forms using reCaptcha control."
 msgstr ""
 
 #. module: website_form_recaptcha
-#: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings_recaptcha_key_secret
-#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_recaptcha_key_secret
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings__recaptcha_key_secret
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website__recaptcha_key_secret
 msgid "Recaptcha Key Secret"
 msgstr ""
 
 #. module: website_form_recaptcha
-#: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings_recaptcha_key_site
-#: model:ir.model.fields,field_description:website_form_recaptcha.field_website_recaptcha_key_site
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings__recaptcha_key_site
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_website__recaptcha_key_site
 msgid "Recaptcha Key Site"
 msgstr ""
 
 #. module: website_form_recaptcha
-#: model:ir.model.fields,field_description:website_form_recaptcha.field_ir_model_website_form_recaptcha
+#: model:ir.model.fields,field_description:website_form_recaptcha.field_ir_model__website_form_recaptcha
 msgid "Require ReCaptcha"
 msgstr "Exigir ReCaptcha"
 
 #. module: website_form_recaptcha
-#: model:ir.model.fields,help:website_form_recaptcha.field_ir_model_website_form_recaptcha
+#: model:ir.model.fields,help:website_form_recaptcha.field_ir_model__website_form_recaptcha
 msgid "Requires successful ReCaptcha for form submission."
 msgstr "Requer ReCaptcha de sucesso para envio de formulário."
 
@@ -108,12 +133,18 @@ msgid "Website Form Recaptcha Validations"
 msgstr "Formulário de Validação Recaptcha do Website"
 
 #. module: website_form_recaptcha
-#: model:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+#: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+msgid "XXXXX"
+msgstr ""
+
+#. module: website_form_recaptcha
+#: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 #, fuzzy
-msgid "reCaptcha"
+msgid "captcha"
 msgstr "Exigir ReCaptcha"
 
 #. module: website_form_recaptcha
-#: model:ir.model,name:website_form_recaptcha.model_res_config_settings
-msgid "res.config.settings"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
+#, fuzzy
+msgid "reCaptcha"
+msgstr "Exigir ReCaptcha"
