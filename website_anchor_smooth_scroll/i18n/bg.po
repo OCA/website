@@ -24,64 +24,55 @@ msgid "Anchor smooth scroll demo"
 msgstr ""
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
-#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
+#: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "It works for any links to #anchors in your website!"
 msgstr ""
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
-#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
+#: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "More dummy content"
 msgstr "Още примерно съдържание"
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
-#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
+#: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Odoo CMS - a big picture"
 msgstr "Odoo CMS - голяма снимка."
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
-#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
+#: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Press the button below and enjoy a smooth experience."
 msgstr ""
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
-#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
+#: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to bottom"
 msgstr "Отиди в края"
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
-#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
+#: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to top"
 msgstr "Отиди в началото"
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
-#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
+#: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Smooth? Nice."
 msgstr "Гладко? Готино!"
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
-#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
+#: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "This is dummy content"
 msgstr "Това е примерно съдържание"
 
 #. module: website_anchor_smooth_scroll
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
-#: model:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_view
-#: model:website.page,arch_db:website_anchor_smooth_scroll.demo_page
+#: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Try smooth scrolling. Easily."
 msgstr "Оптиайте гладкото местене. С лекота."
