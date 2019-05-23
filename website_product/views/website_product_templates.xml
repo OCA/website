@@ -2,7 +2,7 @@
 <odoo>
     <template id="product_page" name="Product Page">
         <t t-call="website.layout">
-            <div id="wrap" class="product-page">
+            <div class="product-page" id="wrap">
                 <t t-call="website_product.product_detail"/>
             </div>
         </t>
@@ -11,26 +11,26 @@
     <template id="product_detail" name="Product Details">
         <div class="product-detail">
             <div class="container">
-                    <div class="row">
-                        <h1 class="col-md-12 text-center" id="product_name" t-field="product.name"/>
+                <div class="row">
+                    <h1 class="col-lg-12 text-center" id="product_name" t-field="product.name"/>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12" id="product_image">
+                        <div t-field="product.image" t-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;center-block mb16&quot;}"/>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12" id="product_image">
-                            <div t-field="product.image" t-options='{"widget": "image", "class": "center-block mb16"}'/>
-                        </div>
-                    </div>
+                </div>
             </div>
             <div class="product_description" t-field="product.website_description"/>
         </div>
     </template>
 
-    <template id="catalog_publish_management" name="Catalog Publish Management" inherit_id="website.user_navbar">
+    <template id="catalog_publish_management" inherit_id="website.user_navbar" name="Catalog Publish Management">
         <xpath expr="//ul[hasclass('o_menu_systray')]/li[1]" position="replace">
             <t t-if="controller == '/catalog/publish'">
-                <li t-if="'website_product_published' in main_object.fields_get()" t-attf-class="js_publish_management #{main_object.website_product_published and 'css_published' or 'css_unpublished'}" t-att-data-id="main_object.id" t-att-data-object="main_object._name" t-att-data-controller="controller">
+                <li t-att-data-controller="controller" t-att-data-id="main_object.id" t-att-data-object="main_object._name" t-attf-class="js_publish_management #{main_object.website_product_published and 'css_published' or 'css_unpublished'}" t-if="'website_product_published' in main_object.fields_get()">
                     <a>
-                        <label class="o_switch o_switch_danger js_publish_btn" for="id" >
-                            <input type="checkbox" t-att-checked="main_object.website_product_published" id="id"/>
+                        <label class="o_switch o_switch_danger js_publish_btn" for="id">
+                            <input id="id" t-att-checked="main_object.website_product_published" type="checkbox"/>
                             <span/>
                             <span class="css_publish">Unpublished</span>
                             <span class="css_unpublish">Published</span>
@@ -39,10 +39,10 @@
                 </li>
             </t>
             <t t-else="">
-                <li t-if="'website_published' in main_object.fields_get()" t-attf-class="js_publish_management #{main_object.website_published and 'css_published' or 'css_unpublished'}" t-att-data-id="main_object.id" t-att-data-object="main_object._name" t-att-data-controller="publish_controller">
+                <li t-att-data-controller="publish_controller" t-att-data-id="main_object.id" t-att-data-object="main_object._name" t-attf-class="js_publish_management #{main_object.website_published and 'css_published' or 'css_unpublished'}" t-if="'website_published' in main_object.fields_get()">
                     <a>
-                        <label class="o_switch o_switch_danger js_publish_btn" for="id" >
-                            <input type="checkbox" t-att-checked="main_object.website_published" id="id"/>
+                        <label class="o_switch o_switch_danger js_publish_btn" for="id">
+                            <input id="id" t-att-checked="main_object.website_published" type="checkbox"/>
                             <span/>
                             <span class="css_publish">Unpublished</span>
                             <span class="css_unpublish">Published</span>

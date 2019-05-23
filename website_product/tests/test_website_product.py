@@ -14,7 +14,7 @@ class TestController(SavepointCase):
     def setUpClass(cls):
         super(TestController, cls).setUpClass()
         cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
-        cls.uom_unit = cls.env.ref('product.product_uom_unit')
+        cls.uom_unit = cls.env.ref('uom.product_uom_unit')
 
         cls.product_test = cls.env['product.template'].create({
             'name': 'Product Test',
