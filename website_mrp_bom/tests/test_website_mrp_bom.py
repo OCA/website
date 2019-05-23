@@ -16,7 +16,7 @@ class TestController(SavepointCase):
         cls.product_template_model = cls.env['product.template']
         cls.bom_model = cls.env['mrp.bom']
         cls.bom_line_model = cls.env['mrp.bom.line']
-        cls.uom_unit = cls.env.ref('product.product_uom_unit')
+        cls.uom_unit = cls.env.ref('uom.product_uom_unit')
 
         cls.product_sale_ok = cls.product_template_model.create({
             'name': 'Product sale ok',

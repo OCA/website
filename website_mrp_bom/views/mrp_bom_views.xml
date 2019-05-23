@@ -12,6 +12,11 @@
                     <field name="website_published" widget="website_button"/>
                 </button>
             </div>
+            <xpath expr="//notebook" position="inside">
+                <page string="Website Description">
+                    <field name="website_description" />
+                </page>
+            </xpath>
         </field>
     </record>
 

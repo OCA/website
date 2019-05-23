@@ -5,7 +5,7 @@
     'name': 'Website MRP BOM',
     'category': 'Website',
     'summary': 'Bill of Materials Module for Website',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'author': 'Eficent, Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'website': 'https://github.com/OCA/website',
