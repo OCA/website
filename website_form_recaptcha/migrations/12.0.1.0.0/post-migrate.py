@@ -5,7 +5,7 @@ from openupgradelib import openupgrade
 
 
 @openupgrade.migrate()
-def migrate(env):
+def migrate(env, version):
     """Move global ``ir.config_parameter`` keys to website."""
     ICP = env["ir.config_parameter"]
     websites = env["website"].search([
