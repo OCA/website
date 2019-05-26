@@ -27,7 +27,7 @@ odoo.define('website_form_builder.snippets', function (require) {
      *
      * @returns {$.Deferred} Indicates models were loaded.
      */
-    function available_models() {
+    function available_models () {
         if (!_models_asked) {
             new Model("ir.model").call("search_read", {
                 domain: [
@@ -54,13 +54,13 @@ odoo.define('website_form_builder.snippets', function (require) {
      * @param {String} model Model technical name.
      * @returns {$.Deferred} Indicates fields were loaded.
      */
-    function authorized_fields(model) {
+    function authorized_fields (model) {
         if (!_fields_asked[model]) {
             _fields_def[model] = $.Deferred();
             available_models().done(function (models) {
                 new Model("ir.model").call(
                     "get_authorized_fields", [models[model].id], {
-                        context: base.get_context()
+                        context: base.get_context(),
                     }
                 ).done($.proxy(
                     _fields_def[model].resolve,
@@ -73,6 +73,7 @@ odoo.define('website_form_builder.snippets', function (require) {
     }
 
     var Field = options.Class.extend({
+
         /**
          * Disables the action buttons forbidden for current field.
          *
@@ -215,11 +216,12 @@ odoo.define('website_form_builder.snippets', function (require) {
             if (fields.length) {
                 // Whitelist model fields found in current form
                 new Model("ir.model.fields").call(
-                    "formbuilder_whitelist", [this.controller_data().model_name, fields], {
-                        context: base.get_context()
+                    "formbuilder_whitelist",
+                    [this.controller_data().model_name, fields], {
+                        context: base.get_context(),
                     }, {
                         // Do not save until done
-                        async: false
+                        async: false,
                     }
                 );
             } else {
@@ -434,7 +436,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                 if (fields[name].required) {
                     this.add_model_field({
                         name: name,
-                        field: fields[name]
+                        field: fields[name],
                     });
                 }
             }
@@ -456,7 +458,7 @@ odoo.define('website_form_builder.snippets', function (require) {
                 relational_data = this.relational_options(info.field);
             }
             return $.when(template, info.name, info.field, relational_data,
-                    true, _templates_loaded)
+                true, _templates_loaded)
                 .done($.proxy(this._add_field, this));
         },
 
