@@ -13,7 +13,7 @@ odoo.define('website_snippet_barcode', function (require) {
             type: 'QR',
             value: encodeURIComponent(window.location.href.split('#')[0]),
             aspectRatio: '1',
-            humanReadable: 'none'
+            humanReadable: 'none',
         },
 
         start: function () {
@@ -55,7 +55,7 @@ odoo.define('website_snippet_barcode', function (require) {
 
         _setDataAttribute: function (value, key) {
             this.$target.attr('data-' + key, value);
-        }
+        },
 
     });
 

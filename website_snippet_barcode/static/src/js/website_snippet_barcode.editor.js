@@ -33,13 +33,13 @@ odoo.define('website_snippet_barcode.editor', function (require) {
             if (type !== 'click') {
                 return $.Deferred().reject();
             }
-            switch(value) {
-                case 'current':
-                    this._setOption('value', null);
-                    break;
-                case 'custom':
-                    this._promptCustomValue();
-                    break;
+            switch (value) {
+            case 'current':
+                this._setOption('value', null);
+                break;
+            case 'custom':
+                this._promptCustomValue();
+                break;
             }
         },
 
@@ -50,13 +50,14 @@ odoo.define('website_snippet_barcode.editor', function (require) {
 
         _getValue: function (option) {
             var currentValue = this.$target.attr('data-' + option);
-            switch(option) {
-                case 'value':
-                    return currentValue === this.$target.data('snippet-view').defaults.value
-                        ? 'current'
-                        : 'custom';
-                default:
-                    return currentValue;
+            switch (option) {
+            case 'value':
+                return currentValue === this.$target
+                    .data('snippet-view').defaults.value
+                    ? 'current'
+                    : 'custom';
+            default:
+                return currentValue;
             }
         },
 
@@ -64,7 +65,7 @@ odoo.define('website_snippet_barcode.editor', function (require) {
             website.prompt({
                 'window_title': 'Custom Barcode Value',
                 'input': 'Value',
-                "default": decodeURIComponent(this.$target.attr('data-value'))
+                "default": decodeURIComponent(this.$target.attr('data-value')),
             }).done($.proxy(function (value) {
                 this._setOption('value', encodeURIComponent(value));
             }, this));
@@ -83,7 +84,7 @@ odoo.define('website_snippet_barcode.editor', function (require) {
         _setOption: function (option, value) {
             this.$target.attr('data-' + option, value);
             this.$target.data('snippet-view').renderBarcode();
-        }
+        },
 
     });
 

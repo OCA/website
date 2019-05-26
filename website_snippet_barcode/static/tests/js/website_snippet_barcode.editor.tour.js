@@ -7,7 +7,7 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
     var tour = require("web_tour.tour");
     var base = require("web_editor.base");
 
-    function checkBarcodeType(barcodeType) {
+    function checkBarcodeType (barcodeType) {
         var $barcode = $('footer .o_barcode');
         var $barcodeImg = $('footer .o_barcode .o_barcode_img');
         if ( $barcode.attr('data-type') !== barcodeType ) {
@@ -19,7 +19,8 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
         if ( $barcodeImg.attr('src').indexOf('?type=' + barcodeType) < 0 ) {
             tour._consume_tour(
                 tour.running_tour,
-                'Barcode image source was not updated to ' + barcodeType + ' barcode'
+                'Barcode image source was not updated to ' +
+                barcodeType + ' barcode'
             );
         }
     }
@@ -27,18 +28,19 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
     tour.register("website_snippet_barcode", {
         url: '/?enable_editor=1',
         test: true,
-        wait_for: base.ready()
+        wait_for: base.ready(),
     }, [{
         content: 'Create a barcode.',
-        trigger: '#snippet_content .oe_snippet[name="Barcode"] .oe_snippet_thumbnail',
-        run: 'drag_and_drop footer .row div:eq(2) '
+        trigger: '#snippet_content ' +
+            '.oe_snippet[name="Barcode"] .oe_snippet_thumbnail',
+        run: 'drag_and_drop footer .row div:eq(2) ',
     }, {
         content: 'Click the barcode.',
         trigger: 'footer .o_barcode',
-        run: 'click'
+        run: 'click',
     }, {
         content: 'Click the customize menu.',
-        trigger: 'a.btn[title=Customize]'
+        trigger: 'a.btn[title=Customize]',
     }, {
         content: 'Check that barcode preview works',
         trigger: 'li.snippet-option-barcode',
@@ -46,33 +48,35 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
             var $code128 = $('li[data-select_type="Code128"]');
             $code128.find('a:first').click();
             checkBarcodeType('Code128');
-        }
+        },
     }, {
         content: 'Click Save',
-        trigger: 'button[data-action=save]'
+        trigger: 'button[data-action=save]',
     }, {
         content: 'Check that barcode is `Code128` type after save.',
         trigger: 'footer .o_barcode',
         run: function () {
             checkBarcodeType('Code128');
-        }
+        },
     }, {
         content: 'Click Edit',
-        trigger: 'a[data-action=edit]'
+        trigger: 'a[data-action=edit]',
     }, {
         content: "Create another barcode because Odoo sucks and won't " +
                  "click the existing one from within a test.",
-        trigger: '#snippet_content .oe_snippet[name="Barcode"] .oe_snippet_thumbnail',
-        run: 'drag_and_drop footer .row div:eq(2) '
+        trigger: '#snippet_content' +
+            '.oe_snippet[name="Barcode"] .oe_snippet_thumbnail',
+        run: 'drag_and_drop footer .row div:eq(2) ',
     }, {
         content: 'Click the barcode.',
         trigger: 'footer .o_barcode:last',
-        run: 'click'
+        run: 'click',
     }, {
         content: 'Click the customize menu.',
-        trigger: 'a.btn[title="Customize"]'
+        trigger: 'a.btn[title="Customize"]',
     }, {
-        content: 'Check that human readable text option displays value in footer.',
+        content: 'Check that human readable text' +
+            'option displays value in footer.',
         trigger: 'li.snippet-option-barcode',
         run: function () {
             var $textOption = $('li[data-select_humanreadable="text"]');
@@ -92,16 +96,17 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
                     'Barcode value was not added to footer text'
                 );
             }
-        }
+        },
     }, {
         content: 'Click the barcode.',
         trigger: 'footer .o_barcode:last',
-        run: 'click'
+        run: 'click',
     }, {
         content: 'Click the customize menu.',
-        trigger: 'a.btn[title="Customize"]'
+        trigger: 'a.btn[title="Customize"]',
     }, {
-        content: 'Check that human readable image option hides value in footer.',
+        content: 'Check that human readable image' +
+            'option hides value in footer.',
         trigger: 'li.snippet-option-barcode',
         run: function () {
             var $imageOption = $('li[data-select_humanreadable="image"]');
@@ -120,14 +125,14 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
                     'Footer text was not removed'
                 );
             }
-        }
+        },
     }, {
         content: 'Click the barcode.',
         trigger: 'footer .o_barcode:last',
-        run: 'click'
+        run: 'click',
     }, {
         content: 'Click the customize menu.',
-        trigger: 'a.btn[title="Customize"]'
+        trigger: 'a.btn[title="Customize"]',
     }, {
         content: 'Check that selecting "Set Custom Value" opens dialog modal.',
         trigger: 'li.snippet-option-barcode',
@@ -137,7 +142,10 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
             var $barcode = $('footer .o_barcode:last');
             var barcodeValue = decodeURIComponent($barcode.attr('data-value'));
             var $dialog = $('.modal-dialog').last();
-            if ( $dialog.find('.modal-title').text() !== 'Custom Barcode Value' ) {
+            if (
+                $dialog.find('.modal-title').text() !==
+                'Custom Barcode Value'
+            ) {
                 tour._consume_tour(
                     tour.running_tour,
                     'A dialog modal was not opened'
@@ -146,23 +154,26 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
             if ( $dialog.find('.modal-body input').val() !== barcodeValue ) {
                 tour._consume_tour(
                     tour.running_tour,
-                    'Modal dialog was not pre-populated with the current barcode value'
+                    'Modal dialog was not pre-populated' +
+                    'with the current barcode value'
                 );
             }
-        }
+        },
     }, {
         content: 'Change custom barcode value.',
         trigger: '.modal-dialog:contains("Custom Barcode Value")',
         run: function () {
-            var $input = $('.modal-dialog:contains("Custom Barcode Value") .modal-body input');
+            var $input = $('.modal-dialog:contains("Custom Barcode Value")' +
+                '.modal-body input');
             $input.val('Test');
-        }
+        },
     }, {
         content: 'Click the continue button.',
         trigger: '.modal-dialog button:contains("Continue")',
-        run: 'click'
+        run: 'click',
     }, {
-        content: 'Check that clicking "Continue" on dialog modal sets new barcode value.',
+        content: 'Check that clicking "Continue"' +
+            'on dialog modal sets new barcode value.',
         trigger: 'footer .o_barcode:last',
         run: function () {
             var $barcode = $('footer .o_barcode:last');
@@ -173,16 +184,17 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
                     'Barcode value was not changed to custom value'
                 );
             }
-        }
+        },
     }, {
         content: 'Click the barcode.',
         trigger: 'footer .o_barcode:last',
-        run: 'click'
+        run: 'click',
     }, {
         content: 'Click the customize menu.',
-        trigger: 'a.btn[title="Customize"]'
+        trigger: 'a.btn[title="Customize"]',
     }, {
-        content: 'Check that selecting "Current Page URI" sets barcode value to current URI.',
+        content: 'Check that selecting "Current Page URI"' +
+            'sets barcode value to current URI.',
         trigger: 'li.snippet-option-barcode',
         run: function () {
             var $currentValueOption = $('li[data-select_value="current"]');
@@ -196,7 +208,7 @@ odoo.define("website_snippet_barcode.tour_editor", function (require) {
                     'Barcode value not set to current page URI'
                 );
             }
-        }
+        },
     }]);
 
 });
