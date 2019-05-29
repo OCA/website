@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2019 Tecnativa - Jairo Llopis
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<data>
+
+    <template id="apply"
+            inherit_id="website_hr_recruitment.apply"
+            name="Add legal acceptance checkbox">
+        <xpath expr="//*[hasclass('form-group')][//*[hasclass('o_website_form_send')]]"
+            position="before">
+            <div class="form-group form-field o_website_form_required">
+                <div class="col-md-7 col-md-offset-3 col-sm-8 col-sm-offset-4">
+                    <div class="checkbox">
+                        <input type="checkbox"
+                            value="accepted"
+                            id="privacy_policy"
+                            name="privacy_policy"
+                            class="o_website_form_input"
+                            required="required"/>
+                        <label class="control-label">
+                            <t t-call="website_legal_page.acceptance_full"/>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</data>
