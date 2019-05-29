@@ -40,9 +40,9 @@ class UICase(HttpCase):
             """//head/link[contains(@href,
                'website_multi_theme.auto_assets_website')]"""))
 
-    def test_127_0_0_1(self):
-        """Check 127.0.0.1 downloads its default assets."""
-        response = self.url_open("http://127.0.0.1:%d" % PORT, timeout=60)
+    def test_0_0_0_0(self):
+        """Check 0.0.0.0 downloads its default assets."""
+        response = self.url_open("http://0.0.0.0:%d" % PORT, timeout=30)
         self.assertEqual(response.getcode(), 200)
         result = html.document_fromstring(response.read())
         self.assertFalse(result.xpath(
