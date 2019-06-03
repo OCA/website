@@ -7,7 +7,7 @@
     "summary": 'Provides a ReCaptcha validation in Website Contact Form',
     "version": "12.0.1.0.0",
     "category": "Website",
-    "website": "https://laslabs.com/",
+    "website": "https://github.com/OCA/website",
     "author": "LasLabs, Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
