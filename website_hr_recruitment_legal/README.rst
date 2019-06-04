@@ -53,7 +53,7 @@ Credits
 Authors
 ~~~~~~~
 
-* <AUTHOR(S)>
+* Tecnativa
 
 Contributors
 ~~~~~~~~~~~~
