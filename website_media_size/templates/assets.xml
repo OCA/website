@@ -8,8 +8,8 @@
             <script type="text/javascript"
                     src="/website_media_size/static/src/js/website_media_size.js"/>
 
-            <link href="/website_media_size/static/src/css/website_media_size.css"
-                  type="text/css" rel="stylesheet"/>
+            <link href="/website_media_size/static/src/scss/website_media_size.scss"
+                  type="text/scss" rel="stylesheet"/>
         </xpath>
     </template>
 </odoo>
