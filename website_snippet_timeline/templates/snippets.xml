@@ -7,7 +7,8 @@
         <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
             <t t-snippet="website_snippet_timeline.website_snippet_timeline"
                t-thumbnail="/website_snippet_timeline/static/src/img/snippet.png" />
-
+        </xpath>
+        <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
             <t t-snippet="website_snippet_timeline.website_snippet_timeline_item"
                t-thumbnail="/website_snippet_timeline/static/src/img/snippet-item.png" />
         </xpath>

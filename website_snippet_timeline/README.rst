@@ -14,13 +14,13 @@ Website Block Timeline
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github
-    :target: https://github.com/OCA/website/tree/11.0/website_snippet_timeline
+    :target: https://github.com/OCA/website/tree/12.0/website_snippet_timeline
     :alt: OCA/website
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/website-11-0/website-11-0-website_snippet_timeline
+    :target: https://translation.odoo-community.org/projects/website-12-0/website-12-0-website_snippet_timeline
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/186/11.0
+    :target: https://runbot.odoo-community.org/runbot/186/12.0
     :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
@@ -29,18 +29,18 @@ Adds an extra website block which you can use to e.g. describe the history of yo
 
 **Large screen**
 
-.. image:: https://raw.githubusercontent.com/website_snippet_timeline/static/description/screenshot.png
+.. image:: /website_snippet_timeline/static/description/screenshot.png
     :alt: Screenshot of large screen
     :width: 100%
 
 **Medium screen**
 
-.. image:: https://raw.githubusercontent.com/website_snippet_timeline/static/description/screenshot-medium.png
+.. image:: /website_snippet_timeline/static/description/screenshot-medium.png
     :alt: Screenshot of medium screen
 
 **Small screen**
 
-.. image:: https://raw.githubusercontent.com/website_snippet_timeline/static/description/screenshot-small.png
+.. image:: /website_snippet_timeline/static/description/screenshot-small.png
     :alt: Screenshot of small screen
 
 **Table of contents**
@@ -54,9 +54,9 @@ Usage
 To use this block, you need to:
 
 #. Go to the website;
-#. enter edit mode;
-#. scroll down to the Feature section in the block menu;
-#. drag and drop a timeline block on your page.
+#. Enter edit mode;
+#. Scroll down to the Feature section in the block menu;
+#. Drag and drop a timeline block on your page.
 
 After the Timeline block is on your page you can add new items by
 drag and dropping 'Timeline - Item' on the top or the bottom of the
@@ -85,6 +85,7 @@ Contributors
 
 * Dennis Sluijk <d.sluijk@onestein.nl>
 * Ahmed Hasan <a.hasan@onestein.nl>
+* Jose Robles <josemanuel@vauxoo.com>
 
 Maintainers
 ~~~~~~~~~~~
@@ -99,6 +100,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/website <https://github.com/OCA/website/tree/11.0/website_snippet_timeline>`_ project on GitHub.
+This module is part of the `OCA/website <https://github.com/OCA/website/tree/12.0/website_snippet_timeline>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

@@ -1,0 +1,54 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_snippet_timeline
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-04 15:54+0000\n"
+"PO-Revision-Date: 2019-05-04 15:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline_item
+msgid "2009-2011"
+msgstr ""
+
+#. module: website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline
+msgid "An Agency is Born"
+msgstr "Nace una Agencia"
+
+#. module: website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline
+msgid "December 2012"
+msgstr "Diciembre 2012"
+
+#. module: website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline_item
+msgid "Lorem ipsum dolor sit ametqui quibusdam."
+msgstr ""
+
+#. module: website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline
+msgid "March 2011"
+msgstr "Marzo 2011"
+
+#. module: website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline_item
+msgid "Our Humble Beginnings"
+msgstr "Nuestros Humildes Comienzos"
+
+#. module: website_snippet_timeline
+#: model_terms:ir.ui.view,arch_db:website_snippet_timeline.website_snippet_timeline
+msgid "Transition to Full Service"
+msgstr "Transición al Servicio Completo"

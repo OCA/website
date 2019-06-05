@@ -1,7 +1,7 @@
 {
     'name': 'Website Block Timeline',
     'summary': 'Adds an extra website block',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'development_status': 'Beta',
     'website': 'https://github.com/OCA/website',
     'category': 'Website',
