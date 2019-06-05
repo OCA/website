@@ -8,7 +8,7 @@
     'license': 'AGPL-3',
     'website': 'https://github.com/oca/website',
     'category': 'Website',
-    'version': '11.0.1.1.0',
+    'version': '12.0.1.0.0',
     'depends': [
         'website'
     ],
