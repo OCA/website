@@ -7,10 +7,12 @@
 <template id="snippet_options" inherit_id="website.snippets">
     <xpath expr="//div[@id='snippet_options']" position="inside">
         <div data-selector="img">
-            <li data-toggle-class="lazyload-disable"
-                data-no-preview="true"
-                title="Disable lazy loading for this image">
-                <a>
+            <li>
+                <a href="#"
+                   class="dropdown-item"
+                   role="menuitem"
+                   data-toggle-class="lazyload-disable"
+                   title="Disable lazy loading for this image">
                     Disable Lazy loading
                 </a>
             </li>
