@@ -7,7 +7,7 @@
         <xpath expr="." position="inside">
             <script src="/website_snippet_preset/static/src/js/website_snippet_preset.js"></script>
 
-            <link type="text/css" rel="stylesheet" href="/website_snippet_preset/static/src/css/website_snippet_preset.css"/>
+            <link type="text/scss" rel="stylesheet" href="/website_snippet_preset/static/src/scss/website_snippet_preset.scss"/>
         </xpath>
     </template>
 </odoo>
