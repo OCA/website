@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<template>
+    <t t-extend="web_editor.dialog.image.existing.content">
+        <t t-jquery=".o_attachment_border" t-operation="before">
+            <t t-if="attachment.type != 'url'">
+                <t t-set="file_size" t-value="Math.ceil(attachment.file_size / 1024)"/>
+                <span t-attf-class="o_existing_attachment_size #{file_size > 999 and 'o_existing_attachment_size_danger' or file_size > 99 and 'o_existing_attachment_size_warning' or ''}"><t t-esc="file_size"/> kB</span>
+            </t>
+        </t>
+    </t>
+</template>

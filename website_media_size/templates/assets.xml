@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <template id="assets_editor" inherit_id="website.assets_editor">
+        <xpath expr=".">
+            <script type="text/javascript"
+                    src="/website_media_size/static/src/js/website_media_size.js"/>
+
+            <link href="/website_media_size/static/src/scss/website_media_size.scss"
+                  type="text/scss" rel="stylesheet"/>
+        </xpath>
+    </template>
+</odoo>
