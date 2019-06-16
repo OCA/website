@@ -20,28 +20,28 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid "&amp;times;"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid ""
 ",\n"
 "                                updated:"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid ", author:"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid ", updated:"
 msgstr ""
 
@@ -60,14 +60,14 @@ msgid ""
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_325
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_325
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_344
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_344
 msgid "<b>Sign in</b>"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_616
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_616
 msgid ""
 "<span class=\"btn btn-primary btn-lg o_website_form_send\">Send</span>\n"
 "                                <span id=\"o_website_form_result\"/>"
@@ -82,9 +82,27 @@ msgid ""
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_403
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_403
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_449
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_449
 msgid "About us"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_644
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_644
+msgid "All Countries"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_647
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_647
+msgid "All Departments"
+msgstr ""
+
+#. module: website_multi_theme
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_650
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_650
+msgid "All Offices"
 msgstr ""
 
 #. module: website_multi_theme
@@ -115,14 +133,14 @@ msgid "Base Url"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_403
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_403
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_449
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_449
 msgid "Connect with us"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_403
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_403
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_449
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_449
 msgid "Contact us"
 msgstr ""
 
@@ -179,8 +197,8 @@ msgid "Duplicates of this view"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_616
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_616
 msgid "Email"
 msgstr ""
 
@@ -197,14 +215,14 @@ msgid "Has Assets"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_403
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_403
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_449
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_449
 msgid "Home"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_401
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_401
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_447
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_447
 msgid "Homepage"
 msgstr ""
 
@@ -231,20 +249,20 @@ msgid ""
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid "Information about the"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid "Installed Applications"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid "Installed Modules"
 msgstr ""
 
@@ -445,20 +463,20 @@ msgid ""
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid "Note: To hide this page, uncheck it from the top Customize menu."
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid "Odoo Version"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid "Open Source ERP"
 msgstr ""
 
@@ -468,14 +486,14 @@ msgid "Original view"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_403
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_403
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_449
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_449
 msgid "Our Products &amp; Services"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_403
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_403
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_449
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_449
 msgid ""
 "Our products are designed for small to medium size companies willing to "
 "optimize\n"
@@ -483,8 +501,8 @@ msgid ""
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_616
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_616
 msgid "Phone Number"
 msgstr ""
 
@@ -504,32 +522,32 @@ msgid "Sub-themes"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_616
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_616
 msgid "Subject"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_401
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_401
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_447
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_447
 msgid "Subtitle"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_401
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_401
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_447
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_447
 msgid "Subtitle 2"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_401
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_401
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_447
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_447
 msgid "Subtitle 3"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid "Technical name:"
 msgstr ""
 
@@ -579,8 +597,8 @@ msgid "Was Active"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_403
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_403
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_449
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_449
 msgid ""
 "We are a team of passionate people whose goal is to improve everyone's\n"
 "                            life through disruptive products. We build great "
@@ -621,20 +639,20 @@ msgid ""
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_616
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_616
 msgid "Your Company"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_616
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_616
 msgid "Your Name"
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_570
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_570
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_616
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_616
 msgid "Your Question"
 msgstr ""
 
@@ -666,8 +684,8 @@ msgid ""
 msgstr ""
 
 #. module: website_multi_theme
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_411
-#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_411
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_1_457
+#: model:ir.ui.view,arch_db:website_multi_theme.auto_view_2_457
 msgid "instance of Odoo, the"
 msgstr ""
 
