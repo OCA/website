@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo12-addon-website_anchor_smooth_scroll',
+        'odoo12-addon-website_blog_excerpt_img',
         'odoo12-addon-website_breadcrumb',
         'odoo12-addon-website_canonical_url',
         'odoo12-addon-website_cookie_notice',
