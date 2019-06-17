@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2019 Tecnativa - Jairo Llopis
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+
+<odoo>
+
+    <template
+        active="True"
+        customize_show="True"
+        id="seo_image_floating"
+        inherit_id="website_blog.blog_post_short"
+        name="Floating social share image"
+        priority="50"
+    >
+
+        <xpath expr="//*[hasclass('o_blog_post_teaser')]/.." position="replace">
+            <div class="row">
+                <!-- Wrap text content with a .row element -->
+                <div class="col">$0</div>
+
+                <!-- Insert social share thumbnail next to teaser -->
+                <div class="col-5 text-center">
+                    <t t-set="blog_post_meta" t-value="blog_post.get_website_meta()" />
+                    <img
+                        class="excerpt-img img-thumbnail"
+                        t-if="blog_post_meta['opengraph_meta']['og:image']"
+                        t-att-src="blog_post_meta['opengraph_meta']['og:image']"
+                    />
+                </div>
+            </div>
+        </xpath>
+
+        <!-- Move the <hr> element to the end of the post -->
+        <xpath expr="//*[@name='blog_post']">
+            <xpath expr="//*[@name='blog_post']//hr" position="move"/>
+        </xpath>
+
+        <!-- Read more button -->
+        <xpath expr="//*[hasclass('o_sharing_links')]" position="inside">
+            <div class="float-right">
+                <a t-attf-href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post) }"
+                    class="btn btn-primary o_default_snippet_text">
+                    Read more
+                </a>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

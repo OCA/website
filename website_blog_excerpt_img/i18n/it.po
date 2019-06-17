@@ -1,0 +1,29 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_blog_excerpt_img
+#
+# Translators:
+# Paolo Valier <paolo.valier@hotmail.it>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-13 00:48+0000\n"
+"PO-Revision-Date: 2017-10-13 00:48+0000\n"
+"Last-Translator: Paolo Valier <paolo.valier@hotmail.it>, 2017\n"
+"Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_blog_excerpt_img
+#: model:ir.model,name:website_blog_excerpt_img.model_blog_post
+msgid "Blog Post"
+msgstr "Articolo Blog"
+
+#. module: website_blog_excerpt_img
+#: model:ir.ui.view,arch_db:website_blog_excerpt_img.blog_post_short
+msgid "Read more"
+msgstr ""
