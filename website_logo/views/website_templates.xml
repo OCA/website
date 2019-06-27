@@ -1,0 +1,12 @@
+<odoo>
+    <template id="add_logo_to_website" inherit_id="website.layout_logo_show" name="Show website Logo" customize_show="True" active="True">
+        <xpath expr="//header//a[hasclass('navbar-brand')]" position="after">
+            <a href="/" class="navbar-brand logo">
+                <span t-field="website.logo" t-options="{'widget': 'image'}" role="img" t-attf-aria-label="Logo of {{website.name}}" t-att-title="website.name"/>
+            </a>
+        </xpath>
+        <xpath expr="//header//a[hasclass('navbar-brand')]" position="attributes">
+            <attribute name="class" add="d-none" separator=" "/>
+        </xpath>
+    </template>
+</odoo>

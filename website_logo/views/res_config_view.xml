@@ -1,0 +1,15 @@
+<odoo>
+    <record id="website_configuration_add_logo" model="ir.ui.view">
+        <field name="name">add.logo.to.website.configuration</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='domain_setting']/div[hasclass('o_setting_right_pane')]/div[hasclass('content-group')]" position="inside">
+                <div class="row">
+                    <label class="o_form_label col-lg-3 o_light_label" for="logo"/>
+                    <field name="logo" widget="image" class="float-left oe_avatar"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
