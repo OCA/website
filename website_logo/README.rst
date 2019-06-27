@@ -31,7 +31,7 @@ company logo (for reports) and a different website logo.
 **Table of contents**
 
 .. contents::
-    :local:
+   :local:
 
 Configuration
 =============
