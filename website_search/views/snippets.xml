@@ -1,0 +1,22 @@
+<odoo>
+    <!--snippet to select mail and it's related pages -->
+    <template id="website_search" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[@class='o_panel_body']" position="inside">
+            <t t-snippet="website_search.search" 
+                t-thumbnail="/website/static/src/img/blocks/block_button.png"/>
+        </xpath>
+    </template>
+
+    <template id="search" name="Website Search">
+        <div class="oe_share s_share">
+            <form class="s_website_form form-horizontal"
+                role="form" method="post" action="/search">
+                <input type="text" name="name" placeholder="Search..."/>
+                <button
+                    type="submit"
+                    id="search"
+                    class="btn fa fa-search"/>
+            </form>
+        </div>
+    </template>
+</odoo>

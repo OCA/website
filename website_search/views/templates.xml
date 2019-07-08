@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="results" name="Search results">
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="row">
+                    <div t-if="search.result_ids">
+                        <h1>Search results for: <t t-esc="search.name"/> (<t t-esc="len(search.result_ids)"/> Results)</h1>
+                    </div>
+                    <div t-if="search.name and not search.result_ids">
+                        <h2>No search results found for: <t t-esc="search.name"/></h2>
+                    </div>
+                    <div class="row" t-foreach="search._get_results(pager['offset'], step)" t-as="result">
+                        <div class="col-lg-10">
+                            <div class="col-md-4">
+                                <a t-att-href="result.link">
+                                    <t t-esc="result.name"/>
+                                </a>
+                            </div>
+                            <div class="col-md-8">
+                                <a t-att-href="result.link">
+                                    <t t-raw="result.preview"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <t t-call="website.pager">
+                        <t t-set="classname">pull-right</t>
+                    </t>
+                    <hr/>
+                    <div class="oe_share s_share">
+                        <form class="s_website_form form-horizontal"
+                            role="form" method="post" action="/search">
+                            <input type="text" name="name" placeholder="Search..."/>
+                            <button
+                                type="submit"
+                                id="search"
+                                class="btn fa fa-search"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
