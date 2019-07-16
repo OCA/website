@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, models
-from lxml import etree
+import lxml
 
 
 class IrUiView(models.Model):
@@ -22,7 +22,7 @@ class IrUiView(models.Model):
         website_id = self.env.context.get('website_id')
         if website_id and not \
                 self.env['website'].browse(website_id).is_publisher():
-            html = etree.HTML(res)
+            html = lxml.html.fromstring(res.decode())
             imgs = html.xpath(
                 '//main//img[@src][not(hasclass("lazyload-disable"))]'
             ) + html.xpath(
@@ -32,5 +32,5 @@ class IrUiView(models.Model):
                 src = img.attrib['src']
                 img.attrib['src'] = self.LAZYLOAD_DEFAULT_SRC
                 img.attrib['data-src'] = src
-            res = etree.tostring(html, method='html')
+            res = lxml.etree.tostring(html, method='html', encoding='UTF-8')
         return res
