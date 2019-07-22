@@ -22,7 +22,7 @@ class IrUiView(models.Model):
         website_id = self.env.context.get('website_id')
         if website_id and not \
                 self.env['website'].browse(website_id).is_publisher():
-            html = lxml.html.fromstring(res.decode())
+            html = lxml.html.fromstring(res.decode('UTF-8'))
             imgs = html.xpath(
                 '//main//img[@src][not(hasclass("lazyload-disable"))]'
             ) + html.xpath(
