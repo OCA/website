@@ -27,6 +27,23 @@ class LazyLoadTest(SavepointCase):
             'arch_base': arch_2,
             'mode': 'primary'
         })
+        arch_3 = 'content not wrapped'
+        cls.view_3 = cls.env['ir.ui.view'].create({
+            'name': 'Test 3',
+            'key': 'website_lazy_load_image.test_3',
+            'type': 'qweb',
+            'arch_base': arch_3,
+            'mode': 'primary'
+        })
+        arch_4 = ('<t t-name="test"><main><span>Teléfono, means phone'
+                  '</span></main></t>')
+        cls.view_4 = cls.env['ir.ui.view'].create({
+            'name': 'Test 4',
+            'key': 'website_lazy_load_image.test_4',
+            'type': 'qweb',
+            'arch_base': arch_4,
+            'mode': 'primary'
+        })
         cls.website_id = cls.env.ref('website.default_website').id
         cls.default_img = cls.env['ir.ui.view'].LAZYLOAD_DEFAULT_SRC
 
@@ -60,3 +77,19 @@ class LazyLoadTest(SavepointCase):
         imgs = res.xpath('//main//img')
         self.assertTrue('data-src' not in imgs[0].attrib)
         self.assertEqual(imgs[0].attrib['src'], 'hello.jpg')
+
+    def test_no_wrap_content(self):
+        """Check content not be wrapped into extra html tags"""
+        public_user_id = self.ref('base.public_user')
+        ui_view = self.env['ir.ui.view'].sudo(
+            public_user_id).with_context(website_id=self.website_id)
+        res = etree.HTML(ui_view.render_template(self.view_3.id))
+        self.assertEqual(res, self.arch_3)
+
+    def test_encoding_render(self):
+        """Check content is correctly enconded"""
+        public_user_id = self.ref('base.public_user')
+        ui_view = self.env['ir.ui.view'].sudo(
+            public_user_id).with_context(website_id=self.website_id)
+        res = etree.HTML(ui_view.render_template(self.view_4.id))
+        self.assertEqual(res, self.arch_4)
