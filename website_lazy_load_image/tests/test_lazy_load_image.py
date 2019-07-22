@@ -27,7 +27,7 @@ class LazyLoadTest(SavepointCase):
             'arch_base': arch_2,
             'mode': 'primary'
         })
-        arch_3 = 'content not wrapped'
+        arch_3 = '<t t-name="test"><span>content not wrapped</span></t>'
         cls.view_3 = cls.env['ir.ui.view'].create({
             'name': 'Test 3',
             'key': 'website_lazy_load_image.test_3',
@@ -83,13 +83,18 @@ class LazyLoadTest(SavepointCase):
         public_user_id = self.ref('base.public_user')
         ui_view = self.env['ir.ui.view'].sudo(
             public_user_id).with_context(website_id=self.website_id)
-        res = etree.HTML(ui_view.render_template(self.view_3.id))
-        self.assertEqual(res, self.arch_3)
+        res = ui_view.render_template(self.view_3.id).decode('UTF-8')
+        arch = '<span>content not wrapped</span>'
+        self.assertEqual(res, arch)
 
     def test_encoding_render(self):
         """Check content is correctly enconded"""
         public_user_id = self.ref('base.public_user')
         ui_view = self.env['ir.ui.view'].sudo(
             public_user_id).with_context(website_id=self.website_id)
-        res = etree.HTML(ui_view.render_template(self.view_4.id))
-        self.assertEqual(res, self.arch_4)
+        res = ui_view.render_template(self.view_4.id).decode('UTF-8')
+        arch = '<main><span>Teléfono, means phone</span></main>'
+        self.assertEqual(res, arch)
+        robots = self.env.ref('website.robots').render()
+        self.assertNotIn('<html>', robots.decode(
+            'UTF-8'), "Robots must not be wrapped into html DOM")
