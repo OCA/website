@@ -19,11 +19,13 @@
                 <div class="col">$0</div>
 
                 <!-- Insert social share thumbnail next to teaser -->
-                <div class="col-5 text-center">
-                    <t t-set="blog_post_meta" t-value="blog_post.get_website_meta()" />
+                <t t-set="blog_post_meta" t-value="blog_post.get_website_meta()" />
+                <div
+                    t-if="blog_post_meta['opengraph_meta']['og:image']"
+                    class="col-5 text-center"
+                >
                     <img
                         class="excerpt-img img-thumbnail"
-                        t-if="blog_post_meta['opengraph_meta']['og:image']"
                         t-att-src="blog_post_meta['opengraph_meta']['og:image']"
                     />
                 </div>
