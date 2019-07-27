@@ -1,49 +1,43 @@
-# -*- coding: utf-8 -*-
-##############################################################################
-#
-#    Tech-Receptives Solutions Pvt. Ltd.
-#    Copyright (C)2004-TODAY Tech Receptives(<https://www.techreceptives.com>)
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
-from openerp.osv import osv, fields
-import requests
-import json
+# Copyright 2019 Simone Orsi - Camptocamp SA
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-class website(osv.osv):
+from odoo import api, fields, models, _
+from odoo.exceptions import ValidationError
+import requests
+
+URL = 'https://www.google.com/recaptcha/api/siteverify'
+
+
+class Website(models.Model):
     _inherit = 'website'
 
-    _columns = {
-        'recaptcha_site_key': fields.char('reCAPTCHA Site Key'),
-        'recaptcha_private_key': fields.char('reCAPTCHA Private Key'),
-    }
+    recaptcha_key_site = fields.Char()
+    recaptcha_key_secret = fields.Char()
 
+    @api.model
+    def _get_error_message(self, errorcode=None):
+        mapping = {
+            'missing-input-secret': _('The secret parameter is missing.'),
+            'invalid-input-secret':
+                _('The secret parameter is invalid or malformed.'),
+            'missing-input-response': _('The response parameter is missing.'),
+            'invalid-input-response':
+                _('The response parameter is invalid or malformed.'),
+        }
+        return mapping.get(errorcode, _('There was a problem with '
+                                        'the captcha entry.'))
 
-    def is_captcha_valid(self, cr, uid, ids, response, context={}):
-        for website in self.browse(cr, uid, ids, context=context):
-            get_res = {'secret': website.recaptcha_private_key,'response': response}
-            try:
-                response = requests.get('https://www.google.com/recaptcha/api/siteverify', params=get_res)
-            except Exception,e:
-                raise osv.except_osv(('Invalid Data!'),("%s.")%(e))
-            res_con = json.loads(response.content)
-            if res_con.has_key('success') and res_con['success']:
-                return True
-        return False
-    
-    _defaults = {
-                 'recaptcha_site_key': "6LchkgATAAAAAAdTJ_RCvTRL7_TTcN3Zm_YXB39s",
-                 'recaptcha_private_key': "6LchkgATAAAAADbGqMvbRxHbTnTEkavjw1gSwCng"
-                 }
+    def is_captcha_valid(self, response):
+        get_res = {'secret': self.recaptcha_key_secret,
+                   'response': response}
+
+        res = requests.post(URL, data=get_res).json()
+
+        error_msg = "\n".join(self._get_error_message(error)
+                              for error in res.get('error-codes', []))
+        if error_msg:
+            raise ValidationError(error_msg)
+
+        if not res.get('success'):
+            raise ValidationError(self._get_error_message())
+        return True

@@ -1,36 +1,32 @@
-# -*- coding: utf-8 -*-
-##############################################################################
-#
-#    Tech-Receptives Solutions Pvt. Ltd.
-#    Copyright (C)2004-TODAY Tech Receptives(<https://www.techreceptives.com>)
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# Copyright 2019 Simone Orsi - Camptocamp SA
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
 
-from openerp.osv import fields, osv
+from odoo import api, fields, models
 
 
-class website_config_settings(osv.osv_memory):
-    _inherit = 'website.config.settings'
+class website_config_settings(models.TransientModel):
+    _inherit = 'res.config.settings'
 
-    _columns = {
-        'recaptcha_site_key': fields.related(
-            'website_id', 'recaptcha_site_key', type="char",
-            string='reCAPTCHA site Key'),
-        'recaptcha_private_key': fields.related(
-            'website_id', 'recaptcha_private_key', type="char",
-            string='reCAPTCHA Private Key'),
-    }
+    recaptcha_key_site = fields.Char(
+        related='website_id.recaptcha_key_site',
+        readonly=False,
+    )
+    recaptcha_key_secret = fields.Char(
+        related='website_id.recaptcha_key_secret',
+        readonly=False,
+    )
+    has_google_recaptcha = fields.Boolean(
+        'Google reCaptcha',
+        compute='_compute_has_google_recaptcha',
+        inverse='_inverse_has_google_recaptcha',
+        readonly=False,
+    )
 
+    @api.depends('website_id')
+    def _compute_has_google_recaptcha(self):
+        self.has_google_recaptcha = bool(self.recaptcha_key_site)
+
+    def _inverse_has_google_recaptcha(self):
+        if not self.has_google_recaptcha:
+            self.recaptcha_key_site = False
+            self.recaptcha_key_secret = False
