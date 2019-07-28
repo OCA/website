@@ -9,35 +9,34 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-13 00:49+0000\n"
-"PO-Revision-Date: 2017-10-13 00:49+0000\n"
-"Last-Translator: Quentin THEURET <odoo@kerpeo.com>, 2017\n"
+"PO-Revision-Date: 2019-07-28 11:47+0000\n"
+"Last-Translator: jcleonard2018 <jcl@solutionsmakers.fr>\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
 #: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.tour.js:18
 #, python-format
 msgid "<b>Click Edit</b> to start designing your homepage."
-msgstr ""
+msgstr "<b>Clique Editer</b> pour commencer à concevoir votre page d'accueil."
 
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-#, fuzzy
-#| msgid "Our Gallery"
 msgid "<b>Our Gallery</b>"
-msgstr "Noter galerie"
+msgstr "<b>Notre galerie</b>"
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
 #: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.tour.js:23
 #, python-format
 msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
-msgstr ""
+msgstr "Faites glisser <i>la galerie en marge</i> et déplacez là dans la page."
 
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
@@ -46,14 +45,8 @@ msgstr "Lorem ipsum"
 
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-#, fuzzy
-#| msgid ""
-#| "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
-#| "tempor incididunt ut labore et dolore magna."
 msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
-msgstr ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
-"tempor incididunt ut labore et dolore magna."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
 
 #~ msgid "%s is not a valid value"
 #~ msgstr "%sn'est pas une valeur valide"
