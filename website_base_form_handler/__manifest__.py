@@ -7,7 +7,7 @@
     "author": "Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "website",
-    "summary": 'WWebsite Base Form Support',
+    "summary": 'Website Base Form Support',
     "depends": [
         'website',
     ],

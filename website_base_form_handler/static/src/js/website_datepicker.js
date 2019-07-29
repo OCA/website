@@ -9,6 +9,7 @@ odoo.define('website_base_form_handler.datepicker', function (require) {
 
     require('website.website').ready().then(function () {
         // Apply date picker to all inputs marked as dates
+        // This is needed untill we can assume type="date" support is present
         var $inputs = jQuery('input[type="date"]');
         // And make them normal inputs again
         $inputs.attr('type', 'text');

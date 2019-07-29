@@ -43,7 +43,7 @@ class BaseFormHandler(object):
         public_user = self.env.ref('base.public_user')
         self.is_public = self.env.user == public_user
         self.sudo_env = public_user.sudo().env
-        self.errors = []
+        self.qcontext['is_public'] = self.is_public  # For use in templates.
 
     def handle_form(self):
         """This must be called from all subclasses."""
@@ -96,7 +96,7 @@ class BaseFormHandler(object):
         return self.render_form()
 
     def load_form(self):
-        """Load extra data needed to render the form.
+        """Load data needed to render the form.
 
         This will be called before each rendering of the form.
         """
@@ -104,7 +104,7 @@ class BaseFormHandler(object):
 
     def render_form(self):
         """Render the form template."""
-        return self.request.render(self._form_template, self.qcontext)
+        return self.render(self._form_template)
 
     def validate_form(self):
         """Validate user input on the form.
@@ -125,6 +125,10 @@ class BaseFormHandler(object):
         """Where to go after succesfull page submission."""
         return self.request.redirect('/')
 
+    def render(self, template):
+        """Render template, might be any, with present qcontext."""
+        return self.request.render(template, self.qcontext)
+
     def handle_validation_error(self, error):
         """For the moment we only handle single errors."""
         self.set_error(
@@ -133,8 +137,8 @@ class BaseFormHandler(object):
     def handle_exception(self):
         """Log detailed exception, but give general message to user."""
         _logger.exception(
-            _("Error on update or next stepi from form %s"),
-            self._form_name)
+            _("Error on update or next step from form %s"),
+            self._form_template)
         self.set_error(
             _("An unexpected error occured."
               " Try again later or contact the website owner"))
