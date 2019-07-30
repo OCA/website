@@ -4,6 +4,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo.tests import HttpCase
+from odoo.tools import mute_logger
 from ..controllers.main import Website
 import mock
 
@@ -80,6 +81,7 @@ class TestLogo(HttpCase):
     @mock.patch('%s.http' % imp_cont)
     @mock.patch('%s.StringIO' % imp_cont)
     @mock.patch(imp_req)
+    @mute_logger(imp_cont)
     def test_default_on_exception(self, imp_mk, str_mk, http_mk, func_mk):
         """ It should send the default logo if there is an exception """
         with mock.patch('%s.registry' % imp_cont) as mk:
