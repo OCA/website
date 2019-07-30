@@ -14,6 +14,7 @@
     "depends": [
         "website",
         "website_sale",
+        "website_sale_public_pricelist",
     ],
     "data": [
         "views/website_sale_line_total_view.xml",

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <function name="_set_public_user_pricelist" model="res.partner" />
+
+</odoo>
