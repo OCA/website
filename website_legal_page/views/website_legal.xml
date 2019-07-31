@@ -10,13 +10,7 @@
         </xpath>
     </template>
 
-
-    <record id="advice" model="ir.ui.view">
-        <field name="name">Legal Advice</field>
-        <field name="type">qweb</field>
-        <field name="key">website.advice</field>
-        <field name="arch" type="xml">
-            <t name="About us" t-name="website.aboutus">
+    <template id="advice" name="Legal Advice">
                 <t t-call="website.layout">
                     <div id="wrap">
                         <div class="oe_structure">
@@ -93,9 +87,7 @@
                         <div class="oe_structure"/>
                     </div>
                 </t>
-            </t>
-        </field>
-    </record>
+    </template>
 
 
     <record id="advise_page" model="website.page">
