@@ -5,7 +5,7 @@
 {
     'name': "Website Legal Page",
     'category': 'Website',
-    'version': '12.0.1.0.0',
+    'version': '12.0.1.1.0',
     'depends': [
         'website',
     ],
