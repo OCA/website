@@ -12,13 +12,7 @@
         </xpath>
     </template>
 
-
-    <record id="terms-of-use" model="ir.ui.view">
-        <field name="name">Legal Advice</field>
-        <field name="type">qweb</field>
-        <field name="key">website.advice</field>
-        <field name="arch" type="xml">
-            <t name="About us" t-name="website.aboutus">
+    <template id="terms-of-use" name="Terms of use">
                 <t t-call="website.layout">
                     <div id="wrap">
                         <div class="oe_structure">
@@ -242,9 +236,7 @@
                         </div>
                     </div>
                 </t>
-            </t>
-        </field>
-    </record>
+    </template>
 
 
     <record id="terms_page" model="website.page">
