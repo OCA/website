@@ -12,13 +12,7 @@
         </xpath>
     </template>
 
-
-    <record id="privacy-policy" model="ir.ui.view">
-        <field name="name">Legal Advice</field>
-        <field name="type">qweb</field>
-        <field name="key">website.advice</field>
-        <field name="arch" type="xml">
-            <t name="About us" t-name="website.aboutus">
+    <template id="privacy-policy" name="Privacy Policy">
                 <t t-call="website.layout">
                     <div id="wrap">
                         <div class="oe_structure">
@@ -231,9 +225,7 @@
                         </div>
                     </div>
                 </t>
-            </t>
-        </field>
-    </record>
+    </template>
 
 
     <record id="privacy_page" model="website.page">
