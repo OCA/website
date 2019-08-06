@@ -17,7 +17,7 @@ Website Lazy Load Images
     :target: https://github.com/OCA/website/tree/12.0/website_lazy_load_image
     :alt: OCA/website
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/website-11-0/website-11-0-website_lazy_load_image
+    :target: https://translation.odoo-community.org/projects/website-12-0/website-12-0-website_lazy_load_image
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
     :target: https://runbot.odoo-community.org/runbot/186/12.0
@@ -78,7 +78,6 @@ Contributors
 ~~~~~~~~~~~~
 
 * Dennis Sluijk <d.sluijk@onestein.nl>
-* Oscar Alcala <oscar@vauxoo.com>
 
 Other credits
 ~~~~~~~~~~~~~
