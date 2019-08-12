@@ -1,98 +1,80 @@
-# -*- coding: utf-8 -*-
-# Copyright 2017 Simone Orsi
-# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl)
+# Copyright 2017 Simone Orsi.
+# Copyright 2019 Therp BV <https://therp.nl>.
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 import odoo.tests.common as test_common
 
 
-class TestMenuPerm(test_common.TransactionCase):
+class TestMenuPerm(test_common.SavepointCase):
 
-    def setUp(self):
-        super(TestMenuPerm, self).setUp()
-        self.group_logged = self.env.ref('base.group_portal')
-        self.group_public = self.env.ref('base.group_public')
-        user_model = self.env['res.users'].with_context(**{
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.env = cls.env(context=dict(
+            cls.env.context, tracking_disable=True, no_reset_password=True))
+        cls.group_portal = cls.env.ref('base.group_portal')
+        cls.group_user = cls.env.ref('base.group_user')
+        cls.group_public = cls.env.ref('base.group_public')
+        user_model = cls.env['res.users'].with_context(**{
             'no_reset_password': True,
             'mail_create_nosubscribe': True})
-        self.user_public = user_model.create({
-            'name': 'User 1 (test ref)',
-            'login': 'testref_user_public',
-            'email': 'testref_user_public@email.com',
-            # make sure to have only portal group
-            'groups_id': [(6, 0, [self.group_public.id])]
-        })
-        self.user_logged = user_model.create({
-            'name': 'Public User',
-            'login': 'publicuser',
-            'email': 'publicuser@example.com',
-            'groups_id': [(6, 0, [self.group_logged.id])]}
-        )
-        self.menu_model = self.env['website.menu']
-        self.menu_item = self.menu_model.create({'name': 'Foo'})
+        cls.employee_user = user_model.create({
+            'name': 'Employee user (test ref)',
+            'login': 'testref_employee_user',
+            'email': 'testref_employee_user@email.com',
+            'groups_id': [(6, 0, [cls.group_user.id])]})
+        cls.portal_user = user_model.create({
+            'name': 'Portal user',
+            'login': 'portaluser',
+            'email': 'portaluser@example.com',
+            'groups_id': [(6, 0, [cls.group_portal.id])]})
+        cls.public_user = cls.env.ref('base.public_user')
+        cls.menu_model = cls.env['website.menu']
+        cls.menu_item = cls.menu_model.create({'name': 'Foo'})
 
-    def test_menu_groups_default(self):
-        self.assertIn(self.group_logged, self.menu_item.group_ids)
-        self.assertIn(self.group_public, self.menu_item.group_ids)
+    def test_menu_for_all(self):
+        self.menu_item.write({'group_ids': False})
+        self.assertTrue(self._can_see(self.employee_user))
+        self.assertTrue(self._can_see(self.public_user))
+        self.assertTrue(self._can_see(self.portal_user))
 
-    def test_menu_groups_update(self):
-        # wipe groups and flags
-        self.menu_item.with_context(ws_menu_skip_group_update=1).write({
-            'group_ids': False,
-            'user_logged': False,
-            'user_not_logged': False,
-        })
-        self.menu_item.user_logged = True
-        self.assertIn(self.group_logged, self.menu_item.group_ids)
-        self.assertNotIn(self.group_public, self.menu_item.group_ids)
-        self.menu_item.user_not_logged = True
-        self.assertIn(self.group_logged, self.menu_item.group_ids)
-        self.assertIn(self.group_public, self.menu_item.group_ids)
-        self.menu_item.user_logged = False
-        self.assertNotIn(self.group_logged, self.menu_item.group_ids)
-        self.assertIn(self.group_public, self.menu_item.group_ids)
-        self.menu_item.user_not_logged = False
-        self.assertNotIn(self.group_logged, self.menu_item.group_ids)
-        self.assertNotIn(self.group_public, self.menu_item.group_ids)
+    def test_menu_for_employee(self):
+        self.menu_item.write({'group_ids': [(6, 0, [self.group_user.id])]})
+        self.assertTrue(self._can_see(self.employee_user))
+        self.assertFalse(self._can_see(self.public_user))
+        self.assertFalse(self._can_see(self.portal_user))
 
-    def test_perm_default_all_can_view(self):
-        model = self.menu_model.sudo(self.user_public.id)
-        self.assertIn(
-            self.menu_item,
-            model.search([])
-        )
-        model = self.menu_model.sudo(self.user_logged.id)
-        self.assertIn(
-            self.menu_item,
-            model.search([])
-        )
+    def test_menu_for_external(self):
+        self.menu_item.write({'group_ids': [(6, 0, [self.group_portal.id])]})
+        self.assertFalse(self._can_see(self.employee_user))
+        self.assertFalse(self._can_see(self.public_user))
+        self.assertTrue(self._can_see(self.portal_user))
 
-    def test_perm_public_only_can_view(self):
-        self.menu_item.write({
-            'user_logged': False,
-            'user_not_logged': True,
-        })
-        model = self.menu_model.sudo(self.user_public.id)
-        self.assertIn(
-            self.menu_item,
-            model.search([])
-        )
-        model = self.menu_model.sudo(self.user_logged.id)
-        self.assertNotIn(
-            self.menu_item,
-            model.with_context(foo=1).search([])
-        )
+    def test_menu_for_logged_in_users(self):
+        self.menu_item.write(
+            {'group_ids': [(6, 0, [
+                self.group_portal.id, self.group_user.id])]})
+        self.assertTrue(self._can_see(self.employee_user))
+        self.assertFalse(self._can_see(self.public_user))
+        self.assertTrue(self._can_see(self.portal_user))
 
-    def test_perm_logged_only_can_view(self):
-        self.menu_item.write({
-            'user_logged': True,
-            'user_not_logged': False,
-        })
-        model = self.menu_model.sudo(self.user_public.id)
-        self.assertNotIn(
-            self.menu_item,
-            model.search([])
-        )
-        model = self.menu_model.sudo(self.user_logged.id)
-        self.assertIn(
-            self.menu_item,
-            model.with_context(foo=1).search([])
-        )
+    def test_menu_for_not_logged_in_users(self):
+        self.menu_item.write({'group_ids': [(6, 0, [self.group_public.id])]})
+        self.assertFalse(self._can_see(self.employee_user))
+        self.assertTrue(self._can_see(self.public_user))
+        self.assertFalse(self._can_see(self.portal_user))
+
+    def test_menu_for_all_explicit(self):
+        self.menu_item.write(
+            {'group_ids': [(6, 0, [
+                self.group_portal.id,
+                self.group_user.id,
+                self.group_public.id])]})
+        self.assertTrue(self._can_see(self.employee_user))
+        self.assertTrue(self._can_see(self.public_user))
+        self.assertTrue(self._can_see(self.portal_user))
+
+    def _can_see(self, user):
+        """Check wether user can see the test menu."""
+        menu_model_sudo = self.menu_model.sudo(user.id)
+        can_see = self.menu_item in menu_model_sudo.search([])
+        return can_see

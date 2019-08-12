@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-# Copyright 2017 Simone Orsi
-# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl)
-
+# Copyright 2017 Simone Orsi.
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 {
     'name': 'Website Menu Permission',
     'version': '11.0.1.0.0',
