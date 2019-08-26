@@ -12,6 +12,7 @@
     "license": "AGPL-3",
     "application": False,
     'installable': True,
+    "uninstall_hook": "uninstall_hook",
     "depends": [
         "website_crm",
         'website_form_recaptcha',
