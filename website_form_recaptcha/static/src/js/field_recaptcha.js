@@ -7,6 +7,7 @@ odoo.define('website_form_recaptcha.recaptcha', function (require) {
 
     var ajax = require('web.ajax');
     var snippet_animation = require('website.content.snippets.animation');
+    require("website_form.animation");
     var form_builder_send = snippet_animation.registry.form_builder_send;
 
     snippet_animation.registry.form_builder_send = form_builder_send.extend({
