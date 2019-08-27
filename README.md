@@ -53,7 +53,6 @@ addon | version | summary
 --- | --- | ---
 [website_backend_views](website_backend_views/) | 8.0.1.0.0 (unported) | Hook backend views into your website frontend
 [website_blog_facebook_comment](website_blog_facebook_comment/) | 8.0.1.0.0 (unported) | Add Facebook comments on blog posts
-[website_blog_mgmt](website_blog_mgmt/) | 9.0.1.0.0 (unported) | Website blog Management
 [website_forum_censored](website_forum_censored/) | 9.0.1.0.0 (unported) | Block phrases entered in forum posts and comments.
 [website_hr_department](website_hr_department/) | 8.0.0.1.0 (unported) | Display the structure of your departments and their members.
 [website_menu_by_user_status](website_menu_by_user_status/) | 8.0.1.1.0 (unported) | Allow to manage the display of website.menus
