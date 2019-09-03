@@ -9,31 +9,32 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-07 01:09+0000\n"
-"PO-Revision-Date: 2016-07-07 01:09+0000\n"
-"Last-Translator: danimaribeiro <danimaribeiro@gmail.com>, 2016\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
-"teams/23907/pt_BR/)\n"
+"PO-Revision-Date: 2019-09-03 02:23+0000\n"
+"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/"
+"23907/pt_BR/)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.8\n"
 
 #. module: website_canonical_url
 #: model:ir.model.fields,field_description:website_canonical_url.field_res_config_settings__canonical_domain
 #: model:ir.model.fields,field_description:website_canonical_url.field_website__canonical_domain
 msgid "Canonical Domain"
-msgstr ""
+msgstr "Domínio canônico"
 
 #. module: website_canonical_url
 #: model:website.menu,name:website_canonical_url.canonical_demo_menu
 msgid "Canonical URL demo"
-msgstr ""
+msgstr "Demonstração de URL canônica"
 
 #. module: website_canonical_url
 #: model_terms:ir.ui.view,arch_db:website_canonical_url.res_config_settings_view_form
 msgid "Canonical domain"
-msgstr ""
+msgstr "Domínio aprovado"
 
 #. module: website_canonical_url
 #: model:ir.model.fields,help:website_canonical_url.field_res_config_settings__canonical_domain
@@ -41,23 +42,25 @@ msgstr ""
 msgid ""
 "Canonical domain is used to build unique canonical URLs to make SEO happy."
 msgstr ""
+"O domínio canônico é usado para criar URLs canônicos exclusivos para tornar "
+"o SEO feliz."
 
 #. module: website_canonical_url
 #: code:addons/website_canonical_url/models/website.py:22
 #, python-format
 msgid "Canonical domain must contain protocol `http(s)://`"
-msgstr ""
+msgstr "O domínio canônico deve conter o protocolo `http(s)://`"
 
 #. module: website_canonical_url
 #: model_terms:ir.ui.view,arch_db:website_canonical_url.canonical_demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_canonical_url.canonical_demo_page
 msgid "Check source code to see pager and canonical URL."
-msgstr ""
+msgstr "Verifique o código fonte para ver o pager e o URL canônico."
 
 #. module: website_canonical_url
 #: model:ir.model,name:website_canonical_url.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Ajustes de Configuração"
 
 #. module: website_canonical_url
 #: model:ir.model,name:website_canonical_url.model_website
@@ -68,4 +71,4 @@ msgstr "Website"
 #: model_terms:ir.ui.view,arch_db:website_canonical_url.res_config_settings_view_form
 #: model_terms:ir.ui.view,arch_db:website_canonical_url.view_website_form
 msgid "https://mydomain.com"
-msgstr ""
+msgstr "https://meudomínio.com"
