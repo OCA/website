@@ -22,5 +22,6 @@
     ],
     "data": [
         "templates/blog.xml",
+        "templates/snippets.xml",
     ],
 }
