@@ -5,7 +5,7 @@
     "name": "Blog Post List Excerpt+Image Layout",
     "summary": "New layout for blog posts list, "
                "and autoselect social share image when no cover is selected",
-    "version": "12.0.1.1.0",
+    "version": "12.0.1.2.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Odoo Community Association (OCA), "
