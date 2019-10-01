@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="form_website_menu_permission" model="ir.ui.view">
+        <field name="name">website.menu.form.permission</field>
+        <field name="model">website.menu</field>
+        <field name="field_parent">child_id</field>
+        <field name="arch" type="xml">
+            <form id="form_website_menu" string="Website menu">
+                <group id="group_website_menu_details" colspan="6" col="4">
+                    <field name="website_id" options="{'no_create': True}"/>
+                    <field name="name"/>
+                    <field name="url"/>
+                    <field name="new_window"/>
+                    <field name="parent_id"/>
+                </group>
+                <group id="group_website_menu_groups" colspan="6" col="1">
+                    <label for="group_ids" />
+                    <field name="group_ids" nolabel="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_website_menu_permission" model="ir.actions.act_window">
+        <field name="name">Website Menu</field>
+        <field name="res_model">website.menu</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_my_websites':1}</field>
+    </record>
+
+    <menuitem
+        id="menu_website_menu_permission"
+        name="Website menu's"
+        action="action_website_menu_permission"
+        parent="website.menu_website_global_configuration"
+        sequence="40"
+        groups="base.group_no_one"/>
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <record id="website_menu_access" model="ir.rule">
+    <field name="name">website_menu_permission group access</field>
+    <field name="model_id" ref="model_website_menu"/>
+    <field name="domain_force">['|',('group_ids','in', user.groups_id.ids), ('group_ids','=',False)]</field>
+    <field name="perm_read" eval="True"/>
+    <field name="perm_create" eval="False"/>
+    <field name="perm_write" eval="False"/>
+    <field name="perm_unlink" eval="False"/>
+  </record>
+
+</odoo>
