@@ -28,6 +28,7 @@ setuptools.setup(
         'odoo11-addon-website_logo',
         'odoo11-addon-website_media_size',
         'odoo11-addon-website_menu_by_user_status',
+        'odoo11-addon-website_menu_permission',
         'odoo11-addon-website_multi_theme',
         'odoo11-addon-website_no_crawler',
         'odoo11-addon-website_odoo_debranding',
