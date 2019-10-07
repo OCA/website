@@ -1,5 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
+#	* website_no_crawler
 #
 msgid ""
 msgstr ""
@@ -11,4 +12,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: website_no_crawler
+#: model:ir.ui.view,arch_db:website_no_crawler.robots
+msgid "User-agent: *\n"
+"Disallow: /\n"
+"Sitemap:"
+msgstr ""
+
+#. module: website_no_crawler
+#: model:ir.ui.view,arch_db:website_no_crawler.robots
+msgid "sitemap.xml"
+msgstr ""
 
