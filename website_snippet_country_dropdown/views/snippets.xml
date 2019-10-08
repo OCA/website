@@ -22,6 +22,7 @@
 
 <template id="country_dropdown" name="Country Dropdown">
     <t t-set="default_value" t-value="default_value or ''"/>
+    <t t-set="no_country_field_extra_classes" t-value="no_country_field_extra_classes or ''"/>
     <t t-set="countries" t-value="request.env['res.country'].search([])"/>
     <t t-set="default_country" t-value="default_country or countries.search([('code', '=', default_value[:2])]) or request.env.user.country_id or website.company_id.country_id or countries[:1]"/>
     <div class="input-group js_country_dropdown" t-ignore="true">
@@ -53,7 +54,7 @@
                readonly="1"/>
         <input id="no_country_field"
                type="text"
-               class="form-control js_no_country_field"
+               t-attf-class="form-control js_no_country_field #{no_country_field_extra_classes}"
                name="no_country_field"
                t-att-placeholder="no_country_placeholder"
                t-att-value="default_value[2:] if default_country.code == default_value[:2].upper() else default_value"/>
