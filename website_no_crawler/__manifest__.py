@@ -4,7 +4,7 @@
     'name': 'Alter robots.txt disallow indexing',
     'summary': 'Disables robots.txt for indexing by webcrawlers like Google',
     'license': 'AGPL-3',
-    'version': '12.0.1.0.0',
+    'version': '12.0.1.1.0',
     'website': 'https://github.com/OCA/website',
     'author': "B-Informed B.V.,Odoo Community Association (OCA)",
     'category': 'Website',
