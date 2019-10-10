@@ -6,158 +6,160 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2019-10-10 19:36+0000\n"
+"Last-Translator: Eder Brito <britoederr@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.8\n"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/snippets.js:357
 #, python-format
 msgid "%s help block"
-msgstr ""
+msgstr "%s bloco de ajuda"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-cogs\"/> Change action"
-msgstr ""
+msgstr "<i class=\"fa fa-cogs\"/> Alterar ação"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-eye-slash\"/> Hide field"
-msgstr ""
+msgstr "<i class=\"fa fa-eye-slash\"/> Ocultar campo"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-hand-spock-o\"/> Add custom field"
-msgstr ""
+msgstr "<i class=\"fa fa-hand-spock-o\"/> Add campo personalizado"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-plus\"/> Add model fields"
-msgstr ""
+msgstr "<i class=\"fa fa-plus\"/> Add campos do modelo"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/widgets.js:104
 #, python-format
 msgid "Add Model Fields"
-msgstr ""
+msgstr "Adicionar Campos do Modelo"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/xml/widgets.xml:15
 #, python-format
 msgid "Choose the new field for the form"
-msgstr ""
+msgstr "Escolha o novo campo para o formulário"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/xml/widgets.xml:30
 #, python-format
 msgid "Choose this form's action"
-msgstr ""
+msgstr "Escolha a ação deste formulário"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/snippets.js:350
 #, python-format
 msgid "Custom %s field"
-msgstr ""
+msgstr "Campo %s personalizado"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Date and time"
-msgstr ""
+msgstr "Data e hora"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Decimal number"
-msgstr ""
+msgstr "Número decimal"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "File upload"
-msgstr ""
+msgstr "Carregar arquivo"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/widgets.js:73
 #, python-format
 msgid "Form Settings"
-msgstr ""
+msgstr "Configurações do Formulário"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Long text"
-msgstr ""
+msgstr "Texto longo"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Multiple selection"
-msgstr ""
+msgstr "Seleção múltipla"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/snippets.js:353
 #, python-format
 msgid "Option %d"
-msgstr ""
+msgstr "Opção %d"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/xml/snippets.xml:220
 #, python-format
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Set as required"
-msgstr ""
+msgstr "Definir como obrigatório"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Set default value"
-msgstr ""
+msgstr "Definir valor padrão"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/widgets.js:33
 #, python-format
 msgid "Set field's default value"
-msgstr ""
+msgstr "Definir valor padrão do campo"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Short text"
-msgstr ""
+msgstr "Texto curto"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Single selection"
-msgstr ""
+msgstr "Seleção única"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.view_model_form
 msgid "Website Forms"
-msgstr ""
+msgstr "Formulários do Site"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Whole number"
-msgstr ""
+msgstr "Número inteiro"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Yes or not"
-msgstr ""
+msgstr "Sim ou não"
