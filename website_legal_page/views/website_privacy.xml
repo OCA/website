@@ -3,7 +3,7 @@
 
     <!-- Add privacy policy after copyright and company name -->
     <template id="privacy_policy_link"
-              inherit_id="website.layout_footer_copyright"
+              inherit_id="website.footer_custom"
               name="Privacy policy Link">
         <xpath expr="//footer//div/span[@t-field='res_company.name']" position="after">
             <span class="privacy_policy">-
