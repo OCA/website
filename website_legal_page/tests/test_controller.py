@@ -13,16 +13,16 @@ class TestController(HttpCase):
     @mute_logger("odoo.addons.website.models.ir_ui_view")
     def test_unknown(self):
         """ It should return a 404 for unknown pages. """
-        self._test_page('/legal/no-page', 404)
+        self._test_page("/legal/no-page", 404)
 
     def test_privacy(self):
         """ It should return a 200 for privacy policy page. """
-        self._test_page('/legal/privacy-policy')
+        self._test_page("/legal/privacy-policy")
 
     def test_advice(self):
         """ It should return a 200 for advice page. """
-        self._test_page('/legal/advice')
+        self._test_page("/legal/advice")
 
     def test_tos(self):
         """ It should return a 200 for ToS page. """
-        self._test_page('/legal/terms-of-use')
+        self._test_page("/legal/terms-of-use")
