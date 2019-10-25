@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="product_attachments" inherit_id="website_sale.product" name="product attachments">
-        <xpath expr="//div[@id='product_details']" position="after">
-            <div class="col-sm-5 col-md-5 col-lg-4 col-lg-offset-1" id="product_attachment">
-                <t t-if="attachments">
-                    <hr/>
-                    <span>
-                        <strong> Documents:</strong>
-                    </span>
-                    <br/>
-                    <t t-foreach="attachments" t-as="attachment">
-                        <a t-att-href="'/attachment/download?attachment_id=%i' % attachment.id">
-                            <img style="height:75px; width:75px;"
-                                     src="/website_product_attachments/static/src/img/pdf.svg"
-                                     alt="icon"></img><br></br>
-                            <span t-esc="attachment.name" />
-                            <br></br>
-                        </a>
-                    </t>
+        <xpath expr="//form[@action='/shop/cart/update']" position="after">
+            <t t-if="attachments">
+                <hr/>
+                <span><strong>Related Documents:</strong></span>
+                <br/>
+                <t t-foreach="attachments" t-as="attachment">
+                    <a t-att-href="'/attachment/download?attachment_id=%i' % attachment.id">
+                        <span t-esc="attachment.name" class="fa fa-download"/>
+                    </a>
                 </t>
-            </div>
+            </t>
         </xpath>
     </template>
 </odoo>
