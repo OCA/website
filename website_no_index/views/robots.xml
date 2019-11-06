@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <template id="robots_access">
+<t t-foreach="access_rules" t-as="access_rule">
+<t t-raw="access_rule"/></t>
+        </template>
+
+        <template id="robots">
+User-agent: *
+<t t-call="website_no_index.robots_access"/>
+Sitemap: <t t-esc="url_root"/>sitemap.xml
+        </template>
+    </data>
+</odoo>

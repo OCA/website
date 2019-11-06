@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <template id="no_index_meta_tag" inherit_id="website.layout" name="No index meta tag">
+            <xpath expr="//meta[@name='generator']" position="after">
+                <t t-if="noindex and noindex.should_set_in_meta()">
+                    <meta name="robots" content="noindex"/>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>
