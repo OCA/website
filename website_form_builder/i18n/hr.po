@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2019-11-13 18:34+0000\n"
+"Last-Translator: Bole <bole@dajmi5.com>\n"
 "Language-Team: none\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -14,151 +15,152 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.8\n"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/snippets.js:357
 #, python-format
 msgid "%s help block"
-msgstr ""
+msgstr "%s pomoćni blok"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-cogs\"/> Change action"
-msgstr ""
+msgstr "<i class=\"fa fa-cogs\"/> Promijeni radnju"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-eye-slash\"/> Hide field"
-msgstr ""
+msgstr "<i class=\"fa fa-eye-slash\"/> Sakrij polje"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-hand-spock-o\"/> Add custom field"
-msgstr ""
+msgstr "<i class=\"fa fa-hand-spock-o\"/> Dodaj prilagođeno polje"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "<i class=\"fa fa-plus\"/> Add model fields"
-msgstr ""
+msgstr "<i class=\"fa fa-plus\"/> Dodaj polja modela"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/widgets.js:104
 #, python-format
 msgid "Add Model Fields"
-msgstr ""
+msgstr "Dodaj polja modela"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/xml/widgets.xml:15
 #, python-format
 msgid "Choose the new field for the form"
-msgstr ""
+msgstr "Odaberi novo polje za formu"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/xml/widgets.xml:30
 #, python-format
 msgid "Choose this form's action"
-msgstr ""
+msgstr "Odaberi akciju ove forme"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/snippets.js:350
 #, python-format
 msgid "Custom %s field"
-msgstr ""
+msgstr "Prilagođeno %s polje"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Date and time"
-msgstr ""
+msgstr "Datum i vrijeme"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Decimal number"
-msgstr ""
+msgstr "Decimalni broj"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "File upload"
-msgstr ""
+msgstr "Upload datoteke"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/widgets.js:73
 #, python-format
 msgid "Form Settings"
-msgstr ""
+msgstr "Postavke forme"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Long text"
-msgstr ""
+msgstr "Dugački tekst"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Multiple selection"
-msgstr ""
+msgstr "Višestruki odabir"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/snippets.js:353
 #, python-format
 msgid "Option %d"
-msgstr ""
+msgstr "Opcija %d"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/xml/snippets.xml:220
 #, python-format
 msgid "Send"
-msgstr ""
+msgstr "Poašlji"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Set as required"
-msgstr ""
+msgstr "Postavi za obavezno"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Set default value"
-msgstr ""
+msgstr "Postavi zadanu vrijednost"
 
 #. module: website_form_builder
 #. openerp-web
 #: code:addons/website_form_builder/static/src/js/widgets.js:33
 #, python-format
 msgid "Set field's default value"
-msgstr ""
+msgstr "Postavi zadanu vrijednost polja"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Short text"
-msgstr ""
+msgstr "Kratki tekst"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Single selection"
-msgstr ""
+msgstr "Jednostruki odabir"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.view_model_form
 msgid "Website Forms"
-msgstr ""
+msgstr "Web forme"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Whole number"
-msgstr ""
+msgstr "Cjelobrojno"
 
 #. module: website_form_builder
 #: model_terms:ir.ui.view,arch_db:website_form_builder.snippet_options
 msgid "Yes or not"
-msgstr ""
+msgstr "Da ili ne"
