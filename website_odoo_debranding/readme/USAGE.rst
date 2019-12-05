@@ -1,3 +1,1 @@
-#. Go to your home page.
-#. Enable or disable *Customize > Footer Copyright > Remove Odoo Promotional
-   Link* at your will. It should be enabled by default.
+#.No additional configuration is needed. The legend "Powered by Odoo" from footer is removed automatically.
