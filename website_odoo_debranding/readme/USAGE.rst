@@ -1,3 +1,2 @@
-#. Go to your home page.
-#. Enable or disable *Customize > Footer Copyright > Remove Odoo Promotional
-   Link* at your will. It should be enabled by default.
+By default the option is enabled, so no additional configuration is needed.
+You can always control the visibility in `Website > Customize > Brand Promotion > Remove Odoo Promotional Link`
