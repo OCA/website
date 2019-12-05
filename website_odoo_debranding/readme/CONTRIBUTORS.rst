@@ -2,3 +2,7 @@
 * Vicent Cubells <vicent.cubells@tecnativa.com>
 * Jairo Llopis <jairo.llopis@tecnativa.com>
 * Karan Shah <karan.shah@dreambits.in>
+
+* `Tecnativa <https://www.tecnativa.com>`_:
+
+  * Alexandre Diaz
