@@ -3,9 +3,11 @@
 
 
 def migrate(cr, version):
-    '''Sets the flag for existing installations having an ID set'''
-    cr.execute('''
+    """Sets the flag for existing installations having an ID set"""
+    cr.execute(
+        """
     UPDATE website
         SET has_piwik_analytics=true
         WHERE piwik_analytics_id IS NOT NULL
-    ''')
+    """
+    )

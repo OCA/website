@@ -8,9 +8,7 @@
     "license": "AGPL-3",
     "category": "Website",
     "summary": "Track website users using piwik",
-    "depends": [
-        "website",
-    ],
+    "depends": ["website"],
     "data": [
         "views/website_config_settings.xml",
         "views/website.xml",
