@@ -24,7 +24,12 @@ To configure this module, you need to:
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/186/11.0
+   :target: https://runbot.odoo-community.org/runbot/186/13.0
+
+Known issues / Roadmap
+======================
+
+* Rename module to Matomo instead of Piwik
 
 Bug Tracker
 ===========
@@ -42,6 +47,7 @@ Contributors
 
 * Holger Brunn <hbrunn@therp.nl>
 * Andrea Stirpe <a.stirpe@onestein.nl>
+* Dennis Sluijk <d.sluijk@onestein.nl>
 
 Icon
 ----
