@@ -4,8 +4,8 @@
 odoo.define('website_media_size', function (require) {
     "use strict";
 
-    var web_editor_widget = require('web_editor.widget');
-    var ImageWidget = web_editor_widget.ImageWidget;
+    var MediaModules = require('wysiwyg.widgets.media');
+    var ImageWidget = MediaModules.ImageWidget;
 
     ImageWidget.include({
         xmlDependencies: ImageWidget.prototype.xmlDependencies.concat(
