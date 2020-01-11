@@ -19,6 +19,7 @@ setuptools.setup(
         'odoo12-addon-website_form_builder',
         'odoo12-addon-website_form_recaptcha',
         'odoo12-addon-website_google_tag_manager',
+        'odoo12-addon-website_img_dimension',
         'odoo12-addon-website_js_below_the_fold',
         'odoo12-addon-website_lazy_load_image',
         'odoo12-addon-website_legal_page',
