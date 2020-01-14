@@ -6,7 +6,7 @@
     "summary": "This module initially only shows a preview"
     " of videos instead of directly loading the iframe.",
     "category": "Website",
-    "version": "11.0.1.0.0",
+    "version": "13.0.1.0.0",
     "author": "Onestein, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "website": "https://github.com/OCA/website",
