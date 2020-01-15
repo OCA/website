@@ -25,7 +25,7 @@ class TestCaptcha(TransactionCase):
         mk.post.side_effect = StopIteration
         exp1, exp2 = self.validate_vars
         try:
-            self.model_obj.validate_response(exp1, exp2, website=self.website)
+            self.model_obj._validate_response(exp1, exp2, website=self.website)
         except StopIteration:
             pass
         mk.post.assert_called_once_with(
@@ -39,31 +39,25 @@ class TestCaptcha(TransactionCase):
 
     @mock.patch(imp_requests)
     def test_valid(self, mk):
-        expect = {
-            "success": True,
-        }
+        expect = {"success": True}
         mk.post().json.return_value = expect
         self.assertTrue(
-            self.model_obj.validate_response(*self.validate_vars, website=self.website)
+            self.model_obj._validate_response(*self.validate_vars, website=self.website)
         )
 
     @mock.patch(imp_requests)
     def test_known_error_raises(self, mk):
-        expect = {
-            "error-codes": ["missing-input-secret"],
-        }
+        expect = {"error-codes": ["missing-input-secret"]}
         mk.post().json.return_value = expect
         with self.assertRaises(ValidationError):
-            self.model_obj.validate_response(*self.validate_vars, website=self.website)
+            self.model_obj._validate_response(*self.validate_vars, website=self.website)
 
     @mock.patch(imp_requests)
     def test_known_error_lookup(self, mk):
-        expect = {
-            "error-codes": ["missing-input-secret"],
-        }
+        expect = {"error-codes": ["missing-input-secret"]}
         mk.post().json.return_value = expect
         try:
-            self.model_obj.validate_response(*self.validate_vars, website=self.website)
+            self.model_obj._validate_response(*self.validate_vars, website=self.website)
         except ValidationError as e:
             self.assertEqual(
                 e.name, self.model_obj._get_error_message(expect["error-codes"][0])
@@ -71,37 +65,33 @@ class TestCaptcha(TransactionCase):
 
     @mock.patch(imp_requests)
     def test_unknown_error_lookup(self, mk):
-        expect = {
-            "error-codes": ["derp"],
-        }
+        expect = {"error-codes": ["derp"]}
         mk.post().json.return_value = expect
         try:
-            self.model_obj.validate_response(*self.validate_vars, website=self.website)
+            self.model_obj._validate_response(*self.validate_vars, website=self.website)
         except ValidationError as e:
             self.assertEqual(e.name, self.model_obj._get_error_message())
 
     @mock.patch(imp_requests)
     def test_no_success_raises(self, mk):
-        expect = {
-            "success": False,
-        }
+        expect = {"success": False}
         mk.post().json.return_value = expect
         with self.assertRaises(ValidationError):
-            self.model_obj.validate_response(*self.validate_vars, website=self.website)
+            self.model_obj._validate_response(*self.validate_vars, website=self.website)
 
     def test_validate_request_no_value(self):
         request = object()
         req_values = {}
         with self.assertRaises(ValidationError) as err:
-            self.model_obj.validate_request(request, req_values)
+            self.model_obj._validate_request(request, req_values)
         self.assertEqual(err.exception.name, "The secret parameter is missing.")
 
     def test_validate_request_old_value(self):
         request = mock.MagicMock()
         request.g_recaptcha_response = "all good here"
         req_values = {}
-        with mock.patch.object(type(self.model_obj), "validate_response") as mocked:
-            self.assertTrue(self.model_obj.validate_request(request, req_values))
+        with mock.patch.object(type(self.model_obj), "_validate_response") as mocked:
+            self.assertTrue(self.model_obj._validate_request(request, req_values))
             mocked.assert_not_called()
 
     def test_validate_request_validate_response(self):
@@ -110,8 +100,8 @@ class TestCaptcha(TransactionCase):
         request.g_recaptcha_response = None
         request.httprequest.environ = {}
         request.httprequest.remote_addr = "1.2.3.4"
-        with mock.patch.object(type(self.model_obj), "validate_response") as mocked:
-            self.model_obj.validate_request(
+        with mock.patch.object(type(self.model_obj), "_validate_response") as mocked:
+            self.model_obj._validate_request(
                 request, {self.model_obj.RESPONSE_ATTR: "validate_me"}
             )
             mocked.assert_called_with("validate_me", "1.2.3.4")

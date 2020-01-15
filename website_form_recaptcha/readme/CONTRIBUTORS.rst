@@ -6,3 +6,6 @@
 
   * Cristina Martin R.
   * Jairo Llopis
+  * Alexandre Díaz
+
+* Bjorn Billen <bjorn.billen@dynapps.be>

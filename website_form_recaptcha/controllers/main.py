@@ -21,7 +21,7 @@ class WebsiteForm(WebsiteForm):
     )
     def recaptcha_public(self):
         recaptcha_model = request.env["website.form.recaptcha"].sudo()
-        creds = recaptcha_model._get_api_credentials(request.website,)
+        creds = recaptcha_model._get_api_credentials(request.website)
         return json.dumps({"site_key": creds["site_key"]})
 
     def extract_data(self, model, values):
@@ -29,5 +29,5 @@ class WebsiteForm(WebsiteForm):
         res = super(WebsiteForm, self).extract_data(model, values)
         if model.website_form_recaptcha:
             recaptcha_model = request.env["website.form.recaptcha"].sudo()
-            recaptcha_model.validate_request(request, values)
+            recaptcha_model._validate_request(request, values)
         return res
