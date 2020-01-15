@@ -82,11 +82,13 @@ Contributors
 * Lorenzo Battistini <lorenzo.battistini@agilebg.com>
 * Nicola Malcontenti <nicola.malcontenti@agilebg.com>
 * Nicolas JEUDY <https://github.com/njeudy>
+* Bjorn Billen <bjorn.billen@dynapps.be>
 * `Tecnativa <https://www.tecnativa.com>`_:
 
   * Rafael Blasco
   * Jairo Llopis
   * Ernesto Tejeda
+  * Bjorn Billen
 
 Maintainers
 ~~~~~~~~~~~
