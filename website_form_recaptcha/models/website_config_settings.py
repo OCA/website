@@ -5,24 +5,22 @@ from odoo import api, fields, models
 
 
 class ResConfigSettings(models.TransientModel):
-    _inherit = 'res.config.settings'
+    _inherit = "res.config.settings"
 
     recaptcha_key_site = fields.Char(
-        related='website_id.recaptcha_key_site',
-        readonly=False,
+        related="website_id.recaptcha_key_site", readonly=False
     )
     recaptcha_key_secret = fields.Char(
-        related='website_id.recaptcha_key_secret',
-        readonly=False,
+        related="website_id.recaptcha_key_secret", readonly=False
     )
     has_google_recaptcha = fields.Boolean(
-        'Google reCaptcha',
-        compute='_compute_has_google_recaptcha',
-        inverse='_inverse_has_google_recaptcha',
+        "Google reCaptcha",
+        compute="_compute_has_google_recaptcha",
+        inverse="_inverse_has_google_recaptcha",
         readonly=False,
     )
 
-    @api.depends('website_id')
+    @api.depends("website_id")
     def _compute_has_google_recaptcha(self):
         self.has_google_recaptcha = bool(self.recaptcha_key_site)
 

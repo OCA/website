@@ -5,7 +5,7 @@ from odoo import fields, models
 
 
 class Website(models.Model):
-    _inherit = 'website'
+    _inherit = "website"
 
     recaptcha_key_site = fields.Char()
     recaptcha_key_secret = fields.Char()
