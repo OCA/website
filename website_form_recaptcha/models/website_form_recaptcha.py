@@ -19,6 +19,7 @@ class WebsiteFormRecaptcha(models.AbstractModel):
 
     _name = "website.form.recaptcha"
     _description = "Website Form Recaptcha Validations"
+
     URL = "https://www.google.com/recaptcha/api/siteverify"
     RESPONSE_ATTR = "g-recaptcha-response"
     # name of the token attr to store on the request object
@@ -34,20 +35,20 @@ class WebsiteFormRecaptcha(models.AbstractModel):
                 "The response parameter is invalid or malformed."
             ),
         }
-        return mapping.get(errorcode, _("There was a problem with the captcha entry."))
+        return mapping.get(
+            errorcode, _("There was a problem with " "the captcha entry.")
+        )
 
+    @api.model
     def _get_api_credentials(self, website=None):
         # website override
         website = website or http.request.website
         site_key = website.recaptcha_key_site
         secret_key = website.recaptcha_key_secret
-        return {
-            "site_key": site_key,
-            "secret_key": secret_key,
-        }
+        return {"site_key": site_key, "secret_key": secret_key}
 
     @api.model
-    def validate_response(self, response, remote_ip, website=None):
+    def _validate_response(self, response, remote_ip, website=None):
         """ Validate ReCaptcha Response
         Params:
             response: str The value of 'g-recaptcha-response'.
@@ -81,7 +82,7 @@ class WebsiteFormRecaptcha(models.AbstractModel):
         return True
 
     @api.model
-    def validate_request(self, request, values):
+    def _validate_request(self, request, values):
         old_value = getattr(request, self.REQUEST_TOKEN, None)
         if old_value is not None:
             # Only check once: if a call to reCAPTCHA's API is made twice with
@@ -99,7 +100,7 @@ class WebsiteFormRecaptcha(models.AbstractModel):
         else:
             ip_addr = request.httprequest.remote_addr
         # if not validated an exception is raised anyway
-        validated = self.validate_response(req_value, ip_addr)
+        validated = self._validate_response(req_value, ip_addr)
         # Store reCAPTCHA's token in the current request object
         setattr(request, self.REQUEST_TOKEN, req_value)
         return validated
