@@ -1,0 +1,102 @@
+<odoo>
+    <template id="cookie_message" name="Cookies Notice Message">
+        <span
+        >We use cookies in this website. Read about them in our cookies policy. To disable them, configure your browser properly. If you keep using this website, you are accepting those.</span>
+    </template>
+    <template id="cookie_message_container" name="Cookies Notice Container">
+        <div
+            t-if="request and
+        not request.session.get('accepted_cookies')"
+            id="website_cookie_notice"
+            class="container-fluid cc-cookies alert alert-warning"
+            role="alert"
+        >
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10" id="message">
+                        <a href="/legal#cookie-policy">
+                            <t t-call="website_cookie_notice.cookie_message" />
+                        </a>
+                    </div>
+                    <div class="s_btn text-center col-sm-2" data-name="Button">
+                        <a class="btn btn-primary" href="#">OK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="cookie_banner" inherit_id="website.layout">
+        <xpath expr="//header" position="before">
+            <t t-call="website_cookie_notice.cookie_message_container" />
+        </xpath>
+    </template>
+    <!-- This template is only used to merge it on legal page -->
+    <template id="legal_cookie_policy" name="Technical - Cookie Page" active="False">
+        <div id="add_list">
+            <li>
+                <p>
+                    <a href="#cookie-policy">Cookies Policy</a>
+                </p>
+            </li>
+        </div>
+        <div id="add_content">
+            <section class="s_text_block pt32 pb32" data-name="Text block">
+                <a class="legal_anchor" id="cookie-policy" />
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 pt32 pb32">
+                            <div class="s_hr text-left pt32 pb32" data-name="Separator">
+                                <hr
+                                    class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                />
+                            </div>
+                            <h2 id="whatarecookies">What are cookies?</h2>
+                            <p
+                            >A cookie is a small text file that a website stores on your computer or mobile device when you visit the site.</p>
+                            <ul>
+                                <li><strong
+                                    >First party cookies</strong>&amp;nbsp;are cookies set by the website
+                you’re visiting. Only that website can read them. In addition, a
+                website might potentially use external services, which also set their
+                own cookies, known as <strong>third-party cookies.</strong></li>
+                                <li
+                                >Persistent cookies&amp;nbsp;are cookies saved on your computer and that are
+                not deleted automatically when you quit your browser, unlike a&amp;nbsp;session
+                cookie,&amp;nbsp;which is deleted when you quit your browser.</li>
+                            </ul>
+                            <p
+                            >Every time you visit our websites, you will be prompted to <strong
+                                >accept cookies.</strong></p>
+                            <p
+                            >The purpose is to enable the site to remember your preferences (such as user name, language, etc.) for a certain period of time.</p>
+                            <p
+                            >That way, you don’t have to re-enter them when browsing around the site during the same visit.</p>
+                            <p
+                            >Cookies can also be used to establish anonymised statistics about the browsing experience on our sites.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_text_block pt32 pb32" data-name="Text block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 pt32 pb32">
+                            <h2 id="howdoweusecookies">How do we use cookies?</h2>
+                            <p
+                            >This websites mostly use “first-party cookies”. These are cookies set and controlled by us, not by any external organisation.</p>
+                            <p
+                            >However, to view some of our pages, you will have to accept cookies from external organisations. &amp;nbsp;</p>
+                            <p>The <strong
+                                >3 types of first-party cookie</strong> we use are to:</p>
+                            <ul>
+                                <li>store visitor preferences</li>
+                                <li>make our websites operational</li>
+                                <li>gather analytics data (about user behaviour)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </template>
+</odoo>

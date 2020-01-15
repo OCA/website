@@ -13,5 +13,6 @@
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
     "depends": ["website_legal_page"],
-    "data": ["templates/website.xml"],
+    "data": ["views/assets.xml", "views/website.xml"],
+    "post_init_hook": "post_init_hook",
 }
