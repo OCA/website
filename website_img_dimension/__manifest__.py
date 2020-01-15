@@ -5,7 +5,7 @@
     "summary": "Shows the width and height of images on the website "
     "when hovered upon.",
     "category": "Website",
-    "version": "12.0.1.0.0",
+    "version": "13.0.1.0.0",
     "author": "Onestein, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "website": "https://github.com/oca/website",

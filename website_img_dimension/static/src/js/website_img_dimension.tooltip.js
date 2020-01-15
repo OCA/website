@@ -1,19 +1,16 @@
 odoo.define('website_img_dimension.tooltip', function(require) {
     "use strict";
     var Class = require('web.Class');
-    var web_editor_base = require('web_editor.base');
 
     var TooltipManager = Class.extend({
         init: function() {
             var self = this;
-            web_editor_base.ready().done(function() {
-                $('#wrap').on('mouseenter', 'img', function() {
-                    self.show_tooltip($(this));
-                });
+            $('#wrap').on('mouseenter', 'img', function() {
+                self.show_tooltip($(this));
+            });
 
-                $('#wrap').on('mouseleave', 'img', function() {
-                    self.hide_tooltip($(this));
-                });
+            $('#wrap').on('mouseleave', 'img', function() {
+                self.hide_tooltip($(this));
             });
         },
         get_title: function($img) {
@@ -27,7 +24,7 @@ odoo.define('website_img_dimension.tooltip', function(require) {
             }).tooltip('show');
         },
         hide_tooltip: function($img) {
-            $img.tooltip('destroy');
+            $img.tooltip('dispose');
         }
     });
 
