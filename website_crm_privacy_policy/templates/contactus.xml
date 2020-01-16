@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <!-- Privacy Policy -->
     <template
@@ -6,10 +5,7 @@
         inherit_id="website_crm.contactus_form"
         name="Add privacy policy checkbox"
     >
-        <xpath
-            expr="//form/div/div/span[@id='o_website_form_result']/../.."
-            position="before"
-        >
+        <xpath expr="//form/div/div[hasclass('s_website_form_submit')]" position="before">
             <div class="form-group row form-field o_website_form_required_custom">
                 <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
                     <div class="form-check">
