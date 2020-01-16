@@ -17,8 +17,8 @@
                 <li class="breadcrumb-item" t-if="step.url or step_first">
                     <a t-att-href="step.url or (step_first and '/')">
                         <t t-if="step_first and not step.url">
-                        Home
-                    </t>
+                            Home
+                        </t>
                         <t t-if="not step_first and step.url">
                             <t t-esc="step.name_get()[0][1]" />
                         </t>
