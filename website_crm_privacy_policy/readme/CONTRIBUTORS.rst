@@ -6,3 +6,5 @@
   * Vicent Cubells
   * Jairo Llopis
   * Ernesto Tejeda
+
+* Bjorn Billen <bjorn.billen@dynapps.be>
