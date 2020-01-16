@@ -2,3 +2,5 @@
 
   * Jairo Llopis
   * Cristina Martin R.
+
+* Bjorn Billen <bjorn.billen@dynapps.be>
