@@ -3,7 +3,7 @@
 
 odoo.define('website_snippet_preset', function (require) {
     'use strict';
-    var snippet_editor = require('web_editor.snippet.editor');
+    var editor = require('web_editor.snippet.editor');
     var core = require('web.core');
     var Dialog = require('web.Dialog');
     var qweb = core.qweb;
@@ -70,33 +70,123 @@ odoo.define('website_snippet_preset', function (require) {
             this.trigger('save', this.$('input[name="name"]').val());
         },
     });
-    snippet_editor.Editor.include({
-        xmlDependencies: snippet_editor.Editor
+
+    var ChoiceDialog = Dialog.extend({
+        init: function (parent, snippetName) {
+            this.snippetName = snippetName;
+
+            var options = {
+                title: _t('Choose preset to load...'),
+                $content: $(qweb
+                    .render('website_snippet_preset.ChoiceDialog', {
+                        name: '',
+                    })),
+                buttons: [
+                    {
+                        text: _t("Cancel"),
+                        classes: 'btn-default',
+                        close: true,
+                    },
+                ],
+            };
+            return this._super(parent, options);
+        },
+        start: function () {
+            var res = this._super.apply(this, arguments);
+            this.$list = this.$el.find('.list-group');
+            this.loadPresets().then(function (records) {
+                this.renderPresets(records);
+            }.bind(this));
+            return res;
+        },
+        itemClicked: function (arch) {
+            this.trigger('apply', arch);
+            this.close();
+        },
+        deletePreset: function (id) {
+            var self = this;
+            return this._rpc({
+                model: 'snippet.preset',
+                method: 'unlink',
+                args: [[id]],
+            }).then(function () {
+                self.loadPresets().then(function (records) {
+                    self.renderPresets(records);
+                });
+            });
+        },
+        loadPresets: function () {
+            return this._rpc({
+                model: 'snippet.preset',
+                method: 'search_read',
+                order: 'name asc',
+                domain: [['snippet', '=', this.snippetName]],
+            });
+        },
+        renderPreset: function (record) {
+            var self = this;
+            var $item = $(qweb
+                .render('website_snippet_preset.Item', {'record': record}));
+            $item.data('record', record);
+            $item.click(function () {
+                self.itemClicked($(this).data('record').arch);
+            });
+            $item.find('.badge').click(function (e) {
+                self.deletePreset($(this).closest('.list-group-item').data('record').id);
+                e.stopPropagation();
+            });
+            this.$list.append($item);
+            return $item;
+        },
+        renderPresets: function (records) {
+            this.$list.html('');
+            for (var i in records) {
+                this.renderPreset(records[i]);
+            }
+        },
+    });
+
+    editor.Editor.include({
+        xmlDependencies: editor.Editor
             .prototype.xmlDependencies.concat(
                 [
                     '/website_snippet_preset/static/' +
                     'src/xml/website_snippet_preset.xml',
                 ]
             ),
-        events: _.extend({}, snippet_editor.Editor.prototype.events, {
-            'click .o_snippet_preset_save': 'saveCurrentPreset',
-        }),
-        start: function () {
+        _initializeOptions: function () {
             var res = this._super.apply(this, arguments);
-            this.$preset_menu = this.$('.o_snippet_preset');
-            this.$preset_load_menu = this.$('.o_snippet_preset_load');
-            this.snippet_name = this.$target.data().name;
-            if (!this.snippet_name) {
-                this.$preset_menu.hide();
+            var $optionsSection = _.last(this._customize$Elements);
+            var snippetName = this.$target.data().name;
+
+            var $presetLoad = $optionsSection.find('.o_snippet_preset_load');
+            $presetLoad.data('snippetName', snippetName);
+            $presetLoad.click(this.loadPreset.bind(this));
+
+            var $presetSave = $optionsSection.find('.o_snippet_preset_save');
+            $presetSave.data('snippetName', snippetName);
+            $presetSave.click(this.saveCurrentPreset.bind(this));
+
+            if (!snippetName) {
+                $presetLoad.addClass('d-none');
+                $presetSave.addClass('d-none');
             }
-            this.loadPresets().then(function (records) {
-                this.renderPresets(records);
-            }.bind(this));
             return res;
         },
-        saveCurrentPreset: function () {
+        loadPreset: function (event) {
+            var $target = $(event.target);
+            var snippetName = $target.data('snippetName');
+
+            var self = this;
+            var dialog = new ChoiceDialog(this, snippetName);
+            dialog.on('apply', this, function (arch) {
+                self.applyPreset(arch);
+            });
+            dialog.open();
+        },
+        saveCurrentPreset: function (event) {
             var arch = this.$target[0].outerHTML;
-            var snippet = this.snippet_name;
+            var snippet = $(event.target).data('snippetName');
 
             var self = this;
             var dialog = new EnterNameDialog(this);
@@ -127,18 +217,6 @@ odoo.define('website_snippet_preset', function (require) {
             });
             return get_done.promise();
         },
-        deletePreset: function (id) {
-            var self = this;
-            return this._rpc({
-                model: 'snippet.preset',
-                method: 'unlink',
-                args: [[id]],
-            }).then(function () {
-                self.loadPresets().then(function (records) {
-                    self.renderPresets(records);
-                });
-            });
-        },
         savePreset: function (snippet, name, arch, id) {
             var self = this;
             var save = null;
@@ -155,42 +233,7 @@ odoo.define('website_snippet_preset', function (require) {
                     args: [{arch: arch, name: name, snippet: snippet}],
                 });
             }
-
-            save.then(function () {
-                self.loadPresets().then(function (records) {
-                    self.renderPresets(records);
-                });
-            });
             return save;
-        },
-        loadPresets: function () {
-            return this._rpc({
-                model: 'snippet.preset',
-                method: 'search_read',
-                order: 'name asc',
-                domain: [['snippet', '=', this.snippet_name]],
-            });
-        },
-        renderPreset: function (record) {
-            var self = this;
-            var $item = $(qweb
-                .render('website_snippet_preset.Item', {'record': record}));
-            $item.data('record', record);
-            $item.click(function () {
-                self.applyPreset($(this).data('record').arch);
-            });
-            $item.find('i').click(function (e) {
-                self.deletePreset($(this).closest('li').data('record').id);
-                e.stopPropagation();
-            });
-            this.$preset_load_menu.append($item);
-            return $item;
-        },
-        renderPresets: function (records) {
-            this.$preset_load_menu.html('');
-            for (var i in records) {
-                this.renderPreset(records[i]);
-            }
         },
         applyPreset: function (arch) {
             var $arch = $(arch);
@@ -204,5 +247,6 @@ odoo.define('website_snippet_preset', function (require) {
     return {
         'EnterNameDialog': EnterNameDialog,
         'OverwriteDialog': OverwriteDialog,
+        'ChoiceDialog': ChoiceDialog
     };
 });

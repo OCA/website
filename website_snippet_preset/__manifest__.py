@@ -6,7 +6,7 @@
     "summary": "This module allows the user "
     "to save and restore presets of snippets.",
     "category": "Website",
-    "version": "11.0.1.0.0",
+    "version": "13.0.1.0.0",
     "author": "Onestein, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "website": "https://github.com/OCA/website",

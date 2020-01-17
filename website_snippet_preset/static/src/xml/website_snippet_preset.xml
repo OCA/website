@@ -3,27 +3,20 @@
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 
 <template>
-    <t t-extend="web_editor.snippet_overlay">
-        <t t-jquery=".oe_options" t-operation="append">
-            <div class="o_snippet_preset dropdown btn-group">
-                <a href="#" data-toggle="dropdown" class="btn btn-primary btn-sm" title="Presets">Presets</a>
-                <ul class="dropdown-menu" role="menu">
-                    <li class="o_snippet_preset_save"><a href="#">Save Current</a></li>
-                    <li class="dropdown-submenu">
-                        <a href="#">Load</a>
-                        <ul class="dropdown-menu o_snippet_preset_load">
-
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+    <t t-extend="web_editor.customize_block_options_section">
+        <t t-jquery="we-button-group" t-operation="prepend">
+            <we-button class="fa fa-caret-down o_snippet_preset_load"></we-button>
+            <we-button class="fa fa-save o_snippet_preset_save"></we-button>
         </t>
     </t>
 
     <t t-name="website_snippet_preset.Item">
-        <li>
-            <a href="#"><t t-esc="record.name"/><i class="fa fa-trash-o o_snippet_preset_del"/></a>
-        </li>
+        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <t t-esc="record.name"/>
+            <span class="badge badge-primary badge-pill">
+                <i class="fa fa-fw fa-trash-o"/> Delete
+            </span>
+        </a>
     </t>
 
     <t t-name="website_snippet_preset.EnterNameDialog">
@@ -31,6 +24,13 @@
             <div class="form-group">
                 <label>Name</label>
                 <input type="text" t-attf-value="{{name}}" name="name" class="form-control"/>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="website_snippet_preset.ChoiceDialog">
+        <div>
+            <div class="list-group">
             </div>
         </div>
     </t>
