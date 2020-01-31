@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Snippet options -->
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="//div" position="after">
+            <div data-js="typed_text" data-selector="*:not(:has(*))">
+                <we-button data-toggle-class="typed_text" data-no-preview="true">
+                    Animate Text
+                </we-button>
+                <we-button data-change-typed-text="" data-no-preview="true">
+                    <i class="fa fw-fw fa-keyboard" /> Change Text Animation
+                </we-button>
+            </div>
+        </xpath>
+    </template>
+</odoo>
