@@ -10,7 +10,7 @@
     "author": "LasLabs, Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "installable": True,
-    "depends": ["website_form",],
-    "data": ["views/assets.xml", "views/website_config_settings.xml",],
-    "images": ["static/description/website_form_recaptcha.jpg",],
+    "depends": ["website_form"],
+    "data": ["views/assets.xml", "views/website_config_settings.xml"],
+    "images": ["static/description/website_form_recaptcha.jpg"],
 }

@@ -4,7 +4,7 @@
 
 import json
 
-from odoo import http, SUPERUSER_ID
+from odoo import SUPERUSER_ID, http
 from odoo.http import request
 
 from odoo.addons.website_form.controllers.main import WebsiteForm
@@ -28,6 +28,8 @@ class WebsiteForm(WebsiteForm):
         """ Inject ReCaptcha validation into pre-existing data extraction """
         res = super(WebsiteForm, self).extract_data(model, values)
         if model.website_form_recaptcha:
-            recaptcha_model = request.env["website.form.recaptcha"].with_user(SUPERUSER_ID)
+            recaptcha_model = request.env["website.form.recaptcha"].with_user(
+                SUPERUSER_ID
+            )
             recaptcha_model.validate_request(request, values)
         return res
