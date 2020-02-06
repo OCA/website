@@ -38,6 +38,7 @@ class WebsiteFormRecaptcha(models.AbstractModel):
             errorcode, _("There was a problem with " "the captcha entry.")
         )
 
+    @api.model
     def _get_api_credentials(self, website=None):
         # website override
         website = website or http.request.website
