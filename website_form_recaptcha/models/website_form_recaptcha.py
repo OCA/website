@@ -35,9 +35,7 @@ class WebsiteFormRecaptcha(models.AbstractModel):
                 "The response parameter is invalid or malformed."
             ),
         }
-        return mapping.get(
-            errorcode, _("There was a problem with the captcha entry.")
-        )
+        return mapping.get(errorcode, _("There was a problem with the captcha entry."))
 
     @api.model
     def _get_api_credentials(self, website=None):
