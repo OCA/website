@@ -19,13 +19,14 @@ class WebsiteFormRecaptcha(models.AbstractModel):
 
     _name = "website.form.recaptcha"
     _description = "Website Form Recaptcha Validations"
+
     URL = "https://www.google.com/recaptcha/api/siteverify"
     RESPONSE_ATTR = "g-recaptcha-response"
     # name of the token attr to store on the request object
     REQUEST_TOKEN = RESPONSE_ATTR.replace("-", "_")
 
     @api.model
-    def _get_error_message(self, errorcode=None):
+    def get_error_message(self, errorcode=None):
         mapping = {
             "missing-input-secret": _("The secret parameter is missing."),
             "invalid-input-secret": _("The secret parameter is invalid or malformed."),
@@ -35,9 +36,10 @@ class WebsiteFormRecaptcha(models.AbstractModel):
             ),
         }
         return mapping.get(
-            errorcode, _("There was a problem with " "the captcha entry.")
+            errorcode, _("There was a problem with the captcha entry.")
         )
 
+    @api.model
     def _get_api_credentials(self, website=None):
         # website override
         website = website or http.request.website
@@ -70,13 +72,13 @@ class WebsiteFormRecaptcha(models.AbstractModel):
         res = requests.post(self.URL, data=data).json()
 
         error_msg = "\n".join(
-            self._get_error_message(error) for error in res.get("error-codes", [])
+            self.get_error_message(error) for error in res.get("error-codes", [])
         )
         if error_msg:
             raise ValidationError(error_msg)
 
         if not res.get("success"):
-            raise ValidationError(self._get_error_message())
+            raise ValidationError(self.get_error_message())
         return True
 
     @api.model
@@ -91,7 +93,7 @@ class WebsiteFormRecaptcha(models.AbstractModel):
             return True
         req_value = values.get(self.RESPONSE_ATTR)
         if not req_value:
-            raise ValidationError(self._get_error_message("missing-input-secret"))
+            raise ValidationError(self.get_error_message("missing-input-secret"))
         ip_addr = request.httprequest.environ.get("HTTP_X_FORWARDED_FOR")
         if ip_addr:
             ip_addr = ip_addr.split(",")[0]

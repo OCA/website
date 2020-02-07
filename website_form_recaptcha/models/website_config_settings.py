@@ -22,9 +22,11 @@ class ResConfigSettings(models.TransientModel):
 
     @api.depends("website_id")
     def _compute_has_google_recaptcha(self):
-        self.has_google_recaptcha = bool(self.recaptcha_key_site)
+        for config in self:
+            config.has_google_recaptcha = bool(config.recaptcha_key_site)
 
     def _inverse_has_google_recaptcha(self):
-        if not self.has_google_recaptcha:
-            self.recaptcha_key_site = False
-            self.recaptcha_key_secret = False
+        for config in self:
+            if not config.has_google_recaptcha:
+                config.recaptcha_key_site = False
+                config.recaptcha_key_secret = False
