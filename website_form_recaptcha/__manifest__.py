@@ -3,21 +3,14 @@
 
 {
     "name": "Website Form - ReCaptcha",
-    "summary": 'Provides a ReCaptcha field for Website Forms',
-    "version": "12.0.1.2.2",
+    "summary": "Provides a ReCaptcha field for Website Forms",
+    "version": "13.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "LasLabs, Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    'installable': True,
-    "depends": [
-        "website_form",
-    ],
-    "data": [
-        'views/assets.xml',
-        'views/website_config_settings.xml',
-    ],
-    'images': [
-        'static/description/website_form_recaptcha.jpg',
-    ],
+    "installable": True,
+    "depends": ["website_form"],
+    "data": ["views/assets.xml", "views/website_config_settings.xml"],
+    "images": ["static/description/website_form_recaptcha.jpg"],
 }
