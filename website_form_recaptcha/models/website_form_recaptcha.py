@@ -38,7 +38,7 @@ class WebsiteFormRecaptcha(models.AbstractModel):
         return mapping.get(errorcode, _("There was a problem with the captcha entry."))
 
     @api.model
-    def _get_api_credentials(self, website=None):
+    def get_api_credentials(self, website=None):
         # website override
         website = website or http.request.website
         site_key = website.recaptcha_key_site
@@ -61,7 +61,7 @@ class WebsiteFormRecaptcha(models.AbstractModel):
         # domain_name = request.httprequest.environ.get(
         #     'HTTP_HOST', ''
         # ).split(':')[0]
-        creds = self._get_api_credentials(website=website)
+        creds = self.get_api_credentials(website=website)
         data = {
             "secret": creds["secret_key"],
             "response": response,

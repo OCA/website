@@ -60,7 +60,7 @@ class TestCaptcha(TransactionCase):
             self.model_obj.validate_response(*self.validate_vars, website=self.website)
         except ValidationError as e:
             self.assertEqual(
-                e.name, self.model_obj._get_error_message(expect["error-codes"][0])
+                e.name, self.model_obj.get_error_message(expect["error-codes"][0])
             )
 
     @mock.patch(imp_requests)
@@ -70,7 +70,7 @@ class TestCaptcha(TransactionCase):
         try:
             self.model_obj.validate_response(*self.validate_vars, website=self.website)
         except ValidationError as e:
-            self.assertEqual(e.name, self.model_obj._get_error_message())
+            self.assertEqual(e.name, self.model_obj.get_error_message())
 
     @mock.patch(imp_requests)
     def test_no_success_raises(self, mk):
