@@ -8,16 +8,12 @@ from openupgradelib import openupgrade
 def migrate(env, version):
     """Move global ``ir.config_parameter`` keys to website."""
     ICP = env["ir.config_parameter"]
-    websites = env["website"].search([
-        ("recaptcha_key_site", "=", False),
-        ("recaptcha_key_secret", "=", False),
-    ])
+    websites = env["website"].search(
+        [("recaptcha_key_site", "=", False), ("recaptcha_key_secret", "=", False)]
+    )
     site = ICP.get_param("recaptcha.key.site")
     secret = ICP.get_param("recaptcha.key.secret")
     if site and secret:
-        websites.write({
-            "recaptcha_key_site": site,
-            "recaptcha_key_secret": secret,
-        })
+        websites.write({"recaptcha_key_site": site, "recaptcha_key_secret": secret})
     ICP.set_param("recaptcha.key.site", False)
     ICP.set_param("recaptcha.key.secret", False)

@@ -6,8 +6,9 @@ from odoo import fields, models
 
 class IrModel(models.Model):
     """ Add ReCaptcha attr & validation to IrModel for use in forms """
-    _inherit = 'ir.model'
+
+    _inherit = "ir.model"
     website_form_recaptcha = fields.Boolean(
-        string='Require ReCaptcha',
-        help='Requires successful ReCaptcha for form submission.',
+        string="Require ReCaptcha",
+        help="Requires successful ReCaptcha for form submission.",
     )
