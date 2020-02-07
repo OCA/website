@@ -1,17 +1,33 @@
 <odoo>
-    <template id="loader" inherit_id="website.assets_frontend" name="Cookies script loader">
+    <template
+        id="loader"
+        inherit_id="website.assets_frontend"
+        name="Cookies script loader"
+    >
         <xpath expr=".">
-            <script type="text/javascript" src="/website_cookie_notice/static/src/js/accept_cookies.js"/>
+            <script
+                type="text/javascript"
+                src="/website_cookie_notice/static/src/js/accept_cookies.js"
+            />
         </xpath>
     </template>
     <template id="message" name="Cookies notice">
-        <div t-if="request and
+        <t t-set="cookie_legal_page" t-value="website.cookie_notice_legal_page_id" />
+        <div
+            t-if="request and
         not request.session.get('accepted_cookies')"
-             id="website_cookie_notice"
-             class="container-fluid cc-cookies alert alert-warning" role="alert">
+            id="website_cookie_notice"
+            class="container-fluid cc-cookies alert alert-warning"
+            role="alert"
+        >
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-10">We use cookies in this website. Read about them in our <a href="/legal/privacy-policy" class="alert-link">privacy policy</a>. To disable them, configure your
+                    <div
+                        class="col-sm-10"
+                    >We use cookies in this website. Read about them in our <a
+                            t-att-href="cookie_legal_page and cookie_legal_page.url or '#'"
+                            class="alert-link"
+                        >privacy policy</a>. To disable them, configure your
                         browser properly. If you keep using this website, you are accepting those.
                     </div>
                     <div class="col-sm-2 text-center">
@@ -23,7 +39,7 @@
     </template>
     <template id="cookiebanner" inherit_id="website.layout">
         <xpath expr="//header" position="before">
-            <t t-call="website_cookie_notice.message"/>
+            <t t-call="website_cookie_notice.message" />
         </xpath>
     </template>
 </odoo>
