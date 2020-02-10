@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     'name': 'Website reCAPTCHA Reloaded',
-    'version': '12.0.0.1',
+    'version': '12.0.0.1.0',
     'category': 'Website',
     'depends': ['website'],
     'author': 'Tech Receptives',
