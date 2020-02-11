@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template 
+        id="website_page_security.assets_editor" 
+        inherit_id="website.assets_editor" 
+        name="Website Editor Assets add page security js"
+        >
+        <xpath expr="." position="inside">
+            <script
+                type="text/javascript" 
+                src="/website_page_security/static/src/js/website_set_page_security.js"></script>
+        </xpath>
+    </template>
+
+</odoo>

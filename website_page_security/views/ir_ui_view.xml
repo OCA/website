@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_res_group_extended_info" model="ir.ui.view">
+        <field name="name">res.group.extended.info</field>
+        <field name="inherit_id" ref="base.view_view_form"/>
+        <field name="model">ir.ui.view</field>
+        <field type="xml" name="arch">
+            <field name="name" position="after">
+                <field name="page" invisible="1"/>
+            </field>
+            <xpath  expr="//notebook//page[last()]" position="after">
+                <page string="Website Page Permissions"
+                      attrs="{'invisible': ['|', ('page', '=', 'False'), ('type', '!=' 'qweb')]}">
+                    <field name="page_permission_ids" widget="many2many" />
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- we need to allow read on ALL PAGES. 
+    because then the page access would return a 404
+    security will be handled via code after the page is accessed. -->
+    <record id="global_page_security" model="ir.rule">
+        <field name="name">Global page security just reading</field>
+        <field name="model_id" ref="base.model_ir_ui_view"/>
+        <field name="domain_force">[ '|',
+            ('page_permission_ids', '=', False),
+            ('page_permission_ids', 'in', user.groups_id.ids)]
+        </field>
+        <field name="perm_unlink" eval="False" />
+        <field name="perm_write" eval="False" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_create" eval="False" />
+    </record>
+    <record id="website_publisher_superpowers" model="ir.rule">
+        <field name="name">Website publisher no security applies</field>
+        <field name="model_id" ref="base.model_ir_ui_view"/>
+        <field name="domain_force">[(1, '=', 1),]</field>
+        <field name="groups" eval="[(4,ref('website.group_website_publisher'))]"/>
+        <field name="perm_unlink" eval="True" />
+        <field name="perm_write" eval="True" />
+        <field name="perm_read" eval="True" />
+        <field name="perm_create" eval="True" />
+    </record>
+</odoo>

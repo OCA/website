@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    
+    <template id="InsertSecuritybutton"  
+        name="Insert per-page security button" 
+        inherit_id="website.user_navbar">
+        <xpath expr="//a[@data-action='edit']/parent::li" position="after">
+            <li t-if="ispage">
+                <a 
+                    id="pagesecurity" data-action="set_page_security" href="#"><span class="fa fa-key"/> Set groups for page</a>
+            </li>
+        </xpath>
+    </template>
+
+</odoo>

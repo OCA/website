@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="403_extension"  
+        name="Add feedback on page groups for 403" 
+        inherit_id="website.403">
+        <xpath expr="//h1[1]" position="after" >
+            <t t-if="exception.page">
+                <h1 class="mt32">Insufficient permissions</h1>
+                <p>
+                    User <span> <t t-esc="user.name"/> </span> does not have sufficient
+                    permissions to visualize this page 
+                    <b><t t-esc="exception.page.name"/> </b> 
+                </p>
+                <!-- provide as extra feedback missing groups, but only if they are category roles -->
+                <t t-if="exception.page.page_permission_ids">
+                    <p>To see this page, you must belong to one of these groups:</p>
+                    <ul>
+                        <li t-foreach="exception.page.page_permission_ids" 
+                            t-as="perm">
+                            <span t-esc="perm.name" />
+                        </li>
+                    </ul>
+                </t>
+                <div t-if="request.env.user == request.website.user_id">
+                    <h3>If you have an account please Log in.</h3>
+                    <a t-attf-href='/web/login' class='btn btn-primary'><span>Log In</span></a>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
