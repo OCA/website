@@ -1,4 +1,10 @@
-Website editor can change easily any text of these pages using website builder
+Website editor can change easily any text of these pages using website builder.
+
+If you install this module after 'website_sale', it will be merge the content
+of 'website_sale.terms' into a new page.
+
+This module hard-redirect '/shop/terms' to '/legal'.
+
 
 Disclaimer
 ~~~~~~~~~~
