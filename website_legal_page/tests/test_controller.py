@@ -1,28 +1,29 @@
 # Copyright 2017 LasLabs Inc.
+# Copyright 2020 Tecnativa - Alexandre Díaz
 # License APL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo.tests.common import HttpCase
-from odoo.tools import mute_logger
 
 
 class TestController(HttpCase):
-    def _test_page(self, page, code=200):
-        response = self.url_open(page, timeout=20)
-        self.assertEqual(response.status_code, code)
+    def test_page(self):
+        """ It should return a 200 for legal page. """
+        response = self.url_open("/legal", timeout=20)
+        self.assertEqual(response.status_code, 200)
 
-    @mute_logger("odoo.addons.website.models.ir_ui_view")
-    def test_unknown(self):
-        """ It should return a 404 for unknown pages. """
-        self._test_page("/legal/no-page", 404)
+    def test_controller_redirection(self):
+        """ It should return a 200 for legal page.
+        Can't run a specific test when 'website_sale' is installed because
+        can't know if was be installed before or after 'website_legal_page'.
 
-    def test_privacy(self):
-        """ It should return a 200 for privacy policy page. """
-        self._test_page("/legal/privacy-policy")
-
-    def test_advice(self):
-        """ It should return a 200 for advice page. """
-        self._test_page("/legal/advice")
-
-    def test_tos(self):
-        """ It should return a 200 for ToS page. """
-        self._test_page("/legal/terms-of-use")
+        If you install 'website_legal_page' after install 'website_sale' the
+        module will be merge the 'website_sale.terms' view. But in the other
+        direction this doesn't happens.
+        """
+        response = self.url_open("/shop/terms", timeout=20)
+        self.assertEqual(response.status_code, 200)
+        module_id = self.env.ref("base.module_website_sale")
+        if module_id.state != "installed":
+            self.assertNotIn('href="#terms"', response.text)
+        self.assertIn('id="section_list"', response.text)
+        self.assertIn('id="section_content"', response.text)
