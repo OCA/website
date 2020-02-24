@@ -8,10 +8,9 @@
     "version": "13.0.1.0.0",
     "depends": ["website"],
     "data": [
+        "views/assets.xml",
         "views/reusable_templates.xml",
-        "views/website_legal.xml",
-        "views/website_privacy.xml",
-        "views/website_terms.xml",
+        "views/website_legal_main_page.xml",
     ],
     "author": "Tecnativa, "
     "LasLabs, "
@@ -19,4 +18,5 @@
     "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
+    "post_init_hook": "post_init_hook",
 }

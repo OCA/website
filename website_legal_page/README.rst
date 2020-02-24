@@ -14,22 +14,19 @@ Website Legal Page
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github
-    :target: https://github.com/OCA/website/tree/12.0/website_legal_page
+    :target: https://github.com/OCA/website/tree/13.0/website_legal_page
     :alt: OCA/website
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/website-12-0/website-12-0-website_legal_page
+    :target: https://translation.odoo-community.org/projects/website-13-0/website-13-0-website_legal_page
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/186/12.0
+    :target: https://runbot.odoo-community.org/runbot/186/13.0
     :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
 
-This module was written to provide common legal pages needed in any website:
-
-* **Legal advice**: Website proprietary and disclaimers
-* **Terms of use**: Which services website offers and legal restrictions applied to them
-* **Privacy policy**: Company privacy policy applied to user data collected through the website
+This module was written to provide common legal page needed in any website.
+This legal page must be edited using the website builder.
 
 **Table of contents**
 
@@ -39,7 +36,13 @@ This module was written to provide common legal pages needed in any website:
 Usage
 =====
 
-Website editor can change easily any text of these pages using website builder
+Website editor can change easily any text of these pages using website builder.
+
+If you install this module after 'website_sale', it will be merge the content
+of 'website_sale.terms' into a new page.
+
+This module hard-redirect '/shop/terms' to '/legal'.
+
 
 Disclaimer
 ~~~~~~~~~~
@@ -69,7 +72,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/website/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us smashing it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_legal_page%0Aversion:%2012.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_legal_page%0Aversion:%2013.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -86,14 +89,19 @@ Authors
 Contributors
 ~~~~~~~~~~~~
 
-* Rafael Blasco <rafael.blasco@tecnativa.com>
 * Antonio Espinosa <antonioea@antiun.com>
 * Igor Pastor <igorpg@antiun.com>
-* Jairo Llopis <jairo.llopis@tecnativa.com>
 * Dave Lasley <dave@laslabs.com>
 * Nicola Malcontenti <nicola.malcontenti@agilebg.com>
 * Nicolas JEUDY <https://github.com/njeudy>
 * Lorenzo Battistini <https://github.com/eLBati>
+* Eduardo Magdalena <emagdalena@c2i.es> (C2i Change 2 improve http://www.c2i.es)
+
+* `Tecnativa <https://www.tecnativa.com>`_:
+
+  * Rafael Blasco
+  * Jairo Llopis
+  * Alexandre Diaz
 
 Other credits
 ~~~~~~~~~~~~~
@@ -127,6 +135,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/website <https://github.com/OCA/website/tree/12.0/website_legal_page>`_ project on GitHub.
+This module is part of the `OCA/website <https://github.com/OCA/website/tree/13.0/website_legal_page>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
