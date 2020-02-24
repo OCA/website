@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Add legal terms and conditions page link after copyright and company name -->
+    <template
+        id="legal_page_link"
+        inherit_id="website.footer_custom"
+        name="Legal page Link"
+        customize_show="True"
+    >
+        <xpath expr="//footer//div/span[@t-field='res_company.name']" position="after">
+            <span class="legal_page">-
+                <a href="/legal">Legal Page</a>
+            </span>
+        </xpath>
+    </template>
+    <!-- Main Legal Page Template -->
+    <template id="legal_page" name="Legal Page" priority="30">
+        <t t-call="website.layout">
+            <t t-set="pageName" t-value="'Legal page'" />
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="pt32 pb32" data-name="Title">
+                    <div class="container">
+                        <div class="row s_nb_column_fixed">
+                            <div
+                                class="col-lg-12 s_title pt16 pb16"
+                                style="text-align: center;"
+                            >
+                                <div
+                                    class="s_alert alert-delta clearfix w-100 s_alert_md"
+                                    data-name="Alert"
+                                >
+                                    <i class="fa fa-2x fa-info-circle s_alert_icon" />
+                                    <div class="s_alert_content">
+                                        <p>THIS IS A SAMPLE PAGE! <br
+                                            />Please, edit this page to be valid with your use case.</p>
+                                    </div>
+                                </div>
+                                <h1 class="s_title_default">
+                                    <font
+                                        style="font-size: 42px;"
+                                    >Table of Content</font>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_text_block pt32 pb32" data-name="Text block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 pt32 pb32" id="section_list">
+                                <ul>
+                                    <li>
+                                        <p>
+                                            <a href="#introduction">Introduction</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a
+                                                href="#intellectual-property-rights"
+                                            >Intellectual Property Rights</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#restrictions">Restrictions</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#your_content">Your Content</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#warranties">No warranties</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a
+                                                href="#limitation-liability"
+                                            >Limitation of liability</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a
+                                                href="#indemnification"
+                                            >Indemnification</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#severability">Severability</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a
+                                                href="#variation-terms"
+                                            >Variation of Terms</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#assignment">Assignment</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a
+                                                href="#law-jurisdiction"
+                                            >Governing Law &amp;amp; Jurisdiction</a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div id="section_content">
+                    <!-- Introduction -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="introduction" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Introduction</h2>
+                                    <p>
+                                        These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, **WEBSITE NAME** accessible at **WEBSITE URL**. <br
+                                        />
+                                        These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions. <br
+                                        />
+                                        Minors or people below 18 years old are not allowed to use this Website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Intellectual Property Rights -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="intellectual-property-rights" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Intellectual Property Rights</h2>
+                                    <p>
+                                        Other than the content you own, under these Terms, **COMPANY NAME** and/or its licensors own all the intellectual property rights and materials contained in this Website. <br
+                                        />
+                                        You are granted limited license only for purposes of viewing the material contained on this Website.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Restrictions -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="restrictions" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Restrictions</h2>
+                                    <p
+                                    >You are specifically restricted from all of the following:</p>
+                                    <ul>
+                                        <li>
+                                            <p
+                                            >publishing any Website material in any other media;</p>
+                                        </li>
+                                        <li>
+                                            <p
+                                            >selling, sublicensing and/or otherwise commercializing any Website material;</p>
+                                        </li>
+                                        <li>
+                                            <p
+                                            >publicly performing and/or showing any Website material;</p>
+                                        </li>
+                                        <li>
+                                            <p
+                                            >using this Website in any way that is or may be damaging to this Website;</p>
+                                        </li>
+                                        <li>
+                                            <p
+                                            >using this Website in any way that impacts user access to this Website;</p>
+                                        </li>
+                                        <li>
+                                            <p
+                                            >using this Website contrary to applicable laws and regulations, or in any way may cause harm to the Website, or to any person or business entity;</p>
+                                        </li>
+                                        <li>
+                                            <p
+                                            >engaging in any data mining, data harvesting, data extracting or any other similar activity in relation to this Website;</p>
+                                        </li>
+                                        <li>
+                                            <p
+                                            >using this Website to engage in any advertising or marketing.</p>
+                                        </li>
+                                    </ul>
+                                    <p
+                                    >Certain areas of this Website are restricted from being access by you and **COMPANY NAME** may further restrict access by you to any areas of this Website, at any time, in absolute discretion. Any user ID and password you may have for this Website are confidential and you must maintain confidentiality as well.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Your Content -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="your_content" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Your Content</h2>
+                                    <p>
+                                        In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant **COMPANY NAME** a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media. <br
+                                        />
+                                        Your Content must be your own and must not be invading any third-party's rights. **COMPANY NAME** reserves the right to remove any of Your Content from this Website at any time without notice.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Warranties -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="warranties" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>No warranties</h2>
+                                    <p
+                                    >This Website is provided “as is,” with all faults, and **COMPANY NAME** express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall be interpreted as advising you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Limitation of Liability -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="limitation-liability" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Limitation of liability</h2>
+                                    <p
+                                    >In no event shall **COMPANY NAME**, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract. **COMPANY NAME**, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Indemnification -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="indemnification" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Indemnification</h2>
+                                    <p
+                                    >You hereby indemnify to the fullest extent **COMPANY NAME** from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these Terms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Severability -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="severability" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Severability</h2>
+                                    <p
+                                    >If any provision of these Terms is found to be invalid under any applicable law, such provisions shall be deleted without affecting the remaining provisions herein.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Variation of Terms -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="variation-terms" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Variation of Terms</h2>
+                                    <p
+                                    >**COMPANY NAME** is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Assignment -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="assignment" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Assignment</h2>
+                                    <p
+                                    >The **COMPANY NAME** is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations under these Terms.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Law and Juridisction -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="law-jurisdiction" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                    >
+                                        <hr
+                                            class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Governing Law &amp;amp; Jurisdiction</h2>
+                                    <p
+                                    >These Terms will be governed by and interpreted in accordance with the laws of the State of **COUNTRY**, and you submit to the non-exclusive jurisdiction of the state and federal courts located in **COUNTRY** for the resolution of any disputes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+    <!-- Publish the template on the website -->
+    <record id="legal_page_page" model="website.page">
+        <field name="website_published">True</field>
+        <field name="url">/legal</field>
+        <field name="view_id" ref="legal_page" />
+    </record>
+</odoo>
