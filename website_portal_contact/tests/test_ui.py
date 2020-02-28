@@ -18,7 +18,8 @@ class UICase(HttpCase):
         self.phantom_js(
             url_path="/",
             code="odoo.__DEBUG__.services['web.Tour']"
-                 ".run('website_portal_contact', 'test', 'events')",
+            ".run('website_portal_contact', 'test', 'events')",
             ready="odoo.__DEBUG__.services['web.Tour']"
-                  ".tours.website_portal_contact",
-            login="demo")
+            ".tours.website_portal_contact",
+            login="demo",
+        )

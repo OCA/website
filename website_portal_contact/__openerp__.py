@@ -11,9 +11,7 @@
     "license": "LGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "website_portal_v10",
-    ],
+    "depends": ["website_portal_v10",],
     "data": [
         "security/ir.model.access.csv",
         "security/ir.rule.csv",
