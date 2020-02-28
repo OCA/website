@@ -5,9 +5,13 @@
 <odoo>
 
 <template id="portal_my_contacts" name="My Contacts">
-    <t t-call="website_portal_v10.portal_layout">
+    <t t-call="portal.portal_layout">
+        <t t-set="breadcrumbs_searchbar" t-value="True"/>
         <t name="placeholder1"/>
-        <h3 class="page-header">Your Contacts</h3>
+        <h3 class="page-header">
+            Your Contacts
+            <t t-call="portal.portal_searchbar"/>
+        </h3>
         <t name="placeholder2"/>
         <t t-if="not contacts">
             <p>No contacts found.</p>
