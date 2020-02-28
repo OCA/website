@@ -11,7 +11,8 @@
     "application": False,
     'installable': True,
     "depends": [
-        "website_portal_v10",
+        "portal",
+        "website"
     ],
     "data": [
         "security/ir.model.access.csv",
