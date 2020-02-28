@@ -1,15 +1,14 @@
-# -*- coding: utf-8 -*-
 # Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 import logging
 
-from openerp import _
-from openerp.addons.website_portal_v10.controllers.main import (
+from odoo import _
+from odoo.addons.website_portal_v10.controllers.main import (
     WebsiteAccount as PortalController,
 )
-from openerp.exceptions import ValidationError
-from openerp.http import local_redirect, request, route
+from odoo.exceptions import ValidationError
+from odoo.http import local_redirect, request, route
 
 _logger = logging.getLogger(__name__)
 
