@@ -1,0 +1,108 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_portal_contact
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2016
+# leemannd <denis.leemann@camptocamp.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-24 04:17+0000\n"
+"PO-Revision-Date: 2016-12-24 04:17+0000\n"
+"Last-Translator: leemannd <denis.leemann@camptocamp.com>, 2016\n"
+"Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+msgid "Add Contact"
+msgstr "Ajouter un contact"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.tree_actions
+msgid "Add new contact"
+msgstr "Ajouter un nouveau contact"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_menu_contacts
+msgid "Contacts"
+msgstr "Contacts"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
+#: model:ir.ui.view,arch_db:website_portal_contact.form_actions
+msgid "Delete"
+msgstr "Supprimer"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+msgid "Edit Contact"
+msgstr "Editer un contact"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
+msgid "Email"
+msgstr "Courriel"
+
+#. module: website_portal_contact
+#: code:addons/website_portal_contact/controllers/main.py:89
+#, python-format
+msgid "Fields not available: %s"
+msgstr "Champs pas disponible: %s"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
+msgid "Mobile"
+msgstr "Portable"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
+msgid "My Contacts"
+msgstr "Mes contacts"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
+msgid "Name"
+msgstr "Nom"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
+msgid "New Contact"
+msgstr "Nouveau contact"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
+msgid "No contacts found."
+msgstr "Pas de contacts trouvés."
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+msgid "Save"
+msgstr "Sauvegarder"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.search
+msgid "Search"
+msgstr "Chercher"
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.search
+msgid "Search..."
+msgstr "Rechercher..."
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
+msgid "There are currently no contacts for your account."
+msgstr "Il n'y a pas de contacts dans votre compte."
+
+#. module: website_portal_contact
+#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
+#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
+msgid "Your Contacts"
+msgstr "Vos contacts"
