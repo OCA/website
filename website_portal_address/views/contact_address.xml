@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="website_portal_contact.form_field" name="Portal Contact Form Field">
+        <t t-if="field_name not in ['type','street','street2','city','zip','country_id','state_id']">
+        <t t-set="field_description"
+           t-value="contact._fields[field_name].get_description(request.env)"/>
+        <div class="form-group">
+            <label t-att-for="field_name" class="col-sm-3">
+                <t t-esc="field_description['string']"/>
+            </label>
+            <div class="col-sm-9">
+                <input
+                    t-att-id="field_name"
+                    t-att-name="field_name"
+                    t-att-type="'email' if field_name == 'email' else 'select' if field_name in ('country_id', 'state_id') else ('tel' if field_name in ('phone', 'mobile') else 'text')"
+                    t-att-required="field_description['required'] and 'required'"
+                    t-att-title="field_description['help'] or False"
+                    t-att-value="contact[field_name]"
+                    class="form-control"/>
+            </div>
+        </div>
+        </t>
+    </template>
+
+    <template id="contact_address_type"
+              inherit_id="website_portal_contact.contacts_followup"
+              name="Portal Contact Address Form">
+        <xpath expr="//input[@name='csrf_token']">
+            <div class="col-md-12 form-group">
+                <label class="col-sm-3"></label>
+                <div class="col-sm-9">
+                    <label class="radio-inline">
+                        <input type="radio" id="radio212_contact" 
+                               t-att-checked='"checked" if contact["type"] == "contact" else None'
+                               name="type" value="contact" checked="checked"/>Contact
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="radio212_invoice"
+                               t-att-checked='"checked" if contact["type"] == "invoice" else None'
+                               name="type" value="invoice"/>Invoice address
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="radio212_delivery"
+                               t-att-checked='"checked" if contact["type"] == "delivery" else None'
+                               name="type" value="delivery"/>Shipping address
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="radio212_other" 
+                               t-att-checked='"checked" if contact["type"] == "other" else None'
+                               name="type" value="other"/>Other address
+                    </label>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//section[@class='row o_submit']" position="before">
+            <div class="contact_address_website hidden">
+            <div class="form-group">
+                 <label for="address" class="col-sm-3">
+                     Address
+                 </label>
+                 <div class="col-sm-5">
+                     <input id="street" name="street" type="text"
+                            t-att-value='contact["street"]' class="form-control"
+                            placeholder="Street..."/>
+                 </div>
+                 <div class="col-sm-4">
+                     <input id="street2" name="street2" type="text"
+                            t-att-value='contact["street2"]' class="form-control"
+                            placeholder="Street2..."/>
+                 </div>
+             </div>
+             <div class="form-group">
+                 <label for="address" class="col-sm-3"/>
+                 <div class="col-sm-5">
+                     <input id="city" name="city" type="text"
+                            t-att-value='contact["city"]' class="form-control"
+                            placeholder="city..."/>
+                 </div>
+                 <div class="col-sm-4">
+                     <input id="zip" name="zip" type="text"
+                            t-att-value='contact["zip"]' class="form-control"
+                            placeholder="zip..."/>
+                 </div>
+             </div>
+             <div class="form-group">
+                 <label for="address" class="col-sm-3"/>
+                 <div class="col-sm-5">
+                    <select placeholder="State" name="state_id" class="form-control">
+                        <option value="">State...</option>
+                        <t t-foreach="state_id or []" t-as="state">
+                            <option t-att-value="state.id"
+                                    t-att-selected='"selected" if state.id == contact["state_id"]["id"] else ""'>
+                                <t t-esc="state.name"/>
+                            </option>
+                        </t>
+                    </select>
+                 </div>
+                 <div class="col-sm-4">
+                    <select placeholder="Country" name="country_id" class="form-control">
+                        <option value="">Country...</option>
+                        <t t-foreach="country_id or []" t-as="country">
+                            <option t-att-value="country.id"
+                                    t-att-selected='"selected" if country.id == contact["country_id"]["id"] else ""'>
+                                <t t-esc="country.name"/>
+                            </option>
+                        </t>
+                    </select>
+                 </div>
+             </div>
+             </div>
+        </xpath>
+    </template>
+
+</odoo>
