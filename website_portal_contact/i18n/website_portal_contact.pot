@@ -4,8 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-07 20:29+0000\n"
+"PO-Revision-Date: 2020-03-07 20:29+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,90 +16,96 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_followup
 msgid "Add Contact"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.tree_actions
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.tree_actions
 msgid "Add new contact"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_menu_contacts
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_layout
 msgid "Contacts"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
-#: model:ir.ui.view,arch_db:website_portal_contact.form_actions
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form_actions
 msgid "Delete"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_followup
 msgid "Edit Contact"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
 msgid "Email"
 msgstr ""
 
 #. module: website_portal_contact
-#: code:addons/website_portal_contact/controllers/main.py:89
+#: code:addons/addons/website/website_portal_contact/controllers/main.py:118
+#: code:addons/website_portal_contact/controllers/main.py:118
 #, python-format
 msgid "Fields not available: %s"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
 msgid "Mobile"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
 msgid "My Contacts"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.contacts_table
+#: code:addons/addons/website/website_portal_contact/controllers/main.py:56
+#: code:addons/website_portal_contact/controllers/main.py:56
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
+#, python-format
 msgid "Name"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
 msgid "New Contact"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
+#: code:addons/addons/website/website_portal_contact/controllers/main.py:55
+#: code:addons/website_portal_contact/controllers/main.py:55
+#, python-format
+msgid "Newest"
+msgstr ""
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
 msgid "No contacts found."
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_followup
 msgid "Save"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.search
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.search
 msgid "Search"
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.search
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.search
 msgid "Search..."
 msgstr ""
 
 #. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
-msgid "There are currently no contacts for your account."
-msgstr ""
-
-#. module: website_portal_contact
-#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
-#: model:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
 msgid "Your Contacts"
 msgstr ""
 

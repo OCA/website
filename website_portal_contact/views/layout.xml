@@ -4,36 +4,30 @@
 
 <odoo>
 
-<template id="portal_my_home_menu_contacts"
-          name="Portal layout: contacts menu entries"
-          inherit_id="website_portal_v10.portal_layout">
-    <xpath expr="//ul[contains(@class,'o_portal_submenu')]">
-        <li>
-            <a href="/my/contacts">Contacts</a>
-        </li>
-    </xpath>
-</template>
+    <template id="portal_layout" name="Portal layout: contact menu entry" inherit_id="portal.portal_breadcrumbs"
+              priority="50">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'contact' or contact"
+                t-attf-class="breadcrumb-item #{'active ' if not contact else ''}">
+                <a t-if="contact" t-attf-href="/my/contacts?{{ keep_query() }}">Contacts</a>
+                <t t-else="">Contacts</t>
+            </li>
+            <li t-if="contact" class="breadcrumb-item active">
+                <t t-esc="contact.name"/>
+            </li>
+        </xpath>
+    </template>
 
-<template id="portal_my_home_contacts"
-          name="Portal My Home: contacts entries"
-          inherit_id="website_portal_v10.portal_my_home">
-    <xpath expr="//div[contains(@class,'o_my_home_content')]">
-        <h3 class="page-header">
-            <a href="/my/contacts">
-                Your Contacts
-                <small class="ml8">
-                    <t t-if="contact_count">
-                        <span class='badge'>
-                            <t t-esc="contact_count"/>
-                        </span>
-                    </t>
-                    <t t-if="not contact_count">
-                        There are currently no contacts for your account.
-                    </t>
-                </small>
-            </a>
-        </h3>
-    </xpath>
-</template>
+    <template id="portal_my_home_contacts"
+              name="Portal My Home: contacts entries"
+              inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Your Contacts</t>
+                <t t-set="url" t-value="'/my/contacts'"/>
+                <t t-set="count" t-value="contact_count"/>
+            </t>
+        </xpath>
+    </template>
 
 </odoo>
