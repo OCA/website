@@ -4,21 +4,21 @@
 import logging
 
 from odoo import _
-from odoo.addons.website_portal_v10.controllers.main import (
-    WebsiteAccount as PortalController,
-)
+from odoo.addons.portal.controllers.portal import CustomerPortal
 from odoo.exceptions import ValidationError
 from odoo.http import local_redirect, request, route
 
 _logger = logging.getLogger(__name__)
 
 
-class WebsiteAccount(PortalController):
+class WebsiteAccount(CustomerPortal):
     def _contacts_domain(self, search=""):
         """Get user's contacts domain."""
-        domain = request.env.ref(
-            "website_portal_contact.rule_edit_own_contacts"
-        ).domain
+        # domain = request.env.ref(
+        #     "website_portal_contact.rule_edit_own_contacts"
+        # ).domain_force
+        # TODO manage permission, permit to show own contacts
+        domain = []
 
         # To edit yourself you have /my/account
         domain += [("id", "!=", request.env.user.partner_id.id)]
@@ -35,13 +35,29 @@ class WebsiteAccount(PortalController):
 
         return domain
 
+    def _prepare_portal_layout_values(self, contact=None):
+        values = super(WebsiteAccount, self)._prepare_portal_layout_values()
+        partner_counts = request.env["res.partner"].search_count(
+            self._contacts_domain()
+        )
+        values['contact_count'] = partner_counts
+        return values
+
     def _prepare_contacts_values(
-        self, page=1, date_begin=None, date_end=None, search=""
+        self, page=1, date_begin=None, date_end=None, search="", sortby=None
     ):
         """Prepare the rendering context for the contacts list."""
         values = self._prepare_portal_layout_values()
         Partner = request.env["res.partner"]
         base_url = "/my/contacts"
+
+        searchbar_sortings = {
+            'date': {'label': _('Newest'), 'order': 'create_date desc'},
+            'name': {'label': _('Name'), 'order': 'name'},
+        }
+        if not sortby:
+            sortby = 'date'
+        order = searchbar_sortings[sortby]['order']
 
         # Get the required domains
         domain = self._contacts_domain(search)
@@ -56,7 +72,7 @@ class WebsiteAccount(PortalController):
         # Make pager
         pager = request.website.pager(
             url=base_url,
-            url_args={"date_begin": date_begin, "date_end": date_end},
+            url_args={"date_begin": date_begin, "date_end": date_end, "sortby": sortby},
             total=Partner.search_count(domain),
             page=page,
             step=self._items_per_page,
@@ -64,17 +80,22 @@ class WebsiteAccount(PortalController):
 
         # Current records to display
         contacts = Partner.search(
-            domain, limit=self._items_per_page, offset=pager["offset"]
+            domain, order=order, limit=self._items_per_page, offset=pager["offset"]
         )
+        request.session['my_contacts_history'] = contacts.ids[:100]
 
         values.update(
             {
                 "date": date_begin,
+                "date_end": date_end,
                 "contacts": contacts,
+                "page_name": 'contact',
                 "pager": pager,
                 "archive_groups": archive_groups,
                 "default_url": base_url,
                 "search": search,
+                'searchbar_sortings': searchbar_sortings,
+                'sortby': sortby
             }
         )
 
@@ -99,38 +120,26 @@ class WebsiteAccount(PortalController):
 
     def _contacts_clean_values(self, values):
         """Set values to a write-compatible format"""
-        result = {k: v or False for k, v in values.iteritems()}
+        result = {k: v or False for k, v in values.items()}
         result.setdefault("type", "contact")
         result.setdefault(
             "parent_id", request.env.user.commercial_partner_id.id
         )
         return result
 
-    @route()
-    def account(self, *args, **kwargs):
-        result = super(WebsiteAccount, self).account(*args, **kwargs)
-        result.qcontext.update(
-            {
-                "contact_count": request.env["res.partner"].search_count(
-                    self._contacts_domain()
-                )
-            }
-        )
-        return result
-
     @route(
         ["/my/contacts", "/my/contacts/page/<int:page>"],
+        type="http",
         auth="user",
         website=True,
     )
     def portal_my_contacts(
-        self, page=1, date_begin=None, date_end=None, search=""
+        self, page=1, date_begin=None, date_end=None, sortby=None, search="", **kw
     ):
         """List all of your contacts."""
-        return request.website.render(
-            "website_portal_contact.portal_my_contacts",
-            self._prepare_contacts_values(page, date_begin, date_end, search),
-        )
+        values = self._prepare_contacts_values(page, date_begin, date_end, search,
+                                               sortby)
+        return request.render("website_portal_contact.portal_my_contacts", values)
 
     @route("/my/contacts/new", auth="user", website=True)
     def portal_my_contacts_new(self):
@@ -146,18 +155,27 @@ class WebsiteAccount(PortalController):
         contact = request.env["res.partner"].create(values)
         return local_redirect(redirect.format(contact.id))
 
+    def _contact_get_page_view_values(self, contact, access_token, **kwargs):
+        values = {
+            "contact": contact,
+            "fields": self._contacts_fields(),
+            'page_name': 'contact',
+            'user': request.env.user
+        }
+
+        return self._get_page_view_values(contact, access_token, values,
+                                          'my_contact_history', False, **kwargs)
+
     @route(
-        "/my/contacts/<model('res.partner'):contact>",
+        ["/my/contacts/<model('res.partner'):contact>"],
+        type="http",
         auth="user",
         website=True,
     )
-    def portal_my_contacts_read(self, contact):
+    def portal_my_contacts_read(self, contact, access_token=None, **kw):
         """Read a contact form."""
-        values = self._prepare_portal_layout_values()
-        values.update(
-            {"contact": contact, "fields": self._contacts_fields(),}
-        )
-        return request.website.render(
+        values = self._contact_get_page_view_values(contact, access_token, **kw)
+        return request.render(
             "website_portal_contact.contacts_followup", values
         )
 
