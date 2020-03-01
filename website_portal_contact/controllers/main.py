@@ -118,13 +118,14 @@ class WebsiteAccount(CustomerPortal):
                 _("Fields not available: %s") % ", ".join(disallowed)
             )
 
-    def _contacts_clean_values(self, values):
+    def _contacts_clean_values(self, values, contact=False):
         """Set values to a write-compatible format"""
         result = {k: v or False for k, v in values.items()}
         result.setdefault("type", "contact")
-        result.setdefault(
-            "parent_id", request.env.user.commercial_partner_id.id
-        )
+        if not contact or contact.id != request.env.user.commercial_partner_id.id:
+            result.setdefault(
+                "parent_id", request.env.user.commercial_partner_id.id
+            )
         return result
 
     @route(
@@ -189,7 +190,7 @@ class WebsiteAccount(CustomerPortal):
     ):
         """Update a contact."""
         self._contacts_fields_check(kwargs.keys())
-        values = self._contacts_clean_values(kwargs)
+        values = self._contacts_clean_values(kwargs, contact=contact)
         _logger.debug("Updating %r with: %s", contact, values)
         contact.write(values)
         return local_redirect(redirect.format(contact.id))
