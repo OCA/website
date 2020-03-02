@@ -3,7 +3,7 @@
 {
     "name": "Remove Odoo Branding from Website",
     "version": "13.0.1.0.0",
-    "author": "Tecnativa, " "Odoo Community Association (OCA)",
+    "author": "Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "LGPL-3",
     "category": "Website",
