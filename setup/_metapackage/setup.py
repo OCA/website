@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo13-addon-website_google_tag_manager',
+        'odoo13-addon-website_video_preview',
     ],
     classifiers=[
         'Programming Language :: Python',
