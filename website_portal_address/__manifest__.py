@@ -10,7 +10,9 @@
                 Odoo Community Association (OCA)""",
     "website": "http://www.serpentcs.com",
     "license": "AGPL-3",
-    "depends": ["website_portal_contact",],
+    "depends": [
+        "website_portal_contact",
+    ],
     "data": [
         "security/ir.rule.csv",
         "views/assets.xml",

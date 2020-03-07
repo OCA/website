@@ -23,7 +23,7 @@ class WebsiteAccount(PortalController):
                 "fields": self._contacts_fields(),
             }
         )
-        return request.website.render(
+        return request.render(
             "website_portal_contact.contacts_followup", values
         )
 
