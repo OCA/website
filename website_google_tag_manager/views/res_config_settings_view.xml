@@ -3,7 +3,6 @@
      Copyright 2018 Tecnativa - Cristina Martin R.
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-
     <record id="view_website_config_settings" model="ir.ui.view">
         <field name="name">Google Tag Manager</field>
         <field name="model">res.config.settings</field>
@@ -39,7 +38,6 @@
                                 />
                             </div>
                         </div>
-
                         <div>
                             <a
                                 href="https://support.google.com/tagmanager/answer/6103696#install?hl=en"
@@ -54,5 +52,4 @@
             </div>
         </field>
     </record>
-
 </odoo>
