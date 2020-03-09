@@ -87,7 +87,7 @@
                 <div class="form-group">
                     <div class="col-sm-5">
                         <label class="col-form-label" for="country_id">Country</label>
-                        <select placeholder="Country" name="country_id"
+                        <select placeholder="Country" name="country_id" id="country_id"
                                 class="form-control">
                             <option value="">Country...</option>
                             <t t-foreach="country_id or []" t-as="country">
@@ -101,12 +101,13 @@
                     <div class="col-sm-5">
                         <label class="col-form-label" for="state_id">State / Province
                         </label>
-                        <select placeholder="State" name="state_id"
+                        <select placeholder="State" name="state_id" id="state_id"
                                 class="form-control">
                             <option value="">State...</option>
                             <t t-foreach="state_id or []" t-as="state">
-                                <option t-att-value="state.id"
-                                        t-att-selected='state.id == contact["state_id"]["id"]'>
+                                <option
+                                    t-att-value="'%s-%s' % (state.country_id.id, state.id)"
+                                    t-att-selected='state.id == contact["state_id"]["id"]'>
                                     <t t-esc="state.name"/>
                                 </option>
                             </t>
