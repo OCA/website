@@ -117,8 +117,51 @@ odoo.define("website_form_builder.tour", function (require) {
                     '[data-add_custom_field="selection-radio"]>a',
             },
             {
-                run: hide_submenus,
                 trigger: ".form-field-selection-radio",
+            },
+            // Add a custom text input
+            {
+                trigger:
+                    ".oe_overlay_options:visible .btn:contains('Customize')",
+            },
+            {
+                trigger:
+                    '.oe_overlay_options:visible [data-add_custom_field="char"]>a',
+            },
+            // Make it required
+            {
+                trigger: ".form-field-char[data-optional='true']",
+            },
+            {
+                trigger:
+                    ".oe_overlay_options:visible .btn:contains('Customize')",
+            },
+            {
+                trigger: ".oe_overlay_options:visible [data-toggle-class='o_required']>a",
+            },
+            // Make it hidden
+            {
+                run: hide_submenus,
+                trigger: ".form-field-char.o_required[data-optional='true'] input[required]",
+            },
+            {
+                trigger:
+                    ".oe_overlay_options:visible .btn:contains('Customize')",
+            },
+            {
+                trigger: ".oe_overlay_options:visible a:contains('Hide field')",
+            },
+            // Hiding a required field asks user for a default value; fill it
+            {
+                run: "text my default",
+                trigger: ".modal-dialog .o_website_form_input",
+            },
+            {
+                trigger: ".modal-dialog .o_save_button",
+            },
+            // Remove the custom text field
+            {
+                trigger: ".form-field-char.o_required.css_non_editable_mode_hidden[data-optional='true'] input[required][value='my default']",
             },
             {
                 trigger:

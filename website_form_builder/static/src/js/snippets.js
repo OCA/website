@@ -99,10 +99,10 @@ odoo.define('website_form_builder.snippets', function (require) {
                 .children("span").prop("contentEditable", true);
         },
 
-        toggleClass: function (type, value) {
+        toggleClass: function (previewMode, value, $li) {
             this._super.apply(this, arguments);
             // Toggle field required attribute to match the container class
-            if (type === "reset" || value === "o_required") {
+            if (previewMode === "reset" || value === "o_required") {
                 this.$inputs.attr(
                     "required",
                     this.$target.hasClass("o_required")
@@ -110,7 +110,7 @@ odoo.define('website_form_builder.snippets', function (require) {
             }
             // Ask for a default value if hiding a field without it
             if (
-                type === "click" &&
+                previewMode === false &&
                 value === "css_non_editable_mode_hidden" &&
                 this.$target.hasClass(value) &&
                 // Query to know if there's a default value
@@ -122,18 +122,18 @@ odoo.define('website_form_builder.snippets', function (require) {
                     "input[value][value!=''],textarea:parent"
                 ).length
             ) {
-                this.ask_default_value(type);
+                this.ask_default_value(previewMode);
             }
         },
 
         /**
          * Prompt the user for a default value for this field.
          *
-         * @param {String} type Event type
+         * @param {String} previewMode Is it in preview mode?
          * @returns {Dialog} Opened dialog
          */
-        ask_default_value: function (type) {
-            if (type === "reset") {
+        ask_default_value: function (previewMode) {
+            if (previewMode === "reset") {
                 // Nothing to reset here
                 return;
             }
