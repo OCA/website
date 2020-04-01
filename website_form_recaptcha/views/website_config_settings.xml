@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2018 Simone Orsi - Camptocamp SA
+    Copyright 2019 Tecnativa - Cristina Martin R.
+    License AGPL-3 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+    <record id="view_website_config_settings" model="ir.ui.view">
+        <field name="name">reCaptcha Settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="google_maps_setting" position="after">
+                <div class="col-xs-12 col-md-6 o_setting_box" id="reCaptcha_setting">
+                    <div class="o_setting_left_pane">
+                        <field name="has_google_recaptcha" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <img
+                            width="20px"
+                            alt="captcha"
+                            class="mr-2"
+                            src="website_form_recaptcha/static/description/recaptcha_ico.png"
+                        />
+                        <label for="has_google_recaptcha" string="reCaptcha" />
+                        <span
+                            class="fa fa-lg fa-globe"
+                            title="Values set here are website-specific."
+                            groups="website.group_multi_website"
+                        />
+                        <div class="text-muted mt8">
+                           Protect your forms using reCaptcha control.
+                        </div>
+                        <div
+                            class="content-group"
+                            attrs="{'invisible': [('has_google_recaptcha', '=', False)]}"
+                        >
+                            <div class="row mt16">
+                                <label
+                                    class="col-lg-5 o_light_label"
+                                    for="recaptcha_key_site"
+                                />
+                                <field name="recaptcha_key_site" placeholder="XXXXX" />
+                                <label
+                                    class="col-lg-5 o_light_label"
+                                    for="recaptcha_key_secret"
+                                />
+                                <field
+                                    name="recaptcha_key_secret"
+                                    placeholder="XXXXX"
+                                />
+                            </div>
+                        </div>
+                        <div
+                            attrs="{'invisible': [('has_google_recaptcha', '=', False)]}"
+                            class="mt8"
+                        >
+                            <a
+                                role="button"
+                                class="btn-link"
+                                target="_blank"
+                                href="http://www.google.com/recaptcha/admin"
+                            ><i class="fa fa-arrow-right" />
+                            How to get my reCaptcha Key
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>
