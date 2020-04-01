@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-website Odoo addons",
     version=version,
     install_requires=[
+        'odoo13-addon-website_form_recaptcha',
         'odoo13-addon-website_google_tag_manager',
         'odoo13-addon-website_video_preview',
     ],
