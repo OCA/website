@@ -4,8 +4,10 @@
 
 def uninstall_hook(cr, registry):
     """Unmark crm.lead as recaptcha model."""
-    cr.execute("""
+    cr.execute(
+        """
         UPDATE ir_model
         SET website_form_recaptcha = FALSE
         WHERE model = 'crm.lead'
-    """)
+    """
+    )
