@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo13-addon-website_form_recaptcha',
         'odoo13-addon-website_google_tag_manager',
+        'odoo13-addon-website_odoo_debranding',
         'odoo13-addon-website_video_preview',
     ],
     classifiers=[
