@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2016-07-04 02:41+0000\n"
 "PO-Revision-Date: 2019-08-30 16:23+0000\n"
 "Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/"
-"23907/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
+"teams/23907/pt_BR/)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,31 +96,31 @@ msgid "Requires successful ReCaptcha for form submission."
 msgstr "Requer ReCaptcha de sucesso para envio de formulário."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:33
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "The response parameter is invalid or malformed."
 msgstr "O parâmetro de resposta é inválido ou malformado."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:31
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "The response parameter is missing."
 msgstr "O parâmetro de resposta está ausente."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:30
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "The secret parameter is invalid or malformed."
 msgstr "O parâmetro secreto é inválido ou malformado."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:28
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "The secret parameter is missing."
 msgstr "O parâmetro secreto está faltando."
 
 #. module: website_form_recaptcha
-#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:35
+#: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "There was a problem with the captcha entry."
 msgstr "Houve um problema com a entrada do captcha."
