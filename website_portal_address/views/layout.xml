@@ -4,7 +4,7 @@
     <template id="contact_address_type_website_form"
               name="Portal Contact Address Type Form"
               inherit_id="website_portal_contact.contacts_table">
-        <xpath expr="//th[hasclass('text-center')]" position="before">
+        <xpath expr="//th[@id='th_email']" position="after">
             <th>Type</th>
         </xpath>
         <xpath expr="//td/a[@t-attf-href='mailto://#{contact.email}']" position="after">
