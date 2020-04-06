@@ -38,12 +38,14 @@
                 </t>
 
                 <section class="row o_submit">
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary">
-                            <div class="fa fa-cloud-upload"/>
-                            Save
-                        </button>
-                    </div>
+                    <t t-if="edit_contact_permission">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary">
+                                <div class="fa fa-cloud-upload"/>
+                                Save
+                            </button>
+                        </div>
+                    </t>
                 </section>
             </form>
             <t name="placeholder4"/>
@@ -79,17 +81,19 @@
 </template>
 
 <template id="form_actions" name="Portal Contact Form Actions">
-    <div class="row mt8 mb8">
-        <div class="col-md-12">
-            <t t-if="contact.id">
-                <a class="btn btn-danger"
-                   t-attf-href="/my/contacts/#{slug(contact)}/disable">
-                    <div class="fa fa-trash"/>
-                    Delete
-                </a>
-            </t>
+    <t t-if="edit_contact_permission">
+        <div class="row mt8 mb8">
+            <div class="col-md-12">
+                <t t-if="contact.id">
+                    <a class="btn btn-danger"
+                       t-attf-href="/my/contacts/#{slug(contact)}/disable">
+                        <div class="fa fa-trash"/>
+                        Delete
+                    </a>
+                </t>
+            </div>
         </div>
-    </div>
+    </t>
 </template>
 
 <template id="form_field" name="Portal Contact Form Field">

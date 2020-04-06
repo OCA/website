@@ -41,8 +41,10 @@
             <tr class="active">
                 <th>Name</th>
                 <th>Mobile</th>
-                <th>Email</th>
-                <th class="text-center">Delete</th>
+                <th id="th_email">Email</th>
+                <t t-if="edit_contact_permission">
+                    <th class="text-center">Delete</th>
+                </t>
             </tr>
         </thead>
         <tbody>
@@ -63,13 +65,15 @@
                             <span t-field="contact.email"/>
                         </a>
                     </td>
-                    <td class="text-center">
-                        <a class="btn btn-danger"
-                           t-attf-href="/my/contacts/#{slug(contact)}/disable?redirect=#{quote_plus(request.httprequest.url)}"
-                           title="Delete">
-                            <div class="fa fa-trash"/>
-                        </a>
-                    </td>
+                    <t t-if="edit_contact_permission">
+                        <td class="text-center">
+                            <a class="btn btn-danger"
+                               t-attf-href="/my/contacts/#{slug(contact)}/disable?redirect=#{quote_plus(request.httprequest.url)}"
+                               title="Delete">
+                                <div class="fa fa-trash"/>
+                            </a>
+                        </td>
+                    </t>
                 </tr>
             </t>
         </tbody>
@@ -99,12 +103,14 @@
 </template>
 
 <template id="tree_actions" name="Website Portal Contact Tree Actions">
-    <a href="/my/contacts/new" class="btn btn-primary btn-wide">
-        <div class="fa fa-plus"/>
-        <span>
-            <t>Add new contact</t>
-        </span>
-    </a>
+    <t t-if="edit_contact_permission">
+        <a href="/my/contacts/new" class="btn btn-primary btn-wide">
+            <div class="fa fa-plus"/>
+            <span>
+                <t>Add new contact</t>
+            </span>
+        </a>
+    </t>
 </template>
 
 <!-- Store customizations in separate template to avoid breaking updates -->

@@ -112,6 +112,7 @@ class WebsiteAccount(CustomerPortal):
                 "date": date_begin,
                 "date_end": date_end,
                 "contacts": filtered_contacts,
+                "edit_contact_permission": self._has_user_edit_permission(),
                 "society": society,
                 "page_name": 'contact',
                 "pager": pager,
@@ -125,7 +126,14 @@ class WebsiteAccount(CustomerPortal):
 
         return values
 
+    def _has_user_edit_permission(self):
+        # TODO this is wrong permission
+        rule_group = request.env.ref("base.group_partner_manager").id
+        user_group = request.env.user.groups_id.ids
+        return rule_group in user_group
+
     def _get_society(self, contacts):
+        # TODO instead, use domain "id", "child_of", user.commercial_partner_id.ids
         if not contacts:
             return None
         parent_id = contacts[0].parent_id
@@ -160,8 +168,9 @@ class WebsiteAccount(CustomerPortal):
         result.setdefault("type", "contact")
         if not contact or contact.id != request.env.user.commercial_partner_id.id:
             result.setdefault(
-                "parent_id", request.env.user.commercial_partner_id.id
+                "parent_id", request.env.user.commercial_partner_id.id,
             )
+        result["edit_contact_permission"] = self._has_user_edit_permission()
         return result
 
     @route(
@@ -197,7 +206,8 @@ class WebsiteAccount(CustomerPortal):
             "contact": contact,
             "fields": self._contacts_fields(),
             'page_name': 'contact',
-            'user': request.env.user
+            'user': request.env.user,
+            "edit_contact_permission": self._has_user_edit_permission(),
         }
 
         return self._get_page_view_values(contact, access_token, values,
