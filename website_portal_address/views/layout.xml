@@ -9,7 +9,12 @@
         </xpath>
         <xpath expr="//td/a[@t-attf-href='mailto://#{contact.email}']" position="after">
             <td>
-                <span t-field="contact.type"/>
+                <t t-if="society and society.id == contact.id">
+                    Society
+                </t>
+                <t t-else="">
+                    <span t-field="contact.type"/>
+                </t>
             </td>
         </xpath>
     </template>
