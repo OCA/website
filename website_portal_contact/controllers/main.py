@@ -37,10 +37,21 @@ class WebsiteAccount(CustomerPortal):
 
     def _prepare_portal_layout_values(self, contact=None):
         values = super(WebsiteAccount, self)._prepare_portal_layout_values()
-        partner_counts = request.env["res.partner"].search_count(
-            self._contacts_domain()
-        )
-        values['contact_count'] = partner_counts
+        # TODO duplicated code with _prepare_contacts_values
+        # Get the required domains
+        domain = self._contacts_domain("")
+
+        contacts = request.env["res.partner"].search(domain)
+
+        # Filter all contacts with the same society
+        society = self._get_society(request.env.user.partner_id)
+        filtered_contacts = []
+        for contact in contacts:
+            contact_society = self._get_society(contact)
+            if contact_society and contact_society.id == society.id:
+                filtered_contacts.append(contact)
+
+        values['contact_count'] = len(filtered_contacts)
         return values
 
     def _prepare_contacts_values(
@@ -69,11 +80,23 @@ class WebsiteAccount(CustomerPortal):
                 ("create_date", "<", date_end),
             ]
 
+        contacts = Partner.search(
+            domain, order=order, limit=self._items_per_page
+        )
+
+        # Filter all contacts with the same society
+        society = self._get_society(request.env.user.partner_id)
+        filtered_contacts = []
+        for contact in contacts:
+            contact_society = self._get_society(contact)
+            if contact_society and contact_society.id == society.id:
+                filtered_contacts.append(contact)
+
         # Make pager
         pager = request.website.pager(
             url=base_url,
             url_args={"date_begin": date_begin, "date_end": date_end, "sortby": sortby},
-            total=Partner.search_count(domain),
+            total=len(filtered_contacts),
             page=page,
             step=self._items_per_page,
         )
@@ -88,7 +111,8 @@ class WebsiteAccount(CustomerPortal):
             {
                 "date": date_begin,
                 "date_end": date_end,
-                "contacts": contacts,
+                "contacts": filtered_contacts,
+                "society": society,
                 "page_name": 'contact',
                 "pager": pager,
                 "archive_groups": archive_groups,
@@ -100,6 +124,18 @@ class WebsiteAccount(CustomerPortal):
         )
 
         return values
+
+    def _get_society(self, contacts):
+        if not contacts:
+            return None
+        parent_id = contacts[0].parent_id
+        i = 0
+        while i < 100 and parent_id and parent_id.parent_id:
+            i += 1
+            parent_id = parent_id.parent_id
+        if not parent_id:
+            parent_id = contacts
+        return parent_id
 
     def _contacts_fields(self):
         """Fields to display in the form."""
