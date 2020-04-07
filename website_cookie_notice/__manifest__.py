@@ -12,6 +12,7 @@
     "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
-    "depends": ["website"],
-    "data": ["templates/website.xml", "views/res_config_settings.xml"],
+    "depends": ["website_legal_page"],
+    "data": ["views/assets.xml", "views/website.xml"],
+    "post_init_hook": "post_init_hook",
 }

@@ -5,9 +5,6 @@
   >= 8.0.2.0.0 you will lose your previous customized messages. If you want to
   customize it, please follow steps in the configuration section.
 
-* Starting from 13.0.1.0.0 of this module, the dependancy to website_legal_page has been removed
-  this allows the used to select a legal page of his own
-
 Future plans :
 
 * Add cookie categories and let the user decide to accept/decline those cookies

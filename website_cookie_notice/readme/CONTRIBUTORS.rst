@@ -6,4 +6,5 @@
   * Rafael Blasco
   * Jairo Llopis
   * Ernesto Tejeda
+  * Alexandre Díaz
 * Bjorn Billen <bjorn.billen@dynapps.be>
