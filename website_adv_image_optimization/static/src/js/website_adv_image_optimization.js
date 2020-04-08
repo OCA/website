@@ -13,8 +13,7 @@ odoo.define('website_adv_image_optimization', function (require) {
 
     var AdvancedOptimizationDialog = Dialog.extend({
         events: {
-            'keyup input[name="width"]': 'remain_ratio',
-            'keyup input[name="height"]': 'remain_ratio',
+            'change input[name="width"],input[name="height"]': 'remain_ratio',
         },
         init: function (parent, attachment_id, attachment_src) {
             this.applied = $.Deferred();
@@ -112,12 +111,12 @@ odoo.define('website_adv_image_optimization', function (require) {
             dialog.open();
             dialog.applied.done(function () {
                 dialog.close();
-                self.imageDialog.fetch_existing().then(function () {
+                self.imageDialog.search('').then(function () {
                     var record_data = self.imageDialog
                         .records.filter(function (r) {
                             return r.id === attachment_id;
                         });
-                    self.imageDialog.set_image(record_data[0]);
+                    self.imageDialog._toggleImage(record_data, false, true);
                 });
             });
         },
