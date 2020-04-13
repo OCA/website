@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<template>
+    <t t-extend="web_editor.dialog.image.existing.content">
+        <t t-jquery=".o_existing_attachment_remove:first-child" t-operation="before">
+            <i t-if="!attachment.is_document and attachment.type != 'url'" class="fa fa-compress o_existing_attachment_optimize" t-att-data-id="attachment.id"/>
+        </t>
+    </t>
+
+    <t t-name="website_adv_image_optimization.AdvancedOptimizationDialog">
+        <div>
+            <h4>Resize Options</h4>
+            <div class="card card-body bg-light">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Width</label>
+                            <input type="number" class="form-control" name="width"/>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label class="font-weight-bold">Height</label>
+                            <input type="number" class="form-control" name="height"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Compression Options</h4>
+            <div class="card card-body bg-light">
+                <p><i>PNG files are compressed with the standard Odoo upload optimization</i></p>
+                <div class="form-group">
+                    <label class="font-weight-bold">JPEG Compression (1-100)</label>
+                    <input type="number" class="form-control" name="quality" value="100"/>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
