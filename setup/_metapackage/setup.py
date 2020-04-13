@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-website Odoo addons",
     version=version,
     install_requires=[
+        'odoo12-addon-website_adv_image_optimization',
         'odoo12-addon-website_anchor_smooth_scroll',
         'odoo12-addon-website_blog_excerpt_img',
         'odoo12-addon-website_breadcrumb',
