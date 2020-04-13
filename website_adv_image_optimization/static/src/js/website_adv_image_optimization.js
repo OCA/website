@@ -116,7 +116,7 @@ odoo.define('website_adv_image_optimization', function (require) {
                         .records.filter(function (r) {
                             return r.id === attachment_id;
                         });
-                    self.imageDialog._toggleImage(record_data, false, true);
+                    self.imageDialog._toggleImage(record_data[0], false, true);
                 });
             });
         },
