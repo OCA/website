@@ -6,7 +6,7 @@
     'summary': 'This module allows the user to manually'
                ' apply compression and resize options on an image.',
     'category': 'Website',
-    'version': '12.0.1.0.0',
+    'version': '12.0.1.0.1',
     'author': 'Onestein, Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'website': 'https://github.com/OCA/website',
