@@ -27,7 +27,7 @@
 	                                <field name="recaptcha_key_secret" placeholder="XXXXX"/>
 	                            </div>
 	                        </div>
-	
+
 	                        <div attrs="{'invisible': [('has_google_recaptcha', '=', False)]}" class="mt8">
 	                            <a role="button" class="btn-link" target="_blank" href="http://www.google.com/recaptcha/admin"><i class="fa fa-arrow-right"></i>
 	                            How to get my reCaptcha Key

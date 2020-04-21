@@ -7,8 +7,8 @@
 	      <script src="https://www.google.com/recaptcha/api.js"></script>
 	    </xpath>
 	  </template>
-    	
-    
+
+
         <!--<record id="view_website_form" model="ir.ui.view">
             <field name="name">website.form</field>
             <field name="model">website</field>
