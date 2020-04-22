@@ -1,39 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <template id="mrp_bom_page" name="MRP BoM Page">
         <t t-call="website.layout">
             <div id="wrap">
                 <div class="bom-page">
-                    <t t-call="website_mrp_bom.mrp_bom_detail_header"/>
-                    <t t-call="website_mrp_bom.mrp_bom_detail_table"/>
+                    <t t-call="website_mrp_bom.mrp_bom_detail_header" />
+                    <t t-call="website_mrp_bom.mrp_bom_detail_table" />
                 </div>
             </div>
         </t>
     </template>
-
     <template id="mrp_bom_detail_header" name="MRP BoM Details Header">
         <div class="bom-header">
             <div class="container">
                 <div class="row">
-                    <h1 class="col-lg-12 text-center" id="mrp_bom_name" t-field="bom.product_tmpl_id.name"/>
+                    <h1
+                        class="col-lg-12 text-center"
+                        id="mrp_bom_name"
+                        t-field="bom.product_tmpl_id.name"
+                    />
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
                         <t t-if="bom.product_tmpl_id">
-                            <div t-field="bom.product_tmpl_id.image" t-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;center-block mb16&quot;, &quot;max_width&quot;: 128}"/>
+                            <div
+                                t-field="bom.product_tmpl_id.image_128"
+                                t-options='{"widget": "image", "class": "center-block mb16"}'
+                            />
                         </t>
                     </div>
                     <div class="mt32 col-lg-8">
                         <t t-if="bom.website_description">
-                            <div t-field="bom.website_description"/>
+                            <div t-field="bom.website_description" />
                         </t>
                     </div>
                 </div>
             </div>
         </div>
     </template>
-
     <template id="mrp_bom_detail_table" name="MRP BoM Details Table">
         <div class="bom-table">
             <div class="container">
@@ -43,7 +47,7 @@
                             <thead>
                                 <tr>
                                     <th>Product</th>
-                                    <th/>
+                                    <th />
                                     <th>Quantity</th>
                                     <t t-if="has_published_bom">
                                         <th>BoM</th>
@@ -54,35 +58,56 @@
                                 <t t-as="line" t-foreach="bom.bom_line_ids">
                                     <tr style="font-weight: bold;">
                                         <td class="prod-img">
-                                            <span t-field="line.sudo().product_id.product_tmpl_id.image" t-options="{&quot;widget&quot;: &quot;image&quot;, &quot;class&quot;: &quot;center-block mb8&quot;, &quot;max_width&quot;: 64}"/>
+                                            <span
+                                                t-field="line.product_id.product_tmpl_id.image_128"
+                                                t-options='{"widget": "image", "class": "center-block mb8", "max_width": 64}'
+                                            />
                                         </td>
                                         <td class="prod-name">
-                                            <t t-if="line.sudo().product_id.product_tmpl_id.website_product_published">
-                                                <a style="display: block" t-att-href="line.sudo().product_id.product_tmpl_id.website_product_url">
-                                                    <span t-field="line.sudo().product_id.product_tmpl_id.name"/>
+                                            <t
+                                                t-if="line.product_id.product_tmpl_id.website_product_published"
+                                            >
+                                                <a
+                                                    style="display: block"
+                                                    t-att-href="line.product_id.product_tmpl_id.website_product_url"
+                                                >
+                                                    <span
+                                                        t-field="line.product_id.product_tmpl_id.name"
+                                                    />
                                                 </a>
                                             </t>
                                             <t t-else="">
-                                                <span t-field="line.sudo().product_id.product_tmpl_id.name"/>
+                                                <span
+                                                    t-field="line.product_id.product_tmpl_id.name"
+                                                />
                                             </t>
                                         </td>
                                         <td class="prod-qty">
-                                            <span t-field="line.product_qty"/>
-                                            <span groups="product.group_uom" t-field="line.product_uom_id.name"/>
+                                            <span t-field="line.product_qty" />
+                                            <span
+                                                groups="product.group_uom"
+                                                t-field="line.product_uom_id.name"
+                                            />
                                         </td>
-
                                         <t t-if="has_published_bom">
-                                            <t t-if="line.sudo().product_id.bom_ids">
-                                                <t t-if="line.sudo().product_id.bom_ids[0].website_published">
+                                            <t t-if="line.product_id.bom_ids">
+                                                <t
+                                                    t-if="line.product_id.bom_ids[0].website_published"
+                                                >
                                                     <td class="prod-bom">
-                                                <a style="display: block" t-attf-href="/components/#{ slug(line.sudo().product_id.bom_ids[0]) }">
-                                                            <span class="fa fa-search"/>
+                                                        <a
+                                                            style="display: block"
+                                                            t-attf-href="/components/#{ slug(line.product_id.bom_ids[0]) }"
+                                                        >
+                                                            <span
+                                                                class="fa fa-search"
+                                                            />
                                                         </a>
                                                     </td>
                                                 </t>
                                             </t>
                                             <t t-else="">
-                                                <td class="prod-bom"/>
+                                                <td class="prod-bom" />
                                             </t>
                                         </t>
                                     </tr>
@@ -94,5 +119,4 @@
             </div>
         </div>
     </template>
-
 </odoo>
