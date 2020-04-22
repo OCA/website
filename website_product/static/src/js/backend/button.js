@@ -1,14 +1,14 @@
-odoo.define('website_product.backend.button', function (require) {
-    'use strict';
+odoo.define("website_product.backend.button", function(require) {
+    "use strict";
 
-    var AbstractField = require('web.AbstractField');
-    var core = require('web.core');
-    var field_registry = require('web.field_registry');
+    var AbstractField = require("web.AbstractField");
+    var core = require("web.core");
+    var field_registry = require("web.field_registry");
 
     var _t = core._t;
 
     var WidgetWebsiteProductButton = AbstractField.extend({
-        template: 'WidgetWebsiteProductButton',
+        template: "WidgetWebsiteProductButton",
 
         //  -------------------------------------------------------------------
         // Public
@@ -17,7 +17,7 @@ odoo.define('website_product.backend.button', function (require) {
         /**
          * @override
          */
-        isSet: function () {
+        isSet: function() {
             return true;
         },
 
@@ -29,16 +29,17 @@ odoo.define('website_product.backend.button', function (require) {
          * @override
          * @private
          */
-        _render: function () {
+        _render: function() {
             this._super.apply(this, arguments);
 
-            var $value = this.$('.o_value');
+            var $value = this.$(".o_value");
             var published = this.value === true;
-            $value.html(published ? _t("Published") : _t("Unpublished"))
-                .toggleClass('text-danger', !published)
-                .toggleClass('text-success', published);
+            $value
+                .html(published ? _t("Published") : _t("Unpublished"))
+                .toggleClass("text-danger", !published)
+                .toggleClass("text-success", published);
         },
     });
 
-    field_registry.add('website_product_button', WidgetWebsiteProductButton);
+    field_registry.add("website_product_button", WidgetWebsiteProductButton);
 });
