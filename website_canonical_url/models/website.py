@@ -24,13 +24,11 @@ class Website(models.Model):
                 _("Canonical domain must contain protocol `http(s)://`")
             )
 
-    @api.multi
     def get_canonical_url(self, req=None):
         return urljoin(
             self._get_canonical_domain(), self._get_canonical_relative_url(req=req)
         )
 
-    @api.multi
     def _get_canonical_domain(self):
         self.ensure_one()
         if self.canonical_domain:
@@ -38,12 +36,11 @@ class Website(models.Model):
         params = self.env["ir.config_parameter"].sudo()
         return params.get_param("web.base.url")
 
-    @api.multi
     def _get_canonical_relative_url(self, req=None):
         req = req or request
         url = req.httprequest.path
         lang_path = "/"
-        if req.lang != req.website.default_lang_code:
+        if req.lang != req.website.default_lang_id:
             lang_path = "/%s/" % req.lang
             # enforce language path
             url = lang_path.rstrip("/") + url

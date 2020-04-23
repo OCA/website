@@ -3,7 +3,7 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
     <template id="canonical_url_link" inherit_id="website.layout" name="Canonical URL">
-        <xpath expr="//t[@t-set='head_website']" position="inside">
+        <xpath expr="//header" position="inside">
             <t t-if="request and website">
                 <t t-set="canonical_url" t-value="website.get_canonical_url(request)" />
                 <t t-if="canonical_url">
