@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
-"PO-Revision-Date: 2020-04-16 18:19+0000\n"
+"PO-Revision-Date: 2020-04-26 17:19+0000\n"
 "Last-Translator: Alberto Carollo <baba75@gmail.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -141,7 +141,7 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "I accept the"
-msgstr ""
+msgstr "Accetto le"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
