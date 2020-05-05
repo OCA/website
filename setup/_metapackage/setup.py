@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-website Odoo addons",
     version=version,
     install_requires=[
+        'odoo13-addon-website_cookie_notice',
         'odoo13-addon-website_crm_privacy_policy',
         'odoo13-addon-website_crm_recaptcha',
         'odoo13-addon-website_form_recaptcha',
