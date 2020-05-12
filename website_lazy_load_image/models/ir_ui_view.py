@@ -32,5 +32,6 @@ class IrUiView(models.Model):
                 src = img.attrib['src']
                 img.attrib['src'] = self.LAZYLOAD_DEFAULT_SRC
                 img.attrib['data-src'] = src
-            res = lxml.etree.tostring(html, method='html', encoding='UTF-8')
+            res = lxml.etree.tostring(html, method='html', encoding='UTF-8',
+                                      doctype=html.getroottree().docinfo.doctype)
         return res
