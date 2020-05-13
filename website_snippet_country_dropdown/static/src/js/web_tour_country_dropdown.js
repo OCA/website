@@ -12,29 +12,46 @@ odoo.define("website_snippet_country_dropdown.tour_demo_page", function (require
         wait_for: base.ready(),
     }, [{
         content: "Click Button",
-        trigger: '#btn_vat_code',
+        trigger: '.js_enabled .js_btn_country_code',
         run: "click",
     }, {
         content: "Select Country",
-        trigger: '#' + country_code_test,
+        trigger: _.str.sprintf('.js_enabled [data-country_code=%s]', country_code_test),
         run: "click",
     }, {
         content: "Insert text",
-        trigger: '#no_country_field',
+        trigger: '.js_enabled .js_no_country_field',
+        extra_trigger: ".js_enabled .js_btn_country_code[data-country_code=ES]",
         run: "text " + vat_number_test,
     },
     {
-        content: "Validate Text",
-        trigger: '#no_country_field',
+        trigger: '.btn[type=submit]',
+        run: "click",
+    }, {
+        trigger: ".js_enabled .js_btn_country_code[data-country_code=US]",
         run: function () {
-            // This function allow to evaluate a hidden html element
-            // Impossible to do it through trigger
-            var complete_field = $("#complete_field").val();
-            if (complete_field !== country_code_test + vat_number_test) {
-                // Abort test if the value is wrong
-                console.error("Tour error: Invalid 'complete_field' content");
+            let checks = {
+                country_code_field: "ES",
+                complete_field: "ESB01010101",
+                no_country_field: "B01010101",
+                disabled_complete_field: "FRA123456789",
+                disabled_country_code_field: "FR",
+                disabled_no_country_field: "A123456789",
+            };
+            let query = new URLSearchParams(location.search);
+            for (let field_name in checks) {
+                let real = query.get(field_name), expected = checks[field_name];
+                if (real !== expected) {
+                    console.error(
+                        "Tour error: param",
+                        field_name,
+                        "is",
+                        real,
+                        "but should be",
+                        expected
+                    );
+                }
             }
-
         },
     }]);
 });

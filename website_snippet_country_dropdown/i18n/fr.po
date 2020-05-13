@@ -20,6 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_snippet_country_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
+#, fuzzy
+msgid "A readonly country dropdown input"
+msgstr "Testez ici le comportement de la liste déroulante des pays"
+
+#. module: website_snippet_country_dropdown
 #: model:website.menu,name:website_snippet_country_dropdown.country_dropdown_demo_page_link
 msgid "Country dropdown demo"
 msgstr "Démo de la liste déroulante des pays"

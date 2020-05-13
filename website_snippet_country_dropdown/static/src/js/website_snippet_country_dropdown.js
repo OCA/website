@@ -14,7 +14,6 @@ odoo.define("website_snippet_country_dropdown.dropdown", function (require) {
             this.$flag_selector = this.$target.find('.js_select_country_code');
             this.$img_code = this.$target.find('.js_img_country_code');
             this.$btn_country_code = this.$target.find('.js_btn_country_code');
-            this.$country_code = this.$target.find('.js_country_code');
             this.$dropdown_list = this.$target.find('#dropdown-countries');
             this.$country_code_field = this.$target.find(
                 '.js_country_code_field');
@@ -43,7 +42,7 @@ odoo.define("website_snippet_country_dropdown.dropdown", function (require) {
                 event.currentTarget.dataset.country_id +
                 "/image/30x20"
             );
-            this.$btn_country_code.val(event.currentTarget.dataset.country_id);
+            this.$btn_country_code.attr("data-country_code", event.currentTarget.dataset.country_code);
             this.$country_code_field.val(event.currentTarget.id);
             this.$country_code.children().text(String(event.currentTarget.id));
             this.join_value(
