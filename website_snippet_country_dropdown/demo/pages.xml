@@ -16,15 +16,30 @@
                                 Test here the country dropdown snippet behavior
                             </h3>
                             <form action="" class="form-horizontal">
-                                <t t-call="website_snippet_country_dropdown.dropdown_element_form">
-                                    <t t-set="complete_field" t-value="'demo_field'" />
+                                <div class="js_enabled" t-call="website_snippet_country_dropdown.dropdown_element_form">
+                                    <t t-set="label_class" t-value="'col-sm-5 col-form-label'"/>
+                                    <t t-set="input_container_class" t-value="'col-sm-7'"/>
                                     <t t-set="label_country_dropdown">
                                         Other label
                                     </t>
-                                </t>
-                                <button type="submit" class="btn btn-default">
-                                    Submit (you will see the GET parameters in the URL)
-                                </button>
+                                </div>
+                                <div class="js_disabled" t-call="website_snippet_country_dropdown.dropdown_element_form">
+                                    <t t-set="label_class" t-value="'col-sm-5 col-form-label'"/>
+                                    <t t-set="input_container_class" t-value="'col-sm-7'"/>
+                                    <t t-set="complete_field" t-value="'disabled_complete_field'" />
+                                    <t t-set="country_code_field" t-value="'disabled_country_code_field'"/>
+                                    <t t-set="no_country_field" t-value="'disabled_no_country_field'"/>
+                                    <t t-set="readonly" t-value="True" />
+                                    <t t-set="default_value" t-value="'FRA123456789'" />
+                                    <t t-set="label_country_dropdown">
+                                        A readonly country dropdown input
+                                    </t>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-default">
+                                        Submit (you will see the GET parameters in the URL)
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>
