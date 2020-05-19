@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_cookiebot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-18 17:11+0000\n"
+"PO-Revision-Date: 2020-05-19 19:15+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: Trey <info@trey.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid "00000000-0000-0000-0000-000000000000"
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid "Adds Cookiebot functionality"
+msgstr "Integra la funcionalidad de Cookiebot y la RGPD"
+
+#. module: website_cookiebot
+#: model:ir.model,name:website_cookiebot.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.cookies
+#: model_terms:website.page,arch_db:website_cookiebot.cookies_page
+msgid "Cookie Declaration"
+msgstr "Declaración de cookies"
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__has_cookiebot_id
+msgid "Cookiebot"
+msgstr ""
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__cookiebot_id
+#: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_id
+msgid "Cookiebot ID"
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.layout_footer_copyright
+msgid "Cookies Policy"
+msgstr "Política de cookies"
+
+#. module: website_cookiebot
+#: model:ir.model.fields,help:website_cookiebot.field_res_config_settings__cookiebot_id
+#: model:ir.model.fields,help:website_cookiebot.field_website__cookiebot_id
+msgid "This field holds the ID, needed for Cookiebot functionality."
+msgstr "Este campo contiene el ID de Cookiebot, necesario para el correcto funcionamiento de los scripts."
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid "Tracking ID"
+msgstr "ID de seguimiento"
+
+#. module: website_cookiebot
+#: model:ir.model,name:website_cookiebot.model_website
+msgid "Website"
+msgstr "Sitio web"

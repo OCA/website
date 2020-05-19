@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="layout_footer_copyright" inherit_id="web.frontend_layout">
+        <xpath expr="//footer//div/span[@t-field='res_company.name']/.." position="inside">
+            <span>-
+                <a href="/legal/cookies-policy">Cookies Policy</a>
+            </span>
+        </xpath>
+    </template>
+</odoo>
