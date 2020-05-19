@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="product" inherit_id="website_sale.product" customize_show="True" name="Fancybox Zoom">
+        <xpath expr="//section[@id='product_detail']" position="attributes">
+            <attribute name="data-zoom">fancybox</attribute>
+        </xpath>
+    </template>
+    <template id="shop_product_carousel" inherit_id="website_sale.shop_product_carousel" customize_show="True" name="Fancybox Zoom">
+        <xpath expr="//div[@id='o-carousel-product']" position="attributes">
+            <attribute name="data-zoom">fancybox</attribute>
+        </xpath>
+    </template>
+</odoo>
