@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="frontend_layout" inherit_id="portal.frontend_layout">
+        <xpath expr="//script[last()]" position="after">
+            <t t-if="website.cookiebot_id">
+                <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" t-att-data-cbid="website.cookiebot_id" data-blockingmode="auto" type="text/javascript"></script>
+            </t>
+        </xpath>
+    </template>
+</odoo>
