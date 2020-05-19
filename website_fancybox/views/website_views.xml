@@ -2,14 +2,8 @@
 <odoo>
     <template id="assets_frontend" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
-            <link
-                href="/website_fancybox/static/src/js/lib/jquery-fancybox/css/jquery.fancybox.min.css"
-                rel="stylesheet"
-            />
-            <script
-                src="/website_fancybox/static/src/js/lib/jquery-fancybox/js/jquery.fancybox.min.js"
-                type="text/javascript"
-            />
+            <link href="/website_fancybox/static/src/lib/jquery-fancybox/css/jquery.fancybox.min.css" rel="stylesheet"/>
+            <script src="/website_fancybox/static/src/lib/jquery-fancybox/js/jquery.fancybox.min.js" type="text/javascript"/>
         </xpath>
     </template>
 </odoo>
