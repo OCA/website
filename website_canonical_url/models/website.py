@@ -35,6 +35,8 @@ class Website(models.Model):
         self.ensure_one()
         if self.canonical_domain:
             return self.canonical_domain
+        if self.domain:
+            return self.domain
         params = self.env['ir.config_parameter'].sudo()
         return params.get_param('web.base.url')
 
