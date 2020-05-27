@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" inherit_id="website.template" xml:space="preserve">
+    <t t-extend="website.contentMenu.dialog.edit">
+        <t t-jquery=".js_add_menu" t-operation="after">
+            <br />
+            <a href="#" class="js_add_menu" data-type="mega">
+                <i class="fa fa-plus-circle" /> Add Mega Menu Item
+            </a>
+        </t>
+    </t>
+    <t t-extend="website.contentMenu.dialog.submenu">
+        <t t-jquery="[t-att-data-menu-id]" t-operation="attributes">
+            <attribute
+                name="t-att-data-mega-menu"
+            >submenu.is_mega_menu ? true : undefined</attribute>
+        </t>
+        <t t-jquery="[t-if='submenu.is_homepage']" t-operation="before">
+            <span
+                t-if="submenu.is_mega_menu"
+                class="badge badge-primary"
+            >Mega Menu</span>
+        </t>
+    </t>
+</templates>

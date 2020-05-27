@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="submenu" inherit_id="website.submenu">
+            <xpath expr="//t[@t-set='has_visible_submenu']" position="attributes">
+                <attribute
+                    name="t-value"
+                    add="or (submenu.is_mega_menu and submenu.is_visible)"
+                    separator=" "
+                />
+            </xpath>
+            <xpath expr="li[@t-if='has_visible_submenu']" position="attributes">
+                <attribute
+                    name="t-attf-class"
+                    add="#{submenu.is_mega_menu and 'position-static'}"
+                    separator=" "
+                />
+            </xpath>
+            <xpath expr="li[@t-if='has_visible_submenu']/a" position="attributes">
+                <attribute
+                    name="t-attf-class"
+                    add="#{submenu.is_mega_menu and 'o_mega_menu_toggle'}"
+                    separator=" "
+                />
+            </xpath>
+            <xpath expr="li[@t-if='has_visible_submenu']/a" position="after">
+                <div
+                    t-if="submenu.is_mega_menu"
+                    t-attf-class="dropdown-menu o_mega_menu oe_structure #{submenu.mega_menu_classes}"
+                    data-name="Mega Menu"
+                    t-field="submenu.mega_menu_content"
+                />
+            </xpath>
+        </template>
+    </data>
+</odoo>
