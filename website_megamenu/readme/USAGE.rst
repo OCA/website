@@ -1,4 +1,5 @@
 To add a new mega menu:
+
 #. Go to website (frontend)
 #. Click 'Edit'
 #. Click a item of the menu
@@ -7,6 +8,7 @@ To add a new mega menu:
 #. Save changes
 
 To edit the mega menu:
+
 #. Go to website (frontend)
 #. Click 'Edit'
 #. Expand mega menu
