@@ -8,7 +8,6 @@
     "license": "LGPL-3",
     "category": "Website",
     "depends": ["website"],
-    "data": ["templates/disable_odoo.xml"],
+    "data": ["templates/portal_templates.xml"],
     "installable": True,
-    "post_init_hook": "post_init_hook",
 }

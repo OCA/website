@@ -6,3 +6,7 @@
 * `Tecnativa <https://www.tecnativa.com>`_:
 
   * Alexandre Diaz
+
+* `Obertix <https://www.obertix.net>`_:
+
+  * Vicent Cubells <vicent@vcubells.net>

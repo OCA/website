@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="frontend_layout_debrand"
+        inherit_id="portal.frontend_layout"
+        priority="9999"
+    >
+        <xpath expr="//footer/div/div" position="replace">
+            <div class="float-right mb16" t-ignore="true" t-if="not editable" />
+        </xpath>
+    </template>
+    <template
+        id="portal_record_sidebar_debrand"
+        inherit_id="portal.portal_record_sidebar"
+        priority="9999"
+    >
+        <xpath expr="//div[hasclass('card-footer')]" position="replace">
+            <div
+                class="card-footer small text-center text-muted border-top-0 pt-1 pb-1 d-none d-lg-block"
+            />
+        </xpath>
+    </template>
+</odoo>
