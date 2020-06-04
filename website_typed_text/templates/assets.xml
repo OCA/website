@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+        <xpath expr=".">
+            <script src="/website_typed_text/static/lib/typedjs/typed.js" />
+            <script src="/website_typed_text/static/src/js/frontend.js" />
+        </xpath>
+    </template>
+    <template id="assets_editor" inherit_id="website.assets_editor">
+        <xpath expr=".">
+            <script src="/website_typed_text/static/src/js/editor.js" />
+        </xpath>
+    </template>
+</odoo>
