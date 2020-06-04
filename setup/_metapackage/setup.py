@@ -15,6 +15,7 @@ setuptools.setup(
         'odoo13-addon-website_google_tag_manager',
         'odoo13-addon-website_legal_page',
         'odoo13-addon-website_odoo_debranding',
+        'odoo13-addon-website_typed_text',
         'odoo13-addon-website_video_preview',
     ],
     classifiers=[
