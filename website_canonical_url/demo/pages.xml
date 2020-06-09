@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Simone Orsi <simone.orsi@camptocamp.com>
+     Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <template id="canonical_demo_view"
+              name="Canonical URL and pager demo">
+        <t t-call="website.layout">
+            <!-- Add a fake pager to test the rel=prev/next links -->
+            <t t-set="pager"
+               t-value="website.pager(request.httprequest.path, 100, 2, url_args=request.httprequest.args)"/>
+            <h1>Check source code to see pager and canonical URL.</h1>
+        </t>
+    </template>
+
+    <record id="canonical_demo_page" model="website.page">
+        <field name="website_published">True</field>
+        <field name="url">/canonical-demo</field>
+        <field name="view_id" ref="canonical_demo_view" />
+    </record>
+
+    <record id="canonical_demo_menu" model="website.menu">
+        <field name="name">Canonical URL demo</field>
+        <field name="url">/canonical-demo</field>
+        <field name="parent_id" ref="website.main_menu" />
+        <field name="sequence" type="int">50</field>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="page_id" ref="canonical_demo_page" />
+    </record>
+
+</odoo>

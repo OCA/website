@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_canonical_url
+#
+# Translators:
+# Paolo Valier <paolo.valier@hotmail.it>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-07 01:09+0000\n"
+"PO-Revision-Date: 2020-04-14 16:19+0000\n"
+"Last-Translator: Alberto Carollo <baba75@gmail.com>\n"
+"Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
+
+#. module: website_canonical_url
+#: model:ir.model.fields,field_description:website_canonical_url.field_res_config_settings__canonical_domain
+#: model:ir.model.fields,field_description:website_canonical_url.field_website__canonical_domain
+msgid "Canonical Domain"
+msgstr "Dominio canonico"
+
+#. module: website_canonical_url
+#: model:website.menu,name:website_canonical_url.canonical_demo_menu
+msgid "Canonical URL demo"
+msgstr "Demo URL canonico"
+
+#. module: website_canonical_url
+#: model_terms:ir.ui.view,arch_db:website_canonical_url.res_config_settings_view_form
+msgid "Canonical domain"
+msgstr "Dominio canonico"
+
+#. module: website_canonical_url
+#: model:ir.model.fields,help:website_canonical_url.field_res_config_settings__canonical_domain
+#: model:ir.model.fields,help:website_canonical_url.field_website__canonical_domain
+msgid ""
+"Canonical domain is used to build unique canonical URLs to make SEO happy."
+msgstr ""
+"Il dominio canonico viene utilizzato per formare URL canoniche uniche per "
+"accontentare la SEO."
+
+#. module: website_canonical_url
+#: code:addons/website_canonical_url/models/website.py:22
+#, python-format
+msgid "Canonical domain must contain protocol `http(s)://`"
+msgstr "Il dominio canonico deve contenere il protocollo `http(s)://`"
+
+#. module: website_canonical_url
+#: model_terms:ir.ui.view,arch_db:website_canonical_url.canonical_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_canonical_url.canonical_demo_page
+msgid "Check source code to see pager and canonical URL."
+msgstr ""
+"Controlla il codice sorgente per vedere i paginatori e gli URL canonici."
+
+#. module: website_canonical_url
+#: model:ir.model,name:website_canonical_url.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni"
+
+#. module: website_canonical_url
+#: model:ir.model,name:website_canonical_url.model_website
+msgid "Website"
+msgstr "Sito"
+
+#. module: website_canonical_url
+#: model_terms:ir.ui.view,arch_db:website_canonical_url.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:website_canonical_url.view_website_form
+msgid "https://mydomain.com"
+msgstr "https://mydomain.com"
