@@ -1,5 +1,5 @@
 /*!
- * jQuery & Zepto Lazy - v1.7.9
+ * jQuery & Zepto Lazy - v1.7.10
  * http://jquery.eisbehr.de/lazy/
  *
  * Copyright 2012 - 2018, Daniel 'Eisbehr' Kern
@@ -30,7 +30,7 @@
     /**
      * helper to register window load for jQuery 3
      * @type {boolean}
-     */    
+     */
     windowLoaded = false;
 
     /**
@@ -124,7 +124,7 @@
          * @access private
          * @type {boolean}
          */
-        _isRetinaDisplay = false, 
+        _isRetinaDisplay = false,
 
         /**
          * dictionary entry for better minimization
@@ -242,7 +242,7 @@
                         });
 
                         if (item.length) {
-                            _lazyLoadItems(false, item);   
+                            _lazyLoadItems(false, item);
                         }
                     }
                 };
@@ -276,7 +276,7 @@
                 var element = $(this),
                     tag = _getElementTagName(this);
 
-                return !element.data(config.handledName) && 
+                return !element.data(config.handledName) &&
                        (element.attr(config.attribute) || element.attr(srcsetAttribute) || element.attr(loaderAttribute) || forcedTags[tag] !== undefined);
             })
 
@@ -347,7 +347,7 @@
                         elementImageBase = element.attr(config.imageBaseAttribute) || imageBase,
                         customLoader = element.attr(config.loaderAttribute);
 
-                        // is not already handled 
+                        // is not already handled
                     if (!element.data(handledName) &&
                         // and is visible or visibility doesn't matter
                         (!config.visibleOnly || element.is(':visible')) && (
@@ -670,7 +670,7 @@
         else {
             // noinspection JSUnresolvedVariable
             $(window).on(_load + '.' + namespace, _initialize);
-        }  
+        }
     }
 
     /**
@@ -865,7 +865,7 @@
     };
 
     // register window load event globally to prevent not loading elements
-    // since jQuery 3.X ready state is fully async and may be executed after 'load' 
+    // since jQuery 3.X ready state is fully async and may be executed after 'load'
     $(window).on('load', function() {
         windowLoaded = true;
     });

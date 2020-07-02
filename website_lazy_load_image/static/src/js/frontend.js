@@ -1,17 +1,16 @@
 /* Copyright 2018 Onestein
  * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
 
-odoo.define('website_lazy_load_image.lazy_image_loader', function (require) {
-    'use strict';
+odoo.define("website_lazy_load_image.lazy_image_loader", function(require) {
+    "use strict";
 
-    var Class = require('web.Class');
-    var mixins = require('web.mixins');
+    var Class = require("web.Class");
+    var mixins = require("web.mixins");
 
     /**
      * Handles lazy loading of images.
      */
     var LazyImageLoader = Class.extend(mixins.EventDispatcherMixin, {
-
         /**
          * The instance of the jQuery lazy loading plugin.
          *
@@ -25,18 +24,18 @@ odoo.define('website_lazy_load_image.lazy_image_loader', function (require) {
          *
          * @type {jQuery.Deferred}
          */
-        all_finished: null,
+        allFinished: null,
 
         /**
          * @class
          * @param {String} selector The selector for the elements to lazy load.
          */
-        init: function (selector) {
+        init: function(selector) {
             mixins.EventDispatcherMixin.init.call(this);
-            this.all_finished = $.Deferred();
-            this.plugin = $(selector).data('loaded', false).lazy(
-                this._getPluginConfiguration()
-            );
+            this.allFinished = $.Deferred();
+            this.plugin = $(selector)
+                .data("loaded", false)
+                .lazy(this._getPluginConfiguration());
         },
 
         /**
@@ -45,13 +44,14 @@ odoo.define('website_lazy_load_image.lazy_image_loader', function (require) {
          * @private
          * @returns {Object} Lazy loading plugin settings
          */
-        _getPluginConfiguration: function () {
+        _getPluginConfiguration: function() {
             return {
                 afterLoad: this._afterLoad.bind(this),
                 beforeLoad: this._beforeLoad.bind(this),
                 onError: this._onError.bind(this),
                 onFinishedAll: this._onFinishedAll.bind(this),
                 chainable: false,
+                bind: "event",
             };
         },
 
@@ -61,8 +61,8 @@ odoo.define('website_lazy_load_image.lazy_image_loader', function (require) {
          * @param {DOMElement} el
          * @private
          */
-        _beforeLoad: function (el) {
-            this.trigger('beforeLoad', el);
+        _beforeLoad: function(el) {
+            this.trigger("beforeLoad", el);
         },
 
         /**
@@ -71,8 +71,8 @@ odoo.define('website_lazy_load_image.lazy_image_loader', function (require) {
          * @param {DOMElement} el
          * @private
          */
-        _afterLoad: function (el) {
-            this.trigger('afterLoad', el);
+        _afterLoad: function(el) {
+            this.trigger("afterLoad", el);
         },
 
         /**
@@ -81,8 +81,8 @@ odoo.define('website_lazy_load_image.lazy_image_loader', function (require) {
          * @param {DOMElement} el
          * @private
          */
-        _onError: function (el) {
-            this.trigger('onError', el);
+        _onError: function(el) {
+            this.trigger("onError", el);
         },
 
         /**
@@ -90,20 +90,20 @@ odoo.define('website_lazy_load_image.lazy_image_loader', function (require) {
          *
          * @private
          */
-        _onFinishedAll: function () {
-            this.all_finished.resolve();
-            this.trigger('onFinishedAll');
+        _onFinishedAll: function() {
+            this.allFinished.resolve();
+            this.trigger("onFinishedAll");
         },
     });
 
-    require('web.dom_ready');
+    require("web.dom_ready");
     var lazy_image_loader = new LazyImageLoader(
-        '#wrapwrap > main img:not(.lazyload-disable), ' +
-        '#wrapwrap > footer img:not(.lazyload-disable)'
+        "#wrapwrap > main img:not(.lazyload-disable), " +
+            "#wrapwrap > footer img:not(.lazyload-disable)"
     );
 
     return {
-        LazyImageLoader: LazyImageLoader,
         lazy_image_loader: lazy_image_loader,
+        LazyImageLoader: LazyImageLoader,
     };
 });
