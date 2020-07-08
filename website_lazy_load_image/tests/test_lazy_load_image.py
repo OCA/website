@@ -4,6 +4,8 @@
 from odoo.tests.common import SavepointCase
 from lxml import etree
 from odoo.tests import tagged
+from odoo.addons.website.tools import MockRequest
+from odoo.addons.website.controllers.main import Website
 
 
 @tagged('-at_install', 'post_install')
@@ -48,6 +50,7 @@ class LazyLoadTest(SavepointCase):
         })
         cls.website_id = cls.env.ref('website.default_website').id
         cls.default_img = cls.env['ir.ui.view'].LAZYLOAD_DEFAULT_SRC
+        cls.WebsiteController = Website()
 
     def test_normal_render(self):
         """Check if lazy loading attributes are correctly set"""
@@ -108,9 +111,8 @@ class LazyLoadTest(SavepointCase):
     def test_doctype_in_main(self):
         """ Check that at least doctype is preserved on website """
         public_user_id = self.ref('base.public_user')
-#       TODO: Improve this part and find a way to render website template
-        ui_view = self.env['ir.ui.view'].sudo(
-            public_user_id).with_context(website_id=self.website_id)
-        res = ui_view.render_template(self.view_1.id).decode('UTF-8')
-        self.assertIn('DOCTYPE html', res,
-                      'DOCTYPE must appear in the website view')
+        website_id = self.env['website'].browse(self.website_id)
+        with MockRequest(self.env, website=website_id, multilang=False):
+            index = self.WebsiteController.index()
+            self.assertIn('<!DOCTYPE ', index.data.decode('UTF-8'),
+                          'DOCTYPE must appear in the website view')
