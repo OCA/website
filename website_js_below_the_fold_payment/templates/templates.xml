@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 
+        Fix for website_js_below_the_fold module
+        https://github.com/OCA/website/issues/587#issuecomment-487985544 
+        Credits to https://github.com/go4site
+    -->
+    <template id="payment_page_fix" inherit_id="payment.payment_process_page">
+        <xpath expr="//script" position="replace">
+            <script>
+                document.addEventListener("DOMContentLoaded", function(event) {
+                    odoo.define('payment.processing_bootstrap', function(require) {
+                        var PaymentProcessing = require('payment.processing');
+                        var processingWidget = new PaymentProcessing(null, <t t-esc="payment_tx_ids"/>);
+                        processingWidget.attachTo($('.o_payment_processing'));
+                    });
+                });
+           </script>
+        </xpath>
+    </template>
+</odoo>
