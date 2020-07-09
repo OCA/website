@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website_support_department_view_form" model="ir.ui.view">
+        <field name="name">website.support.department form view</field>
+        <field name="model">website.support.department</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="manager_ids">
+                        <tree editable="bottom">
+                            <field name="user_id"/>
+                            <field name="role"/>
+                        </tree>
+                    </field>
+                    <field name="partner_ids"/>
+                    <field name="sub_category_ids">
+                        <tree>
+                            <field name="subcategory_id"/>
+                            <field name="count"/>
+                        </tree>
+                    </field>
+                    <field name="submit_ticket_contact_ids">
+                        <tree>
+                            <field name="partner_id"/>
+                            <field name="count"/>
+                        </tree>
+                    </field>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="website_support_department_view_tree" model="ir.ui.view">
+        <field name="name">website.support.department tree view</field>
+        <field name="model">website.support.department</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_support_department_action" model="ir.actions.act_window">
+        <field name="name">Support Ticket Departments</field>
+        <field name="res_model">website.support.department</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create new department</p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="low" model="website.support.ticket.priority">
+            <field name="name">Low</field>
+            <field name="color">#000000</field>
+        </record>
+
+        <record id="normal" model="website.support.ticket.priority">
+            <field name="name">Normal</field>
+            <field name="color">#000000</field>
+        </record>
+
+        <record id="moderately" model="website.support.ticket.priority">
+            <field name="name">Moderately</field>
+            <field name="color">#FFFF00</field>
+        </record>
+
+        <record id="high" model="website.support.ticket.priority">
+            <field name="name">High</field>
+            <field name="color">#FFA500</field>
+        </record>
+
+        <record id="urgent" model="website.support.ticket.priority">
+            <field name="name">Urgent</field>
+            <field name="color">#FF0000</field>
+        </record>
+        
+    </data>     
+</odoo>

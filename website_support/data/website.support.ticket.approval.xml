@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="no_approval_required" model="website.support.ticket.approval">
+            <field name="name">No Approval Required</field>
+        </record>
+
+        <record id="awaiting_approval" model="website.support.ticket.approval">
+            <field name="name">Awaiting Approval</field>
+        </record>
+
+        <record id="approval_accepted" model="website.support.ticket.approval">
+            <field name="name">Approval Accepted</field>
+        </record>
+
+        <record id="approval_rejected" model="website.support.ticket.approval">
+            <field name="name">Approval Rejected</field>
+        </record>
+
+        
+    </data>     
+</odoo>

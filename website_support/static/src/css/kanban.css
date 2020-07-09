@@ -1,0 +1,9 @@
+.o_kanban_view.o_kanban_grouped .o_kanban_record {
+  overflow: hidden;
+  max-height: 250px;
+  transition: max-height 1s;
+}
+
+.o_kanban_view.o_kanban_grouped .o_kanban_record:hover {
+  max-height: 1000px;
+}

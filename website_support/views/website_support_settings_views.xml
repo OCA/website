@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website_support_settings_view_form" model="ir.ui.view">
+        <field name="name">website.support.settings form view</field>
+        <field name="model">website.support.settings</field>
+        <field name="arch" type="xml">
+            <form class="oe_form_configuration">
+                <header>
+                    <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                    <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                </header>
+                <group>
+                    <h2>Email Template Settings</h2>
+                    <field name="change_user_email_template_id" context="{'default_model':'website.support.ticket'}"/>
+                    <field name="staff_reply_email_template_id" context="{'default_model':'website.support.ticket.compose'}"/>
+                    <h2>Website Form Settings</h2>
+                    <field name="allow_website_priority_set"/>
+                    <field name="max_ticket_attachments"/>
+                    <field name="max_ticket_attachment_filesize"/>
+                    <field name="google_recaptcha_active"/>
+                    <field name="google_captcha_client_key"/>
+                    <field name="google_captcha_secret_key"/>
+                    <h2>Ticket Settings</h2>
+                    <field name="email_default_category_id"/>
+                    <field name="auto_send_survey"/>
+                    <h2>Misc Settings</h2>
+                    <field name="allow_user_signup"/>
+                    <field name="business_hours_id"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="website_support_settings_action" model="ir.actions.act_window">
+        <field name="name">Support Ticket Settings</field>
+        <field name="res_model">website.support.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+    </record>
+
+</odoo>

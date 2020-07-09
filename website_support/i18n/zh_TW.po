@@ -1,0 +1,2073 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_support
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-20 07:54+0000\n"
+"PO-Revision-Date: 2018-07-20 07:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_reply_wrapper
+msgid "\n"
+"                ${object.body|safe}\n"
+"                <hr/>\n"
+"                % if object.ticket_id.portal_access_key :\n"
+"                    <b>View Ticket Online:</b> <a href=\"/support/portal/ticket/view/${object.ticket_id.portal_access_key}\">here</a><br/>\n"
+"                % endif\n"
+"                <b>Ticket Number:</b> ${object.ticket_id.ticket_number or object.ticket_id.id}<br/>\n"
+"                <b>Ticket Category:</b> ${object.ticket_id.category_id.name or ''}<br/>\n"
+"                % if object.ticket_id.planned_time_format :\n"
+"                    <b>Planned Date:</b> ${object.ticket_id.planned_time_format}<br/>\n"
+"                % endif\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.ticket_id.description|safe}\n"
+"            \n"
+"            "
+msgstr "\n"
+"                ${object.body|safe}\n"
+"                <hr/>\n"
+"                % if object.ticket_id.portal_access_key :\n"
+"                    <b>線上檢視：</b> <a href=\"/support/portal/ticket/view/${object.ticket_id.portal_access_key}\">點這裡</a><br/>\n"
+"                % endif\n"
+"                <b>單號：</b> ${object.ticket_id.ticket_number or object.ticket_id.id}<br/>\n"
+"                <b>類別：</b> ${object.ticket_id.category_id.name or ''}<br/>\n"
+"                % if object.ticket_id.planned_time_format :\n"
+"                    <b>預計處理日期：</b> ${object.ticket_id.planned_time_format}<br/>\n"
+"                % endif\n"
+"                <b>內容描述：</b><br/>\n"
+"                ${object.ticket_id.description|safe}\n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_approval
+msgid "\n"
+"                % if object.person_name :\n"
+"                    <p>Dear ${object.person_name},</p>\n"
+"                    <br/>\n"
+"                % endif\n"
+"\n"
+"                <p>Approval is required before we can proceed with this support request, please click the link below to accept</p>\n"
+"                <br/>\n"
+"                <p><a href=\"${object.approve_url}\" style=\"color:green\">Approve</a> | <a href=\"${object.disapprove_url}\" style=\"color:red\">Don't Approve</a></p>\n"
+"\n"
+"            \n"
+"            "
+msgstr "\n"
+"                % if object.person_name :\n"
+"                    <p>${object.person_name} 您好，</p>\n"
+"                    <br/>\n"
+"                % endif\n"
+"\n"
+"                <p>我們需要得到您的核可之後，才能繼續處理下列支援需求，煩請您點下方連結核可。</p>\n"
+"                <br/>\n"
+"                <p><a href=\"${object.approve_url}\" style=\"color:green\">核可</a>｜<a href=\"${object.disapprove_url}\" style=\"color:red\">拒絕</a></p>\n"
+"\n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_new
+msgid "\n"
+"                % if object.person_name :\n"
+"                    <p>Dear ${object.person_name},</p>\n"
+"                % endif\n"
+"                <p>Thank you for submitting a support ticket to us, we will get back to your shortly</p>\n"
+"                <hr/>\n"
+"                <b>View Ticket Online:</b> <a href=\"/support/portal/ticket/view/${object.portal_access_key}\">here</a><br/>\n"
+"                <b>Ticket Number:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>Ticket Category:</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+msgstr "\n"
+"                % if object.person_name :\n"
+"                    <p>${object.person_name} 您好，</p>\n"
+"                % endif\n"
+"                <p>已經收到您提出的支援要求，我們會在最短的時間回您訊息。</p>\n"
+"                <hr/>\n"
+"                <b>線上檢視：</b> <a href=\"/support/portal/ticket/view/${object.portal_access_key}\">點這裡</a><br/>\n"
+"                <b>單號：</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>類別：</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>描述：</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_survey
+msgid "\n"
+"                % if object.person_name :\n"
+"                    <p>Dear ${object.person_name},</p>\n"
+"                % endif\n"
+"                <p>We would like to get your feedback on the support</p>\n"
+"                <p><a href=\"_survey_url_\">here</a></p>\n"
+"                <hr/>\n"
+"                <b>Ticket Number:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>Ticket Category:</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.description|safe}\n"
+"            \n"
+"            "
+msgstr "\n"
+"                % if object.person_name :\n"
+"                    <p>${object.person_name} 您好，</p>\n"
+"                % endif\n"
+"                <p>我們希望能知道您對這次服務的評價，</p>\n"
+"                <p><a href=\"_survey_url_\">點這裡評價</a></p>\n"
+"                <hr/>\n"
+"                <b>單號：</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>類別：</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>描述：</b><br/>\n"
+"                ${object.description|safe}\n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_closed
+msgid "\n"
+"                <p>Dear ${object.person_name},</p>\n"
+"                <p>Your support ticket has been closed by our staff, here is the final comment</p>\n"
+"                <p>${object.close_comment or ''}</p>\n"
+"                <hr/>\n"
+"                <b>Ticket Number:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>Ticket Category:</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+msgstr "\n"
+"                <p>${object.person_name} 您好，</p>\n"
+"                <p>您的支援要求已經處理完成，下方是我們最新的更新內容：</p>\n"
+"                <p>${object.close_comment or ''}</p>\n"
+"                <hr/>\n"
+"                <b>單號：</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>類別：</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>描述：</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.new_support_ticket_category_change
+msgid "\n"
+"                <p>Dear ${object.person_name},</p>\n"
+"                <p>Your support ticket has been updated and is now in the category '${object.category_id.name}' </p>\n"
+"                <hr/>\n"
+"                <b>Ticket Number:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>Ticket Category:</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+msgstr "\n"
+"                <p>${object.person_name} 您好，</p>\n"
+"                <p>您的支援要求已被我們歸類到「${object.category_id.name}」這個類別裡，特此通知。</p>\n"
+"                <hr/>\n"
+"                <b>單號：</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>類別：</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>描述：</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_sla_alert
+msgid "\n"
+"                <p>Dear _user_name_,</p>\n"
+"                %if object.sla_timer > 0:\n"
+"                    <p>You have ${object.sla_timer_format} hours remaining for this ticket</p>\n"
+"                %endif\n"
+"                %if object.sla_timer < 0:\n"
+"                    <p>The SLA is currently ${object.sla_timer_format} hours overdue</p>\n"
+"                %endif\n"
+"                <p>Person Name: ${object.person_name}</p>\n"
+"                <p>Category: ${object.category_id.name}</p>\n"
+"                <p>Subject: ${object.subject}</p>\n"
+"                <p>${object.description|safe}</p>\n"
+"            \n"
+"            "
+msgstr "\n"
+"                <p>Hi _user_name_,</p>\n"
+"                %if object.sla_timer > 0:\n"
+"                    <p>這個支援服務要求還剩 ${object.sla_timer_format} 小時。</p>\n"
+"                %endif\n"
+"                %if object.sla_timer < 0:\n"
+"                    <p>服務協議為 ${object.sla_timer_format} 小時過期。</p>\n"
+"                %endif\n"
+"                <p>客戶：${object.person_name}</p>\n"
+"                <p>類別：${object.category_id.name}</p>\n"
+"                <p>標題：${object.subject}</p>\n"
+"                <p>${object.description|safe}</p>\n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.new_support_ticket_category
+msgid "\n"
+"                <p>Dear _user_name_,</p>\n"
+"                <p>A new support ticket has been created in a category that you follow</p>\n"
+"                <p>Person Name: ${object.person_name}</p>\n"
+"                <p>Category: ${object.category_id.name}</p>\n"
+"                <p>Subject: ${object.subject}</p>\n"
+"                <p>${object.description|safe}</p>\n"
+"                <p>Click <a href=\"_ticket_url_\">here</a> to view this support ticket online</p>\n"
+"            \n"
+"            "
+msgstr "\n"
+"                <p>Hi _user_name_,</p>\n"
+"                <p>在您關注的類別中，剛剛有新的支援服務要求建立了。</p>\n"
+"                <p>客戶：${object.person_name}</p>\n"
+"                <p>類別：${object.category_id.name}</p>\n"
+"                <p>標題：${object.subject}</p>\n"
+"                <p>${object.description|safe}</p>\n"
+"                <p><a href=\"_ticket_url_\">點這裡</a>線上查看支援服務內容</p>\n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_approval_user
+msgid "\n"
+"                <p>Dear _user_name_,</p>\n"
+"                <p>A support ticket approval rating has changed</p>\n"
+"                <p>Person Name: ${object.person_name}</p>\n"
+"                <p>Category: ${object.category_id.name}</p>\n"
+"                <p>Subject: ${object.subject}</p>\n"
+"                <p>Approval: ${object.approval_id.name}</p>\n"
+"                <p>${object.description|safe}</p>\n"
+"                <p>Click <a href=\"_ticket_url_\">here</a> to view this support ticket online</p>\n"
+"            \n"
+"            "
+msgstr "\n"
+"                <p>Hi _user_name_,</p>\n"
+"                <p>已經收到客戶的審查核可通知。</p>\n"
+"                <p>客戶：${object.person_name}</p>\n"
+"                <p>類別： ${object.category_id.name}</p>\n"
+"                <p>標題：${object.subject}</p>\n"
+"                <p>審核：${object.approval_id.name}</p>\n"
+"                <p>${object.description|safe}</p>\n"
+"                <p><a href=\"_ticket_url_\">點這裡</a>線上查看支援服務內容</p>\n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_user_change
+msgid "\n"
+"                <p>Dear _user_name_,</p>\n"
+"                <p>A support ticket has been assigned to you here are the details</p>\n"
+"                <hr/>\n"
+"                <b>Ticket Number:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>Ticket Category:</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+msgstr "\n"
+"                <p>Hi _user_name_,</p>\n"
+"                <p>您已被指派處理一個支援服務要求, 下方是詳細內容。</p>\n"
+"                <hr/>\n"
+"                <b>單號：</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>類別：</b> \n"
+"                % if object.category_id.name :\n"
+"                    ${object.category_id.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>描述：</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_reply_wrapper
+msgid "${object.subject}"
+msgstr "${object.subject}"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_close_ticket_email_template_id
+msgid "(OBSOLETE)Close Ticket Email Template"
+msgstr "(OBSOLETO)Plantilla de correo de cierre de ticket"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "1 Star"
+msgstr "1 顆星"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "2 Star"
+msgstr "2 顆星"
+
+#. module: website_support
+#: selection:website.support.sla.response,countdown_condition:0
+msgid "24 Hours"
+msgstr "24 小時"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "3 Star"
+msgstr "3 顆星"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "4 Star"
+msgstr "4 顆星"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "5 Star"
+msgstr "5 顆星"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "<b>Add Comment</b><br/>"
+msgstr "<b>新增評語</b><br/>"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_reporting
+msgid "<b>All Time</b>"
+msgstr "<b>所有時間</b>"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "<b>Category</b>"
+msgstr "<b>類別</b>"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_reporting
+msgid "<b>Last 30 Days</b><br/>"
+msgstr "<b>一個月前</b><br/>"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_reporting
+msgid "<b>Last 7 Days</b><br/>"
+msgstr "<b>一星期前</b><br/>"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "<br/>\n"
+"                    <b>Description</b><br/>"
+msgstr "<br/>\n"
+"                    <b>描述</b><br/>"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "<br/>\n"
+"                    <b>State</b>"
+msgstr "<br/>\n"
+"                    <b>狀態</b>"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "<br/>\n"
+"                    <br/>\n"
+"                    <b>Conversation History</b><br/>"
+msgstr "<br/>\n"
+"                    <br/>\n"
+"                    <b>對話記錄</b><br/>"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_user_change
+msgid "A Support Ticket has been assigned to you"
+msgstr "您已被指派處理一個支援服務要求"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Add Attachments"
+msgstr "新增附件"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_additional_field_ids
+msgid "Additional Fields"
+msgstr "附加欄位"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_alert_time
+msgid "Alert Time"
+msgstr "提醒時間"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "All"
+msgstr "全部"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_allow_user_signup
+msgid "Allow User Signup"
+msgstr "允許用戶登錄"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_allow_website_priority_set
+msgid "Allow Website Priority Set"
+msgstr "允許前台網站設定優先等級"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_settings_view_form
+msgid "Apply"
+msgstr "套用"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_approval
+msgid "Approval"
+msgstr "核可"
+
+#. module: website_support
+#: model:website.support.ticket.approval,name:website_support.approval_accepted
+#: model:website.support.ticket.state,name:website_support.website_ticket_state_approval_accepted
+msgid "Approval Accepted"
+msgstr "收到客戶核可"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_message
+msgid "Approval Message"
+msgstr "核可訊息"
+
+#. module: website_support
+#: model:website.support.ticket.approval,name:website_support.approval_rejected
+#: model:website.support.ticket.state,name:website_support.website_ticket_state_approval_rejected
+msgid "Approval Rejected"
+msgstr "拒絕"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approve_url
+msgid "Approve URL"
+msgstr "核可網址"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_user_id
+msgid "Assigned User"
+msgstr "指派由"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_attachment_filename
+msgid "Attachment Filename"
+msgstr "附件檔名"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_attachment
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Attachments"
+msgstr "附件"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_auto_send_survey
+msgid "Auto Send Survey"
+msgstr "自動送出審評請求"
+
+#. module: website_support
+#: model:website.support.ticket.approval,name:website_support.awaiting_approval
+#: model:website.support.ticket.state,name:website_support.website_ticket_state_awaiting_approval
+msgid "Awaiting Approval"
+msgstr "等待核可"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.account_create
+msgid "Back to Login"
+msgstr "返回登入畫面"
+
+#. module: website_support
+#: model:website.support.ticket.category,name:website_support.website_support_billing_issues
+msgid "Billing Issues"
+msgstr "付費需求"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_email_template_preview_built_in
+#: model:ir.model.fields,field_description:website_support.field_mail_template_built_in
+msgid "Built in"
+msgstr "建立於"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_business_hours_id
+msgid "Business Hours"
+msgstr "工作時間"
+
+#. module: website_support
+#: selection:website.support.sla.response,countdown_condition:0
+msgid "Business Only"
+msgstr "僅限工作時間"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_by
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "By"
+msgstr "Por"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_res_partner_stp_ids
+#: model:ir.model.fields,help:website_support.field_res_users_stp_ids
+msgid "Can view support tickets from other contacts"
+msgstr "可以從其他聯絡人資訊，查看支援要求訊息"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_settings_view_form
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_close_view_form
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_compose_view_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_ticket_categories_menu
+msgid "Categories"
+msgstr "類別"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_category
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_search
+msgid "Category"
+msgstr "類別"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_name
+msgid "Category Name"
+msgstr "類別名稱"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_time_ids
+msgid "Category Response Times (Working Hours)"
+msgstr "這個類別的反應時間 (工作時間)"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_users_cat_user_ids
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_cat_user_ids
+msgid "Category Users"
+msgstr "負責工程師"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "Change Requests"
+msgstr "變更支援需求"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_change_user_email_template_id
+msgid "Change User Email Template"
+msgstr "變更用戶郵件範本"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_channel
+msgid "Channel"
+msgstr "管道"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_comment
+msgid "Close Comment"
+msgstr "結案記錄"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_date
+msgid "Close Date"
+msgstr "結案日期"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_message
+msgid "Close Message"
+msgstr "結案訊息"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_close_view_form
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Close Ticket"
+msgstr "結案"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_time
+msgid "Close Time"
+msgstr "結案時間"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_closed_by_id
+msgid "Closed By"
+msgstr "結案由"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_color
+msgid "Color"
+msgstr "顏色"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_survey_page
+msgid "Comment"
+msgstr "評語"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_res_company
+msgid "Companies"
+msgstr "公司"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.account_create
+msgid "Confirm Password"
+msgstr "確認密碼"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_res_partner
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_partner_id
+msgid "Contact"
+msgstr "聯絡人"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_ticket_contact_ids
+msgid "Contact Submitted Tickets"
+msgstr "由聯絡人創建的支援要求"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_reporting
+msgid "Contact Submitted Tickets (Top 5)"
+msgstr "創建支援要求客戶排名（前五）"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_ticket_contact_month_ids
+msgid "Contact Submitted Tickets Month"
+msgstr "創建支援要求客戶排名（月）"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_ticket_contact_week_ids
+msgid "Contact Submitted Tickets Week"
+msgstr "創建支援要求客戶排名（週）"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_partner_ids
+msgid "Contacts"
+msgstr "聯絡人"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_content
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_content
+msgid "Content"
+msgstr "內容"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_conversation_history
+msgid "Conversation History"
+msgstr "對話記錄"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_count
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_count
+msgid "Count"
+msgstr "計時"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_countdown_condition
+msgid "Countdown Condition"
+msgstr "計時條件"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "Create Account"
+msgstr "建立帳號"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_graph
+msgid "Create Date"
+msgstr "建立日期"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_create_user_id
+msgid "Create User"
+msgstr "客戶名稱"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_help_page_action
+msgid "Create a help page"
+msgstr "建立支援頁面"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_help_groups_action
+msgid "Create a help page group"
+msgstr "建立支援頁面群組"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_sla_action
+msgid "Create new SLA"
+msgstr "建立新的服務標準協議"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_categories_action
+msgid "Create new category"
+msgstr "建立新的類別"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_department_action
+msgid "Create new department"
+msgstr "建立新部門"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_subcategory_action
+msgid "Create new sub category"
+msgstr "建立新的子類別"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_states_action
+msgid "Create support ticket state"
+msgstr "建立新的服務狀態"
+
+#. module: website_support
+#: model:res.groups,comment:website_support.support_group
+msgid "Created an account through the website, has no portal (/web) access"
+msgstr "通過網站建立個帳號，但沒有網站訪問權限"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_tag_create_uid
+msgid "Created by"
+msgstr "建立由"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_tag_create_date
+msgid "Created on"
+msgstr "建立於"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_settings_allow_website_priority_set
+msgid "Cusomters can set the priority of a ticket when submitting via the website form\n"
+"Partner Only = logged in user"
+msgstr "Los clientes pueden establecer la prioridad de un ticket cuando lo den de alta desde la página web\n"
+"僅合作夥伴=登錄用戶"
+
+#. module: website_support
+#: selection:website.support.ticket.message,by:0
+msgid "Customer"
+msgstr "客戶"
+
+#. module: website_support
+#: model:website.support.ticket.state,name:website_support.website_ticket_state_customer_closed
+msgid "Customer Closed"
+msgstr "由客戶結案"
+
+#. module: website_support
+#: model:website.support.ticket.state,name:website_support.website_ticket_state_customer_replied
+msgid "Customer Replied"
+msgstr "客戶回覆"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_parent_menu
+msgid "Customer Support"
+msgstr "客戶服務"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "Date"
+msgstr "日期"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_wsd_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_wsd_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_wsd_month_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_wsd_week_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_wsd_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_wsd_month_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_wsd_week_id
+msgid "Department"
+msgstr "部門"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_department_menu
+msgid "Departments"
+msgstr "部門"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_description
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_description
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Description"
+msgstr "描述"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_disapprove_url
+msgid "Disapprove URL"
+msgstr "拒絕網址"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_tag_display_name
+msgid "Display Name"
+msgstr "顯示姓名"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_email
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_email
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+#: selection:website.support.sla.alert,type:0
+msgid "Email"
+msgstr "郵件"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_ids
+msgid "Email Alerts"
+msgstr "郵件警示"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_email_default_category_id
+msgid "Email Default Category"
+msgstr "預設郵件通道"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_mail_template
+msgid "Email Templates"
+msgstr "郵件範本"
+
+#. module: website_support
+#: selection:website.support.settings,allow_website_priority_set:0
+msgid "Everyone"
+msgstr "每位"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_extra_field_ids
+msgid "Extra Details"
+msgstr "其他內容"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Extra Fields"
+msgstr "其他欄位"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_ids
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "Feedback"
+msgstr "回應"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_average
+msgid "Feedback Average Rating"
+msgstr "回應平均值"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_count
+msgid "Feedback Count"
+msgstr "回應數量"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_feedback_rating
+msgid "Feedback Rating"
+msgstr "回應評分"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_feedback_text
+msgid "Feedback Text"
+msgstr "回應內容"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "From"
+msgstr "從"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_google_recaptcha_active
+msgid "Google reCAPTCHA Active"
+msgstr "Google reCAPTCHA Active"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_group_id
+msgid "Group"
+msgstr "團隊"
+
+#. module: website_support
+#. openerp-web
+#: code:addons/website_support/static/src/js/website_support.editor.js:61
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_name
+#, python-format
+msgid "Help Group"
+msgstr "服務團隊"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_help_groups_menu
+msgid "Help Groups"
+msgstr "服務團隊"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_hp_id
+msgid "Help Page"
+msgstr "服務頁面"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_help_page_menu
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "Help Pages"
+msgstr "服務頁面"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.high
+msgid "High"
+msgstr "高"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_id_7298
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_id_7369
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_tag_id
+msgid "ID"
+msgstr "編號"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_states_unattended
+msgid "If ticked, tickets in this state will appear by default"
+msgstr "如果勾選，將以此狀態做為支援要求的預設值"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_unattended
+msgid "In 'Open' state or 'Customer Replied' state taken into consideration name changes"
+msgstr "在「開放」或「客戶回复」狀態下考慮名稱更改"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_sla_alert_ids
+msgid "Keep record of SLA alerts sent so we do not resend them"
+msgstr "保留發送服務協議記錄的警訊，我們不會再重新發送"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_name
+msgid "Label"
+msgstr "描述"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_tag___last_update
+msgid "Last Modified on"
+msgstr "最後更新於"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_tag_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_write_uid
+msgid "Last Updated by"
+msgstr "最後更新"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_tag_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_write_date
+msgid "Last Updated on"
+msgstr "最後更新"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.low
+msgid "Low"
+msgstr "低"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_template_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_mail_template_id
+msgid "Mail Template"
+msgstr "郵件範本"
+
+#. module: website_support
+#: model:website.support.department.role,name:website_support.website_support_department_manager
+msgid "Manager"
+msgstr "主管"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_manager_ids
+msgid "Managers"
+msgstr "主管"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_max_ticket_attachment_filesize
+msgid "Max Ticket Attachment Filesize (KB)"
+msgstr "最大附加檔案大小（KB）"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_max_ticket_attachments
+msgid "Max Ticket Attachments"
+msgstr "最多附加檔案數量"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_attachment_ids
+msgid "Media Attachments"
+msgstr "音訊附加檔案"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "Message"
+msgstr "訊息"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_body
+msgid "Message Body"
+msgstr "訊息內容"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.moderately
+msgid "Moderately"
+msgstr "小急"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "My Support Tickets"
+msgstr "我的支援要求清單"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "My Tickets"
+msgstr "我的支援要求"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_name
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Name"
+msgstr "姓名"
+
+#. module: website_support
+#. openerp-web
+#: code:addons/website_support/static/src/js/website_support.editor.js:60
+#: model:ir.ui.view,arch_db:website_support.content_new_help
+#, python-format
+msgid "New Help Group"
+msgstr "新增服務團隊"
+
+#. module: website_support
+#. openerp-web
+#: code:addons/website_support/static/src/js/website_support.editor.js:28
+#: model:ir.ui.view,arch_db:website_support.content_new_help
+#, python-format
+msgid "New Help Page"
+msgstr "新增服務頁面"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.new_support_ticket_category
+msgid "New Support Ticket for your category"
+msgstr "您的類別裡有一個新的支援要求"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_new_support_ticket_count
+#: model:ir.model.fields,field_description:website_support.field_res_users_new_support_ticket_count
+msgid "New Ticket Count"
+msgstr "新支援要求統計"
+
+#. module: website_support
+#: model:website.support.ticket.approval,name:website_support.no_approval_required
+msgid "No Approval Required"
+msgstr "無需核可"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_tag_action
+msgid "No Support Tickets Tags found"
+msgstr "沒有找到標籤"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_action
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_action_partner
+msgid "No Support Tickets found"
+msgstr "沒有找到支援要求"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_priority_action
+msgid "No Support Tickets priorities found"
+msgstr "沒有找到支援要求的優先等級"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.normal
+msgid "Normal"
+msgstr "一般"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_page_count
+msgid "Number of Pages"
+msgstr "頁面數量"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_sla_alert_alert_time
+msgid "Number of hours before or after SLA expiry to send alert"
+msgstr "在服務協議時間到期前後幾個小時，發送警訊"
+
+#. module: website_support
+#: model:website.support.ticket.state,name:website_support.website_ticket_state_open
+msgid "Open"
+msgstr "開啟"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Open / Reply"
+msgstr "開啟 / 回覆"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_name
+msgid "Page Name"
+msgstr "頁面名稱"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_url
+msgid "Page URL"
+msgstr "頁面網址"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_page_ids
+msgid "Pages"
+msgstr "頁面"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_parent_category_id
+msgid "Parent Category"
+msgstr "上層類別"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_parent_company_id
+msgid "Parent Company"
+msgstr "母公司"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_partner_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_partner_id
+msgid "Partner"
+msgstr "合作夥伴"
+
+#. module: website_support
+#: selection:website.support.settings,allow_website_priority_set:0
+msgid "Partner Only"
+msgstr "僅限合作夥伴"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.account_create
+msgid "Password"
+msgstr "密碼"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Pause SLA"
+msgstr "暫停計時"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_person_name
+msgid "Person Name"
+msgstr "姓名"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_planned_time
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_planned_time
+msgid "Planned Time"
+msgstr "計劃時間"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_planned_time_format
+msgid "Planned Time Format"
+msgstr "計劃時間格式"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_survey_page
+msgid "Please give us feedback on our support service"
+msgstr "請對我們的服務給予評語"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_portal_access_key
+msgid "Portal Access Key"
+msgstr "訪問密碼"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_ticket_priority_menu
+msgid "Priorities"
+msgstr "優先等級"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_id
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Priority"
+msgstr "優先等級"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_name
+msgid "Priority Name"
+msgstr "優先等級名稱"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_partner_ids
+msgid "Privilege Contacts"
+msgstr "授權使用者"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_group_ids
+msgid "Privilege Groups"
+msgstr "授權群組"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_website_published
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_website_published
+msgid "Published"
+msgstr "發佈"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+msgid "Rating"
+msgstr "評分"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Reply"
+msgstr "回覆"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_reporting
+msgid "Report"
+msgstr "報告"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "Reporting"
+msgstr "報告"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Request Approval"
+msgstr "請求核可"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_response_time
+msgid "Response Time"
+msgstr "反應時間"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Resume SLA"
+msgstr "繼續計時"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_role
+msgid "Role"
+msgstr "角色"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_sla_id
+#: model:ir.model.fields,field_description:website_support.field_res_users_sla_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_vsa_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_vsa_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_sla_id
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "SLA"
+msgstr "服務協議時間"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_sla_active
+msgid "SLA Active"
+msgstr "啟用服務協議時間"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_sla_alert
+msgid "SLA Alert"
+msgstr "服務協議時間警訊"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_sla_alert_ids
+msgid "SLA Alerts"
+msgstr "服務協議時間警訊"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_sla_response_category_id
+msgid "SLA Response Category"
+msgstr "服務協議時間反應類別"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_sla_timer
+msgid "SLA Time Remaining"
+msgstr "剩餘服務協議時間"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_sla_timer_format
+msgid "SLA Timer Format"
+msgstr "服務協議時間計時格式"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_sla_menu
+msgid "SLA's"
+msgstr "服務協議時間"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "Search"
+msgstr "搜尋"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_compose_view_form
+msgid "Send"
+msgstr "發送"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Send Survey"
+msgstr "發送問卷調查"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_email_template_preview_built_in
+#: model:ir.model.fields,help:website_support.field_mail_template_built_in
+msgid "Seperates email templates created by modules and ones created by users"
+msgstr "將模組創立的郵件範本和使用者自行建立的做區分"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_sequence
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_sequence
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_sequence
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_sequence
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_sequence
+msgid "Sequence"
+msgstr "編號"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_config_parent_menu
+#: model:ir.ui.menu,name:website_support.website_support_settings_menu
+msgid "Settings"
+msgstr "設置"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.account_create
+msgid "Sign up"
+msgstr "註冊"
+
+#. module: website_support
+#: selection:website.support.ticket.message,by:0
+msgid "Staff"
+msgstr "服務工程師"
+
+#. module: website_support
+#: model:website.support.ticket.state,name:website_support.website_ticket_state_staff_closed
+msgid "Staff Closed"
+msgstr "服務工程師結案"
+
+#. module: website_support
+#: model:website.support.ticket.state,name:website_support.website_ticket_state_staff_replied
+msgid "Staff Replied"
+msgstr "服務工程師回覆"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_staff_reply_email_template_id
+msgid "Staff Reply Email Template"
+msgstr "服務工程師回信範本"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_state
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "State"
+msgstr "狀態"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_name
+msgid "State Name"
+msgstr "狀態名稱"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_ticket_states_menu
+msgid "States"
+msgstr "狀態"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_sub_category_ids
+#: model:ir.ui.menu,name:website_support.website_support_ticket_subcategory_menu
+msgid "Sub Categories"
+msgstr "子類別"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_sub_category_month_ids
+msgid "Sub Categories Month"
+msgstr "每月子類別"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_sub_category_week_ids
+msgid "Sub Categories Week"
+msgstr "每周子類別"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_subcategory_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_sub_category_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_wsts_id
+msgid "Sub Category"
+msgstr "子類別"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_name
+msgid "Sub Category Name"
+msgstr "子類別名稱"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_reporting
+msgid "Sub Category Usage (Top 5)"
+msgstr "每週子類別排行（前5名）"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_subject
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subject
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "Subject"
+msgstr "標題"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view
+msgid "Submit"
+msgstr "送出"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.help_page
+#: model:ir.ui.view,arch_db:website_support.support_ticket_survey_page
+msgid "Submit Feedback"
+msgstr "送出回應"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Submit Support Ticket"
+msgstr "送出支援要求"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "Submit Ticket"
+msgstr "送出支援要求"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_help_pages
+msgid "Submit a Ticket"
+msgstr "提交支援要求"
+
+#. module: website_support
+#: model:website.menu,name:website_support.website_support_ticket
+msgid "Support"
+msgstr "支援服務"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_support_comment
+msgid "Support Comment"
+msgstr "支援服務評語"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_support_email
+msgid "Support Email"
+msgstr "支援服務信箱"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_support_rating
+msgid "Support Rating"
+msgstr "支援服務評分"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_sla_action
+msgid "Support SLA"
+msgstr "支援服務協議時間"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_approval_wst_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_wst_id
+#: model:ir.ui.view,arch_db:website_support.view_partner_form_inherit_website_module
+msgid "Support Ticket"
+msgstr "支援服務要求"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_stp_ids
+#: model:ir.model.fields,field_description:website_support.field_res_users_stp_ids
+msgid "Support Ticket Access Accounts"
+msgstr "支援服務要求存取帳號"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_approval
+#: model:mail.template,subject:website_support.support_ticket_approval_user
+msgid "Support Ticket Approval (#${object.ticket_number or object.id})"
+msgstr "支援服務請求核可（#${object.ticket_number or object.id}）"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_categories_action
+msgid "Support Ticket Categories"
+msgstr "支援服務類別"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_department_action
+msgid "Support Ticket Departments"
+msgstr "支援服務部門"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_priority_action
+msgid "Support Ticket Priorities"
+msgstr "支援服務要求分級"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_settings_action
+msgid "Support Ticket Settings"
+msgstr "支援服務設置"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_states_action
+msgid "Support Ticket States"
+msgstr "支援服務狀態"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_support_ticket_string
+#: model:ir.model.fields,field_description:website_support.field_res_users_support_ticket_string
+msgid "Support Ticket String"
+msgstr "支援服務評分"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_subcategory_action
+msgid "Support Ticket Subcategory"
+msgstr "支援服務子類別"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_survey
+msgid "Support Ticket Survey (#${object.ticket_number or object.id})"
+msgstr "支援服務問卷調查（#${object.ticket_number or object.id}）"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_tag_action
+msgid "Support Ticket Tags"
+msgstr "支援服務標籤"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_action
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_action_partner
+#: model:ir.ui.menu,name:website_support.website_support_ticket_menu
+#: model:ir.ui.view,arch_db:website_support.view_partner_form_inherit_website_module
+msgid "Support Tickets"
+msgstr "支援服務要求"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_compose_action
+msgid "Support Tickets Compose"
+msgstr "撰寫支援服務要求"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_tag_name
+msgid "Tag Name"
+msgstr "標籤名稱"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_tag_ids
+#: model:ir.ui.menu,name:website_support.website_support_ticket_tag_menu
+msgid "Tags"
+msgstr "標籤"
+
+#. module: website_support
+#: model:website.support.ticket.category,name:website_support.website_support_tech_support
+msgid "Technical Support"
+msgstr "技術支援"
+
+#. module: website_support
+#: selection:website.support.ticket.subcategory.field,type:0
+msgid "Textbox"
+msgstr "文字"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_survey_thank_you
+#: model:ir.ui.view,arch_db:website_support.support_thank_you
+msgid "Thank You"
+msgstr "感謝您"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_survey_thank_you
+msgid "Thank you for you feedback about our support"
+msgstr "感謝您對本次服務支援的回應"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_states_mail_template_id
+msgid "The mail message that the customer gets when the state changes"
+msgstr "客戶在狀態更改時獲得的郵件消息"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_response_category_id
+msgid "Ticket Category"
+msgstr "類別"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_ticket_color
+msgid "Ticket Color"
+msgstr "支援服務要求顏色"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_support_ticket_count
+#: model:ir.model.fields,field_description:website_support.field_res_users_support_ticket_count
+msgid "Ticket Count"
+msgstr "支援服務要求計數"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_ticket_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_ticket_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_ticket_id
+msgid "Ticket ID"
+msgstr "支援服務要求編號"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_ticket_number
+msgid "Ticket Number"
+msgstr "支援服務要求編號"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_support_ticket_ids
+#: model:ir.model.fields,field_description:website_support.field_res_users_support_ticket_ids
+msgid "Tickets"
+msgstr "支援服務要求"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_time_to_close
+msgid "Time to close (seconds)"
+msgstr "結案時間總計（秒）"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_reporting
+msgid "Total Support Tickets:"
+msgstr "支援服務要求總計："
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_sla_alert_type
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_type
+msgid "Type"
+msgstr "類型"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_url_generated
+msgid "URL"
+msgstr "網址"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_unattended
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_unattended
+msgid "Unattended"
+msgstr "無人值守"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_search
+msgid "Unattended Tickets"
+msgstr "無人值守支援服務要求"
+
+#. module: website_support
+#: model:ir.actions.server,name:website_support.update_sla_timer_ir_actions_server
+#: model:ir.cron,cron_name:website_support.update_sla_timer
+#: model:ir.cron,name:website_support.update_sla_timer
+msgid "Update SLA Timer"
+msgstr "更新服務協議計時"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.urgent
+msgid "Urgent"
+msgstr "緊急"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_user_id
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_search
+msgid "User"
+msgstr "客戶"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_res_users
+msgid "Users"
+msgstr "客戶"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_value
+msgid "Value"
+msgstr "值"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_view_department_tickets
+msgid "View Department Tickets"
+msgstr "查看部門的支援服務要求"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_new
+msgid "We have received your support ticket '${object.subject}' and will get back to you shortly"
+msgstr "已經收到您提出的支援服務要求「${object.subject}」，我們會在最短的時間回覆您。"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_thank_you
+msgid "We will get back to you shortly"
+msgstr "我們會盡快回覆您"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_help_groups_action
+msgid "Website Help Groups"
+msgstr "支援服務群組"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_help_page_action
+msgid "Website Help Pages"
+msgstr "支援服務群組頁面"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.view_users_form_inherit_website_support
+#: model:res.groups,name:website_support.support_group
+msgid "Website Support"
+msgstr "支援服務"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket
+msgid "Website Support Ticket"
+msgstr "支援服務要求"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "You have no change requests"
+msgstr "您沒有變更支援服務要求"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_view_list
+msgid "You have no support tickets"
+msgstr "您沒有支援服務要求"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.account_create
+msgid "Your Email"
+msgstr "你的信箱"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_ticket_survey_page
+msgid "Your Feedback"
+msgstr "您的回應評論"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.account_create
+msgid "Your Name"
+msgstr "您的姓名"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_closed
+msgid "Your support ticket has been closed"
+msgstr "您的支援服務要求已經結案"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.new_support_ticket_category_change
+msgid "Your support ticket has been updated"
+msgstr "您的支援服務要求已經更新"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.account_create
+msgid "e.g. John Doe"
+msgstr "如：John Smith"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.support_submit_ticket
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_google_captcha_client_key
+msgid "reCAPTCHA Client Key"
+msgstr "reCAPTCHA Client Key"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_google_captcha_secret_key
+msgid "reCAPTCHA Secret Key"
+msgstr "reCAPTCHA Secret Key"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department
+msgid "website.support.department"
+msgstr "website.support.department"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department_contact
+msgid "website.support.department.contact"
+msgstr "website.support.department.contact"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department_role
+msgid "website.support.department.role"
+msgstr "website.support.department.role"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department_subcategory
+msgid "website.support.department.subcategory"
+msgstr "website.support.department.subcategory"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department_submit
+msgid "website.support.department.submit"
+msgstr "website.support.department.submit"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_help_groups
+msgid "website.support.help.group"
+msgstr "website.support.help.group"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_help_page
+msgid "website.support.help.page"
+msgstr "website.support.help.page"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_help_page_feedback
+msgid "website.support.help.page.feedback"
+msgstr "website.support.help.page.feedback"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_settings
+msgid "website.support.settings"
+msgstr "website.support.settings"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_sla
+msgid "website.support.sla"
+msgstr "website.support.sla"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_sla_alert
+msgid "website.support.sla.alert"
+msgstr "website.support.sla.alert"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_sla_response
+msgid "website.support.sla.response"
+msgstr "website.support.sla.response"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_approval
+msgid "website.support.ticket.approval"
+msgstr "website.support.ticket.approval"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_categories
+msgid "website.support.ticket.category"
+msgstr "website.support.ticket.category"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_close
+msgid "website.support.ticket.close"
+msgstr "website.support.ticket.close"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_compose
+msgid "website.support.ticket.compose"
+msgstr "website.support.ticket.compose"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_field
+msgid "website.support.ticket.field"
+msgstr "website.support.ticket.field"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_message
+msgid "website.support.ticket.message"
+msgstr "website.support.ticket.message"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_priority
+msgid "website.support.ticket.priority"
+msgstr "website.support.ticket.priority"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_states
+msgid "website.support.ticket.state"
+msgstr "website.support.ticket.state"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_subcategory
+msgid "website.support.ticket.subcategory"
+msgstr "website.support.ticket.subcategory"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_subcategory_field
+msgid "website.support.ticket.subcategory.field"
+msgstr "website.support.ticket.subcategory.field"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_tag
+msgid "website.support.ticket.tag"
+msgstr "website.support.ticket.tag"
+

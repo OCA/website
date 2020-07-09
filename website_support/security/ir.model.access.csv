@@ -1,0 +1,39 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_support_ticket,access website.support.ticket,model_website_support_ticket,support_staff,1,1,1,0
+access_website_support_ticket_compose,access website.support.ticket.compose,model_website_support_ticket_compose,support_staff,1,1,1,0
+access_website_support_ticket_state,support staff access website.support.ticket.state,model_website_support_ticket_state,support_staff,1,0,0,0
+access_website_support_ticket_state_maanger,support manager access website.support.ticket.state,model_website_support_ticket_state,support_manager,1,1,1,1
+access_website_support_ticket_message,access website.support.ticket.message,model_website_support_ticket_message,support_staff,1,0,1,0
+access_mail_followers_support,public access.mail.followers.support,mail.model_mail_followers,base.group_public,0,0,1,0
+access_website_support_ticket_category,support staff access website.support.ticket.category,model_website_support_ticket_category,support_staff,1,0,0,0
+access_website_support_ticket_category_manager,support manager access website.support.ticket.category,model_website_support_ticket_category,support_manager,1,1,1,1
+access_website_support_ticket_subcategory,support staff access website.support.ticket.subcategory,model_website_support_ticket_subcategory,support_staff,1,0,0,0
+access_website_support_ticket_subcategory_manager,support manager access website.support.ticket.subcategory,model_website_support_ticket_subcategory,support_manager,1,1,1,1
+access_website_support_help_group,public access website.support.help.group,model_website_support_help_group,,1,0,0,0
+access_website_support_help_group_manager,support manager access website.support.help.group,model_website_support_help_group,support_manager,1,1,1,1
+access_website_support_help_page,public access website.support.help.page,model_website_support_help_page,,1,0,0,0
+access_website_support_help_page_manager,support manager access website.support.help.page,model_website_support_help_page,support_manager,1,1,1,1
+access_website_support_help_page_feedback,public access website.support.help.page.feedback,model_website_support_help_page_feedback,base.group_public,1,0,0,0
+access_website_support_help_page_feedback_manager,support manager access website.support.help.page.feedback,model_website_support_help_page_feedback,support_manager,1,1,1,1
+access_website_support_ticket_priority,support staff access website.support.ticket.priority,model_website_support_ticket_priority,support_staff,1,0,0,0
+access_website_support_ticket_priority_manager,support manager access website.support.ticket.priority,model_website_support_ticket_priority,support_manager,1,1,1,1
+access_website_support_ticket_tag,support staff access website.support.ticket.tag,model_website_support_ticket_tag,support_staff,1,0,0,0
+access_website_support_ticket_tag_manager,support manager access website.support.ticket.tag,model_website_support_ticket_tag,support_manager,1,1,1,1
+access_website_support_ticket_close,support staff access website.support.ticket.close,model_website_support_ticket_close,support_staff,1,1,1,1
+access_website_support_ticket_approval,access website.support.ticket.approval,model_website_support_ticket_approval,support_staff,1,1,1,1
+access_website_support_department_contact,access website.support.department.contact,model_website_support_department_contact,support_manager,1,1,1,1
+access_website_support_ticket_subcategory_field,support staff access website.support.ticket.subcategory.field,model_website_support_ticket_subcategory_field,support_staff,1,0,0,0
+access_website_support_ticket_subcategory_field_manager,support manager access website.support.ticket.subcategory.field,model_website_support_ticket_subcategory_field,support_manager,1,1,1,1
+access_website_support_ticket_subcategory_field_value,access website.support.ticket.subcategory.field.value,model_website_support_ticket_subcategory_field_value,,1,0,0,0
+access_website_support_ticket_subcategory_field_value_manager,support manager access website.support.ticket.subcategory.field.value,model_website_support_ticket_subcategory_field_value,support_manager,1,1,1,1
+access_website_support_ticket_field,public access website.support.ticket.field,model_website_support_ticket_field,base.group_public,1,1,1,0
+access_website_support_ticket_field_staff,support staff access website.support.ticket.field,model_website_support_ticket_field,support_staff,1,1,1,1
+access_website_support_sla,support staff access website.support.sla,model_website_support_sla,support_staff,1,0,0,0
+access_website_support_sla_manager,support manager access website.support.sla,model_website_support_sla,support_manager,1,1,1,1
+access_website_support_sla_alert,support staff access website.support.sla.alert,model_website_support_sla_alert,support_staff,1,0,0,0
+access_website_support_sla_alert_maanger,support manager access website.support.sla.alert,model_website_support_sla_alert,support_manager,1,1,1,1
+access_ir_rule,support manager access ir.rule,base.model_ir_rule,support_manager,1,0,0,0
+access_ir_config_parameter,support manager access ir.config_parameter,base.model_ir_config_parameter,support_manager,1,0,0,0
+access_res_users,support manager access res.users,base.model_res_users,support_manager,1,0,1,0
+access_website_support_sla_rule,support manager access website.support.sla.rule,model_website_support_sla_rule,support_manager,1,1,1,1
+access_website_support_sla_rule_condition,support manager access website.support.sla.rule.condition,model_website_support_sla_rule_condition,support_manager,1,1,1,1

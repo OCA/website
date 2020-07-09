@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="website_ticket_state_open" model="website.support.ticket.state">
+            <field name="name">Open</field>
+            <field name="mail_template_id" ref="support_ticket_new"/>
+            <field name="unattended">True</field>
+        </record>
+
+        <record id="website_ticket_state_staff_replied" model="website.support.ticket.state">
+            <field name="name">Staff Replied</field>
+        </record>
+
+        <record id="website_ticket_state_customer_replied" model="website.support.ticket.state">
+            <field name="name">Customer Replied</field>
+            <field name="unattended">True</field>
+        </record>
+
+        <record id="website_ticket_state_awaiting_approval" model="website.support.ticket.state">
+            <field name="name">Awaiting Approval</field>
+        </record>
+
+        <record id="website_ticket_state_approval_accepted" model="website.support.ticket.state">
+            <field name="name">Approval Accepted</field>
+            <field name="unattended">True</field>
+        </record>
+
+        <record id="website_ticket_state_approval_rejected" model="website.support.ticket.state">
+            <field name="name">Approval Rejected</field>
+            <field name="unattended">True</field>
+        </record>
+
+        <record id="website_ticket_state_customer_closed" model="website.support.ticket.state">
+            <field name="name">Customer Closed</field>
+            <field name="mail_template_id" ref="support_ticket_closed"/>
+        </record>
+
+        <record id="website_ticket_state_staff_closed" model="website.support.ticket.state">
+            <field name="name">Staff Closed</field>
+            <field name="mail_template_id" ref="support_ticket_closed"/>
+        </record>
+        
+    </data>     
+</odoo>

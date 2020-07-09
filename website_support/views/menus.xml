@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <menuitem
+      id="website_support_parent_menu"
+      name="Customer Support"
+      web_icon="website_support,static/description/icon.png"
+      groups="support_staff"
+      sequence="40"/>
+    <menuitem id="website_support_ticket_menu" name="Support Tickets" parent="website_support_parent_menu" action="website_support_ticket_action" groups="support_staff" sequence="10"/>
+
+    <menuitem id="website_support_config_parent_menu" name="Configuration" parent="website_support_parent_menu" groups="support_manager" sequence="999"/>
+    <menuitem id="website_support_ticket_category_menu" name="Categories" parent="website_support_config_parent_menu" action="website_support_ticket_category_action" groups="support_manager" sequence="10"/>
+    <menuitem id="website_support_ticket_subcategory_menu" name="Sub Categories" parent="website_support_config_parent_menu" action="website_support_ticket_subcategory_action" groups="support_manager" sequence="20"/>
+    <menuitem id="website_support_ticket_state_menu" name="States" parent="website_support_config_parent_menu" action="website_support_ticket_state_action" groups="support_manager" sequence="30"/>
+    <menuitem id="website_support_ticket_tag_menu" name="Tags" parent="website_support_config_parent_menu" action="website_support_ticket_tag_action" groups="support_manager" sequence="40"/>
+    <menuitem id="website_support_ticket_priority_menu" name="Priorities" parent="website_support_config_parent_menu" action="website_support_ticket_priority_action" groups="support_manager" sequence="50"/>
+    <menuitem id="website_support_department_menu" name="Departments" parent="website_support_config_parent_menu" action="website_support_department_action" groups="support_manager" sequence="60"/>
+    <menuitem id="website_support_sla_menu" name="SLA's" parent="website_support_config_parent_menu" action="website_support_sla_action" groups="support_manager" sequence="70"/>
+    <menuitem id="website_support_help_group_menu" name="Help Groups" parent="website_support_config_parent_menu" action="website_support_help_group_action" groups="support_manager" sequence="80"/>
+    <menuitem id="website_support_help_page_menu" name="Help Pages" parent="website_support_config_parent_menu" action="website_support_help_page_action" groups="support_manager" sequence="90"/>
+    <menuitem id="website_support_settings_menu" name="Settings" parent="website_support_config_parent_menu" action="website_support_settings_action" groups="support_manager" sequence="100"/>
+
+</odoo>

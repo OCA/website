@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website_support_ticket_category_view_form" model="ir.ui.view">
+        <field name="name">website.support.ticket.category form view</field>
+        <field name="model">website.support.ticket.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="cat_user_ids" options="{'no_create_edit': True}" widget="many2many_tags"/>
+                    <field name="access_group_ids" options="{'no_create_edit': True}" widget="many2many_tags"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_category_view_tree" model="ir.ui.view">
+        <field name="name">website.support.ticket.category tree view</field>
+        <field name="model">website.support.ticket.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_category_action" model="ir.actions.act_window">
+        <field name="name">Support Ticket Categories</field>
+        <field name="res_model">website.support.ticket.category</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create new category</p>
+        </field>
+    </record>
+
+    <record id="sequence_supp_category_seq" model="ir.sequence">
+        <field name="name">website.support.ticket.category sequence</field>
+        <field name="code">website.support.ticket.category</field>
+        <field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+    </record>
+
+</odoo>

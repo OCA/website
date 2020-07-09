@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website_support_help_page_view_form" model="ir.ui.view">
+        <field name="name">website.support.help.page.form.view</field>
+        <field name="model">website.support.help.page</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="group_id"/>
+                    <field name="website_published"/>
+                    <field name="name"/>
+                    <field name="feedback_average"/>
+                    <field name="feedback_ids" context="{'hp_id':active_id}">
+                        <tree>
+                            <field name="feedback_rating"/>
+                            <field name="feedback_text"/>
+                        </tree>
+                    </field>
+                    <field name="content"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="website_support_help_page_view_tree" model="ir.ui.view">
+        <field name="name">website.support.help.page.tree.view</field>
+        <field name="model">website.support.help.page</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="group_id"/>
+                <field name="name"/>
+                <field name="feedback_average"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_support_help_page_action" model="ir.actions.act_window">
+      <field name="name">Website Help Pages</field>
+          <field name="res_model">website.support.help.page</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+              <p class="oe_view_nocontent_create">Create a help page</p>
+          </field>
+    </record>
+
+</odoo>

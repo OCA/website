@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="assets_backend" name="helpdesk assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/website_support/static/src/css/kanban.css"/>
+        </xpath>
+    </template>
+
+    <record id="website_support_ticket_view_form" model="ir.ui.view">
+        <field name="name">website.support.ticket form view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button type="action" name="%(website_support.website_support_ticket_compose_action)d" context="{'default_ticket_id': active_id, 'default_partner_id': partner_id, 'default_email':email, 'default_subject':subject}" string="Reply" attrs="{'invisible' :[('close_time', '!=', False )]}"/>
+                    <button type="action" name="%(website_support.website_support_ticket_compose_action)d" context="{'default_ticket_id': active_id, 'default_partner_id': partner_id, 'default_email':email, 'default_subject':subject}" string="Open / Reply" attrs="{'invisible' :[('close_time', '=', False )]}"/>
+                    <button type="object" name="open_close_ticket_wizard" string="Close Ticket" attrs="{'invisible' :[('close_time', '!=', False )]}"/>
+                    <button type="object" name="pause_sla" string="Pause SLA" attrs="{'invisible' :['|', ('sla_active', '==', False ), ('sla_id','==', False)]}"/>
+                    <button type="object" name="resume_sla" string="Resume SLA" attrs="{'invisible' :['|', ('sla_active', '!=', False ), ('sla_id','==', False)]}"/>
+                    <button type="object" name="send_survey" string="Send Survey"/>
+                    <button type="object" name="request_approval" string="Request Approval"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="subject" class="oe_edit_only"/>
+                        <h1><field name="subject"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="ticket_number"/>
+                            <field name="channel"/>
+                            <field name="priority_id"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
+                            <field name="category_id"/>
+                            <field name="sub_category_id" domain="[('parent_category_id','=',category_id)]"/>
+                            <field name="state_id"/>
+                        </group>
+                        <group>
+                            <field name="user_id" domain="[('share','=',False)]"/>
+                            <field name="partner_id"/>
+                            <field name="person_name"/>
+                            <field name="email"/>
+                            <field name="approval_id"/>
+                            <field name="support_rating" readonly="1"/>
+                            <field name="close_time"/>
+                            <field name="closed_by_id"/>
+                            <field name="support_comment" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description" widget="html"/>
+                        </page>
+                        <page string="Extra Fields">
+                            <group>
+                                <field name="extra_field_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="value"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Attachments">
+                            <group>
+                                <field name="attachment_ids">
+                                    <tree>
+                                        <field name="datas_fname"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="SLA">
+                            <group>
+                                <field name="sla_id"/>
+                                <field name="sla_active"/>
+                                <field name="sla_timer" widget="float_time"/>
+                                <field name="sla_rule_id" domain="[('vsa_id','=',sla_id)]"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_view_kanban" model="ir.ui.view">
+        <field name="name">website.support.ticket kanban view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <kanban class="o_res_partner_kanban" default_group_by="state_id" create="false">
+                <field name="subject"/>
+                <field name="priority_id"/>
+                <field name="state_id"/>
+                <field name="category_id"/>
+                <field name="description"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_res_partner_kanban">
+                            <div class="o_kanban_tags_section oe_kanban_partner_categories"/>
+                            <div class="oe_kanban_details">
+                                <strong class="oe_partner_heading"><field name="subject"/></strong>
+                                <ul>
+                                    <li t-if="record.priority_id.raw_value"><field name="priority_id"/></li>
+                                    <li t-if="record.state_id.raw_value"><field name="state_id"/></li>
+                                    <li t-if="record.category_id.raw_value"><field name="category_id"/></li>
+                                    <li t-if="record.description.raw_value"><t t-raw="record.description.raw_value"/></li>
+                                </ul>
+                                <div class="oe_kanban_partner_links"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_view_search" model="ir.ui.view">
+        <field name="name">website.support.ticket search view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="ticket_number"/>
+                <field name="subject"/>
+                <field name="tag_ids"/>
+                <field name="partner_id"/>
+                <filter string="Unattended Tickets" name="unattended_tickets" domain="[('unattended', '=', True )]" />
+                <filter name="group_by_category" string="Category" domain="[]"  context="{'group_by':'category_id'}"/>
+                <filter name="group_by_user" string="User" domain="[]"  context="{'group_by':'user_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_view_graph" model="ir.ui.view">
+        <field name="name">website.support.ticket graph view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <graph stacked="False">
+                <field name="create_date" interval="day" string="Create Date"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_view_tree" model="ir.ui.view">
+        <field name="name">website.support.ticket tree view</field>
+        <field name="model">website.support.ticket</field>
+        <field name="arch" type="xml">
+            <tree colors="black:ticket_color==False">
+                <field name="create_user_id" invisible="True"/>
+                <field name="ticket_color" invisible="True"/>
+                <field name="create_date"/>
+                <field name="ticket_number"/>
+                <field name="priority_id"/>
+                <field name="parent_company_id"/>
+                <field name="person_name"/>
+                <field name="category_id"/>
+                <field name="state_id"/>
+                <field name="subject"/>
+                <field name="sla_active"/>
+                <field name="sla_timer" widget="float_time"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_action_partner" model="ir.actions.act_window">
+        <field name="name">Support Tickets</field>
+        <field name="res_model">website.support.ticket</field>
+        <field name="view_mode">tree,kanban,form,graph</field>
+        <field name="help" type="html">
+            <p>
+                No Support Tickets found
+            </p>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_action" model="ir.actions.act_window">
+        <field name="name">Support Tickets</field>
+        <field name="res_model">website.support.ticket</field>
+        <field name="view_mode">tree,kanban,form,graph</field>
+        <field name="context">{"search_default_unattended_tickets":1, 'auto_refresh': 1, 'default_create_user_id': uid}</field>
+        <field name="help" type="html">
+            <p>
+                No Support Tickets found
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website_support_ticket_tag_view_tree" model="ir.ui.view">
+        <field name="name">website.support.ticket.tab.tree.view</field>
+        <field name="model">website.support.ticket.tag</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_tag_action" model="ir.actions.act_window">
+        <field name="name">Support Ticket Tags</field>
+        <field name="res_model">website.support.ticket.tag</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p>
+                No Support Tickets Tags found
+            </p>
+        </field>
+    </record>
+
+</odoo>

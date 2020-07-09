@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website_support_help_group_view_form" model="ir.ui.view">
+        <field name="name">website.support.help.group form view</field>
+        <field name="model">website.support.help.group</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="website_published"/>
+                    <field name="name"/>
+                    <field name="image"/>
+                    <field name="group_ids" widget="many2many_tags"/>
+                    <field name="page_ids" context="{'group_id':active_id}">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="feedback_average"/>
+                            <field name="feedback_count"/>
+                            <field name="website_published"/>
+                        </tree>
+                    </field>
+                </group>
+            </form>
+          </field>
+      </record>
+
+    <record id="website_support_help_group_view_tree" model="ir.ui.view">
+        <field name="name">website.support.help.group tree view</field>
+        <field name="model">website.support.help.group</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="page_count"/>
+                <field name="website_published"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_support_help_group_action" model="ir.actions.act_window">
+        <field name="name">Website Help Groups</field>
+        <field name="res_model">website.support.help.group</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create a help page group</p>
+        </field>
+    </record>
+
+    <record id="website_support_help_group_seq" model="ir.sequence">
+        <field name="name">website.support.help.group sequence</field>
+        <field name="code">website.support.help.group</field>
+        <field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+    </record>
+
+    <record id="sequence_website_support_help_page_seq" model="ir.sequence">
+        <field name="name">website.support.help.page sequence</field>
+        <field name="code">website.support.help.page</field>
+        <field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+    </record>
+
+</odoo>

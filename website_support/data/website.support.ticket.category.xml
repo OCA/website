@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="website_support_tech_support" model="website.support.ticket.category">
+            <field name="name">Technical Support</field>
+        </record>
+
+        <record id="website_support_billing_issues" model="website.support.ticket.category">
+            <field name="name">Billing Issues</field>
+        </record>
+            
+    </data>     
+</odoo>

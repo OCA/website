@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="update_sla_timer" model="ir.cron">
+            <field name="name">Update SLA Timer</field>
+            <field name="model_id" ref="website_support.model_website_support_ticket"/>
+            <field name="state">code</field>
+            <field name="code">model.update_sla_timer()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="True" />
+            <field name="doall" eval="True" />
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="view_partner_form_inherit_website_module" model="ir.ui.view">
+        <field name="name">res.partner.support.ticket.buttons</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="priority" eval="60"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_inline oe_stat_button" type="action" name="%(website_support_ticket_action_partner)d" 
+                    context="{'search_default_partner_id': active_id}"
+                    icon="fa-ticket">
+                    <field name="support_ticket_string" string="Support Tickets" widget="statinfo"/>
+                </button>
+            </xpath>
+            <notebook position="inside">
+                <page string="Support Ticket">
+                    <group>
+                        <field name="dedicated_support_user_id"/>
+                        <field name="sla_id"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>

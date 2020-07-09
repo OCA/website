@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website_support_ticket_compose_view_form" model="ir.ui.view">
+        <field name="name">website.support.ticket.compose.form.view</field>
+        <field name="model">website.support.ticket.compose</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="ticket_id" invisible="True"/>
+                    <field name="approval" invisible="True"/>
+                    <field name="email"/>
+                    <field name="subject"/>
+                    <field name="planned_time" attrs="{'invisible':[('approval','=', False)], 'required': [('approval','=', True)]}"/>
+                </group>
+                <field name="body" widget="html"/>
+                <group>
+                    <field name="template_id" context="{'default_model':'website.support.ticket', 'default_body_html': body}"/>
+                </group>
+                <footer>
+                    <button string="Send" name="send_reply" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_compose_action" model="ir.actions.act_window">
+        <field name="name">Support Tickets Compose</field>
+        <field name="res_model">website.support.ticket.compose</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="support_assets_editor" inherit_id="website.assets_editor" name="Website Support Editor">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/website_support/static/src/js/website_support.editor.js"></script>
+        </xpath>
+    </template>
+
+    <template id="support_front_assert" inherit_id="website.assets_frontend" name="Website Support Front Asserts">
+        <xpath expr="/t" position="inside">
+            <link rel="stylesheet" href="/website_support/static/src/css/support.css"/>
+        </xpath>
+    </template>
+
+    <template id="support_assets_backend" inherit_id="web.assets_backend" name="website support ticket backend assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/website_support/static/src/js/website_support.backend.js"></script>
+        </xpath>
+    </template>
+
+    <template id="support_ticket_survey_page" name="Support Ticket Survey">
+        <t t-call="website.layout">
+            <div class="container">
+
+                <div class="mt16 mb16">
+                    <h1 class="text-center">Your Feedback</h1>
+                </div>
+
+                <p>Please give us feedback on our support service</p>
+                <blockquote><t t-raw="support_ticket.description"/></blockquote>
+
+                <form method="POST" t-attf-action="/support/survey/process/#{support_ticket.portal_access_key}">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <style>
+                    label > input{ /* HIDE RADIO */
+                      visibility: hidden; /* Makes input not-clickable */
+                      position: absolute; /* Remove input from document flow */
+                    }
+
+                    label > input + img{ /* IMAGE STYLES */
+                      cursor:pointer;
+                      border:2px solid transparent;
+                    }
+
+                    label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+                      border:2px solid #f00;
+                    }
+                    </style>
+
+                    <label>
+                        <input type="radio" name="rating" value="5"/>
+                        <img src="/website_support/static/src/img/5-star.jpg"/>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="rating" value="4"/>
+                        <img src="/website_support/static/src/img/4-star.jpg"/>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="rating" value="3"/>
+                        <img src="/website_support/static/src/img/3-star.jpg"/>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="rating" value="2"/>
+                        <img src="/website_support/static/src/img/2-star.jpg"/>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="rating" value="1"/>
+                        <img src="/website_support/static/src/img/1-star.jpg"/>
+                    </label>
+                
+                    <div class="form-group">
+                         <label for="comment">Comment</label>
+                        <textarea class="form-control" rows="5" name="comment"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-lg">Submit Feedback</button>
+                    </div>
+
+                </form>
+            
+            </div>
+        </t>
+    </template>
+
+    <template id="account_create" name="Create Support Account">
+        <t t-call="web.login_layout">
+            <form class="oe_signup_form" role="form" action="/support/account/create/process" method="POST">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                <div class="form-group field-name">
+                    <label for="name" class="control-label">Your Name</label>
+                    <input type="text" name="name" t-att-value="name" id="name" class="form-control" placeholder="e.g. John Doe" required="required" t-att-readonly="'readonly' if only_passwords else None" t-att-autofocus="'autofocus' if login and not only_passwords else None"/>
+                </div>
+
+                <div class="form-group field-login">
+                    <label for="login" class="control-label">Your Email</label>
+                    <input type="text" name="login" t-att-value="login" id="login" class="form-control" autofocus="autofocus" autocapitalize="off" required="required" t-att-readonly="'readonly' if only_passwords else None"/>
+                </div>
+
+                <div class="form-group field-password">
+                    <label for="password" class="control-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" required="required" t-att-autofocus="'autofocus' if only_passwords else None"/>
+                </div>
+
+                <div class="form-group field-confirm_password">
+                    <label for="confirm_password" class="control-label">Confirm Password</label>
+                    <input type="password" name="confirm_password" id="confirm_password" class="form-control" required="required"/>
+                </div>
+
+                <div class="clearfix oe_login_buttons">
+                    <a t-attf-href="/web/login" class="btn btn-link pull-right">Back to Login</a>
+                    <button type="submit" class="btn btn-primary pull-left">Sign up</button>
+                </div>
+
+            </form>
+        </t>
+    </template>
+
+    <template id="support_ticket_view_list" name="My Support Tickets">
+        <t t-call="website.layout">
+            <div class="container">
+
+                <div class="mt16 mb16">
+                    <h1 class="text-center">My Support Tickets</h1>
+                </div>
+
+                <div class="col-md-12">
+                    <t t-if="ticket_count > 0"> 
+                        <div style="float:right">
+                            <a href="/support/ticket/view">All</a>
+                            <t t-foreach="ticket_states" t-as="ticket_state">
+                                | <a t-attf-href="/support/ticket/view?state=#{ticket_state.id}"><t t-esc="ticket_state.name"/></a>
+                            </t>
+                        </div>
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <tr><th>By</th><th>Subject</th><th>Category</th><th>State</th><th>Create Date</th><th>Close Date</th></tr>
+                            <t t-foreach="support_tickets" t-as="support_ticket">
+                                <tr><td><t t-esc="support_ticket.partner_id.name"/></td><td><a t-attf-href="/support/ticket/view/#{support_ticket.id}"><t t-esc="support_ticket.subject"/></a></td><td><t t-esc="support_ticket.category_id.name"/></td><td><t t-esc="support_ticket.state_id.name"/></td><td><span t-field="support_ticket.with_context(tz=request.env.user.tz).create_date"/></td><td><span t-field="support_ticket.with_context(tz=request.env.user.tz).close_time"/></td></tr>
+                            </t>
+                        </table>
+                    </t>
+                    <t t-if="ticket_count == 0">
+                        <div class="mt16 mb16">
+                            <h2 class="text-center">You have no support tickets</h2>
+                        </div>
+                    </t>
+                </div>
+
+                <br/><br/><br/><br/><br/>
+
+                <div class="mt16 mb16">
+                    <h1 class="text-center">Change Requests</h1>
+                </div>
+
+                <div class="col-md-12">
+                    <t t-if="request_count > 0"> 
+                        <table class="table table-striped table-bordered table-hover table-condensed">
+                            <tr><th>Date</th><th>State</th><th>Message</th></tr>
+                            <t t-foreach="change_requests" t-as="change_request">
+                                <tr><td><t t-esc="change_request.planned_time"/></td><td><t t-esc="change_request.approval_id.name"/></td><td><t t-raw="change_request.approval_message"/></td></tr>
+                            </t>
+                        </table>
+                    </t>
+                    <t t-if="request_count == 0">
+                        <div class="mt16 mb16">
+                            <h2 class="text-center">You have no change requests</h2>
+                        </div>
+                    </t>
+                </div>
+
+            </div>
+
+        </t>
+    </template>
+
+    <template id="help_group" name="Help Group">
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="mt16 mb16">
+                    <h1 class="text-center" t-field="help_group.name"/>
+                    <t t-foreach="help_group.page_ids" t-as="help_page">
+                        <t t-if="help_page.website_published">
+                            <div class="col-md-4">
+                                <h3 class="mt8 mb8 support-help-page"><a t-attf-href="/support/help/#{slug(help_group)}/#{slug(help_page)}" t-field="help_page.name"/></h3>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="help_page" name="Help Page">
+        <t t-call="website.layout">
+            <div class="container">
+                <div class="mt16 mb16">
+                    <h1 class="text-center" t-field="help_page.name"/>
+                    <div id="wrap" class="oe_structure oe_empty" t-field="help_page.content" style="min-height:200px;"/>
+
+                    <!-- Submit Feedback -->
+                    <form method="GET" t-attf-action="/support/feedback/process/#{help_page.id}">
+
+                        <div t-attf-class="form-group #{error and 'rating' in error and 'has-error' or ''}">
+                            <label class="control-label" for="rating">Rating</label><br/>
+                            <input type="radio" name="rating" value="1"/> 1 Star
+                            <input type="radio" name="rating" value="2"/> 2 Star
+                            <input type="radio" name="rating" value="3"/> 3 Star
+                            <input type="radio" name="rating" value="4"/> 4 Star
+                            <input type="radio" name="rating" value="5"/> 5 Star
+                        </div>
+
+                        <div t-attf-class="form-group mt16 mb16 #{error and 'feedback' in error and 'has-error' or ''}">
+                            <label class="control-label" for="feedback">Feedback</label>
+                            <textarea class="form-control" name="feedback" style="min-height: 120px" required="True"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-lg">Submit Feedback</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="support_ticket_view" name="Support Ticket">
+        <t t-call="website.layout">
+            <div class="container mt16 mb16">
+
+                <style>
+
+                /* Worlds laziest way of striping replies... */
+                .moz-cite-prefix, blockquote {
+                 display :none
+                }
+
+                </style>
+
+               <script>
+                   $('#file').change(function(){
+                       if(this.files.length > <t t-esc="setting_max_ticket_attachments"/>) {
+                           alert("You can only upload " + <t t-esc="setting_max_ticket_attachments"/> + " files");
+                       }
+
+                        for (var x in this.files) {
+                           if (this.files[x].size / 1024 > <t t-esc="setting_max_ticket_attachment_filesize"/>) {
+                               alert(this.files[x].name + " exceeds the " + <t t-esc="setting_max_ticket_attachment_filesize"/> + "KB file size limit");
+                               $('#file').val('');
+                           }
+                       }
+
+                    });
+                </script>
+
+                <div class="mt16 mb16">
+                    <h1 class="text-center"><t t-esc="support_ticket.subject"/></h1>
+                </div>
+
+                <b>Category</b> <t t-esc="support_ticket.category_id.name"/><br/>
+                <b>State</b> <t t-esc="support_ticket.state_id.name"/><br/>
+                <b>Description</b><br/><t t-raw="support_ticket.description"/><br/>
+                <br/>
+                <b>Conversation History</b><br/>
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <tr><th>By</th><th>From</th><th>Message</th></tr>
+                    <t t-foreach="support_ticket.conversation_history_ids" t-as="chat">
+                        <tr><td><t t-esc="chat.by"/></td><td>
+                            <t t-if="chat.by == ''">
+                                <t t-esc="chat.create_uid.name"/>
+                            </t>
+                            <t t-if="chat.by == 'staff'">
+                                <t t-esc="chat.create_uid.name"/>
+                            </t>
+                            <t t-if="chat.by == 'customer'">
+                                <t t-if="chat.ticket_id.person_name">
+                                    <t t-esc="chat.ticket_id.person_name"/>
+                                </t>
+                                <t t-if="not chat.ticket_id.person_name">
+                                    <t t-esc="chat.ticket_id.email"/>
+                                </t>
+                            </t>
+
+                        </td>
+                        <td><t t-raw="chat.content"/></td></tr>
+                    </t>
+                </table>
+                <t t-if="portal_access_key">
+                    <form method="POST" action="/support/portal/ticket/comment" enctype="multipart/form-data">
+                        <b>Add Comment</b><br/>
+                        <textarea  class="form-control" name="comment" rows="6" required="True"></textarea>
+                        <br/>
+                        <div name="file_container" t-attf-class="form-group #{error and 'file' in error and 'has-error' or ''}">
+                            <b>Add Attachments</b><br/>
+                            <div class="btn btn-default btn-file" style="margin-bottom:16px;padding-left:0px;"><input name="file" id="file" type="file" multiple="multiple"/></div>
+                        </div>
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="portal_access_key" t-attf-value="#{portal_access_key}"/>
+                        <button class="btn btn-primary btn-lg">Submit</button>
+                    </form>
+                </t>
+                <t t-if="not portal_access_key">
+                    <form method="POST" action="/support/ticket/comment" enctype="multipart/form-data" style="display:inline;">
+                        <b>Add Comment</b><br/>
+                        <textarea  class="form-control" name="comment" style="min-height: 120px" required="True"></textarea>
+                        <br/>
+                        <div name="file_container" t-attf-class="form-group #{error and 'file' in error and 'has-error' or ''}">
+                            <b>Add Attachments</b><br/>
+                            <div class="btn btn-default btn-file" style="margin-bottom:16px;padding-left:0px;"><input name="file" id="file" type="file" multiple="multiple"/></div>
+                        </div>
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="ticket_id" t-attf-value="#{support_ticket.id}"/>
+                        <button class="btn btn-primary btn-lg">Submit</button>
+                    </form>
+                    <form method="GET" t-attf-action="/support/ticket/close" style="display:inline;">
+                        <input type="hidden" name="ticket_id" t-attf-value="#{support_ticket.id}"/>
+                        <button class="btn btn-primary btn-lg pull-right">Close Ticket</button>
+                    </form>
+                </t>
+            </div>
+
+        </t>
+    </template>
+
+    <template id="support_help_pages" name="Support Help Pages">
+        <t t-call="website.layout">
+
+            <script>
+                $(document).ready(function() {
+                    $("#search_help_pages").autocomplete({
+                        source: '/support/help/auto-complete',
+                        minLength: 1,
+                        select: function( event, ui ) {
+                            window.location.href = ui.item.value;
+                        }
+                        }).data("ui-autocomplete")._renderItem = function (ul, item) {
+                            return $("<li></li>")
+                                .data("item.autocomplete", item)
+                                .append("<a>" + item.label + "</a>")
+                            .appendTo(ul);
+                    };
+                });
+            </script>
+
+            <div class="container">
+                <div class="mt16 mb16">
+                    <div class="text-right">
+                        <t t-if="request.env.user.partner_id.name == 'Public user'">
+                            <t t-if="setting_allow_user_signup">
+                                <a href="/support/account/create">Create Account</a> |
+                            </t>
+                        </t>
+                        <a href="/support/ticket/submit">Submit a Ticket</a>
+                        <t t-if="request.env.user.partner_id.name != 'Public user'">
+                            | <a href="/support/ticket/view">My Tickets</a>
+                        </t>
+                        <t t-if="manager">
+                            | <a href="/support/ticket/reporting">Reporting</a>
+                        </t>
+                    </div>
+
+                    <h1 class="text-center support-main-title">Help Pages</h1>
+
+                    <div name="search_from_container" class="form-group row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                            <input type="search" class="form-control" id="search_help_pages" name="search" placeholder="Search"/>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+
+                </div>
+
+                <div class="mt16 mb16 row">
+                    <t t-foreach="help_groups" t-as="help_group">
+                        <div class="col-md-4">
+                            <t t-if="help_group.image">
+                                <img class="img-rounded img-responsive" t-att-src="website.image_url(help_group, 'image')"/>
+                            </t>
+                            <h2 class="support-help-group" t-field="help_group.name"></h2>
+                            <t t-set="counter" t-value="0"/>
+                            <t t-foreach="help_group.page_ids" t-as="help_page">
+                                <t t-if="help_page.website_published">
+                                    <t t-if="counter &lt; 5">
+                                        <h3 class="mt8 mb8 support-help-page"><a t-attf-href="/support/help/#{slug(help_group)}/#{slug(help_page)}" t-field="help_page.name"></a></h3>
+                                    </t>
+                                    <t t-set="counter" t-value="counter + 1"/>
+                                </t>
+                            </t>
+                            <t t-if="counter &gt; 5">
+                                <a t-attf-href="/support/help/#{slug(help_group)}">More</a>
+                            </t>
+                        </div>
+                    </t>
+                </div>
+
+            </div>
+        </t>
+    </template>
+
+    <template id="content_new_help" inherit_id="website.user_navbar">
+        <xpath expr="//div[@id='o_new_content_menu_choices']/div/div" position="inside">
+
+            <div groups="website_support.support_manager" class="col-md-4 mb8 o_new_content_element">
+                <a href="#" data-action="new_help_group">
+                    <i class="fa fa-question-circle"/>
+                    <p>New Help Group</p>
+                </a>
+            </div>
+
+            <div groups="website_support.support_manager" class="col-md-4 mb8 o_new_content_element">
+                <a href="#" data-action="new_help_page">
+                    <i class="fa fa-info-circle"/>
+                    <p>New Help Page</p>
+                </a>
+            </div>
+
+        </xpath>
+    </template>
+
+    <template id="support_ticket_reporting" name="Support Ticket Reporting">
+        <t t-call="website.layout">
+            <div class="container">
+                <h1 class="text-center">Report</h1>
+                Total Support Tickets: <t t-esc="support_ticket_count"/><br/>
+                <hr/>
+                <div class="col-md-6">
+                    <h3>Sub Category Usage (Top 5)</h3>
+                    <b>All Time</b>
+                    <ul>
+                        <t t-foreach="department.sub_category_ids" t-as="sub_category">
+                            <li><t t-esc="sub_category.subcategory_id.name"/> - <t t-esc="sub_category.count"/> </li>
+                        </t>
+                    </ul>
+                    <b>Last 30 Days</b><br/>
+                    <ul>
+                        <t t-foreach="department.sub_category_month_ids" t-as="sub_category">
+                            <li><t t-esc="sub_category.subcategory_id.name"/> - <t t-esc="sub_category.count"/> </li>
+                        </t>
+                    </ul>
+                    <b>Last 7 Days</b><br/>
+                    <ul>
+                        <t t-foreach="department.sub_category_week_ids" t-as="sub_category">
+                            <li><t t-esc="sub_category.subcategory_id.name"/> - <t t-esc="sub_category.count"/> </li>
+                        </t>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Contact Submitted Tickets (Top 5)</h3>
+                    <b>All Time</b>
+                    <ul>
+                        <t t-foreach="department.submit_ticket_contact_ids" t-as="contact">
+                            <li><t t-esc="contact.partner_id.name"/> - <t t-esc="contact.count"/> </li>
+                        </t>
+                    </ul>
+                    <b>Last 30 Days</b><br/>
+                    <ul>
+                        <t t-foreach="department.submit_ticket_contact_month_ids" t-as="contact">
+                            <li><t t-esc="contact.partner_id.name"/> - <t t-esc="contact.count"/> </li>
+                        </t>
+                    </ul>
+                    <b>Last 7 Days</b><br/>
+                    <ul>
+                        <t t-foreach="department.submit_ticket_contact_week_ids" t-as="contact">
+                            <li><t t-esc="contact.partner_id.name"/> - <t t-esc="contact.count"/> </li>
+                        </t>
+                    </ul>
+                </div>
+
+            </div>
+        </t>
+    </template>
+
+    <template id="support_survey_thank_you" name="Support Ticket Survey Thank You">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1 class="text-center">Thank You</h1>
+                                <h3 class="text-muted text-center">Thank you for you feedback about our support</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+
+    <template id="support_thank_you" name="Support Ticket Thank You">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <div class="container mt16">
+                    <h1 class="text-center">Thank You</h1>
+                    <h3 class="text-muted text-center">We will get back to you shortly</h3>
+                </div>
+            </div>
+        </t>
+    </template>
+
+  <template id="support_submit_ticket" name="Submit Support Ticket">
+      <t t-call="website.layout">
+
+          <div class="container">
+              <h1 class="text-center mt16 mb16">Submit Support Ticket</h1>
+
+              <form action="/support/ticket/process" method="POST" class="form-horizontal mt32" enctype="multipart/form-data">
+                  <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                  <input style="display:none;" name="my_gold" value="256"/>
+                  <div t-attf-class="form-group #{error and 'person_name' in error and 'has-error' or ''}">
+                      <label class="control-label" for="person_name">Name</label>
+                      <input type="text" class="form-control" name="person_name" required="True" t-attf-value="#{person_name or ''}"/>
+                  </div>
+                  <div name="email_from_container" t-attf-class="form-group #{error and 'email' in error and 'has-error' or ''}">
+                      <label class="control-label" for="email">Email</label>
+                      <input type="email" class="form-control" name="email" required="True" t-attf-value="#{email or ''}" t-att-readonly="'readonly' if email else None"/>
+                  </div>
+
+                  <script>
+
+                      $(document).ready(function() {
+
+                          update_sub_categories()
+
+                          $("#category").change(function() {
+                              update_sub_categories()
+                          });
+
+                          function update_sub_categories() {
+                              $.ajax({url: "/support/subcategories/fetch?category=" + $("#category").val(), success: function(result){
+                                  $("#subcategoy_container").html(result);
+                                  update_sub_category_fields();
+                              }});
+                          }
+
+                          $(document).on('change',"#subcategory", function(){
+                              update_sub_category_fields();
+                          });
+
+                          function update_sub_category_fields() {
+                              $.ajax({url: "/support/subcategories/field/fetch?subcategory=" + $("#subcategory").val(), success: function(result){
+                                  $("#subcategoy_fields").html(result);
+                              }});
+                          }
+
+                          $('#file').change(function(){
+                              if(this.files.length > <t t-esc="setting_max_ticket_attachments"/>) {
+                                  alert("You can only upload " + <t t-esc="setting_max_ticket_attachments"/> + " files");
+                              }
+
+                              for (var x in this.files) {
+                                  if (this.files[x].size / 1024 > <t t-esc="setting_max_ticket_attachment_filesize"/>) {
+                                      alert(this.files[x].name + " exceeds the " + <t t-esc="setting_max_ticket_attachment_filesize"/> + "KB file size limit");
+                                      $('#file').val('');
+                                  }
+                              }
+                          });
+
+                      });
+
+                  </script>
+
+                  <t t-if="setting_allow_website_priority_set == 'everyone' or (setting_allow_website_priority_set == 'partner' and request.env.user.id != request.website.user_id.id)">
+                      <div t-attf-class="form-group #{error and 'priority' in error and 'has-error' or ''}">
+                          <label class="control-label" for="priority">Priority</label>
+                          <select class="form-control" name="priority">
+                              <t t-foreach="priorities" t-as="priority">
+                                  <option t-attf-value="#{priority.id}"><t t-esc="priority.name"/></option>
+                              </t>
+                          </select>
+                      </div>
+                  </t>
+
+                  <div t-attf-class="form-group #{error and 'category' in error and 'has-error' or ''}">
+                      <label class="control-label" for="name">Category</label>
+                      <select class="form-control" id="category" name="category">
+                          <t t-foreach="categories" t-as="category">
+                              <option t-attf-value="#{category.id}"><t t-esc="category.name"/></option>
+                          </t>
+                      </select>
+                  </div>
+                  <div id="subcategoy_container">
+
+                  </div>
+                  <div id="subcategoy_fields">
+
+                  </div>
+                  <div name="subject_container" t-attf-class="form-group #{error and 'subject' in error and 'has-error' or ''}">
+                      <label class="control-label" for="subject">Subject</label>
+                      <input type="subject" class="form-control" name="subject" required="True"/>
+                  </div>
+                  <div name="file_container" t-attf-class="form-group #{error and 'file' in error and 'has-error' or ''}">
+                      <label class="control-label" for="file">Add Attachments</label>
+                      <label class="custom-file">
+                          <input name="file" id="file" type="file" multiple="multiple"/>
+                          <span class="custom-file-control"/>
+                      </label>
+                  </div>
+                  <div t-attf-class="form-group #{error and 'description' in error and 'has-error' or ''}">
+                      <label class="control-label" for="description">Description</label>
+                      <textarea  class="form-control" name="description" rows="6" required="True"></textarea>
+                  </div>
+
+                  <t t-if="setting_google_recaptcha_active">
+                      <script src='https://www.google.com/recaptcha/api.js'></script>
+                      <div t-attf-class="form-group #{error and 'description' in error and 'has-error' or ''}">
+                          <label class="control-label" for="reCAPTCHA">reCAPTCHA</label>
+                          <div class="g-recaptcha" t-attf-data-sitekey="#{setting_google_captcha_client_key}"/>
+                      </div>
+                  </t>
+
+                  <div class="form-group">
+                      <button class="btn btn-primary btn-lg">Submit Ticket</button>
+                  </div>
+              </form>
+
+            </div>
+        </t>
+
+    </template>
+
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website_support_ticket_priority_view_tree" model="ir.ui.view">
+        <field name="name">website.support.ticket.priority.tree.view</field>
+        <field name="model">website.support.ticket.priority</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="color"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_support_ticket_priority_action" model="ir.actions.act_window">
+        <field name="name">Support Ticket Priorities</field>
+        <field name="res_model">website.support.ticket.priority</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p>
+                No Support Tickets priorities found
+           </p>
+        </field>
+    </record>
+
+    <record id="sequence_reconcile_seq" model="ir.sequence">
+        <field name="name">website.support.ticket.priority sequence</field>
+        <field name="code">website.support.ticket.priority</field>
+        <field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+    </record>
+
+</odoo>

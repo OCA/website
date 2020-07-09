@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="support_group" model="res.groups">
+            <field name="name">Support Client</field>
+            <field name="category_id" ref="support_application"/>
+            <field name="comment">Created an account through the website, has no portal (/web) access</field>
+        </record>
+
+        <record id="support_staff" model="res.groups">
+            <field name="name">Support Staff</field>
+            <field name="implied_ids" eval="[(4, ref('support_group'))]"/>
+            <field name="category_id" ref="support_application"/>
+            <field name="comment">Has the ability the view and answer support tickets but not configure</field>
+        </record>
+
+        <record id="support_manager" model="res.groups">
+            <field name="name">Support Manager</field>
+            <field name="implied_ids" eval="[(4, ref('support_staff'))]"/>
+            <field name="category_id" ref="support_application"/>
+            <field name="comment">Can configure support settings</field>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+        
+    </data>     
+</odoo>
