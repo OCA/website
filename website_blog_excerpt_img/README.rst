@@ -19,11 +19,8 @@ Blog Post List Excerpt+Image Layout
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
     :target: https://translation.odoo-community.org/projects/website-12-0/website-12-0-website_blog_excerpt_img
     :alt: Translate me on Weblate
-.. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/186/12.0
-    :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| 
 
 This module extends the functionality of blogs to support having a more
 attractive layout that automatically displays an excerpt of each post, a "Read
