@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-16 11:37+0000\n"
-"PO-Revision-Date: 2018-09-27 12:40+0000\n"
-"Last-Translator: Cris Martín <cristina.marrod@gmail.com>\n"
+"PO-Revision-Date: 2020-07-14 13:19+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -271,25 +271,12 @@ msgid ""
 "                                                web sites or services."
 msgstr ""
 "Nuestro servicio puede contener enlaces a sitios web de terceros o servicios "
-"que\n"
-"                                                no son propiedad o "
-"controlados\n"
-"                                                por nosotros. No tenemos el "
-"control sobre ellos y no asumimos ninguna responsabilidad por el\n"
-"                                                contenido, políticas de "
-"privacidad o prácticas de sitios web de terceros\n"
-"                                                servicios. Usted reconoce\n"
-"                                                y acepta que nosotros no "
-"seremos responsables,\n"
-"                                                directa o indirectamente, "
-"por cualquier daño o pérdida causada o supuestamente causada\n"
-"                                                por o en relación con el uso "
-"o\n"
-"                                                confianza de cualquier "
-"contenido, bienes o servicios\n"
-"                                                disponibles en o\n"
-"                                               a través de dichos sitios o "
-"servicios."
+"que no son propiedad o controlados por nosotros. No tenemos el control sobre "
+"ellos y no asumimos ninguna responsabilidad por el contenido, políticas de "
+"privacidad o prácticas de sitios web de terceros servicios. Usted reconoce y "
+"acepta que nosotros no seremos responsables, por o en relación con el uso o "
+"confianza de cualquier contenido, bienes o servicios disponibles en o  a "
+"través de dichos sitios o servicios."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -456,7 +443,6 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
-#, fuzzy
 msgid ""
 "We reserve the right, at our sole discretion, to modify or replace these\n"
 "                                                Terms at any time. If a\n"
@@ -482,12 +468,11 @@ msgstr ""
 "determinado a nuestra propia discreción. Si sigue teniendo acceso o usando "
 "nuestro Servicio después de que aquellas revisiones entren en vigor, "
 "consiente en ser ligado por los términos revisados. Si no está de acuerdo "
-"con los nuevos términos, por favor deje de usar el Servicio"
+"con los nuevos términos, por favor deje de usar el Servicio."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
-#, fuzzy
 msgid ""
 "We strongly advise you to read the terms and conditions and privacy\n"
 "                                                policies of any third­party\n"
@@ -500,7 +485,6 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
-#, fuzzy
 msgid ""
 "We use your Personal Information only for providing and improving the\n"
 "                                                Site. By using the Site,\n"
@@ -508,14 +492,13 @@ msgid ""
 "and use of information in accordance with\n"
 "                                                this policy."
 msgstr ""
-"Usamos su Informacion Personal solamente para proporcionar y mejorar el "
+"Usamos su Información Personal solamente para proporcionar y mejorar el "
 "sitio. Al utilizar el Sitio, usted acepta la recopilación y uso de "
 "información de acuerdo con esta política."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
-#, fuzzy
 msgid ""
 "While using our Site, we may ask you to provide us with certain\n"
 "                                                personally identifiable "
@@ -529,7 +512,7 @@ msgid ""
 msgstr ""
 "Durante el uso de nuestro sitio podremos pedirle que nos proporcione cierta "
 "información que puede ser usada para contactar o identificarle. La "
-"información podria incluir, pero no está limitada a su nombre (Información "
+"información podría incluir, pero no está limitada a su nombre (Información "
 "Personal)."
 
 #. module: website_legal_page
