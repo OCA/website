@@ -1,0 +1,16 @@
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="portal.chatter_composer">
+        <t t-jquery="form.o_portal_chatter_composer_form" t-operation="attributes">
+            <attribute name="enctype">multipart/form-data</attribute>
+        </t>
+        <t t-jquery="form.o_portal_chatter_composer_form textarea" t-operation="after">
+            <ul class="list-inline mb0" id="chatter_attachment_list"/>
+            <button for="chatter_attachment" class="mt8 btn btn-secondary fa fa-paperclip o_portal_chatter_attachments_add" type="button" aria-label="Add attachment" title="Attach one file" disabled="1"/>
+            <div class="d-none">
+                <input id="chatter_attachment" class="file" name="attachment" type="file"/>
+            </div>
+        </t>
+     </t>
+
+</templates>

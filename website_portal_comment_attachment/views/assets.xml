@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Add attachments to generic chatter template for the frontend
+    -->
+    <template id="assets_frontend" inherit_id="web.assets_frontend" name="Portal Assets" priority="15">
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/website_portal_comment_attachment/static/src/js/portal_chatter.js"></script>
+        </xpath>
+    </template>
+
+</odoo>
