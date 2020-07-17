@@ -4,7 +4,7 @@
 {
     'name': 'Cookie notice',
     'summary': 'Show cookie notice according to cookie law',
-    'version': '11.0.1.0.0',
+    'version': '11.0.1.0.1',
     'category': 'Website',
     'author': "Agile Business Group, "
               "Tecnativa, "
