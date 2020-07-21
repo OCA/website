@@ -78,6 +78,36 @@
                                     </li>
                                     <li>
                                         <p>
+                                            <a href="#privacy">Privacy Policy</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#informationcollection">Information Collection And Use</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#logdata">Log Data</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#cookies">Cookies</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#security">Security</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#changes">Changes to this Privacy Policy</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
                                             <a
                                                 href="#limitation-liability"
                                             >Limitation of liability</a>
@@ -112,6 +142,11 @@
                                             <a
                                                 href="#law-jurisdiction"
                                             >Governing Law &amp;amp; Jurisdiction</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>
+                                            <a href="#contactus">Contact Us</a>
                                         </p>
                                     </li>
                                 </ul>
@@ -272,6 +307,179 @@
                             </div>
                         </div>
                     </section>
+                    <!-- Privacy Policy -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="privacy" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                        >
+                                    <hr
+                                        class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Privacy Policy</h2>
+                                    <p>
+                                        <span t-field="res_company.name"/>
+                                            ("us", "we", or "our") operates
+                                        <span t-field="res_company.website"/>
+                                            (the "Site"). This page informs you of our policies regarding the
+                                            collection, use and disclosure
+                                            of Personal Information we receive from users of the Site.
+                                    </p>
+                                    <p>
+                                        We use your Personal Information only for providing and improving the
+                                        Site. By using the Site,
+                                        you agree to the collection and use of information in accordance with
+                                        this policy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Information Collection And Use -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="informationcollection" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                        >
+                                    <hr
+                                        class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Information Collection And Use</h2>
+                                    <p>
+                                        While using our Site, we may ask you to provide us with certain
+                                        personally identifiable information
+                                        that can be used to contact or identify you. Personally identifiable
+                                        information may include, but is
+                                        not limited to your name ("Personal Information").
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Log Data -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="logdata" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                        >
+                                    <hr
+                                        class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Log Data</h2>
+                                    <p>
+                                        Like many site operators, we collect information that your browser sends
+                                        whenever you visit our
+                                        Site ("Log Data"). This Log Data may include information such as your
+                                        computer's Internet
+                                        Protocol ("IP") address, browser type, browser version, the pages of our
+                                        Site that you visit, the
+                                        time and date of your visit, the time spent on those pages and other
+                                        statistics.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Cookies -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="cookies" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                        >
+                                    <hr
+                                        class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Cookies</h2>
+                                    <p>
+                                        Cookies are files with small amount of data, which may include an
+                                        anonymous unique identifier.
+                                        Cookies are sent to your browser from a web site and stored on your
+                                        computer's hard drive.
+                                    </p>
+                                    <p>
+                                        Like many sites, we use "cookies" to collect information. You can
+                                        instruct your browser to refuse
+                                        all cookies or to indicate when a cookie is being sent. However, if you
+                                        do not accept cookies, you
+                                        may not be able to use some portions of our Site.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Security -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="security" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                        >
+                                    <hr
+                                        class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Security</h2>
+                                    <p>
+                                        The security of your Personal Information is important to us, but
+                                        remember that no method of
+                                        transmission over the Internet, or method of electronic storage, is 100%
+                                        secure. While we strive to
+                                        use commercially acceptable means to protect your Personal Information,
+                                        we cannot guarantee
+                                        its absolute security.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Changes -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="changes" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                        >
+                                    <hr
+                                        class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Changes To This Privacy Policy</h2>
+                                    <p>We may update this Privacy Policy from time to time. We will notify
+                                        you of any changes by posting the new Privacy Policy on the Site. You
+                                        are advised to review this
+                                        Privacy Policy periodically for any changes.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     <!-- Limitation of Liability -->
                     <section class="s_text_block pt32 pb32" data-name="Text block">
                         <a class="legal_anchor" id="limitation-liability" />
@@ -394,6 +602,66 @@
                                     <h2>Governing Law &amp;amp; Jurisdiction</h2>
                                     <p
                                     >These Terms will be governed by and interpreted in accordance with the laws of the State of **COUNTRY**, and you submit to the non-exclusive jurisdiction of the state and federal courts located in **COUNTRY** for the resolution of any disputes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Contact Us -->
+                    <section class="s_text_block pt32 pb32" data-name="Text block">
+                        <a class="legal_anchor" id="contactus" />
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 pt32 pb32">
+                                    <div
+                                        class="s_hr text-left pt32 pb32"
+                                        data-name="Separator"
+                                        >
+                                    <hr
+                                        class="s_hr_1px s_hr_solid border-600 w-100 mx-auto"
+                                        />
+                                    </div>
+                                    <h2>Contact Us</h2>
+                                    <p>
+                                        If you have any questions about these Terms, please contact us.
+                                    </p>
+                                    <p>
+                                        <t t-if="res_company.street">
+                                            <span t-field="res_company.street"/>
+                                            <br/>
+                                            <t t-if="res_company.city">
+                                                <span t-field="res_company.city"/>
+                                                <br/>
+                                            </t>
+                                            <t t-if="res_company.zip">
+                                                <span t-field="res_company.zip"/>
+                                            </t>
+                                            <t t-if="res_company.state_id">
+                                                <span t-field="res_company.state_id.name"/>
+                                                <br/>
+                                            </t>
+                                            <t t-if="res_company.country_id">
+                                                <span t-field="res_company.country_id.name"/>
+                                            </t>
+                                        </t>
+                                    </p>
+                                    <div>
+                                        <t t-if="res_company.phone or res_company.email">
+                                            <ul>
+                                                <t t-if="res_company.phone">
+                                                    <li>Phone number:
+                                                    <span t-field="res_company.phone"/>
+                                                    </li>
+                                                </t>
+                                                <t t-if="res_company.email">
+                                                    <li>Email address:
+                                                    <a t-attf-href="mailto:#{res_company.email}">
+                                                        <span t-field="res_company.email"/>
+                                                    </a>
+                                                    </li>
+                                                </t>
+                                            </ul>
+                                        </t>
+                                    </div>
                                 </div>
                             </div>
                         </div>
