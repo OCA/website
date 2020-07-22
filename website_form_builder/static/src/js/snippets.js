@@ -200,7 +200,7 @@ odoo.define('website_form_builder.snippets', function (require) {
             // Sync HTML metadata of custom fields with UI
             this.$("[data-model-field=false]").each(function () {
                 var $el = $(this),
-                    $label = $el.children(".control-label"),
+                    $label = $el.children("label"),
                     $input = $el.find(".o_website_form_input");
                 if (!$label.length) {
                     return;
