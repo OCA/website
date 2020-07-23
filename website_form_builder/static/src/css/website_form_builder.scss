@@ -13,6 +13,11 @@
     .form-field.css_non_editable_mode_hidden {
         opacity: 0.6;
     }
+
+    // Fix a nasty override from portal module
+    .form-check-label {
+        font-weight: inherit;
+    }
 }
 
 body .modal.o_website_modal {

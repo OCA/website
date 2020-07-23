@@ -11,7 +11,7 @@
         >
             <t t-raw="0"/>
             <t t-if="field.help">
-                <p class="help-block">
+                <p class="form-text text-muted o_default_snippet_text">
                     <t t-esc="field.help"/>
                 </p>
             </t>
@@ -20,8 +20,8 @@
 
     <t t-name="website_form_builder.field_label">
         <t t-call="website_form_builder.field_wrapper">
-            <label class="control-label" t-att-for="name">
-                <span>
+            <label class="col-form-label" t-att-for="name">
+                <span class="o_default_snippet_text">
                     <t t-esc="field.string"/>
                 </span>
             </label>
@@ -42,7 +42,7 @@
 
     <t t-name="website_form_builder.field.boolean">
         <t t-call="website_form_builder.field_wrapper">
-            <label class="control-label" t-att-for="name">
+            <label class="col-form-label" t-att-for="name">
                 <input
                     t-att-name="name"
                     t-att-required="required_att"
@@ -50,7 +50,7 @@
                     class="o_website_form_input"
                     value="1"
                 />
-                <span>
+                <span class="o_default_snippet_text">
                     <t t-esc="field.string"/>
                 </span>
             </label>
@@ -122,16 +122,16 @@
     <t t-name="website_form_builder.field.many2many">
         <t t-call="website_form_builder.field_label">
             <t t-foreach="relational_data" t-as="option">
-                <div class="checkbox">
-                    <label class="control-label">
+                <div class="form-check">
+                    <label class="form-check-label">
                         <input
                             t-att-name="name"
                             t-att-required="required_att"
                             t-att-value="option.id"
                             type="checkbox"
-                            class="o_website_form_input"
+                            class="form-check-input o_website_form_input"
                         />
-                        <span>
+                        <span class="o_default_snippet_text">
                             <t t-esc="option.display_name"/>
                         </span>
                     </label>
@@ -145,7 +145,7 @@
             <select
                 t-att-name="name"
                 t-att-required="required_att"
-                class="form-control o_website_form_input"
+                class="form-control custom-select o_website_form_input"
             >
                 <option/>
                 <t t-foreach="relational_data" t-as="option">
@@ -169,7 +169,7 @@
             <select
                 t-att-name="name"
                 t-att-required="required_att"
-                class="form-control o_website_form_input"
+                class="form-control custom-select o_website_form_input"
             >
                 <t t-foreach="field.selection" t-as="option">
                     <option t-att-value="option[0]">
@@ -184,16 +184,16 @@
     <t t-name="website_form_builder.field.selection-radio">
         <t t-call="website_form_builder.field_label">
             <t t-foreach="relational_data" t-as="option">
-                <div class="radio">
-                    <label class="control-label">
+                <div class="form-check">
+                    <label class="form-check-label">
                         <input
                             t-att-name="name"
                             t-att-required="required_att"
                             t-att-value="option.id"
                             type="radio"
-                            class="o_website_form_input"
+                            class="form-check-input o_website_form_input"
                         />
-                        <span>
+                        <span class="o_default_snippet_text">
                             <t t-esc="option.display_name"/>
                         </span>
                     </label>
