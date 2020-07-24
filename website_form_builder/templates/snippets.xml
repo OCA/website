@@ -92,12 +92,8 @@
                 data-drop-in=".o_website_form_builder .o_website_form_fields"
             />
             <div
-                data-selector=".o_website_form_builder .form-field .checkbox"
-                data-drop-near=".o_website_form_builder .form-field .checkbox"
-            />
-            <div
-                data-selector=".o_website_form_builder .form-field .radio"
-                data-drop-near=".o_website_form_builder .form-field .radio"
+                data-selector=".o_website_form_builder .form-field .form-check"
+                data-drop-near=".o_website_form_builder .form-field .form-check"
             />
 
             <!-- Allow user to set additional required fields -->
