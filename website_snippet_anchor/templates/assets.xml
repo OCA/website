@@ -4,7 +4,7 @@
 
 <odoo>
 
-<template id="assets_editor" inherit_id="web_editor.assets_editor">
+<template id="assets_editor" inherit_id="website.assets_editor">
     <xpath expr="." position="inside">
         <script type="text/javascript"
                 src="/website_snippet_anchor/static/src/js/anchor_option.js"/>
