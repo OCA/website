@@ -99,7 +99,8 @@ odoo.define("website_lazy_load_image.lazy_image_loader", function(require) {
     require("web.dom_ready");
     var lazy_image_loader = new LazyImageLoader(
         "#wrapwrap > main img:not(.lazyload-disable), " +
-            "#wrapwrap > footer img:not(.lazyload-disable)"
+            "#wrapwrap > footer img:not(.lazyload-disable), " +
+            "#wrapwrap > main .lazyload-bg:not(.lazyload-disable)"
     );
 
     return {

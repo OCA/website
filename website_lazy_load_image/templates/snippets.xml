@@ -4,7 +4,7 @@
 <odoo>
     <template id="snippet_options" inherit_id="website.snippet_options">
         <xpath expr="//div" position="after">
-            <div data-selector="img">
+            <div data-selector="img, [style*='background-image']">
                 <we-button data-toggle-class="lazyload-disable" data-no-preview="true">
                 Disable Lazy loading
             </we-button>
