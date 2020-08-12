@@ -48,12 +48,12 @@ Authors
 ~~~~~~~
 
 * Tech Receptives
+* Coop IT Easy SCRLfs
 
 Contributors
 ~~~~~~~~~~~~
 
 * Coop IT Easy SCRLfs
-
 
 Maintainers
 ~~~~~~~~~~~
