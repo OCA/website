@@ -23,7 +23,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 #, fuzzy
-#| msgid "Test here the country dropdown snippet behavior"
 msgid "A readonly country dropdown input"
 msgstr "Testez ici le comportement de la liste déroulante des pays"
 
