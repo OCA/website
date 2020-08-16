@@ -28,7 +28,6 @@ msgstr ""
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 #, fuzzy
-#| msgid "Our Gallery"
 msgid "<b>Our Gallery</b>"
 msgstr "La nostra Galleria"
 
@@ -47,9 +46,6 @@ msgstr "Lorem ipsum"
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 #, fuzzy
-#| msgid ""
-#| "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
-#| "tempor incididunt ut labore et dolore magna."
 msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
 msgstr ""
 "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
