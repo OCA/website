@@ -23,7 +23,6 @@ msgstr ""
 #. module: website_analytics_piwik
 #: model:ir.model,name:website_analytics_piwik.model_res_config_settings
 #, fuzzy
-#| msgid "res.config.settings"
 msgid "Config Settings"
 msgstr "website.config.settings"
 
