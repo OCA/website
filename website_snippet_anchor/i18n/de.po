@@ -22,9 +22,6 @@ msgstr ""
 #. module: website_snippet_anchor
 #: model_terms:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
 #, fuzzy
-#| msgid ""
-#| "<i class=\"fa fa-hashtag\"/>\n"
-#| "                    Choose anchor"
 msgid "<i class=\"fa fa-hashtag\"/>Choose anchor"
 msgstr ""
 "<i class=\"fa fa-hashtag\"/>\n"
