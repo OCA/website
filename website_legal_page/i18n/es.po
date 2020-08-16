@@ -74,7 +74,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 #, fuzzy
-#| msgid "Cookies"
 msgid "Cookies Policy"
 msgstr "Cookies"
 
@@ -161,7 +160,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 #, fuzzy
-#| msgid "Termination"
 msgid "Indemnification"
 msgstr "Cancelación"
 
@@ -180,7 +178,6 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page_link
 #, fuzzy
-#| msgid "Legal Advice"
 msgid "Legal Page"
 msgstr "Aviso Legal"
 
@@ -221,7 +218,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 #, fuzzy
-#| msgid "Termination"
 msgid "Restrictions"
 msgstr "Cancelación"
 

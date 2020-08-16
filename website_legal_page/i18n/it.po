@@ -177,7 +177,6 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page_link
 #, fuzzy
-#| msgid "legal advice"
 msgid "Legal Page"
 msgstr "informazioni legali"
 
