@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_crm_quick_answer
+#
+# Translators:
+# Christophe CHAUVET <christophe.chauvet@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-06 02:53+0000\n"
+"PO-Revision-Date: 2019-07-28 11:47+0000\n"
+"Last-Translator: jcleonard2018 <jcl@solutionsmakers.fr>\n"
+"Language-Team: French (http://www.transifex.com/oca/OCA-website-8-0/language/"
+"fr/)\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.7.1\n"
+
+#. module: website_crm_quick_answer
+#: model:mail.template,body_html:website_crm_quick_answer.email_template
+msgid ""
+"<div>Dear <b>${object.partner_id and object.partner_id.name or object."
+"contact_name}</b>,\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <h3>Thanks for contacting us!</h3>\n"
+"                    <p>\n"
+"                        We have received your request and will answer you as "
+"soon as\n"
+"                        possible.\n"
+"                    </p>\n"
+"                    <p>Please, be patient. Best regards.</p>\n"
+"                    <p>Thanks,</p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div>Dear <b>${object.partner_id and object.partner_id.name or "
+"object.contact_name}</b>,\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <h3>Merci de nous avoir contacter!</h3>\n"
+"                    <p>\n"
+"                      Nous avons reçu votre demande et nous y répondrons dès "
+"que possible.\n"
+"                    </p>\n"
+"                    <p>Merci d'être patient.Cordialement.</p>\n"
+"   <p></p>\n"
+"                </div>\n"
+"            "
+
+#. module: website_crm_quick_answer
+#: model:base.automation,name:website_crm_quick_answer.automated_action
+#: model:ir.actions.server,name:website_crm_quick_answer.automated_action_ir_actions_server
+msgid "Quick response to website contact form"
+msgstr "Une réponse rapide sur le site formulaire de contact"
+
+#. module: website_crm_quick_answer
+#: model:mail.template,subject:website_crm_quick_answer.email_template
+msgid "Thanks for your request"
+msgstr "Nous vous remercions pour votre demande"
+
+#~ msgid "Coming from the website contact form"
+#~ msgstr "En provenance du formulaire de contact du site"
