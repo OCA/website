@@ -1,6 +1,13 @@
 /* best way to  contain an image cross browser approved */
 
 
+.blog_post_title {
+    color: #494949;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
 div.blog_title_small
 {
     border-top:0px;
