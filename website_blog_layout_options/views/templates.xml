@@ -42,7 +42,7 @@
                                 <t t-if="blog_post.thumbnail">
                                     <div  class="pull-left thumbnail"
                                         style = "margin: 0px 10px 10px 0px;"
-                                        t-field="blog_post.thumbnail.datas"
+                                        t-field="blog_post.sudo().thumbnail.datas"
                                         t-options = '{"widget": "image",  "max_width" : 250 }'
                                         />
                                 </t>
@@ -82,9 +82,9 @@
         <xpath expr="//h2[@t-field='blog_post.subtitle']" position="replace"/>
             <xpath expr="//div[@id='blog_content']" position="before">
                 <t t-if="blog_post.thumbnail">
-                    <div class="pull-right"
+                    <div align="center"
                         style = "margin: 18px 6px 18px 6px;"
-                        t-field="blog_post.thumbnail.datas"
+                        t-field="blog_post.sudo().thumbnail.datas"
                         t-options = '{"widget": "image",  "max_width" : 512 }'
                         />
                 </t>
