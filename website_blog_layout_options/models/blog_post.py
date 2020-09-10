@@ -45,7 +45,7 @@ class BlogPost(models.Model):
     @api.depends('thumbnail')
     def _get_thumbnail(self):
         if self.thumbnail:
-            self.thumbnail_binary = self.thumbnail.datas
+            self.thumbnail_binary = self.sudo().thumbnail.datas
 
     def _write_thumbnail(self):
         attachment_dict = {

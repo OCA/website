@@ -32,7 +32,7 @@
                                 <t t-if="blog_post.thumbnail">
                                     <div  class="pull-left thumbnail"
                                         style = "margin: 0px 6px 0px 0px;"
-                                        t-field="blog_post.thumbnail.datas"
+                                        t-field="blog_post.sudo().thumbnail.datas"
                                         t-options = '{"widget": "image", "class" : "o_image_floating o_margin_s pull left", "max_width" : 64 }'
                                         />
                                 </t>
