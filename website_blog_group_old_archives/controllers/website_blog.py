@@ -92,8 +92,11 @@ class WebsiteBlog(main.WebsiteBlog):
         domain = []
         if blog:
             domain += [('blog_id', '=', blog.id)]
-        if not tag_id and self._tag and self._tag.id:
-            domain += [('tag_ids', 'in', self._tag.id)]
+        if not tag_id and self._tag:
+            _tagid = request.env['blog.tag'].search(
+                [('name', '=', self._tag)])
+            if _tagid:
+                domain += [('tag_ids', '=', self._tagid[0].id)]
         if self._date_begin and self._date_end:
             domain += [
                 ("create_date", ">=", self._date_begin),
@@ -114,17 +117,17 @@ class WebsiteBlog(main.WebsiteBlog):
                 list(range(len(all_post_ids))), 1
             )[0]
         else:
-            current_blog_post_index = all_post_ids.index(blog_post.id)
+            current_blog_post_index = all_post_ids.ids.index(blog_post.id)
         next_post_id = all_post_ids[
             0 if current_blog_post_index >= len(
                 all_post_ids) - 1 else current_blog_post_index + 1]
         next_post = next_post_id and blog_post_obj.browse(
             next_post_id) or False
-        if next_post:
-            result.qcontext.update({
-                'next_post': next_post,
-                'next_post_cover_properties': json.loads(next_post.cover_properties) if next_post else {}
-            })
+        result.qcontext.update({
+            'next_post': next_post,
+            'next_post_cover_properties': json.loads(
+                next_post.cover_properties) if next_post else {}
+        })
         return result
 
     @http.route()
