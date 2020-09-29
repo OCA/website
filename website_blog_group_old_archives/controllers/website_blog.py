@@ -2,6 +2,7 @@
 # © 2016 Therp BV <http://therp.nl>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
+import json
 import datetime
 import random
 from odoo import http, tools
@@ -119,7 +120,11 @@ class WebsiteBlog(main.WebsiteBlog):
                 all_post_ids) - 1 else current_blog_post_index + 1]
         next_post = next_post_id and blog_post_obj.browse(
             next_post_id) or False
-        result.qcontext['next_post'] = next_post
+        if next_post:
+            result.qcontext.update({
+                'next_post': next_post,
+                'next_post_cover_properties': json.loads(next_post.cover_properties) if next_post else {}
+            })
         return result
 
     @http.route()
