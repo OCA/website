@@ -91,7 +91,7 @@ class WebsiteBlog(main.WebsiteBlog):
         domain = []
         if blog:
             domain += [('blog_id', '=', blog.id)]
-        if not tag_id and self._tag:
+        if not tag_id and self._tag and self._tag.id:
             domain += [('tag_ids', 'in', self._tag.id)]
         if self._date_begin and self._date_end:
             domain += [
@@ -103,14 +103,14 @@ class WebsiteBlog(main.WebsiteBlog):
 
         # Find next Post
         all_post_ids = blog_post_obj.search(
-            domain, order="create_date desc"
+            domain, order="id desc"
         ).ids
         # should always return at least the current post
         # but if the blogpost id is not present in the current domain we
         # fetched we will just get a random one.
         if blog_post.id not in all_post_ids:
             current_blog_post_index = random.sample(
-                list(xrange(len(all_post_ids))), 1
+                list(range(len(all_post_ids))), 1
             )[0]
         else:
             current_blog_post_index = all_post_ids.index(blog_post.id)
@@ -119,7 +119,6 @@ class WebsiteBlog(main.WebsiteBlog):
                 all_post_ids) - 1 else current_blog_post_index + 1]
         next_post = next_post_id and blog_post_obj.browse(
             next_post_id) or False
-
         result.qcontext['next_post'] = next_post
         return result
 
