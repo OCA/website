@@ -83,24 +83,23 @@
             <xpath expr="//div[@id='blog_content']" position="before">
                 <div class="text-center" id="blog_title_sub_header" style="margin-top: 50px">
                 </div>
-                    <t t-if="blog_post.thumbnail">
-                        <div align="center"
-                            style = "margin: 18px 6px 18px 6px;"
-                            t-field="blog_post.sudo().thumbnail.datas"
-                            t-options = '{"widget": "image",  "max_width" : 512 }'
-                            />
-                    </t>
+                <t t-if="blog_post.thumbnail">
+                    <div align="center"
+                        style = "margin: 18px 6px 18px 6px;"
+                        t-field="blog_post.sudo().thumbnail.datas"
+                        t-options = '{"widget": "image",  "max_width" : 512 }'
+                        />
+                </t>
             </xpath>
 
-            <xpath expr="//div[@id='blog_title']" position="move" 
-                target="//div[@id='blog_title_sub_header']">
-            </xpath>
+            <xpath expr="//div[@id='blog_title']" position="move" target="//div[@id='blog_title_sub_header']" />
 
-            <!-- remove share buttons , while leaving container needed for xpaths -->
+            <!-- remove share buttons , while leaving container needed for xpaths 
             <xpath expr="//div[@class='o_blog_post_complete o_sharing_links']" position="replace">
-                <div class="o_blog_post_complete o_sharing_links" > 
+                <div class="o_blog_post_complete o_sharing_links">
                 </div>
-            </xpath> 
+                </xpath> 
+            -->
        </template>
 
 
