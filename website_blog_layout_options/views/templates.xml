@@ -91,10 +91,9 @@
                         />
                 </t>
             </xpath>
-
+            <!--
             <xpath expr="//div[@id='blog_title']" position="move" target="//div[@id='blog_title_sub_header']" />
 
-            <!-- remove share buttons , while leaving container needed for xpaths 
             <xpath expr="//div[@class='o_blog_post_complete o_sharing_links']" position="replace">
                 <div class="o_blog_post_complete o_sharing_links">
                 </div>
