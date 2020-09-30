@@ -72,7 +72,7 @@ class WebsiteBlog(main.WebsiteBlog):
         self._date_begin, self._date_end = opt.get(
             'date_begin'), opt.get('date_end')
         if tag and len(tag.split('-')) > 1:
-           self._tag = int(tag.split('-')[-1])
+            self._tag = int(tag.split('-')[-1])
         result = super(WebsiteBlog, self).blog(
             blog=blog, tag=tag, page=page, **opt)
         result.qcontext[
@@ -126,9 +126,13 @@ class WebsiteBlog(main.WebsiteBlog):
         all_post_ids = blog_post_obj.search(
             domain, order="post_date desc"
         ).ids
+        if not all_post_ids:
+            all_post_ids = blog_post_obj.search(
+                [], order="post_date desc"
+            ).ids
         # should always return at least the current post
         # but if the blogpost id is not present in the current domain we
-        # fetched we will just get a random one.
+        # fetched we will just get a random one
         if blog_post.id not in all_post_ids:
             current_blog_post_index = random.sample(
                 list(range(len(all_post_ids))), 1
@@ -144,7 +148,7 @@ class WebsiteBlog(main.WebsiteBlog):
             'next_post': next_post,
             'next_post_cover_properties': json.loads(
                 next_post.cover_properties) if next_post else {}
-            
+
         })
         return result
 
