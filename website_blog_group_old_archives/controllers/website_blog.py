@@ -71,7 +71,8 @@ class WebsiteBlog(main.WebsiteBlog):
     def blog(self, blog=None, tag=None, page=1, **opt):
         self._date_begin, self._date_end = opt.get(
             'date_begin'), opt.get('date_end')
-        self._tag = tag
+        if tag and len(tag.split('-')) > 1:
+           self._tag = int(tag.split('-')[-1])
         result = super(WebsiteBlog, self).blog(
             blog=blog, tag=tag, page=page, **opt)
         result.qcontext[
@@ -85,29 +86,45 @@ class WebsiteBlog(main.WebsiteBlog):
             self, blog, blog_post, tag_id=None, page=1,
             enable_editor=None, **post):
         blog_post_obj = request.env['blog.post']
-        result = super(WebsiteBlog, self).blog_post(
-            blog=blog, blog_post=blog_post, tag_id=tag_id, page=page,
-            enable_editor=enable_editor, **post
-        )
         domain = []
-        if blog:
-            domain += [('blog_id', '=', blog.id)]
+        tag_computed = False
         if not tag_id and self._tag:
             _tagid = request.env['blog.tag'].search(
-                [('name', '=', self._tag)])
+                [('id', '=', self._tag)])
             if _tagid:
-                domain += [('tag_ids', '=', self._tagid[0].id)]
+                domain += [('tag_ids', '=', _tagid.id)]
+                tag_computed = True
+        if not tag_id and not self._tag:
+            referrer = request.httprequest.referrer.split('/')
+            if referrer[-2] == 'tag':
+                try:
+                    _tagid = request.env['blog.tag'].search(
+                        [('id', '=', int(referrer[-1].split('-')[-1]))])
+                    if _tagid:
+                        domain += [('tag_ids', '=', _tagid.id)]
+                        tag_computed = True
+                except:
+                    pass
+        if tag_computed:
+            tag_id = _tagid.id
+            self._tag = _tagid.id
         if self._date_begin and self._date_end:
             domain += [
                 ("create_date", ">=", self._date_begin),
                 ("create_date", "<=", self._date_end)
             ]
+        result = super(WebsiteBlog, self).blog_post(
+            blog=blog, blog_post=blog_post, tag_id=tag_id, page=page,
+            enable_editor=enable_editor, **post
+        )
+        if blog:
+            domain += [('blog_id', '=', blog.id)]
         if self._cat:
             domain += [('category_id', '=', self._cat.id)]
 
         # Find next Post
         all_post_ids = blog_post_obj.search(
-            domain, order="id desc"
+            domain, order="post_date desc"
         ).ids
         # should always return at least the current post
         # but if the blogpost id is not present in the current domain we
@@ -117,7 +134,7 @@ class WebsiteBlog(main.WebsiteBlog):
                 list(range(len(all_post_ids))), 1
             )[0]
         else:
-            current_blog_post_index = all_post_ids.ids.index(blog_post.id)
+            current_blog_post_index = all_post_ids.index(blog_post.id)
         next_post_id = all_post_ids[
             0 if current_blog_post_index >= len(
                 all_post_ids) - 1 else current_blog_post_index + 1]
@@ -127,6 +144,7 @@ class WebsiteBlog(main.WebsiteBlog):
             'next_post': next_post,
             'next_post_cover_properties': json.loads(
                 next_post.cover_properties) if next_post else {}
+            
         })
         return result
 
