@@ -95,4 +95,4 @@ promote its widespread use.
 
 This module is part of the `OCA/website <https://github.com/OCA/website/tree/12.0/website_anchor_smooth_scroll>`_ project on GitHub.
 
-You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
+You are welcome to contribute. If you are intrested to learn how to contribute .Then you are allways welcome ,visit: https://odoo-community.org/page/Contribute.
