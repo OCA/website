@@ -103,4 +103,4 @@ promote its widespread use.
 
 This module is part of the `OCA/website <https://github.com/OCA/website/tree/12.0/website_logo>`_ project on GitHub.
 
-You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
+You are welcome to contributed. To learn how please visit https://odoo-community.org/page/Contribute.
