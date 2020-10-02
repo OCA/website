@@ -11,7 +11,7 @@ addons:
 language: python
 
 python:
-  - "3.5"
+  - "3.5"#Any version can be used
 
 env:
   global:
