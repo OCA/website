@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="reduction_code" inherit_id="website_sale.reduction_code">
+        <xpath expr="//t[@t-set='force_coupon']" position="replace">
+            <t t-set='force_coupon' t-value="website_sale_order.coupon_code or request.params.get('code_not_available')"/>
+        </xpath>
+    </template>
+    
+    <template id='coupon_form' inherit_id="website_sale.coupon_form">
+        <xpath expr="//input[@name='promo']" position="replace">
+            <input name="promo" class="form-control" type="text" placeholder="code..." t-att-value="website_sale_order.coupon_code or None"/>
+        </xpath>
+    </template>
+
+</odoo>
