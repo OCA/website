@@ -5,7 +5,7 @@
 Odoo modules for website builder
 ================================
 
-Includes modules that expand official website modules and include:
+Includes modules that expand the official website modules and include:
 
 * More functionality for the website builder.
 * More building blocks with pre-configured data (snippets).
