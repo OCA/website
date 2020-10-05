@@ -79,8 +79,10 @@
 
         <template id="show_post_complete_layout_options"
             inherit_id="website_blog.blog_post_complete">
-        <xpath expr="//h2[@t-field='blog_post.subtitle']" position="replace"/>
+            <xpath expr="//h2[@t-field='blog_post.subtitle']" position="replace"/>
             <xpath expr="//div[@id='blog_content']" position="before">
+                <div class="text-center" id="blog_title_sub_header" style="margin-top: 50px">
+                </div>
                 <t t-if="blog_post.thumbnail">
                     <div align="center"
                         style = "margin: 18px 6px 18px 6px;"
@@ -89,7 +91,16 @@
                         />
                 </t>
             </xpath>
-        </template>
+            <!--
+            <xpath expr="//div[@id='blog_title']" position="move" target="//div[@id='blog_title_sub_header']" />
+
+            <xpath expr="//div[@class='o_blog_post_complete o_sharing_links']" position="replace">
+                <div class="o_blog_post_complete o_sharing_links">
+                </div>
+                </xpath> 
+            -->
+       </template>
+
 
         <template id="blog_show_cat_title"
             name="Blog category title show"

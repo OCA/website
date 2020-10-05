@@ -9,7 +9,8 @@
     "category": "Website",
     "summary": "Adds options and layout for the blog",
     "depends": [
-        'website_blog'
+        'website_blog',
+        'base_view_inheritance_extension',
     ],
     "data": [
         'views/templates.xml',
