@@ -11,32 +11,7 @@ class BlogPost(models.Model):
 
     @api.multi
     def extract_teaser(self):
-        for this in self:
-            if this.display_type != "teaser":
-                return
-            else:
-                res = ""
-                # limit length to roughly 3-4 lines.
-                teaser_length = 500
-                parser = etree.HTMLParser()
-                if this.content:
-                    tree = etree.fromstring(this.content, parser)
-                    paragraphs = tree.xpath('//p')
-                    # get the first non empty paragraph
-                    for paragraph in paragraphs:
-                        if paragraph.text and len(res) < teaser_length:
-                            res = res + paragraph.text + '\n'
-                        else:
-                            break
-                    # trim it to the intended length
-                    this.teaser = tools.html_email_clean(
-                        res[:teaser_length] + " ...")
-                else:
-                    # has no teaser or content,  just revert.
-                    # frontend controls needed not to have a bad workflow.
-                    # content cannot be inserted in backend by default.
-                    # add content to backend in view
-                    this.display_type = "no_teaser"
+        pass
 
     @api.onchange('blog_id')
     def set_new_default(self):
@@ -92,7 +67,8 @@ class BlogPost(models.Model):
              "title+first lines of post select Complete if you prefer,"
              "the entire text  to be viewed in the blog list.")
 
-    teaser = fields.Text(string='Teaser for Blog Post')
+    # overwrite v10 teaser compute
+    teaser = fields.Text(string='Teaser for Blog Post', compute=False)
 
     category_id = fields.Many2many(
         string="Categories",

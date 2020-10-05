@@ -28,11 +28,6 @@
                         <field name="teaser"/>
                     </group>
                     <p/>
-                    <button 
-                       type="object" 
-                       name="extract_teaser"  
-                       string="Generate a teaser from content" 
-                       class="oe_link"/>
                     <field name="content" widget="html"/>
                 </field>
 
