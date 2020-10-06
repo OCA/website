@@ -6,90 +6,92 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-10-06 17:16+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: website_typed_text
 #: model_terms:ir.ui.view,arch_db:website_typed_text.snippet_options
 msgid "<i class=\"fa fw-fw fa-keyboard\"/> Change Text Animation"
-msgstr ""
+msgstr "<i class=\"fa fw-fw fa-keyboard\"/> Cambiar animación de texto"
 
 #. module: website_typed_text
 #: model_terms:ir.ui.view,arch_db:website_typed_text.snippet_options
 msgid "Animate Text"
-msgstr ""
+msgstr "Texto animado"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/xml/editor.xml:0
 #, python-format
 msgid "Back Delay"
-msgstr ""
+msgstr "Retraso de vuelta"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/xml/editor.xml:0
 #, python-format
 msgid "Back Speed"
-msgstr ""
+msgstr "Velocidad de retroceso"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/xml/editor.xml:0
 #, python-format
 msgid "Cursor Character"
-msgstr ""
+msgstr "Carácter del cursor"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/js/editor.js:0
 #, python-format
 msgid "Discard"
-msgstr ""
+msgstr "Descartar"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/xml/editor.xml:0
 #, python-format
 msgid "Loop?"
-msgstr ""
+msgstr "Lazo?"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/js/editor.js:0
 #, python-format
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/xml/editor.xml:0
 #, python-format
 msgid "Texts"
-msgstr ""
+msgstr "Textos"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/xml/editor.xml:0
 #, python-format
 msgid "Texts... (each new line is one rotation)"
-msgstr ""
+msgstr "Textos...( cada línea nueva es una rotación)"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/xml/editor.xml:0
 #, python-format
 msgid "Type Speed"
-msgstr ""
+msgstr "Velocidad mecanógrafa"
 
 #. module: website_typed_text
 #. openerp-web
 #: code:addons/website_typed_text/static/src/js/editor.js:0
 #, python-format
 msgid "Typed Text Animation"
-msgstr ""
+msgstr "Animación de texto escrito"
