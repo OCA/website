@@ -1,2 +1,2 @@
 server-tools
-sale-workflow https://github.com/akretion/sale-workflow 12.0-mig-sale_promotion_rule
+sale-workflow
