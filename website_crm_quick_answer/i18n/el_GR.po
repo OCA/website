@@ -35,7 +35,7 @@ msgid ""
 "                    <p>Please, be patient. Best regards.</p>\n"
 "                    <p>Thanks,</p>\n"
 "                </div>\n"
-"            "
+"        "
 msgstr ""
 
 #. module: website_crm_quick_answer
