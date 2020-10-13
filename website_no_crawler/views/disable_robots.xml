@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="robots" inherit_id="website.robots">
+        <xpath expr="t" position="replace">
+            <t>
+User-agent: *
+Disallow: /
+Sitemap: <t t-esc="url_root" />sitemap.xml
+</t>
+        </xpath>
+    </template>
+</odoo>
