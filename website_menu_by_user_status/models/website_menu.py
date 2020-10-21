@@ -1,7 +1,7 @@
 # Copyright 2013-2017 Savoir-faire Linux (<http://www.savoirfairelinux.com>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 
 
 class WebsiteMenu(models.Model):
@@ -9,22 +9,26 @@ class WebsiteMenu(models.Model):
     if the menu is displayed when the user is logger or not.
     """
 
-    _inherit = 'website.menu'
+    _inherit = "website.menu"
 
     user_logged = fields.Boolean(
         string="Visible for logged Users",
         default=True,
-        help=_("If checked, "
-               "the menu will be displayed when the user is logged "
-               "and give access.")
+        help=_(
+            "If checked, "
+            "the menu will be displayed when the user is logged "
+            "and give access."
+        ),
     )
 
     user_not_logged = fields.Boolean(
         string="Visible for public Users",
         default=True,
-        help=_("If checked, "
-               "the menu will be displayed when the user is not logged "
-               "and give access.")
+        help=_(
+            "If checked, "
+            "the menu will be displayed when the user is not logged "
+            "and give access."
+        ),
     )
 
     @api.one
@@ -34,7 +38,7 @@ class WebsiteMenu(models.Model):
         if not self.is_visible:
             return
 
-        if self.env.user == self.env.ref('base.public_user'):
+        if self.env.user == self.env.ref("base.public_user"):
             self.is_visible = self.user_not_logged
         else:
             self.is_visible = self.user_logged
