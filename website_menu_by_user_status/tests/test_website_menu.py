@@ -21,35 +21,35 @@ class TestWebsiteMenu(SavepointCase):
     def test_visible_user_logged_demo(self):
         self.page.is_visible = True
         self.menu.user_logged = True
-        self.assertTrue(self.menu.sudo(self.demo_user).is_visible)
+        self.assertTrue(self.menu.with_user(self.demo_user).is_visible)
 
     def test_visible_user_logged_public(self):
         self.page.is_visible = True
         self.menu.user_logged = True
-        self.assertFalse(self.menu.sudo(self.public_user).is_visible)
+        self.assertFalse(self.menu.with_user(self.public_user).is_visible)
 
     def test_visible_user_not_logged_demo(self):
         self.page.is_visible = True
         self.user_not_logged = True
-        self.assertFalse(self.menu.sudo(self.demo_user).is_visible)
+        self.assertFalse(self.menu.with_user(self.demo_user).is_visible)
 
     def test_visible_user_not_logged_public(self):
         self.page.is_visible = True
         self.user_not_logged = True
-        self.assertFalse(self.menu.sudo(self.public_user).is_visible)
+        self.assertFalse(self.menu.with_user(self.public_user).is_visible)
 
     def test_not_visible_user_logged_demo(self):
         self.menu.user_logged = True
-        self.assertTrue(self.menu.sudo(self.demo_user).is_visible)
+        self.assertTrue(self.menu.with_user(self.demo_user).is_visible)
 
     def test_not_visible_user_logged_public(self):
         self.menu.user_logged = True
-        self.assertFalse(self.menu.sudo(self.public_user).is_visible)
+        self.assertFalse(self.menu.with_user(self.public_user).is_visible)
 
     def test_not_visible_user_not_logged_demo(self):
         self.user_not_logged = True
-        self.assertFalse(self.menu.sudo(self.demo_user).is_visible)
+        self.assertFalse(self.menu.with_user(self.demo_user).is_visible)
 
     def test_not_visible_user_not_logged_public(self):
         self.user_not_logged = True
-        self.assertFalse(self.menu.sudo(self.public_user).is_visible)
+        self.assertFalse(self.menu.with_user(self.public_user).is_visible)
