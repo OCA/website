@@ -36,7 +36,7 @@ msgid "Canonical domain is used to build unique canonical URLs to make SEO happy
 msgstr ""
 
 #. module: website_canonical_url
-#: code:addons/website_canonical_url/models/website.py:22
+#: code:addons/website_canonical_url/models/website.py:23
 #, python-format
 msgid "Canonical domain must contain protocol `http(s)://`"
 msgstr ""
