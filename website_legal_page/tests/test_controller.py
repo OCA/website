@@ -12,7 +12,7 @@ class TestController(HttpCase):
         self.assertEqual(response.status_code, 200)
 
     def test_controller_redirection(self):
-        """ It should return a 200 for legal page.
+        """It should return a 200 for legal page.
         Can't run a specific test when 'website_sale' is installed because
         can't know if was be installed before or after 'website_legal_page'.
 
