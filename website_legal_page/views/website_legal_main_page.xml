@@ -7,7 +7,10 @@
         name="Legal page Link"
         customize_show="True"
     >
-        <xpath expr="//footer//div/span[@t-field='res_company.name']" position="after">
+        <xpath
+            expr="//footer//div/span[hasclass('o_footer_copyright_name')]"
+            position="after"
+        >
             <span class="legal_page">-
                 <a href="/legal">Legal Page</a>
             </span>
