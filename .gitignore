@@ -1,8 +1,11 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+<<<<<<< HEAD
 /.venv
 /.pytest_cache
+=======
+>>>>>>> [MIG] Add metafiles
 
 # C extensions
 *.so
@@ -15,7 +18,10 @@ build/
 develop-eggs/
 dist/
 eggs/
+<<<<<<< HEAD
 lib/
+=======
+>>>>>>> [MIG] Add metafiles
 lib64/
 parts/
 sdist/
@@ -23,7 +29,10 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+<<<<<<< HEAD
 *.eggs
+=======
+>>>>>>> [MIG] Add metafiles
 
 # Installer logs
 pip-log.txt
@@ -43,6 +52,7 @@ coverage.xml
 # Pycharm
 .idea
 
+<<<<<<< HEAD
 # Eclipse
 .settings
 
@@ -56,6 +66,8 @@ coverage.xml
 # Django stuff:
 *.log
 
+=======
+>>>>>>> [MIG] Add metafiles
 # Mr Developer
 .mr.developer.cfg
 .project
@@ -71,5 +83,10 @@ docs/_build/
 *~
 *.swp
 
+<<<<<<< HEAD
 # OCA rules
 !static/lib/
+=======
+# Debug maps
+*.css.map
+>>>>>>> [MIG] Add metafiles

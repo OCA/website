@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat/186/14.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-website-186)
 [![Build Status](https://travis-ci.com/OCA/website.svg?branch=14.0)](https://travis-ci.com/OCA/website)
 [![codecov](https://codecov.io/gh/OCA/website/branch/14.0/graph/badge.svg)](https://codecov.io/gh/OCA/website)
@@ -34,3 +35,20 @@ that explains its license.
 OCA, or the [Odoo Community Association](http://odoo-community.org/), is a nonprofit
 organization whose mission is to support the collaborative development of Odoo features
 and promote its widespread use.
+=======
+[![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat/186/13.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-website-186)
+[![Build Status](https://travis-ci.org/OCA/website.svg?branch=13.0)](https://travis-ci.org/OCA/website)
+[![Coverage Status](https://codecov.io/gh/OCA/website/branch/13.0/graph/badge.svg)](https://codecov.io/gh/OCA/website)
+
+Odoo modules for website builder
+================================
+
+Includes modules that expand official website modules and include:
+
+* More functionality for the website builder.
+* More building blocks with pre-configured data (snippets).
+* Tools for the website environment.
+* and more...
+
+
+>>>>>>> [MIG] Add metafiles
