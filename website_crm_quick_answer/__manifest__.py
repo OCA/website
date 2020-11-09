@@ -6,7 +6,7 @@
     "name": "Quick answer for website contact form",
     "summary": "Add an automatic answer for contacts asking for info",
     "category": "Website",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "website": "https://github.com/OCA/website",
     "depends": ["website_crm", "base_automation"],
     "data": ["data/base_automation_data.xml"],
