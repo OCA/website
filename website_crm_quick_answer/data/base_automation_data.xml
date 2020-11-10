@@ -2,7 +2,7 @@
 <odoo noupdate="1">
     <record id="email_template" model="mail.template">
         <field name="name">Quick response to website contact form</field>
-        <!-- <field name="model_id" ref="crm.model_crm_lead" />
+        <field name="model_id" ref="crm.model_crm_lead" />
         <field name="use_default_to" eval="True" />
         <field name="email_from">${object.company_id.email}</field>
         <field name="lang">${object.env.context.get("lang")}</field>
@@ -20,7 +20,7 @@
                     <p>Please, be patient. Best regards.</p>
                     <p>Thanks,</p>
                 </div>
-        </field> -->
+        </field>
     </record>
     <record id="automated_action" model="base.automation">
         <field name="name">Quick response to website contact form</field>
