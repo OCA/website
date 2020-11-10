@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-11-10 09:08+0000\n"
+"Last-Translator: difbit <timo.kekalainen@hotmail.com>\n"
 "Language-Team: none\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -73,13 +75,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Changes"
-msgstr ""
+msgstr "Muutokset"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Changes To This Privacy Policy"
-msgstr ""
+msgstr "Muutokset rekisteriselosteeseen"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -87,13 +89,13 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Contact Us"
-msgstr ""
+msgstr "Ota yhteyttä"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Cookies"
-msgstr ""
+msgstr "Evästeet"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -112,18 +114,18 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Email address:"
-msgstr ""
+msgstr "Sähköpostiosoite:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Governing Law"
-msgstr ""
+msgstr "Sovellettava lainsäädäntö"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "I accept the"
-msgstr ""
+msgstr "Hyväksyn"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -131,20 +133,20 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "If you have any questions about these Terms, please contact us."
-msgstr ""
+msgstr "Jos sinulla on kysyttävää näistä ehdoista, ole meihin yhteydessä."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Information Collection And Use"
-msgstr ""
+msgstr "Tietojen kerääminen ja käyttö"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_advice_link
 #: model_terms:website.page,arch_db:website_legal_page.advise_page
 msgid "Legal Advice"
-msgstr ""
+msgstr "Oikeudellinen lausunto"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -173,13 +175,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Links To Other Web Sites"
-msgstr ""
+msgstr "Linkit muille verkkosivuille"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Log Data"
-msgstr ""
+msgstr "Lokitiedot"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -219,7 +221,7 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Phone number:"
-msgstr ""
+msgstr "Puhelin:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -233,38 +235,38 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_policy_link
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Rekisteriseloste"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Security"
-msgstr ""
+msgstr "Turvallisuus"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Termination"
-msgstr ""
+msgstr "Irtisanominen"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Terms of Use (\"Terms\")"
-msgstr ""
+msgstr "Käyttöehdot (\"Ehdot\")"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms_of_use_link
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Terms of use"
-msgstr ""
+msgstr "Käyttöehdot"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
 #: model_terms:website.page,arch_db:website_legal_page.advise_page
 msgid "The owner of this website is"
-msgstr ""
+msgstr "Tämän verkkosivun omistaja on"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -289,7 +291,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
 #: model_terms:website.page,arch_db:website_legal_page.advise_page
 msgid "VAT number:"
-msgstr ""
+msgstr "ALV-numero:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -356,7 +358,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
 #: model_terms:website.page,arch_db:website_legal_page.advise_page
 msgid "You can contact us at:"
-msgstr ""
+msgstr "Voit ottaa meihin yhteyttä osoitteessa:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -370,7 +372,7 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "legal advice"
-msgstr ""
+msgstr "oikeudellinen lausunto"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
@@ -380,12 +382,12 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "privacy policy"
-msgstr ""
+msgstr "rekisteriseloste"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "terms of use"
-msgstr ""
+msgstr "käyttöehdot"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
