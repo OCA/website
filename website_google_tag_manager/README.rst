@@ -23,7 +23,7 @@ Google Tag Manager
     :target: https://runbot.odoo-community.org/runbot/186/13.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module allows to configure your Odoo website to support the
 `GTM <https://marketingplatform.google.com/about/tag-manager/>`_
@@ -69,6 +69,7 @@ Contributors
 * `Tecnativa <https://www.tecnativa.com>`__:
   * Cristina Martin R.
 * Bjorn Billen <bjorn.billen@dynapps.be>
+* Foram Shah <foram.shah@initos.com>
 
 Maintainers
 ~~~~~~~~~~~
