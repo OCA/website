@@ -6,7 +6,9 @@
 from odoo import fields, models
 
 
-class Website(models.Model):
-    _inherit = 'website'
+class WebsiteConfigSettings(models.TransientModel):
+    _inherit = 'website.config.settings'
 
-    google_tag_manager_key = fields.Char("Container ID")
+    google_tag_manager_key = fields.Char(
+        'Container ID',
+        related='website_id.google_tag_manager_key')
