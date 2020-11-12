@@ -19,8 +19,7 @@
                         <div class="content-group">
                             <div class="row mt16">
                                 <label class="col-md-4 o_light_label" for="google_tag_manager_key"/>
-                                <field name="google_tag_manager_key" placeholder="GTM-XXXXX"
-                                       attrs="{'required': [('google_management_client_id', '!=', False)]}"/>
+                                <field name="google_tag_manager_key" placeholder="GTM-XXXXX"/>
                             </div>
                         </div>
 
