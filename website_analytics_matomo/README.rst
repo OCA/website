@@ -2,9 +2,9 @@
    :target: https://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
-===============
+================
 Matomo analytics
-===============
+================
 
 This module allows to simply configure your odoo website for using Matomo_.
 
