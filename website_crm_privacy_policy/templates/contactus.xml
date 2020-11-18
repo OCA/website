@@ -6,7 +6,7 @@
         name="Add privacy policy checkbox"
     >
         <xpath
-            expr="//form/div/div/span[@id='o_website_form_result']/../.."
+            expr="//form//div/div/span[@id='o_website_form_result']/../.."
             position="before"
         >
             <div class="form-group row form-field o_website_form_required_custom">
