@@ -1,11 +1,11 @@
 /* global Typed*/
-odoo.define("website_typed_text.frontend", function(require) {
+odoo.define("website_typed_text.frontend", function (require) {
     "use strict";
 
     var snippetAnimation = require("website.content.snippets.animation");
 
     var AnimatedTextMixin = {
-        _fetchSettingsFromElement: function($el) {
+        _fetchSettingsFromElement: function ($el) {
             var data = $el.data();
             var settings = {
                 strings: [],
@@ -17,7 +17,7 @@ odoo.define("website_typed_text.frontend", function(require) {
                 showCursor: data.cursorChar.length > 0,
                 smartBackspace: true,
             };
-            _.each(data, function(value, key) {
+            _.each(data, function (value, key) {
                 if (_.str.startsWith(key, "strings-") && value) {
                     settings.strings.push(value);
                 }
@@ -31,12 +31,12 @@ odoo.define("website_typed_text.frontend", function(require) {
         {
             selector: ".typed_text",
             disabledInEditableMode: true,
-            start: function() {
+            start: function () {
                 var res = this._super.apply(this, arguments);
 
                 var data = this.$target.data();
                 var strings = [];
-                _.each(data, function(value, key) {
+                _.each(data, function (value, key) {
                     if (_.str.startsWith(key, "strings-")) {
                         strings.push(value);
                     }
@@ -50,7 +50,7 @@ odoo.define("website_typed_text.frontend", function(require) {
                 return res;
             },
 
-            destroy: function() {
+            destroy: function () {
                 var res = this._super.apply(this, arguments);
                 this.typed.destroy();
                 this.$target.css("height", this.$target.attr("data-css-height"));

@@ -1,4 +1,4 @@
-odoo.define("website_typed_text.editor", function(require) {
+odoo.define("website_typed_text.editor", function (require) {
     "use strict";
 
     var core = require("web.core");
@@ -11,27 +11,27 @@ odoo.define("website_typed_text.editor", function(require) {
     options.registry.typed_text = options.Class.extend(AnimatedTextMixin, {
         xmlDependencies: ["/website_typed_text/static/src/xml/editor.xml"],
 
-        start: function() {
+        start: function () {
             this._super.apply(this, arguments);
             var self = this;
-            this.$target.on("snippet-option-change", function() {
+            this.$target.on("snippet-option-change", function () {
                 self.onFocus();
             });
         },
 
-        _setActive: function() {
+        _setActive: function () {
             var res = this._super.apply(this, arguments);
             var $rotationOption = this.$el.find("[data-change-typed-text]");
             $rotationOption.toggleClass("d-none", !this.$target.hasClass("typed_text"));
             return res;
         },
 
-        onFocus: function() {
+        onFocus: function () {
             var $rotationOption = this.$el.find("[data-change-typed-text]");
             $rotationOption.toggleClass("d-none", !this.$target.hasClass("typed_text"));
         },
 
-        toggleClass: function(previewMode, value) {
+        toggleClass: function (previewMode, value) {
             var res = this._super.apply(this, arguments);
             if (value === "typed_text") {
                 var $rotationOption = this.$el
@@ -49,7 +49,7 @@ odoo.define("website_typed_text.editor", function(require) {
             return res;
         },
 
-        _defaultSettings: function() {
+        _defaultSettings: function () {
             return {
                 strings: [this.$target.text()],
                 typeSpeed: 60,
@@ -61,11 +61,11 @@ odoo.define("website_typed_text.editor", function(require) {
             };
         },
 
-        _fetchSettingsFromTarget: function() {
+        _fetchSettingsFromTarget: function () {
             return this._fetchSettingsFromElement(this.$target);
         },
 
-        _applySettings: function(settings) {
+        _applySettings: function (settings) {
             this.$target.attr("data-type-speed", settings.typeSpeed);
             this.$target.attr("data-loop", settings.loop ? "1" : "0");
             this.$target.attr("data-back-speed", settings.backSpeed);
@@ -74,13 +74,13 @@ odoo.define("website_typed_text.editor", function(require) {
 
             _.each(
                 settings.strings,
-                function(string, i) {
+                function (string, i) {
                     this.$target.attr(_.str.sprintf("data-strings-%d", i), string);
                 }.bind(this)
             );
         },
 
-        changeTypedText: function() {
+        changeTypedText: function () {
             var self = this;
             var currentSettings = this._fetchSettingsFromTarget();
             currentSettings.strings = currentSettings.strings.join("\r\n");
@@ -89,7 +89,7 @@ odoo.define("website_typed_text.editor", function(require) {
                 {
                     text: _t("Save"),
                     classes: "btn-primary",
-                    click: function() {
+                    click: function () {
                         var $strings = this.$("#strings");
                         var $typeSpeed = this.$("#type-speed");
                         var $backSpeed = this.$("#back-speed");
