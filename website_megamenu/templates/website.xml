@@ -2,6 +2,7 @@
 <odoo>
     <data>
         <template id="submenu" inherit_id="website.submenu">
+            <!-- Allow display megamenu type if visible -->
             <xpath expr="//t[@t-set='has_visible_submenu']" position="attributes">
                 <attribute
                     name="t-value"
@@ -9,6 +10,7 @@
                     separator=" "
                 />
             </xpath>
+            <!-- Set static position for the megamenu content -->
             <xpath expr="li[@t-if='has_visible_submenu']" position="attributes">
                 <attribute
                     name="t-attf-class"
@@ -16,6 +18,7 @@
                     separator=" "
                 />
             </xpath>
+            <!-- Handle show toggle -->
             <xpath expr="li[@t-if='has_visible_submenu']/a" position="attributes">
                 <attribute
                     name="t-attf-class"
@@ -23,6 +26,11 @@
                     separator=" "
                 />
             </xpath>
+            <!-- Don't show default Odoo submenu -->
+            <xpath expr="li[@t-if='has_visible_submenu']/ul" position="attributes">
+                <attribute name="t-if">not submenu.is_mega_menu</attribute>
+            </xpath>
+            <!-- Insert the megamenu content zone -->
             <xpath expr="li[@t-if='has_visible_submenu']/a" position="after">
                 <div
                     t-if="submenu.is_mega_menu"
