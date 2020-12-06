@@ -9,26 +9,26 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-01 01:34+0000\n"
-"PO-Revision-Date: 2018-09-27 11:23+0000\n"
-"Last-Translator: Cris <cristina.marrod@gmail.com>\n"
+"PO-Revision-Date: 2020-12-06 11:36+0000\n"
+"Last-Translator: David Alonso (Solvos) <david.alonso@solvos.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.cookie_message
-#, fuzzy
 msgid ""
 "<span>We use cookies in this website. Read about them in our cookies policy. "
 "To disable them, configure your browser properly. If you keep using this "
 "website, you are accepting those.</span>"
 msgstr ""
-". Para desactivarlas, configure adecuadamente su navegador. Si continúa "
-"usando este sitio web, está aceptándolas."
+"<span>Usamos cookies en este sitio web. Lea más acerca de ellas en nuestra "
+"Política de Cookies. Para desactivarlas, configure adecuadamente su "
+"navegador. Si continúa usando este sitio web, está aceptándolas.</span>"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
