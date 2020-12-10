@@ -49,11 +49,11 @@ odoo.define('website_form_recaptcha.recaptcha', function (require) {
         },
         _get_captcha_script_url: function () {
             var lang = $("html").attr("lang").replace("_", "-");
-            if (this.captcha_languages.includes(lang)) {
+            if (this.captcha_languages.indexOf(lang) >= 0) {
                 // Lookup for specific localization (ie: fr-FR)
                 return this.recaptcha_js_url + "?hl=" + lang;
             }
-            if (this.captcha_languages.includes(lang.slice(0, 2))) {
+            if (this.captcha_languages.indexOf(lang.slice(0, 2)) >= 0) {
                 // Fallback to main lang
                 return this.recaptcha_js_url + "?hl=" + lang.slice(0, 2);
             }
