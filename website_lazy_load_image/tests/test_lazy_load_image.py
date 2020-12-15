@@ -3,8 +3,11 @@
 
 from odoo.tests.common import SavepointCase
 from lxml import etree
+from odoo.tests import tagged
+from odoo.addons.website.tools import MockRequest
 
 
+@tagged('-at_install', 'post_install')
 class LazyLoadTest(SavepointCase):
 
     @classmethod
@@ -84,7 +87,9 @@ class LazyLoadTest(SavepointCase):
         ui_view = self.env['ir.ui.view'].sudo(
             public_user_id).with_context(website_id=self.website_id)
         res = ui_view.render_template(self.view_3.id).decode('UTF-8')
-        arch = '<span>content not wrapped</span>'
+        arch = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" ' \
+               '"http://www.w3.org/TR/REC-html40/loose.dtd">\n' \
+               '<span>content not wrapped</span>'
         self.assertEqual(res, arch)
 
     def test_encoding_render(self):
@@ -93,8 +98,25 @@ class LazyLoadTest(SavepointCase):
         ui_view = self.env['ir.ui.view'].sudo(
             public_user_id).with_context(website_id=self.website_id)
         res = ui_view.render_template(self.view_4.id).decode('UTF-8')
-        arch = '<main><span>Teléfono, means phone</span></main>'
+        arch = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" ' \
+               '"http://www.w3.org/TR/REC-html40/loose.dtd">\n' \
+               '<main><span>Teléfono, means phone</span></main>'
         self.assertEqual(res, arch)
         robots = self.env.ref('website.robots').render()
-        self.assertNotIn('<html>', robots.decode(
-            'UTF-8'), "Robots must not be wrapped into html DOM")
+        self.assertNotIn('<html>', robots.decode('UTF-8'),
+                         "Robots must not be wrapped into html DOM")
+
+    def test_doctype_full_website_page(self):
+        """ Check that at least doctype is preserved on website """
+        website = self.env['website'].browse(self.website_id)
+        with MockRequest(self.env, website=website, multilang=False) as req:
+            req.csrf_token = lambda x: str(x)
+            res = self.env.ref("website.login_layout").render({
+                "request": req,
+                "website": website,
+                "main_object": self.env["ir.ui.view"].browse()
+            })
+            self.assertIn(
+                '<!DOCTYPE ', res.decode('UTF-8'),
+                'DOCTYPE must appear in the website view'
+            )
