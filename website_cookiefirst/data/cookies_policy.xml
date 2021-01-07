@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="cookies" model="ir.ui.view">
+        <field name="name">Cookies Policy</field>
+        <field name="type">qweb</field>
+        <field name="key">website.cookies</field>
+        <field name="arch" type="xml">
+            <t name="Cookies Policy" t-name="website.cookies">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="oe_structure">
+                            <section data-snippet-id="title">
+                                <h1 class="text-center">Cookie Declaration</h1>
+                            </section>
+                        </div>
+                        <section class="mb-5 mt-5">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div id="cookiefirst-policy-page" />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="oe_structure" />
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="cookies_page" model="website.page">
+        <field name="url">/legal/cookies-policy</field>
+        <field name="website_published">True</field>
+        <field name="view_id" ref="cookies" />
+    </record>
+</odoo>
