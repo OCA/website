@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="user_navbar" inherit_id="website.user_navbar">
+        <xpath expr="//li[@id='mobile-menu']" position="before">
+            <li id="ab_testing_menu">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span>A/B Testing</span>
+                </a>
+                <t
+                    t-set="master_variant"
+                    t-value="ab_testing_variants.filtered(lambda v: not v.master_id)"
+                />
+                <div class="dropdown-menu" role="menu">
+                    <a href="#" class="dropdown-item" role="menuitem">
+                        <label
+                            class="o_switch ab_testing_toggle"
+                            for="enable_ab_testing"
+                        >
+                            <t t-if="master_variant.ab_testing_enabled">
+                                <input
+                                    id="enable_ab_testing"
+                                    type="checkbox"
+                                    checked="checked"
+                                />
+                            </t>
+                            <t t-else="">
+                                <input id="enable_ab_testing" type="checkbox" />
+                            </t>
+                            <span />
+                            Enabled
+                        </label>
+                    </a>
+                    <div role="separator" class="dropdown-divider" />
+                    <a
+                        role="menuitem"
+                        href="#"
+                        t-foreach="ab_testing_variants"
+                        t-as="variant"
+                        t-attf-class="dropdown-item ab_testing_select #{not active_variant and not variant.master_id and 'active' or active_variant and active_variant.id == variant.id and 'active' or ''}"
+                        t-att-data-master-variant="not variant.master_id and '1' or '0'"
+                        t-att-data-id="variant.id"
+                    >
+                        <t t-esc="variant.name" />
+                        <span
+                            class="fa fa-trash ml-2 text-right ab_testing_delete"
+                            t-if="variant.master_id"
+                            t-att-data-id="variant.id"
+                        />
+                    </a>
+                    <div role="separator" class="dropdown-divider" />
+                    <a role="menuitem" href="#" class="dropdown-item ab_testing_add">
+                        <span class="fa fa-plus mr-2" />
+                        New Variant
+                    </a>
+                </div>
+            </li>
+        </xpath>
+    </template>
+</odoo>

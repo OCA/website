@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="assets_editor" inherit_id="website.assets_editor">
+        <xpath expr="//script[last()]" position="after">
+            <script src="/website_ab_testing/static/src/js/editor.js" />
+        </xpath>
+    </template>
+</odoo>

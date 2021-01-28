@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="ab_testing_target_tree" model="ir.ui.view">
+        <field name="model">ab.testing.target</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="ab_testing_target_form" model="ir.ui.view">
+        <field name="model">ab.testing.target</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="open_conversion_view"
+                            type="object"
+                            icon="fa-filter"
+                            class="oe_stat_button"
+                        >
+                            <field
+                                string="Conversions"
+                                name="conversion_count"
+                                widget="statinfo"
+                            />
+                        </button>
+                        <button
+                            name="open_conversion_graph"
+                            type="object"
+                            icon="fa-bar-chart"
+                            class="oe_stat_button"
+                        >
+                            Statistics
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <field
+                            name="website_id"
+                            options="{'no_open': True, 'no_create_edit': True}"
+                            groups="website.group_multi_website"
+                        />
+                        <field name="active" />
+                    </group>
+                    <notebook>
+                        <page string="Triggers">
+                            <field name="trigger_ids">
+                                <tree>
+                                    <field name="name" />
+                                    <field name="on" />
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="name" />
+                                            <field name="on" required="1" />
+                                            <field
+                                                name="url"
+                                                attrs="{'invisible': [('on', '!=', 'url_visit')], 'required': [('on', '=', 'url_visit')]}"
+                                            />
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ab_testing_target_search" model="ir.ui.view">
+        <field name="model">ab.testing.target</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+    <record id="ab_testing_target_action" model="ir.actions.act_window">
+        <field name="name">Targets</field>
+        <field name="res_model">ab.testing.target</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
