@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo14-addon-website_google_tag_manager',
+        'odoo14-addon-website_odoo_debranding',
     ],
     classifiers=[
         'Programming Language :: Python',
