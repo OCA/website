@@ -25,8 +25,9 @@ msgid ""
 ". To disable them, configure your browser properly. If you keep using this "
 "website, you are accepting those."
 msgstr ""
-". Para desactivarlas, configure adecuadamente su navegador. Si continúa "
-"usando este sitio web, está aceptándolas."
+"<span>Este sitio usa Cookies. Lea acerca de ellas en nuestra página de términos y condiciones. "
+"Para desactivarlas configure adecuadamente su navegador. Si continúa "
+"usando este sitio web está aceptándolas."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
