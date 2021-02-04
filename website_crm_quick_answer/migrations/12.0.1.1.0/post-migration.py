@@ -4,7 +4,7 @@ from openupgradelib import openupgrade
 
 
 @openupgrade.migrate(use_env=True)
-def migrate(env):
+def migrate(env, version):
     # The template is noupdate=1; force lang update
     template = env.ref("website_crm_quick_answer.email_template")
     if template.lang == '${object.env.context.get("lang")}':
