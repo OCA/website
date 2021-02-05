@@ -21,10 +21,9 @@ msgstr ""
 msgid "User-agent: *\n"
 "Disallow: /\n"
 "Sitemap:"
-msgstr ""
-"Agente de usuario: *\n"
-"No permitir: /\n"
-"Mapa del sitio:"
+msgstr "User-agent: *\n"
+"Disallow: /\n"
+"Sitemap:"
 
 #. module: website_no_crawler
 #: model_terms:ir.ui.view,arch_db:website_no_crawler.robots
