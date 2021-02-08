@@ -2,16 +2,9 @@
 # Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp.tests.common import HttpCase
+import odoo.tests
 
 
-class UICase(HttpCase):
-    def test_contacts(self):
-        """Test frontend tour."""
-        self.phantom_js(
-            url_path="/",
-            code="odoo.__DEBUG__.services['web.Tour']"
-                 ".run('website_portal_contact', 'test', 'events')",
-            ready="odoo.__DEBUG__.services['web.Tour']"
-                  ".tours.website_portal_contact",
-            login="portal")
+class TestUi(odoo.tests.HttpCase):
+    def test_01_portal_contact_test_tour(self):
+        self.start_tour("/", "portal_contacts", login="portal")

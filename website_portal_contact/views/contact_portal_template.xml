@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <template id="portal_my_home_contacts" name="Show Contacts" customize_show="True" inherit_id="portal.portal_my_home" priority="25">
+      <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+          <t t-call="portal.portal_docs_entry">
+              <t t-set="title">Your Contacts</t>
+              <t t-set="url" t-value="'/my/contacts'"/>
+              <t t-set="placeholder_count" t-value="'contact_count'"/>
+          </t>
+      </xpath>
+    </template>
+
+    <template id="portal_layout" name="Portal layout: contacts menu entry" inherit_id="portal.portal_breadcrumbs" priority="10">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'contact' or contact" t-attf-class="breadcrumb-item #{'active' if not contact else ''}">
+                <a t-if="contact" t-attf-href="/my/contacts?{{ keep_query() }}">Contacts</a>
+                <t t-else="">Contacts</t>
+            </li>
+            <li t-if="contact and page_name != 'add_contact' or add_contact" class="breadcrumb-item active text-truncate col-8 col-lg-10">
+                <t t-esc="contact.name"/>
+            </li>
+            <li t-if="page_name == 'add_contact' or add_contact" t-attf-class="breadcrumb-item active">
+                <t>New Contact</t>
+            </li>
+        </xpath>
+    </template>
+
+
+
+    <template id="portal_my_contacts" name="My Contacts">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Contacts</t>
+            </t>
+            <t t-if="not contacts">
+                <div class="alert alert-warning mt8" role="alert">
+                    There are no contacts.
+                </div>
+            </t>
+            <div style="text-align: right;" class="c_total mr-2 mb-1 text-muted">
+                <a href="/my/contacts/new" class="btn btn-primary btn-wide">
+                    <div class="fa fa-plus"/>
+                    <span><t>Add new contact</t></span>
+                </a>
+                <t t-if="total_contacts &gt; -1">
+                    Total: <span class="text-muted" t-esc="total_contacts"/>
+                </t>
+            </div>
+            <t t-if="contacts" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Name</th>
+                        <th class="text-right">Mobile</th>
+                        <th class="text-right">Email</th>
+                        <th class="text-right">Delete</th>
+                    </tr>
+                </thead>
+                <t t-foreach="contacts" t-as="contact">
+                    <tr>
+                        <td>
+                            <a t-attf-href="/my/contacts/#{contact.id}?{{ keep_query() }}">
+                                <span t-field="contact.name"/>
+                            </a>
+                        </td>
+                        <td class="text-right">
+                            <a t-attf-href="tel://#{contact.mobile}">
+                                <span t-field="contact.mobile"/>
+                            </a>
+                        </td>
+                        <td class="text-right">
+                            <a t-attf-href="mailto://#{contact.email}">
+                                <span t-field="contact.email"/>
+                            </a>
+                        </td>
+                        <td class="text-right">
+                            <a class="btn btn-sm btn-danger"
+                               t-attf-href="/my/contacts/#{contact.id}/disable?redirect=#{quote_plus(request.httprequest.url)}"
+                               role="button">
+                                <span class="fa fa-trash" role="img" aria-label="Delete" title="Delete"/>
+                            </a>
+                        </td>
+                    </tr>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_my_contact" name="My Contact">
+        <t t-call="portal.portal_layout">
+            <t t-if="page_name != 'add_contact' or add_contact">
+                <t t-set="o_portal_fullwidth_alert" groups="base.group_user">
+                    <t t-call="portal.portal_back_in_edit_mode">
+                        <t t-set="backend_url" t-value="'/web#model=res.partner&amp;id=%s&amp;view_type=form' % (contact.id)"/>
+                    </t>
+                </t>
+            </t>
+            <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <h5 class="mb-0">
+                        <t t-if="contact.id"><b>Edit Contact  </b></t>
+                        <t t-if="not contact.id"><b>Add Contact  </b></t>
+                        <span t-field="contact.name" class="text-truncate ml16"/>
+                        <span class="float-right">
+                            <t t-if="contact.id">
+                                <a role="button" t-attf-href="/my/contacts/#{contact.id}/disable" class="btn btn-danger">
+                                    <span class="fa fa-trash" role="img" aria-label="Delete" title="Delete"/>
+                                </a>
+                            </t>
+                        </span>
+                    </h5>
+                </t>
+                <t t-set="card_body">
+                    <form id="portal_contact"
+                        t-attf-action="/my/contacts/{{'{}/update'.format(contact.id) if contact.id else 'create'}}"
+                        method="post"
+                        enctype="multipart/form-data"
+                        class="container form-horizontal">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <t t-foreach="fields" t-as="field_name">
+                            <!-- <t t-call="website_portal_contact.form_field"/> -->
+                            <t t-set="field_description"
+                               t-value="contact._fields[field_name].get_description(request.env)"/>
+                            <div class="form-group">
+                                <label t-att-for="field_name" class="col-sm-3">
+                                    <t t-esc="field_description['string']"/>
+                                </label>
+                                <div class="col-sm-9">
+                                    <input
+                                        t-att-id="field_name"
+                                        t-att-name="field_name"
+                                        t-att-type="'email' if field_name == 'email' else ('tel' if field_name in ('phone', 'mobile') else 'text')"
+                                        t-att-required="field_description['required'] and 'required'"
+                                        t-att-value="contact[field_name]"
+                                        class="form-control"/>
+                                </div>
+                            </div>
+                        </t>
+                        <section class="row o_submit">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary" title="Save">Save</button>
+                            </div>
+                        </section>
+                    </form>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

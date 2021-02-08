@@ -126,18 +126,18 @@ msgstr ""
 #. module: website_portal_contact
 #: model:ir.model,name:website_portal_contact.model_res_partner
 msgid "Contact"
-msgstr "Kontakt"
+msgstr ""
 
 #. module: website_portal_contact
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_layout
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
 msgid "Contacts"
-msgstr "Kontakte"
+msgstr ""
 
 #. module: website_portal_contact
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
 msgid "Delete"
-msgstr "Löschen"
+msgstr ""
 
 #. module: website_portal_contact
 #. openerp-web
@@ -149,12 +149,12 @@ msgstr ""
 #. module: website_portal_contact
 #: model:ir.model.fields,field_description:website_portal_contact.field_res_partner__display_name
 msgid "Display Name"
-msgstr "Anzeigename"
+msgstr ""
 
 #. module: website_portal_contact
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
 msgid "Email"
-msgstr "E-Mail"
+msgstr ""
 
 #. module: website_portal_contact
 #: code:addons/website_portal_contact/controllers/main.py:0
@@ -212,12 +212,12 @@ msgstr ""
 #. module: website_portal_contact
 #: model:ir.model.fields,field_description:website_portal_contact.field_res_partner____last_update
 msgid "Last Modified on"
-msgstr "Zuletzt geändert am"
+msgstr ""
 
 #. module: website_portal_contact
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
 msgid "Mobile"
-msgstr "Mobil"
+msgstr ""
 
 #. module: website_portal_contact
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
@@ -239,7 +239,7 @@ msgstr ""
 #. module: website_portal_contact
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contact
 msgid "Save"
-msgstr "Speichern"
+msgstr ""
 
 #. module: website_portal_contact
 #. openerp-web
