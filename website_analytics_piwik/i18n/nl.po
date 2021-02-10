@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-01 01:34+0000\n"
-"PO-Revision-Date: 2020-12-10 14:36+0000\n"
+"PO-Revision-Date: 2021-02-10 17:44+0000\n"
 "Last-Translator: Dennis Sluijk <d.sluijk@onestein.nl>\n"
 "Language-Team: Dutch (https://www.transifex.com/oca/teams/23907/nl/)\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_analytics_piwik
 #: model:ir.model,name:website_analytics_piwik.model_res_config_settings
@@ -28,7 +28,7 @@ msgstr "Configuratie instellingen"
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings__has_piwik_analytics
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_website__has_piwik_analytics
 msgid "Piwik Analytics"
-msgstr ""
+msgstr "Pikik Analytics"
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings__piwik_analytics_host
@@ -46,7 +46,7 @@ msgstr ""
 #: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings__piwik_analytics_id
 #: model:ir.model.fields,help:website_analytics_piwik.field_website__piwik_analytics_id
 msgid "The ID Piwik uses to identify the website"
-msgstr ""
+msgstr "De ID Piwik gebruikt om de website te identificeren"
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings__piwik_analytics_host
@@ -56,11 +56,14 @@ msgid ""
 "not include a protocol here!\n"
 "So http[s]://[this field]/piwik.php should resolve to your piwik.php"
 msgstr ""
+"De host/pad van uw Piwik installatie dat toegankelijk is vanaf het "
+"internet.  Laat het protocol hier weg!\n"
+"Dus http[s]://[dit veld]/piwik.php zou naar uw piwik.php moeten verwijzen"
 
 #. module: website_analytics_piwik
 #: model_terms:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
 msgid "Track visits in Piwik Analytics"
-msgstr ""
+msgstr "Volg bezoeken in Piwik Analytics"
 
 #. module: website_analytics_piwik
 #: model:ir.model,name:website_analytics_piwik.model_website
