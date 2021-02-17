@@ -1,11 +1,11 @@
 odoo.define("website_snippet_country_dropdown.tour_demo_page", function(require) {
     "use strict";
 
-    var tour = require("web_tour.tour");
-    var base = require("web_editor.base");
+    const tour = require("web_tour.tour");
+    const base = require("web_editor.base");
 
-    var country_code_test = "ES";
-    var vat_number_test = "B01010101";
+    const country_code_test = "ES";
+    const vat_number_test = "B01010101";
 
     tour.register(
         "website_snippet_country_dropdown_tour_demo_page",

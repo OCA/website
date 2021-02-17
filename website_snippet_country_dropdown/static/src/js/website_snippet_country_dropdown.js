@@ -5,9 +5,9 @@
 
 odoo.define("website_snippet_country_dropdown.dropdown", function(require) {
     "use strict";
-    var animation = require("website.content.snippets.animation");
+    const animation = require("website.content.snippets.animation");
 
-    var CountryDropdown = animation.Class.extend({
+    const CountryDropdown = animation.Class.extend({
         selector: ".js_country_dropdown",
         start: function() {
             this._super.apply(this, arguments);
@@ -43,7 +43,9 @@ odoo.define("website_snippet_country_dropdown.dropdown", function(require) {
                 event.currentTarget.dataset.country_code
             );
             this.$country_code_field.val(event.currentTarget.id);
-            this.$country_code.children().text(String(event.currentTarget.id));
+            $(this.country_code)
+                .children()
+                .text(String(event.currentTarget.id));
             this.join_value(event.currentTarget.id, this.$no_country_field.val());
         },
         join_value: function(country_code, value) {
@@ -57,20 +59,20 @@ odoo.define("website_snippet_country_dropdown.dropdown", function(require) {
         },
 
         is_option_visible: function(elm) {
-            var ddViewTop = this.$dropdown_list.offset().top;
-            var ddViewBottom = ddViewTop + this.$dropdown_list.height();
+            const ddViewTop = this.$dropdown_list.offset().top;
+            const ddViewBottom = ddViewTop + this.$dropdown_list.height();
 
-            var elemTop = elm.offset().top;
-            var elemBottom = elemTop + elm.height();
+            const elemTop = elm.offset().top;
+            const elemBottom = elemTop + elm.height();
 
             return elemTop <= ddViewBottom && elemBottom >= ddViewTop;
         },
         lazy_image_load: function() {
-            var self = this;
+            const _this = this;
             this.$dropdown_list.children("a").each(function() {
-                var $elm = $(this);
-                var $img = $elm.children("img");
-                if (!$img.attr("src") && self.is_option_visible($elm)) {
+                const $elm = $(this);
+                const $img = $elm.children("img");
+                if (!$img.attr("src") && _this.is_option_visible($elm)) {
                     $elm.children("img").attr(
                         "src",
                         "/website/image/res.country/" +
