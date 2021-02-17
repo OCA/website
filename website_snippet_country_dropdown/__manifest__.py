@@ -5,7 +5,7 @@
 {
     "name": "Website Snippet Country Code Dropdown",
     "summary": "Allow to select country in a dropdown",
-    "version": "12.0.1.2.0",
+    "version": "13.0.1.0.0",
     "category": "Website",
     "website": "http://www.tecnativa.com",
     "author": "Tecnativa, " "Odoo Community Association (OCA)",
@@ -14,6 +14,6 @@
     "installable": True,
     "depends": ["website"],
     "qweb": ["static/src/xml/*.xml"],
-    "data": ["views/assets.xml", "views/snippets.xml"],
-    "demo": ["demo/pages.xml", "demo/assets.xml"],
+    "data": ["templates/assets.xml", "views/snippets.xml"],
+    "demo": ["demo/pages.xml"],
 }
