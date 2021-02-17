@@ -9,8 +9,8 @@ class UICase(odoo.tests.HttpCase):
     def test_admin_tour_marginless_gallery(self):
         self.browser_js(
             "/",
-            "odoo.__DEBUG__.services['web_tour.tour']"
-            ".run('marginless_gallery')",
+            "odoo.__DEBUG__.services['web_tour.tour']" ".run('marginless_gallery')",
             "odoo.__DEBUG__.services['web_tour.tour']"
             ".tours.marginless_gallery.ready",
-            login="admin")
+            login="admin",
+        )
