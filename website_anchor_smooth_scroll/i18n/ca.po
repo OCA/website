@@ -6,69 +6,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2021-02-17 18:45+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
 "Language-Team: none\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_anchor_smooth_scroll
 #: model:website.menu,name:website_anchor_smooth_scroll.menu_demo_page
 msgid "Anchor smooth scroll demo"
-msgstr ""
+msgstr "Demostració de desplaçament suau d’ancoratge"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "It works for any links to #anchors in your website!"
-msgstr ""
+msgstr "Funciona per a qualsevol enllaç a #anchors del vostre lloc web!"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "More dummy content"
-msgstr ""
+msgstr "Més contingut fictici"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Odoo CMS - a big picture"
-msgstr ""
+msgstr "Odoo CMS: un panorama general"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Press the button below and enjoy a smooth experience."
-msgstr ""
+msgstr "Premeu el botó següent i gaudiu d'una experiència fluida."
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to bottom"
-msgstr ""
+msgstr "Desplaceu-vos fins a la part inferior"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Scroll to top"
-msgstr ""
+msgstr "Desplaceu-vos cap amunt"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Smooth? Nice."
-msgstr ""
+msgstr "Llis? Bonic."
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "This is dummy content"
-msgstr ""
+msgstr "Aquest és un contingut fictici"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Try smooth scrolling. Easily."
-msgstr ""
+msgstr "Proveu un desplaçament suau. Fàcilment."
