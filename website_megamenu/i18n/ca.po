@@ -6,107 +6,109 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2021-02-17 18:45+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
 "Language-Team: none\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.snippet_options
 msgid "<i class=\"fa fa-fw fa-arrows-h\"/> Size"
-msgstr ""
+msgstr "<i class=\"fa fa-fw fa-arrows-h\"/> Mida"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.snippets
 msgid "<i class=\"fa fa-puzzle-piece\"/> Mega Menu"
-msgstr ""
+msgstr "<i class=\"fa fa-puzzle-piece\"/> Mega Menu"
 
 #. module: website_megamenu
 #. openerp-web
 #: code:addons/website_megamenu/static/src/xml/website.contentMenu.xml:7
 #, python-format
 msgid "Add Mega Menu Item"
-msgstr ""
+msgstr "Afegir element del mega menu"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.s_mega_menu_multi_menus
 msgid "First Menu"
-msgstr ""
+msgstr "Primer menú"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.snippet_options
 msgid "Full-Width"
-msgstr ""
+msgstr "Amplada completa"
 
 #. module: website_megamenu
 #: model:ir.model.fields,field_description:website_megamenu.field_website_menu__is_mega_menu
 msgid "Is Mega Menu"
-msgstr ""
+msgstr "és mega menú"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.s_mega_menu_multi_menus
 msgid "Last Menu"
-msgstr ""
+msgstr "Últim menú"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.s_mega_menu_menu_image_menu
 msgid "Left Menu"
-msgstr ""
+msgstr "Menú esquerre"
 
 #. module: website_megamenu
 #. openerp-web
 #: code:addons/website_megamenu/static/src/xml/website.contentMenu.xml:21
 #, python-format
 msgid "Mega Menu"
-msgstr ""
+msgstr "Mega Menú"
 
 #. module: website_megamenu
 #: model:ir.model.fields,field_description:website_megamenu.field_website_menu__mega_menu_classes
 msgid "Mega Menu Classes"
-msgstr ""
+msgstr "Classes de mega menú"
 
 #. module: website_megamenu
 #: model:ir.model.fields,field_description:website_megamenu.field_website_menu__mega_menu_content
 msgid "Mega Menu Content"
-msgstr ""
+msgstr "Contingut del mega menú"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.s_mega_menu_menu_image_menu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.s_mega_menu_multi_menus
 msgid "Menu Item %s"
-msgstr ""
+msgstr "Element de menú %s"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.snippet_options
 msgid "Narrow"
-msgstr ""
+msgstr "Estret"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.s_mega_menu_menu_image_menu
 msgid "Right Menu"
-msgstr ""
+msgstr "Menú dret"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.s_mega_menu_multi_menus
 msgid "Second Menu"
-msgstr ""
+msgstr "Segon menú"
 
 #. module: website_megamenu
 #: model_terms:ir.ui.view,arch_db:website_megamenu.s_mega_menu_multi_menus
 msgid "Third Menu"
-msgstr ""
+msgstr "Tercer menú"
 
 #. module: website_megamenu
 #: model:ir.model,name:website_megamenu.model_website_menu
 msgid "Website Menu"
-msgstr ""
+msgstr "Menú del lloc web"
 
 #. module: website_megamenu
 #. openerp-web
 #: code:addons/website_megamenu/static/src/xml/website.contentMenu.xml:15
 #, python-format
 msgid "submenu.is_mega_menu ? true : undefined"
-msgstr ""
+msgstr "submenu.is_mega_menu ? true : undefined"
