@@ -9,26 +9,27 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
-"PO-Revision-Date: 2018-01-27 03:46+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
+"PO-Revision-Date: 2021-02-17 18:45+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
 "Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "(\"us\", \"we\", or \"our\") operates"
-msgstr ""
+msgstr "(\"nosaltres\", \"nosaltres\" o \"nostre\") funciona"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "(\"us\", \"we\", or \"our\")."
-msgstr ""
+msgstr "(\"nosaltres\", \"nosaltres\" o \"nostre\")."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -40,6 +41,11 @@ msgid ""
 "                                                of Personal Information we "
 "receive from users of the Site."
 msgstr ""
+"(el lloc\"). Aquesta pàgina us informa de les nostres polítiques relatives "
+"al\n"
+"                                                recollida, ús i divulgació\n"
+"                                                de la informació personal "
+"que rebem dels usuaris del lloc."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -49,16 +55,19 @@ msgid ""
 "                                                without regard to its "
 "conflict of law provisions."
 msgstr ""
+",\n"
+"                                                sense tenir en compte les "
+"seves disposicions sobre conflictes de lleis."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid ", and the"
-msgstr ""
+msgstr ", i el"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid ", the"
-msgstr ""
+msgstr ", el"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -72,6 +81,15 @@ msgid ""
 "indemnity\n"
 "                                                and limitations of liability."
 msgstr ""
+"Totes les disposicions dels Termes que per la seva naturalesa haurien de "
+"sobreviure\n"
+"                                                la rescissió sobreviurà\n"
+"                                                terminació, incloent, sense "
+"limitacions, disposicions sobre propietat,\n"
+"                                                exempcions de garantia, "
+"indemnització\n"
+"                                                i limitacions de "
+"responsabilitat."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -82,18 +100,23 @@ msgid ""
 "                                                any part of the terms then "
 "you may not access the Service."
 msgstr ""
+"En accedir o utilitzar el Servei, accepteu estar obligat per aquestes "
+"Condicions.\n"
+"                                                Si no hi esteu d’acord\n"
+"                                                qualsevol part dels termes "
+"no pot accedir al Servei."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Changes"
-msgstr ""
+msgstr "Canvis"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Changes To This Privacy Policy"
-msgstr ""
+msgstr "Canvis a aquesta política de privacitat"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -101,13 +124,13 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Contact Us"
-msgstr ""
+msgstr "Contacta'ns"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Cookies"
-msgstr ""
+msgstr "Cookies"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -120,6 +143,12 @@ msgid ""
 "browser from a web site and stored on your\n"
 "                                                computer's hard drive."
 msgstr ""
+"Les cookies són fitxers amb una petita quantitat de dades, que poden "
+"incloure un\n"
+"                                                identificador únic anònim.\n"
+"                                                Les cookies s’envien al "
+"navegador des d’un lloc web i s’emmagatzemen al vostre navegador\n"
+"                                                el disc dur de l'ordinador."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
@@ -129,18 +158,18 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Email address:"
-msgstr ""
+msgstr "Correu electrònic:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Governing Law"
-msgstr ""
+msgstr "Llei que regeix"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "I accept the"
-msgstr ""
+msgstr "Jo accepto el"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -149,19 +178,21 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "If you have any questions about these Terms, please contact us."
 msgstr ""
+"Si teniu cap pregunta sobre aquests Termes, poseu-vos en contacte amb "
+"nosaltres."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Information Collection And Use"
-msgstr ""
+msgstr "Recollida i ús de la informació"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_advice_link
 #: model_terms:website.page,arch_db:website_legal_page.advise_page
 msgid "Legal Advice"
-msgstr ""
+msgstr "Avís Legal"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -179,6 +210,19 @@ msgid ""
 "the time spent on those pages and other\n"
 "                                                statistics."
 msgstr ""
+"Com molts operadors de llocs, recopilem informació que envia el vostre "
+"navegador\n"
+"                                                sempre que visiteu el "
+"nostre\n"
+"                                                Lloc (\"Dades de registre\")"
+". Aquestes dades de registre poden incloure informació com la vostra\n"
+"                                                Internet de l’ordinador\n"
+"                                                Adreça de protocol (\"IP\"), "
+"tipus de navegador, versió del navegador, les pàgines del nostre\n"
+"                                                Lloc que visiteu, el\n"
+"                                                hora i data de la vostra "
+"visita, el temps dedicat a aquestes pàgines i altres\n"
+"                                                estadístiques."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -193,18 +237,27 @@ msgid ""
 "                                                may not be able to use some "
 "portions of our Site."
 msgstr ""
+"Com molts llocs, fem servir \"cookies\" per recopilar informació. Tu pots\n"
+"                                                demaneu al vostre navegador "
+"que es negui\n"
+"                                                totes les cookies o per "
+"indicar quan s’envia una cookie. No obstant això, si vostè\n"
+"                                                no accepteu cookies, "
+"vosaltres\n"
+"                                                pot ser que no pugueu "
+"utilitzar algunes parts del nostre lloc."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Links To Other Web Sites"
-msgstr ""
+msgstr "Links a altres webs"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Log Data"
-msgstr ""
+msgstr "Dades de registre"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -227,6 +280,24 @@ msgid ""
 "                                                on or through any such\n"
 "                                                web sites or services."
 msgstr ""
+"El nostre Servei pot contenir enllaços a llocs web o serveis de tercers que\n"
+"                                                no són propietat ni "
+"controlen\n"
+"                                                per nosaltres. No tenim "
+"control ni assumim cap responsabilitat sobre el\n"
+"                                                contingut, polítiques de "
+"privadesa o pràctiques de qualsevol lloc web de tercers o\n"
+"                                                serveis. Vostè més enllà\n"
+"                                                reconèixer i acceptar que no "
+"serem responsables,\n"
+"                                                directa o indirectament, per "
+"qualsevol dany o pèrdua causada o presumptament\n"
+"                                                causada per o en connexió\n"
+"                                                amb l’ús o confiança en "
+"qualsevol contingut, béns o serveis disponibles\n"
+"                                                en o mitjançant qualsevol de "
+"tals\n"
+"                                                llocs web o serveis."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -247,6 +318,21 @@ msgid ""
 "                                                we might have between us "
 "regarding the Service."
 msgstr ""
+"El nostre incompliment de qualsevol dret o disposició d’aquestes Condicions "
+"no serà\n"
+"                                                considerat una renúncia a\n"
+"                                                aquests drets. Si es "
+"considera que qualsevol disposició d’aquestes Condicions no és vàlida o\n"
+"                                                no aplicable per un "
+"tribunal, el\n"
+"                                                la resta de disposicions d’"
+"aquestes Condicions seguiran vigents. Aquests termes\n"
+"                                                constitueixen la totalitat\n"
+"                                                acord entre nosaltres pel "
+"que fa al nostre Servei, i substituir i substituir\n"
+"                                                qualsevol acord previ\n"
+"                                                és possible que tinguem "
+"entre nosaltres pel que fa al Servei."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
@@ -256,7 +342,7 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Phone number:"
-msgstr ""
+msgstr "Número de telèfon:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -265,31 +351,34 @@ msgid ""
 "Please read these Terms of Use (\"Terms\", \"Terms of Use\") carefully\n"
 "                                                before using the"
 msgstr ""
+"Llegiu atentament aquestes Condicions d'ús (\"Condicions\", \"Condicions d'"
+"ús\")\n"
+"                                                abans d'utilitzar el fitxer"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_policy_link
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Política de privacitat"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Security"
-msgstr ""
+msgstr "Seguretat"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Termination"
-msgstr ""
+msgstr "Terminació"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Terms of Use (\"Terms\")"
-msgstr ""
+msgstr "Condicions d'ús (\"Termes\")"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -302,7 +391,7 @@ msgstr "Condicions d'ús"
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
 #: model_terms:website.page,arch_db:website_legal_page.advise_page
 msgid "The owner of this website is"
-msgstr ""
+msgstr "El propietari d'aquesta web és"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -318,6 +407,17 @@ msgid ""
 "                                                we cannot guarantee\n"
 "                                                its absolute security."
 msgstr ""
+"La seguretat de la vostra informació personal és important per a nosaltres, "
+"però\n"
+"                                                recordeu que cap mètode de\n"
+"                                                la transmissió per Internet "
+"o mètode d’emmagatzematge electrònic és del 100%\n"
+"                                                segur. Mentre ens esforcem "
+"per aconseguir-ho\n"
+"                                                utilitzar mitjans "
+"comercialment acceptables per protegir la vostra informació personal,\n"
+"                                                no ho podem garantir\n"
+"                                                la seva seguretat absoluta."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -326,12 +426,14 @@ msgid ""
 "These Terms shall be governed and construed in accordance with the laws\n"
 "                                                of ​"
 msgstr ""
+"Aquests Termes es regiran i s’interpretaran d’acord amb les lleis\n"
+"                                                de"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
 #: model_terms:website.page,arch_db:website_legal_page.advise_page
 msgid "VAT number:"
-msgstr ""
+msgstr "VAT:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -343,6 +445,13 @@ msgid ""
 "including without limitation if you breach\n"
 "                                                the Terms."
 msgstr ""
+"Podem rescindir o suspendre l'accés al nostre Servei immediatament, sense "
+"necessitat\n"
+"                                                avís previ o responsabilitat,"
+"\n"
+"                                                per qualsevol motiu, inclòs "
+"sense limitacions si incompleix\n"
+"                                                els termes."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -355,6 +464,13 @@ msgid ""
 "                                                Privacy Policy periodically "
 "for any changes."
 msgstr ""
+"És possible que actualitzem aquesta Política de privadesa de tant en tant. "
+"Ho notificarem\n"
+"                                                de qualsevol canvi publicant "
+"la nova Política de privadesa al lloc. Vostè\n"
+"                                                es recomana revisar això\n"
+"                                                Política de privadesa "
+"periòdicament per a qualsevol canvi."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -377,6 +493,25 @@ msgid ""
 "                                                please stop using the\n"
 "                                                Service."
 msgstr ""
+"Ens reservem el dret, a la nostra discreció, de modificar-los o substituir-"
+"los\n"
+"                                                Condicions en qualsevol "
+"moment. Si a\n"
+"                                                la revisió és material que "
+"intentarem proporcionar amb un preavís de 30 dies com a mínim\n"
+"                                                abans de qualsevol novetat\n"
+"                                                termes que tenen efecte. El "
+"que constitueix un canvi material serà\n"
+"                                                determinat al nostre "
+"exclusiu criteri.\n"
+"                                                Si continueu accedint o "
+"utilitzant el nostre Servei després que es facin aquestes revisions\n"
+"                                                efectiu, ho accepteu\n"
+"                                                estar obligat pels termes "
+"revisats. Si no esteu d'acord amb les noves condicions,\n"
+"                                                si us plau, deixeu "
+"d'utilitzar el fitxer\n"
+"                                                Servei."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -387,6 +522,10 @@ msgid ""
 "                                                web sites or services that "
 "you visit."
 msgstr ""
+"Us aconsellem que llegiu els termes i condicions i la privadesa\n"
+"                                                polítiques de tercers\n"
+"                                                llocs web o serveis que "
+"visiteu."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -398,6 +537,12 @@ msgid ""
 "and use of information in accordance with\n"
 "                                                this policy."
 msgstr ""
+"Utilitzem la vostra informació personal només per proporcionar i millorar la "
+"informació\n"
+"                                                Lloc. En utilitzar el lloc,\n"
+"                                                accepteu la recopilació i ús "
+"de la informació d’acord amb\n"
+"                                                aquesta política."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
@@ -413,12 +558,22 @@ msgid ""
 "                                                not limited to your name "
 "(\"Personal Information\")."
 msgstr ""
+"Mentre utilitzeu el nostre lloc, és possible que us demanem que ens en "
+"proporcioneu certs\n"
+"                                                informació d’identificació "
+"personal\n"
+"                                                que es pot utilitzar per "
+"contactar-vos o identificar-vos. Identificable personalment\n"
+"                                                la informació pot incloure, "
+"però és\n"
+"                                                no limitat al vostre nom ("
+"\"Informació personal\")."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
 #: model_terms:website.page,arch_db:website_legal_page.advise_page
 msgid "You can contact us at:"
-msgstr ""
+msgstr "Ens pots contactar a:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -430,16 +585,22 @@ msgid ""
 "apply to all visitors, users and others who\n"
 "                                                access or use the Service."
 msgstr ""
+"El vostre accés i ús del Servei està condicionat a la vostra acceptació\n"
+"                                                i compliment de\n"
+"                                                aquests Termes. Aquestes "
+"Condicions s'apliquen a tots els visitants, usuaris i altres persones que\n"
+"                                                accedir o utilitzar el "
+"Servei."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "legal advice"
-msgstr ""
+msgstr "avís legal"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "of this website."
-msgstr ""
+msgstr "d'aquesta web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
@@ -449,10 +610,10 @@ msgstr "Política privacitat"
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "terms of use"
-msgstr ""
+msgstr "condicions d'ús"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "website (the \"Service\") operated by ​"
-msgstr ""
+msgstr "lloc web (el \"Servei\") operat per"
