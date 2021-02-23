@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2016-11-29 03:55+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"PO-Revision-Date: 2021-02-23 12:45+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
 "Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.cookie_message
@@ -25,6 +26,9 @@ msgid ""
 "To disable them, configure your browser properly. If you keep using this "
 "website, you are accepting those.</span>"
 msgstr ""
+"<span> Utilitzem cookies en aquest lloc web. Llegiu-ne a la nostra política "
+"de cookies. Per desactivar-los, configureu correctament el navegador. Si "
+"continueu utilitzant aquest lloc web, els accepteu. </span>"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -37,6 +41,14 @@ msgid ""
 "set their\n"
 "                own cookies, known as <strong>third-party cookies.</strong>"
 msgstr ""
+"<strong> Les galetes pròpies </strong>&amp; nbsp; són galetes establertes "
+"pel lloc web\n"
+"                estàs de visita. Només aquell lloc web els pot llegir. A "
+"més, a\n"
+"                El lloc web pot utilitzar serveis externs, que també "
+"configuren els seus\n"
+"                cookies pròpies, conegudes com a <strong> cookies de "
+"tercers. </strong>"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -44,11 +56,13 @@ msgid ""
 "A cookie is a small text file that a website stores on your computer or "
 "mobile device when you visit the site."
 msgstr ""
+"Una cookie és un petit fitxer de text que un lloc web emmagatzema al vostre "
+"ordinador o dispositiu mòbil quan visiteu el lloc."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "Cookies Policy"
-msgstr ""
+msgstr "Política de cookies"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -56,6 +70,8 @@ msgid ""
 "Cookies can also be used to establish anonymised statistics about the "
 "browsing experience on our sites."
 msgstr ""
+"Les cookies també es poden utilitzar per establir estadístiques "
+"anonimitzades sobre l’experiència de navegació als nostres llocs."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -63,11 +79,13 @@ msgid ""
 "Every time you visit our websites, you will be prompted to <strong>accept "
 "cookies.</strong>"
 msgstr ""
+"Cada vegada que visiteu els nostres llocs web, se us demanarà que <strong> "
+"accepteu cookies. </strong>"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "How do we use cookies?"
-msgstr ""
+msgstr "Com fem servir les cookies?"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -75,11 +93,13 @@ msgid ""
 "However, to view some of our pages, you will have to accept cookies from "
 "external organisations. &amp;nbsp;"
 msgstr ""
+"No obstant això, per veure algunes de les nostres pàgines, haureu d’acceptar "
+"cookies d’organitzacions externes. & amp; nbsp;"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.cookie_message_container
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -89,6 +109,11 @@ msgid ""
 "a&amp;nbsp;session\n"
 "                cookie,&amp;nbsp;which is deleted when you quit your browser."
 msgstr ""
+"Les cookies persistents & amp; nbsp; són cookies que es guarden al vostre "
+"ordinador i que sí\n"
+"                no se suprimeix automàticament en sortir del navegador, a "
+"diferència d'una sessió de & amp; nbsp ;.\n"
+"                cookie, & amp; nbsp; que s’elimina quan sortiu del navegador."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -96,11 +121,14 @@ msgid ""
 "That way, you don’t have to re-enter them when browsing around the site "
 "during the same visit."
 msgstr ""
+"D’aquesta manera, no cal que els torneu a introduir quan navegueu pel lloc "
+"durant la mateixa visita."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "The <strong>3 types of first-party cookie</strong> we use are to:"
 msgstr ""
+"Els <strong> 3 tipus de galetes pròpies </strong> que fem servir són per:"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -108,6 +136,8 @@ msgid ""
 "The purpose is to enable the site to remember your preferences (such as user "
 "name, language, etc.) for a certain period of time."
 msgstr ""
+"L’objectiu és permetre al lloc recordar les vostres preferències (com ara el "
+"nom d’usuari, l’idioma, etc.) durant un període de temps determinat."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -115,26 +145,28 @@ msgid ""
 "This websites mostly use “first-party cookies”. These are cookies set and "
 "controlled by us, not by any external organisation."
 msgstr ""
+"Aquests llocs web utilitzen principalment \"cookies pròpies\". Són cookies "
+"establertes i controlades per nosaltres, no per cap organització externa."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "What are cookies?"
-msgstr ""
+msgstr "Què són les cookies?"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "gather analytics data (about user behaviour)"
-msgstr ""
+msgstr "recopilar dades d'anàlisi (sobre el comportament dels usuaris)"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "make our websites operational"
-msgstr ""
+msgstr "fer operatius els nostres llocs web"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "store visitor preferences"
-msgstr ""
+msgstr "emmagatzema les preferències dels visitants"
 
 #~ msgid "We use cookies in this website. Read about them in our"
 #~ msgstr ""
