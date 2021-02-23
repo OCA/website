@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-01 01:34+0000\n"
-"PO-Revision-Date: 2020-12-06 11:36+0000\n"
-"Last-Translator: David Alonso (Solvos) <david.alonso@solvos.es>\n"
+"PO-Revision-Date: 2021-02-23 12:45+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.cookie_message
@@ -41,6 +41,14 @@ msgid ""
 "set their\n"
 "                own cookies, known as <strong>third-party cookies.</strong>"
 msgstr ""
+"<strong> Les galetes pròpies </strong>&amp; nbsp; són galetes establertes "
+"pel lloc web\n"
+"                estàs de visita. Només aquell lloc web els pot llegir. A "
+"més, a\n"
+"                El lloc web pot utilitzar serveis externs, que també "
+"configuren els seus\n"
+"                cookies pròpies, conegudes com a <strong> cookies de "
+"terceros. </strong>"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -48,11 +56,13 @@ msgid ""
 "A cookie is a small text file that a website stores on your computer or "
 "mobile device when you visit the site."
 msgstr ""
+"Una cookie es un pequeño archivo de texto que un sitio web almacena en su "
+"computadora o dispositivo móvil cuando visita el sitio."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "Cookies Policy"
-msgstr ""
+msgstr "Política de Cookies"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -60,6 +70,8 @@ msgid ""
 "Cookies can also be used to establish anonymised statistics about the "
 "browsing experience on our sites."
 msgstr ""
+"Las cookies también se pueden utilizar para establecer estadísticas anónimas "
+"sobre la experiencia de navegación en nuestros sitios."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -67,11 +79,13 @@ msgid ""
 "Every time you visit our websites, you will be prompted to <strong>accept "
 "cookies.</strong>"
 msgstr ""
+"Cada vez que visite nuestros sitios web, se le pedirá que <strong> acepte "
+"cookies. </strong>"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "How do we use cookies?"
-msgstr ""
+msgstr "Cómo usamos las cookies?"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -79,6 +93,8 @@ msgid ""
 "However, to view some of our pages, you will have to accept cookies from "
 "external organisations. &amp;nbsp;"
 msgstr ""
+"Sin embargo, para ver algunas de nuestras páginas, deberá aceptar cookies de "
+"organizaciones externas. & amp; nbsp;"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.cookie_message_container
@@ -93,6 +109,12 @@ msgid ""
 "a&amp;nbsp;session\n"
 "                cookie,&amp;nbsp;which is deleted when you quit your browser."
 msgstr ""
+"Las cookies persistentes & amp; nbsp; son cookies que se guardan en su "
+"computadora y que son\n"
+"                no se borra automáticamente cuando sale de su navegador, a "
+"diferencia de una sesión & amp; nbsp;\n"
+"                cookie, & amp; nbsp; que se elimina cuando sale de su "
+"navegador."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -100,11 +122,14 @@ msgid ""
 "That way, you don’t have to re-enter them when browsing around the site "
 "during the same visit."
 msgstr ""
+"De esa manera, no tendrá que volver a ingresarlos cuando navegue por el "
+"sitio durante la misma visita."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "The <strong>3 types of first-party cookie</strong> we use are to:"
 msgstr ""
+"Los <strong> 3 tipos de cookies propias </strong> que utilizamos son para:"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -112,6 +137,8 @@ msgid ""
 "The purpose is to enable the site to remember your preferences (such as user "
 "name, language, etc.) for a certain period of time."
 msgstr ""
+"El propósito es permitir que el sitio recuerde sus preferencias (como nombre "
+"de usuario, idioma, etc.) durante un cierto período de tiempo."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
@@ -119,26 +146,29 @@ msgid ""
 "This websites mostly use “first-party cookies”. These are cookies set and "
 "controlled by us, not by any external organisation."
 msgstr ""
+"Estos sitios web utilizan principalmente \"cookies de origen\". Estas son "
+"cookies establecidas y controladas por nosotros, no por ninguna organización "
+"externa."
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "What are cookies?"
-msgstr ""
+msgstr "¿Qué son las cookies?"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "gather analytics data (about user behaviour)"
-msgstr ""
+msgstr "recopilar datos analíticos (sobre el comportamiento del usuario)"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "make our websites operational"
-msgstr ""
+msgstr "hacer operativos nuestros sitios web"
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.legal_cookie_policy
 msgid "store visitor preferences"
-msgstr ""
+msgstr "almacenar las preferencias de los visitantes"
 
 #~ msgid "We use cookies in this website. Read about them in our"
 #~ msgstr ""
