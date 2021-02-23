@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-16 11:37+0000\n"
-"PO-Revision-Date: 2018-09-27 12:40+0000\n"
-"Last-Translator: Cris Martín <cristina.marrod@gmail.com>\n"
+"PO-Revision-Date: 2021-02-23 12:45+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -25,12 +25,15 @@ msgid ""
 "fit, and by using this Website you are expected to review these Terms on a "
 "regular basis."
 msgstr ""
+"** NOMBRE DE LA COMPAÑÍA ** está autorizado a revisar estos Términos en "
+"cualquier momento que lo considere oportuno, y al utilizar este sitio web se "
+"espera que los revise periódicamente."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "<font style=\"font-size: 42px;\">Table of Content</font>"
-msgstr ""
+msgstr "<font style=\"font-size: 42px;\">Tabla de Contenido</font>"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -44,6 +47,13 @@ msgid ""
 "set their\n"
 "                own cookies, known as <strong>third-party cookies.</strong>"
 msgstr ""
+"<strong> Cookies de origen </strong>&amp;nbsp;son cookies establecidas por "
+"el sitio web.\n"
+"                estás visitando. Solo ese sitio web puede leerlos. Además\n"
+"                El sitio web podría utilizar servicios externos, que también "
+"establecen su\n"
+"                cookies propias, conocidas como <strong> cookies de "
+"terceros. </strong>"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -52,12 +62,14 @@ msgid ""
 "A cookie is a small text file that a website stores on your computer or "
 "mobile device when you visit the site."
 msgstr ""
+"Una cookie es un pequeño archivo de texto que un sitio web almacena en su "
+"computadora o dispositivo móvil cuando visita el sitio."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Assignment"
-msgstr ""
+msgstr "Asignación"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -69,13 +81,17 @@ msgid ""
 "may have for this Website are confidential and you must maintain "
 "confidentiality as well."
 msgstr ""
+"Ciertas áreas de este sitio web tienen restringido el acceso a usted y ** "
+"NOMBRE DE LA COMPAÑÍA ** puede restringir aún más el acceso a cualquier área "
+"de este sitio web, en cualquier momento, a absoluta discreción. Cualquier ID "
+"de usuario y contraseña que pueda tener para este sitio web son "
+"confidenciales y también debe mantener la confidencialidad."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-#, fuzzy
 msgid "Cookies Policy"
-msgstr "Cookies"
+msgstr "Política de Cookies"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -84,6 +100,8 @@ msgid ""
 "Cookies can also be used to establish anonymised statistics about the "
 "browsing experience on our sites."
 msgstr ""
+"Las cookies también se pueden utilizar para establecer estadísticas anónimas "
+"sobre la experiencia de navegación en nuestros sitios."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -92,18 +110,20 @@ msgid ""
 "Every time you visit our websites, you will be prompted to <strong>accept "
 "cookies.</strong>"
 msgstr ""
+"Cada vez que visite nuestros sitios web, se le pedirá que <strong> acepte "
+"cookies. </strong>"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Governing Law &amp;amp; Jurisdiction"
-msgstr ""
+msgstr "Ley aplicable & amp; amp; Jurisdicción"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "How do we use cookies?"
-msgstr ""
+msgstr "Cómo usamos las cookies?"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -112,6 +132,8 @@ msgid ""
 "However, to view some of our pages, you will have to accept cookies from "
 "external organisations. &amp;nbsp;"
 msgstr ""
+"Sin embargo, para ver algunas de nuestras páginas, deberá aceptar cookies de "
+"organizaciones externas. & amp; nbsp;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
@@ -119,6 +141,8 @@ msgid ""
 "I accept the legal terms, the privacy policy &amp; conditions of this "
 "website."
 msgstr ""
+"Acepto los términos legales, la política de privacidad &amp; condiciones de "
+"este sitio web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -128,6 +152,9 @@ msgid ""
 "law, such provisions shall be deleted without affecting the remaining "
 "provisions herein."
 msgstr ""
+"Si se determina que alguna disposición de estos Términos no es válida según "
+"la ley aplicable, dichas disposiciones se eliminarán sin afectar las "
+"disposiciones restantes del presente."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -140,6 +167,13 @@ msgid ""
 "shall not be held liable for any indirect, consequential or special "
 "liability arising out of or in any way related to your use of this Website."
 msgstr ""
+"En ningún caso ** NOMBRE DE LA COMPAÑÍA **, ni ninguno de sus funcionarios, "
+"directores y empleados, serán responsables de nada que surja de o de alguna "
+"manera relacionada con su uso de este sitio web, ya sea que dicha "
+"responsabilidad esté bajo contrato. ** NOMBRE DE LA COMPAÑÍA **, incluidos "
+"sus funcionarios, directores y empleados, no serán responsables de ninguna "
+"responsabilidad indirecta, consecuente o especial que surja de o de alguna "
+"manera relacionada con su uso de este sitio web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -155,43 +189,51 @@ msgid ""
 "right to remove any of Your Content from this Website at any time without "
 "notice."
 msgstr ""
+"En estos Términos y condiciones estándar del sitio web, \"Su contenido\" "
+"significará cualquier audio, texto de video, imágenes u otro material que "
+"elija mostrar en este sitio web. Al mostrar Su Contenido, otorga ** NOMBRE "
+"DE LA COMPAÑÍA ** una licencia sublicenciable no exclusiva, mundialmente "
+"irrevocable y sublicenciable para usar, reproducir, adaptar, publicar, "
+"traducir y distribuir en todos y cada uno de los medios. <br/>\n"
+"                                        Su contenido debe ser suyo y no debe "
+"invadir los derechos de terceros. ** NOMBRE DE LA COMPAÑÍA ** se reserva el "
+"derecho de eliminar su contenido de este sitio web en cualquier momento sin "
+"previo aviso."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-#, fuzzy
 msgid "Indemnification"
-msgstr "Cancelación"
+msgstr "Indemnización"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Intellectual Property Rights"
-msgstr ""
+msgstr "Derechos de propiedad intelectual"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Introduction"
-msgstr ""
+msgstr "Introducción"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page_link
-#, fuzzy
 msgid "Legal Page"
-msgstr "Aviso Legal"
+msgstr "Página Legal"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Limitation of liability"
-msgstr ""
+msgstr "Limitación de responsabilidad"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "No warranties"
-msgstr ""
+msgstr "Sin garantías"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -203,6 +245,11 @@ msgid ""
 "                                        You are granted limited license only "
 "for purposes of viewing the material contained on this Website."
 msgstr ""
+"Aparte del contenido que usted posee, bajo estos Términos, ** NOMBRE DE LA "
+"COMPAÑÍA ** y / o sus licenciantes poseen todos los derechos de propiedad "
+"intelectual y los materiales contenidos en este sitio web. <br/>\n"
+"                                        Se le concede una licencia limitada "
+"solo con el fin de ver el material contenido en este sitio web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -213,19 +260,24 @@ msgid ""
 "a&amp;nbsp;session\n"
 "                cookie,&amp;nbsp;which is deleted when you quit your browser."
 msgstr ""
+"Las cookies persistentes &amp; nbsp; son cookies que se guardan en su "
+"computadora y que son\n"
+"                no se borra automáticamente cuando sale de su navegador, a "
+"diferencia de una sesión &amp;nbsp;\n"
+"                cookie, &amp;nbsp; que se elimina cuando sale de su "
+"navegador."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-#, fuzzy
 msgid "Restrictions"
-msgstr "Cancelación"
+msgstr "Restricciones"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Severability"
-msgstr ""
+msgstr "Divisibilidad"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -234,6 +286,8 @@ msgid ""
 "THIS IS A SAMPLE PAGE! <br/>Please, edit this page to be valid with your use "
 "case."
 msgstr ""
+"¡ESTA ES UNA PAGINA DE MUESTRA! <br/> Por favor, edite esta página para que "
+"sea válida con su caso de uso."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -242,6 +296,8 @@ msgid ""
 "That way, you don’t have to re-enter them when browsing around the site "
 "during the same visit."
 msgstr ""
+"De esa manera, no tendrá que volver a ingresarlos cuando navegue por el "
+"sitio durante la misma visita."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -252,12 +308,17 @@ msgid ""
 "However, you are not allowed to assign, transfer, or subcontract any of your "
 "rights and/or obligations under these Terms."
 msgstr ""
+"El ** NOMBRE DE LA COMPAÑÍA ** puede ceder, transferir y subcontratar sus "
+"derechos y / u obligaciones bajo estos Términos sin notificación alguna. Sin "
+"embargo, no se le permite ceder, transferir o subcontratar ninguno de sus "
+"derechos y / u obligaciones bajo estos Términos."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "The <strong>3 types of first-party cookie</strong> we use are to:"
 msgstr ""
+"Los <strong> 3 tipos de cookies propias </strong> que utilizamos son para:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -266,6 +327,8 @@ msgid ""
 "The purpose is to enable the site to remember your preferences (such as user "
 "name, language, etc.) for a certain period of time."
 msgstr ""
+"El propósito es permitir que el sitio recuerde sus preferencias (como nombre "
+"de usuario, idioma, etc.) durante un cierto período de tiempo."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -276,6 +339,10 @@ msgid ""
 "jurisdiction of the state and federal courts located in **COUNTRY** for the "
 "resolution of any disputes."
 msgstr ""
+"Estos Términos se regirán e interpretarán de acuerdo con las leyes del "
+"estado de ** PAÍS **, y usted se somete a la jurisdicción no exclusiva de "
+"los tribunales estatales y federales ubicados en ** PAÍS ** para la "
+"resolución de cualquier disputas."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -292,6 +359,16 @@ msgid ""
 "                                        Minors or people below 18 years old "
 "are not allowed to use this Website."
 msgstr ""
+"Estos Términos y condiciones estándar del sitio web escritos en esta página "
+"web administrarán su uso de nuestro sitio web, ** NOMBRE DEL SITIO WEB ** "
+"accesible en ** URL DEL SITIO WEB **. <br/>\n"
+"                                        Estos Términos se aplicarán en su "
+"totalidad y afectarán a su uso de este sitio web. Al utilizar este sitio "
+"web, usted acordó aceptar todos los términos y condiciones escritos aquí. No "
+"debe utilizar este sitio web si no está de acuerdo con alguno de estos "
+"Términos y condiciones estándar del sitio web. <br/>\n"
+"                                        Los menores de edad o personas "
+"menores de 18 años no pueden utilizar este sitio web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -302,6 +379,11 @@ msgid ""
 "Website or the materials contained on this Website. Also, nothing contained "
 "on this Website shall be interpreted as advising you."
 msgstr ""
+"Este sitio web se proporciona \"tal cual\", con todas las fallas, y ** "
+"NOMBRE DE LA COMPAÑÍA ** no expresa representaciones ni garantías de ningún "
+"tipo relacionadas con este sitio web o los materiales contenidos en este "
+"sitio web. Además, nada de lo contenido en este sitio web se interpretará "
+"como una advertencia."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -310,24 +392,27 @@ msgid ""
 "This websites mostly use “first-party cookies”. These are cookies set and "
 "controlled by us, not by any external organisation."
 msgstr ""
+"Estos sitios web utilizan principalmente \"cookies de origen\". Estas son "
+"cookies establecidas y controladas por nosotros, no por ninguna organización "
+"externa."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Variation of Terms"
-msgstr ""
+msgstr "Variación de los términos"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "What are cookies?"
-msgstr ""
+msgstr "¿Qué son las cookies?"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "You are specifically restricted from all of the following:"
-msgstr ""
+msgstr "Está restringido específicamente para todo lo siguiente:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -338,12 +423,17 @@ msgid ""
 "expenses arising in any way related to your breach of any of the provisions "
 "of these Terms."
 msgstr ""
+"Por la presente, usted indemniza en la mayor medida posible a ** NOMBRE DE "
+"LA COMPAÑÍA ** de y contra cualquier y / o todas las responsabilidades, "
+"costos, demandas, causas de acción, daños y gastos que surjan de cualquier "
+"manera relacionados con su incumplimiento de cualquiera de las disposiciones "
+"de estos Términos ."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Your Content"
-msgstr ""
+msgstr "Tu contenido"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -352,30 +442,33 @@ msgid ""
 "engaging in any data mining, data harvesting, data extracting or any other "
 "similar activity in relation to this Website;"
 msgstr ""
+"participar en cualquier extracción de datos, recolección de datos, "
+"extracción de datos o cualquier otra actividad similar en relación con este "
+"sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "gather analytics data (about user behaviour)"
-msgstr ""
+msgstr "recopilar datos analíticos (sobre el comportamiento del usuario)"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "make our websites operational"
-msgstr ""
+msgstr "hacer operativos nuestros sitios web"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publicly performing and/or showing any Website material;"
-msgstr ""
+msgstr "realizar y / o mostrar públicamente cualquier material del sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publishing any Website material in any other media;"
-msgstr ""
+msgstr "publicar cualquier material del sitio web en cualquier otro medio;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -383,12 +476,14 @@ msgstr ""
 msgid ""
 "selling, sublicensing and/or otherwise commercializing any Website material;"
 msgstr ""
+"vender, otorgar sublicencias y / o comercializar cualquier material del "
+"sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "store visitor preferences"
-msgstr ""
+msgstr "almacenar las preferencias de los visitantes"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -397,12 +492,17 @@ msgid ""
 "using this Website contrary to applicable laws and regulations, or in any "
 "way may cause harm to the Website, or to any person or business entity;"
 msgstr ""
+"el uso de este sitio web en contra de las leyes y regulaciones aplicables, o "
+"de cualquier manera puede causar daño al sitio web oa cualquier persona o "
+"entidad comercial;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "using this Website in any way that impacts user access to this Website;"
 msgstr ""
+"usar este sitio web de cualquier manera que afecte el acceso del usuario a "
+"este sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -410,12 +510,16 @@ msgstr ""
 msgid ""
 "using this Website in any way that is or may be damaging to this Website;"
 msgstr ""
+"usar este sitio web de cualquier manera que sea o pueda ser perjudicial para "
+"este sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
+"usar este sitio web para participar en cualquier tipo de publicidad o "
+"marketing."
 
 #~ msgid "(\"us\", \"we\", or \"our\") operates"
 #~ msgstr "(\"nos\",\"nosotros\", o \"nuestro\") opera"
