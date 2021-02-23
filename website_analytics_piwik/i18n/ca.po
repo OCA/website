@@ -8,44 +8,45 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-12-08 09:02+0000\n"
-"PO-Revision-Date: 2015-09-25 08:26+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2021-02-23 12:45+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
 "Language-Team: Catalan (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/ca/)\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_analytics_piwik
 #: model:ir.model,name:website_analytics_piwik.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Paràmetres de la configuració"
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings__has_piwik_analytics
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_website__has_piwik_analytics
 msgid "Piwik Analytics"
-msgstr ""
+msgstr "Analítiques Piwik"
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings__piwik_analytics_host
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_website__piwik_analytics_host
 msgid "Piwik host"
-msgstr ""
+msgstr "Amfitrió Piwik"
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings__piwik_analytics_id
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_website__piwik_analytics_id
 msgid "Piwik website ID"
-msgstr ""
+msgstr "Identificador del lloc web de Piwik"
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings__piwik_analytics_id
 #: model:ir.model.fields,help:website_analytics_piwik.field_website__piwik_analytics_id
 msgid "The ID Piwik uses to identify the website"
-msgstr ""
+msgstr "La identificació que Piwik fa servir per identificar el lloc web"
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,help:website_analytics_piwik.field_res_config_settings__piwik_analytics_host
@@ -55,11 +56,15 @@ msgid ""
 "not include a protocol here!\n"
 "So http[s]://[this field]/piwik.php should resolve to your piwik.php"
 msgstr ""
+"Es pot accedir a l’amfitrió / camí de la instal·lació de Piwik a Internet. "
+"No inclogueu cap protocol aquí.\n"
+"Per tant, http [s]: // [aquest camp] /piwik.php s'hauria de resoldre al "
+"vostre piwik.php"
 
 #. module: website_analytics_piwik
 #: model_terms:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
 msgid "Track visits in Piwik Analytics"
-msgstr ""
+msgstr "Feu un seguiment de les visites a Piwik Analytics"
 
 #. module: website_analytics_piwik
 #: model:ir.model,name:website_analytics_piwik.model_website
@@ -70,4 +75,4 @@ msgstr "Lloc web"
 #: model_terms:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
 #: model_terms:ir.ui.view,arch_db:website_analytics_piwik.view_website_form
 msgid "host.name/piwik"
-msgstr ""
+msgstr "host.name/piwik"
