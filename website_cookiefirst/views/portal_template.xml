@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="frontend_layout" inherit_id="portal.frontend_layout">
+    <template id="footer_custom" inherit_id="website.footer_custom">
         <xpath
-            expr="//footer//div/span[@t-field='res_company.name']/.."
-            position="inside"
+            expr="//footer//div/span[hasclass('o_footer_copyright_name')]"
+            position="after"
         >
             <span>-
                 <a href="/legal/cookies-policy">Cookies Policy</a>
             </span>
+        </xpath>
+    </template>
+
+    <template id="layout" inherit_id="website.layout">
+        <xpath expr="//script[@id='tracking_code']" position="attributes">
+            <attribute name="type">text/plain</attribute>
+            <attribute name="data-cookiefirst-category">performance</attribute>
         </xpath>
         <xpath expr="//script[last()]" position="after">
             <t t-if="website.cookiefirst_identifier">
@@ -16,12 +23,6 @@
                     t-att-data-cookiefirst-key="website.cookiefirst_identifier"
                 />
             </t>
-        </xpath>
-    </template>
-    <template id="layout" inherit_id="website.layout">
-        <xpath expr="//script[@id='tracking_code']" position="attributes">
-            <attribute name="type">text/plain</attribute>
-            <attribute name="data-cookiefirst-category">performance</attribute>
         </xpath>
     </template>
 </odoo>
