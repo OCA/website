@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-07 01:09+0000\n"
-"PO-Revision-Date: 2019-07-28 11:47+0000\n"
+"PO-Revision-Date: 2021-03-11 10:22+0000\n"
 "Last-Translator: jcleonard2018 <jcl@solutionsmakers.fr>\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_canonical_url
 #: model:ir.model.fields,field_description:website_canonical_url.field_res_config_settings__canonical_domain
@@ -54,7 +54,7 @@ msgstr "Un domaine canonique doit contenir le protocole `http(s)://`"
 #: model_terms:ir.ui.view,arch_db:website_canonical_url.canonical_demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_canonical_url.canonical_demo_page
 msgid "Check source code to see pager and canonical URL."
-msgstr ""
+msgstr "Controler le code source pour voir  la pagination et l'URL canonique."
 
 #. module: website_canonical_url
 #: model:ir.model,name:website_canonical_url.model_res_config_settings
