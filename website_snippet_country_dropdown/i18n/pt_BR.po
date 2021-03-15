@@ -1,0 +1,69 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_snippet_country_dropdown
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: website_snippet_country_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
+msgid "A readonly country dropdown input"
+msgstr ""
+
+#. module: website_snippet_country_dropdown
+#: model:website.menu,name:website_snippet_country_dropdown.country_dropdown_demo_page_link
+msgid "Country dropdown demo"
+msgstr ""
+
+#. module: website_snippet_country_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
+msgid "Other label"
+msgstr ""
+
+#. module: website_snippet_country_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
+msgid "Submit (you will see the GET parameters in the URL)"
+msgstr ""
+
+#. module: website_snippet_country_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
+msgid "Test here the country dropdown snippet behavior"
+msgstr ""
+
+#. module: website_snippet_country_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
+msgid "This is a form"
+msgstr ""
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:11
+#, python-format
+msgid "Write the \"name\" attribute for the input what will be sent with the form."
+msgstr ""
+
+#. module: website_snippet_country_dropdown
+#. openerp-web
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:12
+#, python-format
+msgid "You can modify the label directly with the website editor."
+msgstr ""
+
+#. module: website_snippet_country_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
+msgid "Your Label"
+msgstr ""
