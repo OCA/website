@@ -14,7 +14,8 @@ odoo.define('website_snippet_preset', function (require) {
             this.overwrite = $.Deferred();
             var options = {
                 title: _t('Overwrite?'),
-                $content: $(_t('<p>Preset with this name already exists. Do you want to overwrite it?</p>')),
+                $content: $(_t('<p>Preset with this name already exists. ' +
+                    'Do you want to overwrite it?</p>')),
                 buttons: [
                     {
                         text: _t("Overwrite"),
@@ -58,8 +59,11 @@ odoo.define('website_snippet_preset', function (require) {
 
     snippet_editor.Editor.include({
         xmlDependencies: snippet_editor.Editor.prototype.xmlDependencies.concat(
-            ['/website_snippet_preset/static/src/xml/website_snippet_preset.xml']
-        ),
+                [
+                    '/website_snippet_preset/static/' +
+                    'src/xml/website_snippet_preset.xml',
+                ]
+            ),
         events: _.extend({}, snippet_editor.Editor.prototype.events, {
             'click .o_snippet_preset_save': 'saveCurrentPreset',
         }),
@@ -154,7 +158,10 @@ odoo.define('website_snippet_preset', function (require) {
         },
         renderPreset: function (record) {
             var self = this;
-            var $item = $(qweb.render('website_snippet_preset.Item', {'record': record}));
+            var $item = $(qweb.render(
+                'website_snippet_preset.Item',
+                {'record': record}
+            ));
             $item.data('record', record);
             $item.click(function () {
                 self.applyPreset($(this).data('record').arch);

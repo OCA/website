@@ -8,9 +8,9 @@
             <div class="o_snippet_preset dropdown btn-group">
                 <a href="#" data-toggle="dropdown" class="btn btn-primary btn-sm" title="Presets">Presets</a>
                 <ul class="dropdown-menu" role="menu">
-                    <li class="o_snippet_preset_save"><a href="#">Save Current</a></li>
+                    <li class="o_snippet_preset_save"><a class="dropdown-item" href="#">Save Current</a></li>
                     <li class="dropdown-submenu">
-                        <a href="#">Load</a>
+                        <a class="dropdown-item" href="#">Load</a>
                         <ul class="dropdown-menu o_snippet_preset_load">
 
                         </ul>
