@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_website_form_scripts" model="ir.ui.view">
+        <field name="name">view_website_form_scripts</field>
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='other']" position="after">
+                <notebook>
+                    <page string="Head scripts">
+                        <field name="head_script_ids">
+                            <form>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="skip_for_publishers"/>
+                                </group>
+                                <group string="Script content">
+                                    <field name="content" nolabel="1"/>
+                                </group>
+                                <group string="Excluded pages">
+                                    <field name="excluded_page_ids" nolabel="1"/>
+                                </group>
+                                <group string="Involved pages">
+                                    <field name="involved_page_ids" nolabel="1"/>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+</odoo>
