@@ -16,18 +16,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#. module: website_no_crawler
-#: model_terms:ir.ui.view,arch_db:website_no_crawler.robots
-msgid ""
-"User-agent: *\n"
-"Disallow: /\n"
-"Sitemap:"
-msgstr ""
-"Agent d'usuari: *\n"
-"No permetre: /\n"
-"Mapa del lloc:"
+#~ msgid ""
+#~ "User-agent: *\n"
+#~ "Disallow: /\n"
+#~ "Sitemap:"
+#~ msgstr ""
+#~ "Agent d'usuari: *\n"
+#~ "No permetre: /\n"
+#~ "Mapa del lloc:"
 
-#. module: website_no_crawler
-#: model_terms:ir.ui.view,arch_db:website_no_crawler.robots
-msgid "sitemap.xml"
-msgstr "sitemap.xml"
+#~ msgid "sitemap.xml"
+#~ msgstr "sitemap.xml"
