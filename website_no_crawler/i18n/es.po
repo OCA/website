@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_no_crawler
+# 	* website_no_crawler
 #
 msgid ""
 msgstr ""
@@ -16,18 +16,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#. module: website_no_crawler
-#: model_terms:ir.ui.view,arch_db:website_no_crawler.robots
 #, fuzzy
-msgid "User-agent: *\n"
-"Disallow: /\n"
-"Sitemap:"
-msgstr ""
-"User-agent: *\n"
-"Disallow: /\n"
-"Sitemap:"
+#~ msgid ""
+#~ "User-agent: *\n"
+#~ "Disallow: /\n"
+#~ "Sitemap:"
+#~ msgstr ""
+#~ "User-agent: *\n"
+#~ "Disallow: /\n"
+#~ "Sitemap:"
 
-#. module: website_no_crawler
-#: model_terms:ir.ui.view,arch_db:website_no_crawler.robots
-msgid "sitemap.xml"
-msgstr "sitemap.xml"
+#~ msgid "sitemap.xml"
+#~ msgstr "sitemap.xml"
