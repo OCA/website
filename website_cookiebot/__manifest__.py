@@ -4,7 +4,7 @@
     "name": "Website Cookiebot",
     "summary": "Cookiebot integration",
     "category": "Website",
-    "version": '13.0.1.0.0',
+    "version": "13.0.1.0.0",
     "author": "Trey (www.trey.es), Odoo Community Association (OCA)",
     "website": "https://www.trey.es",
     "license": "AGPL-3",
