@@ -63,7 +63,7 @@ Contributors
     * `Trey <https://www.trey.es>`__:
     * Jorge Camacho <jorge@trey.es>
     * Antonio González <antonio@trey.es>
-    * Audrius Lekavičius <audrius@sik.lt>
+    * `Audrius Lekavičius <https://lekavicius.lt>`__: <audrius@sik.lt>
 
 Maintainers
 ~~~~~~~~~~~
