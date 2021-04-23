@@ -2,7 +2,7 @@
 Website Cookiebot
 =================
 
-.. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
+.. |badge1| image:: https://raster.shields.io/badge/maturity-Stable-green.png
     :target: https://odoo-community.org/page/development-status
     :alt: Stable
 .. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
