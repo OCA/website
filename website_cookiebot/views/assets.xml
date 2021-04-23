@@ -1,9 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="assets_frontend" inherit_id="website.assets_frontend">
         <xpath expr="//script[last()]" position="after">
             <t t-if="request.website.cookiebot_id">
-                <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" t-att-data-cbid="request.website.cookiebot_id" data-blockingmode="auto" type="text/javascript"/>
+                <script
+                    id="Cookiebot"
+                    src="https://consent.cookiebot.com/uc.js"
+                    t-att-data-cbid="request.website.cookiebot_id"
+                    data-blockingmode="auto"
+                    type="text/javascript"
+                />
             </t>
         </xpath>
     </template>
