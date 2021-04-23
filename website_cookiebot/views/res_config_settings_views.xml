@@ -20,9 +20,9 @@
                         <div
                             class="content-group"
                             attrs="{'invisible': [('has_cookiebot_id', '=', False)]}"
-                            id="cookiebot_fields">
-                            <div class="row mt16"
+                            id="cookiebot_fields"
                         >
+                            <div class="row mt16">
                                 <label
                                     class="col-md-3 o_light_label"
                                     string="Tracking ID"
