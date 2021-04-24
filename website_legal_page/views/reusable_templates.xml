@@ -3,9 +3,9 @@
     <!-- Base templates for submodules -->
     <template id="acceptance_full">
         <span class="acceptance_full">
-            <a
+            I accept <a
                 href="/legal"
-            >I accept the legal terms, the privacy policy &amp; conditions of this website.</a>
+            >the legal terms, the privacy policy &amp; conditions</a> of this website.
         </span>
     </template>
 </odoo>
