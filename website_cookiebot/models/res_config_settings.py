@@ -17,12 +17,10 @@ class ResConfigSettings(models.TransientModel):
                 record.website_id.update({"cookiebot_id": False})
 
     cookiebot_id = fields.Char(
-        string="Cookiebot ID",
-        related="website_id.cookiebot_id",
-        readonly=False,
+        string="Cookiebot ID", related="website_id.cookiebot_id", readonly=False,
     )
     has_cookiebot_id = fields.Boolean(
-        string="Use Cookiebot",
+        string="Cookiebot",
         compute="_compute_has_cookiebot_id",
         inverse="_inverse_has_cookiebot_id",
     )
