@@ -9,7 +9,7 @@ class ResConfigSettings(models.TransientModel):
     cookiebot_id = fields.Char(
         "Cookiebot ID", related="website_id.cookiebot_id", readonly=False,
     )
-    has_cookiebot_id = fields.Boolean("Cookiebot")
+    has_cookiebot_id = fields.Boolean("Cookiebot",)
 
      @api.onchange("has_cookiebot_id")
      def onchange_has_cookiebot_id(self):
