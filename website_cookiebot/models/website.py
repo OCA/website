@@ -6,6 +6,5 @@ class Website(models.Model):
     _inherit = "website"
 
     cookiebot_id = fields.Char(
-        string="Cookiebot ID",
-        help="This field holds the ID, needed for Cookiebot functionality.",
+        "Cookiebot ID", help="This field holds the ID, needed for Cookiebot functionality.",
     )
