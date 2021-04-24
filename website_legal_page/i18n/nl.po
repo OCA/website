@@ -38,9 +38,12 @@ msgstr "<font style=\"font-size: 42px;\">Inhoudsopgave</font>"
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
-"<strong>First party cookies</strong>&amp;nbsp;are cookies set by the website\n"
-"                you’re visiting. Only that website can read them. In addition, a\n"
-"                website might potentially use external services, which also set their\n"
+"<strong>First party cookies</strong>&amp;nbsp;are cookies set by the "
+"website\n"
+"                you’re visiting. Only that website can read them. In "
+"addition, a\n"
+"                website might potentially use external services, which also "
+"set their\n"
 "                own cookies, known as <strong>third-party cookies.</strong>"
 msgstr ""
 "<strong>First-party cookies</strong>&amp;nbsp; zijn cookies die door de "
@@ -128,12 +131,8 @@ msgstr ""
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
-msgid ""
-"I accept the legal terms, the privacy policy &amp; conditions of this "
-"website."
+msgid "I accept"
 msgstr ""
-"Ik accepteer de juridische voorwaarden, de privacybeleid &amp; voorwaarden "
-"van deze website."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -160,8 +159,15 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
-"In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant **COMPANY NAME** a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media. <br/>\n"
-"                                        Your Content must be your own and must not be invading any third-party's rights. **COMPANY NAME** reserves the right to remove any of Your Content from this Website at any time without notice."
+"In these Website Standard Terms and Conditions, “Your Content” shall mean "
+"any audio, video text, images or other material you choose to display on "
+"this Website. By displaying Your Content, you grant **COMPANY NAME** a non-"
+"exclusive, worldwide irrevocable, sub licensable license to use, reproduce, "
+"adapt, publish, translate and distribute it in any and all media. <br/>\n"
+"                                        Your Content must be your own and "
+"must not be invading any third-party's rights. **COMPANY NAME** reserves the "
+"right to remove any of Your Content from this Website at any time without "
+"notice."
 msgstr ""
 
 #. module: website_legal_page
@@ -203,8 +209,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
-"Other than the content you own, under these Terms, **COMPANY NAME** and/or its licensors own all the intellectual property rights and materials contained in this Website. <br/>\n"
-"                                        You are granted limited license only for purposes of viewing the material contained on this Website."
+"Other than the content you own, under these Terms, **COMPANY NAME** and/or "
+"its licensors own all the intellectual property rights and materials "
+"contained in this Website. <br/>\n"
+"                                        You are granted limited license only "
+"for purposes of viewing the material contained on this Website."
 msgstr ""
 
 #. module: website_legal_page
@@ -212,7 +221,8 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
 "Persistent cookies&amp;nbsp;are cookies saved on your computer and that are\n"
-"                not deleted automatically when you quit your browser, unlike a&amp;nbsp;session\n"
+"                not deleted automatically when you quit your browser, unlike "
+"a&amp;nbsp;session\n"
 "                cookie,&amp;nbsp;which is deleted when you quit your browser."
 msgstr ""
 
@@ -232,8 +242,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
-"THIS IS A SAMPLE PAGE! <br/>Please, edit this page to be valid with your use"
-" case."
+"THIS IS A SAMPLE PAGE! <br/>Please, edit this page to be valid with your use "
+"case."
 msgstr ""
 
 #. module: website_legal_page
@@ -250,8 +260,8 @@ msgstr ""
 msgid ""
 "The **COMPANY NAME** is allowed to assign, transfer, and subcontract its "
 "rights and/or obligations under these Terms without any notification. "
-"However, you are not allowed to assign, transfer, or subcontract any of your"
-" rights and/or obligations under these Terms."
+"However, you are not allowed to assign, transfer, or subcontract any of your "
+"rights and/or obligations under these Terms."
 msgstr ""
 
 #. module: website_legal_page
@@ -264,8 +274,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
-"The purpose is to enable the site to remember your preferences (such as user"
-" name, language, etc.) for a certain period of time."
+"The purpose is to enable the site to remember your preferences (such as user "
+"name, language, etc.) for a certain period of time."
 msgstr ""
 
 #. module: website_legal_page
@@ -282,9 +292,16 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
-"These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, **WEBSITE NAME** accessible at **WEBSITE URL**. <br/>\n"
-"                                        These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions. <br/>\n"
-"                                        Minors or people below 18 years old are not allowed to use this Website."
+"These Website Standard Terms and Conditions written on this webpage shall "
+"manage your use of our website, **WEBSITE NAME** accessible at **WEBSITE "
+"URL**. <br/>\n"
+"                                        These Terms will be applied fully "
+"and affect to your use of this Website. By using this Website, you agreed to "
+"accept all terms and conditions written in here. You must not use this "
+"Website if you disagree with any of these Website Standard Terms and "
+"Conditions. <br/>\n"
+"                                        Minors or people below 18 years old "
+"are not allowed to use this Website."
 msgstr ""
 
 #. module: website_legal_page
@@ -327,8 +344,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
-"You hereby indemnify to the fullest extent **COMPANY NAME** from and against"
-" any and/or all liabilities, costs, demands, causes of action, damages and "
+"You hereby indemnify to the fullest extent **COMPANY NAME** from and against "
+"any and/or all liabilities, costs, demands, causes of action, damages and "
 "expenses arising in any way related to your breach of any of the provisions "
 "of these Terms."
 msgstr ""
@@ -360,6 +377,11 @@ msgid "make our websites operational"
 msgstr ""
 
 #. module: website_legal_page
+#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
+msgid "of this website."
+msgstr ""
+
+#. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publicly performing and/or showing any Website material;"
@@ -385,6 +407,11 @@ msgid "store visitor preferences"
 msgstr ""
 
 #. module: website_legal_page
+#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
+msgid "the legal terms, the privacy policy &amp; conditions"
+msgstr ""
+
+#. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
@@ -395,8 +422,7 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"using this Website in any way that impacts user access to this Website;"
+msgid "using this Website in any way that impacts user access to this Website;"
 msgstr ""
 
 #. module: website_legal_page
@@ -411,3 +437,10 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
+
+#~ msgid ""
+#~ "I accept the legal terms, the privacy policy &amp; conditions of this "
+#~ "website."
+#~ msgstr ""
+#~ "Ik accepteer de juridische voorwaarden, de privacybeleid &amp; "
+#~ "voorwaarden van deze website."

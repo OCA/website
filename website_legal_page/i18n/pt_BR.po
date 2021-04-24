@@ -118,9 +118,7 @@ msgstr ""
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
-msgid ""
-"I accept the legal terms, the privacy policy &amp; conditions of this "
-"website."
+msgid "I accept"
 msgstr ""
 
 #. module: website_legal_page
@@ -369,6 +367,11 @@ msgid "make our websites operational"
 msgstr ""
 
 #. module: website_legal_page
+#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
+msgid "of this website."
+msgstr "deste site."
+
+#. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publicly performing and/or showing any Website material;"
@@ -391,6 +394,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "store visitor preferences"
+msgstr ""
+
+#. module: website_legal_page
+#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
+msgid "the legal terms, the privacy policy &amp; conditions"
 msgstr ""
 
 #. module: website_legal_page
@@ -857,9 +865,6 @@ msgstr ""
 
 #~ msgid "legal advice"
 #~ msgstr "aviso legal"
-
-#~ msgid "of this website."
-#~ msgstr "deste site."
 
 #~ msgid "privacy policy"
 #~ msgstr "política de privacidade"

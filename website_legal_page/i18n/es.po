@@ -137,12 +137,8 @@ msgstr ""
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
-msgid ""
-"I accept the legal terms, the privacy policy &amp; conditions of this "
-"website."
+msgid "I accept"
 msgstr ""
-"Acepto los términos legales, la política de privacidad &amp; condiciones de "
-"este sitio web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -459,6 +455,11 @@ msgid "make our websites operational"
 msgstr "hacer operativos nuestros sitios web"
 
 #. module: website_legal_page
+#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
+msgid "of this website."
+msgstr "de este sitio web."
+
+#. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publicly performing and/or showing any Website material;"
@@ -484,6 +485,11 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "store visitor preferences"
 msgstr "almacenar las preferencias de los visitantes"
+
+#. module: website_legal_page
+#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
+msgid "the legal terms, the privacy policy &amp; conditions"
+msgstr ""
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -520,6 +526,13 @@ msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
 "usar este sitio web para participar en cualquier tipo de publicidad o "
 "marketing."
+
+#~ msgid ""
+#~ "I accept the legal terms, the privacy policy &amp; conditions of this "
+#~ "website."
+#~ msgstr ""
+#~ "Acepto los términos legales, la política de privacidad &amp; condiciones "
+#~ "de este sitio web."
 
 #~ msgid "(\"us\", \"we\", or \"our\") operates"
 #~ msgstr "(\"nos\",\"nosotros\", o \"nuestro\") opera"
@@ -923,9 +936,6 @@ msgstr ""
 
 #~ msgid "legal advice"
 #~ msgstr "aviso legal"
-
-#~ msgid "of this website."
-#~ msgstr "de este sitio web."
 
 #~ msgid "privacy policy"
 #~ msgstr "política de privacidad"

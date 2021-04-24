@@ -140,12 +140,8 @@ msgstr ""
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
-msgid ""
-"I accept the legal terms, the privacy policy &amp; conditions of this "
-"website."
+msgid "I accept"
 msgstr ""
-"Accepto les condicions legals, la política de privadesa & amp; condicions d’"
-"aquest lloc web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -171,8 +167,8 @@ msgid ""
 "liability arising out of or in any way related to your use of this Website."
 msgstr ""
 "En cap cas, ** NOM DE L’EMPRESA **, ni cap dels seus funcionaris, directius "
-"i empleats, serà responsable de qualsevol cosa derivada o relacionada amb l’"
-"ús d’aquest lloc web de qualsevol manera, si aquesta responsabilitat està "
+"i empleats, serà responsable de qualsevol cosa derivada o relacionada amb "
+"l’ús d’aquest lloc web de qualsevol manera, si aquesta responsabilitat està "
 "contractada. ** EL NOM DE L’EMPRESA **, inclosos els seus funcionaris, "
 "directius i empleats, no es fa responsable de cap responsabilitat indirecta, "
 "conseqüent o especial derivada o relacionada amb l’ús d’aquest lloc web de "
@@ -192,9 +188,9 @@ msgid ""
 "right to remove any of Your Content from this Website at any time without "
 "notice."
 msgstr ""
-"En aquests Termes i condicions estàndard del lloc web, \"El vostre "
-"contingut\" significa qualsevol àudio, text de vídeo, imatges o qualsevol "
-"altre material que trieu mostrar en aquest lloc web. En mostrar el vostre "
+"En aquests Termes i condicions estàndard del lloc web, \"El vostre contingut"
+"\" significa qualsevol àudio, text de vídeo, imatges o qualsevol altre "
+"material que trieu mostrar en aquest lloc web. En mostrar el vostre "
 "contingut, atorgueu a ** NOM DE L’EMPRESA ** una llicència no exclusiva i "
 "irrevocable a tot el món i subllicenciable per utilitzar-lo, reproduir-lo, "
 "adaptar-lo, publicar-lo, traduir-lo i distribuir-lo en tots els suports. <br/"
@@ -249,9 +245,9 @@ msgid ""
 "                                        You are granted limited license only "
 "for purposes of viewing the material contained on this Website."
 msgstr ""
-"A part del contingut que tingueu, segons aquestes Condicions, ** NOM DE L’"
-"EMPRESA ** i / o els seus llicenciadors són propietaris de tots els drets de "
-"propietat intel·lectual i materials continguts en aquest lloc web. <br/>\n"
+"A part del contingut que tingueu, segons aquestes Condicions, ** NOM DE "
+"L’EMPRESA ** i / o els seus llicenciadors són propietaris de tots els drets "
+"de propietat intel·lectual i materials continguts en aquest lloc web. <br/>\n"
 "                                        Només se us concedeix una llicència "
 "limitada per a la visualització del material contingut en aquest lloc web."
 
@@ -459,6 +455,11 @@ msgid "make our websites operational"
 msgstr "fer operatius els nostres llocs web"
 
 #. module: website_legal_page
+#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
+msgid "of this website."
+msgstr ""
+
+#. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publicly performing and/or showing any Website material;"
@@ -486,6 +487,11 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "store visitor preferences"
 msgstr "emmagatzema les preferències dels visitants"
+
+#. module: website_legal_page
+#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
+msgid "the legal terms, the privacy policy &amp; conditions"
+msgstr ""
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -522,6 +528,13 @@ msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
 "utilitzar aquest lloc web per participar en qualsevol publicitat o "
 "màrqueting."
+
+#~ msgid ""
+#~ "I accept the legal terms, the privacy policy &amp; conditions of this "
+#~ "website."
+#~ msgstr ""
+#~ "Accepto les condicions legals, la política de privadesa & amp; condicions "
+#~ "d’aquest lloc web."
 
 #~ msgid "Terms of use"
 #~ msgstr "Condicions d'ús"
