@@ -9,3 +9,22 @@ class ResConfigSettings(models.TransientModel):
     cookiebot_id = fields.Char(
         "Cookiebot ID", related="website_id.cookiebot_id", readonly=False,
     )
+    has_cookiebot_id = fields.Boolean("Cookiebot")
+
+     @api.onchange("has_cookiebot_id")
+     def onchange_has_cookiebot_id(self):
+         if not self.has_cookiebot_id:
+             self.cookiebot_id = False
+
+     @api.model
+     def get_values(self):
+         res = super().get_values()
+         get_param = self.env["ir.config_parameter"].sudo().get_param
+         res.update(has_cookiebot_id=get_param("website.has_cookiebot_id"),)
+         return res
+
+     def set_values(self):
+         super().set_values()
+         set_param = self.env["ir.config_parameter"].sudo().set_param
+         set_param("website.has_cookiebot_id", self.has_cookiebot_id)
+        
