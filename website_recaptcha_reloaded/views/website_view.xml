@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <openerp>
     <data>
 
-        <template id="assets_editor_recaptcha" name="GoogleRecaptcha"
-                  inherit_id="website.layout">
+        <template
+            id="assets_editor_recaptcha"
+            name="GoogleRecaptcha"
+            inherit_id="website.layout"
+        >
             <xpath expr="//main" position="inside">
-                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <script src="https://www.google.com/recaptcha/api.js" />
             </xpath>
         </template>
 
