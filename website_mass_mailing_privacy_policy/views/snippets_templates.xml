@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_newsletter_subscribe_form_privacy" inherit_id="website_mass_mailing.s_newsletter_subscribe_form">
+        <xpath expr="//div[hasclass('js_subscribe')]" position="attributes">
+            <attribute name="style">flex-wrap:wrap;</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('alert-success')]" position="after">
+            <div class="form-check pt8 pb8" style="flex-basis:100%;">
+                <input type="checkbox"
+                    value="accepted"
+                    id="privacy_policy"
+                    name="privacy_policy"
+                    class="form-check-input js_subscribe_privacy_policy"
+                    required="required"/>
+                <label class="form-check-label" for="privacy_policy">
+                    <t t-call="website_legal_page.acceptance_full"/>
+                </label>
+            </div>
+        </xpath>
+    </template>
+    <template id="s_newsletter_subscribe_popup_privacy" inherit_id="website_mass_mailing.s_newsletter_subscribe_popup">
+        <xpath expr="//div[hasclass('o_popup_animated')]" position="after">
+            <div class="form-check pt8 pb8">
+                <input type="checkbox"
+                    value="accepted"
+                    id="privacy_policy_popup"
+                    name="privacy_policy_popup"
+                    class="form-check-input js_subscribe_popup_privacy_policy"
+                    required="required"/>
+                <label class="form-check-label" for="privacy_policy">
+                    <span class="acceptance_full">
+                        I accept the <a href="/legal/advice" target="_blank">legal advice</a>, the
+                        <a href="/legal/privacy-policy" target="_blank">privacy policy</a>, and the
+                        <a href="/legal/terms-of-use" target="_blank">terms of use</a>
+                        of this website.
+                    </span>
+                </label>
+            </div>
+        </xpath>
+    </template>
+</odoo>
