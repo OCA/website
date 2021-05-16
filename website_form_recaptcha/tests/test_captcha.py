@@ -60,7 +60,7 @@ class TestCaptcha(TransactionCase):
             self.model_obj._validate_response(*self.validate_vars, website=self.website)
         except ValidationError as e:
             self.assertEqual(
-                e.name, self.model_obj._get_error_message(expect["error-codes"][0])
+                e.args[0], self.model_obj._get_error_message(expect["error-codes"][0])
             )
 
     @mock.patch(imp_requests)
@@ -70,7 +70,7 @@ class TestCaptcha(TransactionCase):
         try:
             self.model_obj._validate_response(*self.validate_vars, website=self.website)
         except ValidationError as e:
-            self.assertEqual(e.name, self.model_obj._get_error_message())
+            self.assertEqual(e.args[0], self.model_obj._get_error_message())
 
     @mock.patch(imp_requests)
     def test_no_success_raises(self, mk):
@@ -84,7 +84,7 @@ class TestCaptcha(TransactionCase):
         req_values = {}
         with self.assertRaises(ValidationError) as err:
             self.model_obj._validate_request(request, req_values)
-        self.assertEqual(err.exception.name, "The secret parameter is missing.")
+        self.assertEqual(err.exception.args[0], "The secret parameter is missing.")
 
     def test_validate_request_old_value(self):
         request = mock.MagicMock()
