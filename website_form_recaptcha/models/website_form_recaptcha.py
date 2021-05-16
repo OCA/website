@@ -13,7 +13,7 @@ _logger = logging.getLogger(__name__)
 
 
 class WebsiteFormRecaptcha(models.AbstractModel):
-    """ This model provides ReCaptcha helper methods.
+    """This model provides ReCaptcha helper methods.
     Nothing is stored in the DB.
     """
 
@@ -49,7 +49,7 @@ class WebsiteFormRecaptcha(models.AbstractModel):
 
     @api.model
     def _validate_response(self, response, remote_ip, website=None):
-        """ Validate ReCaptcha Response
+        """Validate ReCaptcha Response
         Params:
             response: str The value of 'g-recaptcha-response'.
             remote_ip: str The end user's IP address

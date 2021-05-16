@@ -2,7 +2,7 @@
  * License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
  */
 
-odoo.define("website_form_recaptcha.recaptcha", function(require) {
+odoo.define("website_form_recaptcha.recaptcha", function (require) {
     "use strict";
 
     var ajax = require("web.ajax");
@@ -85,15 +85,15 @@ odoo.define("website_form_recaptcha.recaptcha", function(require) {
             "zu",
         ],
         recaptcha_js_url: "https://www.google.com/recaptcha/api.js",
-        start: function() {
+        start: function () {
             var self = this;
             this._super();
             this.$captchas = self.$(".o_website_form_recaptcha");
             this.handle_captcha();
         },
-        handle_captcha: function() {
+        handle_captcha: function () {
             var self = this;
-            return ajax.post("/website/recaptcha/", {}).then(function(result) {
+            return ajax.post("/website/recaptcha/", {}).then(function (result) {
                 var data = JSON.parse(result);
                 self.$captchas.append(self._get_captcha_elem(data));
                 if (self.$captchas.length) {
@@ -101,16 +101,14 @@ odoo.define("website_form_recaptcha.recaptcha", function(require) {
                 }
             });
         },
-        _get_captcha_elem: function(data) {
+        _get_captcha_elem: function (data) {
             return $("<div/>", {
                 class: "g-recaptcha",
                 "data-sitekey": data.site_key,
             });
         },
-        _get_captcha_script_url: function() {
-            var lang = $("html")
-                .attr("lang")
-                .replace("_", "-");
+        _get_captcha_script_url: function () {
+            var lang = $("html").attr("lang").replace("_", "-");
             if (this.captcha_languages.includes(lang)) {
                 // Lookup for specific localization (ie: fr-FR)
                 return this.recaptcha_js_url + "?hl=" + lang;
