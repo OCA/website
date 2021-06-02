@@ -22,7 +22,12 @@ class IrUiView(models.Model):
         website_id = self.env.context.get('website_id')
         if website_id and not \
                 self.env['website'].browse(website_id).is_publisher():
-            html = lxml.html.fromstring(res.decode('UTF-8'))
+            try:
+                html = lxml.html.fromstring(res.decode('UTF-8'))
+            except ValueError:
+                # In case of XHTML, fromstring will fail because 'Unicode strings
+                # with encoding declaration are not supported'.
+                html = lxml.html.fromstring(res)
             imgs = html.xpath(
                 '//main//img[@src][not(hasclass("lazyload-disable"))]'
             ) + html.xpath(
