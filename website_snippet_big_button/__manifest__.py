@@ -8,16 +8,11 @@
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Grupo ESOC Ingeniería de Servicios, S.L.U., "
-              "Tecnativa, "
-              "Odoo Community Association (OCA)",
+    "Tecnativa, "
+    "Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "website",
-    ],
-    "data": [
-        "templates/assets.xml",
-        "templates/snippets.xml",
-    ],
+    "depends": ["website",],
+    "data": ["templates/assets.xml", "templates/snippets.xml",],
 }
