@@ -26,10 +26,7 @@ To use this module, you need to:
 Known issues / Roadmap
 ======================
 
-* This uses the backported version of the website portal from v10. When
-  migrating to v10, we should adapt to any changes there.
-* Remove workarounds for https://github.com/odoo/odoo/issues/12961 in JS tour
-  when fixed.
+
 
 Bug Tracker
 ===========
@@ -46,6 +43,7 @@ Contributors
 ------------
 
 * Jairo Llopis <jairo.llopis@tecnativa.com>
+* Laurence Lars Labusch <llabusch@archeti.com>
 
 Maintainer
 ----------
