@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Copyright 2018 Onestein
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
@@ -6,7 +7,7 @@
     'summary': 'This module moves Javascript assets '
                'to the bottom of the page (below the fold)',
     'category': 'Website',
-    'version': '11.0.1.0.0',
+    'version': '10.0.1.0.0',
     'author': 'Onestein, Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'website': 'https://github.com/OCA/website',
