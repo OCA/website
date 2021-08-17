@@ -5,3 +5,7 @@
   * Jairo Llopis <jairo.llopis@tecnativa.com>
   * David Vidal <david.vidal@tecnativa.com>
   * Cristina Martin R.
+
+* `Sygel Technology <https://www.sygel.es>`__:
+
+  * Harald Panten <harald.panten@sygel.es>
