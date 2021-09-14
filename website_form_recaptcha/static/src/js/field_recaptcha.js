@@ -32,6 +32,10 @@ odoo.define('website_form_recaptcha.recaptcha', function (require) {
         },
         handle_captcha: function () {
             var self = this;
+            if ($('body').hasClass('editor_enable')) {
+                self.$captchas.empty();
+                return false;
+            }
             return ajax.post('/website/recaptcha/', {}).then(
                 function (result) {
                     var data = JSON.parse(result);
