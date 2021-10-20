@@ -111,10 +111,16 @@ class LazyLoadTest(SavepointCase):
         website = self.env['website'].browse(self.website_id)
         with MockRequest(self.env, website=website, multilang=False) as req:
             req.csrf_token = lambda x: str(x)
+            req.endpoint_arguments = req.httprequest.args = {}
+            req.httprequest.query_string = b""
+            req.httprequest.path = "/web/login"
+            req.httprequest.url_root = "http://localhost"
             res = self.env.ref("website.login_layout").render({
                 "request": req,
                 "website": website,
-                "main_object": self.env["ir.ui.view"].browse()
+                "main_object": self.env["ir.ui.view"].browse(),
+                "languages": [("en_US", "English")],
+                "lang": "en_US",
             })
             self.assertIn(
                 '<!DOCTYPE ', res.decode('UTF-8'),
