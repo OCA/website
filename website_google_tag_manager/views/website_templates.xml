@@ -1,7 +1,7 @@
 <!-- Copyright 2016 ABF OSIELL <http://osiell.com>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-    <template id="layout" inherit_id="website.layout">
+    <template id="google_tags_noscript_layout" inherit_id="website.layout">
         <xpath expr="//div[@id='wrapwrap']" position="before">
             <t t-if="website and website.google_tag_manager_key">
                 <!-- Google Tag Manager (noscript) -->
@@ -17,7 +17,7 @@
             </t>
         </xpath>
     </template>
-    <template id="web_layout" inherit_id="website.layout">
+    <template id="google_tags_script_layout" inherit_id="website.layout">
         <xpath expr="//meta[@name='generator']" position="before">
             <t t-if="website and website.google_tag_manager_key">
                 <!-- Google Tag Manager -->
