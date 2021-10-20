@@ -24,10 +24,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
-"                            How to get my reCaptcha Key"
+"                            How to get my reCaptcha v2 Key"
 msgstr ""
-"<i class=\"fa fa-arrow-right\"/>\n"
-"                            Comment obtenir ma clé reCaptcha"
 
 #. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
@@ -70,8 +68,8 @@ msgstr "Modèles"
 
 #. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
-msgid "Protect your forms using reCaptcha control."
-msgstr "Protégez vos formulaires à l'aide du contrôle reCaptcha."
+msgid "Protect your forms using reCaptcha v2 control."
+msgstr ""
 
 #. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings__recaptcha_key_secret
@@ -149,3 +147,13 @@ msgstr "captcha"
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid "reCaptcha"
 msgstr "reCaptcha"
+
+#~ msgid ""
+#~ "<i class=\"fa fa-arrow-right\"/>\n"
+#~ "                            How to get my reCaptcha Key"
+#~ msgstr ""
+#~ "<i class=\"fa fa-arrow-right\"/>\n"
+#~ "                            Comment obtenir ma clé reCaptcha"
+
+#~ msgid "Protect your forms using reCaptcha control."
+#~ msgstr "Protégez vos formulaires à l'aide du contrôle reCaptcha."

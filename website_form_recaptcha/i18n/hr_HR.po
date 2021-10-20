@@ -24,7 +24,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
-"                            How to get my reCaptcha Key"
+"                            How to get my reCaptcha v2 Key"
 msgstr ""
 
 #. module: website_form_recaptcha
@@ -66,7 +66,7 @@ msgstr ""
 
 #. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
-msgid "Protect your forms using reCaptcha control."
+msgid "Protect your forms using reCaptcha v2 control."
 msgstr ""
 
 #. module: website_form_recaptcha
