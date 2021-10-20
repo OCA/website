@@ -1,5 +1,5 @@
 First of all you must obtain
-a ReCaptcha key from `Google <http://www.google.com/recaptcha/admin>`_
+a ReCaptcha v2 key from `Google <http://www.google.com/recaptcha/admin>`_
 
 **Global setup**
 
