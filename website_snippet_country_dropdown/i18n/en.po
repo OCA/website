@@ -72,18 +72,3 @@ msgstr "You can modify the label directly with the website editor."
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
 msgid "Your Label"
 msgstr "Your Label"
-
-#~ msgid "Country Dropdown"
-#~ msgstr "Country Dropdown"
-
-#~ msgid "Country Dropdown Options"
-#~ msgstr "Country Dropdown Options"
-
-#~ msgid "Field name value"
-#~ msgstr "Field name value"
-
-#~ msgid "Helper!"
-#~ msgstr "Helper!"
-
-#~ msgid "Set input options"
-#~ msgstr "Set input options"

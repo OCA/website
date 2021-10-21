@@ -58,7 +58,9 @@
                     <img
                         id="img_code_vat"
                         class="js_img_country_code"
-                        t-attf-src="/website/image/res.country/#{default_country.id}/image/30x20"
+                        t-att-src="default_country.image_url"
+                        width="30"
+                        height="20"
                     />
                 </button>
                 <div class="dropdown-menu scrollable-menu" id="dropdown-countries">
@@ -68,6 +70,7 @@
                             t-att-id="country.code"
                             t-att-data-country_id="country.id"
                             t-att-data-country_code="country.code"
+                            t-att-data-country_image_url="country.image_url"
                             class="dropdown-item js_select_country_code"
                         >
                             <img
