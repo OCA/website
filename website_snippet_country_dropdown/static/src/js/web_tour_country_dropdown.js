@@ -1,4 +1,4 @@
-odoo.define("website_snippet_country_dropdown.tour_demo_page", function(require) {
+odoo.define("website_snippet_country_dropdown.tour_demo_page", function (require) {
     "use strict";
 
     const tour = require("web_tour.tour");
@@ -39,7 +39,7 @@ odoo.define("website_snippet_country_dropdown.tour_demo_page", function(require)
             },
             {
                 trigger: ".js_enabled .js_btn_country_code[data-country_code=US]",
-                run: function() {
+                run: function () {
                     const checks = {
                         country_code_field: "ES",
                         complete_field: "ESB01010101",
