@@ -32,12 +32,7 @@ odoo.define("website_snippet_country_dropdown.dropdown", function (require) {
         set_value: function (event) {
             this.country_code = event.currentTarget.id;
             this.$flag_selector.val(event.currentTarget.id);
-            this.$img_code.attr(
-                "src",
-                "/website/image/res.country/" +
-                    event.currentTarget.dataset.country_id +
-                    "/image/30x20"
-            );
+            this.$img_code.attr("src", event.currentTarget.dataset.country_image_url);
             this.$btn_country_code.attr(
                 "data-country_code",
                 event.currentTarget.dataset.country_code
@@ -66,17 +61,11 @@ odoo.define("website_snippet_country_dropdown.dropdown", function (require) {
             return elemTop <= ddViewBottom && elemBottom >= ddViewTop;
         },
         lazy_image_load: function () {
-            const _this = this;
-            this.$dropdown_list.children("a").each(function () {
-                const $elm = $(this);
+            this.$dropdown_list.children("a").each((index, item) => {
+                const $elm = $(item);
                 const $img = $elm.children("img");
-                if (!$img.attr("src") && _this.is_option_visible($elm)) {
-                    $elm.children("img").attr(
-                        "src",
-                        "/website/image/res.country/" +
-                            $elm.data("country_id") +
-                            "/image/30x20"
-                    );
+                if (!$img.attr("src") && this.is_option_visible($elm)) {
+                    $elm.children("img").attr("src", $elm.data("country_image_url"));
                 }
             });
         },
