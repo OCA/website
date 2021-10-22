@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2016 Sergio Teruel <sergio.teruel@tecnativa.com>
+     Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <template id="dropdown_element_form" name="Country Dropdown Input">
+        <t
+            t-set="label_class"
+            t-value="label_class or 'col-md-2 col-sm-3 col-form-label'"
+        />
+        <t
+            t-set="input_container_class"
+            t-value="input_container_class or 'col-md-7 col-sm-8'"
+        />
+        <div
+            t-attf-class="form-group #{extra_class or ''} o_country_dropdown row"
+            t-ignore="true"
+        >
+            <label t-att-class="label_class" t-att-for="complete_field">
+                <span t-if="label_country_dropdown" t-esc="label_country_dropdown" />
+                <span t-if="not label_country_dropdown">Your Label</span>
+            </label>
+            <div t-att-class="input_container_class">
+                <t t-call="website_snippet_country_dropdown.country_dropdown">
+                    <t t-raw="0" />
+                </t>
+            </div>
+        </div>
+    </template>
+    <template id="country_dropdown" name="Country Dropdown">
+        <t t-set="default_value" t-value="default_value or ''" />
+        <t
+            t-set="no_country_field_extra_classes"
+            t-value="no_country_field_extra_classes or ''"
+        />
+        <t t-set="countries" t-value="request.env['res.country'].search([])" />
+        <t
+            t-set="default_country"
+            t-value="default_country or countries.search([('code', '=', default_value[:2])]) or request.env.user.country_id or website.company_id.country_id or countries[:1]"
+        />
+        <t t-set="readonly" t-value="readonly or False" />
+        <t t-set="complete_field" t-value="complete_field or 'complete_field'" />
+        <t
+            t-set="country_code_field"
+            t-value="country_code_field or 'country_code_field'"
+        />
+        <t t-set="no_country_field" t-value="no_country_field or 'no_country_field'" />
+        <div class="input-group js_country_dropdown" t-ignore="true">
+            <div class="input-group-prepend flag-button">
+                <button
+                    type="button"
+                    id="btn_vat_code"
+                    t-att-disabled="readonly"
+                    class="btn btn-outline-secondary dropdown-toggle js_btn_country_code form-control"
+                    data-toggle="dropdown"
+                    t-att-data-country_code="default_country.code"
+                >
+                    <img
+                        id="img_code_vat"
+                        class="js_img_country_code"
+                        t-att-src="default_country.image_url"
+                        width="30"
+                        height="20"
+                    />
+                </button>
+                <div class="dropdown-menu scrollable-menu" id="dropdown-countries">
+                    <t t-foreach="countries" t-as="country">
+                        <a
+                            href="#"
+                            t-att-id="country.code"
+                            t-att-data-country_id="country.id"
+                            t-att-data-country_code="country.code"
+                            t-att-data-country_image_url="country.image_url"
+                            class="dropdown-item js_select_country_code"
+                        >
+                            <img
+                                t-att-data-country-id="country.id"
+                                width="30"
+                                height="20"
+                            />
+                            <span t-esc="country.name" />
+                        </a>
+                    </t>
+                </div>
+                <input
+                    id="country_code_field"
+                    type="text"
+                    size="2"
+                    tabindex="-1"
+                    class="input-group-text js_country_code_field"
+                    t-att-name="country_code_field"
+                    t-att-value="default_country.code"
+                    readonly="1"
+                />
+            </div>
+            <input
+                id="complete_field"
+                type="hidden"
+                class="js_complete_field_post"
+                t-att-name="complete_field"
+                t-att-value="default_value"
+            />
+            <input
+                id="no_country_field"
+                type="text"
+                t-attf-class="form-control js_no_country_field #{no_country_field_extra_classes}"
+                t-att-name="no_country_field"
+                t-att-readonly="readonly"
+                t-att-placeholder="no_country_placeholder"
+                t-att-value="default_value[2:] if default_country.code == default_value[:2].upper() else default_value"
+            />
+        </div>
+    </template>
+</odoo>
