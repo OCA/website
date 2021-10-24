@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template>
+    <t t-extend="website.pagesMenu.page_info">
+        <t t-jquery="ul li:last-child" t-operation="after">
+            <li class="nav-item">
+                <a
+                    aria-controls="critical_css"
+                    role="tab"
+                    data-toggle="tab"
+                    class="nav-link"
+                    href="#critical_css_tab"
+                >Critical CSS</a>
+            </li>
+        </t>
+        <t t-jquery="#advances_page_info" t-operation="after">
+            <div role="tabpanel" id="critical_css_tab" class="tab-pane fade">
+                <div class="form-group row">
+                    <textarea
+                        class="form-control"
+                        id="critical_css"
+                        style="min-height: 200px"
+                    >
+                        <t t-if="widget.page.critical_css">
+                            <t t-esc="widget.page.critical_css" />
+                        </t>
+                    </textarea>
+                </div>
+            </div>
+        </t>
+    </t>
+</template>
