@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates id="template" xml:space="preserve">
+    <form t-extend="wysiwyg.widgets.alt">
+        <t t-jquery="div.form-group:last-child" t-operation="after">
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="o_we_name_input">
+                    Size
+                    <i
+                        class="fa fa-question-circle-o"
+                        title="Reduce the size as much as possible to increase performance."
+                    />
+                </label>
+                <div class="form-row align-items-center">
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Width</div>
+                            </div>
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="image_width"
+                                name="width"
+                                aria-describedby="sizeHelp"
+                                min="1"
+                                t-att-value="widget.image_width"
+                            />
+                            <div class="input-group-append">
+                                <div class="input-group-text">px</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fa fa-times" />
+                    </div>
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Height</div>
+                            </div>
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="image_height"
+                                name="height"
+                                aria-describedby="sizeHelp"
+                                min="1"
+                                t-att-value="widget.image_height"
+                            />
+                            <div class="input-group-append">
+                                <div class="input-group-text">px</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </form>
+</templates>
