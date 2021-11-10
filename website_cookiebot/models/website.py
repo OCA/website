@@ -5,10 +5,9 @@ from odoo import fields, models
 
 
 class Website(models.Model):
-    _inherit = 'website'
+    _inherit = "website"
 
-    cookiebot_id = fields.Char(
-        string='Cookiebot ID',
-        help='This field holds the ID,'
-        ' needed for Cookiebot functionality.',
+    cookiebot_dgid = fields.Char(
+        string="Cookiebot Domain Group ID",
+        help="Get this code from Cookiebot to enable it on the website.",
     )
