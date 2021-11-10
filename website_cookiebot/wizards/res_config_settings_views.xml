@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 Tecnativa - Jairo Llopis
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[@id='google_analytics_dashboard_setting']"
+                position="after"
+            >
+                <div class="col-xs-12 col-md-6 o_setting_box" id="cookiebot_setting">
+                    <div class="o_setting_left_pane">
+                        <field name="cookiebot_enabled" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="cookiebot_enabled" />
+                        <span
+                            class="fa fa-lg fa-globe"
+                            title="Values set here are website-specific."
+                            groups="website.group_multi_website"
+                        />
+                        <div class="text-muted">
+                            Ask for consent on cookies usage
+                        </div>
+                        <div
+                            class="content-group"
+                            attrs="{'invisible': [('cookiebot_enabled', '=', False)]}"
+                            id="cookiebot_fields"
+                        >
+                            <div class="mt16">
+                                <a
+                                    href="https://cookiebot.com/goto/help"
+                                    class="oe_link"
+                                    target="_blank"
+                                >
+                                    <i class="fa fa-arrow-right" />
+                                    How to configure Cookiebot.
+                                </a>
+                                <span class="text-muted">
+                                    Instead of step 3, paste here your Domain Group ID.
+                                </span>
+                            </div>
+                            <div class="row mt16">
+                                <label
+                                    class="col-md-3 o_light_label"
+                                    for="cookiebot_dgid"
+                                />
+                                <field
+                                    name="cookiebot_dgid"
+                                    placeholder="00000000-0000-0000-0000-000000000000"
+                                    attrs="{'required': [('cookiebot_enabled', '=', True)]}"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 Tecnativa - Jairo Llopis
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<data>
+    <template id="frontend_layout" inherit_id="website.layout">
+        <!-- This should be the first script loaded;
+             see https://cookiebot.com/goto/help -->
+        <xpath expr="//head/script" position="before">
+            <t t-if="website.cookiebot_dgid and not editable">
+                <script
+                    id="Cookiebot"
+                    src="https://consent.cookiebot.com/uc.js"
+                    t-att-data-cbid="website.cookiebot_dgid"
+                    data-blockingmode="auto"
+                    type="text/javascript"
+                />
+            </t>
+        </xpath>
+        <!-- Google Analytics prior consent protection;
+             see https://support.cookiebot.com/hc/en-us/articles/360003813893-Controlling-Google-Analytics-Universal-with-Cookiebot -->
+        <xpath expr="//script[@id='tracking_code']" position="attributes">
+            <attribute
+                name="t-att-type"
+            >website.cookiebot_dgid and 'text/plain'</attribute>
+            <attribute name="data-cookieconsent">statistics</attribute>
+        </xpath>
+    </template>
+</data>
