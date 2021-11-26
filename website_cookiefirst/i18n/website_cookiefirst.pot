@@ -1,0 +1,85 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_cookiefirst
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
+msgid "00000000-0000-0000-0000-000000000000"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
+msgid "Add Cookiefirst functionality"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model:ir.model,name:website_cookiefirst.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.cookies
+#: model_terms:website.page,arch_db:website_cookiefirst.cookies_page
+msgid "Cookie Declaration"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
+#: model:ir.model.fields,field_description:website_cookiefirst.field_website__cookiefirst_identifier
+msgid "Cookiefirst ID"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.footer_custom
+msgid "Cookies Policy"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:website_cookiefirst.field_website__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__id
+#: model:ir.model.fields,field_description:website_cookiefirst.field_website__id
+msgid "ID"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:website_cookiefirst.field_website____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model:ir.model.fields,help:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
+#: model:ir.model.fields,help:website_cookiefirst.field_website__cookiefirst_identifier
+msgid "This field holds the ID, needed for Cookiefirst functionality."
+msgstr ""
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
+msgid "Tracking ID"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__cookiefirst_enabled
+msgid "Use Cookiefirst"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model:ir.model,name:website_cookiefirst.model_website
+msgid "Website"
+msgstr ""
