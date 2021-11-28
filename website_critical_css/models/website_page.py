@@ -1,4 +1,6 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+import re
+
 from odoo import api, fields, models
 
 
@@ -26,7 +28,9 @@ class WebsitePage(models.Model):
 
     def write(self, vals):
         if "critical_css" in vals:
-            css = vals.get("critical_css")
-            css = css.replace("<style>", "").replace("</style>", "")
-            vals["critical_css"] = css
+            # strip wrapping spaces or style tags
+            css = (vals.get("critical_css") or "").strip()
+            lstrip = re.compile(r"^<\s*style\s*>\s*", re.IGNORECASE)
+            rstrip = re.compile(r"\s*<\s*style\s*>$", re.IGNORECASE)
+            vals["critical_css"] = re.sub(lstrip, "", re.sub(rstrip, "", css)) or None
         return super(WebsitePage, self).write(vals)
