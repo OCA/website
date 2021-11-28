@@ -59,6 +59,7 @@ class IrQWeb(models.AbstractModel):
             and values.get("main_object")
             and values["main_object"]._name == "website.page"
             and values["main_object"].critical_css
+            and not self.env.user.has_group("website.group_website_designer")
         )
         # toggle defer_load to True in case of css=True and has_critical_css.
         # In core, defer_load is only in use for JS currently,

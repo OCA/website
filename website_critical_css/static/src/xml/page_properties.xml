@@ -20,9 +20,7 @@
                         id="critical_css"
                         style="min-height: 200px"
                     >
-                        <t t-if="widget.page.critical_css">
-                            <t t-esc="widget.page.critical_css" />
-                        </t>
+                        <t t-esc="widget.page.critical_css or ''" />
                     </textarea>
                 </div>
             </div>
