@@ -7,7 +7,7 @@
     "depends": ["website"],
     "author": "Tech Receptives, Coop IT Easy SCRLfs",
     "license": "AGPL-3",
-    "website": "https://github.com/OCA/sale-workflow",
+    "website": "https://coopiteasy.be",
     "summary": "Add google recaptcha to forms.",
     "data": ["views/website_view.xml", "views/res_config.xml"],
     "installable": True,
