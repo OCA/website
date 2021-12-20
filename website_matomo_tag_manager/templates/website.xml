@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2020 Onestein (<https://www.onestein.nl>)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <template id="website_layout" inherit_id="website.layout">
+        <xpath expr="//t[@t-set='head_website']/script[1]" position="before">
+
+            <!-- Matomo Tag Manager -->
+            <t t-if="website.matomo_tag_manager">
+                <script type="text/javascript">
+                    <t t-raw="website._matomo_tag_manager_script()"/>
+                </script>
+                <!-- End Matomo Tag Manager -->
+            </t>
+
+        </xpath>
+    </template>
+
+</odoo>
