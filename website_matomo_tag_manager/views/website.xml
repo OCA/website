@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_website_form" model="ir.ui.view">
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='other']" position="inside">
+                <group>
+                    <field name="matomo_tag_manager"/>
+                    <field name="matomo_host_name" attrs="{'invisible': [('matomo_tag_manager','=',False)], 'required': [('matomo_tag_manager','=',True)]}"/>
+                    <field name="matomo_container_ref" attrs="{'invisible': [('matomo_tag_manager','=',False)], 'required': [('matomo_tag_manager','=',True)]}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
