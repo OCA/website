@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo14-addon-website_cookiefirst',
+        'odoo14-addon-website_crm_privacy_policy',
         'odoo14-addon-website_crm_quick_answer',
         'odoo14-addon-website_google_tag_manager',
         'odoo14-addon-website_legal_page',
