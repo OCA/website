@@ -1,0 +1,4 @@
+- Create a Course.
+- Add content and select type "Page".
+- It will apear a new tab HTML.
+- Insert HTML code in the tab.

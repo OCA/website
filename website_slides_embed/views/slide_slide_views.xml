@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_slide_slide_form_website_slides" model="ir.ui.view">
+        <field name="name">slide.slide.view.form.inherit</field>
+        <field name="model">slide.slide</field>
+        <field name="inherit_id" ref="website_slides.view_slide_slide_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='description']" position="after">
+                <page
+                    name="html"
+                    string="HTML"
+                    attrs="{'invisible': [('slide_type', '!=', 'webpage')]}"
+                >
+                    <field name="html_content" widget="html" />
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
