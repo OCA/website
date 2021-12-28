@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import logging
 from odoo import models, fields
 
@@ -40,11 +41,11 @@ class WebsiteHeadScript(models.Model):
     website_id = fields.Many2one("website", ondelete="cascade")
     content = fields.Text("Script content", required=True)
     excluded_page_ids = fields.Many2many(
-        "website.page", relation="website_head_script_excluded_page_rel",
+        "ir.ui.view", relation="website_head_script_excluded_page_rel",
         string="Excluded pages",
         help="If set, the script will not be applied to these pages")
     involved_page_ids = fields.Many2many(
-        "website.page", relation="website_head_script_involved_page_rel",
+        "ir.ui.view", relation="website_head_script_involved_page_rel",
         string="Involved pages",
         help="If set, the script will be applied only to these pages")
     skip_for_publishers = fields.Boolean(
