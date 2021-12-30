@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 Manuel Regidor <manuel.regidor@sygel.es>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+    <template id="website_search_blog_bar">
+        <form
+            t-att-action="'/blog/%s/search_content' % slug(blog) if blog else '/blog/search_content'"
+            method="get"
+        >
+            <div class="input-group">
+                <input
+                    type="text"
+                    name="search_val"
+                    class="search-query form-control oe_search_box"
+                    placeholder="Search in blog"
+                    t-att-value="search_val"
+                />
+                <div class="input-group-append">
+                    <button
+                        type='submit'
+                        title="Search"
+                        class="btn btn-primary oe_search_button"
+                    >
+                        <i class="fa fa-search" />
+                    </button>
+                </div>
+            </div>
+        </form>
+    </template>
+    <template
+        id="website_blog_search_bar_blogs_nav"
+        inherit_id="website_blog.blogs_nav"
+    >
+        <xpath expr="//div[@class='container']" position="inside">
+            <t
+                t-if="website.show_search_bar"
+                t-call="website_search_blog_bar.website_search_blog_bar"
+            />
+        </xpath>
+    </template>
+    <template
+        id="website_blog_search_bar_blog_post_short"
+        inherit_id="website_blog.blog_post_short"
+    >
+        <xpath expr="//t[@t-call='website_blog.blogs_nav']" position="after">
+            <t t-if="len(blogs) &lt; 2">
+                <nav
+                    t-attf-class="navbar navbar-expand-sm navbar-light #{additionnal_classes}"
+                >
+                    <div class="container">
+                        <t t-call="website_search_blog_bar.website_search_blog_bar" />
+                    </div>
+                </nav>
+            </t>
+        </xpath>
+    </template>
+    <template
+        id="website_blog_search_bar_title"
+        inherit_id="website_blog.blog_post_short"
+    >
+        <xpath expr="//t[@t-call='website_blog.posts_loop']" position="before">
+            <h4 t-if="search_val">
+                Search: '<span t-esc="search_val" />'
+            </h4>
+        </xpath>
+    </template>
+</odoo>
