@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <template
+        id="assets_tests"
+        name="Website Snippet Marginless Assets Tests"
+        inherit_id="web.assets_tests"
+    >
+        <xpath expr=".">
+            <script
+                type="text/javascript"
+                src="/website_snippet_marginless_gallery/static/src/tests/tours/website_snippet_marginless_gallery.js"
+            />
+        </xpath>
+    </template>
+</odoo>
