@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_snippet_big_button
+# 	* website_snippet_big_button
 #
 msgid ""
 msgstr ""
@@ -18,23 +18,27 @@ msgstr ""
 
 #. module: website_snippet_big_button
 #: model_terms:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
-msgid "<span class=\"h3 d-block\">I want another thing</span>\n"
-"                            <i class=\"fa fa-thumbs-o-down fa-5x mt16 mb16\"/>\n"
+msgid ""
+"<span class=\"h3 d-block\">I want another thing</span>\n"
+"                            <i class=\"fa fa-thumbs-o-down fa-5x mt16 mb16\"/"
+">\n"
 "                            <span class=\"d-block\">Continue searching</span>"
 msgstr ""
 "<span class=\"h3 d-block\">Vull una altra cosa</span>\n"
-"                            <i class=\"fa fa-thumbs-o-down fa-5x mt16 mb16\""
-"/>\n"
+"                            <i class=\"fa fa-thumbs-o-down fa-5x mt16 mb16\"/"
+">\n"
 "                            <span class=\"d-block\">Segueix buscant</span>"
 
 #. module: website_snippet_big_button
 #: model_terms:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
-msgid "<span class=\"h3 d-block\">I want this</span>\n"
-"                            <i class=\"fa fa-thumbs-o-up fa-5x mt16 mb16\"/>\n"
+msgid ""
+"<span class=\"h3 d-block\">I want this</span>\n"
+"                            <i class=\"fa fa-thumbs-o-up fa-5x mt16 mb16\"/"
+">\n"
 "                            <span class=\"d-block\">Request budget</span>"
 msgstr ""
 "<span class=\"h3 d-block\">Vull això</span>\n"
-"                            <i class=\"fa fa-thumbs-o-up fa-5x mt16 mb16\"/>"
-"\n"
-"                            <span class=\"d-block\">Sol·licita "
-"pressupost</span>"
+"                            <i class=\"fa fa-thumbs-o-up fa-5x mt16 mb16\"/"
+">\n"
+"                            <span class=\"d-block\">Sol·licita pressupost</"
+"span>"
