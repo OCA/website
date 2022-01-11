@@ -5,9 +5,9 @@
 odoo.define("website_field_autocomplete.field_autocomplete", function (require) {
     "use strict";
 
-    var snippet_animation = require("web_editor.snippets.animation");
+    const publicWidget = require("web.public.widget");
 
-    snippet_animation.registry.field_autocomplete = snippet_animation.Class.extend({
+    publicWidget.registry.field_autocomplete = publicWidget.Widget.extend({
         selector: ".js_website_autocomplete",
 
         /* Query remote server for autocomplete suggestions
@@ -15,23 +15,23 @@ odoo.define("website_field_autocomplete.field_autocomplete", function (require) 
          * @param response function Callback for response, accepts array of str
          */
         autocomplete: function (request, response) {
-            var self = this;
-            var domain = [[this.queryField, "ilike", request.term]];
+            let domain = [[this.queryField, "ilike", request.term]];
             if (this.add_domain) {
                 domain = domain.concat(this.add_domain);
             }
             return $.ajax({
                 dataType: "json",
-                url: "/website/field_autocomplete/" + self.model,
-                method: "GET",
-                data: {
-                    domain: JSON.stringify(domain),
-                    fields: JSON.stringify(self.fields),
-                    limit: self.limit,
-                },
-            }).then(function (records) {
-                var data = records.reduce(function (a, b) {
-                    a.push({label: b[self.displayField], value: b[self.valueField]});
+                url: "/website/field_autocomplete/" + this.model,
+                contentType: "application/json; charset=utf-8",
+                type: "POST",
+                data: JSON.stringify({
+                    jsonrpc: "2.0",
+                    method: "call",
+                    params: {domain: domain, fields: this.fields, limit: this.limit},
+                }),
+            }).then((records) => {
+                const data = records.result.reduce((a, b) => {
+                    a.push({label: b[this.displayField], value: b[this.valueField]});
                     return a;
                 }, []);
                 response(data);
@@ -41,10 +41,9 @@ odoo.define("website_field_autocomplete.field_autocomplete", function (require) 
 
         /* Return arguments that are used to initialize autocomplete */
         autocompleteArgs: function () {
-            var self = this;
             return {
-                source: function (request, response) {
-                    self.autocomplete(request, response);
+                source: (request, response) => {
+                    this.autocomplete(request, response);
                 },
             };
         },
@@ -61,8 +60,7 @@ odoo.define("website_field_autocomplete.field_autocomplete", function (require) 
                 this.fields.push(this.valueField);
             }
             this.$target.autocomplete(this.autocompleteArgs());
+            return this._super(...arguments);
         },
     });
-
-    return {field_autocomplete: snippet_animation.registry.field_autocomplete};
 });
