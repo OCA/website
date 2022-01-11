@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_website_config_settings" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="google_analytics_setting" position="after">
+                <div class="col-xs-12 col-md-6 o_setting_box" id="matomo_tag_manager_setting">
+                    <div class="o_setting_left_pane">
+                        <field name="matomo_tag_manager"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="matomo_tag_manager"/>
+                        <div class="text-muted">
+                            Track visits using Matomo Tag Manager
+                        </div>
+                        <div class="content-group" attrs="{'invisible': [('matomo_tag_manager', '=', False)]}">
+                            <div class="row mt16">
+                                <label class="col-md-3 o_light_label" for="matomo_host_name"/>
+                                <field name="matomo_host_name"  attrs="{'required': [('matomo_tag_manager','=',True)]}"/>
+                            </div>
+                        </div>
+                        <div attrs="{'invisible': [('matomo_tag_manager', '=', False)]}">
+                            <div class="row mt16">
+                                <label class="col-md-3 o_light_label" for="matomo_container_ref"/>
+                                <field name="matomo_container_ref" attrs="{'required': [('matomo_tag_manager','=',True)]}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>
