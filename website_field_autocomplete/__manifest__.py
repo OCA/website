@@ -4,7 +4,7 @@
 {
     "name": "Website Field - AutoComplete",
     "summary": "Provides an autocomplete field for Website on any model",
-    "version": "10.0.1.0.0",
+    "version": "14.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "LasLabs, Odoo Community Association (OCA)",
