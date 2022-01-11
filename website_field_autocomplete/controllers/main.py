@@ -1,7 +1,6 @@
 # Copyright 2016 LasLabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-import json
 
 from odoo import http
 from odoo.http import request
@@ -12,18 +11,18 @@ from odoo.addons.website.controllers.main import Website
 class Website(Website):
     @http.route(
         "/website/field_autocomplete/<string:model>",
-        type="http",
+        type="json",
         auth="public",
-        methods=["GET"],
+        methods=["POST"],
         website=True,
     )
     def _get_field_autocomplete(self, model, **kwargs):
-        """ Return json autocomplete data """
-        domain = json.loads(kwargs.get("domain", "[]"))
-        fields = json.loads(kwargs.get("fields", "[]"))
+        """Return json autocomplete data"""
+        domain = kwargs.get("domain", [])
+        fields = kwargs.get("fields", [])
         limit = kwargs.get("limit", None)
         res = self._get_autocomplete_data(model, domain, fields, limit)
-        return json.dumps(res.values())
+        return list(res.values())
 
     def _get_autocomplete_data(self, model, domain, fields, limit=None):
         """Gets and returns raw record data
