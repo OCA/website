@@ -1,0 +1,26 @@
+<!-- Copyright 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+    <template
+        id="layout"
+        inherit_id="website.layout"
+        customize_show="True"
+        name="Breadcrumbs"
+    >
+        <xpath expr="//header">
+            <t
+                id="breadcrumb"
+                t-if="request.env['website.menu']
+                 .search([('url', '=', request.httprequest.path)], limit=1)"
+            >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <t t-call="website_breadcrumb.breadcrumb" />
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
