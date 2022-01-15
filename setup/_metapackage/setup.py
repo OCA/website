@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo13-addon-website_analytics_piwik',
+        'odoo13-addon-website_breadcrumb',
         'odoo13-addon-website_cookie_notice',
         'odoo13-addon-website_cookiebot',
         'odoo13-addon-website_cookiefirst',
