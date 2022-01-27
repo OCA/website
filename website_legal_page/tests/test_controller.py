@@ -7,7 +7,7 @@ from odoo.tests.common import HttpCase
 
 class TestController(HttpCase):
     def test_page(self):
-        """ It should return a 200 for legal page. """
+        """It should return a 200 for legal page."""
         response = self.url_open("/legal", timeout=20)
         self.assertEqual(response.status_code, 200)
 
