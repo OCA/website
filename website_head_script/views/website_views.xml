@@ -24,6 +24,10 @@
                                     <field name="involved_page_ids" nolabel="1"/>
                                 </group>
                             </form>
+                            <tree>
+                                <field name="sequence" widget="handle"/>
+                                <field name="name"/>
+                            </tree>
                         </field>
                     </page>
                 </notebook>

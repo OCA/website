@@ -36,8 +36,10 @@ class Website(models.Model):
 
 class WebsiteHeadScript(models.Model):
     _name = "website.head.script"
+    _order = "sequence, id"
 
     name = fields.Char("Name", required=True)
+    sequence = fields.Integer(default=10)
     website_id = fields.Many2one("website", ondelete="cascade")
     content = fields.Text("Script content", required=True)
     excluded_page_ids = fields.Many2many(
