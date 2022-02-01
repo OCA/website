@@ -5,13 +5,17 @@
 {
     "name": "Website Legal Page",
     "category": "Website",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "depends": ["website"],
     "data": [
-        "views/assets.xml",
         "views/reusable_templates.xml",
         "views/website_legal_main_page.xml",
     ],
+    "assets": {
+        "web.assets_frontend": [
+            "/website_legal_page/static/src/css/website_legal_page.scss"
+        ]
+    },
     "author": "Tecnativa, "
     "LasLabs, "
     "Nicolas JEUDY, "
