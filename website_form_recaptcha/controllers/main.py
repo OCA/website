@@ -32,7 +32,7 @@ class WebsiteForm(WebsiteForm):
     def extract_data(self, model, values):
         """ Inject ReCaptcha validation into pre-existing data extraction """
         res = super(WebsiteForm, self).extract_data(model, values)
-        if model.website_form_recaptcha:
+        if model.sudo().website_form_recaptcha:
             recaptcha_model = request.env['website.form.recaptcha'].sudo()
             recaptcha_model.validate_request(request, values)
         return res
