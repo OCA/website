@@ -91,7 +91,7 @@ class TestController(SavepointCase):
     @patch("odoo.addons.website_mrp_bom." "controllers.main.request")
     def test_request_mrp_bom_2(self, request):
         """Test controller for mrp_bom for a product not salable with
-                mrp_bom_line product salable"""
+        mrp_bom_line product salable"""
         # Mock
         request.env = self.env
 
