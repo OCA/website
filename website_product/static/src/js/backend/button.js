@@ -1,4 +1,4 @@
-odoo.define("website_product.backend.button", function(require) {
+odoo.define("website_product.backend.button", function (require) {
     "use strict";
 
     var AbstractField = require("web.AbstractField");
@@ -17,7 +17,7 @@ odoo.define("website_product.backend.button", function(require) {
         /**
          * @override
          */
-        isSet: function() {
+        isSet: function () {
             return true;
         },
 
@@ -29,7 +29,7 @@ odoo.define("website_product.backend.button", function(require) {
          * @override
          * @private
          */
-        _render: function() {
+        _render: function () {
             this._super.apply(this, arguments);
 
             var $value = this.$(".o_value");
