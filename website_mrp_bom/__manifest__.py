@@ -5,7 +5,7 @@
     "category": "Website",
     "summary": "Bill of Materials Module for Website",
     "version": "14.0.1.0.0",
-    "author": "Eficent, Odoo Community Association (OCA)",
+    "author": "ForgeFlow, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "website": "https://github.com/OCA/website",
     "depends": ["mrp", "website", "website_product"],
