@@ -1,13 +1,12 @@
-# Copyright 2018 Eficent Business and IT Consulting Services S.L.
-#   (http://www.eficent.com)
-# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+# Copyright 2018-2021 ForgeFlow S.L. (https://www.forgeflow.com)
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 {
     "name": "Website Product",
-    "version": "13.0.1.0.0",
-    "license": "AGPL-3",
+    "version": "14.0.1.0.0",
+    "license": "LGPL-3",
     "category": "Website",
     "summary": "Product Module for Website",
-    "author": "Eficent, " "Odoo Community Association (OCA)",
+    "author": "ForgeFlow, " "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "depends": ["product", "website", "stock"],
     "data": [
