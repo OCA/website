@@ -1,13 +1,12 @@
-# Copyright 2018 Eficent Business and IT Consulting Services S.L.
-#   (http://www.eficent.com)
+# Copyright 2018-2021 ForgeFlow, S.L. (https://www.forgeflow.com)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 {
     "name": "Website MRP BOM",
     "category": "Website",
     "summary": "Bill of Materials Module for Website",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "author": "Eficent, Odoo Community Association (OCA)",
-    "license": "AGPL-3",
+    "license": "LGPL-3",
     "website": "https://github.com/OCA/website",
     "depends": ["mrp", "website", "website_product"],
     "data": [
