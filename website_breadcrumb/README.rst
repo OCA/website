@@ -14,10 +14,9 @@ Configuration
 
 To configure the shown breadcrumbs, you need to:
 
-#. Enable developer mode.
-#. Go to Website Admin > Configuration > Settings > Menu > Configure website menus.
-#. Remove the website grouping from the filter if it is set.
-#. Edit any menu there.
+#. Go to the Wbsite Dashboard and then click Go to Website.
+#. Click Content > Edit Menu.
+#. Create or Edit menus.
 
 Keep in mind that:
 
@@ -39,8 +38,8 @@ To use this module, you need to:
 
 * Log in.
 * Go to your homepage.
-* Go to *Customize* menu.
-* Enable *Breadcrumbs* (it is enabled by default).
+* Go to **Customize** menu.
+* Enable **Breadcrumbs** (it is enabled by default).
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
