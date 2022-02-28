@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
-"PO-Revision-Date: 2021-02-23 12:45+0000\n"
-"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
+"PO-Revision-Date: 2022-02-28 13:17+0000\n"
+"Last-Translator: Noel estudillo <noelestudilloviera@gmail.com>\n"
 "Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -141,7 +141,7 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "I accept"
-msgstr ""
+msgstr "accepto"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -457,7 +457,7 @@ msgstr "fer operatius els nostres llocs web"
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "of this website."
-msgstr ""
+msgstr "d'aquest lloc web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -491,7 +491,7 @@ msgstr "emmagatzema les preferències dels visitants"
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "the legal terms, the privacy policy &amp; conditions"
-msgstr ""
+msgstr "els termes legals, la política de privadesa &amp; condicions"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
