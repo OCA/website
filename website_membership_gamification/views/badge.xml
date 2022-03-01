@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 Manuel Regidor <manuel.regidor@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="website_membership_gamification_badge_form_view" model="ir.ui.view">
+        <field name="name">website.membership.gamification.badge.form.view</field>
+        <field name="model">gamification.badge</field>
+        <field name="inherit_id" ref="gamification.badge_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='rule_max_number']" position="after">
+                <field name="badge_url" widget="url" />
+                <field name="new_tab_url" />
+                <field name="website_expiration_date" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
