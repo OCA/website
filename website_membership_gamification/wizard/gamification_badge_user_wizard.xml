@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 Manuel Regidor <manuel.regidor@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="partner_view_badge_wizard_reward" model="ir.ui.view">
+        <field name="name">partner.gamification.badge.user.wizard.form</field>
+        <field name="model">gamification.badge.user.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reward with">
+                <group>
+                    <field name="user_id" invisible="1" />
+                    <field name="badge_id" nolabel="1" colspan="4" />
+                    <field name="comment" nolabel="1" colspan="4" />
+                </group>
+                <footer>
+                    <button
+                        string="Grant Badge"
+                        type="object"
+                        name="action_grant_badge"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" special="cancel" class="btn-secondary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
