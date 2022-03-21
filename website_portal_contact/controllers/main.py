@@ -177,7 +177,7 @@ class WebsiteAccount(CustomerPortal):
         """Read a contact form."""
         values = self._contact_get_page_view_values(contact, access_token, **kw)
         return request.render(
-            "website_portal_contact.contacts_followup", values
+            "website_portal_contact.form", values
         )
 
     @route(

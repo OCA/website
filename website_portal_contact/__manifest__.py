@@ -9,9 +9,10 @@
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
-    'installable': True,
+    "installable": True,
     "depends": [
         "portal",
+        "product",
         "website"
     ],
     "data": [
