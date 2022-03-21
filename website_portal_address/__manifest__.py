@@ -1,3 +1,4 @@
+# Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
 # Copyright 2016-Today Serpent Consulting Services Pvt. Ltd.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html)
 {
@@ -8,13 +9,13 @@
     "author": """Serpent Consulting Services Pvt. Ltd.,
                 Agile Business Group,
                 Odoo Community Association (OCA)""",
-    "website": "http://www.serpentcs.com",
+    "website": "https://github.com/OCA/website"
+               "/tree/12.0/website_portal_address",
     "license": "AGPL-3",
     "depends": [
         "website_portal_contact",
     ],
     "data": [
-        "security/ir.rule.csv",
         "views/assets.xml",
         "views/contact_address.xml",
         "views/layout.xml",

@@ -26,8 +26,8 @@ odoo.define('website_portal_address.tour_test', function (require) {
     var steps = [
         {
             content: 'Click to add Guybrush',
-            trigger: 'div.col-md-4.col-md-offset-4.mt8 > a',
-            waitFor: 'div.col-md-4.col-md-offset-4.mt8 > a',
+            trigger: '#wrap > div > div.row.mb-2 > div:nth-child(1) > a',
+            waitFor: '#wrap > div > div.row.mb-2 > div:nth-child(1) > a',
             position: 'top',
             run: 'click',
         },
@@ -89,7 +89,7 @@ odoo.define('website_portal_address.tour_test', function (require) {
         // },
         {
             content: 'Save new contact Guybrush',
-            trigger: '#portal_contact > section > div > button',
+            trigger: '#portal_contact > div.form-group.row.float-right > div:nth-child(2) > button',
             run: 'click',
             wait: 11500,
         },
@@ -100,20 +100,20 @@ odoo.define('website_portal_address.tour_test', function (require) {
         },
         {
             content: 'Search for Guybrush',
-            trigger: '#wrap > div.container.mb64 > div.row.mt16.mb16 > div.col-md-4.mt8 > form > div > input',
-            waitFor: '#wrap > div.container.mb64 > div.row.mt16.mb16 > div.col-md-4.mt8 > form > div > input',
+            trigger: '#wrap > div > div.row.mb-2 > div:nth-child(2) > form > div > input',
+            waitFor: '#wrap > div > div.row.mb-2 > div:nth-child(2) > form > div > input',
             position: 'top',
             run: 'text guybrush',
         },
         {
             content: 'Click search for Guybrush',
             position: 'top',
-            trigger: '#wrap > div.container.mb64 > div.row.mt16.mb16 > div.col-md-4.mt8 > form > div > span > button',
+            trigger: '#wrap > div > div.row.mb-2 > div:nth-child(2) > form > div > span > button',
             run: 'click',
         },
         {
             content: 'Delete Guybrush',
-            trigger: 'tr:contains("Guybrush") td.text-center > a',
+            trigger: 'tr:contains("Guybrush") > td.text-center > a',
             waitFor: 'tr:contains("Guybrush")',
             run: 'click',
         },

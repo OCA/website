@@ -1,34 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <template id="website_portal_contact.form_field" name="Portal Contact Form Field">
-        <t t-if="field_name not in ['type','street','street2','city','zip','country_id','state_id']">
-            <t t-set="field_description"
-               t-value="contact._fields[field_name].get_description(request.env)"/>
-            <div class="form-group">
-                <label t-att-for="field_name" class="col-sm-3">
-                    <t t-esc="field_description['string']"/>
-                </label>
-                <div class="col-sm-9">
-                    <input
-                        t-att-id="field_name"
-                        t-att-name="field_name"
-                        t-att-type="'email' if field_name == 'email' else 'select' if field_name in ('country_id', 'state_id') else ('tel' if field_name in ('phone', 'mobile') else 'text')"
-                        t-att-required="field_description['required'] and 'required'"
-                        t-att-title="field_description.get('help', False)"
-                        t-att-value="contact[field_name]"
-                        class="form-control"/>
-                </div>
-            </div>
-        </t>
-    </template>
-
     <template id="contact_address_type"
-              inherit_id="website_portal_contact.contacts_followup"
+              inherit_id="website_portal_contact.form"
               name="Portal Contact Address Form">
         <xpath expr="//input[@name='csrf_token']">
-            <div class="col-md-12 form-group">
-                <label class="col-sm-3"></label>
+            <div class="col-md-12 form-group row">
+                <label class="col-sm-3"/>
                 <div class="col-sm-9">
                     <label class="radio-inline">
                         <input type="radio" id="radio212_contact"
@@ -53,39 +31,43 @@
                 </div>
             </div>
         </xpath>
-        <xpath expr="//section[hasclass('o_submit')]" position="before">
+        <t t-foreach="fields" position="before">
+            <!-- Exclude the new fields because they are rendered one-by-one here below -->
+            <t t-set="fields" t-value="[field_name for field_name in fields if field_name not in ['type','street','street2','city','zip','country_id','state_id']]"/>
+        </t>
+        <t t-foreach="fields" position="after">
             <div class="contact_address_website hidden">
-                <div class="form-group">
-                    <label for="address" class="col-sm-3">
+                <div class="form-group row">
+                    <label for="address" class="col-sm-2">
                         Address
                     </label>
-                    <div class="col-sm-5">
+                    <div class="col-sm">
                         <input id="street" name="street" type="text"
                                t-att-value='contact["street"]' class="form-control"
                                placeholder="Street..."/>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm">
                         <input id="street2" name="street2" type="text"
                                t-att-value='contact["street2"]' class="form-control"
                                placeholder="Street2..."/>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-5">
+                <div class="form-group row">
+                    <div class="col-sm-6">
                         <label for="address" class="col-form-label">City</label>
                         <input id="city" name="city" type="text"
                                t-att-value='contact["city"]' class="form-control"
                                placeholder="city..."/>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm">
                         <label for="address" class="col-form-label">Zip</label>
                         <input id="zip" name="zip" type="text"
                                t-att-value='contact["zip"]' class="form-control"
                                placeholder="zip..."/>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-5">
+                <div class="form-group row">
+                    <div class="col-sm-6">
                         <label class="col-form-label" for="country_id">Country</label>
                         <select placeholder="Country" name="country_id" id="country_id"
                                 class="form-control">
@@ -98,7 +80,7 @@
                             </t>
                         </select>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm">
                         <label class="col-form-label" for="state_id">State / Province
                         </label>
                         <select placeholder="State" name="state_id" id="state_id"
@@ -116,7 +98,7 @@
                 </div>
 
             </div>
-        </xpath>
+        </t>
     </template>
 
 </odoo>

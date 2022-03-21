@@ -3,32 +3,26 @@
 
 import logging
 
-from odoo.http import request, route
+from odoo.http import request
 from odoo.addons.website_portal_contact.controllers.main import WebsiteAccount
 
 _logger = logging.getLogger(__name__)
 
 
-class WebsiteAccount(WebsiteAccount):
-    @route(
-        "/my/contacts/<model('res.partner'):contact>",
-        auth="user",
-        website=True,
-    )
-    def portal_my_contacts_read(self, contact, access_token=None, **kw):
-        values = self._contact_get_page_view_values(contact, access_token, **kw)
+class PortalAddress (WebsiteAccount):
+
+    def _contact_get_page_view_values(self, contact, access_token, **kwargs):
+        values = super()._contact_get_page_view_values(contact, access_token, **kwargs)
         values.update(
             {
                 "state_id": request.env["res.country.state"].sudo().search([]),
                 "country_id": request.env["res.country"].sudo().search([]),
             }
         )
-        return request.render(
-            "website_portal_contact.contacts_followup", values
-        )
+        return values
 
     def _contacts_fields(self):
-        res = super(WebsiteAccount, self)._contacts_fields()
+        res = super()._contacts_fields()
         res += [
             "type",
             "street",
@@ -42,6 +36,7 @@ class WebsiteAccount(WebsiteAccount):
 
     def _contacts_clean_values(self, values, contact=False):
         """Set values to a write-compatible format"""
+        # Validate the new fields before cleaning values
         if "state_id" not in values:
             # Force erase the data
             values["state_id"] = False
@@ -57,11 +52,4 @@ class WebsiteAccount(WebsiteAccount):
             except ValueError:
                 _logger.warning(
                     'Cannot parse "country_id" : %s' % (values["country_id"]))
-
-        result = {k: v or False for k, v in values.items()}
-        result.setdefault("type", "contact")
-        if not contact or contact.id != request.env.user.commercial_partner_id.id:
-            result.setdefault(
-                "parent_id", request.env.user.commercial_partner_id.id
-            )
-        return result
+        return super()._contacts_clean_values(values, contact=contact)
