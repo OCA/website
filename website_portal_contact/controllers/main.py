@@ -14,14 +14,13 @@ _logger = logging.getLogger(__name__)
 class WebsiteAccount(CustomerPortal):
     def _contacts_domain(self, search=""):
         """Get user's contacts domain."""
-        # domain = request.env.ref(
-        #     "website_portal_contact.rule_edit_own_contacts"
-        # ).domain_force
-        # TODO manage permission, permit to show own contacts
-        domain = []
+        partner = request.env.user.partner_id
+        domain = [
+            ('id', 'child_of', partner.id)
+        ]
 
         # To edit yourself you have /my/account
-        domain += [("id", "!=", request.env.user.partner_id.id)]
+        domain += [("id", "!=", partner.id)]
 
         # Add search query
         for term in search.split():
@@ -122,9 +121,11 @@ class WebsiteAccount(CustomerPortal):
         """Set values to a write-compatible format"""
         result = {k: v or False for k, v in values.items()}
         result.setdefault("type", "contact")
-        if not contact or contact.id != request.env.user.commercial_partner_id.id:
+        user_partner = request.env.user.partner_id
+        if not contact:
+            # Contact creation
             result.setdefault(
-                "parent_id", request.env.user.commercial_partner_id.id
+                "parent_id", user_partner.id
             )
         return result
 
