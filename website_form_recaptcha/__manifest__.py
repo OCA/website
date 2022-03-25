@@ -12,5 +12,6 @@
     "installable": True,
     "depends": ["website_form"],
     "data": ["views/assets.xml", "views/website_config_settings.xml"],
+    "qweb": ["static/src/xml/recaptcha.xml"],
     "images": ["static/description/website_form_recaptcha.jpg"],
 }

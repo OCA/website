@@ -25,19 +25,13 @@ Website CRM - ReCaptcha
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
 
-Adds a Recaptcha validation to Contact form on Website.
+This module is useless now as website_form_repatcha handles the recaptcha injection on
+his own.
 
 **Table of contents**
 
 .. contents::
    :local:
-
-Usage
-=====
-
-To use this module, you need to:
-
-#. Go to the Contact form on Website
 
 Bug Tracker
 ===========
@@ -68,6 +62,7 @@ Contributors
   * Cristina Martin R.
   * Jairo Llopis
   * Alexandre Díaz
+  * David Vidal
 
 Maintainers
 ~~~~~~~~~~~

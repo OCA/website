@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.15.1: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils: http://docutils.sourceforge.net/" />
 <title>Website Form - ReCaptcha</title>
 <style type="text/css">
 
@@ -406,16 +406,19 @@ a ReCaptcha key from <a class="reference external" href="http://www.google.com/r
 <li>Select the website you want to add / edit the recaptcha key</li>
 <li>Set site key and secret key</li>
 </ul>
+<p>For testing purposes you can set this keys (<a class="reference external" href="https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do">https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do</a>):</p>
+<ul class="simple">
+<li>Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI</li>
+<li>Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe</li>
+</ul>
 </div>
 <div class="section" id="usage">
 <h1><a class="toc-backref" href="#id5">Usage</a></h1>
 <p>To use this module, you need to:</p>
 <ul class="simple">
 <li>Already have a form-enabled model (refer to <cite>website_form</cite> docs)</li>
-<li>Set <cite>website_form_recaptcha</cite> to <cite>True</cite> on that model (similar to enabling forms)</li>
-<li>Add an element with the <cite>o_website_form_recaptcha</cite> class anywhere in the form</li>
+<li>The recaptcha code will be injected dinamically.</li>
 </ul>
-<p>Look at <cite>website_crm_recaptcha</cite> module for example implementation.</p>
 </div>
 <div class="section" id="known-issues-roadmap">
 <h1><a class="toc-backref" href="#id6">Known issues / Roadmap</a></h1>
@@ -509,6 +512,7 @@ If you spotted it first, help us smashing it by providing a detailed and welcome
 <li>Cristina Martin R.</li>
 <li>Jairo Llopis</li>
 <li>Alexandre Díaz</li>
+<li>David Vidal</li>
 </ul>
 </li>
 <li>Bjorn Billen &lt;<a class="reference external" href="mailto:bjorn.billen&#64;dynapps.be">bjorn.billen&#64;dynapps.be</a>&gt;</li>

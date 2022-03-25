@@ -7,8 +7,8 @@ from odoo import fields, models
 class IrModel(models.Model):
     _inherit = "ir.model"
 
-    """ Add ReCaptcha attr & validation to IrModel for use in forms """
+    """(DEPRECATED) Add ReCaptcha attr & validation to IrModel for use in forms """
     website_form_recaptcha = fields.Boolean(
         string="Require ReCaptcha",
-        help="Requires successful ReCaptcha for form submission.",
+        help="(Deprecated) Requires successful ReCaptcha for form submission.",
     )

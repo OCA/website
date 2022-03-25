@@ -27,7 +27,25 @@ class WebsiteForm(WebsiteForm):
     def extract_data(self, model, values):
         """ Inject ReCaptcha validation into pre-existing data extraction """
         res = super(WebsiteForm, self).extract_data(model, values)
-        if model.sudo().website_form_recaptcha:
+        if model.sudo().website_form_access:
             recaptcha_model = request.env["website.form.recaptcha"].sudo()
             recaptcha_model._validate_request(request, values)
         return res
+
+    @http.route(
+        "/website/recaptcha/form_enabled/<string:model_name>",
+        type="http",
+        auth="public",
+        methods=["POST"],
+        website=True,
+        multilang=False,
+    )
+    def has_website_form_access(self, model_name):
+        """Public method to decide whether to hook recaptcha or not"""
+        return json.dumps(
+            model_name
+            in request.env["ir.model"]
+            .sudo()
+            .search([("website_form_access", "=", True)])
+            .mapped("model")
+        )
