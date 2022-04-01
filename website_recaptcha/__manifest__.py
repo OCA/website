@@ -1,10 +1,10 @@
 # Copyright 2004 Tech-Receptives Solutions Pvt. Ltd.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
-    "name": "Website reCAPTCHA",
+    "name": "Portal reCAPTCHA",
     "version": "12.0.0.0.1",
     "category": "Website",
-    "depends": ["website"],
+    "depends": ["portal"],
     "author": "Tech Receptives, Coop IT Easy SCRLfs",
     "license": "AGPL-3",
     "website": "https://coopiteasy.be",
