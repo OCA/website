@@ -1,7 +1,7 @@
 # Copyright 2004 Tech-Receptives Solutions Pvt. Ltd.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
-    "name": "Website reCAPTCHA Reloaded",
+    "name": "Website reCAPTCHA",
     "version": "12.0.0.0.1",
     "category": "Website",
     "depends": ["website"],
