@@ -4,15 +4,12 @@
 from odoo import api, fields, models
 
 
-class WebsiteConfigSettings(models.TransientModel):
+class PortalConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
-    recaptcha_key_site = fields.Char(
-        related="website_id.recaptcha_key_site", readonly=False
-    )
-    recaptcha_key_secret = fields.Char(
-        related="website_id.recaptcha_key_secret", readonly=False
-    )
+    recaptcha_key_site = fields.Char()
+    recaptcha_key_secret = fields.Char()
+
     has_google_recaptcha = fields.Boolean(
         "Google reCaptcha",
         compute="_compute_has_google_recaptcha",
@@ -20,7 +17,7 @@ class WebsiteConfigSettings(models.TransientModel):
         readonly=False,
     )
 
-    @api.depends("website_id")
+    @api.depends("recaptcha_key_site")
     def _compute_has_google_recaptcha(self):
         self.has_google_recaptcha = bool(self.recaptcha_key_site)
 

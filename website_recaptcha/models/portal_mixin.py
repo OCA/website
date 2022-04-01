@@ -3,17 +3,14 @@
 
 import requests
 
-from odoo import _, api, fields, models
+from odoo import _, api, models
 from odoo.exceptions import ValidationError
 
 URL = "https://www.google.com/recaptcha/api/siteverify"
 
 
-class Website(models.Model):
-    _inherit = "website"
-
-    recaptcha_key_site = fields.Char()
-    recaptcha_key_secret = fields.Char()
+class PortalMixin(models.AbstractModel):
+    _inherit = "portal.mixin"
 
     @api.model
     def _get_error_message(self, errorcode=None):
@@ -30,7 +27,10 @@ class Website(models.Model):
         )
 
     def is_captcha_valid(self, response):
-        get_res = {"secret": self.recaptcha_key_secret, "response": response}
+        recaptcha_key_secret = (
+            self.env["ir.config_parameter"].sudo().get_param("recaptcha_key_secret")
+        )
+        get_res = {"secret": recaptcha_key_secret, "response": response}
 
         res = requests.post(URL, data=get_res).json()
 
