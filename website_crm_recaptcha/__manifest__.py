@@ -14,6 +14,6 @@
     "installable": True,
     "uninstall_hook": "uninstall_hook",
     "depends": ["website_crm", "website_form_recaptcha"],
-    "data": ["data/ir_model_data.xml", "views/website_crm_template.xml"],
+    "data": ["data/ir_model_data.xml"],
     "images": ["static/description/website_crm_recaptcha.jpg"],
 }

@@ -5,3 +5,4 @@
   * Cristina Martin R.
   * Jairo Llopis
   * Alexandre Díaz
+  * David Vidal

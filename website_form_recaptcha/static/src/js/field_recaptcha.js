@@ -5,12 +5,12 @@
 odoo.define("website_form_recaptcha.recaptcha", function(require) {
     "use strict";
 
-    var ajax = require("web.ajax");
-    var snippet_animation = require("website.content.snippets.animation");
-    require("website_form.animation");
-    var form_builder_send = snippet_animation.registry.form_builder_send;
+    const ajax = require("web.ajax");
+    const core = require("web.core");
+    const qweb = core.qweb;
+    var publicWidget = require("web.public.widget");
 
-    snippet_animation.registry.form_builder_send = form_builder_send.extend({
+    publicWidget.registry.form_builder_send.include({
         // https://developers.google.com/recaptcha/docs/language
         captcha_languages: [
             "ar",
@@ -85,11 +85,41 @@ odoo.define("website_form_recaptcha.recaptcha", function(require) {
             "zu",
         ],
         recaptcha_js_url: "https://www.google.com/recaptcha/api.js",
+        /**
+         * We want to load the recaptcha code dinamically for every form enabled model
+         *
+         * @override
+         */
         start: function() {
-            var self = this;
             this._super();
-            this.$captchas = self.$(".o_website_form_recaptcha");
-            this.handle_captcha();
+            var _this = this;
+            const model_name = this.$target.data("model_name");
+            if (!model_name) {
+                return;
+            }
+            ajax.post("/website/recaptcha/form_enabled/" + model_name, {}).then(
+                function(recaptcha_required) {
+                    if (recaptcha_required) {
+                        ajax.loadXML(
+                            "/website_form_recaptcha/static/src/xml/recaptcha.xml",
+                            qweb
+                        ).then(function() {
+                            // Remove any previous captcha code
+                            _this.$target
+                                .find(".o_website_form_recaptcha")
+                                .closest(".form-group")
+                                .remove();
+                            _this.$target
+                                .find(".form-group:has('.o_website_form_send')")
+                                .before(
+                                    $(qweb.render("website_form_recaptcha.recaptcha"))
+                                );
+                            _this.$captchas = _this.$(".o_website_form_recaptcha");
+                            _this.handle_captcha();
+                        });
+                    }
+                }
+            );
         },
         handle_captcha: function() {
             var self = this;

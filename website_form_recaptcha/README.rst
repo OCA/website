@@ -51,16 +51,18 @@ a ReCaptcha key from `Google <http://www.google.com/recaptcha/admin>`_
 * Select the website you want to add / edit the recaptcha key
 * Set site key and secret key
 
+For testing purposes you can set this keys (https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do):
+
+* Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
+* Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+
 Usage
 =====
 
 To use this module, you need to:
 
 * Already have a form-enabled model (refer to `website_form` docs)
-* Set `website_form_recaptcha` to `True` on that model (similar to enabling forms)
-* Add an element with the `o_website_form_recaptcha` class anywhere in the form
-
-Look at `website_crm_recaptcha` module for example implementation.
+* The recaptcha code will be injected dinamically.
 
 Known issues / Roadmap
 ======================
@@ -158,6 +160,7 @@ Contributors
   * Cristina Martin R.
   * Jairo Llopis
   * Alexandre Díaz
+  * David Vidal
 
 * Bjorn Billen <bjorn.billen@dynapps.be>
 

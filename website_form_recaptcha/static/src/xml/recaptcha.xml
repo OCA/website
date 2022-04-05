@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<template>
+    <t t-name="website_form_recaptcha.recaptcha">
+        <div class="form-group row form-field s_website_form_recaptcha">
+            <label
+                class="col-lg-3 col-md-4 col-form-label"
+                for="g-recaptcha-response"
+            />
+            <div class="col-lg-7 col-md-8">
+                <span class="o_website_form_recaptcha" required="" />
+            </div>
+        </div>
+    </t>
+</template>

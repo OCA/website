@@ -1,1 +1,0 @@
-This module requires no special configuration, `once you have configured ``website_form_recaptcha`` <https://odoo-community.org/shop/product/website-form-recaptcha-2728?search=website_form_recaptcha#configuration>`__.
