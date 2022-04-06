@@ -20,6 +20,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_form_recaptcha
+#: model:ir.model.fields,help:website_form_recaptcha.field_ir_model__website_form_recaptcha
+msgid "(Deprecated) Requires successful ReCaptcha for form submission."
+msgstr ""
+
+#. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
@@ -87,11 +92,6 @@ msgid "Require ReCaptcha"
 msgstr "Nécessite ReCaptcha"
 
 #. module: website_form_recaptcha
-#: model:ir.model.fields,help:website_form_recaptcha.field_ir_model__website_form_recaptcha
-msgid "Requires successful ReCaptcha for form submission."
-msgstr "Nécessite la validation ReCaptcha pour l'envoi du formulaire."
-
-#. module: website_form_recaptcha
 #: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "The response parameter is invalid or malformed."
@@ -147,3 +147,6 @@ msgstr "Nécessite ReCaptcha"
 #, fuzzy
 msgid "reCaptcha"
 msgstr "Nécessite ReCaptcha"
+
+#~ msgid "Requires successful ReCaptcha for form submission."
+#~ msgstr "Nécessite la validation ReCaptcha pour l'envoi du formulaire."

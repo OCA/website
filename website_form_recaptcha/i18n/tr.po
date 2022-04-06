@@ -19,6 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: website_form_recaptcha
+#: model:ir.model.fields,help:website_form_recaptcha.field_ir_model__website_form_recaptcha
+msgid "(Deprecated) Requires successful ReCaptcha for form submission."
+msgstr ""
+
+#. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
@@ -82,11 +87,6 @@ msgstr ""
 #. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_ir_model__website_form_recaptcha
 msgid "Require ReCaptcha"
-msgstr ""
-
-#. module: website_form_recaptcha
-#: model:ir.model.fields,help:website_form_recaptcha.field_ir_model__website_form_recaptcha
-msgid "Requires successful ReCaptcha for form submission."
 msgstr ""
 
 #. module: website_form_recaptcha
