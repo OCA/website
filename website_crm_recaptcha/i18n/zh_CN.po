@@ -19,7 +19,5 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. module: website_crm_recaptcha
-#: model_terms:ir.ui.view,arch_db:website_crm_recaptcha.contactus_form
-msgid "Human?"
-msgstr "人类？"
+#~ msgid "Human?"
+#~ msgstr "人类？"

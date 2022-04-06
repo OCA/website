@@ -16,7 +16,5 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#. module: website_crm_recaptcha
-#: model_terms:ir.ui.view,arch_db:website_crm_recaptcha.contactus_form
-msgid "Human?"
-msgstr "Humà?"
+#~ msgid "Human?"
+#~ msgstr "Humà?"
