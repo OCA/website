@@ -149,13 +149,13 @@ class WebsiteAccount(CustomerPortal):
         return self.portal_my_contacts_read(request.env["res.partner"].new())
 
     @route("/my/contacts/create", auth="user", website=True)
-    def portal_my_contacts_create(self, redirect="/my/contacts/{}", **kwargs):
+    def portal_my_contacts_create(self, redirect="/my/contacts", **kwargs):
         """Create a contact."""
         self._contacts_fields_check(kwargs.keys())
         values = self._contacts_clean_values(kwargs)
         _logger.debug("Creating contact with: %s", values)
-        contact = request.env["res.partner"].create(values)
-        return local_redirect(redirect.format(contact.id))
+        request.env["res.partner"].create(values)
+        return local_redirect(redirect)
 
     def _contact_get_page_view_values(self, contact, access_token, **kwargs):
         values = {
@@ -187,14 +187,14 @@ class WebsiteAccount(CustomerPortal):
         website=True,
     )
     def portal_my_contacts_update(
-        self, contact, redirect="/my/contacts/{}", **kwargs
+        self, contact, redirect="/my/contacts", **kwargs
     ):
         """Update a contact."""
         self._contacts_fields_check(kwargs.keys())
         values = self._contacts_clean_values(kwargs, contact=contact)
         _logger.debug("Updating %r with: %s", contact, values)
         contact.write(values)
-        return local_redirect(redirect.format(contact.id))
+        return local_redirect(redirect)
 
     @route(
         "/my/contacts/<model('res.partner'):contact>/disable",

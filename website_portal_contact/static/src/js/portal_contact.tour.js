@@ -41,11 +41,6 @@ odoo.define('website_portal_contact.tour_test', function (require) {
             wait: 11500,
         },
         {
-            content: 'Return to list',
-            trigger: 'a[href="/my/contacts"]',
-            run: 'click',
-        },
-        {
             content: 'Search for Guybrush',
             trigger: '#wrap > div > div.row.mb-2 > div:nth-child(2) > form > div > input',
             waitFor: '#wrap > div > div.row.mb-2 > div:nth-child(2) > form > div > input',
