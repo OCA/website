@@ -9,6 +9,6 @@
     "license": "AGPL-3",
     "website": "https://coopiteasy.be",
     "summary": "Add google recaptcha to forms.",
-    "data": ["views/website_view.xml", "views/res_config.xml"],
+    "data": ["views/portal_mixin.xml", "views/res_config.xml"],
     "installable": True,
 }
