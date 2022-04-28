@@ -9,3 +9,4 @@
 * `Sygel Technology <https://www.sygel.es>`__:
 
   * Harald Panten <harald.panten@sygel.es>
+  * Manuel Regidor <manuel.regidor@sygel.es>
