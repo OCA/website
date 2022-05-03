@@ -21,7 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[website_crm_quick_answer](website_crm_quick_answer/) | 15.0.1.0.0 |  | Add an automatic answer for contacts asking for info
+[website_crm_quick_answer](website_crm_quick_answer/) | 15.0.1.0.1 |  | Add an automatic answer for contacts asking for info
 [website_odoo_debranding](website_odoo_debranding/) | 15.0.1.0.0 |  | Remove Odoo Branding from Website
 
 [//]: # (end addons)
