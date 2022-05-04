@@ -30,6 +30,7 @@ setuptools.setup(
         'odoo12-addon-website_megamenu',
         'odoo12-addon-website_no_crawler',
         'odoo12-addon-website_odoo_debranding',
+        'odoo12-addon-website_portal_contact',
         'odoo12-addon-website_snippet_anchor',
         'odoo12-addon-website_snippet_big_button',
         'odoo12-addon-website_snippet_country_dropdown',
