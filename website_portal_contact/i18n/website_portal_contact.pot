@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-07 20:29+0000\n"
-"PO-Revision-Date: 2020-03-07 20:29+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: website_portal_contact
-#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form
 msgid "Add Contact"
 msgstr ""
 
@@ -37,8 +35,8 @@ msgid "Delete"
 msgstr ""
 
 #. module: website_portal_contact
-#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_followup
-msgid "Edit Contact"
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form
+msgid "Edit Contact:"
 msgstr ""
 
 #. module: website_portal_contact
@@ -47,8 +45,7 @@ msgid "Email"
 msgstr ""
 
 #. module: website_portal_contact
-#: code:addons/addons/website/website_portal_contact/controllers/main.py:118
-#: code:addons/website_portal_contact/controllers/main.py:118
+#: code:addons/website_portal_contact/controllers/main.py:117
 #, python-format
 msgid "Fields not available: %s"
 msgstr ""
@@ -64,8 +61,7 @@ msgid "My Contacts"
 msgstr ""
 
 #. module: website_portal_contact
-#: code:addons/addons/website/website_portal_contact/controllers/main.py:56
-#: code:addons/website_portal_contact/controllers/main.py:56
+#: code:addons/website_portal_contact/controllers/main.py:55
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
 #, python-format
 msgid "Name"
@@ -77,8 +73,7 @@ msgid "New Contact"
 msgstr ""
 
 #. module: website_portal_contact
-#: code:addons/addons/website/website_portal_contact/controllers/main.py:55
-#: code:addons/website_portal_contact/controllers/main.py:55
+#: code:addons/website_portal_contact/controllers/main.py:54
 #, python-format
 msgid "Newest"
 msgstr ""
@@ -89,7 +84,7 @@ msgid "No contacts found."
 msgstr ""
 
 #. module: website_portal_contact
-#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form_actions
 msgid "Save"
 msgstr ""
 
