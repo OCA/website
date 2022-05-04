@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+    <template id="form" name="Portal Contact Form">
+        <t t-call="portal.portal_layout">
+            <div id="wrap" class="o_my_contact_form container">
+                <t t-call="portal.portal_record_layout">
+                    <t t-set="card_header">
+                        <div class="col-md-12">
+                            <h1>
+                                <t t-if="contact.id">
+                                    Edit Contact:
+                                    <span t-esc="contact.name"/>
+                                </t>
+                                <t t-else="">
+                                    Add Contact
+                                </t>
+                            </h1>
+                        </div>
+                    </t>
+                    <t t-set="card_body">
+                        <form id="portal_contact"
+                              t-attf-action="/my/contacts/{{'{}/update'.format(slug(contact)) if contact.id else 'create'}}"
+                              method="post"
+                              enctype="multipart/form-data"
+                              class="container form-horizontal">
+                            <input type="hidden"
+                                   name="csrf_token"
+                                   t-att-value="request.csrf_token()"/>
+
+                            <t t-foreach="fields" t-as="field_name">
+                                <div class="form-group row">
+                                    <t t-call="website_portal_contact.form_field"/>
+                                </div>
+                            </t>
+                            <div class="form-group row float-right">
+                                <t t-call="website_portal_contact.form_actions"/>
+                            </div>
+                        </form>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="form_breadcrumb" name="Portal Contact Breadcrumb">
+        <div class="row">
+            <div class="col-md-12">
+                <ol class="breadcrumb mt8">
+                    <li>
+                        <a href="/my/home">
+                            <div class="fa fa-home"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a t-attf-href="/my/contacts?#{keep_query()}">
+                            My Contacts
+                        </a>
+                    </li>
+                    <li>
+                        <t t-if="contact.id">
+                            <t t-esc="contact.name"/>
+                        </t>
+                        <t t-if="not contact.id">
+                            New Contact
+                        </t>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </template>
+
+    <template id="form_actions" name="Portal Contact Form Actions">
+        <div class="col">
+            <t t-if="contact.id">
+                <a class="btn btn-danger"
+                   t-attf-href="/my/contacts/#{slug(contact)}/disable">
+                    <div class="fa fa-trash"/>
+                    Delete
+                </a>
+            </t>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary">
+                <div class="fa fa-cloud-upload"/>
+                Save
+            </button>
+        </div>
+    </template>
+
+    <template id="form_field" name="Portal Contact Form Field">
+        <t t-set="field_description"
+           t-value="contact._fields[field_name].get_description(request.env)"/>
+
+        <label t-att-for="field_name" class="col-sm-2 col-form-label">
+            <t t-esc="field_description['string']"/>
+        </label>
+        <div class="col-sm-10">
+            <input
+                t-att-id="field_name"
+                t-att-name="field_name"
+                t-att-type="'email' if field_name == 'email' else ('tel' if field_name in ('phone', 'mobile') else 'text')"
+                t-att-required="'required' if field_description['required'] or field_name == 'name' else None"
+                t-att-title="field_description.get('help', False)"
+                t-att-value="contact[field_name]"
+                class="form-control"/>
+        </div>
+    </template>
+
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <template id="portal_layout" name="Portal layout: contact menu entry" inherit_id="portal.portal_breadcrumbs"
+              priority="50">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'contact' or contact"
+                t-attf-class="breadcrumb-item #{'active ' if not contact else ''}">
+                <a t-if="contact" t-attf-href="/my/contacts?{{ keep_query() }}">Contacts</a>
+                <t t-else="">Contacts</t>
+            </li>
+            <li t-if="contact" class="breadcrumb-item active">
+                <t t-esc="contact.name"/>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home_contacts"
+              name="Portal My Home: contacts entries"
+              inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Your Contacts</t>
+                <t t-set="url" t-value="'/my/contacts'"/>
+                <t t-set="count" t-value="contact_count"/>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

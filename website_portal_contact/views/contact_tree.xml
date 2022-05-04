@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+
+<odoo>
+
+    <template id="portal_my_contacts" name="My Contacts">
+        <t t-call="portal.portal_layout">
+            <!-- Breadcrumbs & Searchbar -->
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Your Contacts</t>
+            </t>
+
+            <!-- Actions -->
+            <div class="row mb-2">
+                <div class="col-md">
+                    <t t-call="website_portal_contact.tree_actions"/>
+                </div>
+                <div class="col-md">
+                    <t t-if="contacts or search">
+                        <t t-call="website_portal_contact.search"/>
+                    </t>
+                </div>
+            </div>
+
+            <!-- Show contacts -->
+            <div class="row">
+                <div class="col">
+                    <t t-if="contacts" t-call="portal.portal_table">
+                        <t t-call="website_portal_contact.contacts_table"/>
+                    </t>
+                    <div t-else="" class="alert alert-info">
+
+                        No contacts found.
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="contacts_table" name="Contacts table">
+        <thead>
+            <tr class="active">
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th class="text-center">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <t t-foreach="contacts" t-as="contact">
+                <tr>
+                    <td>
+                        <a t-attf-href="/my/contacts/#{slug(contact)}?#{keep_query()}">
+                            <span t-field="contact.name"/>
+                        </a>
+                    </td>
+                    <td>
+                        <a t-attf-href="tel://#{contact.mobile}">
+                            <span t-field="contact.mobile"/>
+                        </a>
+                    </td>
+                    <td>
+                        <a t-attf-href="mailto://#{contact.email}">
+                            <span t-field="contact.email"/>
+                        </a>
+                    </td>
+                    <td class="text-center">
+                        <a class="btn btn-danger"
+                           t-attf-href="/my/contacts/#{slug(contact)}/disable?redirect=#{quote_plus(request.httprequest.url)}"
+                           title="Delete">
+                            <div class="fa fa-trash"/>
+                        </a>
+                    </td>
+                </tr>
+            </t>
+        </tbody>
+    </template>
+
+    <template id="search" name="Search In Contacts">
+        <form action="/my/contacts" method="get">
+            <div class="input-group">
+                <input
+                    type="search"
+                    name="search"
+                    class="form-control"
+                    placeholder="Search..."
+                    t-att-value="search"/>
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-primary" title="Search">
+                        <div class="fa fa-search"/>
+                    </button>
+                </span>
+            </div>
+        </form>
+    </template>
+
+    <template id="tree_actions" name="Website Portal Contact Tree Actions">
+        <a href="/my/contacts/new" class="btn btn-primary btn-wide">
+            <div class="fa fa-plus"/>
+            Add new contact
+        </a>
+    </template>
+
+</odoo>

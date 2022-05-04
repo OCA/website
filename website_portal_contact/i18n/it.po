@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_portal_contact
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-21 13:57+0000\n"
+"PO-Revision-Date: 2022-03-21 13:57+0000\n"
+"Last-Translator: Simone Rubino <sir@takobi.online>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form
+msgid "Add Contact"
+msgstr "Aggiungi contatto"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.tree_actions
+msgid "Add new contact"
+msgstr "Aggiungi nuovo contatto"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_layout
+msgid "Contacts"
+msgstr "Contatti"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form_actions
+msgid "Delete"
+msgstr "Elimina"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form
+msgid "Edit Contact:"
+msgstr "Modifica contatto:"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
+msgid "Email"
+msgstr "E-mail"
+
+#. module: website_portal_contact
+#: code:addons/website_portal_contact/controllers/main.py:118
+#, python-format
+msgid "Fields not available: %s"
+msgstr "Campi non disponibili: %s"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
+msgid "Mobile"
+msgstr "Cellulare"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
+msgid "My Contacts"
+msgstr "I miei contatti"
+
+#. module: website_portal_contact
+#: code:addons/website_portal_contact/controllers/main.py:56
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
+#, python-format
+msgid "Name"
+msgstr "Nome"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form_breadcrumb
+msgid "New Contact"
+msgstr "Nuovo contatto"
+
+#. module: website_portal_contact
+#: code:addons/website_portal_contact/controllers/main.py:55
+#, python-format
+msgid "Newest"
+msgstr "Più recenti"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
+msgid "No contacts found."
+msgstr "Nessun contatto trovato."
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form_actions
+msgid "Save"
+msgstr "Salva"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.search
+msgid "Search"
+msgstr "Cerca"
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.search
+msgid "Search..."
+msgstr "Cerca..."
+
+#. module: website_portal_contact
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_contacts
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
+msgid "Your Contacts"
+msgstr "I tuoi contatti"
