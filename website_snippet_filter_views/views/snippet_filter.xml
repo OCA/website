@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2022 Pierre Verkest
+    @author Pierre Verkest <pierreverkest84@gmail.com>
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <record model="ir.ui.view" id="website_snippet_filter_search_view">
+        <field name="name">Snippet filter</field>
+        <field name="model">website.snippet.filter</field>
+        <field name="arch" type="xml">
+            <search string="Snippet filter search">
+                <field name="name" />
+                <field name="filter_id" />
+                <field name="website_id" />
+                <filter
+                    string="Published"
+                    name="published"
+                    domain="[('is_published', '=', True)]"
+                />
+                <filter
+                    string="Not published"
+                    name="not_published"
+                    domain="[('is_published', '!=', True)]"
+                />
+                <group string="Group By">
+                    <filter
+                        string="Published"
+                        name="group_by_is_published"
+                        context="{'group_by': 'is_published'}"
+                    />
+                    <filter
+                        string="Filter"
+                        name="group_by_filter_id"
+                        context="{'group_by': 'filter_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="website_snippet_filter_form_view">
+        <field name="name">Snippet filter</field>
+        <field name="model">website.snippet.filter</field>
+        <field name="arch" type="xml">
+            <form string="Snippet filter">
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" /></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="filter_id" />
+                            <field name="website_id" />
+                        </group>
+                        <group>
+                            <field name="limit" />
+                            <field name="action_server_id" />
+                            <field name="is_published" />
+                        </group>
+                    </group>
+                    <field name="field_names" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="website_snippet_filter_tree_view">
+        <field name="name">Snippet filter</field>
+        <field name="model">website.snippet.filter</field>
+        <field name="arch" type="xml">
+            <tree string="Snippet filter">
+                <field name="name" />
+                <field name="filter_id" />
+                <field name="website_id" />
+                <field name="is_published" />
+                <field name="limit" optional="hide" />
+                <field name="action_server_id" optional="hide" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_snippet_filter_action" model="ir.actions.act_window">
+        <field name="name">Snippet filter</field>
+        <field name="res_model">website.snippet.filter</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            No snippet filter found. Let's create one!
+          </p>
+          <p>
+              Snippet filter are used by dynamic snippet to translate
+              field between data to retreive and template tu reuse.
+          </p>
+        </field>
+    </record>
+
+    <menuitem
+        name="Dynamic snippet"
+        id="menu_website_dynamic_snippet_root"
+        sequence="80"
+        parent="website.menu_website_global_configuration"
+        groups="website.group_website_designer"
+    />
+
+    <menuitem
+        id="menu_website_snippet_filter"
+        name="Snippet filter"
+        action="website_snippet_filter_action"
+        parent="menu_website_dynamic_snippet_root"
+        groups="website.group_website_designer"
+    />
+</odoo>
