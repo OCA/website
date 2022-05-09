@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_snippet_filter_views
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_snippet_filter_views
+#: model:ir.ui.menu,name:website_snippet_filter_views.menu_website_dynamic_snippet_root
+msgid "Dynamic snippet"
+msgstr "Elément dynamique"
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.ui.view,arch_db:website_snippet_filter_views.website_snippet_filter_search_view
+msgid "Filter"
+msgstr "Filtre"
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.ui.view,arch_db:website_snippet_filter_views.website_snippet_filter_search_view
+msgid "Group By"
+msgstr "Groupé par"
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.actions.act_window,help:website_snippet_filter_views.website_snippet_filter_template_action
+msgid "No dynamic filter template found. Let's create one!"
+msgstr ""
+"Aucune vue trouvée pour les éléments dynamiques du site web. Créez-en un !"
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.actions.act_window,help:website_snippet_filter_views.website_snippet_filter_action
+msgid "No snippet filter found. Let's create one!"
+msgstr "Aucun filtre pour les éléments dynamiquess du site web, Créez-en un !"
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.ui.view,arch_db:website_snippet_filter_views.website_snippet_filter_search_view
+msgid "Not published"
+msgstr "Non publié"
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.ui.view,arch_db:website_snippet_filter_views.website_snippet_filter_search_view
+msgid "Published"
+msgstr "Publié"
+
+#. module: website_snippet_filter_views
+#: model:ir.actions.act_window,name:website_snippet_filter_views.website_snippet_filter_action
+#: model:ir.ui.menu,name:website_snippet_filter_views.menu_website_snippet_filter
+#: model_terms:ir.ui.view,arch_db:website_snippet_filter_views.website_snippet_filter_form_view
+#: model_terms:ir.ui.view,arch_db:website_snippet_filter_views.website_snippet_filter_tree_view
+msgid "Snippet filter"
+msgstr "Filtre d'élement dynamique"
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.actions.act_window,help:website_snippet_filter_views.website_snippet_filter_action
+msgid ""
+"Snippet filter are used by dynamic snippet to translate\n"
+"              field between data to retreive and template tu reuse."
+msgstr ""
+"Les filtres d'éléments de site web sont utilisés pour récupérer les "
+"donnéesde l'ERP à afficher sur le site web dans les élémnets dynamique pour "
+"une vue d'élément dynamique donnée."
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.ui.view,arch_db:website_snippet_filter_views.website_snippet_filter_search_view
+msgid "Snippet filter search"
+msgstr "Recherche de filtre d'élément de site web"
+
+#. module: website_snippet_filter_views
+#: model:ir.actions.act_window,name:website_snippet_filter_views.website_snippet_filter_template_action
+#: model:ir.ui.menu,name:website_snippet_filter_views.menu_website_snippet_filter_template
+msgid "Snippet filter template"
+msgstr "Vues d'élément dynamique"
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.actions.act_window,help:website_snippet_filter_views.website_snippet_filter_template_action
+msgid ""
+"Snippet filter template are used by dynamic snippet to render\n"
+"              any object field on the website.\n"
+"\n"
+"              view key name must contains '.dynamic_filter_template_'"
+msgstr ""
+"Les vues d'élément dynamique du site web sont utilisé par les éléments "
+"dynamique\n"
+"telque le carroussel pour permettre d'afficher des données de l'ERP.\n"
+"\n"
+"La clé (champ `key`) doit contenir la valeur '.dynamic_filter_template_' "
+"pour \n"
+"être utilisable."
+
+#. module: website_snippet_filter_views
+#: model_terms:ir.ui.view,arch_db:website_snippet_filter_views.view_form_extend
+msgid ""
+"To be availaible as dynamic snippet template key  value\n"
+"                    must contains <b>'.dynamic_filter_template_'</b>."
+msgstr ""
+"Pour rendre cette vue disponible comme modèle pour les éléments dynamique\n"
+"du site web (tel le carroussel) la clé (champ `key`) doit contenir la "
+"valeur:\n"
+"<b>'.dynamic_filter_template_'</b>."
