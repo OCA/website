@@ -5,7 +5,7 @@
 {
     "name": "Website Snippet Country Code Dropdown",
     "summary": "Allow to select country in a dropdown",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Tecnativa, " "Odoo Community Association (OCA)",
@@ -13,7 +13,20 @@
     "application": False,
     "installable": True,
     "depends": ["website"],
-    "qweb": ["static/src/xml/*.xml"],
-    "data": ["templates/assets.xml", "views/snippets.xml"],
+    "data": ["views/snippets.xml"],
     "demo": ["demo/pages.xml"],
+    "assets": {
+        "web.assets_tests": [
+            "/website_snippet_country_dropdown/static/src/js/"
+            "web_tour_country_dropdown.js"
+        ],
+        "web.assets_frontend": [
+            "/website_snippet_country_dropdown/static/src/css/style.scss",
+            "/website_snippet_country_dropdown/static/src/js/"
+            "website_snippet_country_dropdown.js",
+        ],
+        "web.assets_qweb": [
+            "/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml"
+        ],
+    },
 }
