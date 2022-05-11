@@ -22,7 +22,7 @@
             </label>
             <div t-att-class="input_container_class">
                 <t t-call="website_snippet_country_dropdown.country_dropdown">
-                    <t t-raw="0" />
+                    <t t-out="0" />
                 </t>
             </div>
         </div>
