@@ -105,7 +105,7 @@
 
     <t t-name="website_form_builder.field.html">
         <!-- TODO Use a safe HTML widget instead -->
-        <t t-call="website_form_builder.text"/>
+        <t t-call="website_form_builder.field.text"/>
     </t>
 
     <t t-name="website_form_builder.field.integer">
