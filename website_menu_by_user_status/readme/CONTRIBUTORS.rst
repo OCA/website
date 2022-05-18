@@ -3,3 +3,4 @@
 * Meyomesse Gilles <meyomesse.gilles@gmail.com>
 * David Dufresne
 * Kaushal Prajapati <kbprajapati@live.com>
+* Pascal Vanderperre <pascal.vanderperre@noviat.com>
