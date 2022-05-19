@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="subscribe" name="Subcribe Page" priority="30">
+        <t t-call="website.layout">
+            <div class="wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="content">
+                            <article id='node-154' class='node node-page clearfix'>
+                                <div class='node-content content'>
+                                    <header>
+                                        <h1>You're subscribed to the Newsletter!</h1>
+                                    </header>
+                                    <div class='content'>
+                                        <div
+                                            class='field field-name-body field-type-text-with-summary field-label-hidden'
+                                        >
+                                            <div class='field-items'>
+                                                <div class='field-item even'>
+                                                    <p>Continue exploring our
+                                                        <a
+                                                            href='/'
+                                                            rel='nofollow'
+                                                        >webpage...</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

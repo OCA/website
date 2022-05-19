@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="newsletter_confirmation_request_template" model="mail.template">
+        <field name="name">Newsletter Subscription</field>
+        <field name="subject">Confirm your newsletter subscription</field>
+        <field name="model_id" ref="mass_mailing.model_mailing_contact_subscription" />
+        <field name="email_to">${object.contact_id.email}</field>
+        <field name="body_html" type="xml">
+            <div style="margin: -10px -10px; padding:50px 30px 50px 30px; height:100%;">
+                <div style="margin:0 auto; max-width:660px;">
+                    <div
+                        style="float: left; background-color: #FFFFFF; padding:10px 30px 10px 30px; border: 1px solid #DDDDDD;"
+                    >
+                        <div style="float: left; max-width:470px;">
+                            <p
+                                style="line-height: 21px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 12px;"
+                            >
+                                <strong
+                                    style="line-height: 21px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;"
+                                >Confirm your newsletter subscription
+                                </strong>
+                            </p>
+                            <div
+                                style="line-height: 21px; min-height: 100px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 12px;"
+                            >
+                                <p
+                                    style="line-height: 21px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 12px;"
+                                >Thanks for subscribing to our email list.
+                                </p>
+                                <p
+                                    style="line-height: 21px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 12px;"
+                                >You allow to be in touch with you via email for the purpose of news, updates
+                                    and product information. If you wish to withdraw your consent and stop hearing from
+                                    us, simply click the unsubscribe link at the bottom of every email. By subscribing,
+                                    you agree that we may process your information in accordance with our data privacy policy.
+                                </p>
+                                <p
+                                    style="line-height: 21px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 12px;"
+                                >Please confirm your subscription by clicking the button below:
+                                </p>
+                                <p
+                                    style="line-height: 21px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 12px; margin-bottom: 25px; padding: 15px; text-align: center;"
+                                >
+                                    <a
+                                        href="/newsletter/confirmation/${object.access_token}"
+                                        style="background-color: #449d44; padding: 12px; font-weight: 12px; text-decoration: none; color: #fff; border-radius: 5px; font-size:16px;"
+                                    >Confirm
+                                    </a>
+                                </p>
+                                <p
+                                    style="line-height: 21px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 12px;"
+                                >Thank you,<br />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="max-width: 532px; background-color: #14212D;">
+                        <table style="margin-left: 15px;">
+                            <tr>
+                                <td
+                                    class="text"
+                                    colspan="2"
+                                    style="color: #FFFFFF;font-family: Arial;font-size: 13px;letter-spacing: 0;line-height: 17px;"
+                                >
+                                    <br />
+                                    <strong>${user.company_id.name}</strong>
+                                    <br />
+
+                                    % if user.company_id.street:
+                                    ${user.company_id.street},
+                                    % endif
+                                    % if user.company_id.street2:
+                                    ${user.company_id.street2},
+                                    % endif
+                                    % if user.company_id.city or user.company_id.zip:
+                                    ${user.company_id.zip} ${user.company_id.city},
+                                    % endif
+                                    % if user.company_id.country_id:
+                                    ${user.company_id.state_id and user.company_id.state_id.name or ''}
+                                    ${user.company_id.country_id.name or ''}
+                                    % endif
+                                    <br />
+                                    <br />
+                                    <strong>CEO:</strong>${user.company_id.ceo or ''}
+                                    <br />
+                                    <strong
+                                    >Company register:</strong>${user.company_id.company_registry or ''}
+                                    <br />
+                                    <strong>VAT ID:</strong>${user.company_id.vat or ''}
+                                    <br />
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br />
+                </div>
+
+            </div>
+        </field>
+    </record>
+
+    <record id="newsletter_confirmation_success_template" model="mail.template">
+        <field name="name">Newsletter Subscribed</field>
+        <field name="subject">You Have Subscribed to the Newsletter</field>
+        <field name="model_id" ref="mass_mailing.model_mailing_contact_subscription" />
+        <field name="email_to">${object.contact_id.email}</field>
+        <field name="body_html" type="xml">
+            <p>Hi!</p>
+            <p>Thank you for subscribing the newsletter.</p>
+            <br />
+            <p>Best regards,
+                <br />
+                your team
+            </p>
+
+            <div style="background-color: #14212D;">
+                <table style="margin-left: 15px;">
+                    <tr>
+                        <td
+                            class="text"
+                            colspan="2"
+                            style="color: #FFFFFF;font-family: Arial;font-size: 13px;letter-spacing: 0;line-height: 17px;"
+                        >
+                            <br />
+                            <strong>${user.company_id.name}</strong>
+                            <br />
+
+                            % if user.company_id.street:
+                            ${user.company_id.street},
+                            % endif
+                            % if user.company_id.street2:
+                            ${user.company_id.street2},
+                            % endif
+                            % if user.company_id.city or user.company_id.zip:
+                            ${user.company_id.zip} ${user.company_id.city},
+                            % endif
+                            % if user.company_id.country_id:
+                            ${user.company_id.state_id and user.company_id.state_id.name or ''}
+                            ${user.company_id.country_id.name or ''}
+                            % endif
+                            <br />
+                            <br />
+                            <strong>CEO:</strong>${user.company_id.ceo or ''}
+                            <br />
+                            <strong
+                            >Company register:</strong>${user.company_id.company_registry or ''}
+                            <br />
+                            <strong>VAT ID:</strong>${user.company_id.vat or ''}
+                            <br />
+                            <br />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+        </field>
+    </record>
+
+</odoo>

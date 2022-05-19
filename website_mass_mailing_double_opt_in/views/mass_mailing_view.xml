@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_mail_mass_mailing_form" model="ir.ui.view">
+        <field name="name">view.mailing.mailing.form</field>
+        <field name="model">mailing.mailing</field>
+        <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_form" />
+        <field name="arch" type="xml">
+            <button name="action_test" position="attributes">
+                <attribute
+                    name="groups"
+                >mass_mailing.group_mass_mailing_user,website_mass_mailing_double_opt_in.group_mass_mailing_editor</attribute>
+            </button>
+            <button name="action_launch" position="attributes">
+                <attribute
+                    name="groups"
+                >mass_mailing.group_mass_mailing_user</attribute>
+            </button>
+            <button name="action_schedule" position="attributes">
+                <attribute
+                    name="groups"
+                >mass_mailing.group_mass_mailing_user</attribute>
+            </button>
+            <button name="action_cancel" position="attributes">
+                <attribute
+                    name="groups"
+                >mass_mailing.group_mass_mailing_user</attribute>
+            </button>
+            <button name="action_retry_failed" position="attributes">
+                <attribute
+                    name="groups"
+                >mass_mailing.group_mass_mailing_user</attribute>
+            </button>
+        </field>
+    </record>
+
+   <menuitem
+        name="Mailings"
+        id="mass_mailing.mass_mailing_menu"
+        parent="mass_mailing.mass_mailing_menu_root"
+        sequence="1"
+        action="mass_mailing.mailing_mailing_action_mail"
+        groups="mass_mailing.group_mass_mailing_user,website_mass_mailing_double_opt_in.group_mass_mailing_editor"
+    />
+</odoo>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="german_newsletter_mass_mail_list" model="mailing.list">
+        <field name="name">German Newsletter</field>
+    </record>
+</odoo>

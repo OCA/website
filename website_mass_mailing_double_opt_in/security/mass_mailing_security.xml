@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="group_mass_mailing_editor" model="res.groups">
+        <field name="name">Editor</field>
+        <field
+            name="category_id"
+            ref="base.module_category_marketing_email_marketing"
+        />
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+    </record>
+
+    <record id="mass_mailing.group_mass_mailing_user" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_mass_mailing_editor'))]" />
+    </record>
+
+</odoo>

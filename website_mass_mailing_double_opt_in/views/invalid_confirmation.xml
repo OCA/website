@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="invalid_subscription_confirmation_template">
+        <div>
+            <span style="text-align: center;">
+                <h2 style="color: red;">This confirmation link is invalid.</h2>
+            </span>
+        </div>
+    </template>
+
+</odoo>
