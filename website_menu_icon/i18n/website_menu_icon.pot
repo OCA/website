@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_menu_icon
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_menu_icon
+#: model:ir.model.fields,field_description:website_menu_icon.field_website_menu__icon
+#: model:ir.model.fields.selection,name:website_menu_icon.selection__website_menu__icon_type__icon
+msgid "Icon"
+msgstr ""
+
+#. module: website_menu_icon
+#. openerp-web
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Icon / Image"
+msgstr ""
+
+#. module: website_menu_icon
+#. openerp-web
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Icon Preview"
+msgstr ""
+
+#. module: website_menu_icon
+#: model:ir.model.fields.selection,name:website_menu_icon.selection__website_menu__icon_type__image
+msgid "Image"
+msgstr ""
+
+#. module: website_menu_icon
+#. openerp-web
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "New Window"
+msgstr ""
+
+#. module: website_menu_icon
+#. openerp-web
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Preview"
+msgstr ""
+
+#. module: website_menu_icon
+#. openerp-web
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Remove"
+msgstr ""
+
+#. module: website_menu_icon
+#. openerp-web
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Search"
+msgstr ""
+
+#. module: website_menu_icon
+#. openerp-web
+#: code:addons/website_menu_icon/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Search icon or image"
+msgstr ""
+
+#. module: website_menu_icon
+#: model:ir.model.fields,field_description:website_menu_icon.field_website_menu__icon_type
+msgid "Type"
+msgstr ""
+
+#. module: website_menu_icon
+#: model:ir.model,name:website_menu_icon.model_website_menu
+msgid "Website Menu"
+msgstr ""
