@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="website.contentMenu.entry.dialog.renderIcon">
+        <div id="o_icon_dialog_label_icon_preview">
+            <t t-if="icon_type == 'icon'">
+                <button type="button" class="btn btn-info">
+                    <i
+                        t-att-class="icon + ' fa-fw'"
+                        title="Icon Preview"
+                        role="img"
+                        aria-label="Preview"
+                    />
+                </button>
+            </t>
+            <t t-elif="icon_type == 'image'">
+                <button type="button" class="btn btn-info">
+                    <i
+                        class="fa fa-blank fa-fw"
+                        title="Icon Preview"
+                        role="img"
+                        aria-label="Preview"
+                    >
+                        <img class="o_we_custom_image" height="25" t-att-src="icon" />
+                    </i>
+                </button>
+            </t>
+            <t t-else="">
+                <button type="button" class="btn btn-info">
+                    <i
+                        class="fa fa-blank fa-fw"
+                        title="Icon Preview"
+                        role="img"
+                        aria-label="Preview"
+                    />
+                </button>
+            </t>
+        </div>
+    </t>
+    <t t-extend="website.contentMenu.dialog.submenu">
+        <t t-jquery="div.input-group-prepend" t-operation="append">
+            <t t-call="website.contentMenu.entry.dialog.renderIcon">
+                <t t-set="icon" t-value="submenu.fields['icon']" />
+                <t t-set="icon_type" t-value="submenu.fields['icon_type']" />
+            </t>
+        </t>
+        <t t-jquery="span.form-control" t-operation="append">
+            <span
+                t-if="submenu.fields['new_window']"
+                class="badge badge-success"
+            >New Window</span>
+        </t>
+    </t>
+    <div t-name="website.contentMenu.entry.dialog" t-extend="wysiwyg.widgets.link">
+        <t t-jquery="form" t-operation="append">
+            <div class="form-group row">
+                <label
+                    class="col-form-label col-md-3"
+                    for="o_icon_dialog_label_input"
+                >Icon / Image</label>
+                <div class="col-md-9 input-group ml-auto">
+                    <div class="input-group-prepend">
+                        <t t-call="website.contentMenu.entry.dialog.renderIcon">
+                            <t t-set="icon" t-value="widget.data.icon" />
+                            <t t-set="icon_type" t-value="widget.data.icon_type" />
+                        </t>
+                    </div>
+                    <input
+                        type="text"
+                        name="icon"
+                        id="o_icon_dialog_label_input_value"
+                        class="form-control o_we_search"
+                        placeholder="Search icon or image"
+                        readonly=""
+                        t-att-value="widget.data.icon || null"
+                    />
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary o_we_search_icon">
+                            <i
+                                class="fa fa-search"
+                                title="Search"
+                                role="img"
+                                aria-label="Search"
+                            />
+                        </button>
+                        <button type="button" class="btn btn-danger o_we_delete_icon">
+                            <i
+                                class="fa fa-trash"
+                                title="Remove"
+                                role="img"
+                                aria-label="Remove"
+                            />
+                        </button>
+                    </div>
+                </div>
+                <input
+                    type="text"
+                    name="icon_type"
+                    id="o_icon_dialog_label_input_type"
+                    class="d-none"
+                    t-att-value="widget.data.icon_type"
+                />
+            </div>
+        </t>
+    </div>
+</templates>

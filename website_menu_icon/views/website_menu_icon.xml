@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="website_menus_form_view_icon" model="ir.ui.view">
+            <field name="name">website.menu.form.icon</field>
+            <field name="model">website.menu</field>
+            <field name="inherit_id" ref="website.website_menus_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website_id']" position="after">
+                    <field name="icon_type" />
+                    <field name="icon" />
+                </xpath>
+            </field>
+        </record>
+        <record id="website_menus_tree_view_icon" model="ir.ui.view">
+            <field name="name">website.menu.tree.icon</field>
+            <field name="model">website.menu</field>
+            <field name="inherit_id" ref="website.menu_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='url']" position="after">
+                    <field name="icon_type" />
+                    <field name="icon" />
+                </xpath>
+            </field>
+        </record>
+        <template
+            id="Icons"
+            inherit_id="website.submenu"
+            customize_show="True"
+            active="True"
+        >
+            <!-- The following catch normal menus -->
+            <xpath
+                expr="//li[@t-if='submenu.is_visible and not has_visible_submenu']/a"
+                position="attributes"
+            >
+                <attribute name="t-attf-class" add="text-alpha" separator=" " />
+            </xpath>
+            <xpath
+                expr="//li[@t-if='submenu.is_visible and not has_visible_submenu']/a/span[@t-field='submenu.name']"
+                position="before"
+            >
+                <t t-if="submenu.icon_type == 'icon'">
+                    <span
+                        t-if="submenu.icon"
+                        t-attf-class="menu-icon #{submenu.icon  or ''}"
+                    />
+                </t>
+                <t t-elif="submenu.icon_type == 'image'">
+                    <img
+                        class="menu-image o_we_custom_image"
+                        t-att-src="submenu.icon"
+                        height="25"
+                    />
+                </t>
+                <t t-else="" />
+            </xpath>
+            <!-- These ones catch mega-menus -->
+            <xpath expr="//li[@t-if='has_visible_submenu']/a" position="attributes">
+                <attribute name="t-attf-class" add="text-alpha" separator=" " />
+            </xpath>
+            <xpath
+                expr="//li[@t-if='has_visible_submenu']/a/span[@t-field='submenu.name']"
+                position="before"
+            >
+                <t t-if="submenu.icon_type == 'icon'">
+                    <span
+                        t-if="submenu.icon"
+                        t-attf-class="menu-icon #{submenu.icon  or ''}"
+                    />
+                </t>
+                <t t-elif="submenu.icon_type == 'image'">
+                    <img
+                        class="menu-image o_we_custom_image"
+                        t-att-src="submenu.icon"
+                        height="25"
+                    />
+                </t>
+                <t t-else="" />
+            </xpath>
+        </template>
+    </data>
+</odoo>
