@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo13-addon-website_google_tag_manager',
         'odoo13-addon-website_legal_page',
         'odoo13-addon-website_menu_by_user_status',
+        'odoo13-addon-website_menu_icon',
         'odoo13-addon-website_no_crawler',
         'odoo13-addon-website_odoo_debranding',
         'odoo13-addon-website_snippet_big_button',
