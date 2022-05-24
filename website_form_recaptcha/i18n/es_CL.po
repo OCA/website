@@ -9,20 +9,21 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-05 02:49+0000\n"
-"PO-Revision-Date: 2017-05-05 02:49+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2022-05-24 04:06+0000\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish (Chile) (https://www.transifex.com/oca/teams/23907/"
 "es_CL/)\n"
 "Language: es_CL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_form_recaptcha
 #: model:ir.model.fields,help:website_form_recaptcha.field_ir_model__website_form_recaptcha
 msgid "(Deprecated) Requires successful ReCaptcha for form submission."
-msgstr ""
+msgstr "(Obsoleto) Requiere ReCaptcha validado para el envío de formularios."
 
 #. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
@@ -30,6 +31,8 @@ msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
 "                            How to get my reCaptcha Key"
 msgstr ""
+"<i class = \"fa fa-arrow-right\" />\n"
+"                            Cómo obtener mi clave reCaptcha"
 
 #. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
@@ -37,11 +40,13 @@ msgid ""
 "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
 "specific.\" groups=\"website.group_multi_website\"/>"
 msgstr ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Los valores establecidos aquí son "
+"específicos del sitio web.\" groups=\"website.group_multi_website\"/>"
 
 #. module: website_form_recaptcha
 #: model:ir.model,name:website_form_recaptcha.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Ajustes de configuración"
 
 #. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha__display_name
@@ -51,96 +56,96 @@ msgstr "Nombre mostrado"
 #. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings__has_google_recaptcha
 msgid "Google reCaptcha"
-msgstr ""
+msgstr "ReCaptcha de Google"
 
 #. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha__id
 msgid "ID"
-msgstr "ID (identificación)"
+msgstr "ID"
 
 #. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_website_form_recaptcha____last_update
 msgid "Last Modified on"
-msgstr "Última modificación en"
+msgstr "Última modificación el"
 
 #. module: website_form_recaptcha
 #: model:ir.model,name:website_form_recaptcha.model_ir_model
 msgid "Models"
-msgstr ""
+msgstr "Modelos"
 
 #. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid "Protect your forms using reCaptcha control."
-msgstr ""
+msgstr "Proteja sus formularios usando el control reCaptcha."
 
 #. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings__recaptcha_key_secret
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_website__recaptcha_key_secret
 msgid "Recaptcha Key Secret"
-msgstr ""
+msgstr "Secreto clave de recaptcha"
 
 #. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_res_config_settings__recaptcha_key_site
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_website__recaptcha_key_site
 msgid "Recaptcha Key Site"
-msgstr ""
+msgstr "Sitio clave de Recaptcha"
 
 #. module: website_form_recaptcha
 #: model:ir.model.fields,field_description:website_form_recaptcha.field_ir_model__website_form_recaptcha
 msgid "Require ReCaptcha"
-msgstr ""
+msgstr "Requiere ReCaptcha"
 
 #. module: website_form_recaptcha
 #: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "The response parameter is invalid or malformed."
-msgstr ""
+msgstr "El parámetro de respuesta es inválido o incorrecto."
 
 #. module: website_form_recaptcha
 #: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "The response parameter is missing."
-msgstr ""
+msgstr "El parámetro de respuesta no se encuentra."
 
 #. module: website_form_recaptcha
 #: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "The secret parameter is invalid or malformed."
-msgstr ""
+msgstr "El parámetro \"secret\" es inválido o incorrecto."
 
 #. module: website_form_recaptcha
 #: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "The secret parameter is missing."
-msgstr ""
+msgstr "El parámetro \"secret\" no se encuentra."
 
 #. module: website_form_recaptcha
 #: code:addons/website_form_recaptcha/models/website_form_recaptcha.py:0
 #, python-format
 msgid "There was a problem with the captcha entry."
-msgstr ""
+msgstr "Hubo un problema con la entrada de captcha."
 
 #. module: website_form_recaptcha
 #: model:ir.model,name:website_form_recaptcha.model_website
 msgid "Website"
-msgstr ""
+msgstr "Sitio web"
 
 #. module: website_form_recaptcha
 #: model:ir.model,name:website_form_recaptcha.model_website_form_recaptcha
 msgid "Website Form Recaptcha Validations"
-msgstr ""
+msgstr "Validaciones de Formulario de Recaptcha del sitio web"
 
 #. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid "XXXXX"
-msgstr ""
+msgstr "XXXXX"
 
 #. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid "captcha"
-msgstr ""
+msgstr "captcha"
 
 #. module: website_form_recaptcha
 #: model_terms:ir.ui.view,arch_db:website_form_recaptcha.view_website_config_settings
 msgid "reCaptcha"
-msgstr ""
+msgstr "reCaptcha"
