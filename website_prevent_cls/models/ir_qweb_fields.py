@@ -32,7 +32,9 @@ class Image(models.AbstractModel):
 
     @api.model
     def record_to_html(self, record, field_name, options):
-        base64_signature = record[field_name][:256]
+        base64_signature = False
+        if record and hasattr(record, field_name) and record[field_name]:
+            base64_signature = record[field_name][:256]
         # don't process empty source or SVG
         if not base64_signature or base64_signature[:1] in (b"P", "P"):
             return super(Image, self).record_to_html(record, field_name, options)
