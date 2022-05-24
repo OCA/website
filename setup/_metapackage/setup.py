@@ -28,6 +28,7 @@ setuptools.setup(
         'odoo12-addon-website_logo',
         'odoo12-addon-website_media_size',
         'odoo12-addon-website_megamenu',
+        'odoo12-addon-website_menu_by_user_status',
         'odoo12-addon-website_no_crawler',
         'odoo12-addon-website_odoo_debranding',
         'odoo12-addon-website_portal_contact',
