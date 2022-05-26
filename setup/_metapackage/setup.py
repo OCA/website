@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo-addon-website_crm_quick_answer>=15.0dev,<15.1dev',
+        'odoo-addon-website_legal_page>=15.0dev,<15.1dev',
         'odoo-addon-website_odoo_debranding>=15.0dev,<15.1dev',
         'odoo-addon-website_snippet_country_dropdown>=15.0dev,<15.1dev',
     ],
