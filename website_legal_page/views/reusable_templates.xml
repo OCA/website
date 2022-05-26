@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Base templates for submodules -->
+    <template id="acceptance_full">
+        <span class="acceptance_full">
+            <a
+                href="/legal"
+            >I accept the legal terms, the privacy policy &amp; conditions of this website.</a>
+        </span>
+    </template>
+</odoo>
