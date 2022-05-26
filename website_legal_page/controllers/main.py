@@ -6,7 +6,7 @@ from odoo.http import request
 
 
 class WebsiteLegalPage(http.Controller):
-    @http.route(["/shop/terms"], type="http", auth="public", website=True)
+    @http.route(["/terms"], type="http", auth="public", website=True)
     def terms(self, **kw):
         """
         Ensure the website_legal_page template usage, even if the page was edited.
