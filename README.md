@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [website_crm_quick_answer](website_crm_quick_answer/) | 15.0.1.0.1 |  | Add an automatic answer for contacts asking for info
+[website_legal_page](website_legal_page/) | 15.0.1.0.0 |  | Website Legal Page
 [website_odoo_debranding](website_odoo_debranding/) | 15.0.1.0.0 |  | Remove Odoo Branding from Website
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 15.0.1.0.0 |  | Allow to select country in a dropdown
 
