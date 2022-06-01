@@ -26,6 +26,7 @@ setuptools.setup(
         'odoo13-addon-website_snippet_big_button',
         'odoo13-addon-website_snippet_country_dropdown',
         'odoo13-addon-website_snippet_marginless_gallery',
+        'odoo13-addon-website_snippet_timeline',
         'odoo13-addon-website_typed_text',
         'odoo13-addon-website_video_preview',
     ],
