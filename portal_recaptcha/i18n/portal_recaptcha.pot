@@ -35,6 +35,46 @@ msgid "Portal reCaptcha"
 msgstr ""
 
 #. module: portal_recaptcha
+#: model:ir.model.fields,field_description:portal_recaptcha.field_res_config_settings__recaptcha_key_secret
+msgid "Recaptcha Key Secret"
+msgstr ""
+
+#. module: portal_recaptcha
+#: model:ir.model.fields,field_description:portal_recaptcha.field_res_config_settings__recaptcha_key_site
+msgid "Recaptcha Key Site"
+msgstr ""
+
+#. module: portal_recaptcha
+#: code:addons/portal_recaptcha/models/portal_mixin.py:21
+#, python-format
+msgid "The response parameter is invalid or malformed."
+msgstr ""
+
+#. module: portal_recaptcha
+#: code:addons/portal_recaptcha/models/portal_mixin.py:20
+#, python-format
+msgid "The response parameter is missing."
+msgstr ""
+
+#. module: portal_recaptcha
+#: code:addons/portal_recaptcha/models/portal_mixin.py:19
+#, python-format
+msgid "The secret parameter is invalid or malformed."
+msgstr ""
+
+#. module: portal_recaptcha
+#: code:addons/portal_recaptcha/models/portal_mixin.py:18
+#, python-format
+msgid "The secret parameter is missing."
+msgstr ""
+
+#. module: portal_recaptcha
+#: code:addons/portal_recaptcha/models/portal_mixin.py:26
+#, python-format
+msgid "There was a problem with the captcha entry."
+msgstr ""
+
+#. module: portal_recaptcha
 #: model_terms:ir.ui.view,arch_db:portal_recaptcha.res_config_settings_view_form
 msgid "XXXXX"
 msgstr ""
