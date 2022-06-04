@@ -5,7 +5,7 @@
 {
     "name": "Website Legal Page",
     "category": "Website",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.0.1",
     "depends": ["website"],
     "data": [
         "views/reusable_templates.xml",
