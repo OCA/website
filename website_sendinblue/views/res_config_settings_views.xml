@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='website_cookies_bar_setting']" position="inside">
+                <div class="o_setting_left_pane">
+                    <field name="sendinblue_enabled" />
+                </div>
+                <div class="o_setting_right_pane">
+                    <label for="sendinblue_enabled" />
+                    <div class="text-muted">
+                        Add Sendinblue functionality
+                    </div>
+                    <div
+                        class="content-group"
+                        attrs="{'invisible': [('sendinblue_enabled', '=', False)]}"
+                        id="sendinblue_fields"
+                    >
+                        <div class="row mt16">
+                            <label
+                                class="col-md-3 o_light_label"
+                                string="Sendinblue ID"
+                                for="sendinblue_identifier"
+                            />
+                            <field
+                                name="sendinblue_identifier"
+                                placeholder="00000000-0000-0000-0000-000000000000"
+                                attrs="{'required': [('sendinblue_enabled', '!=', False)]}"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
