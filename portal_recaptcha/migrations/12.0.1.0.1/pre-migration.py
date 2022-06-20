@@ -1,4 +1,6 @@
 def migrate(cr, version):
+    # Uses a recursive query:
+    # https://www.postgresql.org/docs/current/queries-with.html
     cr.execute(
         """
     WITH RECURSIVE child_views AS (
