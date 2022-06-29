@@ -5,7 +5,7 @@
     "version": "12.0.1.0.1",
     "category": "Website",
     "depends": ["portal"],
-    "author": "Tech Receptives, Coop IT Easy SCRLfs",
+    "author": "Tech Receptives, Coop IT Easy SC",
     "license": "AGPL-3",
     "website": "https://coopiteasy.be",
     "summary": "Add google recaptcha to forms.",
