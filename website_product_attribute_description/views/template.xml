@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="product_variants_extended" inherit_id="sale.variants">
+        <xpath expr="//strong[@t-field='ptal.attribute_id.name']" position="after">
+            <t t-if="ptal.attribute_id.description">
+                <i
+                    class="fa fa-info-circle"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    t-att-title="ptal.attribute_id.description"
+                    style="margin-left: 5px;"
+                    id="description_tooltip"
+                />
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
