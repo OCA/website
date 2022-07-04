@@ -1,0 +1,25 @@
+.tooltip-inner {
+    max-width: 200px;
+    padding: 0.12rem 0.5rem;
+    color: #ffffff;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 0rem;
+    font-size: 14.5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Noto,
+        "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    /* font-weight: 700; */
+    /* color: white; */
+    border: 1px solid white;
+    position: relative;
+    left: 80px;
+    bottom: -3px;
+}
+
+.bs-tooltip-bottom .arrow::before,
+.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+    bottom: 0;
+    border-width: 0 0.4rem 0.4rem;
+    border-bottom-color: #000000;
+}
