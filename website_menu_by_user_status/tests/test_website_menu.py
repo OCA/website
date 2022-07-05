@@ -16,6 +16,8 @@ class TestWebsiteMenu(SavepointCase):
         cls.menu.user_not_logged = False
 
         cls.public_user = cls.env.ref("base.public_user")
+        group_id = cls.env.ref("website.group_website_designer")
+        cls.public_user.groups_id = (4, group_id.id)
         cls.demo_user = cls.env.ref("base.user_demo")
 
     def test_visible_user_logged_demo(self):
