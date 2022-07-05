@@ -32,7 +32,7 @@ class WebsiteMenu(models.Model):
         super()._compute_visible()
         for menu in self:
             if not menu.is_visible:
-                return
+                menu.is_visible = False
 
             if self.env.user == self.env.ref("base.public_user"):
                 menu.is_visible = menu.user_not_logged
