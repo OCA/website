@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="website_sale_stock_product"
+        inherit_id="website_sale.product"
+        priority="99"
+    >
+        <xpath expr="//div[@id='add_to_cart_wrap']" position="after">
+            <div class="row text-danger">
+                <div class="custom_message o_not_editable" />
+            </div>
+        </xpath>
+    </template>
+</odoo>

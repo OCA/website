@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record
+        id="res_config_settings_view_form_website_sale_stock_notification"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.website.sale.stock.notification</field>
+        <field name="model">res.config.settings</field>
+        <field
+            name="inherit_id"
+            ref="website_sale_stock.res_config_settings_view_form"
+        />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[@name='stock_inventory_availability']/div[hasclass('content-group')]/div[hasclass('row')]"
+                position="attributes"
+            >
+                <attribute
+                    name="attrs"
+                >{'invisible': [('show_availability', '!=', True)]}</attribute>
+            </xpath>
+            <field name="available_threshold" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'required': [('show_availability', '!=', True)]}</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

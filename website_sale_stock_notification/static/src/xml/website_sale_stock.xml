@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+        <t
+        t-name="website_sale_stock_notification.product_availability"
+        inherit_id="website_sale_stock.product_availability"
+        t-inherit-mode="extension"
+    >
+            <t t-jquery="div[@id='out_of_stock_message']" t-operation="after">
+                <div
+                id="custom_message"
+                t-attf-class="custom_message_#{product_template}"
+            >
+                    <i class='fa fa-exclamation-triangle' />
+                    <t t-esc="custom_message" />
+                </div>
+            </t>
+        </t>
+</templates>
