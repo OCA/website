@@ -6,57 +6,60 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2022-09-15 22:07+0000\n"
+"Last-Translator: Claude R Perrin <claude@perrin.it>\n"
 "Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
 msgid "00000000-0000-0000-0000-000000000000"
-msgstr ""
+msgstr "00000000-0000-0000-0000-000000000000"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
 msgid "Add Cookiefirst functionality"
-msgstr ""
+msgstr "Ajouter la fonction Cookiefirst"
 
 #. module: website_cookiefirst
 #: model:ir.model,name:website_cookiefirst.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Paramètres"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.cookies
 #: model_terms:website.page,arch_db:website_cookiefirst.cookies_page
 msgid "Cookie Declaration"
-msgstr ""
+msgstr "Déclaration du Cookie"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
 #: model:ir.model.fields,field_description:website_cookiefirst.field_website__cookiefirst_identifier
 msgid "Cookiefirst ID"
-msgstr ""
+msgstr "ID Cookiefirst"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.footer_custom
 msgid "Cookies Policy"
-msgstr ""
+msgstr "Politique sur les Cookies"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:website_cookiefirst.field_website__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nom affiché"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__id
 #: model:ir.model.fields,field_description:website_cookiefirst.field_website__id
+#, fuzzy
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings____last_update
