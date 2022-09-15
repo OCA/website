@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-04-11 18:46+0000\n"
-"Last-Translator: Yves Le Doeuff <yld@alliasys.fr>\n"
+"PO-Revision-Date: 2022-09-15 22:07+0000\n"
+"Last-Translator: Claude R Perrin <claude@perrin.it>\n"
 "Language-Team: none\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgstr "ID du conteneur"
 #: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:website_google_tag_manager.field_website__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nom affiché"
 
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
@@ -61,13 +61,13 @@ msgstr "Comment obtenir mon ID de conteneur GTM"
 #: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings__id
 #: model:ir.model.fields,field_description:website_google_tag_manager.field_website__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: website_google_tag_manager
 #: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings____last_update
 #: model:ir.model.fields,field_description:website_google_tag_manager.field_website____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Dernière modification le"
 
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
