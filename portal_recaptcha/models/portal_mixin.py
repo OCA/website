@@ -22,9 +22,7 @@ class PortalMixin(models.AbstractModel):
                 "The response parameter is invalid or malformed."
             ),
         }
-        return mapping.get(
-            errorcode, _("There was a problem with " "the captcha entry.")
-        )
+        return mapping.get(errorcode, _("There was a problem with the captcha entry."))
 
     def is_captcha_valid(self, response):
         recaptcha_key_secret = (

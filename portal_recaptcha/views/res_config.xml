@@ -1,56 +1,47 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<openerp>
-    <data>
-
-        <record id="res_config_settings_view_form" model="ir.ui.view">
-            <field name="name">Portal settings</field>
-            <field name="model">res.config.settings</field>
-            <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
-            <field name="arch" type="xml">
-                <xpath expr="//div[@name='integration']" position="after">
-                    <h2>Portal reCaptcha</h2>
-                    <div class="row o_settings_container mt16">
-                        <div
-                            class="col-12 col-lg-6 o_setting_box"
-                            id="reCaptcha_setting"
-                        >
-                            <div class="o_setting_right_pane">
-                                <div class="row">
-                                    <label
-                                        class="o_light_label col-lg-5"
-                                        for="recaptcha_key_site"
-                                    />
-                                    <field
-                                        name="recaptcha_key_site"
-                                        placeholder="XXXXX"
-                                    />
-                                </div>
-                                <div class="row">
-                                    <label
-                                        class="o_light_label col-lg-5"
-                                        for="recaptcha_key_secret"
-                                    />
-                                    <field
-                                        name="recaptcha_key_secret"
-                                        placeholder="XXXXX"
-                                    />
-                                </div>
-                                <div>
-                                    <a
-                                        role="button"
-                                        class="btn-link"
-                                        target="_blank"
-                                        href="http://www.google.com/recaptcha/admin"
-                                    >
-                                        <i class="fa fa-arrow-right" />
-                                        How to get my reCaptcha Key
-                                    </a>
-                                </div>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">Portal settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='integration']" position="after">
+                <h2>Portal reCaptcha</h2>
+                <div class="row o_settings_container mt16">
+                    <div class="col-12 col-lg-6 o_setting_box" id="reCaptcha_setting">
+                        <div class="o_setting_right_pane">
+                            <div class="row">
+                                <label
+                                    class="o_light_label col-lg-5"
+                                    for="recaptcha_key_site"
+                                />
+                                <field name="recaptcha_key_site" placeholder="XXXXX" />
+                            </div>
+                            <div class="row">
+                                <label
+                                    class="o_light_label col-lg-5"
+                                    for="recaptcha_key_secret"
+                                />
+                                <field
+                                    name="recaptcha_key_secret"
+                                    placeholder="XXXXX"
+                                />
+                            </div>
+                            <div>
+                                <a
+                                    role="button"
+                                    class="btn-link"
+                                    target="_blank"
+                                    href="http://www.google.com/recaptcha/admin"
+                                >
+                                    <i class="fa fa-arrow-right" />
+                                    How to get my reCaptcha Key
+                                </a>
                             </div>
                         </div>
                     </div>
-                </xpath>
-            </field>
-        </record>
-    </data>
-</openerp>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
