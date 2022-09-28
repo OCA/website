@@ -16,7 +16,7 @@ msgstr ""
 #. module: portal_recaptcha
 #: model_terms:ir.ui.view,arch_db:portal_recaptcha.res_config_settings_view_form
 msgid "<i class=\"fa fa-arrow-right\"/>\n"
-"                                        How to get my reCaptcha Key"
+"                                    How to get my reCaptcha Key"
 msgstr ""
 
 #. module: portal_recaptcha
@@ -69,7 +69,7 @@ msgid "The secret parameter is missing."
 msgstr ""
 
 #. module: portal_recaptcha
-#: code:addons/portal_recaptcha/models/portal_mixin.py:26
+#: code:addons/portal_recaptcha/models/portal_mixin.py:25
 #, python-format
 msgid "There was a problem with the captcha entry."
 msgstr ""
