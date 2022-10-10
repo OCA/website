@@ -13,6 +13,7 @@ setuptools.setup(
         'odoo13-addon-website_cookie_notice',
         'odoo13-addon-website_cookiebot',
         'odoo13-addon-website_cookiefirst',
+        'odoo13-addon-website_critical_css',
         'odoo13-addon-website_crm_privacy_policy',
         'odoo13-addon-website_crm_quick_answer',
         'odoo13-addon-website_crm_recaptcha',
