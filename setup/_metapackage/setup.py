@@ -23,6 +23,7 @@ setuptools.setup(
         'odoo13-addon-website_menu_icon',
         'odoo13-addon-website_no_crawler',
         'odoo13-addon-website_odoo_debranding',
+        'odoo13-addon-website_prevent_cls',
         'odoo13-addon-website_snippet_big_button',
         'odoo13-addon-website_snippet_country_dropdown',
         'odoo13-addon-website_snippet_marginless_gallery',
