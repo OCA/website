@@ -2,7 +2,7 @@
 
 {
     "name": "Website Prevent Cumulative Layout Shift (CLS)",
-    "version": "13.0.1.0.0",
+    "version": "13.0.2.0.0",
     "author": "Sunflower IT,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
