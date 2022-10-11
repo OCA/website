@@ -38,3 +38,18 @@ class Website(models.Model):
         # Yield redirected pages not detected by super()
         for page in seo_redirections:
             yield {"loc": page}
+
+    @api.multi
+    def get_alternate_languages(self, req=None):
+        if req is None:
+            req = request.httprequest
+        langs = super(Website, self).get_alternate_languages(req)
+        for lang in langs:
+            href = lang["href"]
+            path = href.replace(req.url_root[0:-1], "")
+            redirection_record = self.env["website.seo.redirection"].search([
+                ("origin", "=", path),
+            ])
+            if redirection_record:
+                lang["href"] = req.url_root[0:-1] + redirection_record[0].destination
+        return langs
