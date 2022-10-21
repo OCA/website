@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Uses the gears of website_mail for the UI enhancements -->
+    <template id="follow">
+        <div
+            t-attf-class="input-group js_follow #{div_class}"
+            t-att-data-id="object.id"
+            t-att-data-object="object._name"
+            t-att-data-follow="object.id and object.message_is_follower and 'on' or 'off'"
+            t-att-data-unsubscribe="'unsubscribe' if 'unsubscribe' in request.params else None"
+        >
+            <t
+                t-set="user_public"
+                t-value="request.env.user.has_group('base.group_public')"
+            />
+            <div t-if="user_public">
+                <a class="btn btn-link" href="/web/login">
+                    <i class="fa fa-bell" /> Subscribe to forum notifications
+                </a>
+            </div>
+            <div
+                t-if="icons_design and not user_public"
+                class="js_follow_icons_container"
+            >
+                <button class="btn text-reset js_unfollow_btn">
+                    <div class="d-flex align-items-center">
+                        <small>Unsubscribe</small><i class="fa fa-fw ml-1" />
+                    </div>
+                </button>
+                <button class="btn text-reset js_follow_btn">
+                    <div class="d-flex align-items-center">
+                        <small>Subscribe</small><i class="fa fa-fw ml-1" />
+                    </div>
+                </button>
+            </div>
+            <div t-elif="not user_public">
+                <button href="#" t-attf-class="btn btn-link js_unfollow_btn">
+                    <i class="fa fa-bell-slash" /> Unsubscribe from forum notifications
+                </button>
+                <button href="#" t-attf-class="btn btn-link js_follow_btn">
+                    <i class="fa fa-bell" /> Subscribe to forum notifications
+                </button>
+            </div>
+        </div>
+    </template>
+    <template
+        id="forum_index"
+        name="Forum page subscription"
+        inherit_id="website_forum.forum_index"
+    >
+        <xpath expr="//div[hasclass('no-gutters')]/div" position="before">
+            <t t-call="website_forum_subscription.follow">
+                <t t-set="object" t-value="forum" />
+            </t>
+        </xpath>
+    </template>
+    <template
+        id="forum_all_all_entries"
+        name="Forum card subscription"
+        inherit_id="website_forum.forum_all_all_entries"
+    >
+        <xpath expr="//t[@t-call='website_forum.forum_post_options']" position="after">
+            <t t-call="website_forum_subscription.follow">
+                <t t-set="object" t-value="forum" />
+            </t>
+        </xpath>
+    </template>
+</odoo>
