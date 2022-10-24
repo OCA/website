@@ -9,7 +9,7 @@ from odoo.exceptions import AccessError, MissingError
 from odoo.fields import Date
 from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
 from odoo.exceptions import ValidationError
-from odoo.http import local_redirect, request, route
+from odoo.http import request, route
 from odoo.osv.expression import AND, OR
 
 
@@ -202,7 +202,7 @@ class ContactsCustomerPortal(CustomerPortal):
         values = self._contacts_clean_values(kwargs)
         _logger.debug("Creating contact with: %s", values)
         contact = Partner.sudo().create(values)
-        return local_redirect(redirect.format(contact.id))
+        return request.redirect_query(redirect.format(contact.id))
 
     @http.route("/my/contacts/<int:contact>", type="http", auth="public", website=True)
     def portal_my_contacts_read(self, contact=None, access_token=None, **kw):
@@ -237,7 +237,7 @@ class ContactsCustomerPortal(CustomerPortal):
         values = self._contacts_clean_values(kwargs)
         _logger.debug("Updating %r with: %s", contact, values)
         contact.write(values)
-        return local_redirect(redirect.format(contact.id))
+        return request.redirect_query(redirect.format(contact.id))
 
     @http.route("/my/contacts/<int:contact>/disable", auth="user", website=True)
     def portal_my_contacts_disable(self, contact, redirect="/my/contacts"):
@@ -245,4 +245,4 @@ class ContactsCustomerPortal(CustomerPortal):
         contact = request.env["res.partner"].browse(int(contact))
         _logger.debug("Disabling %r", contact)
         contact.sudo().active = False
-        return local_redirect(redirect)
+        return request.redirect_query(redirect)
