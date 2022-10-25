@@ -36,6 +36,8 @@ Following is a breakdown of the available attributes & their defaults:
 +====================+=============================================+===============+==========+
 | data-model         | Model name to query                         |               | True     |
 +--------------------+---------------------------------------------+---------------+----------+
+| data-field         | Field name in Model                         |               | False    |
++--------------------+---------------------------------------------+---------------+----------+
 | data-query-field   | Field to query when searching               | name          | False    |
 +--------------------+---------------------------------------------+---------------+----------+
 | data-display-field | Field to display                            | query-field   | False    |
@@ -75,6 +77,8 @@ Contributors
 ------------
 
 * Dave Lasley <dave@laslabs.com>
+* `Studio73 <https://www.studio73.es>`__:
+    * Miguel Gandia <miguel@studio73.es>
 
 Maintainer
 ----------
