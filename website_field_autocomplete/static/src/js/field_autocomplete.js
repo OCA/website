@@ -41,9 +41,20 @@ odoo.define("website_field_autocomplete.field_autocomplete", function (require) 
 
         /* Return arguments that are used to initialize autocomplete */
         autocompleteArgs: function () {
+            const self = this;
             return {
                 source: (request, response) => {
                     this.autocomplete(request, response);
+                },
+                focus: function (event, ui) {
+                    self.$target.val(ui.item.label);
+                    self.many2oneCompatibility(ui.item);
+                    return false;
+                },
+                select: function (event, ui) {
+                    self.$target.val(ui.item.label);
+                    self.many2oneCompatibility(ui.item);
+                    return false;
                 },
             };
         },
@@ -52,6 +63,7 @@ odoo.define("website_field_autocomplete.field_autocomplete", function (require) 
             this.model = this.$target.data("model");
             this.queryField = this.$target.data("query-field") || "name";
             this.displayField = this.$target.data("display-field") || this.queryField;
+            this.field = this.$target.data("field") || this.field;
             this.valueField = this.$target.data("value-field") || this.displayField;
             this.limit = this.$target.data("limit") || 10;
             this.add_domain = this.$target.data("domain");
@@ -61,6 +73,19 @@ odoo.define("website_field_autocomplete.field_autocomplete", function (require) 
             }
             this.$target.autocomplete(this.autocompleteArgs());
             return this._super(...arguments);
+        },
+
+        many2oneCompatibility: function (item) {
+            if (!this.field) return;
+            let formField = $(this.el.closest("form")).find(
+                `input[name='${this.field}']`
+            );
+            if (!formField.length) {
+                formField = $(this.el.closest("form")).append(
+                    `<input class="d-none" name='${this.field}' />`
+                );
+            }
+            formField.val(item.value);
         },
     });
 });
