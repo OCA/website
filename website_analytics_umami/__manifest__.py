@@ -5,6 +5,7 @@
     "name": "Umami analytics",
     "version": "16.0.1.0.0",
     "author": "Yigit Budak, Therp BV, Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
     "category": "Website",
     "summary": "Privacy-focused web analytics with Umami",

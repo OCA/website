@@ -67,8 +67,8 @@ msgstr "Umami Sunucusu"
 #. module: website_analytics_umami
 #: model:ir.model.fields,field_description:website_analytics_umami.field_res_config_settings__umami_script_name
 #: model:ir.model.fields,field_description:website_analytics_umami.field_website__umami_script_name
-msgid "Umami Script Name"
-msgstr "Umami Script Adı"
+msgid "Script Name"
+msgstr "Script Adı"
 
 #. module: website_analytics_umami
 #: model:ir.model.fields,field_description:website_analytics_umami.field_res_config_settings__umami_analytics_id

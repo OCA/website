@@ -2,4 +2,3 @@ This module allows to simply configure your odoo website for using Umami_ which 
 alternative to Google Analytics.
 
 .. _Umami: https://umami.is/
-

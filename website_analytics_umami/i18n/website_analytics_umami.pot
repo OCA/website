@@ -67,7 +67,7 @@ msgstr ""
 #. module: website_analytics_umami
 #: model:ir.model.fields,field_description:website_analytics_umami.field_res_config_settings__umami_script_name
 #: model:ir.model.fields,field_description:website_analytics_umami.field_website__umami_script_name
-msgid "Umami Script Name"
+msgid "Script Name"
 msgstr ""
 
 #. module: website_analytics_umami

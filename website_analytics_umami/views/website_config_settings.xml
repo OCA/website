@@ -48,9 +48,7 @@
                                     class="col-md-3 o_light_label"
                                     for="umami_script_name"
                                 />
-                                <field
-                                    name="umami_script_name"
-                                />
+                                <field name="umami_script_name" />
                             </div>
                         </div>
                     </div>

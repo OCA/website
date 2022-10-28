@@ -20,7 +20,7 @@ class Website(models.Model):
         "So http[s]://[this field]/umami.js should resolve to your umami.js",
     )
     umami_script_name = fields.Char(
-        "Umami Script Name",
+        "Script Name",
         help="The name of the script to load. Defaults to umami.js"
              " You can leave it as is unless you have a custom script",
         default="umami.js",

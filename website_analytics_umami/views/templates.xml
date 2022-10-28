@@ -2,12 +2,15 @@
 <odoo>
     <template id="layout" inherit_id="website.layout">
         <xpath expr="//div[@id='wrapwrap']" position="before">
-            <t t-if="website and website.has_umami_analytics and website.umami_analytics_host">
+            <t
+                t-if="website and website.has_umami_analytics and website.umami_analytics_host"
+            >
                 <script
                     async="1"
                     defer="defer"
                     t-attf-data-website-id="#{website.umami_analytics_id}"
-                    t-attf-src="#{website._get_umami_script_url()}"/>
+                    t-attf-src="#{website._get_umami_script_url()}"
+                />
             </t>
         </xpath>
     </template>
