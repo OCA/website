@@ -9,8 +9,7 @@ class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     has_umami_analytics = fields.Boolean(
-        "Umami Analytics", related="website_id.has_umami_analytics",
-        readonly=False
+        "Umami Analytics", related="website_id.has_umami_analytics", readonly=False
     )
     umami_analytics_id = fields.Char(
         related="website_id.umami_analytics_id", readonly=False

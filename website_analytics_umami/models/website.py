@@ -10,8 +10,7 @@ class Website(models.Model):
 
     has_umami_analytics = fields.Boolean("Umami Analytics")
     umami_analytics_id = fields.Char(
-        "Umami Website ID", help="The unique Umami ID uses to identify"
-                                 " the website"
+        "Umami Website ID", help="The unique Umami ID uses to identify the website"
     )
     umami_analytics_host = fields.Char(
         "Umami Host",
@@ -22,7 +21,7 @@ class Website(models.Model):
     umami_script_name = fields.Char(
         "Script Name",
         help="The name of the script to load. Defaults to umami.js"
-             " You can leave it as is unless you have a custom script",
+        " You can leave it as is unless you have a custom script",
         default="umami.js",
     )
 
