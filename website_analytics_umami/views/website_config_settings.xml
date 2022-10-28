@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_website_config_settings_umami" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="google_analytics_setting" position="after">
+                <div class="col-12 col-md-6 o_setting_box" id="umami_analytics_setting">
+                    <div class="o_setting_left_pane">
+                        <field name="has_umami_analytics" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="has_umami_analytics" />
+                        <div class="text-muted">
+                            Privacy-focused visitor analytics with Umami.
+                        </div>
+                        <div
+                            class="content-group"
+                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"
+                        >
+                            <div class="row mt16">
+                                <label
+                                    class="col-md-3 o_light_label"
+                                    for="umami_analytics_id"
+                                />
+                                <field name="umami_analytics_id" />
+                            </div>
+                        </div>
+                        <div
+                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"
+                        >
+                            <div class="row mt16">
+                                <label
+                                    class="col-md-3 o_light_label"
+                                    for="umami_analytics_host"
+                                />
+                                <field
+                                    name="umami_analytics_host"
+                                    placeholder="umami.is"
+                                />
+                            </div>
+                        </div>
+                        <div
+                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"
+                        >
+                            <div class="row mt16">
+                                <label
+                                    class="col-md-3 o_light_label"
+                                    for="umami_script_name"
+                                />
+                                <field name="umami_script_name" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>

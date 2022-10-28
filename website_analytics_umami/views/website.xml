@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_website_form" model="ir.ui.view">
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="umami_configuration" string="Umami Conf.">
+                    <group>
+                        <field name="has_umami_analytics" />
+                        <field
+                            name="umami_analytics_id"
+                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"
+                        />
+                        <field
+                            name="umami_analytics_host"
+                            placeholder="umami.is"
+                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"
+                        />
+                        <field
+                            name="umami_script_name"
+                            placeholder="umami.is"
+                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"
+                        />
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
