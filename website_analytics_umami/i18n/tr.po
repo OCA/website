@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_analytics_umami
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-28 12:58+0000\n"
+"PO-Revision-Date: 2022-10-28 12:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_analytics_umami
+#: model:ir.model,name:website_analytics_umami.model_res_config_settings
+msgid "Config Settings"
+msgstr "Yapılandırma Ayarları"
+
+#. module: website_analytics_umami
+#: model_terms:ir.ui.view,arch_db:website_analytics_umami.view_website_config_settings_umami
+msgid "Privacy-focused visitor analytics with Umami."
+msgstr "Umami ile gizlilik odaklı ziyaretçi analizi."
+
+#. module: website_analytics_umami
+#: model:ir.model.fields,help:website_analytics_umami.field_res_config_settings__umami_analytics_host
+#: model:ir.model.fields,help:website_analytics_umami.field_website__umami_analytics_host
+msgid ""
+"The host/path your Umami instance is accessible by on the internet. Do not include a protocol here!\n"
+"So http[s]://[this field]/umami.js should resolve to your umami.js"
+msgstr "Umami kurulumunuzun yapıldığı sunucu domaini. Bağlantı protokolünü (http/https) yazmayınız, örnek: example.org"
+
+#. module: website_analytics_umami
+#: model:ir.model.fields,help:website_analytics_umami.field_res_config_settings__umami_script_name
+#: model:ir.model.fields,help:website_analytics_umami.field_website__umami_script_name
+msgid ""
+"The name of the script to load. Defaults to umami.js You can leave it as is "
+"unless you have a custom script"
+msgstr "Umami scriptinin adı. Varsayılan olarak umami.js olarak ayarlanmıştır. Özel bir script kullanıyorsanız değiştirebilirsiniz."
+
+#. module: website_analytics_umami
+#: model:ir.model.fields,help:website_analytics_umami.field_res_config_settings__umami_analytics_id
+#: model:ir.model.fields,help:website_analytics_umami.field_website__umami_analytics_id
+msgid "The unique Umami ID uses to identify the website"
+msgstr "Websiteniz için kullanılacak Umami ID'si"
+
+#. module: website_analytics_umami
+#: model:ir.model.fields,field_description:website_analytics_umami.field_res_config_settings__has_umami_analytics
+#: model:ir.model.fields,field_description:website_analytics_umami.field_website__has_umami_analytics
+msgid "Umami Analytics"
+msgstr "Umami Analitik"
+
+#. module: website_analytics_umami
+#: model_terms:ir.ui.view,arch_db:website_analytics_umami.view_website_form
+msgid "Umami Conf."
+msgstr "Umami Ayarları"
+
+#. module: website_analytics_umami
+#: model:ir.model.fields,field_description:website_analytics_umami.field_res_config_settings__umami_analytics_host
+#: model:ir.model.fields,field_description:website_analytics_umami.field_website__umami_analytics_host
+msgid "Umami Host"
+msgstr "Umami Sunucusu"
+
+#. module: website_analytics_umami
+#: model:ir.model.fields,field_description:website_analytics_umami.field_res_config_settings__umami_script_name
+#: model:ir.model.fields,field_description:website_analytics_umami.field_website__umami_script_name
+msgid "Umami Script Name"
+msgstr "Umami Script Adı"
+
+#. module: website_analytics_umami
+#: model:ir.model.fields,field_description:website_analytics_umami.field_res_config_settings__umami_analytics_id
+#: model:ir.model.fields,field_description:website_analytics_umami.field_website__umami_analytics_id
+msgid "Umami Website ID"
+msgstr "Umami Web Sitesi ID'si"
+
+#. module: website_analytics_umami
+#: model:ir.model,name:website_analytics_umami.model_website
+msgid "Website"
+msgstr "Websitesi"
+
+#. module: website_analytics_umami
+#: model_terms:ir.ui.view,arch_db:website_analytics_umami.view_website_config_settings_umami
+#: model_terms:ir.ui.view,arch_db:website_analytics_umami.view_website_form
+msgid "umami.is"
+msgstr "umami.is"
