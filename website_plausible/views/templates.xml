@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="layout" inherit_id="website.layout">
+        <xpath expr="//div[@id='wrapwrap']" position="after">
+            <t t-if="website and website.plausible_shared_key and not editable">
+                <script
+                    id="plausible_script"
+                    name="plausible"
+                    defer="defer"
+                    t-att-data-domain="website.plausible_site"
+                    t-att-src="website._get_plausible_script_url()"
+                />
+            </t>
+        </xpath>
+    </template>
+</odoo>
