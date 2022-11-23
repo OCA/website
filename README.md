@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [website_legal_page](website_legal_page/) | 14.0.1.0.0 |  | Website Legal Page
 [website_menu_by_user_status](website_menu_by_user_status/) | 14.0.1.0.0 |  | Allow to manage the display of website.menus
 [website_odoo_debranding](website_odoo_debranding/) | 14.0.1.0.0 |  | Remove Odoo Branding from Website
+[website_plausible](website_plausible/) | 14.0.1.0.0 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Track website users using plausible
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 14.0.1.0.0 |  | Allow to select country in a dropdown
 
 [//]: # (end addons)
