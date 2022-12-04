@@ -17,60 +17,55 @@ SPDX-License-Identifier: AGPL-3.0-or-later
         <field name="inherit_id" ref="website.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <div id="google_maps_setting" position="after">
-                <div class="col-xs-12 col-md-6 o_setting_box" id="reCaptcha_setting">
+                <div class="col-12 col-lg-6 o_setting_box" id="recaptcha_setting">
                     <div class="o_setting_left_pane">
-                        <field name="has_google_recaptcha" />
+                        <field name="recaptcha_enabled" />
                     </div>
                     <div class="o_setting_right_pane">
                         <img
                             width="20px"
-                            alt="captcha"
+                            alt="reCAPTCHA icon"
                             class="mr-2"
-                            src="website_form_recaptcha/static/description/recaptcha_ico.png"
+                            src="website_recaptcha_v2/static/description/recaptcha_ico.png"
                         />
-                        <label for="has_google_recaptcha" string="reCaptcha" />
+                        <label string="reCAPTCHA" for="recaptcha_enabled" />
                         <span
                             class="fa fa-lg fa-globe"
                             title="Values set here are website-specific."
                             groups="website.group_multi_website"
                         />
-                        <div class="text-muted mt8">
-                            Protect your forms using reCaptcha control.
+                        <div class="text-muted">
+                            Protect your forms using reCAPTCHA
                         </div>
                         <div
                             class="content-group"
-                            attrs="{'invisible': [('has_google_recaptcha', '=', False)]}"
+                            attrs="{'invisible': [('recaptcha_enabled', '=', False)]}"
                         >
                             <div class="row mt16">
                                 <label
-                                    class="col-lg-5 o_light_label"
                                     for="recaptcha_key_site"
+                                    class="col-md-3 o_light_label"
                                 />
-                                <field name="recaptcha_key_site" placeholder="XXXXX" />
-                                <label
-                                    class="col-lg-5 o_light_label"
-                                    for="recaptcha_key_secret"
-                                />
-                                <field
-                                    name="recaptcha_key_secret"
-                                    placeholder="XXXXX"
-                                />
+                                <field name="recaptcha_key_site" />
                             </div>
-                        </div>
-
-                        <div
-                            attrs="{'invisible': [('has_google_recaptcha', '=', False)]}"
-                            class="mt8"
-                        >
-                            <a
-                                role="button"
-                                class="btn-link"
-                                target="_blank"
-                                href="http://www.google.com/recaptcha/admin"
-                            >
-                                <i class="fa fa-arrow-right" />
-                                How to get my reCaptcha Key
-                            </a>
+                            <div class="row">
+                                <label
+                                    for="recaptcha_key_secret"
+                                    class="col-md-3 o_light_label"
+                                />
+                                <field name="recaptcha_key_secret" />
+                            </div>
+                            <div class="mt8">
+                                <a
+                                    role="button"
+                                    class="btn-link"
+                                    target="_blank"
+                                    href="https://www.google.com/recaptcha/admin"
+                                >
+                                    <i class="fa fa-arrow-right" />
+                                    Get reCAPTCHA keys
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
