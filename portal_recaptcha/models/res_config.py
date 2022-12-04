@@ -7,9 +7,15 @@ from odoo import fields, models
 class PortalConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
+    recaptcha_enabled = fields.Boolean(
+        "Enable Google reCAPTCHA",
+        config_parameter="portal_recaptcha.recaptcha_enabled",
+    )
     recaptcha_key_site = fields.Char(
-        config_parameter="portal_recaptcha.recaptcha_key_site"
+        "Site Key",
+        config_parameter="portal_recaptcha.recaptcha_key_site",
     )
     recaptcha_key_secret = fields.Char(
-        config_parameter="portal_recaptcha.recaptcha_key_secret"
+        "Secret Key",
+        config_parameter="portal_recaptcha.recaptcha_key_secret",
     )

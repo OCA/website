@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2022 Coop IT Easy SC
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
 <odoo>
-    <data>
+    <template
+        id="assets_editor_recaptcha"
+        name="Google reCAPTCHA"
+        inherit_id="portal.frontend_layout"
+    >
+        <xpath expr="//main" position="inside">
+            <script src="https://www.google.com/recaptcha/api.js" />
+        </xpath>
+    </template>
 
-        <template
-            id="assets_editor_recaptcha"
-            name="GoogleRecaptcha"
-            inherit_id="portal.frontend_layout"
-        >
-            <xpath expr="//main" position="inside">
-                <script src="https://www.google.com/recaptcha/api.js" />
-            </xpath>
-        </template>
-    </data>
+    <template id="recaptcha_widget" name="reCAPTCHA widget">
+        <div
+            class="g-recaptcha"
+            t-if="request.env['ir.config_parameter'].sudo().get_param('portal_recaptcha.recaptcha_enabled')"
+            t-att-data-sitekey="request.env['ir.config_parameter'].sudo().get_param('portal_recaptcha.recaptcha_key_site')"
+        />
+    </template>
 </odoo>
