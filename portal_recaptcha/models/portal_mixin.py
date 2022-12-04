@@ -4,7 +4,6 @@
 import requests
 
 from odoo import _, api, models
-from odoo.exceptions import ValidationError
 
 URL = "https://www.google.com/recaptcha/api/siteverify"
 
@@ -24,9 +23,32 @@ class PortalMixin(models.AbstractModel):
         }
         return mapping.get(errorcode, _("There was a problem with the captcha entry."))
 
-    def is_captcha_valid(self, response):
+    def is_captcha_valid(self, form_values):
+        """
+        Checks whether the CAPTCHA has been correctly solved.
+
+        form_values must be a dictionary containing the form values.
+
+        Returns a (bool, str) tuple. The first element tells whether the
+        CAPTCHA is valid or not. The second is the error message when
+        applicable (or an empty string).
+
+        If reCAPTCHA is disabled in the settings, this method behaves as if
+        the CAPTCHA was correctly solved, but without doing any check.
+        """
+        response = form_values.get("g-recaptcha-response")
+        if (
+            not self.env["ir.config_parameter"]
+            .sudo()
+            .get_param("portal_recaptcha.recaptcha_enabled")
+        ):
+            return (True, "")
+        if not response:
+            return (False, _("No response given."))
         recaptcha_key_secret = (
-            self.env["ir.config_parameter"].sudo().get_param("recaptcha_key_secret")
+            self.env["ir.config_parameter"]
+            .sudo()
+            .get_param("portal_recaptcha.recaptcha_key_secret")
         )
         get_res = {"secret": recaptcha_key_secret, "response": response}
 
@@ -36,8 +58,8 @@ class PortalMixin(models.AbstractModel):
             self._get_error_message(error) for error in res.get("error-codes", [])
         )
         if error_msg:
-            raise ValidationError(error_msg)
+            return (False, error_msg)
 
         if not res.get("success"):
-            raise ValidationError(self._get_error_message())
-        return True
+            return (False, self._get_error_message())
+        return (True, "")
