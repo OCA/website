@@ -1,6 +1,8 @@
-This modules allows you to integrate Google reCAPTCHA v2.0 to your website
-forms. You can configure your Google reCAPTCHA site and public keys
-in "Settings" -> "Website Settings"
+This module allows to use reCAPTCHA v2 on website forms.
 
-You will need to install various website_<module>_recaptcha modules
-to use it in your pages.
+It is a helper module that only provides the widget and the validation logic
+which can be used by other modules to actually display it on website forms and
+check whether the user entry is valid.
+
+This module originally comes from ``website_recaptcha_reloaded`` from Tech
+Receptives, which itself comes from ``website_recaptcha`` from Elico Corp.

@@ -16,7 +16,12 @@
     ),
     "license": "AGPL-3",
     "website": "https://github.com/OCA/website",
-    "summary": "Add google recaptcha to forms.",
-    "data": ["views/website_view.xml", "views/res_config.xml"],
-    "installable": True,
+    "summary": "Helper module to add reCAPTCHA v2 to website forms",
+    "data": [
+        "views/res_config_settings_view.xml",
+        "views/website_templates.xml",
+    ],
+    "demo": [
+        "demo/demo.xml",
+    ],
 }

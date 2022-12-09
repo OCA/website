@@ -9,7 +9,7 @@
 from odoo import fields, models
 
 
-class WebsiteConfigSettings(models.TransientModel):
+class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     recaptcha_enabled = fields.Boolean(
