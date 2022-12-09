@@ -8,11 +8,7 @@
             <xpath expr="//div[@name='integration']" position="after">
                 <h2>Portal reCAPTCHA</h2>
                 <div class="row o_settings_container mt16">
-                    <div
-                        class="col-12 col-lg-6 o_setting_box"
-                        id="reCaptcha_setting"
-                        title="Enable reCAPTCHA."
-                    >
+                    <div class="col-12 col-lg-6 o_setting_box">
                         <div class="o_setting_left_pane">
                             <field name="recaptcha_enabled" />
                         </div>

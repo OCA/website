@@ -1,5 +1,8 @@
-This module is a cut-down version of the website_form_recaptcha OCA module.
+This module is a cut-down version of the ``website_form_recaptcha`` OCA
+module.
 
-It allows you to integrate Google reCAPTCHA v2.0 to your
-forms. You can configure your Google reCAPTCHA site and public keys
-in "Settings"
+This is a helper module which only provides the widget and the validation
+logic which can be used by other modules to integrate reCAPTCHA v2 to portal
+forms.
+
+reCAPTCHA keys are configured in General Settings.
