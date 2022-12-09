@@ -13,4 +13,7 @@
         "views/portal_mixin.xml",
         "views/res_config.xml",
     ],
+    "demo": [
+        "demo/demo.xml",
+    ],
 }

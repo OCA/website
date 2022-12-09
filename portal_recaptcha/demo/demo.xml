@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2022 Coop IT Easy SC
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="recaptcha_enabled_demo" model="ir.config_parameter">
+        <field name="key">portal_recaptcha.recaptcha_enabled</field>
+        <field name="value">True</field>
+    </record>
+    <!--
+        reCAPTCHA test keys from https://developers.google.com/recaptcha/docs/faq
+    -->
+    <record id="recaptcha_key_site_demo" model="ir.config_parameter">
+        <field name="key">portal_recaptcha.recaptcha_key_site</field>
+        <field name="value">6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI</field>
+    </record>
+    <record id="recaptcha_key_secret_demo" model="ir.config_parameter">
+        <field name="key">portal_recaptcha.recaptcha_key_secret</field>
+        <field name="value">6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe</field>
+    </record>
+</odoo>

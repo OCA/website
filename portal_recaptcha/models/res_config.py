@@ -8,7 +8,7 @@ class PortalConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     recaptcha_enabled = fields.Boolean(
-        "Enable Google reCAPTCHA",
+        "Enable reCAPTCHA",
         config_parameter="portal_recaptcha.recaptcha_enabled",
     )
     recaptcha_key_site = fields.Char(
