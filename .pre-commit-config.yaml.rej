@@ -1,0 +1,26 @@
+diff a/.pre-commit-config.yaml b/.pre-commit-config.yaml	(rejected hunks)
+@@ -116,3 +115,3 @@ repos:
+           - "# generated from manifests external_dependencies"
+-  - repo: https://gitlab.com/PyCQA/flake8
++  - repo: https://github.com/PyCQA/flake8
+     rev: 3.9.2
+@@ -122,6 +121,6 @@ repos:
+         additional_dependencies: ["flake8-bugbear==21.9.2"]
+-  - repo: https://github.com/PyCQA/pylint
+-    rev: v2.11.1
++  - repo: https://github.com/OCA/pylint-odoo
++    rev: 7.0.2
+     hooks:
+-      - id: pylint
++      - id: pylint_odoo
+         name: pylint with optional checks
+@@ -131,5 +130,3 @@ repos:
+         verbose: true
+-        additional_dependencies: &pylint_deps
+-          - pylint-odoo==5.0.5
+-      - id: pylint
++      - id: pylint_odoo
+         name: pylint with mandatory checks
+@@ -137,2 +134 @@ repos:
+           - --rcfile=.pylintrc-mandatory
+-        additional_dependencies: *pylint_deps
