@@ -35,7 +35,7 @@ class ResConfigSettings(models.TransientModel):
                         "auth", ""
                     )
                     config.plausible_site = url.path.split("/")[-1]
-                except Exception:  # noqa
+                except Exception:  # pylint: disable=W7938
                     pass
 
     @api.depends("website_id")
