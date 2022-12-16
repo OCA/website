@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <odoo>
     <!-- Add add crawler configuration parameter -->
-    <record id="set_ribbon_color" model="ir.config_parameter">
-        <field name="key">webiste.crawler.disable</field>
+    <record id="set_crawler_disable" model="ir.config_parameter">
+        <field name="key">website.crawler.disable</field>
         <field name="value">True</field>
     </record>
 </odoo>
