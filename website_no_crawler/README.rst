@@ -16,8 +16,14 @@ Alter robots.txt disallow indexing
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github
     :target: https://github.com/OCA/website/tree/14.0/website_no_crawler
     :alt: OCA/website
+.. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
+    :target: https://translation.odoo-community.org/projects/website-14-0/website-14-0-website_no_crawler
+    :alt: Translate me on Weblate
+.. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
+    :target: https://runbot.odoo-community.org/runbot/186/14.0
+    :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| 
+|badge1| |badge2| |badge3| |badge4| |badge5| 
 
 By default, /robots.txt on an Odoo installation with website module installed will allow indexing by webcrawlers.
 
