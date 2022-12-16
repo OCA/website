@@ -15,6 +15,7 @@ setuptools.setup(
         'odoo14-addon-website_google_tag_manager',
         'odoo14-addon-website_legal_page',
         'odoo14-addon-website_menu_by_user_status',
+        'odoo14-addon-website_no_crawler',
         'odoo14-addon-website_odoo_debranding',
         'odoo14-addon-website_plausible',
         'odoo14-addon-website_snippet_country_dropdown',
