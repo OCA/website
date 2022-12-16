@@ -11,7 +11,7 @@ class Website(Website):
         disable = (
             request.env["ir.config_parameter"]
             .sudo()
-            .get_param("webiste.crawler.disable", False)
+            .get_param("website.crawler.disable", False)
         )
 
         return request.render(
