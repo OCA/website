@@ -14,6 +14,7 @@ setuptools.setup(
         'odoo-addon-website_google_tag_manager>=15.0dev,<15.1dev',
         'odoo-addon-website_legal_page>=15.0dev,<15.1dev',
         'odoo-addon-website_odoo_debranding>=15.0dev,<15.1dev',
+        'odoo-addon-website_plausible>=15.0dev,<15.1dev',
         'odoo-addon-website_snippet_country_dropdown>=15.0dev,<15.1dev',
     ],
     classifiers=[
