@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [website_google_tag_manager](website_google_tag_manager/) | 15.0.2.0.0 |  | Add support for Google Tag Manager
 [website_legal_page](website_legal_page/) | 15.0.1.0.1 |  | Website Legal Page
 [website_odoo_debranding](website_odoo_debranding/) | 15.0.1.0.1 |  | Remove Odoo Branding from Website
+[website_plausible](website_plausible/) | 15.0.1.0.0 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Track website users using plausible
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 15.0.1.0.0 |  | Allow to select country in a dropdown
 
 [//]: # (end addons)
