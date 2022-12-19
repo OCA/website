@@ -37,12 +37,6 @@ msgid "Container ID"
 msgstr "ID du conteneur"
 
 #. module: website_google_tag_manager
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_website__display_name
-msgid "Display Name"
-msgstr ""
-
-#. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "GTM-XXXXX"
 msgstr "GTM-XXXXX"
@@ -56,18 +50,6 @@ msgstr "Gestionnaire Google Tag"
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "How to get my GTM container ID"
 msgstr "Comment obtenir mon ID de conteneur GTM"
-
-#. module: website_google_tag_manager
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings__id
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_website__id
-msgid "ID"
-msgstr ""
-
-#. module: website_google_tag_manager
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings____last_update
-#: model:ir.model.fields,field_description:website_google_tag_manager.field_website____last_update
-msgid "Last Modified on"
-msgstr ""
 
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
