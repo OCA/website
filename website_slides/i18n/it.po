@@ -10,15 +10,16 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2016-11-25 14:57+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"PO-Revision-Date: 2022-12-30 11:51+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_shared
@@ -1447,7 +1448,7 @@ msgstr "Sito"
 #: field:slide.channel,website_message_ids:0
 #: field:slide.slide,website_message_ids:0
 msgid "Website Messages"
-msgstr "Messaggi del sito web"
+msgstr "Messaggi sito web"
 
 #. module: website_slides
 #: view:website.config.settings:website_slides.view_website_config_settings
