@@ -3,4 +3,5 @@
     * Antonio González <antonio@trey.es>
 
 * `Tecnativa <https://www.tecnativa.com/>`__:
-  * Jairo Llopis
+    * Jairo Llopis
+    * Stefan Ungureanu
