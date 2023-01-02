@@ -9,10 +9,14 @@ class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
     cookiebot_dgid = fields.Char(
-        string="Domain Group ID", related="website_id.cookiebot_dgid", readonly=False,
+        string="Domain Group ID",
+        related="website_id.cookiebot_dgid",
+        readonly=False,
     )
     cookiebot_enabled = fields.Boolean(
-        string="Cookiebot", compute="_compute_cookiebot_enabled", readonly=False,
+        string="Cookiebot",
+        compute="_compute_cookiebot_enabled",
+        readonly=False,
     )
 
     @api.depends("website_id.cookiebot_dgid")
