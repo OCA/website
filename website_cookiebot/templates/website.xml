@@ -2,12 +2,12 @@
 <!-- Copyright 2021 Tecnativa - Jairo Llopis
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <data>
-    <template id="layout_footer_copyright" inherit_id="web.frontend_layout">
+    <template id="layout_footer_copyright" inherit_id="website.footer_custom">
         <xpath
-            expr="//footer//div/span[@t-field='res_company.name']/.."
-            position="inside"
+            expr="//footer//div/span[hasclass('o_footer_copyright_name')]"
+            position="after"
         >
-            <span t-if="website.cookiebot_dgid">- <a
+                <span t-if="website.cookiebot_dgid">- <a
                     href="/legal/cookies-policy"
                 >Cookies Policy</a></span>
         </xpath>
