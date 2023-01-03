@@ -23,7 +23,7 @@ Website Whatsapp
     :target: https://runbot.odoo-community.org/runbot/186/15.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5|
+|badge1| |badge2| |badge3| |badge4| |badge5| 
 
 Enable a WhatsApp floating button on the website to be able to send a message quickly
 
@@ -77,6 +77,14 @@ This module is maintained by the OCA.
 OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
+
+.. |maintainer-ioans73| image:: https://github.com/ioans73.png?size=40px
+    :target: https://github.com/ioans73
+    :alt: ioans73
+
+Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+
+|maintainer-ioans73| 
 
 This module is part of the `OCA/website <https://github.com/OCA/website/tree/15.0/website_whatsapp>`_ project on GitHub.
 
