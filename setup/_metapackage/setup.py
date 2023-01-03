@@ -16,6 +16,7 @@ setuptools.setup(
         'odoo-addon-website_odoo_debranding>=15.0dev,<15.1dev',
         'odoo-addon-website_plausible>=15.0dev,<15.1dev',
         'odoo-addon-website_snippet_country_dropdown>=15.0dev,<15.1dev',
+        'odoo-addon-website_whatsapp>=15.0dev,<15.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
