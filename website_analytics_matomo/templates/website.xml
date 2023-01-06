@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2020 Onestein (<https://www.onestein.nl>)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <template id="website_layout" inherit_id="website.layout">
+        <xpath expr="//head/script[1]" position="before">
+
+            <!-- Matomo Analytic script -->
+            <t
+                t-if="website and website.has_matomo_analytics and website.matomo_analytics_host"
+            >
+                <script type="text/javascript">
+                    <t t-raw="website._matomo_track_page_script()" />
+                </script>
+                <!-- End Matomo Analytic script -->
+            </t>
+
+        </xpath>
+    </template>
+
+</odoo>
