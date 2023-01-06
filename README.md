@@ -21,6 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[website_cookiebot](website_cookiebot/) | 15.0.1.0.0 |  | Ask for cookies consent connecting with Cookiebot
 [website_cookiefirst](website_cookiefirst/) | 15.0.1.0.0 |  | Cookiefirst integration
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 15.0.1.0.0 |  | Website CRM privacy policy
 [website_crm_quick_answer](website_crm_quick_answer/) | 15.0.1.0.1 |  | Add an automatic answer for contacts asking for info
