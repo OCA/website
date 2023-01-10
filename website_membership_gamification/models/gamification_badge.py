@@ -8,5 +8,6 @@ class GamificationBadge(models.Model):
     _inherit = "gamification.badge"
 
     badge_url = fields.Char(string="Badge URL")
+    website_member_published = fields.Boolean(string="Published in member directory")
     new_tab_url = fields.Boolean(string="Open URL in new tab")
     website_expiration_date = fields.Date(string="Website Expiration Date")

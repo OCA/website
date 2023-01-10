@@ -9,6 +9,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='rule_max_number']" position="after">
                 <field name="badge_url" widget="url" />
+                <field name="website_member_published" />
                 <field name="new_tab_url" />
                 <field name="website_expiration_date" />
             </xpath>

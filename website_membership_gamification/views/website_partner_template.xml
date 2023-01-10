@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2022 Manuel Regidor <manuel.regidor@sygel.es>
+     Copyright 2023 Tecnativa - Pedro M. Baeza
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
+    <template id="index" inherit_id="website_membership.index">
+        <xpath
+            expr="//div[@t-field='partner.website_short_description']"
+            position="after"
+        >
+            <t
+                t-foreach="partner.gamification_badge_ids.badge_id.filtered(lambda a: a.website_member_published and (not a.website_expiration_date or a.website_expiration_date >= datetime.date.today()))"
+                t-as="badge"
+            >
+                <t t-if="badge.badge_url">
+                    <a
+                        t-att-href="badge.badge_url"
+                        t-att-target="'_blank' if badge.new_tab_url else '_self'"
+                        style="text-decoration: none;"
+                        t-field="badge.image_128"
+                        t-options="{'widget': 'image', 'style': 'max-width: 80px'}"
+                    />
+                </t>
+                <t t-else="">
+                    <span
+                        t-field="badge.image_128"
+                        t-options="{'widget': 'image', 'style': 'max-width: 80px'}"
+                    />
+                </t>
+            </t>
+        </xpath>
+    </template>
     <template
         id="website_membership_gamification_partner_detail"
         inherit_id="website_partner.partner_detail"
@@ -9,7 +37,7 @@
         <xpath expr="//address" position="after">
             <div class="text-center" t-if="partner.gamification_badge_ids">
                 <t
-                    t-foreach="partner.gamification_badge_ids.mapped('badge_id').filtered(lambda a: not a.website_expiration_date or a.website_expiration_date >= datetime.date.today())"
+                    t-foreach="partner.gamification_badge_ids.badge_id.filtered(lambda a: a.website_member_published and (not a.website_expiration_date or a.website_expiration_date >= datetime.date.today()))"
                     t-as="badge"
                 >
                     <t t-if="badge.badge_url">
@@ -17,17 +45,14 @@
                             t-att-href="badge.badge_url"
                             t-att-target="'_blank' if badge.new_tab_url else '_self'"
                             style="text-decoration: none;"
-                        >
-                            <img
-                                style="max-width:150px;"
-                                t-att-src="image_data_uri(badge.image_1920)"
-                            />
-                        </a>
+                            t-field="badge.image_128"
+                            t-options="{'widget': 'image', 'style': 'max-width: 128px'}"
+                        />
                     </t>
                     <t t-else="">
-                        <img
-                            style="max-width:150px;"
-                            t-att-src="image_data_uri(badge.image_1920)"
+                        <span
+                            t-field="badge.image_128"
+                            t-options="{'widget': 'image', 'style': 'max-width: 128px'}"
                         />
                     </t>
                 </t>
