@@ -20,13 +20,13 @@
                             Home
                         </t>
                         <t t-if="not step_first and step.url">
-                            <t t-esc="step.name_get()[0][1]" />
+                            <t t-out="step.name_get()[0][1]" />
                         </t>
                     </a>
                 </li>
             </t>
             <!-- Current -->
-            <li class="breadcrumb-item active" t-esc="bc_item.name_get()[0][1]" />
+            <li class="breadcrumb-item active" t-out="bc_item.name_get()[0][1]" />
         </ol>
     </template>
 </odoo>
