@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_website_auth_url" model="ir.actions.act_window">
+        <field name="name">Authorization required URLs</field>
+        <field name="res_model">website.auth.url</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="website_auth_url_tree_view" />
+        <field name="target">current</field>
+    </record>
+
+</odoo>
