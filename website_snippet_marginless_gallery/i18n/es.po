@@ -21,7 +21,7 @@ msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.tour.js:18
+#: code:addons/website_snippet_marginless_gallery/static/src/tests/tours/website_snippet_marginless_gallery.js:0
 #, python-format
 msgid "<b>Click Edit</b> to start designing your homepage."
 msgstr "<b>Clica Editar</b> para empezar a diseñar tu página de entrada."
@@ -33,7 +33,7 @@ msgstr "<b>Nuestra Galería</b>"
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.tour.js:23
+#: code:addons/website_snippet_marginless_gallery/static/src/tests/tours/website_snippet_marginless_gallery.js:0
 #, python-format
 msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
 msgstr "Arrastra<i>Galería sin márgenes</i> y suéltala en la página."

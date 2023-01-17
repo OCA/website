@@ -19,10 +19,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: website_snippet_marginless_gallery
+#. openerp-web
+#: code:addons/website_snippet_marginless_gallery/static/src/tests/tours/website_snippet_marginless_gallery.js:0
+#, python-format
+msgid "<b>Click Edit</b> to start designing your homepage."
+msgstr ""
+
+#. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 #, fuzzy
 msgid "<b>Our Gallery</b>"
 msgstr "Unsere Gallerie"
+
+#. module: website_snippet_marginless_gallery
+#. openerp-web
+#: code:addons/website_snippet_marginless_gallery/static/src/tests/tours/website_snippet_marginless_gallery.js:0
+#, python-format
+msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
+msgstr ""
 
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery

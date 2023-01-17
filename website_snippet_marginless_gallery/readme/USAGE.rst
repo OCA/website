@@ -1,7 +1,7 @@
 To use this module, you need to:
 
 * Edit any page in your website.
-* Go to **Insert blocks > Features**.
+* Go to **Blocks > Features**.
 * Drag the **Marginless Gallery** snippet anywhere in your page.
 
 To change images, you need to:

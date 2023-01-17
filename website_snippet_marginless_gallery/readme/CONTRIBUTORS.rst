@@ -2,3 +2,4 @@
 
   * Jairo Llopis
   * Cristina Martin R.
+  * Pilar Vargas

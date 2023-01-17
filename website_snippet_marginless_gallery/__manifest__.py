@@ -4,7 +4,7 @@
 {
     "name": "Marginless Gallery Snippet",
     "summary": "Add a snippet to have a marginless image gallery",
-    "version": "13.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Website",
     "license": "LGPL-3",
     "website": "https://github.com/OCA/website",
@@ -15,5 +15,10 @@
     "installable": True,
     "images": ["images/marginless_gallery.png"],
     "depends": ["website"],
-    "data": ["views/assets.xml", "views/snippets.xml"],
+    "data": ["views/snippets.xml"],
+    "assets": {
+        "web.assets_tests": [
+            "/website_snippet_marginless_gallery/static/src/tests/tours/*.js"
+        ]
+    },
 }
