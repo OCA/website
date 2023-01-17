@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2015-2016 Jairo Llopis <jairo.llopis@tecnativa.com>
+     Copyright 2019 Tecnativa - Cristina Martin R.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+    <template id="s_big_button" name="Big Buttons">
+        <section class="oe_snippet_body big-buttons">
+            <div class="container">
+                <div class="row mt16 mb16">
+                    <div class="text-center col-sm-6 offset-lg-2 col-lg-4 pb8">
+                        <a
+                            href="/contactus"
+                            class="btn btn-success btn-lg font-weight-bold"
+                        >
+                            <span class="h3 d-block">I want this</span>
+                            <i class="fa fa-thumbs-o-up fa-5x mt16 mb16" />
+                            <span class="d-block">Request budget</span>
+                        </a>
+                    </div>
+                    <div class="text-center col-sm-6 col-lg-4 pb8">
+                        <a href="/" class="btn btn-danger btn-lg font-weight-bold">
+                            <span class="h3 d-block">I want another thing</span>
+                            <i class="fa fa-thumbs-o-down fa-5x mt16 mb16" />
+                            <span class="d-block">Continue searching</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]">
+            <t
+                t-snippet="website_snippet_big_button.s_big_button"
+                t-thumbnail="/website_snippet_big_button/static/description/icon.png"
+            />
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,21 @@
+// Copyright 2015-2019 Jairo Llopis <jairo.llopis@tecnativa.com>
+// Copyright 2019 Tecnativa - Cristina Martin R.
+// License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+
+.big-buttons {
+    .btn {
+        white-space: normal;
+    }
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        > .d-block {
+            white-space: normal;
+        }
+    }
+}
