@@ -4,8 +4,10 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
 
 import odoo.tests
+from odoo.tests import tagged
 
 
+@tagged("post_install", "-at_install")
 class TestUi(odoo.tests.HttpCase):
     def test_admin_tour_marginless_gallery(self):
         self.start_tour("/", "marginless_gallery", login="admin")
