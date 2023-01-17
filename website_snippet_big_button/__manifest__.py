@@ -5,7 +5,7 @@
 {
     "name": "Big Buttons Snippet",
     "summary": "A snippet that adds two big buttons",
-    "version": "13.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Grupo ESOC Ingeniería de Servicios, S.L.U., "
@@ -15,5 +15,10 @@
     "application": False,
     "installable": True,
     "depends": ["website"],
-    "data": ["templates/assets.xml", "templates/snippets.xml"],
+    "data": ["templates/snippets.xml"],
+    "assets": {
+        "web.assets_frontend": [
+            "/website_snippet_big_button/static/src/scss/website_snippet_big_button.scss"
+        ]
+    },
 }
