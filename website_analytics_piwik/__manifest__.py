@@ -3,7 +3,7 @@
 
 {
     "name": "Piwik analytics",
-    "version": "11.0.1.0.0",
+    "version": "12.0.1.0.0",
     "author": "Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
@@ -12,8 +12,7 @@
         "website",
     ],
     "data": [
-        "views/website_config_settings.xml",
-        "views/website.xml",
+        "views/res_config_settings.xml",
         "views/templates.xml",
     ],
     "installable": True,
