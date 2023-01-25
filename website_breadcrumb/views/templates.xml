@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2015 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
+     Copyright 2019 Tecnativa - Cristina Martin R.
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html). -->
+<odoo>
+    <template id="breadcrumb" name="Breadcrumb snippet">
+        <!-- Know if current page is in a menu item -->
+        <t
+            t-set="bc_item"
+            t-value="request.env['website.menu']
+                .search([('url', '=', request.httprequest.path)], limit=1)"
+        />
+        <!-- If so, create the breadcrumbs -->
+        <ol t-if="bc_item" class="breadcrumb">
+            <!-- Parents -->
+            <t t-foreach="bc_item.get_parents(True)" t-as="step">
+                <li class="breadcrumb-item" t-if="step.url or step_first">
+                    <a t-att-href="step.url or (step_first and '/')">
+                        <t t-if="step_first and not step.url">
+                            Home
+                        </t>
+                        <t t-if="not step_first and step.url">
+                            <t t-out="step.name_get()[0][1]" />
+                        </t>
+                    </a>
+                </li>
+            </t>
+            <!-- Current -->
+            <li class="breadcrumb-item active" t-out="bc_item.name_get()[0][1]" />
+        </ol>
+    </template>
+</odoo>
