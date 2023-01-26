@@ -33,7 +33,6 @@ msgstr "Impostazioni configurazione"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.cookies
-#: model_terms:website.page,arch_db:website_cookiefirst.cookies_page
 msgid "Cookie Declaration"
 msgstr "Dichiarazione cookie"
 
@@ -44,7 +43,7 @@ msgid "Cookiefirst ID"
 msgstr "ID Cookiefirst"
 
 #. module: website_cookiefirst
-#: model_terms:ir.ui.view,arch_db:website_cookiefirst.footer_custom
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.footer_copyright_company_name
 msgid "Cookies Policy"
 msgstr "Politica dei cookie"
 
@@ -52,7 +51,8 @@ msgstr "Politica dei cookie"
 #: model:ir.model.fields,help:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
 #: model:ir.model.fields,help:website_cookiefirst.field_website__cookiefirst_identifier
 msgid "This field holds the ID, needed for Cookiefirst functionality."
-msgstr "Questo campo memorizza l'ID, richiesto per la funzionalità Cookiefirst."
+msgstr ""
+"Questo campo memorizza l'ID, richiesto per la funzionalità Cookiefirst."
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
