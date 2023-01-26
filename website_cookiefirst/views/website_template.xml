@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="footer_custom" inherit_id="website.footer_custom">
-        <xpath
-            expr="//footer//div/span[hasclass('o_footer_copyright_name')]"
-            position="after"
-        >
+    <template
+        id="footer_copyright_company_name"
+        inherit_id="website.footer_copyright_company_name"
+    >
+        <xpath expr="//span[hasclass('o_footer_copyright_name')]" position="after">
             <span>-
                 <a href="/legal/cookies-policy">Cookies Policy</a>
             </span>
