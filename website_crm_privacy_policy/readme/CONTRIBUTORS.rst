@@ -9,3 +9,7 @@
   * Alexandre Díaz
 
 * Bjorn Billen <bjorn.billen@dynapps.be>
+
+* `Studio73 <https://www.studio73.es>`_:
+
+  * Miguel Gandia
