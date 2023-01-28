@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Snippets menu -->
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath
+            expr="//div[@id='snippet_content']//t[@t-snippet='website.s_share']"
+            position="after"
+        >
+            <t
+                t-snippet="website_snippet_dynamic_link.s_dynamic_link"
+                t-thumbnail="/website_snippet_dynamic_link/static/src/img/snippets_thumbs/s_dynamic_link.svg"
+            />
+        </xpath>
+    </template>
+
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@id='so_text_align']" position="attributes">
+            <attribute name="data-selector" separator="," add=".s_dynamic_link" />
+        </xpath>
+        <xpath
+            expr="//*[@t-set='so_content_addition_selector']"
+            position="inside"
+        >, .s_dynamic_link</xpath>
+        <xpath expr="//div[@data-js='WebsiteAnimate']" position="attributes">
+            <attribute name="data-exclude" separator="," add=".dynamic_link_item" />
+        </xpath>
+    </template>
+
+    <template id="web_editor_snippet_options" inherit_id="web_editor.snippet_options">
+        <xpath
+            expr="//div[@data-selector='img' and not(@data-js='ImageOptimize')]"
+            position="attributes"
+        >
+            <attribute name="data-exclude" separator="," add=".dynamic_link_item" />
+        </xpath>
+        <xpath
+            expr="//div[@data-selector='img' and @data-js='ImageOptimize']"
+            position="attributes"
+        >
+            <attribute name="data-exclude" separator="," add=".dynamic_link_item" />
+        </xpath>
+        <xpath
+            expr="//div[@data-selector='img' and @data-js='ImageTools']"
+            position="attributes"
+        >
+            <attribute name="data-exclude" separator="," add=".dynamic_link_item" />
+        </xpath>
+        <xpath
+            expr="//div[@data-selector='img' and @data-js='DynamicSvg']"
+            position="attributes"
+        >
+            <attribute name="data-exclude" separator="," add=".dynamic_link_item" />
+        </xpath>
+        <xpath expr="//div[@data-selector='span.fa, i.fa, img']" position="attributes">
+            <attribute name="data-exclude" separator="," add=".dynamic_link_item" />
+        </xpath>
+        <xpath expr="//div[@data-js='ReplaceMedia']" position="attributes">
+            <attribute name="data-exclude" separator="," add=".dynamic_link_item" />
+        </xpath>
+    </template>
+
+</odoo>
