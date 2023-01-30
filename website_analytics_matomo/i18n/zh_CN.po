@@ -19,32 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: website_analytics_matomo
-#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings_has_matomo_analytics
-#: model:ir.model.fields,field_description:website_analytics_matomo.field_website_has_matomo_analytics
+#: model:ir.model,name:website_analytics_matomo.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__id
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__id
+msgid "ID"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__has_matomo_analytics
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__has_matomo_analytics
 msgid "Matomo Analytics"
 msgstr ""
 
 #. module: website_analytics_matomo
-#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings_matomo_analytics_host
-#: model:ir.model.fields,field_description:website_analytics_matomo.field_website_matomo_analytics_host
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_analytics_host
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_analytics_host
 msgid "Matomo host"
 msgstr ""
 
 #. module: website_analytics_matomo
-#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings_matomo_analytics_id
-#: model:ir.model.fields,field_description:website_analytics_matomo.field_website_matomo_analytics_id
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_analytics_id
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_analytics_id
 msgid "Matomo website ID"
 msgstr ""
 
 #. module: website_analytics_matomo
-#: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings_matomo_analytics_id
-#: model:ir.model.fields,help:website_analytics_matomo.field_website_matomo_analytics_id
+#: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings__matomo_analytics_id
+#: model:ir.model.fields,help:website_analytics_matomo.field_website__matomo_analytics_id
 msgid "The ID Matomo uses to identify the website"
 msgstr ""
 
 #. module: website_analytics_matomo
-#: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings_matomo_analytics_host
-#: model:ir.model.fields,help:website_analytics_matomo.field_website_matomo_analytics_host
+#: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings__matomo_analytics_host
+#: model:ir.model.fields,help:website_analytics_matomo.field_website__matomo_analytics_host
 msgid ""
 "The host/path your Matomo installation is accessible by on the internet. Do "
 "not include a protocol here!\n"
@@ -52,7 +75,7 @@ msgid ""
 msgstr ""
 
 #. module: website_analytics_matomo
-#: model:ir.ui.view,arch_db:website_analytics_matomo.view_website_config_settings
+#: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
 msgid "Track visits in Matomo Analytics"
 msgstr ""
 
@@ -62,12 +85,6 @@ msgid "Website"
 msgstr "网站"
 
 #. module: website_analytics_matomo
-#: model:ir.ui.view,arch_db:website_analytics_matomo.view_website_config_settings
-#: model:ir.ui.view,arch_db:website_analytics_matomo.view_website_form
+#: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
 msgid "host.name/matomo"
-msgstr ""
-
-#. module: website_analytics_matomo
-#: model:ir.model,name:website_analytics_matomo.model_res_config_settings
-msgid "res.config.settings"
 msgstr ""
