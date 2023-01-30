@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-website Odoo addons",
     version=version,
     install_requires=[
+        'odoo14-addon-website_analytics_matomo',
         'odoo14-addon-website_cookiefirst',
         'odoo14-addon-website_crm_privacy_policy',
         'odoo14-addon-website_crm_quick_answer',
