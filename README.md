@@ -21,6 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[website_analytics_matomo](website_analytics_matomo/) | 14.0.1.0.0 |  | Track website users using matomo
 [website_cookiefirst](website_cookiefirst/) | 14.0.1.0.0 |  | Cookiefirst integration
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 14.0.1.0.0 |  | Website CRM privacy policy
 [website_crm_quick_answer](website_crm_quick_answer/) | 14.0.1.1.0 |  | Add an automatic answer for contacts asking for info
