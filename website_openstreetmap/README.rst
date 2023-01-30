@@ -1,5 +1,0 @@
-=====================
-Website Openstreetmap
-=====================
-
-Website Openstreetmap

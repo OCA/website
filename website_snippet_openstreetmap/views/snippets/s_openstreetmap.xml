@@ -105,7 +105,7 @@
     <field name="bundle">web.assets_frontend</field>
     <field
             name="path"
-        >website_openstreetmap/static/src/snippets/s_openstreetmap/000.scss</field>
+        >website_snippet_openstreetmap/static/src/snippets/s_openstreetmap/000.scss</field>
 </record>
 
 <record id="s_openstreetmap_000_js" model="ir.asset">
@@ -113,7 +113,7 @@
     <field name="bundle">web.assets_frontend</field>
     <field
             name="path"
-        >website_openstreetmap/static/src/snippets/s_openstreetmap/000.js</field>
+        >website_snippet_openstreetmap/static/src/snippets/s_openstreetmap/000.js</field>
 </record>
 
 </odoo>

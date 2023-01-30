@@ -1,4 +1,4 @@
-odoo.define("website_openstreetmap.utils", function () {
+odoo.define("website_snippet_openstreetmap.utils", function () {
     "use strict";
 
     function generateOpenStreetMapLink(coordinates, dataset) {

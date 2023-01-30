@@ -1,9 +1,9 @@
-odoo.define("website_openstreetmap.s_openstreetmap", function (require) {
+odoo.define("website_snippet_openstreetmap.s_openstreetmap", function (require) {
     "use strict";
 
     const publicWidget = require("web.public.widget");
     const generateOpenStreetMapLink =
-        require("website_openstreetmap.utils").generateOpenStreetMapLink;
+        require("website_snippet_openstreetmap.utils").generateOpenStreetMapLink;
 
     const OpenStreetMapWidget = publicWidget.Widget.extend({
         selector: ".s_openstreetmap",
