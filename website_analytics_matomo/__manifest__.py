@@ -3,8 +3,8 @@
 
 {
     "name": "Matomo analytics",
-    "version": "14.0.1.0.0",
-    "author": "Therp BV,Odoo Community Association (OCA)",
+    "version": "15.0.1.0.0",
+    "author": "Onestein,Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
     "summary": "Track website users using matomo",
