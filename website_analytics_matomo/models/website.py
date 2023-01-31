@@ -47,6 +47,7 @@ class Website(models.Model):
             host_url = host_url.rstrip("/")  # Remove potential trailing slash
             website.matomo_analytics_host_url = host_url
 
+    @api.depends_context("uid")
     @api.depends("matomo_analytics_host", "matomo_enable_userid")
     def _compute_matomo_userid(self):
         """Gets the unique user ID of the current user. Here we assume that user ID
@@ -61,6 +62,6 @@ class Website(models.Model):
             lambda w: w.matomo_analytics_host and w.matomo_enable_userid
         ):
             if self.env.user != website.user_id:  # current user is logged in
-                website.matomo_get_userid = self.env.user.login
+                website.matomo_get_userid = str(self.env.user.id)
             else:
                 website.matomo_get_userid = ""

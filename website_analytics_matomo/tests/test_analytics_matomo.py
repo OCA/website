@@ -67,7 +67,7 @@ class TestWebsiteAnalyticsMatomo(common.HttpCase):
 
         self.website.matomo_enable_userid = True
         self.assertTrue(self.website.matomo_get_userid)
-        self.assertEqual(self.website.matomo_get_userid, self.env.user.login)
+        self.assertEqual(self.website.matomo_get_userid, str(self.env.user.id))
         self.assertNotEqual(self.website.matomo_get_userid, self.website.user_id.login)
 
         self.website.matomo_analytics_host = ""

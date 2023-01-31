@@ -15,8 +15,8 @@ Matomo includes a User ID feature for enhanced tracking on those websites that o
 By tracking the User ID (unique identifier), it is possible to connect visitors between visits across multiple dates
 and devices.
 
-To enable this feature, set `Enable User ID`: Matomo will track the user's `login` (model `res.users`).
-If you want to use a different field, eg: user name or id, you need to override method `compute_matomo_userid()`.
+To enable this feature, set `Enable User ID`: Matomo will track the user's `ID` (model `res.users`).
+If you want to use a different field, eg: user's `name` or `login`, you need to override method `compute_matomo_userid()`.
 
 Enable a Heartbeat timer
 ~~~~~~~~~~~~~~~~~~~~~~~~
