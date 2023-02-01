@@ -1,0 +1,201 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_snippet_dynamic_link
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.snippet_options
+msgid ", .s_dynamic_link"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "1x"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "2x"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "3x"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "4x"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "5x"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__active
+msgid "Active"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link
+msgid "Dynamic Link"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.actions.act_window,name:website_snippet_dynamic_link.website_dynamic_link_action
+#: model:ir.ui.menu,name:website_snippet_dynamic_link.website_dynamic_link_menu
+msgid "Dynamic Links"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.website_dynamic_link_view_search
+msgid "Group By"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__id
+msgid "ID"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.website_dynamic_link_view_form
+msgid "Item"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Layout"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Left"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__icon
+msgid "Logo"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.website_dynamic_link_view_search
+msgid "My Field 1"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.website_dynamic_link_view_search
+msgid "My Field 2"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.website_dynamic_link_view_search
+msgid "My Field n"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__name
+msgid "Name"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "None"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Shadow"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Shape: Circle"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Shape: Rounded"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Shape: Thumbnail"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Size"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Size: 1x"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Title Position"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.s_dynamic_link_options
+msgid "Top"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__url
+msgid "Url"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model.fields,field_description:website_snippet_dynamic_link.field_website_dynamic_link__website_id
+#: model_terms:ir.ui.view,arch_db:website_snippet_dynamic_link.website_dynamic_link_view_search
+msgid "Website"
+msgstr ""
+
+#. module: website_snippet_dynamic_link
+#: model:ir.model,name:website_snippet_dynamic_link.model_website_dynamic_link
+msgid "Website Dynamic Link"
+msgstr ""
