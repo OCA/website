@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="s_dynamic_link" name="Dynamic Link">
+        <div t-attf-class="s_dynamic_link text-left #{_classes}">
+            <h4
+                t-if="not _no_title"
+                class="s_dynamic_link_title d-none"
+            >Dynamic Link</h4>
+            <div class="s_dynamic_link_container" contenteditable="false" />
+        </div>
+    </template>
+
+    <template id="s_dynamic_link_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-selector=".s_dynamic_link">
+                <we-select
+                    string="Title Position"
+                    data-apply-to=".s_dynamic_link_title"
+                >
+                    <we-button data-select-class="d-block">Top</we-button>
+                    <we-button data-select-class="">Left</we-button>
+                    <we-button data-select-class="d-none">None</we-button>
+                </we-select>
+
+                <we-button-group
+                    string="Layout"
+                    data-attribute-name="optionImageLayout"
+                >
+                    <we-button
+                        class="o_we_user_value_widget fa fa-fw fa-square"
+                        title="Shape: Rounded"
+                        data-select-data-attribute="optionRounded"
+                    />
+                    <we-button
+                        class="o_we_user_value_widget fa fa-fw fa-circle-o"
+                        title="Shape: Circle"
+                        data-select-data-attribute="optionCircle"
+                    />
+                    <we-button
+                        class="o_we_user_value_widget fa fa-fw fa-sun-o"
+                        title="Shadow"
+                        data-select-data-attribute="optionShadow"
+                    />
+                    <we-button
+                        class="o_we_user_value_widget fa fa-fw fa-picture-o"
+                        title="Shape: Thumbnail"
+                        data-select-data-attribute="optionThumbnail"
+                    />
+                </we-button-group>
+
+                <we-button-group string="Size" data-attribute-name="optionImageSize">
+                    <we-button
+                        class="o_we_user_value_widget active"
+                        title="Size: 1x"
+                        data-select-data-attribute="option1"
+                    >
+                        <div>1x</div>
+                    </we-button>
+                    <we-button
+                        class="o_we_user_value_widget active"
+                        title="Size: 1x"
+                        data-select-data-attribute="option2"
+                    >
+                        <div>2x</div>
+                    </we-button>
+                    <we-button
+                        class="o_we_user_value_widget active"
+                        title="Size: 1x"
+                        data-select-data-attribute="option3"
+                    >
+                        <div>3x</div>
+                    </we-button>
+                    <we-button
+                        class="o_we_user_value_widget active"
+                        title="Size: 1x"
+                        data-select-data-attribute="option4"
+                    >
+                        <div>4x</div>
+                    </we-button>
+                    <we-button
+                        class="o_we_user_value_widget active"
+                        title="Size: 1x"
+                        data-select-data-attribute="option5"
+                    >
+                        <div>5x</div>
+                    </we-button>
+                </we-button-group>
+            </div>
+        </xpath>
+    </template>
+
+    <record id="s_dynamic_link_000_scss" model="ir.asset">
+        <field name="name">Dynamic Link 000 SCSS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field
+            name="path"
+        >website_snippet_dynamic_link/static/src/snippets/s_dynamic_link/000.scss</field>
+    </record>
+
+    <record id="s_dynamic_link_000_js" model="ir.asset">
+        <field name="name">Dynamic Link 000 JS</field>
+        <field name="bundle">web.assets_frontend</field>
+        <field
+            name="path"
+        >website_snippet_dynamic_link/static/src/snippets/s_dynamic_link/000.js</field>
+    </record>
+
+</odoo>

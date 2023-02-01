@@ -1,0 +1,31 @@
+.s_dynamic_link {
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .s_dynamic_link_title {
+        margin: 0 0.4rem 0 0;
+    }
+    a {
+        img.img-1x {
+            height: 3rem;
+            width: 3rem;
+        }
+        img.img-2x {
+            height: 5rem;
+            width: 5rem;
+        }
+        img.img-3x {
+            height: 6rem;
+            width: 6rem;
+        }
+        img.img-4x {
+            height: 7rem;
+            width: 7rem;
+        }
+        img.img-5x {
+            height: 8rem;
+            width: 8rem;
+        }
+    }
+}

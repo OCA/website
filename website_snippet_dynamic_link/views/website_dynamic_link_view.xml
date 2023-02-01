@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="website_dynamic_link_view_tree" model="ir.ui.view">
+        <field name="model">website.dynamic.link</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="url" />
+                <field name="website_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="website_dynamic_link_view_form" model="ir.ui.view">
+        <field name="model">website.dynamic.link</field>
+        <field name="arch" type="xml">
+            <form string="Item">
+                <header />
+                <sheet>
+                    <div class="oe_button_box" name="button_box" />
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="url" />
+                            <field name="website_id" />
+                        </group>
+                        <group>
+                            <field
+                                name="icon"
+                                widget="image"
+                                options="{'size':[0,90]}"
+                            />
+                        </group>
+                    </group>
+                    <notebook />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="website_dynamic_link_view_search" model="ir.ui.view">
+        <field name="model">website.dynamic.link</field>
+        <field name="arch" type="xml">
+            <search>
+                <!-- List of search fields -->
+                <field name="name" string="My Field 1" />
+                <field name="url" string="My Field 2" />
+                <field name="website_id" string="My Field n" />
+                <separator />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Website"
+                        name="website_id"
+                        domain="[]"
+                        context="{'group_by': 'website_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="website_dynamic_link_action" model="ir.actions.act_window">
+        <field name="name">Dynamic Links</field>
+        <field name="res_model">website.dynamic.link</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

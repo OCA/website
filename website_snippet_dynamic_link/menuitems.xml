@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem
+        id="website_dynamic_link_menu"
+        name="Dynamic Links"
+        action="website_dynamic_link_action"
+        parent="website.menu_website_global_configuration"
+        sequence="46"
+        groups="base.group_user"
+    />
+
+</odoo>

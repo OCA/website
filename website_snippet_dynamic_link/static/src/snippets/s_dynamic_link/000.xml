@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="website_snippet_dynamic_link.s_dynamic_link.dynamic_link_item">
+        <a
+            contenteditable="false"
+            t-att-href="dynamic_link_url"
+            t-att-title="dynamic_link_name"
+            target="_blank"
+        >
+            <img
+                contenteditable="false"
+                t-att-src="dynamic_link_image"
+                t-attf-class="dynamic_link_item  #{option_classes or ''}"
+            />
+        </a>
+    </t>
+</templates>
