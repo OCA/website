@@ -15,6 +15,9 @@
         "views/snippets/s_openstreetmap.xml",
         "views/snippets/snippets.xml",
     ],
+    "demo": [
+        "demo/res_partner_demo.xml",
+    ],
     "assets": {
         "website.assets_wysiwyg": [
             ("include", "web._assets_helpers"),

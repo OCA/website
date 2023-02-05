@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="base.main_partner" model="res.partner">
+        <field name="street">250 Executive Park Blvd 3400</field>
+    </record>
+</odoo>
