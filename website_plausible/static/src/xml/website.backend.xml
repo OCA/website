@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="website.dashboard_content" t-inherit="website.dashboard_content">
+        <xpath expr="//t[@t-call='website.google_analytics_content']" position="after">
+            <t t-call="plausible.plausible_content" />
+        </xpath>
+    </t>
+
+    <t t-name="plausible.plausible_content">
+        <div class="row o_dashboard_visits" t-if="widget.groups.website_designer">
+            <div t-if="widget.dashboards_data.plausible_share_url" class="col-12">
+                <div class="container">
+                    <div class="embed-responsive-1by1">
+                        <iframe
+                            t-att-src='widget.dashboards_data.plausible_share_url'
+                            class="embed-responsive-item"
+                            frameborder="0"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div t-else="" class="col-lg-12 o_box">
+                <h2>Analytics</h2>
+                <div class="o_demo_background">
+                    <div class="o_layer">
+                    </div>
+                    <div class="o_buttons text-center">
+                        <h3>Easily track your visitor with Plausible</h3>
+                        <a
+                            class="btn btn-primary"
+                            target="_blank"
+                            href="https://www.odoo.com/documentation/16.0/applications/websites/website/optimize/plausible.html"
+                        >
+                            Connect Plausible
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>
