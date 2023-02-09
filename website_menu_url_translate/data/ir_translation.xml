@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!--    Enable Language -->
+    <record id="base.lang_de" model="res.lang">
+        <field name="active" eval="True" />
+    </record>
+
+    <record id="lang_change_test_1" model="ir.translation">
+        <field name="name">Testing</field>
+        <field name="src">Testing</field>
+        <field name="value">testen</field>
+        <field name="lang">de_DE</field>
+        <field name="state">translated</field>
+        <field name="module">website_menu_url_translate</field>
+    </record>
+
+    <record id="lang_change_test_2" model="ir.translation">
+        <field name="name">testen</field>
+        <field name="src">testen</field>
+        <field name="lang">en_US</field>
+        <field name="state">translated</field>
+        <field name="module">website_menu_url_translate</field>
+    </record>
+
+    <record id="lang_change_test_3" model="ir.translation">
+        <field name="name">Testing-3</field>
+        <field name="src">Testing-3</field>
+        <field name="value" />
+        <field name="lang">en_US</field>
+        <field name="state">translated</field>
+        <field name="module">website_menu_url_translate</field>
+    </record>
+
+    <record id="lang_change_test_4" model="ir.translation">
+        <field name="name">Testing-3</field>
+        <field name="src">Testing-3</field>
+        <field name="value">Testing-3</field>
+        <field name="lang">de_DE</field>
+        <field name="state">translated</field>
+        <field name="module">website_menu_url_translate</field>
+    </record>
+
+</odoo>
