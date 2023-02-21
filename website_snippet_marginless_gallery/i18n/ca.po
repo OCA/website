@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_snippet_marginless_gallery
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2021-02-17 18:45+0000\n"
+"Last-Translator: claudiagn <claudia.gargallo@qubiq.es>\n"
+"Language-Team: none\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: website_snippet_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+msgid "<b>Our Gallery</b>"
+msgstr "<b> La nostra galeria </b>"
+
+#. module: website_snippet_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+msgid "Lorem ipsum"
+msgstr "Lorem ipsum"
+
+#. module: website_snippet_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
+
+#~ msgid "<b>Click Edit</b> to start designing your homepage."
+#~ msgstr ""
+#~ "<b> Feu clic a Edita </b> per començar a dissenyar la vostra pàgina "
+#~ "d'inici."
+
+#~ msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
+#~ msgstr ""
+#~ "Arrossegueu <i> Galeria sense marge </i> i deixeu-lo anar a la pàgina."

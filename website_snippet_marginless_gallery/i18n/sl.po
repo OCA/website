@@ -1,0 +1,65 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_marginless_gallery
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-13 00:49+0000\n"
+"PO-Revision-Date: 2017-10-13 00:49+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3);\n"
+
+#. module: website_snippet_marginless_gallery
+#. openerp-web
+#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.tour.js:18
+#, python-format
+msgid "<b>Click Edit</b> to start designing your homepage."
+msgstr ""
+
+#. module: website_snippet_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+#, fuzzy
+msgid "<b>Our Gallery</b>"
+msgstr "Naša galerija"
+
+#. module: website_snippet_marginless_gallery
+#. openerp-web
+#: code:addons/website_snippet_marginless_gallery/static/src/js/website_snippet_marginless_gallery.tour.js:23
+#, python-format
+msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
+msgstr ""
+
+#. module: website_snippet_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+msgid "Lorem ipsum"
+msgstr "Lorem ipsum"
+
+#. module: website_snippet_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+#, fuzzy
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna."
+
+#~ msgid "Change Images Height"
+#~ msgstr "Spremeni višino slik"
+
+#~ msgid "Do not trim images"
+#~ msgstr "Ne obrezuj slik"
+
+#~ msgid "Height for all images in gallery"
+#~ msgstr "Višina za vse slike v galeriji"
+
+#~ msgid "Image height in pixels"
+#~ msgstr "Višina slik v pikslih"
