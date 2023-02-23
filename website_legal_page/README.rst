@@ -38,10 +38,10 @@ Usage
 
 Website editor can change easily any text of these pages using website builder.
 
-If you install this module after 'website_sale', it will be merge the content
-of 'website_sale.terms' into a new page.
+This legal page is complementary to the account terms.
 
-This module hard-redirect '/shop/terms' to '/legal'.
+If you install this module with account installed too, the added page will take on a
+complementary function to /terms of account, but never replace the function of the page.
 
 
 Disclaimer
@@ -102,6 +102,7 @@ Contributors
   * Rafael Blasco
   * Jairo Llopis
   * Alexandre Diaz
+  * Carlos Roca
 
 Other credits
 ~~~~~~~~~~~~~

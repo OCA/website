@@ -52,13 +52,6 @@ msgid "Governing Law &amp;amp; Jurisdiction"
 msgstr ""
 
 #. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
-msgid ""
-"I accept the legal terms, the privacy policy &amp; conditions of this "
-"website."
-msgstr ""
-
-#. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
