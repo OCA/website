@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="rule_website_security_config_todo" model="ir.rule">
+        <field name="name">rule_website_security_config_todo</field>
+        <field name="model_id" ref="base.model_ir_actions_todo" />
+        <field
+            name="groups"
+            eval="[(4, ref('website_security.group_website_security_config'))]"
+        />
+        <field name="domain_force">[('name', '=', 'Start Website Configurator')]</field>
+    </record>
+</odoo>

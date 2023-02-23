@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        parent="website.menu_website_global_configuration"
+        action="action_website_config_settings"
+        groups="website_security.group_website_security_config"
+        sequence="0"
+        id="menu_website_config_settings"
+    />
+
+    <record model="ir.ui.menu" id="website.menu_website_global_configuration">
+        <field
+            name="groups_id"
+            eval="[(4,ref('website_security.group_website_security_config'))]"
+        />
+    </record>
+</odoo>

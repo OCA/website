@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="website_config_settings_form">
+        <field name="name">website_config_settings_form</field>
+        <field name="model">website.config.settings</field>
+        <field name="arch" type="xml">
+            <form
+                class="oe_form_configuration o_base_settings"
+                js_class="base_settings"
+            >
+                <div class="o_setting_container">
+                    <div class="settings" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_website_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">website.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+    </record>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="res.groups" id="group_website_security_config">
+        <field name="name">Full Access</field>
+        <field
+            name="implied_ids"
+            eval="[(6, 0, [ref('website.group_website_designer')])]"
+        />
+        <field name="category_id" ref="base.module_category_website_website" />
+    </record>
+</odoo>
