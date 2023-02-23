@@ -5,7 +5,7 @@
 {
     "name": "Website Legal Page",
     "category": "Website",
-    "version": "15.0.1.0.1",
+    "version": "15.0.2.0.0",
     "depends": ["website"],
     "data": [
         "views/website_legal_main_page.xml",
