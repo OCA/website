@@ -10,8 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
 "PO-Revision-Date: 2023-02-12 15:22+0000\n"
-"Last-Translator: Nils Coenen | NICO SOLUTIONS - ENGINEERING & IT <nils.coenen"
-"@nico-solutions.de>\n"
+"Last-Translator: Nils Coenen | NICO SOLUTIONS - ENGINEERING & IT <nils."
+"coenen@nico-solutions.de>\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -41,37 +41,6 @@ msgstr "<font style=\"font-size: 42px;\">Inhaltsverzeichnis</font>"
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"<strong>First party cookies</strong>&amp;nbsp;are cookies set by the "
-"website\n"
-"                you’re visiting. Only that website can read them. In "
-"addition, a\n"
-"                website might potentially use external services, which also "
-"set their\n"
-"                own cookies, known as <strong>third-party cookies.</strong>"
-msgstr ""
-"<strong>First party cookies</strong>&amp;nbsp;sind Cookies, die von der "
-"Website gesetzt werden\n"
-"                Du bist zu Besuch. Nur diese Website kann sie lesen. "
-"Außerdem verwendet die\n"
-"                Website möglicherweise externe Dienste, die auch ihre "
-"eigenen\n"
-"                Cookies setzen, bekannt als <strong>Drittanbeiter-"
-"Cookies.</strong>"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"A cookie is a small text file that a website stores on your computer or "
-"mobile device when you visit the site."
-msgstr ""
-"Ein Cookie ist eine kleine Textdatei, die eine Website auf Ihrem Computer "
-"oder Mobilgerät speichert, wenn Sie die Website besuchen."
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Assignment"
 msgstr "Zuweisung"
 
@@ -94,59 +63,8 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "Cookies Policy"
-msgstr "Cookie-Richtlinie"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"Cookies can also be used to establish anonymised statistics about the "
-"browsing experience on our sites."
-msgstr ""
-"Cookies können auch verwendet werden, um anonymisierte Statistiken über das "
-"Surferlebnis auf unseren Seiten zu erstellen."
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"Every time you visit our websites, you will be prompted to <strong>accept "
-"cookies.</strong>"
-msgstr ""
-"Bei jedem Besuch unserer Websites werden Sie aufgefordert, <strong>Cookies "
-"zu akzeptieren.</strong>"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Governing Law &amp;amp; Jurisdiction"
 msgstr "Geltendes Recht &amp;amp; Zuständigkeit"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "How do we use cookies?"
-msgstr "Wie verwenden wir Cookies?"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"However, to view some of our pages, you will have to accept cookies from "
-"external organisations. &amp;nbsp;"
-msgstr ""
-"Um jedoch einige unserer Seiten anzuzeigen, müssen Sie Cookies von externen "
-"Organisationen akzeptieren. &amp;nbsp;"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
-msgid ""
-"I accept the legal terms, the privacy policy &amp; conditions of this "
-"website."
-msgstr ""
-"Ich akzeptiere die rechtlichen Bedingungen, die Datenschutzerklärung &amp; "
-"Bedingungen dieser Website."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -199,12 +117,12 @@ msgstr ""
 "dieser Website anzeigen möchten. Durch die Anzeige Ihrer Inhalte gewähren "
 "Sie **NAME DES UNTERNEHMENS** eine nicht exklusive, weltweite, "
 "unwiderrufliche, unterlizenzierbare Lizenz zur Nutzung, Vervielfältigung, "
-"Anpassung, Veröffentlichung, Übersetzung und Verbreitung in allen Medien. <"
-"br/>\n"
+"Anpassung, Veröffentlichung, Übersetzung und Verbreitung in allen Medien. "
+"<br/>\n"
 "                                        Ihre Inhalte müssen Ihre eigenen "
-"sein und dürfen nicht die Rechte Dritter verletzen. **NAME DES UNTERNEHMENS**"
-" behält sich das Recht vor, Ihre Inhalte jederzeit ohne Vorankündigung von "
-"dieser Website zu entfernen."
+"sein und dürfen nicht die Rechte Dritter verletzen. **NAME DES "
+"UNTERNEHMENS** behält sich das Recht vor, Ihre Inhalte jederzeit ohne "
+"Vorankündigung von dieser Website zu entfernen."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -262,22 +180,6 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"Persistent cookies&amp;nbsp;are cookies saved on your computer and that are\n"
-"                not deleted automatically when you quit your browser, unlike "
-"a&amp;nbsp;session\n"
-"                cookie,&amp;nbsp;which is deleted when you quit your browser."
-msgstr ""
-"Dauerhafte Cookies&amp;nbsp;sind Cookies, die auf Ihrem Computer gespeichert "
-"werden und \n"
-"                nicht automatisch gelöscht werden, wenn Sie Ihren Browser "
-"schließen, im Gegensatz zu einer Sitzung,\n"
-"                bei der das Cookie,&amp;nbsp;gelöscht wird, wenn Sie Ihren "
-"Browser schließen."
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Restrictions"
 msgstr "Einschränkungen"
 
@@ -301,16 +203,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
-"That way, you don’t have to re-enter them when browsing around the site "
-"during the same visit."
-msgstr ""
-"Auf diese Weise müssen Sie sie nicht erneut eingeben, wenn Sie während "
-"desselben Besuchs auf der Website surfen."
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
 "The **COMPANY NAME** is allowed to assign, transfer, and subcontract its "
 "rights and/or obligations under these Terms without any notification. "
 "However, you are not allowed to assign, transfer, or subcontract any of your "
@@ -321,23 +213,6 @@ msgstr ""
 "untervergeben. Es ist Ihnen jedoch nicht gestattet, Ihre Rechte und/oder "
 "Pflichten aus diesen Bedingungen abzutreten, zu übertragen oder "
 "weiterzuvergeben."
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "The <strong>3 types of first-party cookie</strong> we use are to:"
-msgstr ""
-"Die <strong>3 Arten von Erstanbieter-Cookies</strong> die wir verwenden sind:"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"The purpose is to enable the site to remember your preferences (such as user "
-"name, language, etc.) for a certain period of time."
-msgstr ""
-"Der Zweck besteht darin, der Website zu ermöglichen, sich Ihre Präferenzen ("
-"wie Benutzername, Sprache usw.) für einen bestimmten Zeitraum zu merken."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -389,8 +264,8 @@ msgid ""
 "Website or the materials contained on this Website. Also, nothing contained "
 "on this Website shall be interpreted as advising you."
 msgstr ""
-"Diese Website wird „wie besehen“ mit allen Fehlern bereitgestellt, und **"
-"NAME DES UNTERNEHMENS** gibt keinerlei Zusicherungen oder Gewährleistungen "
+"Diese Website wird „wie besehen“ mit allen Fehlern bereitgestellt, und "
+"**NAME DES UNTERNEHMENS** gibt keinerlei Zusicherungen oder Gewährleistungen "
 "jeglicher Art in Bezug auf diese Website oder die auf dieser Website "
 "enthaltenen Materialien ab. Auch ist nichts auf dieser Website als Beratung "
 "zu interpretieren."
@@ -398,25 +273,8 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"This websites mostly use “first-party cookies”. These are cookies set and "
-"controlled by us, not by any external organisation."
-msgstr ""
-"Diese Websites verwenden überwiegend „First-Party-Cookies“. Dies sind "
-"Cookies, die von uns gesetzt und kontrolliert werden, nicht von einer "
-"externen Organisation."
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Variation of Terms"
 msgstr "Änderung der Bedingungen"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "What are cookies?"
-msgstr "Was sind Cookies?"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -457,18 +315,6 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "gather analytics data (about user behaviour)"
-msgstr "Sammeln von Analysedaten (über das Nutzerverhalten)"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "make our websites operational"
-msgstr "um unsere Websites funktionsfähig zu machen"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publicly performing and/or showing any Website material;"
 msgstr "öffentliches Aufführen und/oder Zeigen von Website-Material;"
 
@@ -486,12 +332,6 @@ msgid ""
 msgstr ""
 "Verkauf, Unterlizenzierung und/oder anderweitige Kommerzialisierung von "
 "Website-Material;"
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "store visitor preferences"
-msgstr "Besucherpräferenzen speichern"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -526,6 +366,121 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "using this Website to engage in any advertising or marketing."
 msgstr "Nutzung dieser Website, um Werbung oder Marketing zu betreiben."
+
+#~ msgid ""
+#~ "<strong>First party cookies</strong>&amp;nbsp;are cookies set by the "
+#~ "website\n"
+#~ "                you’re visiting. Only that website can read them. In "
+#~ "addition, a\n"
+#~ "                website might potentially use external services, which "
+#~ "also set their\n"
+#~ "                own cookies, known as <strong>third-party cookies.</"
+#~ "strong>"
+#~ msgstr ""
+#~ "<strong>First party cookies</strong>&amp;nbsp;sind Cookies, die von der "
+#~ "Website gesetzt werden\n"
+#~ "                Du bist zu Besuch. Nur diese Website kann sie lesen. "
+#~ "Außerdem verwendet die\n"
+#~ "                Website möglicherweise externe Dienste, die auch ihre "
+#~ "eigenen\n"
+#~ "                Cookies setzen, bekannt als <strong>Drittanbeiter-Cookies."
+#~ "</strong>"
+
+#~ msgid ""
+#~ "A cookie is a small text file that a website stores on your computer or "
+#~ "mobile device when you visit the site."
+#~ msgstr ""
+#~ "Ein Cookie ist eine kleine Textdatei, die eine Website auf Ihrem Computer "
+#~ "oder Mobilgerät speichert, wenn Sie die Website besuchen."
+
+#~ msgid "Cookies Policy"
+#~ msgstr "Cookie-Richtlinie"
+
+#~ msgid ""
+#~ "Cookies can also be used to establish anonymised statistics about the "
+#~ "browsing experience on our sites."
+#~ msgstr ""
+#~ "Cookies können auch verwendet werden, um anonymisierte Statistiken über "
+#~ "das Surferlebnis auf unseren Seiten zu erstellen."
+
+#~ msgid ""
+#~ "Every time you visit our websites, you will be prompted to <strong>accept "
+#~ "cookies.</strong>"
+#~ msgstr ""
+#~ "Bei jedem Besuch unserer Websites werden Sie aufgefordert, "
+#~ "<strong>Cookies zu akzeptieren.</strong>"
+
+#~ msgid "How do we use cookies?"
+#~ msgstr "Wie verwenden wir Cookies?"
+
+#~ msgid ""
+#~ "However, to view some of our pages, you will have to accept cookies from "
+#~ "external organisations. &amp;nbsp;"
+#~ msgstr ""
+#~ "Um jedoch einige unserer Seiten anzuzeigen, müssen Sie Cookies von "
+#~ "externen Organisationen akzeptieren. &amp;nbsp;"
+
+#~ msgid ""
+#~ "I accept the legal terms, the privacy policy &amp; conditions of this "
+#~ "website."
+#~ msgstr ""
+#~ "Ich akzeptiere die rechtlichen Bedingungen, die Datenschutzerklärung "
+#~ "&amp; Bedingungen dieser Website."
+
+#~ msgid ""
+#~ "Persistent cookies&amp;nbsp;are cookies saved on your computer and that "
+#~ "are\n"
+#~ "                not deleted automatically when you quit your browser, "
+#~ "unlike a&amp;nbsp;session\n"
+#~ "                cookie,&amp;nbsp;which is deleted when you quit your "
+#~ "browser."
+#~ msgstr ""
+#~ "Dauerhafte Cookies&amp;nbsp;sind Cookies, die auf Ihrem Computer "
+#~ "gespeichert werden und \n"
+#~ "                nicht automatisch gelöscht werden, wenn Sie Ihren Browser "
+#~ "schließen, im Gegensatz zu einer Sitzung,\n"
+#~ "                bei der das Cookie,&amp;nbsp;gelöscht wird, wenn Sie "
+#~ "Ihren Browser schließen."
+
+#~ msgid ""
+#~ "That way, you don’t have to re-enter them when browsing around the site "
+#~ "during the same visit."
+#~ msgstr ""
+#~ "Auf diese Weise müssen Sie sie nicht erneut eingeben, wenn Sie während "
+#~ "desselben Besuchs auf der Website surfen."
+
+#~ msgid "The <strong>3 types of first-party cookie</strong> we use are to:"
+#~ msgstr ""
+#~ "Die <strong>3 Arten von Erstanbieter-Cookies</strong> die wir verwenden "
+#~ "sind:"
+
+#~ msgid ""
+#~ "The purpose is to enable the site to remember your preferences (such as "
+#~ "user name, language, etc.) for a certain period of time."
+#~ msgstr ""
+#~ "Der Zweck besteht darin, der Website zu ermöglichen, sich Ihre "
+#~ "Präferenzen (wie Benutzername, Sprache usw.) für einen bestimmten "
+#~ "Zeitraum zu merken."
+
+#~ msgid ""
+#~ "This websites mostly use “first-party cookies”. These are cookies set and "
+#~ "controlled by us, not by any external organisation."
+#~ msgstr ""
+#~ "Diese Websites verwenden überwiegend „First-Party-Cookies“. Dies sind "
+#~ "Cookies, die von uns gesetzt und kontrolliert werden, nicht von einer "
+#~ "externen Organisation."
+
+#~ msgid "What are cookies?"
+#~ msgstr "Was sind Cookies?"
+
+#~ msgid "gather analytics data (about user behaviour)"
+#~ msgstr "Sammeln von Analysedaten (über das Nutzerverhalten)"
+
+#~ msgid "make our websites operational"
+#~ msgstr "um unsere Websites funktionsfähig zu machen"
+
+#~ msgid "store visitor preferences"
+#~ msgstr "Besucherpräferenzen speichern"
 
 #~ msgid "(\"us\", \"we\", or \"our\") operates"
 #~ msgstr "(\"wir\", \"uns\" or \"unser\") betreibt die Website"
