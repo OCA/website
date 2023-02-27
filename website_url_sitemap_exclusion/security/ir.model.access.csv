@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_website_forbidden_url_all,Everyone can read forbidden URLs,model_website_forbidden_url,,1,0,0,0
+manage_website_forbidden_url_designer,Designers can manage forbidden URLs,model_website_forbidden_url,website.group_website_designer,1,1,1,1
