@@ -8,7 +8,7 @@
     "summary": "Allow to select country in a dropdown",
     "version": "12.0.1.2.0",
     "category": "Website",
-    "website": "http://www.tecnativa.com",
+    "website": "https://github.com/OCA/website",
     "author": "Tecnativa, "
               "Odoo Community Association (OCA)",
     "license": "LGPL-3",

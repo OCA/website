@@ -5,6 +5,8 @@
     "name": "Website Megamenu",
     "category": "Menu/Megamenu",
     "summary": "Adds support for mega menus",
+    "website": "https://github.com/OCA/website"
+               "/tree/12.0/website_megamenu",
     "version": "12.0.1.1.0",
     "license": "LGPL-3",
     "depends": ["website"],
