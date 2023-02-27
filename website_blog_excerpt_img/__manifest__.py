@@ -1,6 +1,6 @@
 # Copyright 2016 Grupo ESOC Ingeniería de Servicios, S.L.U. - Jairo Llopis
 # Copyright 2019 Tecnativa - Cristina Martin R.
-# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "Blog Post List Excerpt+Image Layout",
     "summary": "New layout for blog posts list, "
@@ -10,7 +10,7 @@
     "website": "https://github.com/OCA/website",
     "author": "Odoo Community Association (OCA), "
               "Tecnativa",
-    "license": "LGPL-3",
+    "license": "AGPL-3",
     "application": False,
     "installable": True,
     "images": [
