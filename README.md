@@ -21,6 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[website_analytics_matomo](website_analytics_matomo/) | 15.0.1.0.0 |  | Track website users using matomo
 [website_breadcrumb](website_breadcrumb/) | 15.0.1.0.0 |  | Let you have breadcrumbs in website pages
 [website_cookiebot](website_cookiebot/) | 15.0.1.0.0 |  | Ask for cookies consent connecting with Cookiebot
 [website_cookiefirst](website_cookiefirst/) | 15.0.1.0.0 |  | Cookiefirst integration
