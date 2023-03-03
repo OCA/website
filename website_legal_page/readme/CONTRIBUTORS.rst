@@ -12,3 +12,7 @@
   * Jairo Llopis
   * Alexandre Diaz
   * Carlos Roca
+
+* `Studio73 <https://www.studio73.es>`_:
+
+  * Miguel Gandia
