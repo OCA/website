@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo-addon-website_google_tag_manager>=16.0dev,<16.1dev',
+        'odoo-addon-website_legal_page>=16.0dev,<16.1dev',
         'odoo-addon-website_odoo_debranding>=16.0dev,<16.1dev',
     ],
     classifiers=[
