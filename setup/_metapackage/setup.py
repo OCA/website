@@ -19,6 +19,7 @@ setuptools.setup(
         'odoo14-addon-website_no_crawler',
         'odoo14-addon-website_odoo_debranding',
         'odoo14-addon-website_plausible',
+        'odoo14-addon-website_require_login',
         'odoo14-addon-website_snippet_country_dropdown',
     ],
     classifiers=[
