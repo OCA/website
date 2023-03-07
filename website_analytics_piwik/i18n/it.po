@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-16 03:45+0000\n"
-"PO-Revision-Date: 2018-01-16 03:45+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
+"PO-Revision-Date: 2023-03-07 19:25+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: website_analytics_piwik
 #: model:ir.model.fields,field_description:website_analytics_piwik.field_res_config_settings_has_piwik_analytics
@@ -63,7 +64,7 @@ msgstr ""
 #. module: website_analytics_piwik
 #: model:ir.model,name:website_analytics_piwik.model_website
 msgid "Website"
-msgstr "Sito"
+msgstr "Sito web"
 
 #. module: website_analytics_piwik
 #: model:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
