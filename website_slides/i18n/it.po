@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2022-12-30 11:51+0000\n"
+"PO-Revision-Date: 2023-03-07 17:23+0000\n"
 "Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -1442,7 +1442,7 @@ msgstr "In attesa di validazione"
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Website"
-msgstr "Sito"
+msgstr "Sito web"
 
 #. module: website_slides
 #: field:slide.channel,website_message_ids:0
