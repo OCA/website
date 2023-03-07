@@ -10,14 +10,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2016-11-29 03:55+0000\n"
-"Last-Translator: Paolo Valier <paolo.valier@hotmail.it>, 2016\n"
+"PO-Revision-Date: 2023-03-07 19:25+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: website_seo_redirection
 #: code:addons/website_seo_redirection/models/website_seo_redirection.py:77
@@ -229,7 +230,7 @@ msgstr ""
 #. module: website_seo_redirection
 #: model:ir.model,name:website_seo_redirection.model_website
 msgid "Website"
-msgstr "Sito"
+msgstr "Sito web"
 
 #. module: website_seo_redirection
 #: model:ir.ui.view,arch_db:website_seo_redirection.sample_page
