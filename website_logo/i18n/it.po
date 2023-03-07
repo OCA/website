@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-29 03:55+0000\n"
-"PO-Revision-Date: 2018-06-21 12:32+0000\n"
-"Last-Translator: Alberto Carollo <baba75@gmail.com>\n"
+"PO-Revision-Date: 2023-03-07 19:25+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: website_logo
 #: code:addons/website_logo/controllers/main.py:64
@@ -49,7 +49,7 @@ msgstr ""
 #. module: website_logo
 #: model:ir.model,name:website_logo.model_website
 msgid "Website"
-msgstr "Sito"
+msgstr "Sito web"
 
 #. module: website_logo
 #: model:ir.model.fields,field_description:website_logo.field_res_config_settings_logo
