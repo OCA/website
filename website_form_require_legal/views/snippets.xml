@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Tecnativa - Carlos Roca
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <template id="s_website_form_options" inherit_id="website.s_website_form_options">
+        <xpath expr="//we-checkbox[@t-if='recaptcha_public_key']" position="after">
+            <we-checkbox
+                string="Legal terms acceptance"
+                data-name="legal_acceptance_opt"
+                data-toggle-legal-terms=""
+                data-no-preview="true"
+            />
+        </xpath>
+    </template>
+</odoo>
