@@ -3,7 +3,7 @@
 {
     "name": "Website Forum Subscription",
     "summary": "Adds a button to allow subscription from the website",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": ("Tecnativa, " "Odoo Community Association (OCA)"),
