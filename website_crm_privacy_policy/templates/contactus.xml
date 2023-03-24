@@ -22,7 +22,11 @@
                         required="required"
                     />
                     <label class="form-check-label" for="privacy_policy">
-                        <t t-call="website_legal_page.acceptance_full" />
+                        <span class="acceptance_full">
+                            <a
+                                href="/legal"
+                            >I accept the legal terms, the privacy policy &amp; conditions of this website.</a>
+                        </span>
                     </label>
                 </div>
             </div>
