@@ -5,7 +5,7 @@
 {
     "name": "Website CRM privacy policy",
     "category": "Website",
-    "version": "15.0.1.0.1",
+    "version": "15.0.1.1.0",
     "website": "https://github.com/OCA/website",
     "author": "Trey, Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
