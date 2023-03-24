@@ -20,6 +20,13 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
+#. module: website_crm_privacy_policy
+#: model_terms:ir.ui.view,arch_db:website_crm_privacy_policy.contactus_form
+msgid ""
+"I accept the legal terms, the privacy policy &amp; conditions of this "
+"website."
+msgstr ""
+
 #~ msgid "I have read and accept the"
 #~ msgstr "Я прочитал и принимаю"
 
