@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <template id="footer_custom" inherit_id="website.footer_custom">
+    <template id="footer_custom" inherit_id="website.layout">
         <xpath
-            expr="//footer//div/span[hasclass('o_footer_copyright_name')]"
+            expr="//footer//span[hasclass('o_footer_copyright_name','mr-2')]"
             position="after"
         >
             <span>-
