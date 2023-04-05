@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2023-03-07 17:23+0000\n"
-"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"PO-Revision-Date: 2023-04-05 09:18+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
 "Language: it\n"
@@ -569,7 +569,7 @@ msgstr ""
 #: field:slide.channel,message_follower_ids:0
 #: field:slide.slide,message_follower_ids:0
 msgid "Followers"
-msgstr "Follower"
+msgstr "Seguito da"
 
 #. module: website_slides
 #: field:slide.channel,can_see_full:0
