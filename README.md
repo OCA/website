@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [website_google_tag_manager](website_google_tag_manager/) | 16.0.1.0.0 |  | Add support for Google Tag Manager
 [website_legal_page](website_legal_page/) | 16.0.1.0.0 |  | Website Legal Page
 [website_odoo_debranding](website_odoo_debranding/) | 16.0.1.0.0 |  | Remove Odoo Branding from Website
+[website_crm_quick_answer](website_crm_quick_answer/) | 16.0.1.0.0 |  | Add an automatic answer for contacts asking for info
 
 [//]: # (end addons)
 

@@ -10,3 +10,7 @@
 
   * Harald Panten <harald.panten@sygel.es>
   * Manuel Regidor <manuel.regidor@sygel.es>
+
+* `InitOS <https://www.initos.com>`__:
+
+  * Dhara Solanki <dhara.solanki@initos.com>
