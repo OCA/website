@@ -23,7 +23,7 @@ Plausible analytics
     :target: https://runbot.odoo-community.org/runbot/186/15.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module allows to configure your odoo website to connect with Plausible.
 
@@ -51,9 +51,6 @@ Known issues / Roadmap
 This module won't be needed in version 16 as it is included in the core `website`
 module.
 
-The integrated analytics dashboard has not being backported and could be an
-improvement to do to this module.
-
 Bug Tracker
 ===========
 
@@ -72,12 +69,16 @@ Authors
 
 * Odoo S.A.
 * ForgeFlow
+* Domatix
 
 Contributors
 ~~~~~~~~~~~~
 
 * Odoo S.A.
 * Lois Rilo <lois.rilo@forgeflow.com>
+* `Domatix <https://www.domatix.com>`__:
+
+  * Jinye Ji
 
 Maintainers
 ~~~~~~~~~~~
@@ -98,7 +99,7 @@ promote its widespread use.
 
 Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
-|maintainer-LoisRForgeFlow| 
+|maintainer-LoisRForgeFlow|
 
 This module is part of the `OCA/website <https://github.com/OCA/website/tree/15.0/website_plausible>`_ project on GitHub.
 

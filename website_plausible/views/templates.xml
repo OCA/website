@@ -13,4 +13,16 @@
             </t>
         </xpath>
     </template>
+
+    <template id="404_plausible" inherit_id="http_routing.404" name="Plausible 404">
+        <div id="wrap" position="inside">
+            <input
+                t-if='website.plausible_shared_key'
+                type='hidden'
+                class='js_plausible_push'
+                data-event-name='404'
+                t-attf-data-event-params='{"path": "#{request.httprequest.path}"}'
+            />
+        </div>
+    </template>
 </odoo>

@@ -16,5 +16,13 @@
         "views/website_config_settings.xml",
         "views/templates.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "website_plausible/static/src/scss/website.backend.scss",
+        ],
+        "web.assets_qweb": [
+            "website_plausible/static/src/xml/website.backend.xml",
+        ],
+    },
     "installable": True,
 }
