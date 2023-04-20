@@ -21,8 +21,29 @@ msgid ""
 msgstr ""
 
 #. module: website_plausible
+#. openerp-web
+#: code:addons/website_plausible/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Analytics"
+msgstr ""
+
+#. module: website_plausible
 #: model:ir.model,name:website_plausible.model_res_config_settings
 msgid "Config Settings"
+msgstr ""
+
+#. module: website_plausible
+#. openerp-web
+#: code:addons/website_plausible/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Connect Plausible"
+msgstr ""
+
+#. module: website_plausible
+#. openerp-web
+#: code:addons/website_plausible/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Easily track your visitor with Plausible"
 msgstr ""
 
 #. module: website_plausible
