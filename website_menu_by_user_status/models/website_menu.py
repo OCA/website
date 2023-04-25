@@ -1,7 +1,7 @@
 # Copyright 2013-2017 Savoir-faire Linux (<http://www.savoirfairelinux.com>)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models, _
+from odoo import api, fields, models
 
 
 class WebsiteMenu(models.Model):
@@ -14,17 +14,15 @@ class WebsiteMenu(models.Model):
     user_logged = fields.Boolean(
         string="Visible for logged Users",
         default=True,
-        help=_("If checked, "
-               "the menu will be displayed when the user is logged "
-               "and give access.")
+        help="If checked, the menu will be displayed when the user is logged "
+        "and give access."
     )
 
     user_not_logged = fields.Boolean(
         string="Visible for public Users",
         default=True,
-        help=_("If checked, "
-               "the menu will be displayed when the user is not logged "
-               "and give access.")
+        help="If checked, the menu will be displayed when the user is not "
+        "logged and give access."
     )
 
     @api.one

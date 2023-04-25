@@ -8,7 +8,7 @@
     'version': '12.0.1.0.0',
     'author': 'Onestein, Odoo Community Association (OCA)',
     'license': 'AGPL-3',
-    'website': 'https://github.com/oca/website',
+    'website': 'https://github.com/OCA/website',
     'depends': [
         'website'
     ],
