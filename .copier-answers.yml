@@ -4,7 +4,7 @@ _src_path: https://github.com/OCA/oca-addons-repo-template.git
 ci: GitHub
 dependency_installation_mode: PIP
 generate_requirements_txt: true
-github_check_license: true
+github_check_license: false
 github_ci_extra_env: {}
 github_enable_codecov: true
 github_enable_makepot: true
