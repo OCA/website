@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 - TODAY, Kaynnan Lemes <kaynnan.lemes@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+  <template id="index" inherit_id="website_crm_partner_assign.index">
+    <xpath expr="//div[@id='partner_left']" position="inside">
+      <!-- STATE -->
+      <ul id="states" class="nav nav-pills flex-column mt16">
+        <li class="nav-header nav-item">
+          <h3>Filter by State</h3>
+        </li>
+        <t t-foreach="states" t-as="state">
+          <li t-if="state['state_id']" class="nav-item">
+            <t
+                            t-set="partners_url"
+                            t-value="'/partners' +
+                        ('/grade/%s' % slug(current_grade) if current_grade else '') +
+                        ('/country/%s' % slug(current_country) if current_country else '') +
+                        ('/state/%s' % state['state_id'][0] if state['state_id'][0] else '') +
+                        ('?' + search_path + '&amp;' + keep_query('country_all') if search_path else '')"
+                        />
+            <a
+                            t-attf-href="{{partners_url}}"
+                            t-attf-class="nav-link#{state['active'] and ' active' or ''}"
+                        >
+              <span
+                                class="badge badge-pill float-right"
+                                t-esc="state['state_id_count'] or ''"
+                            />
+              <t t-esc="state['state_id'][1]" />
+            </a>
+          </li>
+        </t>
+      </ul>
+      <!-- CITY -->
+      <ul id="ities" class="nav nav-pills flex-column mt16">
+        <li class="nav-header nav-item">
+          <h3>Filter by City</h3>
+        </li>
+        <t t-foreach="cities" t-as="city">
+          <li t-if="city['city_id']" class="nav-item">
+            <t
+                            t-set="partners_url"
+                            t-value="'/partners' +
+                      ('/grade/%s' % slug(current_grade) if current_grade else '') +
+                      ('/country/%s' % slug(current_country) if current_country else '') +
+                      ('/state/%s' % slug(current_state) if current_state else '') +
+                      ('/city/%s' % city['city_id'][0] if city['city_id'][0] else '') +
+                      ('?' + search_path + '&amp;' + keep_query('country_all') if search_path else '')"
+                        />
+            <a
+                            t-attf-href="{{partners_url}}"
+                            t-attf-class="nav-link#{city['active'] and ' active' or ''}"
+                        >
+              <span
+                                class="badge badge-pill float-right"
+                                t-esc="city['city_id_count'] or ''"
+                            />
+              <t t-esc="city['city_id'][1]" />
+            </a>
+          </li>
+        </t>
+      </ul>
+    </xpath>
+  </template>
+</odoo>
