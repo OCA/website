@@ -6,7 +6,7 @@
     'summary': 'Load images only when they are visible in the viewport.',
     'author': 'Onestein, Odoo Community Association (OCA)',
     'license': 'AGPL-3',
-    'website': 'https://github.com/oca/website',
+    'website': 'https://github.com/OCA/website',
     'category': 'Website',
     'version': '12.0.1.0.1',
     'depends': [

@@ -5,7 +5,7 @@
     "summary": "Allows logged in portal users to manage their contacts",
     "version": "12.0.1.0.0",
     "category": "Portal",
-    "website": "https://tecnativa.com/",
+    "website": "https://github.com/OCA/website",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "LGPL-3",
     "application": False,
