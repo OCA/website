@@ -23,7 +23,7 @@ Blog Post List Excerpt+Image Layout
     :target: https://runbot.odoo-community.org/runbot/186/12.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5|
+|badge1| |badge2| |badge3| |badge4| |badge5| 
 
 This module extends the functionality of blogs to support having a more
 attractive layout that automatically displays an excerpt of each post, a "Read
