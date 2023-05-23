@@ -22,4 +22,4 @@ class ResConfigSettings(models.TransientModel):
     @api.depends("website_id.cookiebot_dgid")
     def _compute_cookiebot_enabled(self):
         for record in self:
-            record.cookiebot_enabled = bool(record.cookiebot_dgid)
+            record.update({"cookiebot_enabled": bool(record.cookiebot_dgid)})

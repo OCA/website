@@ -5,3 +5,6 @@
 * `Tecnativa <https://www.tecnativa.com/>`__:
     * Jairo Llopis
     * Stefan Ungureanu
+
+* `NICO SOLUTIONS - ENGINEERING & IT <https://www.nico-solutions.de/>`__:
+    * Nils Coenen <nils.coenen@nico-solutions.de>

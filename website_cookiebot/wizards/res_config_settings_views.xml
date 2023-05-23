@@ -6,10 +6,7 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="website.res_config_settings_view_form" />
         <field name="arch" type="xml">
-            <xpath
-                expr="//div[@id='google_analytics_dashboard_setting']"
-                position="after"
-            >
+            <xpath expr="//div[@id='google_analytics_setting']" position="after">
                 <div class="col-xs-12 col-md-6 o_setting_box" id="cookiebot_setting">
                     <div class="o_setting_left_pane">
                         <field name="cookiebot_enabled" />
