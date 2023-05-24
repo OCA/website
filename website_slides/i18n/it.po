@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2023-05-18 21:39+0000\n"
+"PO-Revision-Date: 2023-05-24 13:09+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_shared
@@ -401,7 +401,7 @@ msgstr ""
 #: field:slide.embed,display_name:0 field:slide.slide,display_name:0
 #: field:slide.tag,display_name:0 field:website.published.mixin,display_name:0
 msgid "Display Name"
-msgstr "Nome da visualizzare"
+msgstr "Nome visualizzato"
 
 #. module: website_slides
 #: help:slide.category,sequence:0 help:slide.channel,sequence:0
