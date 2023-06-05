@@ -4,7 +4,7 @@
     "name": "Website Whatsapp",
     "summary": "Whatsapp integration",
     "category": "Website",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.0.1",
     "website": "https://github.com/OCA/website",
     "author": "Studio73, Odoo Community Association (OCA)",
     "maintainers": ["ioans73"],
