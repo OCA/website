@@ -37,7 +37,7 @@ addon | version | maintainers | summary
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 15.0.1.0.0 |  | Allow to select country in a dropdown
 [website_snippet_dynamic_link](website_snippet_dynamic_link/) | 15.0.1.0.0 |  | Website Snippet Dynamic Link
 [website_snippet_marginless_gallery](website_snippet_marginless_gallery/) | 15.0.1.0.0 |  | Add a snippet to have a marginless image gallery
-[website_whatsapp](website_whatsapp/) | 15.0.1.0.0 | [![ioans73](https://github.com/ioans73.png?size=30px)](https://github.com/ioans73) | Whatsapp integration
+[website_whatsapp](website_whatsapp/) | 15.0.1.0.1 | [![ioans73](https://github.com/ioans73.png?size=30px)](https://github.com/ioans73) | Whatsapp integration
 
 [//]: # (end addons)
 
