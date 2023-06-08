@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright 2023 Onestein - Anjeel Haria
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<templates id="template" xml:space="preserve">
+
+    <!-- Add a Local Font option dialog -->
+    <div t-name="website.dialog.addLocalFont">
+        <div class="form-group row">
+            <label class="col-form-label col-md-3" for="font_html">Font File</label>
+            <div class="col-md-9">
+                <input type="file" class="local_font_selection_input" /><span
+                    style="color:red"
+                > Supported file formats are otf,ttf,woff,woff2</span>
+            </div>
+            <label
+                class="col-form-label col-md-3"
+                for="o_local_input_font"
+            >Font Name</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control o_local_input_font" />
+            </div>
+        </div>
+        <p
+        >Adding a font requires a reload of the page. This will save all your changes.</p>
+    </div>
+
+    <t t-name="website.delete_local_font_btn">
+        <t t-set="delete_font_title">Delete this font</t>
+        <i
+            role="button"
+            class="text-danger ml-2 fa fa-trash-o o_we_delete_local_font_btn"
+            t-att-aria-label="delete_font_title"
+            t-att-title="delete_font_title"
+            t-att-data-font-index="index"
+        />
+    </t>
+
+    <t t-name="website.add_local_font_btn">
+        <we-button
+            href="#"
+            class="o_we_add_local_font_btn"
+            t-att-data-variable="variable"
+        >
+            Add a Local Font
+        </we-button>
+    </t>
+</templates>
