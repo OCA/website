@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2023-06-08 09:10+0000\n"
+"PO-Revision-Date: 2023-06-14 09:08+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -1218,7 +1218,7 @@ msgstr "Riepilogo"
 #. module: website_slides
 #: view:slide.tag:website_slides.view_slide_tag_form
 msgid "Tag"
-msgstr "Tag"
+msgstr "Etichetta"
 
 #. module: website_slides
 #. openerp-web
@@ -1230,12 +1230,12 @@ msgstr "Tag"
 #: view:slide.tag:website_slides.view_slide_tag_tree
 #, python-format
 msgid "Tags"
-msgstr ""
+msgstr "Etichette"
 
 #. module: website_slides
 #: view:slide.slide:website_slides.view_slide_slide_form
 msgid "Tags..."
-msgstr ""
+msgstr "Etichette..."
 
 #. module: website_slides
 #: view:website:website_slides.home
