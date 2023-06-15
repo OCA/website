@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2023-06-14 09:08+0000\n"
+"PO-Revision-Date: 2023-06-15 08:08+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -459,7 +459,7 @@ msgstr ""
 #. module: website_slides
 #: view:website:website_slides.embed_slide
 msgid "Email"
-msgstr "Email"
+msgstr "E-mail"
 
 #. module: website_slides
 #: view:website:website_slides.slide_detail_view
