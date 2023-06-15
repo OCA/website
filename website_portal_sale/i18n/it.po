@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2023-06-14 14:09+0000\n"
-"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"PO-Revision-Date: 2023-06-15 11:09+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
 "Language: it\n"
@@ -149,7 +149,7 @@ msgstr "Vendite"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
 msgid "Shipping Address"
-msgstr "Indirizzo di Spedizione"
+msgstr "Indirizzo di spedizione"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.invoices
