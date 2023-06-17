@@ -2,26 +2,27 @@ from odoo.tests import HttpCase
 
 
 class TestIrHttp(HttpCase):
-    def setUp(self):
-        super().setUp()
-        self.website = self.env["website"].sudo().get_current_website()
-        self.auth_url = self.env["website.auth.url"].create(
-            {"website_id": self.website.id, "path": "/contactus"}
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.website = cls.env["website"].sudo().get_current_website()
+        cls.auth_url = cls.env["website.auth.url"].create(
+            {"website_id": cls.website.id, "path": "/contactus"}
         )
-        self.user = self.env["res.users"].create(
+        cls.user = cls.env["res.users"].create(
             {"name": "Test User", "login": "test_user", "password": "12345"}
         )
-        self.path = "/contactus"
-        self.expected_path = "/web/login?redirect=%s" % self.path
+        cls.path = "/contactus"
+        cls.expected_path = "/web/login?redirect=%s" % cls.path
 
     def test_dispatch_unauthorized(self):
-        # Test that an unauthorized user cannot access "/auth_path
+        # Test that a public user cannot access "/auth_path
         self.authenticate(None, None)
         response = self.url_open(self.path, allow_redirects=False)
         self.assertEqual(
             response.status_code,
-            302,
-            "Expected the response status code to be 302 indicating a redirect",
+            303,
+            "Expected the response status code to be 303 indicating a redirect",
         )
 
         self.assertIn(self.expected_path, response.headers["Location"])
