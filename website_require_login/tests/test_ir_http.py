@@ -15,7 +15,7 @@ class TestIrHttp(HttpCase):
         self.expected_path = "/web/login?redirect=%s" % self.path
 
     def test_dispatch_unauthorized(self):
-        # Test that an unauthorized user cannot access "/auth_path
+        # Test that a public user cannot access "/auth_path
         self.authenticate(None, None)
         response = self.url_open(self.path, allow_redirects=False)
         self.assertEqual(
