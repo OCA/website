@@ -21,7 +21,6 @@ msgstr ""
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
-#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "A readonly country dropdown input"
 msgstr "Una entrada desplegable de país de solo lectura"
 
@@ -32,30 +31,26 @@ msgstr "Demo del desplegable de países"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
-#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Other label"
 msgstr "Otra etiqueta"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
-#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Submit (you will see the GET parameters in the URL)"
 msgstr "Enviar (verá los parámetros GET en la URL)"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
-#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Test here the country dropdown snippet behavior"
 msgstr "Pruebe aquí el comportamiento del snippet desplegable de países"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
-#: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "This is a form"
 msgstr "Esto es un formulario"
 
 #. module: website_snippet_country_dropdown
-#. openerp-web
+#. odoo-javascript
 #: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:0
 #, python-format
 msgid ""
@@ -64,7 +59,7 @@ msgstr ""
 "Escriba el atributo \"name\" para el campo que se mandará al formulario."
 
 #. module: website_snippet_country_dropdown
-#. openerp-web
+#. odoo-javascript
 #: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:0
 #, python-format
 msgid "You can modify the label directly with the website editor."

@@ -2,7 +2,6 @@ odoo.define("website_snippet_country_dropdown.tour_demo_page", function (require
     "use strict";
 
     const tour = require("web_tour.tour");
-    const base = require("web_editor.base");
 
     const country_code_test = "ES";
     const vat_number_test = "B01010101";
@@ -11,7 +10,6 @@ odoo.define("website_snippet_country_dropdown.tour_demo_page", function (require
         "website_snippet_country_dropdown_tour_demo_page",
         {
             url: "/website_snippet_country_dropdown.demo_page",
-            wait_for: base.ready(),
         },
         [
             {
