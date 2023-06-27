@@ -5,7 +5,7 @@
 {
     "name": "Website Snippet Country Code Dropdown",
     "summary": "Allow to select country in a dropdown",
-    "version": "15.0.1.0.0",
+    "version": "16.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Tecnativa, " "Odoo Community Association (OCA)",

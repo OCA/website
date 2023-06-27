@@ -52,7 +52,7 @@
                     id="btn_vat_code"
                     t-att-disabled="readonly"
                     class="btn btn-outline-secondary dropdown-toggle js_btn_country_code form-control"
-                    data-toggle="dropdown"
+                    data-bs-toggle="dropdown"
                     t-att-data-country_code="default_country.code"
                 >
                     <img
@@ -82,17 +82,17 @@
                         </a>
                     </t>
                 </div>
-                <input
-                    id="country_code_field"
-                    type="text"
-                    size="2"
-                    tabindex="-1"
-                    class="input-group-text js_country_code_field"
-                    t-att-name="country_code_field"
-                    t-att-value="default_country.code"
-                    readonly="1"
-                />
             </div>
+            <input
+                id="country_code_field"
+                type="text"
+                size="2"
+                tabindex="-1"
+                class="input-group-text js_country_code_field"
+                t-att-name="country_code_field"
+                t-att-value="default_country.code"
+                readonly="1"
+            />
             <input
                 id="complete_field"
                 type="hidden"
