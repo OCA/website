@@ -4,7 +4,7 @@
 {
     "name": "Website Breadcrumbs",
     "summary": "Let you have breadcrumbs in website pages",
-    "version": "13.0.1.0.0",
+    "version": "13.0.1.0.1",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Grupo ESOC Ingeniería de Servicios, Odoo Community Association (OCA)",
