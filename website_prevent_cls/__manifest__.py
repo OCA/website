@@ -5,6 +5,7 @@
     "version": "13.0.2.0.0",
     "author": "Sunflower IT,Odoo Community Association (OCA)",
     "license": "AGPL-3",
+    "website": "https://github.com/OCA/website",
     "category": "Website",
     "summary": "Website Prevent Cumulative Layout Shift (CLS) to improve "
     "Pagespeed score",
