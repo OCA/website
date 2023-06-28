@@ -24,6 +24,7 @@ setuptools.setup(
         'odoo-addon-website_snippet_country_dropdown>=15.0dev,<15.1dev',
         'odoo-addon-website_snippet_dynamic_link>=15.0dev,<15.1dev',
         'odoo-addon-website_snippet_marginless_gallery>=15.0dev,<15.1dev',
+        'odoo-addon-website_snippet_openstreetmap>=15.0dev,<15.1dev',
         'odoo-addon-website_whatsapp>=15.0dev,<15.1dev',
     ],
     classifiers=[
