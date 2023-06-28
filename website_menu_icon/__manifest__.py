@@ -6,6 +6,7 @@
     "name": "Website Menu Icons",
     "category": "Website",
     "license": "AGPL-3",
+    "website": "https://github.com/OCA/website",
     "author": "Radovan Skolnik, Odoo Community Association (OCA)",
     "version": "13.0.1.0.0",
     "summary": """
