@@ -4,7 +4,7 @@
     "name": "Google Analytics 4",
     "summary": "Google Analytics 4 integration",
     "category": "Website",
-    "version": "14.0.1.0.0",
+    "version": "13.0.1.0.0",
     "author": "Studio73, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
