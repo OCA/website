@@ -8,7 +8,7 @@
     "license": "AGPL-3",
     "website": "https://github.com/OCA/website",
     "author": "Radovan Skolnik, Odoo Community Association (OCA)",
-    "version": "13.0.1.0.0",
+    "version": "13.0.1.0.1",
     "summary": """
 Provides possibility to define icons/images for menus.
 These can be then rendered in a custom theme.
