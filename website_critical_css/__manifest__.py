@@ -4,6 +4,7 @@
     "name": "Website Critical CSS",
     "version": "13.0.2.0.0",
     "author": "Sunflower IT,Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
     "category": "Website",
     "summary": "Website Critical CSS to improve FCP score",
