@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath
+            expr="//t[@id='default_snippets']//div[@id='snippet_effect']/div[hasclass('o_panel_body')]/t[@t-snippet='website.s_map']"
+            position="after"
+        >
+            <t
+                t-snippet="website_snippet_openstreetmap.s_openstreetmap"
+                t-thumbnail="/website_snippet_openstreetmap/static/src/img/snippets_thumbs/s_openstreetmap.svg"
+            />
+        </xpath>
+    </template>
+
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <xpath expr="//*[@t-set='both_bg_color_image_exclude']" position="after">
+                <t
+                t-set="both_bg_color_image_exclude"
+                t-value="both_bg_color_image_exclude + ', .s_openstreetmap'"
+            />
+        </xpath>
+        <xpath
+            expr="//*[@t-set='so_content_addition_selector']"
+            position="inside"
+        >, .s_openstreetmap</xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<template name="OpenStreetMap" id="s_openstreetmap">
+    <section
+            class="s_openstreetmap pb56 pt56"
+            data-map-type="mapnik"
+            data-map-zoom="2000"
+            t-att-data-map-address="' '.join(filter(None, (user_id.company_id.street, user_id.company_id.city, user_id.company_id.state_id.display_name, user_id.company_id.country_id.display_name)))"
+        >
+        <div class="map_container o_not_editable">
+            <div class="css_non_editable_mode_hidden">
+                <div
+                        class="missing_option_warning alert alert-info rounded-0 fade show d-none d-print-none"
+                    >
+                    An address must be specified for a map to be embedded
+                </div>
+            </div>
+            <object
+                    class="d-none s_openstreetmap_embedded o_not_editable"
+                    width="100%"
+                    height="100%"
+                    data=""
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                />
+            <div class="s_openstreetmap_color_filter" />
+        </div>
+    </section>
+</template>
+
+<!-- Snippet's Options -->
+<template id="s_openstreetmap_options" inherit_id="website.snippet_options">
+    <xpath expr="//div[@data-js='Box']" position="before">
+        <div data-js="OpenStreetMap" data-selector=".s_openstreetmap">
+            <we-input
+                    class="o_we_large"
+                    string="Address"
+                    data-select-data-attribute=""
+                    data-no-preview="true"
+                    data-attribute-name="mapAddress"
+                    placeholder="e.g. De Brouckere, Brussels, Belgium"
+                />
+            <we-select
+                    string="Type"
+                    data-no-preview="true"
+                    data-attribute-name="mapType"
+                >
+                <we-button data-select-data-attribute="mapnik">Standard</we-button>
+                <we-button data-select-data-attribute="cyclosm">CyclOSM</we-button>
+                <we-button data-select-data-attribute="cyclemap">Cycle Map</we-button>
+                <we-button
+                        data-select-data-attribute="transportmap"
+                    >Transport Map</we-button>
+                <we-button data-select-data-attribute="opnvkarte">OPNVKarte</we-button>
+                <we-button data-select-data-attribute="hot">Humanitarian</we-button>
+            </we-select>
+            <we-select
+                    string="Zoom"
+                    data-select-data-attribute="2000"
+                    data-no-preview="true"
+                    data-attribute-name="mapZoom"
+                >
+                <we-button data-select-data-attribute="2.5">2.5 m</we-button>
+                <we-button data-select-data-attribute="5">5 m</we-button>
+                <we-button data-select-data-attribute="10">10 m</we-button>
+                <we-button data-select-data-attribute="29">20 m</we-button>
+                <we-button data-select-data-attribute="50">50 m</we-button>
+                <we-button data-select-data-attribute="100">100 m</we-button>
+                <we-button data-select-data-attribute="200">200 m</we-button>
+                <we-button data-select-data-attribute="400">400 m</we-button>
+                <we-button data-select-data-attribute="1000">1 km</we-button>
+                <we-button data-select-data-attribute="2000">2 km</we-button>
+                <we-button data-select-data-attribute="4000">4 km</we-button>
+                <we-button data-select-data-attribute="8000">8 km</we-button>
+                <we-button data-select-data-attribute="15000">15 km</we-button>
+                <we-button data-select-data-attribute="30000">30 km</we-button>
+                <we-button data-select-data-attribute="50000">50 km</we-button>
+                <we-button data-select-data-attribute="100000">100 km</we-button>
+                <we-button data-select-data-attribute="200000">200 km</we-button>
+                <we-button data-select-data-attribute="400000">400 km</we-button>
+                <we-button data-select-data-attribute="1000000">1000 km</we-button>
+                <we-button data-select-data-attribute="2000000">2000 km</we-button>
+            </we-select>
+            <we-colorpicker
+                    string="Color filter"
+                    data-select-style="true"
+                    data-css-property="background-color"
+                    data-color-prefix="bg-"
+                    data-apply-to=".s_openstreetmap_color_filter"
+                />
+            <we-checkbox
+                    string="Description"
+                    data-no-preview="true"
+                    data-show-description="true"
+                />
+        </div>
+    </xpath>
+</template>
+
+<record id="s_openstreetmap_000_scss" model="ir.asset">
+    <field name="name">OpenStreetMap 000 SCSS</field>
+    <field name="bundle">web.assets_frontend</field>
+    <field
+            name="path"
+        >website_snippet_openstreetmap/static/src/snippets/s_openstreetmap/000.scss</field>
+</record>
+
+<record id="s_openstreetmap_000_js" model="ir.asset">
+    <field name="name">OpenStreetMap 000 JS</field>
+    <field name="bundle">web.assets_frontend</field>
+    <field
+            name="path"
+        >website_snippet_openstreetmap/static/src/snippets/s_openstreetmap/000.js</field>
+</record>
+
+</odoo>
