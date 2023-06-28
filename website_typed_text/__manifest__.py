@@ -1,7 +1,7 @@
 {
     "name": "Website Animated Text",
     "category": "Website",
-    "version": "13.0.1.0.0",
+    "version": "13.0.1.0.1",
     "author": "Onestein,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
