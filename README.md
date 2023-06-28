@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [website_cookiefirst](website_cookiefirst/) | 16.0.1.0.0 |  | Cookiefirst integration
+[website_crm_privacy_policy](website_crm_privacy_policy/) | 16.0.1.0.0 |  | Website CRM privacy policy
 [website_crm_quick_answer](website_crm_quick_answer/) | 16.0.1.0.0 |  | Add an automatic answer for contacts asking for info
 [website_google_tag_manager](website_google_tag_manager/) | 16.0.1.0.0 |  | Add support for Google Tag Manager
 [website_legal_page](website_legal_page/) | 16.0.1.0.0 |  | Website Legal Page
