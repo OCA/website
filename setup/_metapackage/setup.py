@@ -18,6 +18,7 @@ setuptools.setup(
         'odoo13-addon-website_crm_quick_answer',
         'odoo13-addon-website_crm_recaptcha',
         'odoo13-addon-website_form_recaptcha',
+        'odoo13-addon-website_google_analytics_4',
         'odoo13-addon-website_google_tag_manager',
         'odoo13-addon-website_legal_page',
         'odoo13-addon-website_menu_by_user_status',
