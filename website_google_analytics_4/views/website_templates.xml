@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="frontend_layout"
+        name="Website Google Analytic 4"
+        inherit_id="portal.frontend_layout"
+    >
+        <xpath expr="//script[@id='tracking_code']" position="replace">
+            <script
+                id="google_analytics_4_code"
+                type="text/plain"
+                data-cookiefirst-category="performance"
+                t-if="website and website.google_analytics_key and not editable"
+                async="1"
+                t-attf-src="https://www.googletagmanager.com/gtag/js?id={{ website.google_analytics_key }}"
+            />
+            <script
+                type="text/plain"
+                data-cookiefirst-category="performance"
+                t-if="website and website.google_analytics_key and not editable"
+            >
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){
+                    dataLayer.push(arguments);
+                };
+                gtag('js', new Date());
+                gtag('config', '<t t-esc="website.google_analytics_key" />');
+            </script>
+        </xpath>
+    </template>
+    <template
+        id="payment_confirmation_status"
+        inherit_id="website_sale.payment_confirmation_status"
+    >
+        <xpath
+            expr="//div[hasclass('oe_website_sale_tx_status')]"
+            position="attributes"
+        >
+            <attribute
+                name="class"
+                separator=" "
+                add="oe_website_sale_tx_status_google4"
+                remove="oe_website_sale_tx_status"
+            />
+        </xpath>
+    </template>
+</odoo>
