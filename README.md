@@ -31,6 +31,7 @@ addon | version | maintainers | summary
 [website_crm_quick_answer](website_crm_quick_answer/) | 13.0.1.1.0 |  | Add an automatic answer for contacts asking for info
 [website_crm_recaptcha](website_crm_recaptcha/) | 13.0.1.0.2 |  | Provides a ReCaptcha validation in Website Contact Form
 [website_form_recaptcha](website_form_recaptcha/) | 13.0.1.0.2 |  | Provides a ReCaptcha field for Website Forms
+[website_google_analytics_4](website_google_analytics_4/) | 13.0.1.0.0 |  | Google Analytics 4 integration
 [website_google_tag_manager](website_google_tag_manager/) | 13.0.1.0.0 |  | Add support for Google Tag Manager
 [website_legal_page](website_legal_page/) | 13.0.1.1.0 |  | Website Legal Page
 [website_menu_by_user_status](website_menu_by_user_status/) | 13.0.1.0.0 |  | Allow to manage the display of website.menus
