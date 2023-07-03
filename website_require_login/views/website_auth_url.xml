@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="website_auth_url_tree_view" model="ir.ui.view">
+        <field name="name">website.auth.url</field>
+        <field name="model">website.auth.url</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="website_id" />
+                <field name="path" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>
