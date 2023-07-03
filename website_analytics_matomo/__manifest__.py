@@ -3,7 +3,7 @@
 
 {
     "name": "Matomo analytics",
-    "version": "15.0.1.0.0",
+    "version": "16.0.1.0.0",
     "author": "Onestein,Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Website",
