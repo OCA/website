@@ -4,17 +4,9 @@
     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 -->
 <odoo>
-    <template
-        id="assets_editor_recaptcha"
-        name="Google reCAPTCHA"
-        inherit_id="portal.frontend_layout"
-    >
-        <xpath expr="//main" position="inside">
-            <script src="https://www.google.com/recaptcha/api.js" />
-        </xpath>
-    </template>
 
     <template id="recaptcha_widget" name="reCAPTCHA widget">
+        <script src="https://www.google.com/recaptcha/api.js" />
         <div
             class="g-recaptcha"
             t-if="request.env['ir.config_parameter'].sudo().get_param('portal_recaptcha.recaptcha_enabled')"
