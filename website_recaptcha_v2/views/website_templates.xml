@@ -9,18 +9,11 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 <odoo>
 
-    <template id="assets_editor_recaptcha" name="reCAPTCHA" inherit_id="website.layout">
-        <xpath expr="//main" position="inside">
-            <script src="https://www.google.com/recaptcha/api.js" />
-        </xpath>
-    </template>
-
     <template id="recaptcha_widget" name="reCAPTCHA widget">
-        <div
-            class="g-recaptcha"
-            t-if="website.recaptcha_enabled"
-            t-att-data-sitekey="website.recaptcha_key_site"
-        />
+        <t t-if="website.recaptcha_enabled">
+            <div class="g-recaptcha" t-att-data-sitekey="website.recaptcha_key_site" />
+            <script src="https://www.google.com/recaptcha/api.js" />
+        </t>
     </template>
 
 </odoo>
