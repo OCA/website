@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2023-06-23 12:09+0000\n"
+"PO-Revision-Date: 2023-07-18 11:11+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -1482,7 +1482,7 @@ msgstr "Meta descrizione sito web"
 #: field:slide.channel,website_meta_keywords:0
 #: field:slide.slide,website_meta_keywords:0
 msgid "Website meta keywords"
-msgstr "Keywords sto web"
+msgstr "Parole chiave sito web"
 
 #. module: website_slides
 #: field:slide.channel,website_meta_title:0
