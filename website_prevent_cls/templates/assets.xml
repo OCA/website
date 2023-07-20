@@ -8,7 +8,7 @@
             />
         </xpath>
     </template>
-    <template id="assets_wysiwyg" inherit_id="web_editor.assets_wysiwyg">
+    <template id="assets_wysiwyg" inherit_id="web_editor.assets_editor">
         <xpath expr="." position="inside">
             <script
                 type="text/javascript"

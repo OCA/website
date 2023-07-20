@@ -2,7 +2,7 @@
 
 from odoo import api, models
 from odoo.tools import ormcache
-from odoo.tools.image import base64_to_image
+from ..tools.image import base64_to_image
 
 
 class IrQweb(models.AbstractModel):

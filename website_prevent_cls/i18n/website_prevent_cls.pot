@@ -54,7 +54,4 @@ msgstr ""
 #. module: website_prevent_cls
 #. openerp-web
 #: code:addons/website_prevent_cls/static/src/xml/alt_dialog.xml:0
-#: code:addons/website_prevent_cls/static/src/xml/alt_dialog.xml:0
-#, python-format
-msgid "px"
-msgstr ""
+#: code:addons/website_prevent_cls/static/src/xml/alt_dia
