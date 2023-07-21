@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
      <record id="rewrite_absolute_url" model="ir.ui.view">
         <field name="name">rewrite.absolute.url</field>
         <field name="model">website.rewrite</field>
-        <field name="inherit_id" ref="website.view_website_rewrite_form"/>
+        <field name="inherit_id" ref="website.view_website_rewrite_form" />
         <field name="arch" type="xml">
             <field name="url_to" position="after">
-                <field name="absolute_url"/>
+                <field name="absolute_url" />
             </field>
         </field>
     </record>
