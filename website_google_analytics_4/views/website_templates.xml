@@ -8,17 +8,11 @@
         <xpath expr="//script[@id='tracking_code']" position="replace">
             <script
                 id="google_analytics_4_code"
-                type="text/plain"
-                data-cookiefirst-category="performance"
                 t-if="website and website.google_analytics_key and not editable"
                 async="1"
                 t-attf-src="https://www.googletagmanager.com/gtag/js?id={{ website.google_analytics_key }}"
             />
-            <script
-                type="text/plain"
-                data-cookiefirst-category="performance"
-                t-if="website and website.google_analytics_key and not editable"
-            >
+            <script t-if="website and website.google_analytics_key and not editable">
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){
                     dataLayer.push(arguments);
