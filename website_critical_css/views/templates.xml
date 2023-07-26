@@ -1,0 +1,25 @@
+<odoo>
+    <template id="assets_editor" inherit_id="website.assets_editor">
+        <xpath expr=".">
+            <script
+                type="text/javascript"
+                src="/website_critical_css/static/src/js/page_properties.js"
+            />
+        </xpath>
+    </template>
+    <template
+        id="add_critical_css"
+        inherit_id="website.user_navbar"
+        name="Add Critical CSS"
+    >
+        <xpath expr="//nav[hasclass('o_main_navbar')]" position="before">
+            <t
+                t-if="main_object and main_object._name == 'website.page' and main_object.critical_css"
+            >
+                <style>
+                    <t t-raw="main_object.critical_css" />
+                </style>
+            </t>
+        </xpath>
+    </template>
+</odoo>
