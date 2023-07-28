@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 /.venv
 /.pytest_cache
+=======
 
 # C extensions
 *.so
@@ -23,6 +24,7 @@ var/
 .installed.cfg
 *.egg
 *.eggs
+=======
 
 # Installer logs
 pip-log.txt
@@ -55,6 +57,7 @@ coverage.xml
 # Django stuff:
 *.log
 
+=======
 # Mr Developer
 .mr.developer.cfg
 .project
@@ -72,3 +75,6 @@ docs/_build/
 
 # OCA rules
 !static/lib/
+=======
+# Debug maps
+*.css.map
