@@ -19,7 +19,11 @@
                 for="o_local_input_font"
             >Font Name</label>
             <div class="col-md-9">
-                <input type="text" class="form-control o_local_input_font" />
+                <input
+                    type="text"
+                    class="form-control o_local_input_font"
+                    id="o_local_input_font"
+                />
             </div>
         </div>
         <p
@@ -30,11 +34,13 @@
         <t t-set="delete_font_title">Delete this font</t>
         <i
             role="button"
-            class="text-danger ml-2 fa fa-trash-o o_we_delete_local_font_btn"
+            class="text-danger ms-2 fa fa-trash-o o_we_delete_local_font_btn"
             t-att-aria-label="delete_font_title"
             t-att-title="delete_font_title"
             t-att-data-font-index="index"
-        />
+        >
+            Delete this font
+        </i>
     </t>
 
     <t t-name="website.add_local_font_btn">
