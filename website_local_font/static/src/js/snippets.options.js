@@ -26,34 +26,20 @@ odoo.define("website_local_font.editor.snippets.options", function (require) {
          */
         start: async function () {
             await this._super(...arguments);
-            $(this.menuEl).empty();
-            const style = window.getComputedStyle(document.documentElement);
-            const nbFonts = parseInt(
-                weUtils.getCSSVariableValue("number-of-fonts", style)
-            );
             const localFontsProperty = weUtils.getCSSVariableValue(
-                "local-fonts",
-                style
+                "local-fonts"
+                // Style
             );
             this.localFonts = localFontsProperty
                 ? localFontsProperty.slice(1, -1).split(/\s*,\s*/g)
                 : [];
-            const fontEls = [];
-            const methodName = this.el.dataset.methodName || "customizeWebsiteVariable";
+            const fontEls = $(this.menuEl)
+                .children()
+                .toArray()
+                .filter((el) => {
+                    return el.className.includes("o_we_option_font_");
+                });
             const variable = this.el.dataset.variable;
-            _.times(nbFonts, (fontNb) => {
-                const realFontNb = fontNb + 1;
-                const fontEl = document.createElement("we-button");
-                fontEl.classList.add(`o_we_option_font_${realFontNb}`);
-                fontEl.dataset.variable = variable;
-                fontEl.dataset[methodName] = weUtils.getCSSVariableValue(
-                    `font-number-${realFontNb}`,
-                    style
-                );
-                fontEl.dataset.font = realFontNb;
-                fontEls.push(fontEl);
-                this.menuEl.appendChild(fontEl);
-            });
             if (this.localFonts.length) {
                 const localFontsEls = fontEls.splice(-this.localFonts.length);
                 localFontsEls.forEach((el, index) => {
@@ -64,39 +50,6 @@ odoo.define("website_local_font.editor.snippets.options", function (require) {
                     );
                 });
             }
-
-            if (this.googleLocalFonts.length) {
-                const googleLocalFontsEls = fontEls.splice(
-                    -this.googleLocalFonts.length
-                );
-                googleLocalFontsEls.forEach((el, index) => {
-                    $(el).append(
-                        core.qweb.render("website.delete_google_font_btn", {
-                            index: index,
-                            local: true,
-                        })
-                    );
-                });
-            }
-
-            if (this.googleFonts.length) {
-                const googleFontsEls = fontEls.splice(-this.googleFonts.length);
-                googleFontsEls.forEach((el, index) => {
-                    $(el).append(
-                        core.qweb.render("website.delete_google_font_btn", {
-                            index: index,
-                        })
-                    );
-                });
-            }
-
-            $(this.menuEl).append(
-                $(
-                    core.qweb.render("website.add_google_font_btn", {
-                        variable: variable,
-                    })
-                )
-            );
             $(this.menuEl).append(
                 $(
                     qweb.render("website.add_local_font_btn", {
@@ -221,7 +174,6 @@ odoo.define("website_local_font.editor.snippets.options", function (require) {
             if (!save) {
                 return;
             }
-
             // Remove Local font
             const localFontIndex = parseInt(ev.target.dataset.fontIndex);
             const localFont = this.localFonts[localFontIndex].split(":");

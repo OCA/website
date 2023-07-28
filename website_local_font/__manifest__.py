@@ -4,7 +4,7 @@
 {
     "name": "Website Local Font",
     "summary": "Allows to add local fonts on Odoo website",
-    "version": "15.0.1.0.0",
+    "version": "16.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Onestein, Odoo Community Association (OCA)",
@@ -24,6 +24,9 @@
                 "website/static/src/scss/secondary_variables.scss",
                 "website_local_font/static/src/scss/secondary_variables.scss",
             ),
+        ],
+        "web.assets_backend": [
+            "website_local_font/static/src/xml/website.editor.xml",
         ],
     },
 }
