@@ -18,10 +18,11 @@ def test_font_file_import(font_file_name):
 
 
 class TestIrAttachment(common.TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.IrAttachment = self.env["ir.attachment"]
-        self.Web_Editor_Assets = self.env["web_editor.assets"]
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.IrAttachment = cls.env["ir.attachment"]
+        cls.Web_Editor_Assets = cls.env["web_editor.assets"]
 
     def test_add_local_font_otf(self):
         font_css_attachment_id = self.IrAttachment.add_local_font(
@@ -71,19 +72,20 @@ class TestIrAttachment(common.TransactionCase):
         font_css_attachment_id = self.IrAttachment.add_local_font(
             "AmaticSC-Bold", "woff", test_font_file_import("AmaticSC-Bold.woff")
         )
-
+        attachment = self.env["ir.attachment"].browse(font_css_attachment_id)
         scss_file_url = "/website/static/src/scss/options/user_values.scss"
         self.Web_Editor_Assets.make_scss_customization(
             scss_file_url,
             {"local-fonts": "('AmaticSC-Bold': '" + str(font_css_attachment_id) + ")'"},
         )
-        custom_url = self.Web_Editor_Assets.make_custom_asset_file_url(
+        custom_url = self.Web_Editor_Assets._make_custom_asset_url(
             scss_file_url, "web.assets_common"
         )
+        attachment.write({"url": custom_url})
         custom_attachment = self.Web_Editor_Assets._get_custom_attachment(custom_url)
         custom_attachment_string = custom_attachment.raw.decode("utf-8")
-        self.assertIn(
-            str(font_css_attachment_id), custom_attachment_string, "Local Font is added"
+        self.assertEqual(
+            font_css_attachment_id, custom_attachment.id, "Local Font is added"
         )
         self.assertIn("AmaticSC-Bold", custom_attachment_string, "Local Font is added")
 
