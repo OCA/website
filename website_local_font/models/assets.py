@@ -3,12 +3,13 @@
 
 import re
 
-from odoo import models
+from odoo import api, models
 
 
 class Assets(models.AbstractModel):
     _inherit = "web_editor.assets"
 
+    @api.model
     def make_scss_customization(self, url, values):
         """
         Added handling for local fonts deletion and addition in scss

@@ -26,11 +26,9 @@ odoo.define("website_local_font.editor.snippets.options", function (require) {
          */
         start: async function () {
             await this._super(...arguments);
-            $(this.menuEl).empty();
             const style = window.getComputedStyle(document.documentElement);
-            const nbFonts = parseInt(
-                weUtils.getCSSVariableValue("number-of-fonts", style)
-            );
+            const nbFonts =
+                parseInt(weUtils.getCSSVariableValue("number-of-fonts", style)) || [];
             const localFontsProperty = weUtils.getCSSVariableValue(
                 "local-fonts",
                 style
@@ -55,6 +53,7 @@ odoo.define("website_local_font.editor.snippets.options", function (require) {
                 this.menuEl.appendChild(fontEl);
             });
             if (this.localFonts.length) {
+                console.log(this.localFonts);
                 const localFontsEls = fontEls.splice(-this.localFonts.length);
                 localFontsEls.forEach((el, index) => {
                     $(el).append(
@@ -89,7 +88,6 @@ odoo.define("website_local_font.editor.snippets.options", function (require) {
                     );
                 });
             }
-
             $(this.menuEl).append(
                 $(
                     core.qweb.render("website.add_google_font_btn", {
@@ -221,9 +219,9 @@ odoo.define("website_local_font.editor.snippets.options", function (require) {
             if (!save) {
                 return;
             }
-
             // Remove Local font
             const localFontIndex = parseInt(ev.target.dataset.fontIndex);
+            console.log(localFontIndex);
             const localFont = this.localFonts[localFontIndex].split(":");
             const localFontName = localFont[0];
             values["delete-local-font-attachment-id"] = localFont[1];
