@@ -18,6 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. module: website_crm_privacy_policy
+#: model_terms:ir.ui.view,arch_db:website_crm_privacy_policy.contactus_form
+msgid ""
+"I accept the legal terms, the privacy policy &amp; conditions of this "
+"website."
+msgstr ""
+
 #~ msgid "I have read and accept the"
 #~ msgstr "Έχω διαβάσει και αποδέχομαι τους"
 
