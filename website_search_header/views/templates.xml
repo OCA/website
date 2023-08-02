@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="global_product_search_box"
+        inherit_id="website.website_search_box_input"
+    >
+        <xpath expr="//form//button" position="attributes">
+            <attribute name="t-attf-class" add="d-none" separator=" " />
+        </xpath>
+    </template>
+
+    <template id="global_product_search_box_input" name="Global Products search box">
+        <t t-call="website_search_header.global_product_search_box">
+            <t t-set="_form_classes" t-valuef="float-end d-none o_search_header" />
+            <t t-set="search_type" t-valuef="all" />
+            <t t-set="action" t-valuef="/website/search" />
+        </t>
+    </template>
+
+    <template id="header_search_link" name="Header Search Link">
+        <div>
+            <a t-attf-class="d-none #{_link_class}">
+            </a>
+            <t t-call="website_search_header.global_product_search_box_input" />
+        </div>
+        <div id="div_search_button" class="ms-2 ms-lg-2 me-4 me-lg-0">
+            <a t-attf-class="d-none #{_link_class}">
+            </a>
+             <script type="text/javascript">
+                    function test() {
+                        if ($(".o_search_header").hasClass('d-none')) {
+                            $(".o_search_header").removeClass('d-none');
+                            $(".o_search_header").addClass('ms-2 ms-lg-2');
+                            $("#search_btn_toggle_search i").removeClass('oi-search');
+                            $("#div_search_button").removeClass('ms-2 ms-lg-2');
+                            $("#search_btn_toggle_search i").addClass('oi-close');
+                        } else {
+                            $(".o_search_header").addClass('d-none');
+                            $(".o_search_header").removeClass('ms-2 ms-lg-2');
+                            $("#search_btn_toggle_search i").removeClass('oi-close');
+                            $("#search_btn_toggle_search i").addClass('oi-search');
+                            $("#div_search_button").addClass('ms-2 ms-lg-2');
+                        }
+                    }
+            </script>
+            <button
+                id="search_btn_toggle_search"
+                aria-label="Search"
+                t-attf-class="btn oe_search_button btn-primary"
+                title="Search"
+                onclick="test()"
+            >
+                <i class="oi oi-search" />
+            </button>
+        </div>
+    </template>
+
+    <template id="template_header_default" inherit_id="website.template_header_default">
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+    <template
+        id="template_header_hamburger"
+        inherit_id="website.template_header_hamburger"
+    >
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="template_header_vertical"
+        inherit_id="website.template_header_vertical"
+    >
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="template_header_sidebar" inherit_id="website.template_header_sidebar">
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="template_header_slogan" inherit_id="website.template_header_slogan">
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="template_header_contact" inherit_id="website.template_header_contact">
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="template_header_boxed" inherit_id="website.template_header_boxed">
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="template_header_centered_logo"
+        inherit_id="website.template_header_centered_logo"
+    >
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="template_header_image" inherit_id="website.template_header_image">
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="template_header_hamburger_full"
+        inherit_id="website.template_header_hamburger_full"
+    >
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="template_header_magazine"
+        inherit_id="website.template_header_magazine"
+    >
+        <xpath
+            expr="//t[@t-call='website.placeholder_header_call_to_action']"
+            position="before"
+        >
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
+                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+            </t>
+        </xpath>
+    </template>
+</odoo>
