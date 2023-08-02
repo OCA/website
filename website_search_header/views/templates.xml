@@ -19,12 +19,15 @@
     </template>
 
     <template id="header_search_link" name="Header Search Link">
-        <div>
+        <div t-attf-class="#{_item_class}">
             <a t-attf-class="d-none #{_link_class}">
             </a>
             <t t-call="website_search_header.global_product_search_box_input" />
         </div>
-        <div id="div_search_button" class="ms-2 ms-lg-2 me-4 me-lg-0">
+        <div
+            id="div_search_button"
+            t-attf-class="#{_item_class} ms-2 ms-lg-2 me-4 me-lg-0"
+        >
             <a t-attf-class="d-none #{_link_class}">
             </a>
              <script type="text/javascript">
@@ -62,8 +65,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item mx-lg-3'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
@@ -76,8 +79,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
@@ -91,8 +94,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item ms-lg-3'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
@@ -103,8 +106,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-valuef="nav-item" />
+                <t t-set="_link_class" t-valuef="nav-link" />
             </t>
         </xpath>
     </template>
@@ -115,8 +118,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
@@ -127,8 +130,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item ms-lg-3'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
@@ -139,8 +142,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
@@ -154,8 +157,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
@@ -166,8 +169,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item ms-lg-3'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
@@ -181,8 +184,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item ms-lg-3'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
@@ -196,8 +199,8 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-valuef="nav-item ms-lg-auto" />
-                <t t-set="_link_class" t-valuef="nav-link fw-bold" />
+                <t t-set="_item_class" t-value="'nav-item ms-md-auto'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
