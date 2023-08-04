@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2023-07-18 11:11+0000\n"
+"PO-Revision-Date: 2023-08-04 13:10+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -208,7 +208,7 @@ msgstr "di questo sito."
 #. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
 msgid "privacy policy"
-msgstr "informativa sulla privacy"
+msgstr "normativa sulla privacy"
 
 #. module: website_signup_legal_page_required
 #: view:website:auth_signup.fields
