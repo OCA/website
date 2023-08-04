@@ -10,15 +10,16 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-29 17:03+0000\n"
-"PO-Revision-Date: 2016-07-25 03:22+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"PO-Revision-Date: 2023-08-04 13:10+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_legal_page
 #: view:website:website_legal_page.acceptance_full
@@ -43,7 +44,7 @@ msgstr "Informazioni legali"
 #. module: website_legal_page
 #: view:website:website.layout
 msgid "Privacy policy"
-msgstr "Informativa sulla Privacy"
+msgstr "Normativa sulla privacy"
 
 #. module: website_legal_page
 #: view:website:website.layout
@@ -63,7 +64,7 @@ msgstr "di questo sito."
 #. module: website_legal_page
 #: view:website:website_legal_page.acceptance_full
 msgid "privacy policy"
-msgstr "informativa sulla privacy"
+msgstr "normativa sulla privacy"
 
 #. module: website_legal_page
 #: view:website:website_legal_page.acceptance_full
