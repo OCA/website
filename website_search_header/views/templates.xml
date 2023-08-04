@@ -19,31 +19,28 @@
     </template>
 
     <template id="header_search_link" name="Header Search Link">
-        <div t-attf-class="#{_item_class}">
+        <div t-attf-class="#{_item_class} ms-auto">
             <a t-attf-class="d-none #{_link_class}">
             </a>
             <t t-call="website_search_header.global_product_search_box_input" />
         </div>
-        <div
-            id="div_search_button"
-            t-attf-class="#{_item_class} ms-2 ms-lg-2 me-4 me-lg-0"
-        >
+        <div id="div_search_button" t-attf-class="#{_item_class} ms-2">
             <a t-attf-class="d-none #{_link_class}">
             </a>
              <script type="text/javascript">
                     function test() {
                         if ($(".o_search_header").hasClass('d-none')) {
                             $(".o_search_header").removeClass('d-none');
-                            $(".o_search_header").addClass('ms-2 ms-lg-2');
+                            $(".o_search_header").addClass('ms-2');
                             $("#search_btn_toggle_search i").removeClass('oi-search');
-                            $("#div_search_button").removeClass('ms-2 ms-lg-2');
+                            $("#div_search_button").removeClass('ms-2');
                             $("#search_btn_toggle_search i").addClass('oi-close');
                         } else {
                             $(".o_search_header").addClass('d-none');
-                            $(".o_search_header").removeClass('ms-2 ms-lg-2');
+                            $(".o_search_header").removeClass('ms-2');
                             $("#search_btn_toggle_search i").removeClass('oi-close');
                             $("#search_btn_toggle_search i").addClass('oi-search');
-                            $("#div_search_button").addClass('ms-2 ms-lg-2');
+                            $("#div_search_button").addClass('ms-2');
                         }
                     }
             </script>
@@ -65,7 +62,7 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-value="'nav-item mx-lg-3'" />
+                <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
