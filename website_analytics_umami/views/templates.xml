@@ -6,9 +6,9 @@
                 t-if="website and website.has_umami_analytics and website.umami_analytics_host"
             >
                 <script
-                        async="async"
-                        t-attf-src="#{website._get_umami_script_url()}"
-                        t-attf-data-website-id="#{website.umami_analytics_id}"
+                    async="async"
+                    t-attf-src="#{website._get_umami_script_url()}"
+                    t-attf-data-website-id="#{website.umami_analytics_id}"
                 />
             </t>
         </xpath>
