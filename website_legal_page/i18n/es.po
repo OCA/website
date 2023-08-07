@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-16 11:37+0000\n"
-"PO-Revision-Date: 2018-09-27 12:40+0000\n"
-"Last-Translator: Cris Martín <cristina.marrod@gmail.com>\n"
+"PO-Revision-Date: 2023-08-07 13:09+0000\n"
+"Last-Translator: Marcos Oitabén Fernández <marcosoitaben@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -28,7 +28,7 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "<font style=\"font-size: 42px;\">Table of Content</font>"
-msgstr ""
+msgstr "<font style=\"font-size: 42px;\">Índice de Contenidos</font>"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -57,6 +57,9 @@ msgid ""
 "law, such provisions shall be deleted without affecting the remaining "
 "provisions herein."
 msgstr ""
+"Si alguna de las disposiciones de las presentes condiciones resultara "
+"inválida en virtud de la legislación aplicable, dicha disposición será "
+"eliminada sin que ello afecte a las disposiciones restantes."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -92,16 +95,15 @@ msgstr "Cancelación"
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Intellectual Property Rights"
-msgstr ""
+msgstr "Derechos de Propiedad Intelectual"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Introduction"
-msgstr ""
+msgstr "Introducción"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page_link
-#, fuzzy
 msgid "Legal Page"
 msgstr "Aviso Legal"
 
@@ -142,6 +144,8 @@ msgid ""
 "THIS IS A SAMPLE PAGE! <br/>Please, edit this page to be valid with your use "
 "case."
 msgstr ""
+"ESTA ES UNA PÁGINA DE EJEMPLO! <br/>Por favor, edite esta página para que "
+"sea válida para su caso de uso."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -207,7 +211,7 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Your Content"
-msgstr ""
+msgstr "Tu contenido"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -215,22 +219,29 @@ msgid ""
 "engaging in any data mining, data harvesting, data extracting or any other "
 "similar activity in relation to this Website;"
 msgstr ""
+"participar en cualquier actividad de extracción de datos, recolección de "
+"datos, extracción de datos o cualquier otra actividad similar en relación "
+"con este sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "publicly performing and/or showing any Website material;"
 msgstr ""
+"públicamente ejecutar, reproducir y/o mostrar cualquier material del sitio "
+"web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "publishing any Website material in any other media;"
-msgstr ""
+msgstr "publicar cualquier material del sitio web en cualquier otro medio;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid ""
 "selling, sublicensing and/or otherwise commercializing any Website material;"
 msgstr ""
+"vender, sublicenciar y/o comercializar de cualquier otro modo cualquier "
+"material del sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -238,17 +249,24 @@ msgid ""
 "using this Website contrary to applicable laws and regulations, or in any "
 "way may cause harm to the Website, or to any person or business entity;"
 msgstr ""
+"utilizar este sitio web de forma contraria a las leyes y normativas "
+"aplicables, o que de cualquier forma pueda causar daños al sitio web, o a "
+"cualquier entidad comercial o persona;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "using this Website in any way that impacts user access to this Website;"
 msgstr ""
+"utilizar este sitio web de cualquier forma que afecte al acceso de los "
+"usuarios a este sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid ""
 "using this Website in any way that is or may be damaging to this Website;"
 msgstr ""
+"utilizar este sitio web de cualquier forma que sea o pueda ser perjudicial "
+"para el mismo;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
