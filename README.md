@@ -17,7 +17,13 @@ TODO: add repo description.
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[website_google_tag_manager](website_google_tag_manager/) | 16.0.1.0.0 |  | Add support for Google Tag Manager
+[website_legal_page](website_legal_page/) | 16.0.1.0.0 |  | Website Legal Page
+[website_odoo_debranding](website_odoo_debranding/) | 16.0.1.0.0 |  | Remove Odoo Branding from Website
 
 [//]: # (end addons)
 
