@@ -17,11 +17,11 @@
                             placeholder="umami.is"
                             attrs="{'invisible': [('has_umami_analytics', '=', False)]}"
                         />
-                        <field
-                            name="umami_script_name"
-                            placeholder="umami.is"
-                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"
-                        />
+<!--                        <field-->
+<!--                            name="umami_script_name"-->
+<!--                            placeholder="umami.is"-->
+<!--                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"-->
+<!--                        />-->
                     </group>
                 </page>
             </notebook>

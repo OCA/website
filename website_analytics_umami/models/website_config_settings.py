@@ -17,6 +17,6 @@ class ResConfigSettings(models.TransientModel):
     umami_analytics_host = fields.Char(
         related="website_id.umami_analytics_host", readonly=False
     )
-    umami_script_name = fields.Char(
-        related="website_id.umami_script_name", readonly=False
-    )
+    # umami_script_name = fields.Char(
+    #     related="website_id.umami_script_name", readonly=False
+    # )

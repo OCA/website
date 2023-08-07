@@ -40,17 +40,17 @@
                                 />
                             </div>
                         </div>
-                        <div
-                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"
-                        >
-                            <div class="row mt16">
-                                <label
-                                    class="col-md-3 o_light_label"
-                                    for="umami_script_name"
-                                />
-                                <field name="umami_script_name" />
-                            </div>
-                        </div>
+<!--                        <div-->
+<!--                            attrs="{'invisible': [('has_umami_analytics', '=', False)]}"-->
+<!--                        >-->
+<!--                            <div class="row mt16">-->
+<!--                                <label-->
+<!--                                    class="col-md-3 o_light_label"-->
+<!--                                    for="umami_script_name"-->
+<!--                                />-->
+<!--                                <field name="umami_script_name" />-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>

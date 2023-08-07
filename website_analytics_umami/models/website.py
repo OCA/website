@@ -16,15 +16,15 @@ class Website(models.Model):
         "Umami Host",
         help="The host/path your Umami instance is "
         "accessible by on the internet. Do not include a protocol here!\n"
-        "So http[s]://[this field]/umami.js should resolve to your umami.js",
+        "So http[s]://[this field]/script.js should resolve to your umami.js",
     )
-    umami_script_name = fields.Char(
-        "Script Name",
-        help="The name of the script to load. Defaults to umami.js"
-        " You can leave it as is unless you have a custom script",
-        default="umami.js",
-    )
+    # umami_script_name = fields.Char(
+    #     "Script Name",
+    #     help="The name of the script to load. Defaults to umami.js"
+    #     " You can leave it as is unless you have a custom script",
+    #     default="umami.js",
+    # )
 
     def _get_umami_script_url(self):
         self.ensure_one()
-        return f"https://{self.umami_analytics_host}/{self.umami_script_name}"
+        return f"https://{self.umami_analytics_host}/script.js"

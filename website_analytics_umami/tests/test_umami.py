@@ -13,7 +13,7 @@ class TestUmamiAnalytics(odoo.tests.HttpCase):
                 "name": "test base url",
                 "domain": self.domain,
                 "has_umami_analytics": True,
-                "umami_script_name": "umami.js",
+                "umami_script_name": "script.js",
                 "umami_analytics_host": "odoo.local",
             }
         )
@@ -21,4 +21,4 @@ class TestUmamiAnalytics(odoo.tests.HttpCase):
 
     def test__get_umami_script_url(self):
         url = self.website._get_umami_script_url()
-        self.assertEqual(url, "https://odoo.local/umami.js")
+        self.assertEqual(url, "https://odoo.local/script.js")
