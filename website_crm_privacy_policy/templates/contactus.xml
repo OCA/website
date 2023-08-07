@@ -1,0 +1,35 @@
+<odoo>
+    <!-- Privacy Policy -->
+    <template
+        id="contactus_form"
+        inherit_id="website_crm.contactus_form"
+        name="Add privacy policy checkbox"
+    >
+        <xpath
+            expr="//form//div/div/span[@id='s_website_form_result']/.."
+            position="before"
+        >
+            <div
+                class="form-group col-12 s_website_form_field s_website_form_required_custom"
+            >
+                <div class="form-check">
+                    <input
+                        type="checkbox"
+                        value="accepted"
+                        id="privacy_policy"
+                        name="privacy_policy"
+                        class="s_website_form_input form-check-input"
+                        required="required"
+                    />
+                    <label class="form-check-label" for="privacy_policy">
+                        <span class="acceptance_full">
+                            <a
+                                href="/legal"
+                            >I accept the legal terms, the privacy policy &amp; conditions of this website.</a>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

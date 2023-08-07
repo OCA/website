@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_cookiefirst
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-07-07 18:09+0000\n"
+"Last-Translator: Nils Coenen <nils.coenen@nico-solutions.de>\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
+msgid "00000000-0000-0000-0000-000000000000"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
+msgid "Add Cookiefirst functionality"
+msgstr "Cookiefirst-Funktionalität hinzufügen"
+
+#. module: website_cookiefirst
+#: model:ir.model,name:website_cookiefirst.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.cookies
+msgid "Cookie Declaration"
+msgstr "Cookie-Erklärung"
+
+#. module: website_cookiefirst
+#: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
+#: model:ir.model.fields,field_description:website_cookiefirst.field_website__cookiefirst_identifier
+msgid "Cookiefirst ID"
+msgstr "Cookiefirst-ID"
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.footer_copyright_company_name
+msgid "Cookies Policy"
+msgstr "Cookie-Richtlinie"
+
+#. module: website_cookiefirst
+#: model:ir.model.fields,help:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
+#: model:ir.model.fields,help:website_cookiefirst.field_website__cookiefirst_identifier
+msgid "This field holds the ID, needed for Cookiefirst functionality."
+msgstr ""
+"Dieses Feld enthält die ID, die für die Cookiefirst-Funktionalität benötigt "
+"wird."
+
+#. module: website_cookiefirst
+#: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
+msgid "Tracking ID"
+msgstr ""
+
+#. module: website_cookiefirst
+#: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__cookiefirst_enabled
+msgid "Use Cookiefirst"
+msgstr "Verwenden Sie Cookiefirst"
+
+#. module: website_cookiefirst
+#: model:ir.model,name:website_cookiefirst.model_website
+msgid "Website"
+msgstr "Webseite"

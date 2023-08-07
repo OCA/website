@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_require_login
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-03-07 19:22+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
+
+#. module: website_require_login
+#: model:ir.actions.act_window,name:website_require_login.action_website_auth_url
+#: model:ir.model,name:website_require_login.model_website_auth_url
+#: model:ir.ui.menu,name:website_require_login.menu_website_auth_url
+msgid "Authorization required URLs"
+msgstr "URL che richiedono il login"
+
+#. module: website_require_login
+#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: website_require_login
+#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: website_require_login
+#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: website_require_login
+#: model:ir.model,name:website_require_login.model_ir_http
+msgid "HTTP Routing"
+msgstr "Instradamento HTTP"
+
+#. module: website_require_login
+#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_require_login
+#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: website_require_login
+#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: website_require_login
+#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: website_require_login
+#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__path
+msgid "Path"
+msgstr "Percorso"
+
+#. module: website_require_login
+#: model:ir.model.fields,help:website_require_login.field_website_auth_url__path
+msgid ""
+"Relative URL path and subpath. Ex.: /shop will restrict /shop, /shop/"
+"product, etc."
+msgstr ""
+"Percorso e sotto-percorso relativo all'URL, es: /shop limiterà l'accesso sia "
+"a /shop che a /shop/product, etc."
+
+#. module: website_require_login
+#: model:ir.model.constraint,message:website_require_login.constraint_website_auth_url_path_unique
+msgid "The path must be unique per website!"
+msgstr "Il percorso deve essere univoco per sito web!"
+
+#. module: website_require_login
+#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__website_id
+msgid "Website"
+msgstr "Sito web"
