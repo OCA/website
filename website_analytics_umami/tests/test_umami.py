@@ -13,7 +13,6 @@ class TestUmamiAnalytics(odoo.tests.HttpCase):
                 "name": "test base url",
                 "domain": self.domain,
                 "has_umami_analytics": True,
-                "umami_script_name": "script.js",
                 "umami_analytics_host": "odoo.local",
             }
         )
