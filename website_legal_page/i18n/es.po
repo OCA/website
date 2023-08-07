@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-16 11:37+0000\n"
-"PO-Revision-Date: 2023-08-07 13:09+0000\n"
+"PO-Revision-Date: 2023-08-07 19:10+0000\n"
 "Last-Translator: Marcos Oitabén Fernández <marcosoitaben@gmail.com>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -24,6 +24,9 @@ msgid ""
 "fit, and by using this Website you are expected to review these Terms on a "
 "regular basis."
 msgstr ""
+"**NOMBRE DE LA COMPAÑÍA** tiene permitido revisar estos Términos en "
+"cualquier momento que lo considere oportuno, y al utilizar este sitio web se "
+"espera que usted revise estos Términos de forma regular."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -33,7 +36,7 @@ msgstr "<font style=\"font-size: 42px;\">Índice de Contenidos</font>"
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Assignment"
-msgstr ""
+msgstr "Asignación"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -44,11 +47,17 @@ msgid ""
 "may have for this Website are confidential and you must maintain "
 "confidentiality as well."
 msgstr ""
+"Ciertas áreas de este sitio web son de acceso restringido para usted, y **"
+"NOMBRE DE LA EMPRESA** puede restringir aún más el acceso de usted a "
+"cualquier área de este sitio web, en cualquier momento, a su absoluta "
+"discreción. Cualquier identificación de usuario y contraseña que usted pueda "
+"tener para este sitio web son confidenciales y usted debe mantener la "
+"confidencialidad también."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Governing Law &amp;amp; Jurisdiction"
-msgstr ""
+msgstr "Ley Aplicable &amp;amp; Jurisdicción"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -71,6 +80,14 @@ msgid ""
 "shall not be held liable for any indirect, consequential or special "
 "liability arising out of or in any way related to your use of this Website."
 msgstr ""
+"En ningún caso **NOMBRE DE LA EMPRESA**, ni ninguno de sus directivos, "
+"administradores y empleados, serán considerados responsables de nada que se "
+"derive o esté relacionado de algún modo con el uso que usted haga de este "
+"Sitio Web, con independencia de que dicha responsabilidad se derive de un "
+"contrato. **NOMBRE DE LA EMPRESA**, incluidos sus directivos, "
+"administradores y empleados, no serán responsables de ninguna "
+"responsabilidad indirecta, consecuente o especial que se derive o esté "
+"relacionada de algún modo con el uso que usted haga de este sitio web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
