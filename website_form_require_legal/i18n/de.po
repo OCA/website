@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: website_form_require_legal
-#. openerp-web
+#. odoo-javascript
 #: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "Agree to"
@@ -29,14 +29,14 @@ msgid "Legal terms acceptance"
 msgstr "Akzeptierung der rechtlichen Bedingungen"
 
 #. module: website_form_require_legal
-#. openerp-web
+#. odoo-javascript
 #: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "You must agree before submitting."
 msgstr "Sie müssen vor dem Absenden zustimmen."
 
 #. module: website_form_require_legal
-#. openerp-web
+#. odoo-javascript
 #: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "terms and conditions"
