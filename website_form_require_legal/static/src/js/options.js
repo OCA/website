@@ -3,15 +3,12 @@ odoo.define("website_form_require_legal.form_editor", function (require) {
 
     const core = require("web.core");
     const options = require("web_editor.snippets.options");
+    require("website.form_editor_registry");
     require("website.editor.snippets.options");
 
     const qweb = core.qweb;
-    const WebsiteFormEditor = options.registry.WebsiteFormEditor;
 
-    WebsiteFormEditor.include({
-        xmlDependencies: (WebsiteFormEditor.prototype.xmlDependencies || []).concat([
-            "/website_form_require_legal/static/src/xml/website_form_editor.xml",
-        ]),
+    options.registry.WebsiteFormEditor.include({
         /**
          * @override
          */
