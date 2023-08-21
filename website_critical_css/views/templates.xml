@@ -7,15 +7,9 @@
             />
         </xpath>
     </template>
-    <template
-        id="add_critical_css"
-        inherit_id="website.user_navbar"
-        name="Add Critical CSS"
-    >
+    <template id="add_critical_css" inherit_id="web.layout" name="Add Critical CSS">
         <xpath expr="//head/*[1]" position="before">
-            <t
-                t-if="main_object and main_object._name == 'website.page' and main_object.critical_css"
-            >
+            <t t-if="main_object and main_object._name == 'website.page' and main_object.critical_css">
                 <style>
                     <t t-raw="main_object.critical_css" />
                 </style>

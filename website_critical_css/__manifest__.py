@@ -2,7 +2,7 @@
 
 {
     "name": "Website Critical CSS",
-    "version": "13.0.2.0.1",
+    "version": "12.0.1.0.0",
     "author": "Sunflower IT,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
