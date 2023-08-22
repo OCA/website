@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_cookiebot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid "00000000-0000-0000-0000-000000000000"
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                    How to configure Cookiebot."
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid ""
+"<span class=\"text-muted\">\n"
+"                                    Instead of step 3, paste here your Domain Group ID.\n"
+"                                </span>"
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid "Ask for consent on cookies usage"
+msgstr ""
+
+#. module: website_cookiebot
+#: model:ir.model,name:website_cookiebot.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.cookies
+#: model_terms:website.page,arch_db:website_cookiebot.cookies_page
+msgid "Cookie Declaration"
+msgstr ""
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__cookiebot_enabled
+msgid "Cookiebot"
+msgstr ""
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_dgid
+msgid "Cookiebot Domain Group ID"
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.layout_footer_copyright
+msgid "Cookies Policy"
+msgstr ""
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__cookiebot_dgid
+msgid "Domain Group ID"
+msgstr ""
+
+#. module: website_cookiebot
+#: model:ir.model.fields,help:website_cookiebot.field_res_config_settings__cookiebot_dgid
+#: model:ir.model.fields,help:website_cookiebot.field_website__cookiebot_dgid
+msgid "Get this code from Cookiebot to enable it on the website."
+msgstr ""
+
+#. module: website_cookiebot
+#: model:ir.model,name:website_cookiebot.model_website
+msgid "Website"
+msgstr ""

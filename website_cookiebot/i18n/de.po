@@ -1,0 +1,102 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_cookiebot
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-01-28 17:44+0000\n"
+"Last-Translator: Nils Coenen | NICO SOLUTIONS - ENGINEERING & IT <nils.coenen"
+"@nico-solutions.de>\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid "00000000-0000-0000-0000-000000000000"
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                    How to configure Cookiebot."
+msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                    So konfigurieren Sie Cookiebot."
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Die hier eingestellten Werte sind "
+"websitespezifisch.\" groups=\"website.group_multi_website\"/>"
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid ""
+"<span class=\"text-muted\">\n"
+"                                    Instead of step 3, paste here your Domain Group ID.\n"
+"                                </span>"
+msgstr ""
+"<span class=\"text-muted\">\n"
+"                                    Anstelle von Schritt 3 fügen Sie hier "
+"Ihre Domänengruppen-ID ein.\n"
+"                                </span>"
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid "Ask for consent on cookies usage"
+msgstr "Bitten Sie um Zustimmung zur Verwendung von Cookies"
+
+#. module: website_cookiebot
+#: model:ir.model,name:website_cookiebot.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.cookies
+#: model_terms:website.page,arch_db:website_cookiebot.cookies_page
+msgid "Cookie Declaration"
+msgstr "Cookie-Erklärung"
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__cookiebot_enabled
+msgid "Cookiebot"
+msgstr ""
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_dgid
+msgid "Cookiebot Domain Group ID"
+msgstr "Cookiebot Domänengruppen-ID"
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.layout_footer_copyright
+msgid "Cookies Policy"
+msgstr "Cookie-Richtlinie"
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__cookiebot_dgid
+msgid "Domain Group ID"
+msgstr "Domänengruppen-ID"
+
+#. module: website_cookiebot
+#: model:ir.model.fields,help:website_cookiebot.field_res_config_settings__cookiebot_dgid
+#: model:ir.model.fields,help:website_cookiebot.field_website__cookiebot_dgid
+msgid "Get this code from Cookiebot to enable it on the website."
+msgstr ""
+"Holen Sie sich diesen Code von Cookiebot, um ihn auf der Website zu "
+"aktivieren."
+
+#. module: website_cookiebot
+#: model:ir.model,name:website_cookiebot.model_website
+msgid "Website"
+msgstr "Webseite"

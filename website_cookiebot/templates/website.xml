@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2021 Tecnativa - Jairo Llopis
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<data>
+    <template id="layout_footer_copyright" inherit_id="website.footer_custom">
+        <xpath
+            expr="//footer//div/span[hasclass('o_footer_copyright_name')]"
+            position="after"
+        >
+                <span t-if="website.cookiebot_dgid">- <a
+                    href="/legal/cookies-policy"
+                >Cookies Policy</a></span>
+        </xpath>
+    </template>
+    <template id="cookies" name="Cookies Policy">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div id="oe_structure_before_50" class="oe_structure">
+                    <section data-snippet-id="title">
+                        <h1 class="text-center">Cookie Declaration</h1>
+                    </section>
+                </div>
+                <section
+                    t-if="website.cookiebot_dgid and not editable"
+                    class="mb-5 mt-5"
+                >
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <script
+                                    id="CookieDeclaration"
+                                    t-attf-src="https://consent.cookiebot.com/{{website.cookiebot_dgid}}/cd.js"
+                                    type="text/javascript"
+                                    async=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div id="oe_structure_after_50" class="oe_structure" />
+            </div>
+        </t>
+    </template>
+    <record id="cookies_page" model="website.page">
+        <field name="url">/legal/cookies-policy</field>
+        <field name="website_published" eval="True" />
+        <field name="view_id" ref="cookies" />
+    </record>
+</data>
