@@ -23,3 +23,15 @@ class ResConfigSettings(models.TransientModel):
     def _compute_cookiebot_enabled(self):
         for record in self:
             record.cookiebot_enabled = bool(record.cookiebot_dgid)
+
+    @api.onchange("website_cookies_bar")
+    def _onchange_website_cookies_bar(self):
+        for record in self:
+            if record.website_cookies_bar:
+                record.cookiebot_enabled = False
+
+    @api.onchange("cookiebot_enabled")
+    def _onchange_cookiebot_enabled(self):
+        for record in self:
+            if record.cookiebot_enabled:
+                record.website_cookies_bar = False
