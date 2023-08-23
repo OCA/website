@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2023 Manuel Regidor <manuel.regidor@sygel.es>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+    <template id="website_contact_lastname_address" inherit_id="website_sale.address">
+        <xpath expr="//input[@name='name']/.." position="after">
+            <t
+                t-set='name_no_edit'
+                t-value="(mode == ('edit', 'billing') and 'vat' in checkout and checkout['vat'] and not can_edit_vat and mode) or (mode == ('edit', 'shipping') and 'parent_id' in checkout and checkout['parent_id'] and not checkout['parent_id'].can_edit_vat())"
+            />
+            <div
+                t-attf-class="form-group #{error.get('firstname') and 'o_has_error' or ''} col-lg-12 div_firstname"
+            >
+                <label class="col-form-label" for="name">Name</label>
+                <input
+                    type="text"
+                    name="firstname"
+                    t-attf-class="form-control #{error.get('firstname') and 'is-invalid' or ''}"
+                    t-att-value="'firstname' in checkout and checkout['firstname']"
+                    t-att-readonly="'1' if name_no_edit else None"
+                />
+            </div>
+            <div
+                t-attf-class="form-group #{error.get('lastname') and 'o_has_error' or ''} col-lg-6 div_lastname"
+            >
+                <label class="col-form-label" for="name">Lastname</label>
+                <input
+                    type="text"
+                    name="lastname"
+                    t-attf-class="form-control #{error.get('lastname') and 'is-invalid' or ''}"
+                    t-att-value="'lastname' in checkout and checkout['lastname']"
+                    t-att-readonly="'1' if name_no_edit else None"
+                />
+            </div>
+        </xpath>
+        <!-- Name field is removed as it is computed from firstname and lastname -->
+        <xpath expr="//input[@name='name']/.." position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+    </template>
+</odoo>

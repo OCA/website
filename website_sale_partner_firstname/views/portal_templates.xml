@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2023 Manuel Regidor <manuel.regidor@sygel.es>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+    <template
+        id="website_contact_lastname_portal_my_details"
+        inherit_id="portal.portal_my_details"
+    >
+        <xpath expr="//label[@for='name']/.." position="after">
+            <div
+                t-attf-class="form-group #{error.get('firstname') and 'o_has_error' or ''} col-xl-6"
+            >
+                <label class="col-form-label" for="firstname">Name</label>
+                <input
+                    type="text"
+                    name="firstname"
+                    t-attf-class="form-control #{error.get('firstname') and 'is-invalid' or ''}"
+                    t-att-disabled="None if partner_can_edit_vat else '1'"
+                    t-att-value="firstname or partner.firstname"
+                />
+            </div>
+            <div
+                t-attf-class="form-group #{error.get('lastname') and 'o_has_error' or ''} col-xl-6"
+            >
+                <label class="col-form-label" for="lastname">Lastname</label>
+                <input
+                    type="text"
+                    name="lastname"
+                    t-attf-class="form-control #{error.get('lastname') and 'is-invalid' or ''}"
+                    t-att-disabled="None if partner_can_edit_vat else '1'"
+                    t-att-value="lastname or partner.lastname"
+                />
+            </div>
+        </xpath>
+        <!-- Name field is removed as it is computed from firstname and lastname -->
+        <xpath expr="//label[@for='name']/.." position="attributes">
+            <attribute name="style">display: none;</attribute>
+        </xpath>
+    </template>
+</odoo>

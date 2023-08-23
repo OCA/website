@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2023 Manuel Regidor <manuel.regidor@sygel.es>
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+    <template id="website_contact_lastname_auth_signup" inherit_id="auth_signup.fields">
+        <xpath expr="//div[hasclass('field-name')]" position="after">
+            <div class="form-group field-lastname">
+                <label for="name">Last Name</label>
+                <input
+                    type="text"
+                    name="lastname"
+                    t-att-value="lastname"
+                    id="lastname"
+                    class="form-control form-control-sm"
+                    t-att-readonly="'readonly' if only_passwords else None"
+                    t-att-autofocus="'autofocus' if login and not only_passwords else None"
+                />
+            </div>
+        </xpath>
+    </template>
+</odoo>
