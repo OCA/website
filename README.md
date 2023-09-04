@@ -33,7 +33,7 @@ addon | version | maintainers | summary
 [website_legal_page](website_legal_page/) | 15.0.2.0.0 |  | Website Legal Page
 [website_odoo_debranding](website_odoo_debranding/) | 15.0.1.0.1 |  | Remove Odoo Branding from Website
 [website_plausible](website_plausible/) | 15.0.1.1.1 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Track website users using plausible
-[website_snippet_big_button](website_snippet_big_button/) | 15.0.1.0.0 |  | A snippet that adds two big buttons
+[website_snippet_big_button](website_snippet_big_button/) | 15.0.1.1.0 |  | A snippet that adds two big buttons
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 15.0.1.0.0 |  | Allow to select country in a dropdown
 [website_snippet_dynamic_link](website_snippet_dynamic_link/) | 15.0.1.0.0 |  | Website Snippet Dynamic Link
 [website_snippet_marginless_gallery](website_snippet_marginless_gallery/) | 15.0.1.0.0 |  | Add a snippet to have a marginless image gallery
