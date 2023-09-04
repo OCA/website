@@ -8,17 +8,14 @@
             <div class="container">
                 <div class="row mt16 mb16">
                     <div class="text-center col-sm-6 offset-lg-2 col-lg-4 pb8">
-                        <a
-                            href="/contactus"
-                            class="btn btn-success btn-lg font-weight-bold"
-                        >
+                        <a href="#" class="btn btn-success btn-lg font-weight-bold">
                             <span class="h3 d-block">I want this</span>
                             <i class="fa fa-thumbs-o-up fa-5x mt16 mb16" />
                             <span class="d-block">Request budget</span>
                         </a>
                     </div>
                     <div class="text-center col-sm-6 col-lg-4 pb8">
-                        <a href="/" class="btn btn-danger btn-lg font-weight-bold">
+                        <a href="#" class="btn btn-danger btn-lg font-weight-bold">
                             <span class="h3 d-block">I want another thing</span>
                             <i class="fa fa-thumbs-o-down fa-5x mt16 mb16" />
                             <span class="d-block">Continue searching</span>
