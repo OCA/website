@@ -5,7 +5,7 @@
 {
     "name": "Big Buttons Snippet",
     "summary": "A snippet that adds two big buttons",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.1.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Grupo ESOC Ingeniería de Servicios, S.L.U., "
