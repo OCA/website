@@ -7,20 +7,21 @@ msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-18 17:11+0000\n"
-"PO-Revision-Date: 2020-05-19 19:15+0200\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2023-09-20 17:50+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: Trey <info@trey.es>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid "00000000-0000-0000-0000-000000000000"
-msgstr ""
+msgstr "00000000-0000-0000-0000-000000000000"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
@@ -28,6 +29,8 @@ msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
 "                                    How to configure Cookiebot."
 msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                    Cómo configurar Cookiebot."
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
@@ -35,6 +38,8 @@ msgid ""
 "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
 "specific.\" groups=\"website.group_multi_website\"/>"
 msgstr ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+"specific.\" groups=\"website.group_multi_website\"/>"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
@@ -44,11 +49,15 @@ msgid ""
 "Domain Group ID.\n"
 "                                </span>"
 msgstr ""
+"<span class=\"text-muted\">\n"
+"                                    En lugar del paso 3, pegue aquí su ID de "
+"grupo de dominio.\n"
+"                                </span>"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid "Ask for consent on cookies usage"
-msgstr ""
+msgstr "Solicitar consentimiento sobre el uso de cookies"
 
 #. module: website_cookiebot
 #: model:ir.model,name:website_cookiebot.model_res_config_settings
@@ -63,12 +72,12 @@ msgstr "Declaración de cookies"
 #. module: website_cookiebot
 #: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__cookiebot_enabled
 msgid "Cookiebot"
-msgstr ""
+msgstr "Cookiebot"
 
 #. module: website_cookiebot
 #: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_dgid
 msgid "Cookiebot Domain Group ID"
-msgstr ""
+msgstr "Cookiebot Dominio Grupo ID"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.layout_footer_copyright
@@ -78,13 +87,13 @@ msgstr "Política de cookies"
 #. module: website_cookiebot
 #: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__cookiebot_dgid
 msgid "Domain Group ID"
-msgstr ""
+msgstr "ID de grupo de dominios"
 
 #. module: website_cookiebot
 #: model:ir.model.fields,help:website_cookiebot.field_res_config_settings__cookiebot_dgid
 #: model:ir.model.fields,help:website_cookiebot.field_website__cookiebot_dgid
 msgid "Get this code from Cookiebot to enable it on the website."
-msgstr ""
+msgstr "Obtén este código de Cookiebot para habilitarlo en el sitio web."
 
 #. module: website_cookiebot
 #: model:ir.model,name:website_cookiebot.model_website
