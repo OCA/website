@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2023-07-20 09:10+0000\n"
+"PO-Revision-Date: 2023-09-21 15:39+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -95,7 +95,7 @@ msgstr "La tua azienda / organizzazione"
 #. module: website_event_register_free
 #: view:website:website_event_register_free.confirm_message
 msgid "Your free registration for"
-msgstr ""
+msgstr "La tua rgistrazione gratuita per"
 
 #. module: website_event_register_free
 #: view:website:website_event_register_free.confirm_message
