@@ -2,3 +2,4 @@
 
   * David Vidal
   * Stefan Ungureanu
+  * Carolina Fernandez

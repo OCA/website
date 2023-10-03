@@ -29,10 +29,16 @@ msgstr ""
 
 #. module: website_forum_subscription
 #: model_terms:ir.ui.view,arch_db:website_forum_subscription.follow
-msgid "<small>Subscribe</small><i class=\"fa fa-fw ml-1\"/>"
-msgstr "<small>Iscrizione</small><i class=\"fa fa-fw ml-1\"/>"
+msgid "<small>Subscribe</small><i class=\"fa fa-fw ms-1\"/>"
+msgstr ""
 
 #. module: website_forum_subscription
 #: model_terms:ir.ui.view,arch_db:website_forum_subscription.follow
-msgid "<small>Unsubscribe</small><i class=\"fa fa-fw ml-1\"/>"
-msgstr "<small>Annulla iscrizione</small><i class=\"fa fa-fw ml-1\"/>"
+msgid "<small>Unsubscribe</small><i class=\"fa fa-fw ms-1\"/>"
+msgstr ""
+
+#~ msgid "<small>Subscribe</small><i class=\"fa fa-fw ml-1\"/>"
+#~ msgstr "<small>Iscrizione</small><i class=\"fa fa-fw ml-1\"/>"
+
+#~ msgid "<small>Unsubscribe</small><i class=\"fa fa-fw ml-1\"/>"
+#~ msgstr "<small>Annulla iscrizione</small><i class=\"fa fa-fw ml-1\"/>"
