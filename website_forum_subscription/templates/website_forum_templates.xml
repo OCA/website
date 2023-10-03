@@ -24,12 +24,12 @@
             >
                 <button class="btn text-reset js_unfollow_btn">
                     <div class="d-flex align-items-center">
-                        <small>Unsubscribe</small><i class="fa fa-fw ml-1" />
+                        <small>Unsubscribe</small><i class="fa fa-fw ms-1" />
                     </div>
                 </button>
                 <button class="btn text-reset js_follow_btn">
                     <div class="d-flex align-items-center">
-                        <small>Subscribe</small><i class="fa fa-fw ml-1" />
+                        <small>Subscribe</small><i class="fa fa-fw ms-1" />
                     </div>
                 </button>
             </div>
@@ -48,7 +48,7 @@
         name="Forum page subscription"
         inherit_id="website_forum.forum_index"
     >
-        <xpath expr="//div[hasclass('no-gutters')]/div" position="before">
+        <xpath expr="//div[@class='row g-0']" position="before">
             <t t-call="website_forum_subscription.follow">
                 <t t-set="object" t-value="forum" />
             </t>
