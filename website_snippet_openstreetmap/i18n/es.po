@@ -6,180 +6,182 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-10-09 07:41+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.snippet_options
 msgid ", .s_openstreetmap"
-msgstr ""
+msgstr ", .s_openstreetmap"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "1 km"
-msgstr ""
+msgstr "1 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "10 m"
-msgstr ""
+msgstr "10 m"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "100 km"
-msgstr ""
+msgstr "100 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "100 m"
-msgstr ""
+msgstr "100 m"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "1000 km"
-msgstr ""
+msgstr "1000 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "15 km"
-msgstr ""
+msgstr "15 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "2 km"
-msgstr ""
+msgstr "2 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "2.5 m"
-msgstr ""
+msgstr "2.5 m"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "20 m"
-msgstr ""
+msgstr "20 m"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "200 km"
-msgstr ""
+msgstr "200 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "200 m"
-msgstr ""
+msgstr "200 m"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "2000 km"
-msgstr ""
+msgstr "2000 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "30 km"
-msgstr ""
+msgstr "30 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "4 km"
-msgstr ""
+msgstr "4 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "400 km"
-msgstr ""
+msgstr "400 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "400 m"
-msgstr ""
+msgstr "400 m"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "5 m"
-msgstr ""
+msgstr "5 m"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "50 km"
-msgstr ""
+msgstr "50 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "50 m"
-msgstr ""
+msgstr "50 m"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "8 km"
-msgstr ""
+msgstr "8 km"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Address"
-msgstr ""
+msgstr "Dirección"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap
 msgid "An address must be specified for a map to be embedded"
-msgstr ""
+msgstr "Debe especificarse una dirección para incrustar un mapa"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Color filter"
-msgstr ""
+msgstr "Filtro de color"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "CyclOSM"
-msgstr ""
+msgstr "CyclOSM"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Cycle Map"
-msgstr ""
+msgstr "Mapa del ciclo"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Humanitarian"
-msgstr ""
+msgstr "Humanitario"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "OPNVKarte"
-msgstr ""
+msgstr "OPNVKarte"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Standard"
-msgstr ""
+msgstr "Estándar"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Transport Map"
-msgstr ""
+msgstr "Mapa de transporte"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Zoom"
-msgstr ""
+msgstr "Ampliar"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "e.g. De Brouckere, Brussels, Belgium"
-msgstr ""
+msgstr "p. ej. De Brouckere, Bruselas, Bélgica"
