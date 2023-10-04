@@ -12,6 +12,7 @@ setuptools.setup(
         'odoo-addon-website_cookiefirst>=16.0dev,<16.1dev',
         'odoo-addon-website_crm_privacy_policy>=16.0dev,<16.1dev',
         'odoo-addon-website_crm_quick_answer>=16.0dev,<16.1dev',
+        'odoo-addon-website_forum_subscription>=16.0dev,<16.1dev',
         'odoo-addon-website_google_tag_manager>=16.0dev,<16.1dev',
         'odoo-addon-website_legal_page>=16.0dev,<16.1dev',
         'odoo-addon-website_odoo_debranding>=16.0dev,<16.1dev',
