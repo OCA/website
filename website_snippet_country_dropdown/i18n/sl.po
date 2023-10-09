@@ -20,7 +20,7 @@ msgstr ""
 "%100==4 ? 2 : 3);\n"
 
 #. module: website_snippet_country_dropdown
-#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 #: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 #, fuzzy
 msgid "A readonly country dropdown input"
@@ -32,32 +32,32 @@ msgid "Country dropdown demo"
 msgstr "Demo spustnega seznama držav"
 
 #. module: website_snippet_country_dropdown
-#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 #: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Other label"
 msgstr "Druga oznaka"
 
 #. module: website_snippet_country_dropdown
-#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 #: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Submit (you will see the GET parameters in the URL)"
 msgstr ""
 
 #. module: website_snippet_country_dropdown
-#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 #: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Test here the country dropdown snippet behavior"
 msgstr "Tu testirajte obnašanje spustnega odseka"
 
 #. module: website_snippet_country_dropdown
-#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 #: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "This is a form"
 msgstr "To je obrazec"
 
 #. module: website_snippet_country_dropdown
 #. openerp-web
-#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:11
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:0
 #, python-format
 msgid ""
 "Write the \"name\" attribute for the input what will be sent with the form."
@@ -65,7 +65,7 @@ msgstr "Zapišite atribut \"naziva\" za vnos vsebine, ki bo poslana z obrazcem."
 
 #. module: website_snippet_country_dropdown
 #. openerp-web
-#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:12
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:0
 #, python-format
 msgid "You can modify the label directly with the website editor."
 msgstr "Oznako lahko spremenite neposredno z urejevalnikom spletne strani."
