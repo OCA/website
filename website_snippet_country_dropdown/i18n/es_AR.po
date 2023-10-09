@@ -66,7 +66,8 @@ msgstr ""
 #: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:0
 #, python-format
 msgid "You can modify the label directly with the website editor."
-msgstr "Puede modificar la etiqueta directamente desde el editor del sitio web."
+msgstr ""
+"Puede modificar la etiqueta directamente desde el editor del sitio web."
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
