@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_crm_recaptcha
+# 	* website_crm_recaptcha
 #
 msgid ""
 msgstr ""
