@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_megamenu
+# 	* website_megamenu
 #
 msgid ""
 msgstr ""
