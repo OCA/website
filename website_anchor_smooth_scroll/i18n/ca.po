@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_anchor_smooth_scroll
+# 	* website_anchor_smooth_scroll
 #
 msgid ""
 msgstr ""
