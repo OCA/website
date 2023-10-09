@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_logo
+# 	* website_logo
 #
 msgid ""
 msgstr ""
@@ -29,7 +29,9 @@ msgstr "Logo de {{website.name}}"
 #. module: website_logo
 #: model:ir.model.fields,help:website_logo.field_res_config_settings__logo
 #: model:ir.model.fields,help:website_logo.field_website__logo
-msgid "This field holds the logo for this website, showed in header. Recommended size is 180x50"
+msgid ""
+"This field holds the logo for this website, showed in header. Recommended "
+"size is 180x50"
 msgstr ""
 "Aquest camp defineix el logo per aquest lloc web, mostrat en la capçalera. "
 "La mida recomanada és 180x50"
