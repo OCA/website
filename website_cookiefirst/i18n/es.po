@@ -51,7 +51,8 @@ msgstr "Política de Cookies"
 #: model:ir.model.fields,help:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
 #: model:ir.model.fields,help:website_cookiefirst.field_website__cookiefirst_identifier
 msgid "This field holds the ID, needed for Cookiefirst functionality."
-msgstr "Este campo contiene el ID, necesario para la funcionalidad Cookiefirst."
+msgstr ""
+"Este campo contiene el ID, necesario para la funcionalidad Cookiefirst."
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
