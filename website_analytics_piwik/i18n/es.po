@@ -59,8 +59,8 @@ msgid ""
 msgstr ""
 "El host / ruta de acceso a la instalación de Piwik es accesible a través de "
 "Internet. ¡No incluya un protocolo aquí!\n"
-"Entonces http [s]: // [este campo] /piwik.php debería resolverse en su "
-"piwik.php"
+"Entonces http [s]: // [este campo] /piwik.php debería resolverse en su piwik."
+"php"
 
 #. module: website_analytics_piwik
 #: model_terms:ir.ui.view,arch_db:website_analytics_piwik.view_website_config_settings
