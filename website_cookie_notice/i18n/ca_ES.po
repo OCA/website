@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_cookie_notice
+# 	* website_cookie_notice
 #
 msgid ""
 msgstr ""
@@ -16,7 +16,9 @@ msgstr ""
 
 #. module: website_cookie_notice
 #: model_terms:ir.ui.view,arch_db:website_cookie_notice.message
-msgid ". To disable them, configure your browser properly. If you keep using this website, you are accepting those."
+msgid ""
+". To disable them, configure your browser properly. If you keep using this "
+"website, you are accepting those."
 msgstr ""
 
 #. module: website_cookie_notice
