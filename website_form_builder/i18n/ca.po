@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_form_builder
+# 	* website_form_builder
 #
 msgid ""
 msgstr ""
