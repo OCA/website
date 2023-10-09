@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_lazy_load_image
+# 	* website_lazy_load_image
 #
 msgid ""
 msgstr ""
