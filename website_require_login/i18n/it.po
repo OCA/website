@@ -75,8 +75,8 @@ msgstr "Percorso"
 #. module: website_require_login
 #: model:ir.model.fields,help:website_require_login.field_website_auth_url__path
 msgid ""
-"Relative URL path and subpath. Ex.: /shop will restrict /shop, "
-"/shop/product, etc."
+"Relative URL path and subpath. Ex.: /shop will restrict /shop, /shop/"
+"product, etc."
 msgstr ""
 "Percorso e sotto-percorso relativo all'URL, es: /shop limiterà l'accesso sia "
 "a /shop che a /shop/product, etc."
