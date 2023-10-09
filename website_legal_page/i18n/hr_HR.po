@@ -38,27 +38,6 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"<strong>First party cookies</strong>&amp;nbsp;are cookies set by the "
-"website\n"
-"                you’re visiting. Only that website can read them. In "
-"addition, a\n"
-"                website might potentially use external services, which also "
-"set their\n"
-"                own cookies, known as <strong>third-party cookies.</strong>"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"A cookie is a small text file that a website stores on your computer or "
-"mobile device when you visit the site."
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Assignment"
 msgstr ""
 
@@ -76,43 +55,7 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "Cookies Policy"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"Cookies can also be used to establish anonymised statistics about the "
-"browsing experience on our sites."
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"Every time you visit our websites, you will be prompted to <strong>accept "
-"cookies.</strong>"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Governing Law &amp;amp; Jurisdiction"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "How do we use cookies?"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"However, to view some of our pages, you will have to accept cookies from "
-"external organisations. &amp;nbsp;"
 msgstr ""
 
 #. module: website_legal_page
@@ -208,16 +151,6 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"Persistent cookies&amp;nbsp;are cookies saved on your computer and that are\n"
-"                not deleted automatically when you quit your browser, unlike "
-"a&amp;nbsp;session\n"
-"                cookie,&amp;nbsp;which is deleted when you quit your browser."
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Restrictions"
 msgstr ""
 
@@ -239,32 +172,10 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
-"That way, you don’t have to re-enter them when browsing around the site "
-"during the same visit."
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
 "The **COMPANY NAME** is allowed to assign, transfer, and subcontract its "
 "rights and/or obligations under these Terms without any notification. "
 "However, you are not allowed to assign, transfer, or subcontract any of your "
 "rights and/or obligations under these Terms."
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "The <strong>3 types of first-party cookie</strong> we use are to:"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"The purpose is to enable the site to remember your preferences (such as user "
-"name, language, etc.) for a certain period of time."
 msgstr ""
 
 #. module: website_legal_page
@@ -306,21 +217,7 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid ""
-"This websites mostly use “first-party cookies”. These are cookies set and "
-"controlled by us, not by any external organisation."
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Variation of Terms"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "What are cookies?"
 msgstr ""
 
 #. module: website_legal_page
@@ -356,18 +253,6 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "gather analytics data (about user behaviour)"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "make our websites operational"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publicly performing and/or showing any Website material;"
 msgstr ""
 
@@ -382,12 +267,6 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid ""
 "selling, sublicensing and/or otherwise commercializing any Website material;"
-msgstr ""
-
-#. module: website_legal_page
-#: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
-#: model_terms:website.page,arch_db:website_legal_page.legal_page_page
-msgid "store visitor preferences"
 msgstr ""
 
 #. module: website_legal_page
