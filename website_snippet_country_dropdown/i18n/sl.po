@@ -57,7 +57,7 @@ msgstr "To je obrazec"
 
 #. module: website_snippet_country_dropdown
 #. openerp-web
-#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:11
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:0
 #, python-format
 msgid ""
 "Write the \"name\" attribute for the input what will be sent with the form."
@@ -65,7 +65,7 @@ msgstr "Zapišite atribut \"naziva\" za vnos vsebine, ki bo poslana z obrazcem."
 
 #. module: website_snippet_country_dropdown
 #. openerp-web
-#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:12
+#: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:0
 #, python-format
 msgid "You can modify the label directly with the website editor."
 msgstr "Oznako lahko spremenite neposredno z urejevalnikom spletne strani."
