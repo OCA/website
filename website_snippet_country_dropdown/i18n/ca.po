@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_snippet_country_dropdown
+# 	* website_snippet_country_dropdown
 #
 msgid ""
 msgstr ""
@@ -43,7 +43,8 @@ msgstr "Envia (veureu els paràmetres GET a l'URL)"
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page
 msgid "Test here the country dropdown snippet behavior"
-msgstr "Proveu aquí el comportament del fragment de llista desplegable del país"
+msgstr ""
+"Proveu aquí el comportament del fragment de llista desplegable del país"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_page_ir_ui_view
@@ -55,7 +56,8 @@ msgstr "Això és un formulari"
 #. openerp-web
 #: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:11
 #, python-format
-msgid "Write the \"name\" attribute for the input what will be sent with the form."
+msgid ""
+"Write the \"name\" attribute for the input what will be sent with the form."
 msgstr ""
 "Escriviu l'atribut \"nom\" per a l'entrada del que s'enviarà amb el "
 "formulari."
