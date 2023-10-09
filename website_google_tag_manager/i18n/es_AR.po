@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2016-12-24 04:16+0000\n"
 "PO-Revision-Date: 2021-03-31 04:46+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
-"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/teams/"
-"23907/es_AR/)\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/"
+"teams/23907/es_AR/)\n"
 "Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,6 +41,12 @@ msgid "Container ID"
 msgstr "Container ID"
 
 #. module: website_google_tag_manager
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_website__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "GTM-XXXXX"
 msgstr "GTM-XXXXX"
@@ -54,6 +60,18 @@ msgstr "Google Tag Manager"
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "How to get my GTM container ID"
 msgstr "Como obtener mi GTM container ID"
+
+#. module: website_google_tag_manager
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings__id
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_website__id
+msgid "ID"
+msgstr ""
+
+#. module: website_google_tag_manager
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:website_google_tag_manager.field_website____last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
