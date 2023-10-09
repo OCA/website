@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* website_portal_contact
+# 	* website_portal_contact
 #
 msgid ""
 msgstr ""
@@ -49,7 +49,7 @@ msgid "Email"
 msgstr "E-mail"
 
 #. module: website_portal_contact
-#: code:addons/website_portal_contact/controllers/main.py:118
+#: code:addons/website_portal_contact/controllers/main.py:117
 #, python-format
 msgid "Fields not available: %s"
 msgstr "Campi non disponibili: %s"
@@ -65,7 +65,7 @@ msgid "My Contacts"
 msgstr "I miei contatti"
 
 #. module: website_portal_contact
-#: code:addons/website_portal_contact/controllers/main.py:56
+#: code:addons/website_portal_contact/controllers/main.py:55
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
 #, python-format
 msgid "Name"
@@ -77,7 +77,7 @@ msgid "New Contact"
 msgstr "Nuovo contatto"
 
 #. module: website_portal_contact
-#: code:addons/website_portal_contact/controllers/main.py:55
+#: code:addons/website_portal_contact/controllers/main.py:54
 #, python-format
 msgid "Newest"
 msgstr "Il più recente"

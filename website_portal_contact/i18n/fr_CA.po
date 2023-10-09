@@ -10,15 +10,15 @@ msgstr ""
 "PO-Revision-Date: 2020-03-02 16:15-0500\n"
 "Last-Translator: Marie-Michèle Poulin <marie-michele.poulin@mathben.tech>\n"
 "Language-Team: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"Language: fr\n"
 "X-Generator: Poedit 2.2.1\n"
 
 #. module: website_portal_contact
-#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form
 msgid "Add Contact"
 msgstr "Ajouter un contact"
 
@@ -39,9 +39,9 @@ msgid "Delete"
 msgstr "Supprimer"
 
 #. module: website_portal_contact
-#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_followup
-msgid "Edit Contact"
-msgstr "Modifier le contact"
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form
+msgid "Edit Contact:"
+msgstr ""
 
 #. module: website_portal_contact
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
@@ -49,8 +49,7 @@ msgid "Email"
 msgstr "Courriel"
 
 #. module: website_portal_contact
-#: code:addons/addons/website/website_portal_contact/controllers/main.py:118
-#: code:addons/website_portal_contact/controllers/main.py:118
+#: code:addons/website_portal_contact/controllers/main.py:117
 #, python-format
 msgid "Fields not available: %s"
 msgstr "Champs non disponible : %s"
@@ -66,8 +65,7 @@ msgid "My Contacts"
 msgstr "Mes contacts"
 
 #. module: website_portal_contact
-#: code:addons/addons/website/website_portal_contact/controllers/main.py:56
-#: code:addons/website_portal_contact/controllers/main.py:56
+#: code:addons/website_portal_contact/controllers/main.py:55
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_table
 #, python-format
 msgid "Name"
@@ -79,8 +77,7 @@ msgid "New Contact"
 msgstr "Nouveau contact"
 
 #. module: website_portal_contact
-#: code:addons/addons/website/website_portal_contact/controllers/main.py:55
-#: code:addons/website_portal_contact/controllers/main.py:55
+#: code:addons/website_portal_contact/controllers/main.py:54
 #, python-format
 msgid "Newest"
 msgstr "Le plus récent"
@@ -91,7 +88,7 @@ msgid "No contacts found."
 msgstr "Aucun contact trouvé."
 
 #. module: website_portal_contact
-#: model_terms:ir.ui.view,arch_db:website_portal_contact.contacts_followup
+#: model_terms:ir.ui.view,arch_db:website_portal_contact.form_actions
 msgid "Save"
 msgstr "Sauvegarder"
 
@@ -110,3 +107,6 @@ msgstr "Rechercher..."
 #: model_terms:ir.ui.view,arch_db:website_portal_contact.portal_my_home_contacts
 msgid "Your Contacts"
 msgstr "Vos contacts"
+
+#~ msgid "Edit Contact"
+#~ msgstr "Modifier le contact"
