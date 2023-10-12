@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2023-08-04 13:10+0000\n"
+"PO-Revision-Date: 2023-10-12 09:39+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -44,7 +44,7 @@ msgstr "E-mail"
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "File Upload"
-msgstr "Carica File"
+msgstr "Carica file"
 
 #. module: website_snippet_contact_form
 #: view:website:website_snippet_contact_form.validation_error_page
@@ -89,7 +89,7 @@ msgstr "Dicci qualcosa!"
 #. module: website_snippet_contact_form
 #: view:website:website.snippets
 msgid "Upload file"
-msgstr "Caricamento file"
+msgstr "Carica file"
 
 #. module: website_snippet_contact_form
 #: view:website:website_snippet_contact_form.validation_error_page
