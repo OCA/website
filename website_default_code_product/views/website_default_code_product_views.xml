@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <template id="products_item" inherit_id="website_sale.products_item">
         <xpath expr="//a[@itemprop='name']" position="after">
-            <p t-attf-class="product_default_code" t-field="product.default_code" />
+            <p t-attf-class="product_default_code"><span
+                    t-if="product.default_code"
+                >SKU: <span t-field="product.default_code" /></span></p>
         </xpath>
     </template>
 
     <template id="product" inherit_id="website_sale.product">
-        <xpath expr="//h1[@itemprop='name']" position="replace">
-            <p t-field="product.default_code" />
+        <xpath expr="//h1[@itemprop='name']" position="after">
+            <span t-if="product.default_code">SKU: <span
+                    t-field="product.default_code"
+                /></span>
         </xpath>
     </template>
 </odoo>
