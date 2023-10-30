@@ -12,44 +12,65 @@
 
     <template id="global_product_search_box_input" name="Global Products search box">
         <t t-call="website_search_header.global_product_search_box">
-            <t t-set="_form_classes" t-valuef="float-end d-none o_search_header" />
+            <t
+                t-set="_form_classes"
+                t-valuef="float-end d-block d-lg-none o_search_header"
+            />
             <t t-set="search_type" t-valuef="all" />
             <t t-set="action" t-valuef="/website/search" />
         </t>
     </template>
 
     <template id="header_search_link" name="Header Search Link">
-        <div t-attf-class="#{_item_class} ms-auto">
+        <div id="div_search_header" t-attf-class="#{_item_class} ms-md-2 ms-lg-0">
             <a t-attf-class="d-none #{_link_class}">
             </a>
             <t t-call="website_search_header.global_product_search_box_input" />
         </div>
-        <div id="div_search_button" t-attf-class="#{_item_class} ms-2">
+        <div id="div_search_button" t-attf-class="#{_item_class} ms-lg-2">
             <a t-attf-class="d-none #{_link_class}">
             </a>
              <script type="text/javascript">
-                    function test() {
-                        if ($(".o_search_header").hasClass('d-none')) {
-                            $(".o_search_header").removeClass('d-none');
-                            $(".o_search_header").addClass('ms-2');
-                            $("#search_btn_toggle_search i").removeClass('oi-search');
-                            $("#div_search_button").removeClass('ms-2');
-                            $("#search_btn_toggle_search i").addClass('oi-close');
-                        } else {
-                            $(".o_search_header").addClass('d-none');
-                            $(".o_search_header").removeClass('ms-2');
-                            $("#search_btn_toggle_search i").removeClass('oi-close');
-                            $("#search_btn_toggle_search i").addClass('oi-search');
-                            $("#div_search_button").addClass('ms-2');
-                        }
+                function mobileSearch() {
+                    var searchQuery = document.querySelector("input[name='search']").value;
+                    var encodedQuery = encodeURIComponent(searchQuery);
+                    var searchURL = '/website/search?search=' + encodedQuery + '&amp;order=name+asc';
+                    window.location.href = searchURL;
+                }
+
+                 function desktopSearch() {
+                    if ($(".o_search_header").hasClass('d-lg-none')) {
+                        $(".o_search_header").removeClass('d-lg-none');
+                        $("#search_btn_toggle_search i").removeClass('oi-search');
+                        $("#search_btn_toggle_search i").addClass('oi-close');
+                        $("#div_search_header").removeClass('ms-lg-0');
+                        $("#div_search_button").removeClass('ms-lg-2');
+                    } else {
+                        $(".o_search_header").addClass('d-lg-none');
+                        $("#search_btn_toggle_search i").removeClass('oi-close');
+                        $("#search_btn_toggle_search i").addClass('oi-search');
+                        $("#div_search_header").addClass('ms-lg-0');
+                        $("#div_search_button").addClass('ms-lg-2');
                     }
+                }
+
+                function checkScreenWidth() {
+                    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+                    if (screenWidth &lt; 992) {
+                        mobileSearch();
+                    } else {
+                        desktopSearch();
+                    }
+                }
+
             </script>
             <button
                 id="search_btn_toggle_search"
                 aria-label="Search"
                 t-attf-class="btn oe_search_button btn-primary"
                 title="Search"
-                onclick="test()"
+                onclick="checkScreenWidth()"
             >
                 <i class="oi oi-search" />
             </button>
@@ -91,7 +112,7 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-value="'nav-item ms-lg-3'" />
+                <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
@@ -127,7 +148,7 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-value="'nav-item ms-lg-3'" />
+                <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
@@ -166,7 +187,7 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-value="'nav-item ms-lg-3'" />
+                <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
@@ -181,7 +202,7 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-value="'nav-item ms-lg-3'" />
+                <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
@@ -196,9 +217,10 @@
             position="before"
         >
             <t t-call="website_search_header.header_search_link">
-                <t t-set="_item_class" t-value="'nav-item ms-md-auto'" />
+                <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
             </t>
         </xpath>
     </template>
+
 </odoo>
