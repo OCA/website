@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='website_email_marketing']" position="inside">
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="website_whatsapp_setting"
+                >
+                    <div class="o_setting_left_pane">
+                        <field name="whatsapp_enabled" />
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="whatsapp_enabled" />
+                        <span
+                            class="fa fa-lg fa-globe"
+                            title="Values set here are website-specific."
+                            groups="website.group_multi_website"
+                        />
+                        <div
+                            class="content-group"
+                            attrs="{'invisible': [('whatsapp_enabled', '=', False)]}"
+                        >
+                            <div class="text-muted">
+                                You must add the mobile number with the country prefix
+                            </div>
+                            <div class="row mt16">
+                                <label
+                                    class="col-lg-3 o_light_label"
+                                    for="whatsapp_number"
+                                />
+                                <field
+                                    name="whatsapp_number"
+                                    attrs="{'required': [('whatsapp_enabled', '=', True)]}"
+                                />
+                            </div>
+                            <div class="row">
+                                <label
+                                    class="col-lg-3 o_light_label"
+                                    for="whatsapp_text"
+                                />
+                                <field name="whatsapp_text" class="oe_inline" />
+                            </div>
+                            <div class="row">
+                                <label
+                                    class="col-lg-3 o_light_label"
+                                    for="whatsapp_track_url"
+                                />
+                                <field name="whatsapp_track_url" class="oe_inline" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
