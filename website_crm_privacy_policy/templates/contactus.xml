@@ -9,9 +9,7 @@
             expr="//form//div/div/span[@id='s_website_form_result']/.."
             position="before"
         >
-            <div
-                class="form-group col-12 s_website_form_field s_website_form_required_custom"
-            >
+            <div class="form-group col-12">
                 <div class="form-check">
                     <input
                         type="checkbox"
