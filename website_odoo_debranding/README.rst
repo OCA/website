@@ -75,6 +75,8 @@ Contributors
 
    -  Alexandre Diaz
 
+-  Nils Coenen <nils.coenen@nico-solutions.de>
+
 Maintainers
 -----------
 
