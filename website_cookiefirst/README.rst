@@ -29,7 +29,7 @@ Website Cookiefirst
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module integrates Odoo website with GDPR through the functionality
-of Cookiefirst <https://cookiefirst.com/>, you need to register your
+of Cookiefirst (https://cookiefirst.com), you need to register your
 website domain in Cookiefirst's portal.
 
 **Table of contents**
@@ -47,6 +47,11 @@ To configure this module, you need to:
 3. Fill in your 'Cookiefirst ID' (e.g.
    '00000000-0000-0000-0000-000000000000').
 4. Click on "Save" button.
+
+⚠️ **Please note: if another cookie consent solution is installed (e.g.
+Cookiebot), the execution of the Cookiefirst script will be prevented.
+Make sure that no other cookie consent solution is installed when using
+the Cookiefirst module.**
 
 Bug Tracker
 ===========
@@ -72,6 +77,11 @@ Contributors
 -  `Studio73 <https://www.studio73.es>`__:
 
    -  Ioan Galan <ioan@studio73.es>
+
+-  `NICO SOLUTIONS - ENGINEERING &
+   IT <https://www.nico-solutions.de>`__:
+
+   -  Nils Coenen nils.coenen@nico-solutions.de
 
 Maintainers
 -----------
