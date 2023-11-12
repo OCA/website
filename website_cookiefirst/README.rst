@@ -73,6 +73,11 @@ Contributors
 
    -  Ioan Galan <ioan@studio73.es>
 
+-  `NICO SOLUTIONS - ENGINEERING &
+   IT <https://www.nico-solutions.de>`__:
+
+   -  Nils Coenen nils.coenen@nico-solutions.de
+
 Maintainers
 -----------
 
