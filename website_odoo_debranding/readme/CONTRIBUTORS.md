@@ -6,3 +6,4 @@
 - Dhara Solanki \<<dhara.solanki@initos.com>\>
 - [Tecnativa](https://www.tecnativa.com):
   - Alexandre Diaz
+- Nils Coenen \<<nils.coenen@nico-solutions.de>\>
