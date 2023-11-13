@@ -8,7 +8,7 @@
         customize_show="True"
     >
         <xpath
-            expr="//footer//div/span[hasclass('o_footer_copyright_name')]"
+            expr="//footer//span[hasclass('o_footer_copyright_name')]"
             position="after"
         >
             <span class="legal_page">-
