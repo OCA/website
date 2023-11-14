@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-11-14 16:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_plausible
 #: model_terms:ir.ui.view,arch_db:website_plausible.view_website_config_settings
@@ -20,72 +22,75 @@ msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
 "                                How to create my Plausible Shared Link"
 msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                Come creare il mio link condiviso Plausible"
 
 #. module: website_plausible
 #: model:ir.model,name:website_plausible.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Impostazioni configurazione"
 
 #. module: website_plausible
 #: model:ir.model.fields,field_description:website_plausible.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:website_plausible.field_website__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: website_plausible
 #: model:ir.model.fields,field_description:website_plausible.field_res_config_settings__id
 #: model:ir.model.fields,field_description:website_plausible.field_website__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: website_plausible
 #: model:ir.model.fields,field_description:website_plausible.field_res_config_settings____last_update
 #: model:ir.model.fields,field_description:website_plausible.field_website____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: website_plausible
 #: model:ir.model.fields,field_description:website_plausible.field_res_config_settings__has_plausible_shared_key
 msgid "Plausible Analytics"
-msgstr ""
+msgstr "Analitiche Plausible"
 
 #. module: website_plausible
 #: model:ir.model.fields,field_description:website_plausible.field_website__plausible_shared_key
 msgid "Plausible Shared Key"
-msgstr ""
+msgstr "Chiave condivisa Plausible"
 
 #. module: website_plausible
 #: model:ir.model.fields,field_description:website_plausible.field_website__plausible_site
 msgid "Plausible Site"
-msgstr ""
+msgstr "Sito Plausible"
 
 #. module: website_plausible
 #: model:ir.model.fields,field_description:website_plausible.field_res_config_settings__plausible_site
 msgid "Plausible Site (e.g. domain.com)"
-msgstr ""
+msgstr "Sito Plausible (es. dominio.com)"
 
 #. module: website_plausible
 #: model:ir.model.fields,field_description:website_plausible.field_res_config_settings__plausible_shared_key
 msgid "Plausible auth Key"
-msgstr ""
+msgstr "Chiave autorizzazione Plausible"
 
 #. module: website_plausible
 #: model_terms:ir.ui.view,arch_db:website_plausible.view_website_config_settings
 msgid "Shared Link Auth"
-msgstr ""
+msgstr "Autorizzazione link condiviso"
 
 #. module: website_plausible
 #: model_terms:ir.ui.view,arch_db:website_plausible.view_website_config_settings
 msgid "Site"
-msgstr ""
+msgstr "Sito"
 
 #. module: website_plausible
 #: model_terms:ir.ui.view,arch_db:website_plausible.view_website_config_settings
 msgid ""
 "Use Plausible.io, Simple and privacy-friendly Google Analytics alternative"
 msgstr ""
+"Utilizzare Plausible.io, semplice e riservata alternativa a Google Analytics"
 
 #. module: website_plausible
 #: model:ir.model,name:website_plausible.model_website
 msgid "Website"
-msgstr ""
+msgstr "Sito web"
