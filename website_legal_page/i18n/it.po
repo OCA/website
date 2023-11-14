@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
-"PO-Revision-Date: 2018-01-27 03:46+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
+"PO-Revision-Date: 2023-11-14 16:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -26,12 +27,15 @@ msgid ""
 "fit, and by using this Website you are expected to review these Terms on a "
 "regular basis."
 msgstr ""
+"**NOME AZIENDA** è autorizzato a modificare i presenti Termini in qualsiasi "
+"momento come meglio crede e, utilizzando questo sito Web, l'utente è tenuto "
+"a rivedere questi Termini su base regolare."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "<font style=\"font-size: 42px;\">Table of Content</font>"
-msgstr ""
+msgstr "<font style=\"font-size: 42px;\">Indice dei contenuti</font>"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -45,6 +49,14 @@ msgid ""
 "set their\n"
 "                own cookies, known as <strong>third-party cookies.</strong>"
 msgstr ""
+"<strong>I cookie proprietari</strong>&amp;nbsp;sono cookie impostati dal "
+"sito web che\n"
+"                 si sta visitando. Solo questo sito web può leggerli. "
+"Inoltre, un\n"
+"                 sito potrebbe eventualmente utilizzare servizi esterni, che "
+"a loro volta, possono impostare \n"
+"                 propri cookie, noti come <strong>cookie di terze "
+"parti.</strong>"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -53,12 +65,14 @@ msgid ""
 "A cookie is a small text file that a website stores on your computer or "
 "mobile device when you visit the site."
 msgstr ""
+"Un cookie è un piccolo file di testo che un sito web memorizza sul tuo "
+"computer o dispositivo mobile quando visiti il sito."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Assignment"
-msgstr ""
+msgstr "Incarico"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -70,12 +84,17 @@ msgid ""
 "may have for this Website are confidential and you must maintain "
 "confidentiality as well."
 msgstr ""
+"Ad alcune aree di questo sito Web è vietato l'accesso e **NOME AZIENDA** può "
+"limitare ulteriormente l'accesso da parte dell'utente a qualsiasi area di "
+"questo sito Web, in qualsiasi momento, a assoluta discrezione. Qualsiasi ID "
+"utente e password in suo possesso per questo sito Web sono confidenziali e "
+"vanno mantenuti riservati."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Cookies Policy"
-msgstr ""
+msgstr "Politica dei cookie"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -84,6 +103,8 @@ msgid ""
 "Cookies can also be used to establish anonymised statistics about the "
 "browsing experience on our sites."
 msgstr ""
+"I cookie possono essere utilizzati anche per stabilire statistiche anonime "
+"sull'esperienza di navigazione sui nostri siti."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -92,18 +113,20 @@ msgid ""
 "Every time you visit our websites, you will be prompted to <strong>accept "
 "cookies.</strong>"
 msgstr ""
+"Ogni volta che visiti i nostri siti web, verrà chiesto di <strong>accettare "
+"i cookie.</strong>"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Governing Law &amp;amp; Jurisdiction"
-msgstr ""
+msgstr "Foro competente &amp;amp; Giurisdizione"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "How do we use cookies?"
-msgstr ""
+msgstr "Come utilizziamo i cookie?"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -112,11 +135,13 @@ msgid ""
 "However, to view some of our pages, you will have to accept cookies from "
 "external organisations. &amp;nbsp;"
 msgstr ""
+"Tuttavia, per visualizzare alcune delle nostre pagine, bisognerà accettare i "
+"cookie di organizzazioni esterne. &amp;nbsp;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
 msgid "I accept"
-msgstr ""
+msgstr "Accetto"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -126,6 +151,9 @@ msgid ""
 "law, such provisions shall be deleted without affecting the remaining "
 "provisions herein."
 msgstr ""
+"Se una qualsiasi clausola di questi Termini viene ritenuta non valida ai "
+"sensi di qualsiasi legge applicabile, tale clausola verrà ritenuta nulla, "
+"senza influire sulle restanti condizioni del presente documento."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -138,6 +166,15 @@ msgid ""
 "shall not be held liable for any indirect, consequential or special "
 "liability arising out of or in any way related to your use of this Website."
 msgstr ""
+"In nessun caso **NOME AZIENDALE**, né alcuno dei suoi funzionari, direttori "
+"e dipendenti, potrà essere ritenuto responsabile per qualsiasi cosa "
+"derivante da o in qualsiasi modo connessa con l'utilizzo di questo sito Web "
+"da parte dell'utente, indipendentemente dal fatto che tale responsabilità "
+"sia contrattualmente rilevante. **NOME DELLA SOCIETA'**, compresi i suoi "
+"funzionari, direttori e dipendenti, non saranno ritenuti responsabili per "
+"alcuna responsabilità indiretta, consequenziale o speciale derivante da o in "
+"qualsiasi modo correlata all'utilizzo di questo sito Web da parte "
+"dell'utente."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
