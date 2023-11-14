@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-07-21 21:09+0000\n"
-"Last-Translator: Matteo <matteomircoli@openforce.it>\n"
+"PO-Revision-Date: 2023-11-14 16:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -24,18 +24,18 @@ msgstr "00000000-0000-0000-0000-000000000000"
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
 msgid "Add Cookiefirst functionality"
-msgstr "Aggiungi la funzionalità' di Cookiefirst"
+msgstr "Aggiungere la funzionalità Cookiefirst"
 
 #. module: website_cookiefirst
 #: model:ir.model,name:website_cookiefirst.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Impostazioni configurazione"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.cookies
 #: model_terms:website.page,arch_db:website_cookiefirst.cookies_page
 msgid "Cookie Declaration"
-msgstr "Dichiarazione Cookie"
+msgstr "Dichiarazione cookie"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
@@ -46,25 +46,25 @@ msgstr "ID Cookiefirst"
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.footer_custom
 msgid "Cookies Policy"
-msgstr ""
+msgstr "Politica dei cookie"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:website_cookiefirst.field_website__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__id
 #: model:ir.model.fields,field_description:website_cookiefirst.field_website__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings____last_update
 #: model:ir.model.fields,field_description:website_cookiefirst.field_website____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,help:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
@@ -76,14 +76,14 @@ msgstr ""
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
 msgid "Tracking ID"
-msgstr "Chiave API"
+msgstr "ID tracciatura"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__cookiefirst_enabled
 msgid "Use Cookiefirst"
-msgstr ""
+msgstr "Utilizza Cookiefirst"
 
 #. module: website_cookiefirst
 #: model:ir.model,name:website_cookiefirst.model_website
 msgid "Website"
-msgstr ""
+msgstr "Sito web"
