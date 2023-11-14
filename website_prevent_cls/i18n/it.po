@@ -6,51 +6,53 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-11-14 16:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_prevent_cls
 #. openerp-web
 #: code:addons/website_prevent_cls/static/src/xml/alt_dialog.xml:0
 #, python-format
 msgid "Height"
-msgstr ""
+msgstr "Altezza"
 
 #. module: website_prevent_cls
 #: model:ir.model,name:website_prevent_cls.model_ir_qweb
 msgid "Qweb"
-msgstr ""
+msgstr "Qweb"
 
 #. module: website_prevent_cls
 #: model:ir.model,name:website_prevent_cls.model_ir_qweb_field_image
 msgid "Qweb Field Image"
-msgstr ""
+msgstr "Campo immagine Qweb"
 
 #. module: website_prevent_cls
 #. openerp-web
 #: code:addons/website_prevent_cls/static/src/xml/alt_dialog.xml:0
 #, python-format
 msgid "Reduce the size as much as possible to increase performance."
-msgstr ""
+msgstr "Ridurre la dimensione il più possibile per aumentare le prestazioni."
 
 #. module: website_prevent_cls
 #. openerp-web
 #: code:addons/website_prevent_cls/static/src/xml/alt_dialog.xml:0
 #, python-format
 msgid "Size"
-msgstr ""
+msgstr "Dimensione"
 
 #. module: website_prevent_cls
 #. openerp-web
 #: code:addons/website_prevent_cls/static/src/xml/alt_dialog.xml:0
 #, python-format
 msgid "Width"
-msgstr ""
+msgstr "Larghezza"
 
 #. module: website_prevent_cls
 #. openerp-web
@@ -58,4 +60,4 @@ msgstr ""
 #: code:addons/website_prevent_cls/static/src/xml/alt_dialog.xml:0
 #, python-format
 msgid "px"
-msgstr ""
+msgstr "px"
