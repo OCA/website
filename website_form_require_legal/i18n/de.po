@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_form_require_legal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-06-20 11:08+0000\n"
+"Last-Translator: Nils Coenen <nils.coenen@nico-solutions.de>\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: website_form_require_legal
+#. openerp-web
+#: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
+#, python-format
+msgid "Agree to"
+msgstr "Stimme zu"
+
+#. module: website_form_require_legal
+#: model_terms:ir.ui.view,arch_db:website_form_require_legal.s_website_form_options
+msgid "Legal terms acceptance"
+msgstr "Akzeptierung der rechtlichen Bedingungen"
+
+#. module: website_form_require_legal
+#. openerp-web
+#: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
+#, python-format
+msgid "You must agree before submitting."
+msgstr "Sie müssen vor dem Absenden zustimmen."
+
+#. module: website_form_require_legal
+#. openerp-web
+#: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
+#, python-format
+msgid "terms and conditions"
+msgstr "Geschäftsbedingungen"
