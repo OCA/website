@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-12-27 17:44+0000\n"
+"PO-Revision-Date: 2023-11-14 15:36+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_plausible
 #: model_terms:ir.ui.view,arch_db:website_plausible.view_website_config_settings
@@ -30,7 +30,7 @@ msgstr ""
 #: code:addons/website_plausible/static/src/xml/website.backend.xml:0
 #, python-format
 msgid "Analytics"
-msgstr ""
+msgstr "Analitiche"
 
 #. module: website_plausible
 #: model:ir.model,name:website_plausible.model_res_config_settings
@@ -42,14 +42,14 @@ msgstr "Impostazioni configurazione"
 #: code:addons/website_plausible/static/src/xml/website.backend.xml:0
 #, python-format
 msgid "Connect Plausible"
-msgstr ""
+msgstr "Connessione Plausible"
 
 #. module: website_plausible
 #. openerp-web
 #: code:addons/website_plausible/static/src/xml/website.backend.xml:0
 #, python-format
 msgid "Easily track your visitor with Plausible"
-msgstr ""
+msgstr "Tracciare facilmente i visitatori con Plausible"
 
 #. module: website_plausible
 #: model:ir.model.fields,field_description:website_plausible.field_res_config_settings__has_plausible_shared_key
