@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
-"PO-Revision-Date: 2022-01-27 12:40+0000\n"
-"Last-Translator: dariodomenici <dariodomenici@gmail.com>\n"
+"PO-Revision-Date: 2023-11-15 09:38+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -52,7 +52,7 @@ msgstr ""
 "Ad alcune aree di questo sito Web è vietato l'accesso e **NOME AZIENDA** può "
 "limitare ulteriormente l'accesso da parte dell'utente a qualsiasi area di "
 "questo sito Web, in qualsiasi momento, a assoluta discrezione. Qualsiasi ID "
-"utente e password in tuo possesso per questo sito Web sono confidenziali e "
+"utente e password in suo possesso per questo sito Web sono confidenziali e "
 "vanno mantenuti riservati."
 
 #. module: website_legal_page
@@ -273,7 +273,7 @@ msgstr ""
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Your Content"
-msgstr "I tuoi Contenuti"
+msgstr "I tuoi contenuti"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
