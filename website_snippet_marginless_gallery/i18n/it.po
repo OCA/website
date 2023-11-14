@@ -9,34 +9,34 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-13 00:49+0000\n"
-"PO-Revision-Date: 2017-10-13 00:49+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2023-11-14 15:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
 #: code:addons/website_snippet_marginless_gallery/static/src/tests/tours/website_snippet_marginless_gallery.js:0
 #, python-format
 msgid "<b>Click Edit</b> to start designing your homepage."
-msgstr ""
+msgstr "<b>Fare clic su Modifica</b> per iniziare a disegnare la homepage."
 
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-#, fuzzy
 msgid "<b>Our Gallery</b>"
-msgstr "La nostra Galleria"
+msgstr "<b>La nostra galleria</b>"
 
 #. module: website_snippet_marginless_gallery
 #. openerp-web
 #: code:addons/website_snippet_marginless_gallery/static/src/tests/tours/website_snippet_marginless_gallery.js:0
 #, python-format
 msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
-msgstr ""
+msgstr "Trascina <i>Galleria senza margini</i> e rilascia nella pagina."
 
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
@@ -45,11 +45,8 @@ msgstr "Lorem ipsum"
 
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
-#, fuzzy
 msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
-msgstr ""
-"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
-"tempor incididunt ut labore et dolore magna."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
 
 #~ msgid "Change Images Height"
 #~ msgstr "Cambia l'altezza delle immagini"
