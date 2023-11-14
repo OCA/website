@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-12-27 17:44+0000\n"
+"PO-Revision-Date: 2023-11-14 15:36+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
@@ -51,8 +51,7 @@ msgstr "Politica dei cookie"
 #: model:ir.model.fields,help:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
 #: model:ir.model.fields,help:website_cookiefirst.field_website__cookiefirst_identifier
 msgid "This field holds the ID, needed for Cookiefirst functionality."
-msgstr ""
-"Questo campo memorizza l'ID, richiesto per la funzionalità Cookiefirst."
+msgstr "Questo campo contiene l'ID, necessario per la funzionalità Cookiefirst."
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
