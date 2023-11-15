@@ -9,19 +9,20 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-21 10:04+0000\n"
-"PO-Revision-Date: 2017-07-21 10:04+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2023-11-15 13:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_snippet_anchor
 #: model_terms:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
 msgid "<i class=\"fa fa-hashtag\"/>Choose anchor"
-msgstr ""
+msgstr "<i class=\"fa fa-hashtag\"/>Scegliere riferimento"
 
 #. module: website_snippet_anchor
 #. openerp-web
@@ -35,7 +36,7 @@ msgstr "Riferimento"
 #: code:addons/website_snippet_anchor/static/src/js/anchor_option.js:74
 #, python-format
 msgid "Anchor '%s' already exists or is not valid"
-msgstr ""
+msgstr "Il riferimento '%s' esiste già o non è valido"
 
 #. module: website_snippet_anchor
 #. openerp-web
@@ -52,6 +53,8 @@ msgid ""
 "To link to a section of this page, you can use any of these available "
 "anchors:"
 msgstr ""
+"Per collegarsi ad una sezione di questa pagina, si può utilizzare uno dei "
+"segenti riferimenti:"
 
 #. module: website_snippet_anchor
 #: model_terms:ir.ui.view,arch_db:website_snippet_anchor.snippet_options
