@@ -9,31 +9,32 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-26 16:36+0000\n"
-"PO-Revision-Date: 2016-08-26 16:36+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"PO-Revision-Date: 2023-11-15 13:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_anchor_smooth_scroll
 #: model:website.menu,name:website_anchor_smooth_scroll.menu_demo_page
 msgid "Anchor smooth scroll demo"
-msgstr ""
+msgstr "Demo scorrimento morbido riferimento"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "It works for any links to #anchors in your website!"
-msgstr ""
+msgstr "Funziona per ogni collegamento a #riferimento nel sito web!"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "More dummy content"
-msgstr ""
+msgstr "Altro contenuto finto"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
@@ -45,7 +46,7 @@ msgstr "Odoo CMS - un'immagine grande"
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Press the button below and enjoy a smooth experience."
-msgstr ""
+msgstr "Fare clic sul pulsante sottostante e godersi una morbia esperienza."
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
@@ -63,16 +64,16 @@ msgstr "Scorri in alto"
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Smooth? Nice."
-msgstr ""
+msgstr "Morbida? Bello."
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "This is dummy content"
-msgstr ""
+msgstr "Questo è contenuto finto"
 
 #. module: website_anchor_smooth_scroll
 #: model_terms:ir.ui.view,arch_db:website_anchor_smooth_scroll.demo_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_anchor_smooth_scroll.demo_page
 msgid "Try smooth scrolling. Easily."
-msgstr ""
+msgstr "Provare scorrimento morbido. Facilmente."
