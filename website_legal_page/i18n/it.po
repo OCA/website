@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-27 03:46+0000\n"
-"PO-Revision-Date: 2023-11-15 13:36+0000\n"
+"PO-Revision-Date: 2023-11-15 16:37+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -149,13 +149,13 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Email address:"
-msgstr ""
+msgstr "Indirizzo email:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Governing Law"
-msgstr ""
+msgstr "Legge governativa"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.acceptance_full
@@ -168,13 +168,13 @@ msgstr "Accetto le"
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "If you have any questions about these Terms, please contact us."
-msgstr ""
+msgstr "Se ci sono domande sui Termini, vi preghiamo di contattarci."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Information Collection And Use"
-msgstr ""
+msgstr "Raccolta e utilizzo informazioni"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.advice
@@ -218,13 +218,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Links To Other Web Sites"
-msgstr ""
+msgstr "Collegamenti ad alri siti web"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.privacy_page_ir_ui_view
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 msgid "Log Data"
-msgstr ""
+msgstr "Registra dati"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
@@ -276,7 +276,7 @@ msgstr ""
 #: model_terms:website.page,arch_db:website_legal_page.privacy_page
 #: model_terms:website.page,arch_db:website_legal_page.terms_page
 msgid "Phone number:"
-msgstr ""
+msgstr "Numero di telefono:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.terms-of-use
