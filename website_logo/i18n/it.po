@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-29 17:03+0000\n"
-"PO-Revision-Date: 2023-03-07 17:23+0000\n"
-"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"PO-Revision-Date: 2023-11-15 13:38+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: website_logo
 #: view:website:website.layout
@@ -44,7 +44,7 @@ msgid ""
 "size is 180x50"
 msgstr ""
 "Questo campo contiene il logo del sito mostrato nell'intestazione. "
-"Dimensioni raccomandate: 180x50."
+"Dimensioni raccomandate: 180x50"
 
 #. module: website_logo
 #: help:website.config.settings,logo:0
