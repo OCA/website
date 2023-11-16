@@ -49,11 +49,6 @@ msgid "ID"
 msgstr "ID (identificación)"
 
 #. module: website_require_login
-#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url____last_update
-msgid "Last Modified on"
-msgstr "Última Modificación el"
-
-#. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización por"
@@ -86,3 +81,6 @@ msgstr "¡La ruta debe ser única para cada sitio web!"
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__website_id
 msgid "Website"
 msgstr "Página Web"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificación el"
