@@ -49,11 +49,6 @@ msgid "ID"
 msgstr "ID"
 
 #. module: website_require_login
-#: model:ir.model.fields,field_description:website_require_login.field_website_auth_url____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__write_uid
 msgid "Last Updated by"
 msgstr "Ultimo aggiornamento di"
@@ -86,3 +81,6 @@ msgstr "Il percorso deve essere univoco per sito web!"
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__website_id
 msgid "Website"
 msgstr "Sito web"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
