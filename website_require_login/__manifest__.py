@@ -4,7 +4,7 @@
 {
     "name": "Website Login Required",
     "category": "Website",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "author": "Advitus MB, Ooops, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "LGPL-3",
