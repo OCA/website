@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-11-14 15:36+0000\n"
+"PO-Revision-Date: 2023-11-20 08:34+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -144,7 +144,7 @@ msgstr "CyclOSM"
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Cycle Map"
-msgstr ""
+msgstr "Mappa ciclo"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
@@ -154,7 +154,7 @@ msgstr "Descrizione"
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Humanitarian"
-msgstr ""
+msgstr "Umanitaria"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
@@ -169,7 +169,7 @@ msgstr "Standard"
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
 msgid "Transport Map"
-msgstr ""
+msgstr "Mappa trasporto"
 
 #. module: website_snippet_openstreetmap
 #: model_terms:ir.ui.view,arch_db:website_snippet_openstreetmap.s_openstreetmap_options
