@@ -82,6 +82,10 @@ Contributors
 
    -  Carlos Roca
 
+-  `NICO SOLUTIONS <https://www.nico-solutions.de>`__:
+
+   -  Nils Coenen
+
 Maintainers
 -----------
 
