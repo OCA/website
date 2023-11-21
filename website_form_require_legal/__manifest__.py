@@ -3,7 +3,7 @@
 {
     "name": "Website Form Require Legal",
     "summary": "Add possibility to require confirm legal terms.",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Website",
     "license": "LGPL-3",
     "website": "https://github.com/OCA/website",
@@ -14,7 +14,7 @@
     "data": ["views/snippets.xml"],
     "assets": {
         "website.assets_wysiwyg": [
-            "website_form_require_legal/static/src/js/options.js",
+            "website_form_require_legal/static/src/js/options.esm.js",
             "website_form_require_legal/static/src/xml/website_form_editor.xml",
         ],
         "web.assets_frontend": [
