@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="ab_testing_target_access" model="ir.model.access">
+        <field name="name">ab_testing_target_access</field>
+        <field name="model_id" ref="website_ab_testing.model_ab_testing_target" />
+        <field name="group_id" ref="website.group_website_publisher" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <record id="ab_testing_target_trigger_access" model="ir.model.access">
+        <field name="name">ab_testing_target_trigger_access</field>
+        <field
+            name="model_id"
+            ref="website_ab_testing.model_ab_testing_target_trigger"
+        />
+        <field name="group_id" ref="website.group_website_publisher" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+    <record id="ab_testing_target_conversion_access" model="ir.model.access">
+        <field name="name">ab_testing_target_conversion_access</field>
+        <field
+            name="model_id"
+            ref="website_ab_testing.model_ab_testing_target_conversion"
+        />
+        <field name="group_id" ref="website.group_website_publisher" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_unlink" eval="1" />
+    </record>
+</odoo>
