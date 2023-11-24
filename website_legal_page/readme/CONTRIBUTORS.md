@@ -13,3 +13,4 @@
   - Carlos Roca
 - [Studio73](https://www.studio73.es):
   - Miguel Gandia
+- Nils Coenen \<<nils.coenen@nico-solutions.de>\>
