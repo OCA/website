@@ -113,6 +113,8 @@ Contributors
 
    -  Miguel Gandia
 
+-  Nils Coenen <nils.coenen@nico-solutions.de>
+
 Other credits
 -------------
 
