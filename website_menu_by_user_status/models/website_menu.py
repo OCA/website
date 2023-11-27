@@ -29,7 +29,7 @@ class WebsiteMenu(models.Model):
 
     def _compute_visible(self):
         """Display the menu item whether the user is logged or not."""
-        super()._compute_visible()
+        result = super()._compute_visible()
         for menu in self:
             if not menu.is_visible:
                 menu.is_visible = False
@@ -38,3 +38,5 @@ class WebsiteMenu(models.Model):
                 menu.is_visible = menu.user_not_logged
             else:
                 menu.is_visible = menu.user_logged
+
+        return result

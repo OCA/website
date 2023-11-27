@@ -3,3 +3,4 @@
 - Meyomesse Gilles \<<meyomesse.gilles@gmail.com>\>
 - David Dufresne
 - Kaushal Prajapati \<<kbprajapati@live.com>\>
+- Nils Coenen \<<nils.coenen@nico-solutions.de>\>
