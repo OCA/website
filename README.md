@@ -28,7 +28,7 @@ addon | version | maintainers | summary
 [website_form_require_legal](website_form_require_legal/) | 16.0.1.0.0 |  | Add possibility to require confirm legal terms.
 [website_forum_subscription](website_forum_subscription/) | 16.0.1.0.0 |  | Adds a button to allow subscription from the website
 [website_google_tag_manager](website_google_tag_manager/) | 16.0.1.0.0 |  | Add support for Google Tag Manager
-[website_legal_page](website_legal_page/) | 16.0.1.0.0 |  | Website Legal Page
+[website_legal_page](website_legal_page/) | 16.0.1.1.0 |  | Website Legal Page
 [website_odoo_debranding](website_odoo_debranding/) | 16.0.1.0.0 |  | Remove Odoo Branding from Website
 [website_require_login](website_require_login/) | 16.0.1.0.0 |  | Website Login Required
 [website_whatsapp](website_whatsapp/) | 16.0.1.0.0 | [![ioans73](https://github.com/ioans73.png?size=30px)](https://github.com/ioans73) | Whatsapp integration
