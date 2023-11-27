@@ -42,17 +42,12 @@ Usage
 
 To use this module, you need to:
 
-1. Go to Website > Configuration > Settings > Pages.
-2. Select the page for which you would like to hide the menu.
-3. In the Related Menu Items table, check whether the menu item is
+1. Activate developer mode
+2. Go to Website > Configuration > Menus.
+3. Select the page for which you would like to hide the menu.
+4. In the Related Menu Items table, check whether the menu item is
    visible for logged/unlogged users.
-4. remove default filter to edit website menu line
-
-Known issues / Roadmap
-======================
-
--  2 flags will just toggle specific groups automatically [based on
-   https://github.com/OCA/website/tree/11.0/website_menu_permission]
+5. remove default filter to edit website menu line
 
 Bug Tracker
 ===========
@@ -80,6 +75,7 @@ Contributors
 -  Meyomesse Gilles <meyomesse.gilles@gmail.com>
 -  David Dufresne
 -  Kaushal Prajapati <kbprajapati@live.com>
+-  Nils Coenen <nils.coenen@nico-solutions.de>
 
 Maintainers
 -----------
