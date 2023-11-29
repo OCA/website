@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <template id="assets_frontend" inherit_id="website.assets_frontend"
+                  name="Website cookie consent assets">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet"
+                      href="/website_cookieconsent/static/src/css/cookieconsent/css-components/base.css"/>
+                <link rel="stylesheet"
+                      href="/website_cookieconsent/static/src/css/cookieconsent/css-components/consent-modal.css"/>
+                <link rel="stylesheet"
+                      href="/website_cookieconsent/static/src/css/cookieconsent/css-components/dark-scheme.css"/>
+                <link rel="stylesheet"
+                      href="/website_cookieconsent/static/src/css/cookieconsent/css-components/light-scheme.css"/>
+                <link rel="stylesheet"
+                      href="/website_cookieconsent/static/src/css/cookieconsent/css-components/preferences-modal.css"/>
+                <link rel="stylesheet"
+                      href="/website_cookieconsent/static/src/css/cookieconsent/cookieconsent.css"/>
+                <link rel="stylesheet"
+                      href="/website_cookieconsent/static/src/css/website_cookieconsent.css"/>
+                <script src="/website_cookieconsent/static/src/js/cookieconsent/cookieconsent.js"></script>
+                <script src="/website_cookieconsent/static/src/js/website_cookieconsent.js"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>

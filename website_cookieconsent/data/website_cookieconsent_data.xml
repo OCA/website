@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data noupdate="1">
+        <record id="cookie_consent_config" model="ir.config_parameter">
+            <field name="display_name">Cookie Consent Config</field>
+            <field name="key">website.cookie_consent_config</field>
+            <field name="value">{}</field>
+        </record>
+    </data>
+</openerp>
