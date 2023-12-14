@@ -3,7 +3,7 @@
 {
     "name": "Website Form Require Legal",
     "summary": "Add possibility to require confirm legal terms.",
-    "version": "15.0.1.0.0",
+    "version": "15.0.1.1.0",
     "category": "Website",
     "license": "LGPL-3",
     "website": "https://github.com/OCA/website",
