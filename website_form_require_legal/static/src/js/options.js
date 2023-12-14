@@ -35,7 +35,7 @@ odoo.define("website_form_require_legal.form_editor", function (require) {
                 $(template).html(
                     qweb.render("website_form_require_legal.s_website_form_legal", {
                         labelWidth: labelWidth,
-                        termsURL: "terms",
+                        termsURL: "/terms",
                     })
                 );
                 const legal = template.content.firstElementChild;
