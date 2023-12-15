@@ -77,10 +77,13 @@
         </div>
     </template>
 
-    <template id="template_header_default" inherit_id="website.template_header_default">
+    <template
+        id="template_header_default"
+        inherit_id="website.template_header_default"
+    >
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
@@ -93,8 +96,8 @@
         inherit_id="website.template_header_hamburger"
     >
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
@@ -108,8 +111,8 @@
         inherit_id="website.template_header_vertical"
     >
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
@@ -120,8 +123,8 @@
 
     <template id="template_header_sidebar" inherit_id="website.template_header_sidebar">
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-valuef="nav-item" />
@@ -132,8 +135,8 @@
 
     <template id="template_header_slogan" inherit_id="website.template_header_slogan">
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
@@ -144,8 +147,8 @@
 
     <template id="template_header_contact" inherit_id="website.template_header_contact">
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
@@ -156,8 +159,8 @@
 
     <template id="template_header_boxed" inherit_id="website.template_header_boxed">
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
@@ -171,8 +174,8 @@
         inherit_id="website.template_header_centered_logo"
     >
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
@@ -183,8 +186,8 @@
 
     <template id="template_header_image" inherit_id="website.template_header_image">
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
@@ -198,8 +201,8 @@
         inherit_id="website.template_header_hamburger_full"
     >
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
@@ -213,8 +216,8 @@
         inherit_id="website.template_header_magazine"
     >
         <xpath
-            expr="//t[@t-call='website.placeholder_header_call_to_action']"
-            position="before"
+            expr="//t[@t-call='website.navbar_toggler']"
+            position="after"
         >
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
