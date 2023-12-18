@@ -18,7 +18,9 @@
                             class="s_website_form_input form-check-input"
                         />
                         <span class="form-check-label">
-                            Agree to <a href="#">terms and conditions</a>
+                            Agree to <a
+                                t-attf-href="#{termsURL or '#'}"
+                            >terms and conditions</a>
                         </span>
                         <div class="invalid-feedback">
                             You must agree before submitting.
