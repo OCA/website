@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="contact_address_type_website_form"
+              name="Portal Contact Address Type Form"
+              inherit_id="website_portal_contact.contacts_table">
+        <xpath expr="//th[3]" position="after">
+            <th>Type</th>
+        </xpath>
+        <xpath expr="//td[3]" position="after">
+            <td>
+                <t t-if="society and society.id == contact.id">
+                    Society
+                </t>
+                <t t-else="">
+                    <span t-field="contact.type"/>
+                </t>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>

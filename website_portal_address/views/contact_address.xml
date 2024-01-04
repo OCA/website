@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="contact_address_type"
+              inherit_id="website_portal_contact.form"
+              name="Portal Contact Address Form">
+        <xpath expr="//input[@name='csrf_token']">
+            <div class="col-md-12 form-group row">
+                <label class="col-sm-3"/>
+                <div class="col-sm-9">
+                    <label class="radio-inline">
+                        <input type="radio" id="radio212_contact"
+                               t-att-checked='"checked" if contact["type"] == "contact" else None'
+                               name="type" value="contact" checked="checked"/>Contact
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="radio212_invoice"
+                               t-att-checked='"checked" if contact["type"] == "invoice" else None'
+                               name="type" value="invoice"/>Invoice address
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="radio212_delivery"
+                               t-att-checked='"checked" if contact["type"] == "delivery" else None'
+                               name="type" value="delivery"/>Shipping address
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="radio212_other"
+                               t-att-checked='"checked" if contact["type"] == "other" else None'
+                               name="type" value="other"/>Other address
+                    </label>
+                </div>
+            </div>
+        </xpath>
+        <t t-foreach="fields" position="before">
+            <!-- Exclude the new fields because they are rendered one-by-one here below -->
+            <t t-set="fields" t-value="[field_name for field_name in fields if field_name not in ['type','street','street2','city','zip','country_id','state_id']]"/>
+        </t>
+        <t t-foreach="fields" position="after">
+            <div class="contact_address_website hidden">
+                <div class="form-group row">
+                    <label for="address" class="col-sm-2">
+                        Address
+                    </label>
+                    <div class="col-sm">
+                        <input id="street" name="street" type="text"
+                               t-att-value='contact["street"]' class="form-control"
+                               placeholder="Street..."/>
+                    </div>
+                    <div class="col-sm">
+                        <input id="street2" name="street2" type="text"
+                               t-att-value='contact["street2"]' class="form-control"
+                               placeholder="Street2..."/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="address" class="col-form-label">City</label>
+                        <input id="city" name="city" type="text"
+                               t-att-value='contact["city"]' class="form-control"
+                               placeholder="city..."/>
+                    </div>
+                    <div class="col-sm">
+                        <label for="address" class="col-form-label">Zip</label>
+                        <input id="zip" name="zip" type="text"
+                               t-att-value='contact["zip"]' class="form-control"
+                               placeholder="zip..."/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label class="col-form-label" for="country_id">Country</label>
+                        <select placeholder="Country" name="country_id" id="country_id"
+                                class="form-control">
+                            <option value="">Country...</option>
+                            <t t-foreach="country_id or []" t-as="country">
+                                <option t-att-value="country.id"
+                                        t-att-selected='country.id == contact["country_id"]["id"]'>
+                                    <t t-esc="country.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        <label class="col-form-label" for="state_id">State / Province
+                        </label>
+                        <select placeholder="State" name="state_id" id="state_id"
+                                class="form-control">
+                            <option value="">State...</option>
+                            <t t-foreach="state_id or []" t-as="state">
+                                <option
+                                    t-att-value="'%s-%s' % (state.country_id.id, state.id)"
+                                    t-att-selected='state.id == contact["state_id"]["id"]'>
+                                    <t t-esc="state.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+
+</odoo>
