@@ -1,0 +1,80 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_url_sitemap_exclusion
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-27 13:13+0000\n"
+"PO-Revision-Date: 2023-02-27 13:13+0000\n"
+"Last-Translator: Simone Rubino <sir@takobi.online>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website_forbidden_url__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website_forbidden_url__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website_forbidden_url__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website__forbidden_url_ids
+msgid "Forbidden URLs regex"
+msgstr "Espressioni regolari per URL vietati"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website_forbidden_url__id
+msgid "ID"
+msgstr ""
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website_forbidden_url____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website_forbidden_url__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website_forbidden_url__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website_forbidden_url__regex
+msgid "Regex"
+msgstr "Espressione regolare"
+
+#. module: website_url_sitemap_exclusion
+#: code:addons/website_url_sitemap_exclusion/models/website_forbidden_url.py:35
+#, python-format
+msgid "Regular Expression `{regex}` is not valid:\n"
+"{error}"
+msgstr "L'espressione regolare `{regex}` non è valida:\n"
+"{error}"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model,name:website_url_sitemap_exclusion.model_website_forbidden_url
+msgid "URL not allowed in the sitemap"
+msgstr "URL non consentito nella sitemap"
+
+#. module: website_url_sitemap_exclusion
+#: model:ir.model,name:website_url_sitemap_exclusion.model_website
+#: model:ir.model.fields,field_description:website_url_sitemap_exclusion.field_website_forbidden_url__website_id
+msgid "Website"
+msgstr "Sito web"
