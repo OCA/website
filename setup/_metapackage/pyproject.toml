@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-oca-website"
+version = "17.0.20240109.0"
+dependencies = [
+    "odoo-addon-website_google_tag_manager>=17.0dev,<17.1dev",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 17.0",
+]
