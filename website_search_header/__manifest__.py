@@ -4,7 +4,7 @@
 {
     "name": "Website Search in Header",
     "category": "Website",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "author": "ForgeFlow, Ooops, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "LGPL-3",
@@ -17,6 +17,7 @@
     ],
     "assets": {
         "web.assets_frontend": [
+            "website_search_header/static/src/js/website.js",
             "website_search_header/static/src/scss/website_search_header.scss",
         ],
     },

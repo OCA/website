@@ -30,61 +30,19 @@
         <div id="div_search_button" t-attf-class="#{_item_class} ms-lg-2">
             <a t-attf-class="d-none #{_link_class}">
             </a>
-             <script type="text/javascript">
-                function mobileSearch() {
-                    var searchQuery = document.querySelector("input[name='search']").value;
-                    var encodedQuery = encodeURIComponent(searchQuery);
-                    var searchURL = '/website/search?search=' + encodedQuery + '&amp;order=name+asc';
-                    window.location.href = searchURL;
-                }
-
-                 function desktopSearch() {
-                    if ($(".o_search_header").hasClass('d-lg-none')) {
-                        $(".o_search_header").removeClass('d-lg-none');
-                        $("#search_btn_toggle_search i").removeClass('oi-search');
-                        $("#search_btn_toggle_search i").addClass('oi-close');
-                        $("#div_search_header").removeClass('ms-lg-0');
-                        $("#div_search_button").removeClass('ms-lg-2');
-                    } else {
-                        $(".o_search_header").addClass('d-lg-none');
-                        $("#search_btn_toggle_search i").removeClass('oi-close');
-                        $("#search_btn_toggle_search i").addClass('oi-search');
-                        $("#div_search_header").addClass('ms-lg-0');
-                        $("#div_search_button").addClass('ms-lg-2');
-                    }
-                }
-
-                function checkScreenWidth() {
-                    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-                    if (screenWidth &lt; 992) {
-                        mobileSearch();
-                    } else {
-                        desktopSearch();
-                    }
-                }
-
-            </script>
             <button
                 id="search_btn_toggle_search"
                 aria-label="Search"
                 t-attf-class="btn oe_search_button btn-primary"
                 title="Search"
-                onclick="checkScreenWidth()"
             >
                 <i class="oi oi-search" />
             </button>
         </div>
     </template>
 
-    <template
-        id="template_header_default"
-        inherit_id="website.template_header_default"
-    >
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+    <template id="template_header_default" inherit_id="website.template_header_default">
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
@@ -95,10 +53,7 @@
         id="template_header_hamburger"
         inherit_id="website.template_header_hamburger"
     >
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
@@ -110,10 +65,7 @@
         id="template_header_vertical"
         inherit_id="website.template_header_vertical"
     >
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
@@ -122,10 +74,7 @@
     </template>
 
     <template id="template_header_sidebar" inherit_id="website.template_header_sidebar">
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-valuef="nav-item" />
                 <t t-set="_link_class" t-valuef="nav-link" />
@@ -134,10 +83,7 @@
     </template>
 
     <template id="template_header_slogan" inherit_id="website.template_header_slogan">
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
@@ -146,10 +92,7 @@
     </template>
 
     <template id="template_header_contact" inherit_id="website.template_header_contact">
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
@@ -158,10 +101,7 @@
     </template>
 
     <template id="template_header_boxed" inherit_id="website.template_header_boxed">
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
@@ -173,10 +113,7 @@
         id="template_header_centered_logo"
         inherit_id="website.template_header_centered_logo"
     >
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
@@ -185,10 +122,7 @@
     </template>
 
     <template id="template_header_image" inherit_id="website.template_header_image">
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
@@ -200,10 +134,7 @@
         id="template_header_hamburger_full"
         inherit_id="website.template_header_hamburger_full"
     >
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
@@ -215,10 +146,7 @@
         id="template_header_magazine"
         inherit_id="website.template_header_magazine"
     >
-        <xpath
-            expr="//t[@t-call='website.navbar_toggler']"
-            position="after"
-        >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
             <t t-call="website_search_header.header_search_link">
                 <t t-set="_item_class" t-value="'nav-item'" />
                 <t t-set="_link_class" t-value="'nav-link'" />
