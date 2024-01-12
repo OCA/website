@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 {
-    "name": "Website reCAPTCHA Reloaded",
+    "name": "Website reCAPTCHA v2",
     "version": "12.0.0.0.1",
     "category": "Website",
     "depends": ["website"],
