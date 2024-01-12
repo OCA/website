@@ -29,7 +29,7 @@ class TestRecaptcha(TransactionCase):
         except StopIteration:
             pass
         requests_mock.post.assert_called_once_with(
-            "https://www.google.com/recaptcha/api/siteverify",
+            "https://www.recaptcha.net/recaptcha/api/siteverify",
             data={
                 "secret": "test-secret",
                 "response": "dummy_response",
