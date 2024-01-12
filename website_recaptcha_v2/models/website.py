@@ -10,7 +10,7 @@ import requests
 
 from odoo import _, api, fields, models
 
-URL = "https://www.google.com/recaptcha/api/siteverify"
+URL = "https://www.recaptcha.net/recaptcha/api/siteverify"
 
 
 class Website(models.Model):
