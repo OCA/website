@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
+    <!-- oca-hooks:disable=xml-dangerous-qweb-replace-low-priority -->
     <template
         id="frontend_layout"
         name="Website Google Analytic 4"
