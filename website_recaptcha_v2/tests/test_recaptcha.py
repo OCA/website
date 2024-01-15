@@ -15,9 +15,9 @@ class TestRecaptcha(TransactionCase):
         self.website = self.env.ref("website.default_website")
         self.website.write(
             {
-                "recaptcha_enabled": True,
-                "recaptcha_key_site": "test-site",
-                "recaptcha_key_secret": "test-secret",
+                "recaptcha_v2_enabled": True,
+                "recaptcha_v2_site_key": "test-site",
+                "recaptcha_v2_secret_key": "test-secret",
             }
         )
 
@@ -25,7 +25,9 @@ class TestRecaptcha(TransactionCase):
     def test_captcha_http_request(self, requests_mock):
         requests_mock.post.side_effect = StopIteration
         try:
-            self.website.is_captcha_valid({"g-recaptcha-response": "dummy_response"})
+            self.website.is_recaptcha_v2_valid(
+                {"g-recaptcha-response": "dummy_response"}
+            )
         except StopIteration:
             pass
         requests_mock.post.assert_called_once_with(
@@ -39,7 +41,7 @@ class TestRecaptcha(TransactionCase):
     @mock.patch(imp_requests)
     def test_captcha_valid(self, requests_mock):
         requests_mock.post().json.return_value = {"success": True}
-        result, error_msg = self.website.is_captcha_valid(
+        result, error_msg = self.website.is_recaptcha_v2_valid(
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertTrue(result)
@@ -50,7 +52,7 @@ class TestRecaptcha(TransactionCase):
         requests_mock.post().json.return_value = {
             "error-codes": ["missing-input-secret"]
         }
-        result, error_msg = self.website.is_captcha_valid(
+        result, error_msg = self.website.is_recaptcha_v2_valid(
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertFalse(result)
@@ -61,7 +63,7 @@ class TestRecaptcha(TransactionCase):
         requests_mock.post().json.return_value = {
             "error-codes": ["invalid-input-secret", "missing-input-response"]
         }
-        result, error_msg = self.website.is_captcha_valid(
+        result, error_msg = self.website.is_recaptcha_v2_valid(
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertFalse(result)
@@ -74,7 +76,7 @@ class TestRecaptcha(TransactionCase):
     @mock.patch(imp_requests)
     def test_captcha_false_success(self, requests_mock):
         requests_mock.post().json.return_value = {"success": False}
-        result, error_msg = self.website.is_captcha_valid(
+        result, error_msg = self.website.is_recaptcha_v2_valid(
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertFalse(result)
@@ -83,7 +85,7 @@ class TestRecaptcha(TransactionCase):
     @mock.patch(imp_requests)
     def test_captcha_empty_response(self, requests_mock):
         requests_mock.post().json.return_value = {}
-        result, error_msg = self.website.is_captcha_valid(
+        result, error_msg = self.website.is_recaptcha_v2_valid(
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertFalse(result)
@@ -92,7 +94,7 @@ class TestRecaptcha(TransactionCase):
     @mock.patch(imp_requests)
     def test_captcha_unknown_error(self, requests_mock):
         requests_mock.post().json.return_value = {"error-codes": ["unknown-error"]}
-        result, error_msg = self.website.is_captcha_valid(
+        result, error_msg = self.website.is_recaptcha_v2_valid(
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertFalse(result)
@@ -104,23 +106,23 @@ class TestRecaptcha(TransactionCase):
             "error-codes": [],
             "success": True,
         }
-        result, error_msg = self.website.is_captcha_valid(
+        result, error_msg = self.website.is_recaptcha_v2_valid(
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertTrue(result)
         self.assertEqual(error_msg, "")
 
     def test_captcha_no_response(self):
-        result, error_msg = self.website.is_captcha_valid({})
+        result, error_msg = self.website.is_recaptcha_v2_valid({})
         self.assertFalse(result)
         self.assertEqual(error_msg, "No response given.")
 
     @mock.patch(imp_requests)
     def test_captcha_disabled(self, requests_mock):
         self.env["ir.config_parameter"].sudo().set_param(
-            "portal_recaptcha.recaptcha_enabled", False
+            "portal_recaptcha.recaptcha_v2_enabled", False
         )
-        result, error_msg = self.website.is_captcha_valid(
+        result, error_msg = self.website.is_recaptcha_v2_valid(
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertTrue(result)

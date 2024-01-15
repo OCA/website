@@ -10,8 +10,11 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 <odoo>
 
     <template id="recaptcha_widget" name="reCAPTCHA widget">
-        <t t-if="website.recaptcha_enabled">
-            <div class="g-recaptcha" t-att-data-sitekey="website.recaptcha_key_site" />
+        <t t-if="website.recaptcha_v2_enabled">
+            <div
+                class="g-recaptcha"
+                t-att-data-sitekey="website.recaptcha_v2_site_key"
+            />
             <script src="https://www.recaptcha.net/recaptcha/api.js" />
         </t>
     </template>
