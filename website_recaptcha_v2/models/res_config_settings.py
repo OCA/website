@@ -12,12 +12,12 @@ from odoo import fields, models
 class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
-    recaptcha_enabled = fields.Boolean(
-        related="website_id.recaptcha_enabled", readonly=False
+    recaptcha_v2_enabled = fields.Boolean(
+        related="website_id.recaptcha_v2_enabled", readonly=False
     )
-    recaptcha_key_site = fields.Char(
-        related="website_id.recaptcha_key_site", readonly=False
+    recaptcha_v2_site_key = fields.Char(
+        related="website_id.recaptcha_v2_site_key", readonly=False
     )
-    recaptcha_key_secret = fields.Char(
-        related="website_id.recaptcha_key_secret", readonly=False
+    recaptcha_v2_secret_key = fields.Char(
+        related="website_id.recaptcha_v2_secret_key", readonly=False
     )
