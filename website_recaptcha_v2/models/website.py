@@ -17,8 +17,8 @@ class Website(models.Model):
     _inherit = "website"
 
     recaptcha_v2_enabled = fields.Boolean("Enable reCAPTCHA v2")
-    recaptcha_v2_site_key = fields.Char("Site Key")
-    recaptcha_v2_secret_key = fields.Char("Secret Key")
+    recaptcha_v2_site_key = fields.Char("Site Key (v2)")
+    recaptcha_v2_secret_key = fields.Char("Secret Key (v2)")
 
     @api.model
     def _get_error_message(self, errorcode=None):
