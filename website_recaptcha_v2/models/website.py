@@ -16,9 +16,9 @@ URL = "https://www.recaptcha.net/recaptcha/api/siteverify"
 class Website(models.Model):
     _inherit = "website"
 
-    recaptcha_enabled = fields.Boolean("Enable reCAPTCHA")
-    recaptcha_key_site = fields.Char("Site Key")
-    recaptcha_key_secret = fields.Char("Secret Key")
+    recaptcha_v2_enabled = fields.Boolean("Enable reCAPTCHA v2")
+    recaptcha_v2_site_key = fields.Char("Site Key")
+    recaptcha_v2_secret_key = fields.Char("Secret Key")
 
     @api.model
     def _get_error_message(self, errorcode=None):
@@ -32,9 +32,9 @@ class Website(models.Model):
         }
         return mapping.get(errorcode, _("There was a problem with the captcha entry."))
 
-    def is_captcha_valid(self, form_values):
+    def is_recaptcha_v2_valid(self, form_values):
         """
-        Checks whether the CAPTCHA has been correctly solved.
+        Checks whether the reCAPTCHA v2 challenge has been correctly solved.
 
         form_values must be a dictionary containing the form values.
 
@@ -45,12 +45,12 @@ class Website(models.Model):
         If reCAPTCHA is disabled in the settings, this method behaves as if
         the CAPTCHA was correctly solved, but without doing any check.
         """
-        if not self.recaptcha_enabled:
+        if not self.recaptcha_v2_enabled:
             return (True, "")
         response = form_values.get("g-recaptcha-response")
         if not response:
             return (False, _("No response given."))
-        get_res = {"secret": self.recaptcha_key_secret, "response": response}
+        get_res = {"secret": self.recaptcha_v2_secret_key, "response": response}
 
         res = requests.post(URL, data=get_res).json()
 
