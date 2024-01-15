@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
+    <!-- oca-hooks:disable=xml-dangerous-qweb-replace-low-priority -->
     <!-- Remove "Create a free website with Odoo" -->
     <template
         id="layout_footer_copyright"

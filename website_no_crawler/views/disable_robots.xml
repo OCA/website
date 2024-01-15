@@ -1,4 +1,5 @@
 <odoo>
+    <!-- oca-hooks:disable=xml-dangerous-qweb-replace-low-priority -->
     <template id="robots" inherit_id="website.robots">
         <xpath expr="t" position="replace">
             <t t-translation="off">
