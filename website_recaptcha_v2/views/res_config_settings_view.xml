@@ -44,14 +44,14 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             <div class="row mt16">
                                 <label
                                     for="recaptcha_v2_site_key"
-                                    class="col-md-3 o_light_label"
+                                    class="col-md-4 o_light_label"
                                 />
                                 <field name="recaptcha_v2_site_key" />
                             </div>
                             <div class="row">
                                 <label
                                     for="recaptcha_v2_secret_key"
-                                    class="col-md-3 o_light_label"
+                                    class="col-md-4 o_light_label"
                                 />
                                 <field name="recaptcha_v2_secret_key" />
                             </div>
