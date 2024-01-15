@@ -15,7 +15,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 class="g-recaptcha"
                 t-att-data-sitekey="website.recaptcha_v2_site_key"
             />
-            <script src="https://www.recaptcha.net/recaptcha/api.js" />
+            <script src="https://www.recaptcha.net/recaptcha/api.js" async="true" />
         </t>
     </template>
 
