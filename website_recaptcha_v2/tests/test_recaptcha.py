@@ -10,10 +10,11 @@ imp_requests = "odoo.addons.website_recaptcha_v2.models.website.requests"
 
 
 class TestRecaptcha(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.website = self.env.ref("website.default_website")
-        self.website.write(
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.website = cls.env.ref("website.default_website")
+        cls.website.write(
             {
                 "recaptcha_v2_enabled": True,
                 "recaptcha_v2_site_key": "test-site",
