@@ -11,6 +11,7 @@ import requests
 from odoo import _, api, fields, models
 
 URL = "https://www.recaptcha.net/recaptcha/api/siteverify"
+RECAPTCHA_API_TIMEOUT = 30
 
 
 class Website(models.Model):
@@ -52,7 +53,7 @@ class Website(models.Model):
             return (False, _("No response given."))
         get_res = {"secret": self.recaptcha_v2_secret_key, "response": response}
 
-        res = requests.post(URL, data=get_res).json()
+        res = requests.post(URL, data=get_res, timeout=RECAPTCHA_API_TIMEOUT).json()
 
         error_msg = "\n".join(
             self._get_error_message(error) for error in res.get("error-codes", [])
