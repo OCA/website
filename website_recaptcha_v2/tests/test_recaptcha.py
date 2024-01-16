@@ -24,19 +24,14 @@ class TestRecaptcha(TransactionCase):
 
     @mock.patch(imp_requests)
     def test_captcha_http_request(self, requests_mock):
-        requests_mock.post.side_effect = StopIteration
-        try:
-            self.website.is_recaptcha_v2_valid(
-                {"g-recaptcha-response": "dummy_response"}
-            )
-        except StopIteration:
-            pass
+        self.website.is_recaptcha_v2_valid({"g-recaptcha-response": "dummy_response"})
         requests_mock.post.assert_called_once_with(
             "https://www.recaptcha.net/recaptcha/api/siteverify",
             data={
                 "secret": "test-secret",
                 "response": "dummy_response",
             },
+            timeout=30,
         )
 
     @mock.patch(imp_requests)
