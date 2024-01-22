@@ -6,5 +6,10 @@
             <field name="key">website.cookie_consent_config</field>
             <field name="value">{}</field>
         </record>
+        <record id="cookie_iframemanager_config" model="ir.config_parameter">
+            <field name="display_name">Cookie Consent Iframemanager Config</field>
+            <field name="key">website.iframemanager_config</field>
+            <field name="value">{}</field>
+        </record>
     </data>
 </openerp>

@@ -18,7 +18,9 @@
                       href="/website_cookieconsent/static/src/css/cookieconsent/cookieconsent.css"/>
                 <link rel="stylesheet"
                       href="/website_cookieconsent/static/src/css/website_cookieconsent.css"/>
+                <link rel="stylesheet" href="/website_cookieconsent/static/src/js/iframemanager/css/iframemanager.css"/>    
                 <script src="/website_cookieconsent/static/src/js/cookieconsent/cookieconsent.js"></script>
+                                <script src="/website_cookieconsent/static/src/js/iframemanager/js/iframemanager.js"></script>  
                 <script src="/website_cookieconsent/static/src/js/website_cookieconsent.js"></script>
             </xpath>
         </template>

@@ -9,4 +9,9 @@ class WebsiteCookieConsent(http.Controller):
     def get_config_cookie_config(self, **kw):
         cookie_config = request.env['ir.config_parameter'].sudo().get_param(
             'website.cookie_consent_config')
-        return {'cookie_config': cookie_config}
+        iframe_config = request.env['ir.config_parameter'].sudo().get_param(
+            'website.iframemanager_config')
+        return {
+            'cookie_config': cookie_config,
+            'iframemanager_config': iframe_config
+            }
