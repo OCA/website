@@ -4,52 +4,42 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="website.res_config_settings_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//div[@id='social_media_settings']" position="after">
-                <div class="col-12 col-lg-6 o_setting_box" id="website_setting">
-                    <div class="o_setting_left_pane">
-                        <field name="whatsapp_enabled" />
-                    </div>
-                    <div class="o_setting_right_pane">
-                        <label for="whatsapp_enabled" />
-                        <span
-                            class="fa fa-lg fa-globe"
-                            title="Values set here are website-specific."
-                            groups="website.group_multi_website"
-                        />
-                        <div
-                            class="content-group"
-                            attrs="{'invisible': [('whatsapp_enabled', '=', False)]}"
-                        >
-                            <div class="text-muted">
-                                You must add the mobile number with the country prefix
-                            </div>
-                            <div class="row mt16">
-                                <label
-                                    class="col-lg-3 o_light_label"
-                                    for="whatsapp_number"
-                                />
-                                <field
-                                    name="whatsapp_number"
-                                    attrs="{'required': [('whatsapp_enabled', '=', True)]}"
-                                />
-                            </div>
-                            <div class="row">
-                                <label
-                                    class="col-lg-3 o_light_label"
-                                    for="whatsapp_text"
-                                />
-                                <field name="whatsapp_text" class="oe_inline" />
-                            </div>
-                            <div class="row">
-                                <label
-                                    class="col-lg-3 o_light_label"
-                                    for="whatsapp_track_url"
-                                />
-                                <field name="whatsapp_track_url" class="oe_inline" />
-                            </div>
+            <xpath
+                expr="//setting[@id='website_marketing_automation']"
+                position="after"
+            >
+                <setting
+                    id="whatsapp_float_setting"
+                    help="You must add the mobile number with the country prefix"
+                >
+                    <field name="whatsapp_enabled" />
+                    <div class="content-group" invisible="not whatsapp_enabled">
+                        <div class="row mt16">
+                            <label
+                                class="col-lg-3 o_light_label"
+                                for="whatsapp_number"
+                                string="Phone Number"
+                            />
+                            <field name="whatsapp_number" required="whatsapp_enabled" />
+                        </div>
+                        <div class="row">
+                            <label
+                                class="col-lg-3 o_light_label"
+                                for="whatsapp_text"
+                                string="Default Text"
+                            />
+                            <field name="whatsapp_text" />
+                        </div>
+                        <div class="row">
+                            <label
+                                class="col-lg-3 o_light_label"
+                                for="whatsapp_track_url"
+                                string="Track URL"
+                            />
+                            <field class="col-lg-3" name="whatsapp_track_url" />
                         </div>
                     </div>
-                </div>
+                </setting>
             </xpath>
         </field>
     </record>
