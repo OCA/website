@@ -12,22 +12,19 @@
 
     <template id="global_product_search_box_input" name="Global Products search box">
         <t t-call="website_search_header.global_product_search_box">
-            <t
-                t-set="_form_classes"
-                t-valuef="float-end d-block d-lg-none o_search_header"
-            />
+            <t t-set="_form_classes" t-valuef="float-end d-block o_search_header" />
             <t t-set="search_type" t-valuef="all" />
             <t t-set="action" t-valuef="/website/search" />
         </t>
     </template>
 
     <template id="header_search_link" name="Header Search Link">
-        <div id="div_search_header" t-attf-class="#{_item_class} ms-md-2 ms-lg-0">
+        <div id="div_search_header" t-attf-class="#{_item_class} ms-md-2">
             <a t-attf-class="d-none #{_link_class}">
             </a>
             <t t-call="website_search_header.global_product_search_box_input" />
         </div>
-        <div id="div_search_button" t-attf-class="#{_item_class} ms-lg-2">
+        <div id="div_search_button" t-attf-class="#{_item_class}">
             <a t-attf-class="d-none #{_link_class}">
             </a>
             <button
@@ -36,7 +33,7 @@
                 t-attf-class="btn oe_search_button btn-primary"
                 title="Search"
             >
-                <i class="oi oi-search" />
+                <i class="oi oi-close" />
             </button>
         </div>
     </template>
