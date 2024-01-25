@@ -27,18 +27,19 @@ odoo.define("website_search_header.search_header", function (require) {
         },
 
         desktopSearch: function () {
-            if ($(".o_search_header").hasClass("d-lg-none")) {
-                $(".o_search_header").removeClass("d-lg-none");
-                $("#search_btn_toggle_search i").removeClass("oi-search");
-                $("#search_btn_toggle_search i").addClass("oi-close");
-                $("#div_search_header").removeClass("ms-lg-0");
-                $("#div_search_button").removeClass("ms-lg-2");
-            } else {
+            if (!$(".o_search_header").hasClass("d-lg-none")) {
                 $(".o_search_header").addClass("d-lg-none");
                 $("#search_btn_toggle_search i").removeClass("oi-close");
                 $("#search_btn_toggle_search i").addClass("oi-search");
                 $("#div_search_header").addClass("ms-lg-0");
                 $("#div_search_button").addClass("ms-lg-2");
+            } else {
+                $(".o_search_header").removeClass("d-lg-none");
+                $("#search_btn_toggle_search i").removeClass("oi-search");
+                $("#search_btn_toggle_search i").addClass("oi-close");
+                $("#div_search_header").removeClass("ms-lg-0");
+                $("#div_search_button").removeClass("ms-lg-2");
+                $("input.oe_search_box").focus();
             }
         },
 
