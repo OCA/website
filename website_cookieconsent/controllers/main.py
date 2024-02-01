@@ -14,4 +14,4 @@ class WebsiteCookieConsent(http.Controller):
         return {
             'cookie_config': cookie_config,
             'iframemanager_config': iframe_config
-            }
+        }

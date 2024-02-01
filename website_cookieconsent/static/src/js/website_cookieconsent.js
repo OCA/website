@@ -1,53 +1,33 @@
-$(function() {
+(function() {
     "use strict";
 
-    function extractLanguageFromCookie(cookieString) {
-        const cookies = cookieString.split(';');
-        let lang = null;
+    openerp.website.dom_ready.then(function() {
+        function extractLanguageFromCookie(cookieString) {
+            const cookies = cookieString.split(';');
+            let lang = null;
 
-        for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            const [cookieName, cookieValue] = cookie.split('=');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                const [cookieName, cookieValue] = cookie.split('=');
 
-            if (cookieName === 'website_lang') {
-                let langValue = cookieValue.split('_')[0];
-                lang = langValue.toLowerCase();
-                break;
+                if (cookieName === 'website_lang') {
+                    let langValue = cookieValue.split('_')[0];
+                    lang = langValue.toLowerCase();
+                    break;
+                }
             }
+
+            return lang;
         }
 
-        return lang;
-    }
-
-    function isValidJSON(str) {
-        try {
-            JSON.parse(str);
-            return true;
-        } catch (e) {
-            return false;
-        }
-    }
-
-    $.ajax({
-        type: 'POST',
-        url: '/website_cookieconsent',
-        dataType: 'json',
-        beforeSend: function(xhr) {
-            xhr.setRequestHeader('Content-Type', 'application/json');
-        },
-        data: JSON.stringify({
-            jsonrpc: '2.0'
-        }),
-        success: function(data) {
+        openerp.jsonRpc('/website_cookieconsent', 'call', {}).then((data) => {
             let iframe_manager = iframemanager();
-            if (data && 'result' in data && 'cookie_config' in
-                data['result']) {
-                let cookie_options = data['result']['cookie_config'];
-                let iframemanager_options = data['result']['iframemanager_config'];
+            if (data && 'cookie_config' in data && 'iframemanager_config' in data) {
+                let cookie_options = data['cookie_config'];
+                let iframemanager_options = data['iframemanager_config'];
                 let lang = extractLanguageFromCookie(document.cookie);
 
-                if (iframemanager_options !== '')
-                {
+                if (iframemanager_options !== '') {
                     let iframe_opts = eval(iframemanager_options);
                     if ('currLang' in iframe_opts) {
                         iframe_opts['currLang'] = lang;
@@ -63,6 +43,6 @@ $(function() {
                     CookieConsent.run(cookie_opts);
                 }
             }
-        }
-    });
-})
+        });
+    })
+}())
