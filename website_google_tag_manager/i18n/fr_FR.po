@@ -17,15 +17,6 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: website_google_tag_manager
-#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
-msgid ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
-msgstr ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Valurs définies ici spécifiques au "
-"site.\" groups=\"website.group_multi_website\"/>"
-
-#. module: website_google_tag_manager
 #: model:ir.model,name:website_google_tag_manager.model_res_config_settings
 msgid "Config Settings"
 msgstr "Paramétrage de configuration"
@@ -60,3 +51,10 @@ msgstr "Gérer tous vos tags sans modification de code."
 #: model:ir.model,name:website_google_tag_manager.model_website
 msgid "Website"
 msgstr "Site Internet"
+
+#~ msgid ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+#~ "specific.\" groups=\"website.group_multi_website\"/>"
+#~ msgstr ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Valurs définies ici spécifiques "
+#~ "au site.\" groups=\"website.group_multi_website\"/>"
