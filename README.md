@@ -31,6 +31,7 @@ addon | version | maintainers | summary
 [website_forum_subscription](website_forum_subscription/) | 15.0.1.0.0 |  | Adds a button to allow subscription from the website
 [website_google_tag_manager](website_google_tag_manager/) | 15.0.2.0.0 |  | Add support for Google Tag Manager
 [website_legal_page](website_legal_page/) | 15.0.2.0.0 |  | Website Legal Page
+[website_local_font](website_local_font/) | 15.0.1.0.0 |  | Allows to add local fonts on Odoo website
 [website_odoo_debranding](website_odoo_debranding/) | 15.0.1.0.1 |  | Remove Odoo Branding from Website
 [website_plausible](website_plausible/) | 15.0.1.1.1 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Track website users using plausible
 [website_snippet_big_button](website_snippet_big_button/) | 15.0.1.1.0 |  | A snippet that adds two big buttons
