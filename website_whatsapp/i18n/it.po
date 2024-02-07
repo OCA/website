@@ -1,0 +1,78 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_whatsapp
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-11-14 15:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: website_whatsapp
+#: model_terms:ir.ui.view,arch_db:website_whatsapp.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-globe\" title=\"I valori impostati qui sono "
+"specifici per sito web.\" groups=\"website.group_multi_website\"/>"
+
+#. module: website_whatsapp
+#: model:ir.model,name:website_whatsapp.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni configurazione"
+
+#. module: website_whatsapp
+#: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_text
+#: model:ir.model.fields,field_description:website_whatsapp.field_website__whatsapp_text
+msgid "Default text for Whatsapp"
+msgstr "Testo predefinito per Whatsapp"
+
+#. module: website_whatsapp
+#: model:ir.model.fields,help:website_whatsapp.field_res_config_settings__whatsapp_text
+#: model:ir.model.fields,help:website_whatsapp.field_website__whatsapp_text
+msgid "Default text to send as message"
+msgstr "Testo predefinito da inviare come messaggio"
+
+#. module: website_whatsapp
+#: model:ir.model.fields,help:website_whatsapp.field_res_config_settings__whatsapp_track_url
+#: model:ir.model.fields,help:website_whatsapp.field_website__whatsapp_track_url
+msgid ""
+"Indicate in the user's message the URL of the page from which it was sent"
+msgstr "Indicare nel messaggio utente l'URL della pagina da cui è stato inviato"
+
+#. module: website_whatsapp
+#: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_track_url
+#: model:ir.model.fields,field_description:website_whatsapp.field_website__whatsapp_track_url
+msgid "Track URL"
+msgstr "Traccia URL"
+
+#. module: website_whatsapp
+#: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_enabled
+msgid "Use Whatsapp"
+msgstr "Utilizza Whatsapp"
+
+#. module: website_whatsapp
+#: model:ir.model,name:website_whatsapp.model_website
+msgid "Website"
+msgstr "Sito web"
+
+#. module: website_whatsapp
+#: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_number
+#: model:ir.model.fields,field_description:website_whatsapp.field_website__whatsapp_number
+msgid "WhatsApp number"
+msgstr "Numero Whatsapp"
+
+#. module: website_whatsapp
+#: model_terms:ir.ui.view,arch_db:website_whatsapp.res_config_settings_view_form
+msgid "You must add the mobile number with the country prefix"
+msgstr ""
+"È necessario aggiungere il numero del cellulare con il prefisso della nazione"
