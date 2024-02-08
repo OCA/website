@@ -1,7 +1,7 @@
-(function() {
+(function () {
     "use strict";
 
-    openerp.website.dom_ready.then(function() {
+    openerp.website.dom_ready.then(function () {
         function extractLanguageFromCookie(cookieString) {
             const cookies = cookieString.split(';');
             let lang = null;
@@ -20,8 +20,42 @@
             return lang;
         }
 
+        class Analytics {
+            init() {
+                this.events = document.querySelectorAll('[data-ga4-event]');
+                this.events.forEach(((ev) => {
+                    ev.addEventListener('click', ({ currentTarget }) => {
+                        const target = currentTarget;
+                        if (target) {
+                            const analyticsData = {};
+                            Object.entries(target.dataset).forEach((e) => {
+                                const key = e[0];
+                                const value = e[1];
+                                const m = key.match('ga4Param(.+)');
+                                if (m && m[1]) {
+                                    analyticsData[this.unCamelCase(m[1], '_')] = value;
+                                }
+                            });
+                            this.sendEvent(target.dataset.ga4Event, analyticsData);
+                        }
+                    });
+                }));
+            }
+
+            unCamelCase(str, separator = '_') {
+                return str.replace(/([a-z\d])([A-Z])/g, `$1${separator}$2`).replace(/([A-Z]+)([A-Z][a-z\d]+)/g, `$1${separator}$2`).toLowerCase();
+            }
+
+            sendEvent(name, data) {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', name, data);
+                }
+            }
+        }
+
         openerp.jsonRpc('/website_cookieconsent', 'call', {}).then((data) => {
-            let iframe_manager = iframemanager();
+            let x_iframemanager = iframemanager();
+            let x_analytics = new Analytics();
             if (data && 'cookie_config' in data && 'iframemanager_config' in data) {
                 let cookie_options = data['cookie_config'];
                 let iframemanager_options = data['iframemanager_config'];
@@ -32,7 +66,7 @@
                     if ('currLang' in iframe_opts) {
                         iframe_opts['currLang'] = lang;
                     }
-                    iframe_manager.run(iframe_opts);
+                    x_iframemanager.run(iframe_opts);
                 }
 
                 if (cookie_options !== '') {
