@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2023-08-04 13:10+0000\n"
+"PO-Revision-Date: 2024-02-08 10:41+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -121,7 +121,7 @@ msgstr "Via"
 #. module: website_portal
 #: view:website:website_portal.details
 msgid "VAT Number"
-msgstr "Numero P. IVA"
+msgstr "Partita IVA"
 
 #. module: website_portal
 #: view:website:website_portal.account
