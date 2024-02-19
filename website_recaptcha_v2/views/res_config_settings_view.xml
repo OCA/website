@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2010-2014 Elico Corp
+SPDX-FileContributor: Augustin Cisterne-Kaas <augustin.cisterne-kaas@elico-corp.com>
+SPDX-FileCopyrightText: 2015 Tech-Receptives Solutions Pvt. Ltd.
+SPDX-FileCopyrightText: 2018 Simone Orsi - Camptocamp SA
+SPDX-FileCopyrightText: 2019 Tecnativa - Cristina Martin R.
+SPDX-FileCopyrightText: 2019 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">Website settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='website']" position="inside">
+                <h2>reCAPTCHA v2</h2>
+                <div class="row o_settings_container mt16" id="recaptcha_v2">
+                    <div
+                        class="col-12 col-lg-6 o_setting_box"
+                        id="recaptcha_v2_setting"
+                    >
+                        <div class="o_setting_left_pane">
+                            <field name="recaptcha_v2_enabled" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <img
+                                width="20px"
+                                alt="reCAPTCHA icon"
+                                class="mr4"
+                                src="website_recaptcha_v2/static/description/recaptcha_ico.png"
+                            />
+                            <label string="reCAPTCHA v2" for="recaptcha_v2_enabled" />
+                            <span
+                                class="fa fa-lg fa-globe"
+                                title="Values set here are website-specific."
+                                groups="website.group_multi_website"
+                            />
+                            <div class="text-muted">
+                                Protect your forms using reCAPTCHA v2
+                            </div>
+                            <div
+                                class="content-group"
+                                attrs="{'invisible': [('recaptcha_v2_enabled', '=', False)]}"
+                            >
+                                <div class="row mt16">
+                                    <label
+                                        for="recaptcha_v2_site_key"
+                                        class="col-4 o_light_label"
+                                    />
+                                    <field name="recaptcha_v2_site_key" />
+                                </div>
+                                <div class="row">
+                                    <label
+                                        for="recaptcha_v2_secret_key"
+                                        class="col-4 o_light_label"
+                                    />
+                                    <field name="recaptcha_v2_secret_key" />
+                                </div>
+                                <div>
+                                    <a
+                                        href="https://www.google.com/recaptcha/admin"
+                                        class="oe_link"
+                                        target="_blank"
+                                    >
+                                        <i class="fa fa-arrow-right" />
+                                        Get reCAPTCHA v2 keys
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
