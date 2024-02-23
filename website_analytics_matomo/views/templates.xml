@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="layout" inherit_id="website.layout">
+        <xpath expr="//div[@id='wrapwrap']" position="after">
+            <t
+                t-if="website and website.has_matomo_analytics and website.matomo_analytics_host"
+            >
+                <script id="matomo_analytics" type="text/javascript">
+                    var _paq = window._paq = window._paq || [];
+                    <t t-if="website.matomo_enable_userid and website.user_id">
+                        _paq.push(['setUserId', '<t
+                            t-esc="website.matomo_get_userid"
+                        />']);
+                    </t>
+                    _paq.push(['trackPageView']);
+                    _paq.push(['enableLinkTracking']);
+                    <t t-if="website.matomo_enable_heartbeat">
+                        _paq.push(['enableHeartBeatTimer', <t
+                            t-out="website.matomo_heartbeat_timer"
+                        />]);
+                    </t>
+                    (function() {
+                      var u="<t t-out="website.matomo_analytics_host_url" />/";
+                      _paq.push(['setTrackerUrl', u+'matomo.php']);
+                      _paq.push(['setSiteId', '<t
+                        t-out="website.matomo_analytics_id"
+                    />']);
+                      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+                    })();
+                </script>
+                <noscript><p><img
+                            t-attf-src="#{website.matomo_analytics_host_url}/matomo.php?idsite='#{website.matomo_analytics_id}'"
+                            style="border:0;"
+                            alt=""
+                        /></p></noscript>
+           </t>
+        </xpath>
+    </template>
+
+</odoo>
