@@ -4,6 +4,7 @@
         id="frontend_layout"
         name="Website Google Analytic 4"
         inherit_id="portal.frontend_layout"
+        priority="100"
     >
         <xpath expr="//script[@id='tracking_code']" position="replace">
             <script

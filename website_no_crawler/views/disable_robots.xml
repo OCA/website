@@ -1,5 +1,5 @@
 <odoo>
-    <template id="robots" inherit_id="website.robots">
+    <template id="robots" inherit_id="website.robots" priority="100">
         <xpath expr="t" position="replace">
             <t t-translation="off">
                 User-agent: *
