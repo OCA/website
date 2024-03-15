@@ -26,12 +26,12 @@ addon | version | maintainers | summary
 [website_crm_privacy_policy](website_crm_privacy_policy/) | 14.0.1.0.0 |  | Website CRM privacy policy
 [website_crm_quick_answer](website_crm_quick_answer/) | 14.0.1.1.0 |  | Add an automatic answer for contacts asking for info
 [website_forum_subscription](website_forum_subscription/) | 14.0.1.0.0 |  | Adds a button to allow subscription from the website
-[website_google_analytics_4](website_google_analytics_4/) | 14.0.1.0.0 |  | Google Analytics 4 integration
+[website_google_analytics_4](website_google_analytics_4/) | 14.0.1.1.0 |  | Google Analytics 4 integration
 [website_google_tag_manager](website_google_tag_manager/) | 14.0.1.0.0 |  | Add support for Google Tag Manager
 [website_legal_page](website_legal_page/) | 14.0.1.0.0 |  | Website Legal Page
 [website_menu_by_user_status](website_menu_by_user_status/) | 14.0.1.0.0 |  | Allow to manage the display of website.menus
-[website_no_crawler](website_no_crawler/) | 14.0.1.1.0 |  | Disables robots.txt for indexing by webcrawlers like Google
-[website_odoo_debranding](website_odoo_debranding/) | 14.0.1.0.0 |  | Remove Odoo Branding from Website
+[website_no_crawler](website_no_crawler/) | 14.0.1.2.0 |  | Disables robots.txt for indexing by webcrawlers like Google
+[website_odoo_debranding](website_odoo_debranding/) | 14.0.1.1.0 |  | Remove Odoo Branding from Website
 [website_plausible](website_plausible/) | 14.0.1.0.1 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Track website users using plausible
 [website_require_login](website_require_login/) | 14.0.1.0.0 |  | Website Login Required
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 14.0.1.0.0 |  | Allow to select country in a dropdown
