@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2024-02-08 10:41+0000\n"
+"PO-Revision-Date: 2024-03-18 09:37+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -24,7 +24,7 @@ msgstr ""
 #. module: website_portal
 #: view:website:website_portal.account
 msgid "Change"
-msgstr "Cambia"
+msgstr "Modifica"
 
 #. module: website_portal
 #: view:website:website_portal.details
