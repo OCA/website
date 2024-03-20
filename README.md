@@ -33,7 +33,7 @@ addon | version | maintainers | summary
 [website_no_crawler](website_no_crawler/) | 14.0.1.2.0 |  | Disables robots.txt for indexing by webcrawlers like Google
 [website_odoo_debranding](website_odoo_debranding/) | 14.0.1.1.0 |  | Remove Odoo Branding from Website
 [website_plausible](website_plausible/) | 14.0.1.0.1 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Track website users using plausible
-[website_require_login](website_require_login/) | 14.0.1.0.0 |  | Website Login Required
+[website_require_login](website_require_login/) | 14.0.1.0.1 |  | Website Login Required
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 14.0.1.0.0 |  | Allow to select country in a dropdown
 
 [//]: # (end addons)
