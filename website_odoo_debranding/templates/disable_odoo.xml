@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Remove "Create a free website with Odoo" -->
+    <template
+        id="layout_footer_copyright"
+        inherit_id="web.brand_promotion_message"
+        customize_show="True"
+        name="Remove Odoo Promotional Link"
+        priority="999"
+    >
+        <xpath expr="//t[@t-set='final_message']" position="replace">
+            <t t-set="final_message" />
+        </xpath>
+        <xpath expr="//t[@t-out]" position="replace">
+            <t t-out="final_message" />
+        </xpath>
+    </template>
+</odoo>
