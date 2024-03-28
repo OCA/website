@@ -1,0 +1,2 @@
+This module adds cookie consent configuration as specified in `commission.europa.eu <https://commission.europa.eu/cookies-policy_en>`_.
+It is based on `cookieconsent.orestbida.com <https://cookieconsent.orestbida.com>`_ js library.

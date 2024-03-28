@@ -1,0 +1,7 @@
+#cc-main .pm__service-counter {
+    display: none;
+}
+
+#cc-main .cm--flip .cm__btn-group:first-child .cm__btn:last-child {
+    display: none;
+}
