@@ -1,0 +1,1 @@
+This module automatically sets the language of the visitor based on their IP address.
