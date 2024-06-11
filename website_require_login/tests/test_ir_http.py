@@ -1,3 +1,6 @@
+#  Copyright 2024 Simone Rubino - Aion Tech
+#  License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+
 from odoo.tests import HttpCase
 
 
@@ -35,3 +38,31 @@ class TestIrHttp(HttpCase):
             200,
             "Expected the response status code to be 200 which means no redirection",
         )
+
+    def test_authorize_everything(self):
+        """Requiring "/" for authorization always redirects to login page."""
+        # Arrange
+        self.env["website.auth.url"].unlink()
+        root_path = "/"
+        self.env["website.auth.url"].create(
+            {"website_id": self.website.id, "path": root_path}
+        )
+        self.env["ir.qweb"]._pregenerate_assets_bundles()
+        asset_attachment = self.env["ir.attachment"].search(
+            [
+                ("url", "like", "/web/assets/%"),
+            ],
+            limit=1,
+        )
+
+        redirection_path_map = {
+            "/": "/web/login?redirect=/",
+            "/contactus": "/web/login?redirect=/contactus",
+            asset_attachment.url: asset_attachment.url,
+            "/web/login": "/web/login",
+        }
+
+        # Assert
+        for requested_path, expected_redirected_path in redirection_path_map.items():
+            response = self.url_open(requested_path)
+            self.assertTrue(response.url.endswith(expected_redirected_path))
