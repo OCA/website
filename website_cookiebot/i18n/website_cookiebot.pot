@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,7 +22,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
-"                                    How to configure Cookiebot."
+"                                How to configure Cookiebot."
 msgstr ""
 
 #. module: website_cookiebot
@@ -36,8 +36,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid ""
 "<span class=\"text-muted\">\n"
-"                                    Instead of step 3, paste here your Domain Group ID.\n"
-"                                </span>"
+"                                Instead of step 3, paste here your Domain Group ID.\n"
+"                            </span>"
 msgstr ""
 
 #. module: website_cookiebot
@@ -63,6 +63,11 @@ msgstr ""
 #. module: website_cookiebot
 #: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_dgid
 msgid "Cookiebot Domain Group ID"
+msgstr ""
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_enabled
+msgid "Cookiebot Enabled"
 msgstr ""
 
 #. module: website_cookiebot
