@@ -47,7 +47,8 @@ msgstr "Testo predefinito da inviare come messaggio"
 #: model:ir.model.fields,help:website_whatsapp.field_website__whatsapp_track_url
 msgid ""
 "Indicate in the user's message the URL of the page from which it was sent"
-msgstr "Indicare nel messaggio utente l'URL della pagina da cui è stato inviato"
+msgstr ""
+"Indicare nel messaggio utente l'URL della pagina da cui è stato inviato"
 
 #. module: website_whatsapp
 #: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_track_url
@@ -64,6 +65,11 @@ msgstr "Utilizza Whatsapp"
 #: model:ir.model,name:website_whatsapp.model_website
 msgid "Website"
 msgstr "Sito web"
+
+#. module: website_whatsapp
+#: model_terms:ir.ui.view,arch_db:website_whatsapp.layout
+msgid "WhatsApp Floating Icon"
+msgstr ""
 
 #. module: website_whatsapp
 #: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_number
