@@ -18,6 +18,7 @@
                 target="_blank"
                 t-attf-href="https://api.whatsapp.com/send?phone={{website.whatsapp_number}}&amp;text={{extra_info}}"
                 id="whatsapp_icon"
+                title="WhatsApp Floating Icon"
             >
                 <i class="fa fa-whatsapp" />
             </a>
