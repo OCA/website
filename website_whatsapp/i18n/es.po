@@ -67,6 +67,11 @@ msgid "Website"
 msgstr "Sitio Web"
 
 #. module: website_whatsapp
+#: model_terms:ir.ui.view,arch_db:website_whatsapp.layout
+msgid "WhatsApp Floating Icon"
+msgstr ""
+
+#. module: website_whatsapp
 #: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_number
 #: model:ir.model.fields,field_description:website_whatsapp.field_website__whatsapp_number
 msgid "WhatsApp number"
