@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo-addon-website_analytics_matomo>=15.0dev,<15.1dev',
         'odoo-addon-website_breadcrumb>=15.0dev,<15.1dev',
+        'odoo-addon-website_conditional_visibility_user_group>=15.0dev,<15.1dev',
         'odoo-addon-website_cookiebot>=15.0dev,<15.1dev',
         'odoo-addon-website_cookiefirst>=15.0dev,<15.1dev',
         'odoo-addon-website_crm_privacy_policy>=15.0dev,<15.1dev',
