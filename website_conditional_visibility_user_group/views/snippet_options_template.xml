@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Tecnativa - David Vidal
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3). -->
+<odoo>
+    <template id="snippet_options" inherit_id="website.snippet_options">
+        <!-- Give this option a data-name so we can hook into its visibility -->
+        <xpath
+            expr="//we-select[@data-save-attribute='visibilityValueLogged']/we-button[@data-select-value='true']"
+            position="attributes"
+        >
+            <attribute name="data-name">visibility_logged_in</attribute>
+        </xpath>
+        <xpath
+            expr="//we-select[@data-save-attribute='visibilityValueLogged']"
+            position="after"
+        >
+
+            <we-select
+                string="⌙ Groups"
+                data-dependencies="visibility_logged_in"
+                data-attribute-name="data-user_group"
+                data-save-attribute="visibilityUserGroup"
+                data-no-preview="true"
+                data-attribute-default-value=""
+            >
+                <we-button
+                    data-select-value=""
+                    data-name="user_group_all"
+                >No restriction</we-button>
+                <we-button
+                    data-select-value="portal"
+                    data-name="user_group_portal"
+                >Only portal users</we-button>
+                <we-button
+                    data-select-value="internal"
+                    data-name="user_group_internal"
+                >Only internal users</we-button>
+            </we-select>
+        </xpath>
+        <!-- Trigger no restriction on the user visibility options to avoid hidden effects -->
+        <xpath
+            expr="//we-select[@data-save-attribute='visibilityValueLogged']"
+            position="attributes"
+        >
+            <attribute name="data-trigger">user_group_all</attribute>
+        </xpath>
+    </template>
+</odoo>
