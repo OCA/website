@@ -15,4 +15,14 @@
             <t t-out="final_message" />
         </xpath>
     </template>
+    <!-- Remove "Powered by Odoo in the portal sidebar" -->
+    <template
+        id="portal_sidebar_copyright"
+        inherit_id="portal.portal_record_sidebar"
+        customize_show="True"
+        name="Remove Odoo Promotion on Sidebar"
+        priority="999"
+    >
+        <xpath expr="//t/following-sibling::div" position="replace" />
+    </template>
 </odoo>
