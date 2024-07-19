@@ -28,6 +28,7 @@ class WebsiteMenu(models.Model):
     )
 
     def _compute_visible(self):
+        # pylint: disable=missing-return
         """Display the menu item whether the user is logged or not."""
         super()._compute_visible()
         for menu in self:
