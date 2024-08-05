@@ -33,6 +33,8 @@ class IrHttp(models.AbstractModel):
             # are needed to correctly render the login page
             "/web",
             "/website/translations",
+            "/jsonrpc",
+            "/xmlrpc",
         ]
 
     @classmethod

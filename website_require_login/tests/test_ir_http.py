@@ -60,6 +60,9 @@ class TestIrHttp(HttpCase):
             "/contactus": "/web/login?redirect=/contactus",
             asset_attachment.url: asset_attachment.url,
             "/web/login": "/web/login",
+            "/jsonrpc": "/jsonrpc",
+            "/xmlrpc/2/common": "/xmlrpc/2/common",
+            "/xmlrpc/2/object": "/xmlrpc/2/object",
         }
 
         # Assert
