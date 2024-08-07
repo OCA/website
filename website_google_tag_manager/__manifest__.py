@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     "name": "Google Tag Manager",
-    "version": "15.0.2.0.0",
+    "version": "15.0.2.0.1",
     "author": "ABF OSIELL, Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
