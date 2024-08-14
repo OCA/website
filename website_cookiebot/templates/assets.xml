@@ -6,7 +6,9 @@
         <!-- This should be the first script loaded;
              see https://cookiebot.com/goto/help -->
         <xpath expr="//head/script" position="before">
-            <t t-if="website.cookiebot_dgid and not editable">
+            <t
+                t-if="website.cookiebot_enabled and website.cookiebot_dgid and not editable"
+            >
                 <script
                     id="Cookiebot"
                     src="https://consent.cookiebot.com/uc.js"
@@ -21,7 +23,7 @@
         <xpath expr="//script[@id='tracking_code']" position="attributes">
             <attribute
                 name="t-att-type"
-            >website.cookiebot_dgid and 'text/plain'</attribute>
+            >website.cookiebot_enabled and website.cookiebot_dgid and 'text/plain'</attribute>
             <attribute name="data-cookieconsent">statistics</attribute>
         </xpath>
     </template>

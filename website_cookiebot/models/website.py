@@ -11,3 +11,4 @@ class Website(models.Model):
         string="Cookiebot Domain Group ID",
         help="Get this code from Cookiebot to enable it on the website.",
     )
+    cookiebot_enabled = fields.Boolean()
