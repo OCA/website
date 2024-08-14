@@ -43,7 +43,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid ""
 "<span class=\"text-muted\">\n"
-"                                    Instead of step 3, paste here your Domain Group ID.\n"
+"                                    Instead of step 3, paste here your "
+"Domain Group ID.\n"
 "                                </span>"
 msgstr ""
 "<span class=\"text-muted\">\n"
@@ -75,6 +76,11 @@ msgstr "Cookiebot"
 #: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_dgid
 msgid "Cookiebot Domain Group ID"
 msgstr "ID gruppo dominio cookiebot"
+
+#. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_enabled
+msgid "Cookiebot Enabled"
+msgstr ""
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.layout_footer_copyright
