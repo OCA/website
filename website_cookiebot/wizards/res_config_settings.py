@@ -15,14 +15,9 @@ class ResConfigSettings(models.TransientModel):
     )
     cookiebot_enabled = fields.Boolean(
         string="Cookiebot",
-        compute="_compute_cookiebot_enabled",
+        related="website_id.cookiebot_enabled",
         readonly=False,
     )
-
-    @api.depends("website_id.cookiebot_dgid")
-    def _compute_cookiebot_enabled(self):
-        for record in self:
-            record.cookiebot_enabled = bool(record.cookiebot_dgid)
 
     @api.onchange("website_cookies_bar")
     def _onchange_website_cookies_bar(self):

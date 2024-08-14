@@ -5,7 +5,7 @@
     "name": "Website Cookiebot",
     "summary": "Ask for cookies consent connecting with Cookiebot",
     "category": "Website",
-    "version": "16.0.1.0.0",
+    "version": "16.0.2.0.0",
     "author": "Trey (www.trey.es), Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
