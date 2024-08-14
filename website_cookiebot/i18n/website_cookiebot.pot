@@ -66,6 +66,11 @@ msgid "Cookiebot Domain Group ID"
 msgstr ""
 
 #. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_enabled
+msgid "Cookiebot Enabled"
+msgstr ""
+
+#. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.layout_footer_copyright
 msgid "Cookies Policy"
 msgstr ""
