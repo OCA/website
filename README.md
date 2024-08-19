@@ -27,7 +27,7 @@ addon | version | maintainers | summary
 [website_crm_quick_answer](website_crm_quick_answer/) | 16.0.1.0.0 |  | Add an automatic answer for contacts asking for info
 [website_form_require_legal](website_form_require_legal/) | 16.0.1.1.0 |  | Add possibility to require confirm legal terms.
 [website_forum_subscription](website_forum_subscription/) | 16.0.1.0.0 |  | Adds a button to allow subscription from the website
-[website_google_tag_manager](website_google_tag_manager/) | 16.0.1.0.0 |  | Add support for Google Tag Manager
+[website_google_tag_manager](website_google_tag_manager/) | 16.0.1.0.1 |  | Add support for Google Tag Manager
 [website_legal_page](website_legal_page/) | 16.0.1.1.0 |  | Website Legal Page
 [website_odoo_debranding](website_odoo_debranding/) | 16.0.1.0.0 |  | Remove Odoo Branding from Website
 [website_require_login](website_require_login/) | 16.0.1.0.0 |  | Website Login Required
