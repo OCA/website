@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-03-15 18:42+0000\n"
-"PO-Revision-Date: 2024-07-29 08:58+0000\n"
+"PO-Revision-Date: 2024-08-20 09:58+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -34,7 +34,7 @@ msgstr "Annullato"
 #. module: website_portal_sale
 #: view:website:website_portal_sale.sale_orders
 msgid "Confirmation Date"
-msgstr "Data della Conferma"
+msgstr "Data conferma"
 
 #. module: website_portal_sale
 #: view:website:website_portal_sale.orders_followup
