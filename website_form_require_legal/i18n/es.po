@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Poedit 3.2.2\n"
 
 #. module: website_form_require_legal
-#. openerp-web
+#. odoo-javascript
 #: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "Agree to"
@@ -30,14 +30,14 @@ msgid "Legal terms acceptance"
 msgstr "Aceptación de los términos legales"
 
 #. module: website_form_require_legal
-#. openerp-web
+#. odoo-javascript
 #: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "You must agree before submitting."
 msgstr "Debe estar de acuerdo antes de enviarlo."
 
 #. module: website_form_require_legal
-#. openerp-web
+#. odoo-javascript
 #: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "terms and conditions"
