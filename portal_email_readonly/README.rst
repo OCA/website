@@ -25,6 +25,7 @@ portal_email_readonly
 
 |badge1| |badge2| |badge3| |badge4|
 
+This module is an addition to Odoo's portal module, and makes sure that the email field on the 'My Account' page in the portal / website / webshop is not editable by the portal user.
 
 **Table of contents**
 
@@ -48,6 +49,11 @@ Authors
 ~~~~~~~
 
 * TOSC - K.Sushma
+
+Contributors
+~~~~~~~~~~~~
+
+* Kumari Sushma <sushmakumari@systemsvalley.com>
 
 Maintainers
 ~~~~~~~~~~~
