@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <template id="portal_email_readonly" inherit_id="portal.portal_my_details">
+            <xpath expr="//div[contains(@t-attf-class, 'email')]" position="replace">
+                <t t-set="partner_can_edit_email" t-value="partner.can_edit_email()" />
+                <t
+                    t-set="email_not_editable_message"
+                >You cannot change the email address. Please create a new contact person.</t>
+                <div
+                    t-attf-class="form-group #{error.get('email') and 'o_has_error' or ''} col-xl-6"
+                >
+                    <label class="col-form-label" for="email">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        t-attf-class="form-control #{error.get('email') and 'is-invalid' or ''}"
+                        t-att-value="email or partner.email"
+                        t-att-readonly="None if partner_can_edit_email else '1'"
+                        t-att-title="None if partner_can_edit_email else email_not_editable_message"
+                    />
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>
