@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* portal_email_readonly
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-24 07:33+0000\n"
+"PO-Revision-Date: 2024-07-24 07:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: portal_email_readonly
+#: model:ir.model,name:portal_email_readonly.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: portal_email_readonly
+#: model:ir.model.fields,field_description:portal_email_readonly.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: portal_email_readonly
+#: model_terms:ir.ui.view,arch_db:portal_email_readonly.portal_email_readonly
+msgid "Email"
+msgstr ""
+
+#. module: portal_email_readonly
+#: model:ir.model.fields,field_description:portal_email_readonly.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: portal_email_readonly
+#: model:ir.model.fields,field_description:portal_email_readonly.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: portal_email_readonly
+#: code:addons/portal_email_readonly/models/res_partner.py:0
+#, python-format
+msgid ""
+"You cannot change the email address of a portal user. Please create a new "
+"contact person!"
+msgstr "Je kunt het email adres van een portaalgebruiker niet aanpassen. Maak een nieuwe contactpersoon aan."
+
+#. module: portal_email_readonly
+#: model_terms:ir.ui.view,arch_db:portal_email_readonly.portal_email_readonly
+msgid ""
+"You cannot change the email address. Please create a new contact person."
+msgstr "Je kunt het email adres van een portaalgebruiker niet aanpassen. Maak een nieuwe contactpersoon aan."
