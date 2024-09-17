@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo-addon-website_require_login>=16.0dev,<16.1dev',
         'odoo-addon-website_snippet_country_dropdown>=16.0dev,<16.1dev',
         'odoo-addon-website_whatsapp>=16.0dev,<16.1dev',
+        'odoo-addon-portal_email_readonly>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
