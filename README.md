@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [website_form_require_legal](website_form_require_legal/) | 17.0.1.0.0 |  | Add possibility to require confirm legal terms.
 [website_google_tag_manager](website_google_tag_manager/) | 17.0.1.0.1 |  | Add support for Google Tag Manager
 [website_odoo_debranding](website_odoo_debranding/) | 17.0.1.0.0 |  | Remove Odoo Branding from Website
+[website_require_login](website_require_login/) | 17.0.1.0.0 |  | Website Login Required
 
 [//]: # (end addons)
 

@@ -1,11 +1,12 @@
 [project]
 name = "odoo-addons-oca-website"
-version = "17.0.20240822.1"
+version = "17.0.20240930.0"
 dependencies = [
     "odoo-addon-website_cookiebot>=17.0dev,<17.1dev",
     "odoo-addon-website_form_require_legal>=17.0dev,<17.1dev",
     "odoo-addon-website_google_tag_manager>=17.0dev,<17.1dev",
     "odoo-addon-website_odoo_debranding>=17.0dev,<17.1dev",
+    "odoo-addon-website_require_login>=17.0dev,<17.1dev",
 ]
 classifiers=[
     "Programming Language :: Python",
