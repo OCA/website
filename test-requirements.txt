@@ -1,0 +1,1 @@
+odoo-addon-website_legal_page @ git+https://github.com/OCA/website.git@refs/pull/1022/head#subdirectory=website_legal_page
