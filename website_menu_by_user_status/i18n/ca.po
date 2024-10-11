@@ -17,16 +17,6 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: website_menu_by_user_status
-#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__display_name
-msgid "Display Name"
-msgstr ""
-
-#. module: website_menu_by_user_status
-#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__id
-msgid "ID"
-msgstr ""
-
-#. module: website_menu_by_user_status
 #: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu__user_logged
 msgid ""
 "If checked, the menu will be displayed when the user is logged and give "
@@ -43,11 +33,6 @@ msgid ""
 msgstr ""
 "Si està marcat, el menú es mostrarà quan l'usuari no estigui registrat i hi "
 "doni accés."
-
-#. module: website_menu_by_user_status
-#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu____last_update
-msgid "Last Modified on"
-msgstr ""
 
 #. module: website_menu_by_user_status
 #: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__user_logged

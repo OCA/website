@@ -17,16 +17,6 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: website_menu_by_user_status
-#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__display_name
-msgid "Display Name"
-msgstr "Nombre Mostrado"
-
-#. module: website_menu_by_user_status
-#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__id
-msgid "ID"
-msgstr "ID"
-
-#. module: website_menu_by_user_status
 #: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu__user_logged
 msgid ""
 "If checked, the menu will be displayed when the user is logged and give "
@@ -45,11 +35,6 @@ msgstr ""
 "sesión y le dé acceso."
 
 #. module: website_menu_by_user_status
-#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu____last_update
-msgid "Last Modified on"
-msgstr "Última Modificación el"
-
-#. module: website_menu_by_user_status
 #: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__user_logged
 msgid "Visible for logged Users"
 msgstr "Visible para usuarios logeados"
@@ -63,3 +48,12 @@ msgstr "Visible para Usuarios públicos"
 #: model:ir.model,name:website_menu_by_user_status.model_website_menu
 msgid "Website Menu"
 msgstr "Menú del Sitio Web"
+
+#~ msgid "Display Name"
+#~ msgstr "Nombre Mostrado"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificación el"
