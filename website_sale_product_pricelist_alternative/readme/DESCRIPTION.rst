@@ -1,0 +1,1 @@
+Based on `product_pricelist_alternative` (https://github.com/OCA/product-attribute/tree/16.0/product_pricelist_alternative), it allows you to show in the website alternative vs original product prices.
