@@ -48,7 +48,7 @@
         name="Forum page subscription"
         inherit_id="website_forum.forum_index"
     >
-        <xpath expr="//div[@class='row g-0']" position="before">
+        <xpath expr="//table[hasclass('o_wforum_table')]" position="before">
             <t t-call="website_forum_subscription.follow">
                 <t t-set="object" t-value="forum" />
             </t>
@@ -59,7 +59,7 @@
         name="Forum card subscription"
         inherit_id="website_forum.forum_all_all_entries"
     >
-        <xpath expr="//t[@t-call='website_forum.forum_post_options']" position="after">
+        <xpath expr="//div[hasclass('text-truncate')]" position="after">
             <t t-call="website_forum_subscription.follow">
                 <t t-set="object" t-value="forum" />
             </t>
