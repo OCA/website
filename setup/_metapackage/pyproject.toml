@@ -14,6 +14,7 @@ dependencies = [
     "odoo-addon-website_local_font>=17.0dev,<17.1dev",
     "odoo-addon-website_menu_by_user_status>=17.0dev,<17.1dev",
     "odoo-addon-website_odoo_debranding>=17.0dev,<17.1dev",
+    "odoo-addon-website_page_redirect>=17.0dev,<17.1dev",
     "odoo-addon-website_require_login>=17.0dev,<17.1dev",
     "odoo-addon-website_snippet_big_button>=17.0dev,<17.1dev",
     "odoo-addon-website_snippet_marginless_gallery>=17.0dev,<17.1dev",

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright 2024 CorporateHub (https://corporatehub.eu)
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+    <template id="website__layout" inherit_id="website.layout">
+        <xpath expr="//head/meta[last()]" position="after">
+            <t
+                t-if="main_object and not request.env.user.has_group('website.group_website_designer') and 'is_redirect' in main_object and main_object.is_redirect and main_object.redirect_method == 'meta'"
+            >
+                <meta
+                    http-equiv="refresh"
+                    t-att-content="str(main_object.redirect_delay) + ';url=' + main_object.redirect_url"
+                />
+            </t>
+        </xpath>
+        <xpath expr="//head/*[last()]" position="after">
+            <t
+                t-if="main_object and not request.env.user.has_group('website.group_website_designer') and 'is_redirect' in main_object and main_object.is_redirect and main_object.redirect_method in ('js-href', 'js-replace')"
+                t-out="main_object.redirect_js_code"
+            />
+        </xpath>
+    </template>
+
+</odoo>
