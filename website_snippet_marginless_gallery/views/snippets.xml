@@ -6,17 +6,19 @@
     <template id="s_marginless_gallery" name="Marginless Gallery">
         <section class="marginless-gallery pt32 pb32 text-center">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
+                <div class="row d-flex align-items-stretch">
+                    <div
+                        class="o_colored_level o_cc o_cc1 col-lg-12 pb32 pt32 text-center"
+                    >
                         <h2 class="o_default_snippet_text pb16">
                             <b>Our Gallery</b>
                         </h2>
-                        <p class="lead o_default_snippet_text pb32">
+                        <p class="lead o_default_snippet_text pb16">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
                         </p>
                     </div>
                     <section
-                        class="col-lg-3 col-12 pt32 pb32 oe_img_bg"
+                        class="col-lg-3 pt32 pb32 oe_img_bg"
                         style="background-image: url('/website/static/src/img/library/bridge.jpg');"
                     >
                         <div>
@@ -26,7 +28,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="col-lg-3 col-12 pt32 pb32  bg-primary">
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc4">
                         <div>
                             <h4 class="o_default_snippet_text">Lorem ipsum</h4>
                             <p class="o_default_snippet_text mb0">
@@ -35,7 +37,7 @@
                         </div>
                     </section>
                     <section
-                        class="col-lg-3 col-12 pt32 pb32 oe_img_bg"
+                        class="col-lg-3 pt32 pb32 oe_img_bg"
                         style="background-image: url('/website/static/src/img/library/mobile.jpg');"
                     >
                         <div>
@@ -45,7 +47,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="col-lg-3 col-12 pt32 pb32  bg-o-color-2">
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc3">
                         <div>
                             <h4 class="o_default_snippet_text">Lorem ipsum</h4>
                             <p class="o_default_snippet_text mb0">
@@ -53,7 +55,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="col-lg-3 col-12 pt32 pb32  bg-o-color-3">
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc2">
                         <div>
                             <h4 class="o_default_snippet_text">Lorem ipsum</h4>
                             <p class="o_default_snippet_text mb0">
@@ -61,7 +63,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="col-lg-3 col-12 pt32 pb32  bg-o-color-5">
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc5">
                         <div>
                             <h4 class="o_default_snippet_text">Lorem ipsum</h4>
                             <p class="o_default_snippet_text mb0">
@@ -69,7 +71,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="col-lg-3 col-12 pt32 pb32  bg-o-color-4">
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc1">
                         <div>
                             <h4 class="o_default_snippet_text">Lorem ipsum</h4>
                             <p class="o_default_snippet_text mb0">
@@ -77,7 +79,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="col-lg-3 col-12 pt32 pb32  bg-primary">
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc4">
                         <div>
                             <h4 class="o_default_snippet_text">Lorem ipsum</h4>
                             <p class="o_default_snippet_text mb0">
@@ -85,7 +87,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="col-lg-3 col-12 pt32 pb32  bg-o-color-2">
+                    <section class="col-lg-3 pt32 pb32  o_colored_level o_cc o_cc3">
                         <div>
                             <h4 class="o_default_snippet_text">Lorem ipsum</h4>
                             <p class="o_default_snippet_text mb0">
@@ -94,7 +96,7 @@
                         </div>
                     </section>
                     <section
-                        class="col-lg-3 col-12 pt32 pb32 oe_img_bg"
+                        class="col-lg-3 pt32 pb32 oe_img_bg"
                         style="background-image: url('/website/static/src/img/library/shop.jpg');"
                     >
                         <div>
@@ -104,7 +106,7 @@
                             </p>
                         </div>
                     </section>
-                    <section class="col-lg-3 col-12 pt32 pb32  bg-o-color-3">
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc2">
                         <div>
                             <h4 class="o_default_snippet_text">Lorem ipsum</h4>
                             <p class="o_default_snippet_text mb0">
@@ -113,7 +115,7 @@
                         </div>
                     </section>
                     <section
-                        class="col-lg-3 col-12 pt32 pb32 oe_img_bg"
+                        class="col-lg-3 pt32 pb32 oe_img_bg"
                         style="background-image: url('/website/static/src/img/library/wine.jpg');"
                     >
                         <div>
@@ -128,7 +130,7 @@
         </section>
     </template>
     <template id="snippets" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_feature']//div[hasclass('o_panel_body')]">
+        <xpath expr="//div[@id='snippet_structure']//div[hasclass('o_panel_body')]">
             <t
                 t-snippet="website_snippet_marginless_gallery.s_marginless_gallery"
                 t-thumbnail="/website_snippet_marginless_gallery/static/description/s_website_marginless_gallery.png"
