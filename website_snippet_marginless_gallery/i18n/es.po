@@ -20,23 +20,9 @@ msgstr ""
 "X-Generator: Weblate 3.10\n"
 
 #. module: website_snippet_marginless_gallery
-#. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/tests/tours/website_snippet_marginless_gallery.js:0
-#, python-format
-msgid "<b>Click Edit</b> to start designing your homepage."
-msgstr "<b>Clica Editar</b> para empezar a dise??ar tu p??gina de entrada."
-
-#. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 msgid "<b>Our Gallery</b>"
 msgstr "<b>Nuestra Galer??a</b>"
-
-#. module: website_snippet_marginless_gallery
-#. openerp-web
-#: code:addons/website_snippet_marginless_gallery/static/src/tests/tours/website_snippet_marginless_gallery.js:0
-#, python-format
-msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
-msgstr "Arrastra<i>Galer??a sin m??rgenes</i> y su??ltala en la p??gina."
 
 #. module: website_snippet_marginless_gallery
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
@@ -47,6 +33,14 @@ msgstr "Lorem ipsum"
 #: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
 msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
+
+#, python-format
+#~ msgid "<b>Click Edit</b> to start designing your homepage."
+#~ msgstr "<b>Clica Editar</b> para empezar a dise??ar tu p??gina de entrada."
+
+#, python-format
+#~ msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
+#~ msgstr "Arrastra<i>Galer??a sin m??rgenes</i> y su??ltala en la p??gina."
 
 #~ msgid "Change Images Height"
 #~ msgstr "Cambiar la altura de las im??genes"
