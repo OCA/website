@@ -10,7 +10,7 @@ import requests
 
 from odoo import _, api, fields, models
 
-URL = "https://www.recaptcha.net/recaptcha/api/siteverify"
+RECAPTCHA_API_URL = "https://www.recaptcha.net/recaptcha/api/siteverify"
 RECAPTCHA_API_TIMEOUT = 30
 
 
@@ -30,8 +30,20 @@ class Website(models.Model):
             "invalid-input-response": _(
                 "The response parameter is invalid or malformed."
             ),
+            "bad-request": _("The request is invalid or malformed."),
+            "timeout-or-duplicate": _(
+                "The response is no longer valid: either is too old or has "
+                "been used previously."
+            ),
         }
-        return mapping.get(errorcode, _("There was a problem with the captcha entry."))
+        return mapping.get(
+            errorcode,
+            _(
+                "Unknown reCAPTCHA error (error code: {errorcode}).".format(
+                    errorcode=errorcode
+                )
+            ),
+        )
 
     def is_recaptcha_v2_valid(self, form_values):
         """
@@ -52,15 +64,14 @@ class Website(models.Model):
         if not response:
             return (False, _("No response given."))
         get_res = {"secret": self.recaptcha_v2_secret_key, "response": response}
-
-        res = requests.post(URL, data=get_res, timeout=RECAPTCHA_API_TIMEOUT).json()
-
+        res = requests.post(
+            RECAPTCHA_API_URL, data=get_res, timeout=RECAPTCHA_API_TIMEOUT
+        ).json()
         error_msg = "\n".join(
             self._get_error_message(error) for error in res.get("error-codes", [])
         )
         if error_msg:
             return (False, error_msg)
-
         if not res.get("success"):
-            return (False, self._get_error_message())
+            return (False, _("The challenge was not successfully completed."))
         return (True, "")

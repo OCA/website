@@ -76,7 +76,7 @@ class TestRecaptcha(TransactionCase):
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertFalse(result)
-        self.assertEqual(error_msg, "There was a problem with the captcha entry.")
+        self.assertEqual(error_msg, "The challenge was not successfully completed.")
 
     @mock.patch(imp_requests)
     def test_captcha_empty_response(self, requests_mock):
@@ -85,7 +85,7 @@ class TestRecaptcha(TransactionCase):
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertFalse(result)
-        self.assertEqual(error_msg, "There was a problem with the captcha entry.")
+        self.assertEqual(error_msg, "The challenge was not successfully completed.")
 
     @mock.patch(imp_requests)
     def test_captcha_unknown_error(self, requests_mock):
@@ -94,7 +94,9 @@ class TestRecaptcha(TransactionCase):
             {"g-recaptcha-response": "dummy_response"}
         )
         self.assertFalse(result)
-        self.assertEqual(error_msg, "There was a problem with the captcha entry.")
+        self.assertEqual(
+            error_msg, "Unknown reCAPTCHA error (error code: unknown-error)."
+        )
 
     @mock.patch(imp_requests)
     def test_captcha_no_errors_and_success(self, requests_mock):
