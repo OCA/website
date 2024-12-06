@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="binhex_login" inherit_id="web.login">
+        <xpath expr="//p[hasclass('alert-danger')]" position="before">
+            <t t-call="website_recaptcha_v2.recaptcha_widget" />
+        </xpath>
+    </template>
+</odoo>
