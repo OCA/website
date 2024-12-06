@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="website_recaptcha_v2_form.recaptcha_v2">
+        <div class="col-12 s_website_form_recaptcha_v2" data-name="Recaptcha v2 Legal">
+            <input type="hidden" name="recaptcha_enabled" value="True" />
+            <script>
+                window.callback_success_recaptcha = function (token) {
+                    console.info('success_token');
+                }
+                window.callback_expired_recaptcha = function (data) {
+                    window.reload();
+                }
+            </script>
+            <script src="https://www.recaptcha.net/recaptcha/api.js" async="1" />
+            <div
+                class="g-recaptcha"
+                t-att-data-sitekey="recaptcha_site_key"
+                data-callback="callback_success_recaptcha"
+                data-expired-callback="callback_expired_recaptcha"
+            />
+        </div>
+    </t>
+
+</templates>

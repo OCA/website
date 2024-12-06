@@ -1,0 +1,16 @@
+<odoo>
+    <template id="s_website_form_options" inherit_id="website.snippet_options">
+        <xpath expr="//div[@data-js='WebsiteFormEditor']" position="inside">
+            <t
+                t-set="recaptcha_v2_public_key"
+                t-value="request.env['ir.config_parameter'].sudo().get_param('recaptcha_v2_secret_key')"
+            />
+            <we-checkbox
+                string="Show reCaptcha v2"
+                data-toggle-recaptcha-v2=""
+                data-no-preview="true"
+            />
+        </xpath>
+    </template>
+
+</odoo>
