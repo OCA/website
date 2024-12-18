@@ -11,7 +11,7 @@
                 .search([('url', '=', request.httprequest.path)], limit=1)"
         />
         <!-- If so, create the breadcrumbs -->
-        <ol t-if="bc_item" class="breadcrumb">
+        <ol t-if="bc_item" class="breadcrumb bg-light bg-gradient rounded mt-1">
             <!-- Parents -->
             <t t-foreach="bc_item.get_parents(True)" t-as="step">
                 <li class="breadcrumb-item" t-if="step.url or step_first">
