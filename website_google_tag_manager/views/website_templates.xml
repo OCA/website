@@ -2,7 +2,7 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
     <template id="layout" inherit_id="website.layout">
-        <xpath expr="//div[@id='wrapwrap']" position="after">
+        <xpath expr="html/body/*[1]" position="before">
             <t t-if="website and website.google_tag_manager_key">
                 <!-- Google Tag Manager (noscript) -->
                 <noscript>
@@ -16,9 +16,7 @@
                 <!-- End Google Tag Manager (noscript) -->
             </t>
         </xpath>
-    </template>
-    <template id="web_layout" inherit_id="website.layout">
-        <xpath expr="//meta[@name='generator']" position="before">
+        <xpath expr="html/head" position="inside">
             <t t-if="website and website.google_tag_manager_key">
                 <!-- Google Tag Manager -->
                 <script
