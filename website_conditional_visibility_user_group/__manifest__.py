@@ -3,7 +3,7 @@
 {
     "name": "Conditional visibility for internal users in Website",
     "summary": "Only internal users will see the blocks you add this condition to",
-    "version": "15.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/OCA/website",
     "author": "Tecnativa, Odoo Community Association (OCA)",

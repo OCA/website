@@ -1,33 +1,26 @@
 /** @odoo-module */
 /* Copyright 2024 Tecnativa - David Vidal
  * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
-import tour from "web_tour.tour";
-import wTourUtils from "website.tour_utils";
+import wTourUtils from "@website/js/tours/tour_utils";
 
-const snippet = {
-    id: "s_text_image",
-    name: "Text - Image",
-};
-
-tour.register(
+wTourUtils.registerWebsitePreviewTour(
     "conditional_visibility_only_internal_user",
     {
         test: true,
         url: "/",
+        edition: true,
     },
-    [
-        {
-            content: "enter edit mode",
-            trigger: "a[data-action=edit]",
-        },
-        wTourUtils.dragNDrop(snippet),
-        wTourUtils.clickOnSnippet(snippet),
+    () => [
+        wTourUtils.dragNDrop({id: "s_text_image", name: "Text - Image"}),
+        wTourUtils.clickOnSnippet({
+            id: "s_text_image",
+            name: "Text - Image",
+        }),
         wTourUtils.changeOption("ConditionalVisibility", "we-toggler"),
-        {
-            content: "Set on conditional visibility",
-            trigger: '[data-name="visibility_conditional"]',
-            run: "click",
-        },
+        wTourUtils.changeOption(
+            "ConditionalVisibility",
+            '[data-name="visibility_conditional"]'
+        ),
         {
             content: "Click in User visibility",
             trigger: '[data-save-attribute="visibilityValueLogged"]',
@@ -51,11 +44,9 @@ tour.register(
         ...wTourUtils.clickOnSave(),
         {
             content: "Check if the rule was applied",
-            trigger: "body:not(.editor_enable) #wrap",
+            trigger: "iframe #wrap .s_text_image",
             run: function () {
-                const style = window.getComputedStyle(
-                    this.$anchor[0].getElementsByClassName("s_text_image")[0]
-                );
+                const style = window.getComputedStyle(this.$anchor[0]);
                 if (style.display === "none") {
                     console.error(
                         "Error: this item should be visible for internal users"
