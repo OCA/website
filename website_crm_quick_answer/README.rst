@@ -42,7 +42,9 @@ Configuration
 
 To configure this module, you need to:
 
-1. Go to **Settings > Technical > Automation > Automated actions > Quick
+1. Have the action of the submit button on the website contact form
+   configured to create a new opportunity.
+2. Go to **Settings > Technical > Automation > Automation Rules > Quick
    response to website contact form** and edit anything there.
 
 Quicker way to just change the email template (something that most
@@ -58,6 +60,8 @@ To use this module, you need to:
 
 Have an email address in your main company. It will be used as sender
 address.
+
+Complete the contact form on the website and send it to us.
 
 Bug Tracker
 ===========
@@ -86,6 +90,7 @@ Contributors
    -  Jairo Llopis <jairo.llopis@tecnativa.com>
    -  David Vidal <david.vidal@tecnativa.com>
    -  Cristina Martin R.
+   -  Pilar Vargas
 
 -  `Sygel Technology <https://www.sygel.es>`__:
 
