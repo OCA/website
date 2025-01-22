@@ -8,7 +8,7 @@
             <t name="Cookies Policy" t-name="website.cookies">
                 <t t-call="website.layout">
                     <div id="wrap">
-                        <div class="oe_structure">
+                        <div class="oe_structure" id="oe_structure_cookie_first_header">
                             <section data-snippet-id="title">
                                 <h1 class="text-center mt-4">Cookie Declaration</h1>
                             </section>
@@ -22,7 +22,10 @@
                                 </div>
                             </div>
                         </section>
-                        <div class="oe_structure" />
+                        <div
+                            class="oe_structure"
+                            id="oe_structure_cookie_first_footer"
+                        />
                     </div>
                 </t>
             </t>
