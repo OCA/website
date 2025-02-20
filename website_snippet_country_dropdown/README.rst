@@ -17,19 +17,19 @@ Website Snippet Country Code Dropdown
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github
-    :target: https://github.com/OCA/website/tree/16.0/website_snippet_country_dropdown
+    :target: https://github.com/OCA/website/tree/18.0/website_snippet_country_dropdown
     :alt: OCA/website
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/website-16-0/website-16-0-website_snippet_country_dropdown
+    :target: https://translation.odoo-community.org/projects/website-18-0/website-18-0-website_snippet_country_dropdown
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=18.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module adds a snippet with a dropdown and an input text field, is a base
-for be inherited by others modules into an HTML form.
+This module adds a snippet with a dropdown and an input text field, is a
+base for be inherited by others modules into an HTML form.
 
 This can be inserted into form elements.
 
@@ -41,40 +41,42 @@ This can be inserted into form elements.
 Usage
 =====
 
-To extend this template you need to inherit ``country_dropdown`` template and
-add your personal code.
+To extend this template you need to inherit ``country_dropdown``
+template and add your personal code.
 
 The template have three input text:
 
-#. ``no_country_field``: Field without code country.
-#. ``country_code_field``: Field with only country code (read only)
-#. ``complete_field``: Field with the previous two joined (hidden)
+1. ``no_country_field``: Field without code country.
+2. ``country_code_field``: Field with only country code (read only)
+3. ``complete_field``: Field with the previous two joined (hidden)
 
-The name of the complete field is customizable when user insert the snippet
-into a form element with the website editor.
+The name of the complete field is customizable when user insert the
+snippet into a form element with the website editor.
 
 Development
-~~~~~~~~~~~
+-----------
 
 You can call the reusable Qweb template called
-``website_snippet_country_dropdown.country_dropdown`` in your views to add a
-sensible country-combined field, ideal for *VATs*.
+``website_snippet_country_dropdown.country_dropdown`` in your views to
+add a sensible country-combined field, ideal for *VATs*.
 
 The default country will be the first match among:
 
-#. Extract it from the ``default_country`` variable.
-#. Extract it from the first 2 letters of the ``default_value`` variable.
-#. The current user's country.
-#. The current website's company's country.
-#. The first country in the list.
+1. Extract it from the ``default_country`` variable.
+2. Extract it from the first 2 letters of the ``default_value``
+   variable.
+3. The current user's country.
+4. The current website's company's country.
+5. The first country in the list.
 
 All variables you can use to modify its behavior:
 
-* ``complete_field`` to give it a name. Usually it will match the field name.
-* ``default_value`` for the ``complete_field``.
-* ``countries`` as a ``res.country`` ORM recordset.
-* ``default_country`` as a ``res.country`` record.
-* ``no_country_placeholder``.
+-  ``complete_field`` to give it a name. Usually it will match the field
+   name.
+-  ``default_value`` for the ``complete_field``.
+-  ``countries`` as a ``res.country`` ORM recordset.
+-  ``default_country`` as a ``res.country`` record.
+-  ``no_country_placeholder``.
 
 You can view an example in ``website_sale_checkout_country_vat`` in
 OCA/e-commerce.
@@ -82,11 +84,12 @@ OCA/e-commerce.
 Known issues / Roadmap
 ======================
 
-* Add tests.
-* Snippet drag and drop `seems to be blocked by Odoo for some unknown reason.
-  <https://github.com/OCA/website/pull/230#issuecomment-236681777>`_.
-  Given the main purpose of this module is to provide a reusable template for
-  other modules to use, did not take the time to fix that use case.
+-  Add tests.
+-  Snippet drag and drop `seems to be blocked by Odoo for some unknown
+   reason. <https://github.com/OCA/website/pull/230#issuecomment-236681777>`__.
+   Given the main purpose of this module is to provide a reusable
+   template for other modules to use, did not take the time to fix that
+   use case.
 
 Bug Tracker
 ===========
@@ -94,7 +97,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/website/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_snippet_country_dropdown%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_snippet_country_dropdown%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -102,23 +105,23 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Tecnativa <https://www.tecnativa.com>`_:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Sergio Teruel
-  * Jairo Llopis
-  * Alexandre Díaz
-  * Carlos Roca
-  * Ernesto Tejeda
+   -  Sergio Teruel
+   -  Jairo Llopis
+   -  Alexandre Díaz
+   -  Carlos Roca
+   -  Ernesto Tejeda
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -130,6 +133,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/website <https://github.com/OCA/website/tree/16.0/website_snippet_country_dropdown>`_ project on GitHub.
+This module is part of the `OCA/website <https://github.com/OCA/website/tree/18.0/website_snippet_country_dropdown>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
