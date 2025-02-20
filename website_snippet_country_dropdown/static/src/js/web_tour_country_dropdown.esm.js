@@ -1,17 +1,16 @@
-odoo.define("website_snippet_country_dropdown.tour_demo_page", function (require) {
-    "use strict";
+/* global window URLSearchParams console */
+import {registry} from "@web/core/registry";
 
-    const tour = require("web_tour.tour");
-
-    const country_code_test = "ES";
-    const vat_number_test = "B01010101";
-
-    tour.register(
-        "website_snippet_country_dropdown_tour_demo_page",
-        {
-            url: "/website_snippet_country_dropdown.demo_page",
-        },
-        [
+registry
+    .category("web_tour.tours")
+    .add("website_snippet_country_dropdown_tour_demo_page", {
+        test: true,
+        url: "/",
+        steps: () => [
+            {
+                trigger: 'a[href="/website_snippet_country_dropdown.demo_page"]',
+                run: "click",
+            },
             {
                 content: "Click Button",
                 trigger: ".js_enabled .js_btn_country_code",
@@ -19,17 +18,17 @@ odoo.define("website_snippet_country_dropdown.tour_demo_page", function (require
             },
             {
                 content: "Select Country",
-                trigger: _.str.sprintf(
-                    ".js_enabled [data-country_code=%s]",
-                    country_code_test
-                ),
+                trigger: ".js_enabled [data-country_code=ES]",
                 run: "click",
+            },
+            {
+                content: "Make sure that the selection has been made",
+                trigger: ".js_enabled .js_btn_country_code[data-country_code=ES]",
             },
             {
                 content: "Insert text",
                 trigger: ".js_enabled .js_no_country_field",
-                extra_trigger: ".js_enabled .js_btn_country_code[data-country_code=ES]",
-                run: "text " + vat_number_test,
+                run: "edit B01010101",
             },
             {
                 trigger: ".btn[type=submit]",
@@ -46,7 +45,7 @@ odoo.define("website_snippet_country_dropdown.tour_demo_page", function (require
                         disabled_country_code_field: "FR",
                         disabled_no_country_field: "A123456789",
                     };
-                    const query = new URLSearchParams(location.search);
+                    const query = new URLSearchParams(window.location.search);
                     for (const field_name in checks) {
                         const real = query.get(field_name),
                             expected = checks[field_name];
@@ -63,6 +62,5 @@ odoo.define("website_snippet_country_dropdown.tour_demo_page", function (require
                     }
                 },
             },
-        ]
-    );
-});
+        ],
+    });

@@ -4,3 +4,4 @@
   - Alexandre Díaz
   - Carlos Roca
   - Ernesto Tejeda
+  - Pilar Vargas
