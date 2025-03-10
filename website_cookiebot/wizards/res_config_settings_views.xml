@@ -7,44 +7,33 @@
         <field name="inherit_id" ref="website.res_config_settings_view_form" />
         <field name="arch" type="xml">
             <xpath expr="//setting[@id='website_cookies_bar_setting']" position="after">
-                <setting class="col-xs-12 col-md-6" id="cookiebot_setting">
+                <setting id="cookiebot_setting" help="Ask for consent on cookies usage">
                     <field name="cookiebot_enabled" />
-                    <label for="cookiebot_enabled" />
-                    <span
-                        class="fa fa-lg fa-globe"
-                        title="Values set here are website-specific."
-                        groups="website.group_multi_website"
-                    />
-                    <div class="text-muted">
-                        Ask for consent on cookies usage
-                    </div>
                     <div
                         class="content-group"
-                        invisible="cookiebot_enabled == False"
+                        invisible="not cookiebot_enabled"
                         id="cookiebot_fields"
                     >
-                        <div class="mt16">
+                        <div class="mt8">
                             <a
+                                role="button"
                                 href="https://cookiebot.com/goto/help"
-                                class="oe_link"
+                                class="btn btn-link oe-inline"
                                 target="_blank"
                             >
-                                <i class="fa fa-arrow-right" />
-                                How to configure Cookiebot.
+                                <i class="o_button_icon oi oi-fw oi-arrow-right me-1" />
+                                How to configure Cookiebot
                             </a>
-                            <span class="text-muted">
-                                Instead of step 3, paste here your Domain Group ID.
-                            </span>
+                            <div class="text-muted">
+                                Instead of step 3, paste your Domain Group ID below:
+                            </div>
                         </div>
-                        <div class="row mt16">
-                            <label
-                                class="col-md-3 o_light_label"
-                                for="cookiebot_dgid"
-                            />
+                        <div class="row mt8">
+                            <label class="col-lg-3" for="cookiebot_dgid" />
                             <field
                                 name="cookiebot_dgid"
                                 placeholder="00000000-0000-0000-0000-000000000000"
-                                required="cookiebot_enabled == True"
+                                required="cookiebot_enabled"
                             />
                         </div>
                     </div>
