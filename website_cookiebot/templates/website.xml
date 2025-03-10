@@ -7,9 +7,9 @@
             expr="//footer//div/span[hasclass('o_footer_copyright_name')]"
             position="after"
         >
-                <span t-if="website.cookiebot_enabled and website.cookiebot_dgid">- <a
-                    href="/legal/cookies-policy"
-                >Cookies Policy</a></span>
+            <span t-if="website.cookiebot_enabled and website.cookiebot_dgid">- <a
+                href="/legal/cookies-policy"
+            >Cookies Policy</a></span>
         </xpath>
     </template>
     <template id="cookies" name="Cookies Policy">
