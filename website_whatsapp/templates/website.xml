@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="layout" name="Floating WhatsApp Icon" inherit_id="website.layout">
+        <xpath expr="//div[@id='wrapwrap']" position="after">
+            <t t-set="extra_info" t-value="''" />
+            <t
+                t-if="website.whatsapp_text"
+                t-set="extra_info"
+                t-value="website.whatsapp_text"
+            />
+            <t
+                t-if="website.whatsapp_track_url"
+                t-set="extra_info"
+                t-value="'{} %0A%0A*Sent from: {}{}*'.format(extra_info, request.website and request.website.domain or request.env['ir.config_parameter'].sudo().get_param('web.base.url'), request.httprequest.full_path)"
+            /><!-- %0A newline -->
+            <a
+                t-if="website.whatsapp_number"
+                target="_blank"
+                t-attf-href="https://api.whatsapp.com/send?phone={{website.whatsapp_number}}&amp;text={{extra_info}}"
+                id="whatsapp_icon"
+                title="WhatsApp Floating Icon"
+            >
+                <i class="fa fa-whatsapp" />
+            </a>
+        </xpath>
+    </template>
+</odoo>
