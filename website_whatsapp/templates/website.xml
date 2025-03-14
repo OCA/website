@@ -13,15 +13,16 @@
                 t-set="extra_info"
                 t-value="website._get_track_url_message(request.httprequest.full_path)"
             /><!-- %0A newline -->
-            <a
-                t-if="website.whatsapp_number"
-                target="_blank"
-                t-attf-href="https://wa.me/{{website.whatsapp_number}}/?text={{extra_info}}"
-                id="whatsapp_icon"
-                title="WhatsApp Floating Icon"
-            >
-                <i class="fa fa-whatsapp" />
-            </a>
+            <div t-if="website.whatsapp_number" class="whatsapp_icon">
+                <a
+                    target="_blank"
+                    t-attf-href="https://wa.me/{{website.whatsapp_number}}/?text={{extra_info}}"
+                    title="WhatsApp Floating Icon"
+                >
+                    <i class="fa fa-whatsapp" />
+                </a>
+            </div>
+
         </xpath>
     </template>
 </odoo>
