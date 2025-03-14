@@ -24,7 +24,6 @@ class ResConfigSettings(models.TransientModel):
     whatsapp_text = fields.Char(
         related="website_id.whatsapp_text",
         readonly=False,
-        translate=True,
     )
     whatsapp_track_url = fields.Boolean(
         related="website_id.whatsapp_track_url",
