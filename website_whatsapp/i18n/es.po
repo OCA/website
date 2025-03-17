@@ -51,6 +51,13 @@ msgstr ""
 "Indicar en el mensaje del usuario la URL de la página desde la que se envió"
 
 #. module: website_whatsapp
+#. odoo-python
+#: code:addons/website_whatsapp/models/website.py:0
+#, python-format
+msgid "Sent from:"
+msgstr ""
+
+#. module: website_whatsapp
 #: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_track_url
 #: model:ir.model.fields,field_description:website_whatsapp.field_website__whatsapp_track_url
 msgid "Track URL"
