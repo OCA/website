@@ -20,6 +20,19 @@ class Website(models.Model):
         help="Indicate in the user's message the URL of the page from which it "
         "was sent",
     )
+    whatsapp_included_country_ids = fields.Many2many(
+        string="Show Whatsapp only in Countries",
+        comodel_name="res.country",
+        relation="website_whatsapp_included_countries_rel",
+        help="When set, the whatsapp icon will only appear to the selected countries.",
+    )
+    whatsapp_excluded_country_ids = fields.Many2many(
+        string="Do not show Whatsapp in Countries",
+        comodel_name="res.country",
+        relation="website_whatsapp_excluded_countries_rel",
+        help="When set, the whatsapp icon will only appear when the "
+        "country of the user is not within this list.",
+    )
 
     def _get_track_url_message(self, httprequest_full_path):
         sent_from = _("Sent from:")
@@ -34,3 +47,29 @@ class Website(models.Model):
                 f"{self.whatsapp_text} %0A%0A*{sent_from} {cleaned_url}*"
             )
         return whatsapp_track_url_text
+
+    def _check_display_whatsapp_icon(self, request):
+        self.ensure_one()
+        if not self.whatsapp_number:
+            return False
+        geoip_country_code = request.geoip.get("country_code")
+        country = request.env["res.country"].sudo()
+        if geoip_country_code:
+            country = (
+                request.env["res.country"]
+                .sudo()
+                .search([("code", "=", geoip_country_code)], limit=1)
+            )
+        if (
+            country
+            and self.whatsapp_included_country_ids
+            and country not in self.whatsapp_included_country_ids
+        ):
+            return False
+        if (
+            country
+            and self.whatsapp_excluded_country_ids
+            and country in self.whatsapp_excluded_country_ids
+        ):
+            return False
+        return True

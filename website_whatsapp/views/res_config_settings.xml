@@ -50,6 +50,28 @@
                                 />
                                 <field name="whatsapp_track_url" class="oe_inline" />
                             </div>
+                            <div class="row">
+                                <label
+                                    class="col-lg-3 o_light_label"
+                                    for="whatsapp_included_country_ids"
+                                />
+                                <field
+                                    name="whatsapp_included_country_ids"
+                                    class="oe_inline"
+                                    widget="many2many_tags"
+                                />
+                            </div>
+                            <div class="row">
+                                <label
+                                    class="col-lg-3 o_light_label"
+                                    for="whatsapp_excluded_country_ids"
+                                />
+                                <field
+                                    name="whatsapp_excluded_country_ids"
+                                    class="oe_inline"
+                                    widget="many2many_tags"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

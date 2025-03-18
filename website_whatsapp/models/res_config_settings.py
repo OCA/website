@@ -34,3 +34,11 @@ class ResConfigSettings(models.TransientModel):
         compute="_compute_whatsapp_enabled",
         inverse="_inverse_whatsapp_enabled",
     )
+    whatsapp_included_country_ids = fields.Many2many(
+        related="website_id.whatsapp_included_country_ids",
+        readonly=False,
+    )
+    whatsapp_excluded_country_ids = fields.Many2many(
+        related="website_id.whatsapp_excluded_country_ids",
+        readonly=False,
+    )
