@@ -11,17 +11,18 @@
             <t
                 t-if="website.whatsapp_track_url"
                 t-set="extra_info"
-                t-value="'{} %0A%0A*Sent from: {}{}*'.format(extra_info, request.website and request.website.domain or request.env['ir.config_parameter'].sudo().get_param('web.base.url'), request.httprequest.full_path)"
+                t-value="website._get_track_url_message(request.httprequest.full_path)"
             /><!-- %0A newline -->
-            <a
-                t-if="website.whatsapp_number"
-                target="_blank"
-                t-attf-href="https://api.whatsapp.com/send?phone={{website.whatsapp_number}}&amp;text={{extra_info}}"
-                id="whatsapp_icon"
-                title="WhatsApp Floating Icon"
-            >
+            <div t-if="website.whatsapp_number" class="whatsapp_icon">
+                <a
+                    target="_blank"
+                    t-attf-href="https://api.whatsapp.com/send?phone={{website.whatsapp_number}}&amp;text={{extra_info}}"
+                    title="WhatsApp Floating Icon"
+                >
                 <i class="fa fa-whatsapp" />
             </a>
+            </div>
+
         </xpath>
     </template>
 </odoo>
