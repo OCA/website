@@ -21,10 +21,10 @@ class Website(Website):
         domain = kwargs.get("domain", [])
         fields = kwargs.get("fields", [])
         limit = kwargs.get("limit", None)
-        res = self._get_autocomplete_data(model, domain, fields, limit)
+        res = self._fetch_autocomplete_data(model, domain, fields, limit)
         return list(res.values())
 
-    def _get_autocomplete_data(self, model, domain, fields, limit=None):
+    def _fetch_autocomplete_data(self, model, domain, fields, limit=None):
         """Gets and returns raw record data
         Params:
             model: Model name to query on
