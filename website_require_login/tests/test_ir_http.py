@@ -1,3 +1,5 @@
+import json
+
 from odoo.tests import HttpCase
 
 
@@ -34,4 +36,19 @@ class TestIrHttp(HttpCase):
             response.status_code,
             200,
             "Expected the response status code to be 200 which means no redirection",
+        )
+
+    def test_dispatch_json_no_redirect(self):
+        """With Content-Type application/json there should be no redirection."""
+        self.authenticate(None, None)
+        response = self.url_open(
+            self.path,
+            data=json.dumps({}),
+            headers={"Content-Type": "application/json"},
+            allow_redirects=False,
+        )
+        self.assertNotEqual(
+            response.status_code,
+            302,
+            "JSON request should not redirect even if user is not logged in",
         )
