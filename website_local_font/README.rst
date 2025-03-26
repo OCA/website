@@ -17,23 +17,29 @@ Website Local Font
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github
-    :target: https://github.com/OCA/website/tree/15.0/website_local_font
+    :target: https://github.com/OCA/website/tree/17.0/website_local_font
     :alt: OCA/website
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/website-15-0/website-15-0-website_local_font
+    :target: https://translation.odoo-community.org/projects/website-17-0/website-17-0-website_local_font
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=15.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=17.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module allows to add local fonts on Odoo website.
 
-By default,Odoo only allows to upload fonts available from Google(fonts.google.com) and they can be made available locally or from Google's server in addition to the fonts made available via website theme modules.But there's no option to upload and have local fonts available across all website themes.
+By default,Odoo only allows to upload fonts available from
+Google(fonts.google.com) and they can be made available locally or from
+Google's server in addition to the fonts made available via website
+theme modules.But there's no option to upload and have local fonts
+available across all website themes.
 
-
-To overcome this limitation, this module has been developed to allow users to upload proprietary (or custom) fonts in the most widely used font formats - otf,ttf,woff and woff2 and make it available across all website themes.
+To overcome this limitation, this module has been developed to allow
+users to upload proprietary (or custom) fonts in the most widely used
+font formats - otf,ttf,woff and woff2 and make it available across all
+website themes.
 
 The fonts can be deleted as well if not needed anymore.
 
@@ -47,29 +53,47 @@ Usage
 
 To upload local fonts and use it for the website, you need to :
 
-1.Go to website (with editor enabled),click on 'Edit' and go to 'THEMES' section.Under Font Family, you would find an option 'Add a Local Font'.
+1.Go to website (with editor enabled),click on 'Edit' and go to 'THEMES'
+section.Under Font Family, you would find an option 'Add a Local Font'.
 
-  .. image:: https://raw.githubusercontent.com/OCA/website/15.0/website_local_font/static/description/AddALocalFontOption.png
+   |image|
 
-2.When you click on the 'Add a Local Font' option, a wizard would open with two fields- 'Font File' and 'Font Name'.Upload the file with one of the supported file formats and the font name would be automatically updated based on the file.You can update the name or leave it as it is.
+2.When you click on the 'Add a Local Font' option, a wizard would open
+with two fields- 'Font File' and 'Font Name'.Upload the file with one of
+the supported file formats and the font name would be automatically
+updated based on the file.You can update the name or leave it as it is.
 
-  .. image:: https://raw.githubusercontent.com/OCA/website/15.0/website_local_font/static/description/SaveTheFont.png
+   |image1|
 
-3.Click on 'Save & Reload' Button, you will see the font is applied to the elements of the website.
+3.Click on 'Save & Reload' Button, you will see the font is applied to
+the elements of the website.
 
-  .. image:: https://raw.githubusercontent.com/OCA/website/15.0/website_local_font/static/description/FontAppliedOnWebsite.png
+   |image2|
 
-4.If you want to see the list of local fonts or delete the locally uploaded fonts,click on 'Edit' on website and go to 'THEMES' section.Under Font Family, you would find the newly added font.
+4.If you want to see the list of local fonts or delete the locally
+uploaded fonts,click on 'Edit' on website and go to 'THEMES'
+section.Under Font Family, you would find the newly added font.
 
-  .. image:: https://raw.githubusercontent.com/OCA/website/15.0/website_local_font/static/description/NewlyAddedFont.png
+   |image3|
 
-5.If you want to delete this locally added font , you can click on the delete icon next to it.Once, you click on the delete icon, it would open up a confirmation dialog.
+5.If you want to delete this locally added font , you can click on the
+delete icon next to it.Once, you click on the delete icon, it would open
+up a confirmation dialog.
 
-  .. image:: https://raw.githubusercontent.com/OCA/website/15.0/website_local_font/static/description/DeleteFontConfirmation.png
+   |image4|
 
-6.Once you click on 'Ok' button, the page would be refreshed and you would see the font is changed for the website and also the font is not found in the list.
+6.Once you click on 'Ok' button, the page would be refreshed and you
+would see the font is changed for the website and also the font is not
+found in the list.
 
-  .. image:: https://raw.githubusercontent.com/OCA/website/15.0/website_local_font/static/description/FontDeleted.png
+   |image5|
+
+.. |image| image:: https://raw.githubusercontent.com/OCA/website/17.0/website_local_font/static/description/AddALocalFontOption.png
+.. |image1| image:: https://raw.githubusercontent.com/OCA/website/17.0/website_local_font/static/description/SaveTheFont.png
+.. |image2| image:: https://raw.githubusercontent.com/OCA/website/17.0/website_local_font/static/description/FontAppliedOnWebsite.png
+.. |image3| image:: https://raw.githubusercontent.com/OCA/website/17.0/website_local_font/static/description/NewlyAddedFont.png
+.. |image4| image:: https://raw.githubusercontent.com/OCA/website/17.0/website_local_font/static/description/DeleteFontConfirmation.png
+.. |image5| image:: https://raw.githubusercontent.com/OCA/website/17.0/website_local_font/static/description/FontDeleted.png
 
 Bug Tracker
 ===========
@@ -77,7 +101,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/website/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_local_font%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_local_font%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -85,19 +109,19 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Onestein
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Onestein <https://www.onestein.nl>`_:
+- `Onestein <https://www.onestein.nl>`__:
 
-  * Anjeel Haria
+  - Anjeel Haria
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -109,6 +133,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/website <https://github.com/OCA/website/tree/15.0/website_local_font>`_ project on GitHub.
+This module is part of the `OCA/website <https://github.com/OCA/website/tree/17.0/website_local_font>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

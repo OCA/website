@@ -31,8 +31,9 @@ class Attachment(models.Model):
             f"local-font-{font_name}",
             font_format,
         )
-        file_string = (
-            "@font-face { \n" " font-family: %s; \n" "src:%s; \n" "}" % (font_name, src)
+        file_string = "@font-face { \n" " font-family: %s; \n" "src:%s; \n" "}" % (
+            font_name,
+            src,
         )
         font_css_attachment = self.create(
             {

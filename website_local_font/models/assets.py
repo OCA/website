@@ -31,4 +31,4 @@ class Assets(models.AbstractModel):
                 if local_fonts[font_name]:
                     local_fonts[font_name] = int(local_fonts[font_name])
             values["local-fonts"] = str(local_fonts).replace("{", "(").replace("}", ")")
-        return super(Assets, self).make_scss_customization(url, values)
+        return super().make_scss_customization(url, values)
