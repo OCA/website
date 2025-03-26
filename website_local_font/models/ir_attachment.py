@@ -26,14 +26,12 @@ class Attachment(models.Model):
             font_format = "truetype"
         else:
             font_format = extension
-        src = "url(/web/content/%s/%s) format('%s')" % (
-            font_attachment.id,
-            f"local-font-{font_name}",
-            font_format,
+        src = (
+            f"url(/web/content/{font_attachment.id}/local-font-{font_name}) "
+            f"format('{font_format}')"
         )
-        file_string = "@font-face { \n" " font-family: %s; \n" "src:%s; \n" "}" % (
-            font_name,
-            src,
+        file_string = (
+            f"@font-face {{ \n" f" font-family: {font_name}; \n" f"src:{src}; \n" f"}}"
         )
         font_css_attachment = self.create(
             {
