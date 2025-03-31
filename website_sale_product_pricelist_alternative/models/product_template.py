@@ -7,6 +7,25 @@ from odoo import models
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
+    def _get_alternative_price(
+        self, pricelist, partner, product_id, fiscal_position, company, qty=1.0
+    ):
+        product = self.env["product.template"].browse(product_id)
+        product_taxes = product.sudo().taxes_id.filtered(
+            lambda t: t.company_id == company
+        )
+        taxes = fiscal_position.map_tax(product_taxes)
+        alternative_price = pricelist._get_product_price(product, qty)
+        return self._price_with_tax_computed(
+            alternative_price,
+            product_taxes,
+            taxes,
+            self.env.company.id,
+            pricelist,
+            product,
+            partner,
+        )
+
     def _get_sales_prices(self, pricelist):
         if (
             pricelist
@@ -15,15 +34,16 @@ class ProductTemplate(models.Model):
         ):
             pricelist = pricelist.with_context(skip_alternative_pricelist=True)
             res = super()._get_sales_prices(pricelist)
-            precision = self.sudo().env["decimal.precision"].precision_get("Discount")
+            partner = self.env.user.partner_id
+            fpos_id = self.env["website"]._get_current_fiscal_position_id(partner)
+            fiscal_position = self.env["account.fiscal.position"].sudo().browse(fpos_id)
+            pricelist = pricelist.with_context(skip_alternative_pricelist=False)
+            current_website = self.env["website"].get_current_website()
+            company = current_website.company_id
             for product_id in res:
-                res[product_id]["base_price"] = round(
-                    res[product_id]["price_reduce"], precision
-                )
-                pricelist = pricelist.with_context(skip_alternative_pricelist=False)
-                product = self.env["product.template"].browse(product_id)
-                res[product_id]["price_reduce"] = round(
-                    pricelist._get_product_price(product, 1.0), precision
+                res[product_id]["base_price"] = res[product_id]["price_reduce"]
+                res[product_id]["price_reduce"] = self._get_alternative_price(
+                    pricelist, partner, product_id, fiscal_position, company
                 )
             return res
         return super()._get_sales_prices(pricelist)
@@ -57,8 +77,20 @@ class ProductTemplate(models.Model):
             # Compute alternative price
             pricelist = pricelist.with_context(skip_alternative_pricelist=False)
             product = self.env["product.product"].browse(combination_info["product_id"])
-            combination_info["price"] = pricelist._get_product_price(
-                product, quantity=self.env.context.get("quantity", add_qty)
+            current_website = self.env["website"].get_current_website()
+            company = current_website.company_id
+            partner = self.env.user.partner_id
+            fpos_id = (
+                self.env["website"].sudo()._get_current_fiscal_position_id(partner)
+            )
+            fiscal_position = self.env["account.fiscal.position"].sudo().browse(fpos_id)
+            combination_info["price"] = self._get_alternative_price(
+                pricelist,
+                partner,
+                product.product_tmpl_id.id,
+                fiscal_position,
+                company,
+                self.env.context.get("quantity", add_qty),
             )
             combination_info["has_discounted_price"] = (
                 pricelist.currency_id.compare_amounts(
