@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
     <t t-name="website_form_require_legal.s_website_form_legal">
         <div
-            class="col-12 s_website_form_legal form-group s_website_form_field s_website_form_required s_website_form_custom"
+            class="col-12 s_website_form_legal form-group s_website_form_required s_website_form_custom"
             data-name="Legal Terms"
         >
             <div class="row s_col_no_resize s_col_no_bgcolor">
@@ -11,8 +11,9 @@
                     class="s_website_form_label"
                 />
                 <div class="col-sm">
-                    <div class="form-check">
+                    <div name="website_form_terms_and_conditions" class="form-check">
                         <input
+                            id="website_form_terms_and_conditions_input"
                             type="checkbox"
                             required="1"
                             class="s_website_form_input form-check-input"
@@ -20,9 +21,6 @@
                         <span class="form-check-label">
                             Agree to <a href="#">terms and conditions</a>
                         </span>
-                        <div class="invalid-feedback">
-                            You must agree before submitting.
-                        </div>
                     </div>
                 </div>
             </div>
