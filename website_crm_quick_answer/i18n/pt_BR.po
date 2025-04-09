@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-04-09 16:49+0000\n"
+"Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
 "Language-Team: none\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: website_crm_quick_answer
 #: model:mail.template,body_html:website_crm_quick_answer.email_template
@@ -30,14 +32,28 @@ msgid ""
 "                </div>\n"
 "        "
 msgstr ""
+"<div>Prezado <b>${object.partner_id e object.partner_id.name ou "
+"object.contact_name}</b>,\n"
+"                   <br/>\n"
+"                    <br/>\n"
+"                   <h3>Obrigado por entrar em contato conosco!</h3>\n"
+"                   <p>\n"
+"                        Recebemos sua solicitação e responderemos a você "
+"assim que\n"
+"                        possível.\n"
+"                   </p>\n"
+"                   <p>Por favor, aguarde. Com os melhores cumprimentos.</p>\n"
+"                   <p>Obrigado,</p>\n"
+"                </div>\n"
+"        "
 
 #. module: website_crm_quick_answer
 #: model:base.automation,name:website_crm_quick_answer.automated_action
 #: model:ir.actions.server,name:website_crm_quick_answer.automated_action_ir_actions_server
 msgid "Quick response to website contact form"
-msgstr ""
+msgstr "Resposta rápida ao formulário de contato do site"
 
 #. module: website_crm_quick_answer
 #: model:mail.template,subject:website_crm_quick_answer.email_template
 msgid "Thanks for your request"
-msgstr ""
+msgstr "Obrigado por sua solicitação"
