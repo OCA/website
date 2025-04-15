@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright 2023 Onestein - Anjeel Haria
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<templates id="template" xml:space="preserve">
+
+    <!-- Add a Local Font option dialog -->
+    <t t-name="website.dialog.addLocalFont">
+        <Dialog title="this.props.title">
+            <div class="form-group row">
+                <label class="col-form-label col-md-3" for="font_html">Font File</label>
+                <div class="col-md-9">
+                    <input
+                        type="file"
+                        class="local_font_selection_input"
+                        t-on-change="onFileChange"
+                        t-ref="fontFile"
+                    /><span
+                        style="color:red"
+                    > Supported file formats are otf,ttf,woff,woff2</span>
+                </div>
+                <label
+                    class="col-form-label col-md-3"
+                    for="o_local_input_font"
+                >Font Name</label>
+                <div class="col-md-9">
+                    <input
+                        type="text"
+                        class="form-control"
+                        t-ref="fontName"
+                        id="o_we_local_font_name"
+                        required="required"
+                        placeholder="Your font name"
+                        t-att-value="state.fontName"
+                    />
+                </div>
+            </div>
+            <p class="mt-3 alert alert-info">
+                Adding a font requires a reload of the page. This will save all your changes.
+            </p>
+            <t t-set-slot="footer">
+                <button class="btn btn-primary" t-on-click="onClickSave">
+                    Save &amp; Reload
+                </button>
+                <button class="btn btn-secondary" t-on-click="onClickDiscard">
+                    Discard
+                </button>
+            </t>
+        </Dialog>
+    </t>
+
+    <t t-name="website.delete_local_font_btn">
+        <t t-set="delete_font_title">Delete this font</t>
+        <i
+            role="button"
+            class="text-danger ms-2 fa fa-trash o_we_delete_local_font_btn"
+            t-att-aria-label="delete_font_title"
+            t-att-title="delete_font_title"
+            t-att-data-font-index="index"
+        />
+    </t>
+
+    <t t-name="website.add_local_font_btn">
+        <we-button class="o_we_add_local_font_btn" t-att-data-variable="variable">
+            Add a Local Font
+        </we-button>
+    </t>
+</templates>
