@@ -3,7 +3,7 @@
 {
     "name": "Website Snippet Filter Views",
     "summary": "Add website.snippet.filter backend views",
-    "version": "14.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": "Pierre Verkest <pierreverkest84@gmail.com>, "

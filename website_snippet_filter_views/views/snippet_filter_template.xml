@@ -13,10 +13,12 @@
         <field name="inherit_id" ref="base.view_view_form" />
         <field name="priority">75</field>
         <field name="arch" type="xml">
-            <field name="key" position="before">
+            <field name="website_id" position="after">
                 <div class="alert alert-warning" role="alert" colspan="2">
-                    To be availaible as dynamic snippet template key  value
-                    must contains <b>'.dynamic_filter_template_'</b>.
+                    To be available as dynamic snippet template key  value
+                    must contains <b>'.dynamic_filter_template_&lt;model_name&gt;_'</b>.
+                    <br />
+                    Where &lt;model_name&gt; is the technical model name (with underscores).
                 </div>
             </field>
         </field>
@@ -44,7 +46,9 @@
               Snippet filter template are used by dynamic snippet to render
               any object field on the website.
 
-              view key name must contains '.dynamic_filter_template_'
+              view key name must contains '.dynamic_filter_template_&lt;model_name&gt;_'
+
+              where &lt;model_name&gt; is the technical name of the model (with underscores)
           </p>
         </field>
     </record>

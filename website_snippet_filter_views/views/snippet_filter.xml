@@ -70,7 +70,7 @@
         <field name="name">Snippet filter</field>
         <field name="model">website.snippet.filter</field>
         <field name="arch" type="xml">
-            <tree string="Snippet filter">
+            <tree>
                 <field name="name" />
                 <field name="filter_id" />
                 <field name="website_id" />
