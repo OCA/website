@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * website_google_tag_manager
+# 	* website_google_tag_manager
 #
 # Translators:
 # Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 # OCA Transbot <transbot@odoo-community.org>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-24 04:16+0000\n"
 "PO-Revision-Date: 2023-09-03 13:39+0000\n"
@@ -19,6 +19,15 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.17\n"
+
+#. module: website_google_tag_manager
+#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                How to get my GTM container ID"
+msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                Cómo obtener mi ID de contenedor GTM"
 
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
@@ -43,17 +52,12 @@ msgstr "ID de Contenedor"
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "GTM-XXXXX"
-msgstr "GTM-XXXXX"
+msgstr ""
 
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "Google Tag Manager"
 msgstr "Gestor de etiquetas de Google"
-
-#. module: website_google_tag_manager
-#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
-msgid "How to get my GTM container ID"
-msgstr "Cómo obtener mi ID de contenedor GTM"
 
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
