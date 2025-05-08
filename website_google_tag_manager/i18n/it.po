@@ -22,6 +22,13 @@ msgstr ""
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                How to get my GTM container ID"
+msgstr ""
+
+#. module: website_google_tag_manager
+#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
+msgid ""
 "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
 "specific.\" groups=\"website.group_multi_website\"/>"
 msgstr ""
@@ -51,11 +58,6 @@ msgstr "Gestore etichette Google"
 
 #. module: website_google_tag_manager
 #: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
-msgid "How to get my GTM container ID"
-msgstr "Come ottenere il proprio ID per il contenitore GTM"
-
-#. module: website_google_tag_manager
-#: model_terms:ir.ui.view,arch_db:website_google_tag_manager.view_website_config_settings
 msgid "Manage all your tags without editing code."
 msgstr "Gestione delle etichette senza editare codice."
 
@@ -63,3 +65,6 @@ msgstr "Gestione delle etichette senza editare codice."
 #: model:ir.model,name:website_google_tag_manager.model_website
 msgid "Website"
 msgstr "Sito web"
+
+#~ msgid "How to get my GTM container ID"
+#~ msgstr "Come ottenere il proprio ID per il contenitore GTM"
