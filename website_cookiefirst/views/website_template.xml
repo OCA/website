@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="footer_copyright_company_name"
+        inherit_id="website.footer_copyright_company_name"
+    >
+        <xpath expr="//span[hasclass('o_footer_copyright_name')]" position="after">
+            <span>-
+                <a href="/legal/cookies-policy">Cookies Policy</a>
+            </span>
+        </xpath>
+    </template>
+
+    <template id="layout" inherit_id="website.layout">
+        <xpath expr="//script[@id='tracking_code']" position="attributes">
+            <attribute name="type">text/plain</attribute>
+            <attribute name="data-cookiefirst-category">performance</attribute>
+        </xpath>
+        <xpath expr="//div[@id='wrapwrap']" position="after">
+            <t t-if="website.cookiefirst_identifier">
+                <script
+                    src="https://consent.cookiefirst.com/banner.js"
+                    t-att-data-cookiefirst-key="website.cookiefirst_identifier"
+                />
+            </t>
+        </xpath>
+    </template>
+</odoo>
