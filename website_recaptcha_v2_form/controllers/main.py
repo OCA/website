@@ -5,7 +5,7 @@ from odoo.exceptions import AccessDenied
 from odoo.http import request
 
 from odoo.addons.auth_signup.controllers.main import AuthSignupHome
-from odoo.addons.web.controllers.home import SIGN_UP_REQUEST_PARAMS, Home
+from odoo.addons.web.controllers.home import SIGN_UP_REQUEST_PARAMS, Home, ensure_db
 
 logger = logging.getLogger(__name__)
 
@@ -19,8 +19,10 @@ class RecaptchaHome(Home):
             request.env["ir.http"]._auth_method_public()
             valid = Website.get_current_website().valid_recaptcha(values)
             if valid:
-                return True
-            return False
+                if template == "web.login":
+                    return super().web_login(values.get("redirect", ""), **kw)
+                else:
+                    return True
         except AccessDenied as e:
             message_error = str(
                 e.args[0] if len(e.args) > 0 else _("Recaptcha is not valid.")
@@ -38,24 +40,24 @@ class RecaptchaHome(Home):
             else:
                 return message_error
 
-    def _login_redirect(self, uid, redirect=None):
-        values = {
-            k: v for k, v in request.params.items() if k in SIGN_UP_REQUEST_PARAMS
-        }
-        values.update({"redirect": redirect if redirect else "/web"})
-        valid = True
-        # Checking that if the request comes from the creation of the account,
-        # that the recaptcha is not checked again to avoid errors.
-        if (
-            values.get("confirm_password", "") == ""
-            and request.httprequest.url.find("web/signup") == -1
-        ):
-            valid = self.verify_recaptcha_v2(
-                kw=values, template="web.login", values=values
-            )
-        return super()._login_redirect(
-            uid=uid, redirect=values.get("redirect", "/") if valid else "web/login"
-        )
+    @http.route()
+    def web_login(self, redirect=None, **kw):
+        ensure_db()
+        if request.httprequest.method == "POST":
+            values = {
+                k: v for k, v in request.params.items() if k in SIGN_UP_REQUEST_PARAMS
+            }
+            # Checking that if the request comes from the creation of the account,
+            # that the recaptcha is not checked again to avoid errors.
+
+            if (
+                values.get("confirm_password", "") == ""
+                and request.httprequest.url.find("web/signup") == -1
+            ):
+                return self.verify_recaptcha_v2(
+                    kw=kw, template="web.login", values=values
+                )
+        return super().web_login(redirect, **kw)
 
 
 class RecaptchaAuthSignupHome(AuthSignupHome):
