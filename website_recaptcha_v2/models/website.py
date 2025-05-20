@@ -38,11 +38,7 @@ class Website(models.Model):
         }
         return mapping.get(
             errorcode,
-            _(
-                "Unknown reCAPTCHA error (error code: {errorcode}).".format(
-                    errorcode=errorcode
-                )
-            ),
+            _(f"Unknown reCAPTCHA error (error code: {errorcode})."),
         )
 
     def is_recaptcha_v2_valid(self, form_values):

@@ -17,25 +17,26 @@ Website reCAPTCHA v2
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github
-    :target: https://github.com/OCA/website/tree/16.0/website_recaptcha_v2
+    :target: https://github.com/OCA/website/tree/17.0/website_recaptcha_v2
     :alt: OCA/website
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/website-16-0/website-16-0-website_recaptcha_v2
+    :target: https://translation.odoo-community.org/projects/website-17-0/website-17-0-website_recaptcha_v2
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=17.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module allows to use reCAPTCHA v2 on website forms.
 
-It is a helper module that only provides the widget and the validation logic
-which can be used by other modules to actually display it on website forms and
-check whether the user entry is valid.
+It is a helper module that only provides the widget and the validation
+logic which can be used by other modules to actually display it on
+website forms and check whether the user entry is valid.
 
-This module originally comes from ``website_recaptcha_reloaded`` from Tech
-Receptives, which itself comes from ``website_recaptcha`` from Elico Corp.
+This module originally comes from ``website_recaptcha_reloaded`` from
+Tech Receptives, which itself comes from ``website_recaptcha`` from
+Elico Corp.
 
 **Table of contents**
 
@@ -45,9 +46,9 @@ Receptives, which itself comes from ``website_recaptcha`` from Elico Corp.
 Configuration
 =============
 
-reCAPTCHA is configured in Settings > Website. It can be enabled or disabled
-using the checkbox, and the site and secret keys can be defined there when it
-is enabled.
+reCAPTCHA is configured in Settings > Website. It can be enabled or
+disabled using the checkbox, and the site and secret keys can be defined
+there when it is enabled.
 
 Bug Tracker
 ===========
@@ -55,7 +56,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/website/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_recaptcha_v2%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_recaptcha_v2%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -63,33 +64,34 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Elico Corp
 * Tech Receptives
 * Coop IT Easy SC
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Elico Corp <https://elico-corp.com>`_:
+- `Elico Corp <https://elico-corp.com>`__:
 
-  * Augustin Cisterne-Kaas
-* `Tech Receptives <https://techreceptives.com>`_:
+  - Augustin Cisterne-Kaas
 
-  * Parthiv Patel
-  * Hardik Kalariya
+- `Tech Receptives <https://techreceptives.com>`__:
 
-* `Coop IT Easy SC <https://coopiteasy.be>`_:
+  - Parthiv Patel
+  - Hardik Kalariya
 
-  * Houssine Bakkali
-  * Robin Keunen
-  * Carmen Bianca Bakker
-  * Victor Champonnois
-  * hugues de keyzer
+- `Coop IT Easy SC <https://coopiteasy.be>`__:
+
+  - Houssine Bakkali
+  - Robin Keunen
+  - Carmen Bianca Bakker
+  - Victor Champonnois
+  - hugues de keyzer
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -101,6 +103,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/website <https://github.com/OCA/website/tree/16.0/website_recaptcha_v2>`_ project on GitHub.
+This module is part of the `OCA/website <https://github.com/OCA/website/tree/17.0/website_recaptcha_v2>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
