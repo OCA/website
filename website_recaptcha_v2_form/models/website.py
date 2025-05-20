@@ -36,10 +36,8 @@ class Website(models.Model):
                         div_end = 'data-callback="callback_success_recaptcha"'
                         div_end += ' data-expired-callback="callback_expired_recaptcha"'
                         updated_arch = view.arch_db.replace(
-                            '{}"{}" {}/>'.format(div_start, site_key_old, div_end),
-                            '{} "{}" {}/>'.format(
-                                div_start, self.recaptcha_v2_site_key, div_end
-                            ),
+                            f'{div_start}"{site_key_old}" {div_end}/>',
+                            f'{div_start} "{self.recaptcha_v2_site_key}" {div_end}/>',
                         )
                         view.sudo().write({"arch": updated_arch})
 
