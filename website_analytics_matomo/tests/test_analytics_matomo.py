@@ -12,24 +12,28 @@ class TestWebsiteAnalyticsMatomo(common.HttpCase):
         super().setUp()
         self.website = self.env.ref("website.default_website")
         self.base_view = self.env["ir.ui.view"].create(
-            {
-                "name": "Base",
-                "type": "qweb",
-                "arch": """<t name="Homepage" t-name="website.base_view">
+            [
+                {
+                    "name": "Base",
+                    "type": "qweb",
+                    "arch": """<t name="Homepage" t-name="website.base_view">
                         <t t-call="website.layout">
                             I am a generic page
                         </t>
                     </t>""",
-                "key": "test.base_view",
-            }
+                    "key": "test.base_view",
+                }
+            ]
         )
         self.page = self.env["website.page"].create(
-            {
-                "view_id": self.base_view.id,
-                "url": "/page_1",
-                "is_published": True,
-                "website_id": self.website.id,
-            }
+            [
+                {
+                    "view_id": self.base_view.id,
+                    "url": "/page_1",
+                    "is_published": True,
+                    "website_id": self.website.id,
+                }
+            ]
         )
 
     def test_01_defaults(self):
@@ -66,12 +70,15 @@ class TestWebsiteAnalyticsMatomo(common.HttpCase):
         self.assertEqual(self.website.matomo_get_userid, "")
 
         self.website.matomo_enable_userid = True
+        self.website.user_id = self.env.user.id
+        self.assertEqual(self.website.matomo_get_userid, "")
+        self.website.matomo_analytics_host = ""
+        self.assertEqual(self.website.matomo_get_userid, "")
+        self.website.matomo_analytics_host = "matomo.example.host"
+        self.website.user_id = False
         self.assertTrue(self.website.matomo_get_userid)
         self.assertEqual(self.website.matomo_get_userid, str(self.env.user.id))
         self.assertNotEqual(self.website.matomo_get_userid, self.website.user_id.login)
-
-        self.website.matomo_analytics_host = ""
-        self.assertEqual(self.website.matomo_get_userid, "")
 
     def test_04_tracker_script_in_page(self):
         """Check matomo tracker script in the page"""

@@ -55,12 +55,6 @@ msgid "Website"
 msgstr ""
 
 #. module: website_analytics_matomo
-#: model:ir.ui.view,arch_db:website_analytics_matomo.view_website_config_settings
-#: model:ir.ui.view,arch_db:website_analytics_matomo.view_website_form
-msgid "host.name/matomo"
-msgstr ""
-
-#. module: website_analytics_matomo
 #: model:ir.model,name:website_analytics_matomo.model_res_config_settings
 msgid "res.config.settings"
 msgstr ""
