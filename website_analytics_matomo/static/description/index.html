@@ -369,10 +369,12 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:f3a346379593d7db197fd607e40aa8ce6e9cfa93d882d88c9de993ced8ba4433
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/website/tree/16.0/website_analytics_matomo"><img alt="OCA/website" src="https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/website-16-0/website-16-0-website_analytics_matomo"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/website&amp;target_branch=16.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
-<p>This module allows to simply configure your odoo website for using <a class="reference external" href="http://matomo.org">Matomo</a>.</p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/website/tree/18.0/website_analytics_matomo"><img alt="OCA/website" src="https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/website-18-0/website-18-0-website_analytics_matomo"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/website&amp;target_branch=18.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
+<p>This module allows to simply configure your odoo website for using
+<a class="reference external" href="http://matomo.org">Matomo</a>.</p>
 <p>If your website is a webshop, also consider to install the OCA module
-<cite>website_sale_analytics_matomo</cite> to enable full Ecommerce reporting with Matomo Analytics.</p>
+website_sale_analytics_matomo to enable full Ecommerce reporting with
+Matomo Analytics.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -396,42 +398,51 @@ ul.auto-toc {
 <p>To configure this module, you need to:</p>
 <ul class="simple">
 <li>go to Settings/General Settings/Website</li>
-<li>enable <cite>Matomo Analytics</cite></li>
-<li>fill in <cite>Matomo website ID</cite> and <cite>Matomo host</cite></li>
+<li>enable Matomo Analytics</li>
+<li>fill in Matomo website ID and Matomo host</li>
 </ul>
 <p>At this point your website is already setup for being tracked in Matomo.</p>
-<p>Some more advanced features offered by Matomo can be configured as follows:</p>
+<p>Some more advanced features offered by Matomo can be configured as
+follows:</p>
 <div class="section" id="user-id-feature">
 <h2><a class="toc-backref" href="#toc-entry-2">User ID feature</a></h2>
-<p>Matomo includes a User ID feature for enhanced tracking on those websites that offer the ability for visitors to log in.
-By tracking the User ID (unique identifier), it is possible to connect visitors between visits across multiple dates
-and devices.</p>
-<p>To enable this feature, set <cite>Enable User ID</cite>: Matomo will track the user’s <cite>ID</cite> (model <cite>res.users</cite>).
-If you want to use a different field, eg: user’s <cite>name</cite> or <cite>login</cite>, you need to override method <cite>compute_matomo_userid()</cite>.</p>
+<p>Matomo includes a User ID feature for enhanced tracking on those
+websites that offer the ability for visitors to log in. By tracking the
+User ID (unique identifier), it is possible to connect visitors between
+visits across multiple dates and devices.</p>
+<p>To enable this feature, set `Enable User ID`: Matomo will track the
+user’s ID (model res.users). If you want to use a different field, eg:
+user’s name or login, you need to override method
+compute_matomo_userid().</p>
 </div>
 <div class="section" id="enable-a-heartbeat-timer">
 <h2><a class="toc-backref" href="#toc-entry-3">Enable a Heartbeat timer</a></h2>
-<p>In order to better measure the time spent in the visit, the active page can send additional
-ping requests to Matomo. These requests will not track additional actions or page views.
-They just allow Matomo to know whether the user is actively viewing the page (the tab
-should be active and in focus).</p>
-<p>To enable this feature, set <cite>Enable heartbeat</cite> and define the Active Time.</p>
-<p>By default, the Active Time is set to 15 seconds, meaning only if the page was viewed
-for at least 15 seconds (and the user leaves the page or focuses away from the tab)
-then a ping request will be sent.</p>
+<p>In order to better measure the time spent in the visit, the active page
+can send additional ping requests to Matomo. These requests will not
+track additional actions or page views. They just allow Matomo to know
+whether the user is actively viewing the page (the tab should be active
+and in focus).</p>
+<p>To enable this feature, set Enable heartbeat and define the Active Time.</p>
+<p>By default, the Active Time is set to 15 seconds, meaning only if the
+page was viewed for at least 15 seconds (and the user leaves the page or
+focuses away from the tab) then a ping request will be sent.</p>
 </div>
 <div class="section" id="matomo-event-tracking">
 <h2><a class="toc-backref" href="#toc-entry-4">Matomo Event Tracking</a></h2>
-<p>As explained in this page <a class="reference external" href="https://matomo.org/faq/reports/implement-event-tracking-with-matomo/">https://matomo.org/faq/reports/implement-event-tracking-with-matomo/</a>
-on the official documentation of Matomo, there are two main ways to set up event tracking within Matomo:</p>
+<p>As explained in this page
+<a class="reference external" href="https://matomo.org/faq/reports/implement-event-tracking-with-matomo/">https://matomo.org/faq/reports/implement-event-tracking-with-matomo/</a> on
+the official documentation of Matomo, there are two main ways to set up
+event tracking within Matomo:</p>
 <ol class="arabic simple">
-<li>with the “Matomo Tag Manager” feature: this is the easiest and recommended way;</li>
+<li>with the “Matomo Tag Manager” feature: this is the easiest and
+recommended way;</li>
 <li>by adding snippets of JavaScript code to your website itself.</li>
 </ol>
 <p>The first method is not supported by this module, however in OCA there’s
-a dedicated module for that purpose: <cite>website_matomo_tag_manager</cite>.</p>
-<p>The second method can be used along with this module and requires a little more technical confidence.
-You will need to integrate a JavaScript snippet directly into your website’s code.</p>
+a dedicated module for that purpose: website_matomo_tag_manager.</p>
+<p>The second method can be used along with this module and requires a
+little more technical confidence. You will need to integrate a
+JavaScript snippet directly into your website’s code.</p>
 <p>Technical documentation can be found in:
 <a class="reference external" href="https://developer.matomo.org/guides/tracking-javascript-guide#manually-trigger-events">https://developer.matomo.org/guides/tracking-javascript-guide#manually-trigger-events</a></p>
 </div>
@@ -441,7 +452,7 @@ You will need to integrate a JavaScript snippet directly into your website’s c
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/website/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/OCA/website/issues/new?body=module:%20website_analytics_matomo%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/OCA/website/issues/new?body=module:%20website_analytics_matomo%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -469,7 +480,7 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <p>OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.</p>
-<p>This module is part of the <a class="reference external" href="https://github.com/OCA/website/tree/16.0/website_analytics_matomo">OCA/website</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/OCA/website/tree/18.0/website_analytics_matomo">OCA/website</a> project on GitHub.</p>
 <p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
 </div>
 </div>
