@@ -34,14 +34,14 @@ addon | version | maintainers | summary
 [website_legal_page](website_legal_page/) | 15.0.2.0.0 |  | Website Legal Page
 [website_local_font](website_local_font/) | 15.0.1.0.0 |  | Allows to add local fonts on Odoo website
 [website_odoo_debranding](website_odoo_debranding/) | 15.0.1.0.1 |  | Remove Odoo Branding from Website
-[website_plausible](website_plausible/) | 15.0.1.1.1 | [![LoisRForgeFlow](https://github.com/LoisRForgeFlow.png?size=30px)](https://github.com/LoisRForgeFlow) | Track website users using plausible
+[website_plausible](website_plausible/) | 15.0.1.1.1 | <a href='https://github.com/LoisRForgeFlow'><img src='https://github.com/LoisRForgeFlow.png' width='32' height='32' style='border-radius:50%;' alt='LoisRForgeFlow'/></a> | Track website users using plausible
 [website_require_login](website_require_login/) | 15.0.1.0.0 |  | Website Login Required
 [website_snippet_big_button](website_snippet_big_button/) | 15.0.1.1.0 |  | A snippet that adds two big buttons
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 15.0.1.0.0 |  | Allow to select country in a dropdown
 [website_snippet_dynamic_link](website_snippet_dynamic_link/) | 15.0.1.0.0 |  | Website Snippet Dynamic Link
 [website_snippet_marginless_gallery](website_snippet_marginless_gallery/) | 15.0.1.0.0 |  | Add a snippet to have a marginless image gallery
 [website_snippet_openstreetmap](website_snippet_openstreetmap/) | 15.0.1.0.0 |  | Website Snippet OpenStreetMap
-[website_whatsapp](website_whatsapp/) | 15.0.1.0.1 | [![ioans73](https://github.com/ioans73.png?size=30px)](https://github.com/ioans73) | Whatsapp integration
+[website_whatsapp](website_whatsapp/) | 15.0.1.0.1 | <a href='https://github.com/ioans73'><img src='https://github.com/ioans73.png' width='32' height='32' style='border-radius:50%;' alt='ioans73'/></a> | Whatsapp integration
 
 [//]: # (end addons)
 
