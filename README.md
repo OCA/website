@@ -40,7 +40,7 @@ addon | version | maintainers | summary
 [website_legal_page](website_legal_page/) | 12.0.1.1.0 |  | Website Legal Page
 [website_logo](website_logo/) | 12.0.1.0.0 |  | Website company logo
 [website_media_size](website_media_size/) | 12.0.1.0.0 |  | This module shows the size of media in the media selector
-[website_megamenu](website_megamenu/) | 12.0.1.1.0 | [![Tardo](https://github.com/Tardo.png?size=30px)](https://github.com/Tardo) | Adds support for mega menus
+[website_megamenu](website_megamenu/) | 12.0.1.1.0 | <a href='https://github.com/Tardo'><img src='https://github.com/Tardo.png' width='32' height='32' style='border-radius:50%;' alt='Tardo'/></a> | Adds support for mega menus
 [website_menu_by_user_status](website_menu_by_user_status/) | 12.0.1.0.0 |  | Allow to manage the display of website.menus
 [website_no_crawler](website_no_crawler/) | 12.0.1.2.0 |  | Disables robots.txt for indexing by webcrawlers like Google
 [website_odoo_debranding](website_odoo_debranding/) | 12.0.1.0.0 |  | Remove Odoo Branding from Website
