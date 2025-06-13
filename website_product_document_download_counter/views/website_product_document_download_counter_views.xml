@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (C) 2024 Cetmix OÜ
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <!-- Extend product view to display download counter on website -->
+    <template
+        id="product_documents_downloads_counter"
+        inherit_id="website_sale.product"
+        active="True"
+        customize_show="True"
+    >
+        <xpath
+            expr="//div[@id='product_documents']//t[@t-foreach='product_documents']"
+            position="replace"
+        >
+            <t t-foreach="product_documents" t-as="document_sudo">
+                <div class="d-flex align-items-center mb-2">
+                    <i
+                        class="fa fa-file-o me-1"
+                        role="img"
+                        aria-label="Document"
+                        title="Document"
+                    />
+                    <a
+                        t-att-href="'/shop/%s/document/%s' % (slug(product), document_sudo.id)"
+                        target="_blank"
+                        class="text-decoration-none"
+                    >
+                        <span t-out="document_sudo.name" />
+                        <small
+                            t-if="document_sudo.download_count"
+                            class="text-muted"
+                        >(<t t-out="document_sudo.download_count" /> downloads)</small>
+                    </a>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
