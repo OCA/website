@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2025 Cetmix OÜ
+    License LGPL-3.0 or later (https://www.gnu.org/licenses/LGPL).
+-->
+<odoo>
+    <!-- Template to modify the documents section in the product page -->
+    <template id="product_documents_custom" inherit_id="website_sale.product">
+        <!-- Modify document links to use the new route with counter -->
+        <xpath expr="//div[@id='product_documents']//a" position="attributes">
+            <attribute
+                name="t-att-href"
+            >'/shop/' + slug(product) + '/document/' + str(document_sudo.id) + '/count'</attribute>
+            <attribute
+                name="class"
+            >text-decoration-none d-flex align-items-center py-1</attribute>
+        </xpath>
+    </template>
+</odoo>
