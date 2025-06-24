@@ -1,0 +1,1 @@
+Sometimes you would like to know how often a document is downloaded from the website. For example, you have a user manual attached to your e-commerce product, and you would like to know how often your clients check it.

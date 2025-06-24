@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright 2025 Cetmix OÜ
+    License LGPL-3.0 or later (https://www.gnu.org/licenses/LGPL).
+-->
+<odoo>
+    <!-- Add field to control if downloads are counted -->
+    <record id="product_document_form_inherit" model="ir.ui.view">
+        <field name="name">product.document.form.inherit.download_counter</field>
+        <field name="model">product.document</field>
+        <field name="inherit_id" ref="website_sale.product_document_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='website_sale']" position="inside">
+                <field
+                    name="download_count_enabled"
+                    invisible="not shown_on_product_page"
+                />
+                <field name="download_count" readonly="1" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Extend kanban view to display download counter -->
+    <record id="product_document_kanban_inherit" model="ir.ui.view">
+        <field name="name">product.document.kanban.inherit.download_counter</field>
+        <field name="model">product.document</field>
+        <field name="inherit_id" ref="website_sale.product_document_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='shown_on_product_page']" position="after">
+                <field name="download_count_enabled" invisible="1" />
+                <field name="download_count" invisible="1" />
+            </xpath>
+            <xpath
+                expr="//div[hasclass('d-flex') and hasclass('mt-2')]"
+                position="after"
+            >
+                <div t-if="record.shown_on_product_page.raw_value" class="d-flex mt-2">
+                    <group>
+                        <label class="form-label" for="download_count_enabled">
+                            <t t-esc="'Count Downloads'" />
+                        </label>
+                        <field
+                            name="download_count_enabled"
+                            class="ms-2"
+                            widget="boolean_toggle"
+                        />
+                    </group>
+                </div>
+                <div
+                    t-if="record.shown_on_product_page.raw_value and record.download_count_enabled.raw_value"
+                    class="d-flex mt-2"
+                >
+                    <span class="badge rounded-pill bg-info text-white">
+                        <i class="fa fa-download me-1" />
+                        <t t-esc="record.download_count.value" />
+                    </span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
