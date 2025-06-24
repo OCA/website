@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [website_cookiefirst](website_cookiefirst/) | 18.0.1.0.0 |  | Cookiefirst integration
 [website_form_require_legal](website_form_require_legal/) | 18.0.1.0.0 |  | Add possibility to require confirm legal terms.
 [website_odoo_debranding](website_odoo_debranding/) | 18.0.1.0.0 |  | Remove Odoo Branding from Website
+[website_product_document_download_counter](website_product_document_download_counter/) | 18.0.1.0.0 |  | Counts the product document downloads from the website.
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 18.0.1.0.0 |  | Allow to select country in a dropdown
 
 [//]: # (end addons)
