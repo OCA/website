@@ -21,3 +21,15 @@ class ResConfigSettings(models.TransientModel):
     recaptcha_v2_secret_key = fields.Char(
         related="website_id.recaptcha_v2_secret_key", readonly=False
     )
+    recaptcha_v2_html_class = fields.Char(
+        related="website_id.recaptcha_v2_html_class", readonly=False
+    )
+    recaptcha_v2_api_url = fields.Char(
+        related="website_id.recaptcha_v2_api_url", readonly=False
+    )
+    recaptcha_v2_verify_url = fields.Char(
+        related="website_id.recaptcha_v2_verify_url", readonly=False
+    )
+    recaptcha_v2_resp_attr = fields.Char(
+        related="website_id.recaptcha_v2_resp_attr", readonly=False
+    )

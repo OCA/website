@@ -48,6 +48,35 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                             >
                                 <div class="row mt16">
                                     <label
+                                        for="recaptcha_v2_html_class"
+                                        class="col-4 o_light_label"
+                                    />
+                                    <field name="recaptcha_v2_html_class" />
+                                </div>
+
+                                <div class="row mt16">
+                                    <label
+                                        for="recaptcha_v2_api_url"
+                                        class="col-4 o_light_label"
+                                    />
+                                    <field name="recaptcha_v2_api_url" />
+                                </div>
+                                <div class="row mt16">
+                                    <label
+                                        for="recaptcha_v2_verify_url"
+                                        class="col-4 o_light_label"
+                                    />
+                                    <field name="recaptcha_v2_verify_url" />
+                                </div>
+                                <div class="row mt16">
+                                    <label
+                                        for="recaptcha_v2_resp_attr"
+                                        class="col-4 o_light_label"
+                                    />
+                                    <field name="recaptcha_v2_resp_attr" />
+                                </div>
+                                <div class="row mt16">
+                                    <label
                                         for="recaptcha_v2_site_key"
                                         class="col-4 o_light_label"
                                     />
