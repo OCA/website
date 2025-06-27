@@ -10,7 +10,6 @@ import requests
 
 from odoo import _, api, fields, models
 
-RECAPTCHA_API_URL = "https://www.recaptcha.net/recaptcha/api/siteverify"
 RECAPTCHA_API_TIMEOUT = 30
 
 
@@ -20,6 +19,22 @@ class Website(models.Model):
     recaptcha_v2_enabled = fields.Boolean("Enable reCAPTCHA v2")
     recaptcha_v2_site_key = fields.Char("Site Key (v2)")
     recaptcha_v2_secret_key = fields.Char("Secret Key (v2)")
+    recaptcha_v2_html_class = fields.Char(
+        "HTML container class (v2)",
+        default="g-recaptcha",
+    )
+    recaptcha_v2_api_url = fields.Char(
+        "API URL (v2)",
+        default="https://www.recaptcha.net/recaptcha/api.js",
+    )
+    recaptcha_v2_verify_url = fields.Char(
+        "Siteverify URL (v2)",
+        default="https://www.recaptcha.net/recaptcha/api/siteverify",
+    )
+    recaptcha_v2_resp_attr = fields.Char(
+        "Response attribute (v2)",
+        default="g-recaptcha-response",
+    )
 
     @api.model
     def _get_error_message(self, errorcode=None):
@@ -60,12 +75,12 @@ class Website(models.Model):
         """
         if not self.recaptcha_v2_enabled:
             return (True, "")
-        response = form_values.get("g-recaptcha-response")
+        response = form_values.get(self.recaptcha_v2_resp_attr)
         if not response:
             return (False, _("No response given."))
         get_res = {"secret": self.recaptcha_v2_secret_key, "response": response}
         res = requests.post(
-            RECAPTCHA_API_URL, data=get_res, timeout=RECAPTCHA_API_TIMEOUT
+            self.recaptcha_v2_verify_url, data=get_res, timeout=RECAPTCHA_API_TIMEOUT
         ).json()
         error_msg = "\n".join(
             self._get_error_message(error) for error in res.get("error-codes", [])

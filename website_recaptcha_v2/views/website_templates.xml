@@ -12,10 +12,10 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <template id="recaptcha_widget" name="reCAPTCHA widget">
         <t t-if="website.recaptcha_v2_enabled">
             <div
-                class="g-recaptcha"
+                t-att-class="website.recaptcha_v2_html_class"
                 t-att-data-sitekey="website.recaptcha_v2_site_key"
             />
-            <script src="https://www.recaptcha.net/recaptcha/api.js" async="true" />
+            <script t-att-src="website.recaptcha_v2_api_url" async="true" />
         </t>
     </template>
 
