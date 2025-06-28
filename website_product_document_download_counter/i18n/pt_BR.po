@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_product_document_download_counter
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: website_product_document_download_counter
+#. odoo-python
+#: code:addons/website_product_document_download_counter/models/product_document.py:0
+msgid "Can't download a document not shown on product page"
+msgstr ""
+
+#. module: website_product_document_download_counter
+#. odoo-python
+#: code:addons/website_product_document_download_counter/models/product_document.py:0
+msgid "Can't download an inactive document"
+msgstr ""
+
+#. module: website_product_document_download_counter
+#: model:ir.model.fields,field_description:website_product_document_download_counter.field_product_document__download_count
+msgid "Download Count"
+msgstr ""
+
+#. module: website_product_document_download_counter
+#: model:ir.model.fields,field_description:website_product_document_download_counter.field_product_document__download_count_enabled
+msgid "Download Count Enabled"
+msgstr ""
+
+#. module: website_product_document_download_counter
+#: model:ir.model.fields,help:website_product_document_download_counter.field_product_document__download_count_enabled
+msgid "Enable download counting for this document when published on website"
+msgstr ""
+
+#. module: website_product_document_download_counter
+#: model:ir.model.fields,help:website_product_document_download_counter.field_product_document__download_count
+msgid "Number of times this document has been downloaded"
+msgstr ""
+
+#. module: website_product_document_download_counter
+#: model:ir.model,name:website_product_document_download_counter.model_product_document
+msgid "Product Document"
+msgstr ""
