@@ -44,9 +44,10 @@ To configure this module, you need to:
 
 1. Go to **Website > Configuration > Settings**
 2. Search 'Cookiefirst' option.
-3. Fill in your 'Cookiefirst ID' (e.g.
-   '00000000-0000-0000-0000-000000000000').
-4. Click on "Save" button.
+3. Enable Use Cookiefirst checkbox
+4. Enter your Cookiefirst **API Key** into **Cookiefirst ID** field
+   (e.g. '00000000-0000-0000-0000-000000000000').
+5. Click on "Save" button.
 
 ⚠️ **Please note: if another cookie consent solution is installed (e.g.
 Cookiebot), the execution of the Cookiefirst script will be prevented.
@@ -74,13 +75,14 @@ Authors
 Contributors
 ------------
 
-- `Studio73 <https://www.studio73.es>`__:
+-  `Studio73 <https://www.studio73.es>`__:
 
-  - Ioan Galan <ioan@studio73.es>
+   -  Ioan Galan <ioan@studio73.es>
 
-- `NICO SOLUTIONS - ENGINEERING & IT <https://www.nico-solutions.de>`__:
+-  `NICO SOLUTIONS - ENGINEERING &
+   IT <https://www.nico-solutions.de>`__:
 
-  - Nils Coenen nils.coenen@nico-solutions.de
+   -  Nils Coenen nils.coenen@nico-solutions.de
 
 Maintainers
 -----------
