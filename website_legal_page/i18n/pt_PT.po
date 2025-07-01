@@ -254,24 +254,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
-
-#~ msgid ", and the"
-#~ msgstr ", e o"
-
-#~ msgid ", the"
-#~ msgstr ", o"
-
-#~ msgid "I accept the"
-#~ msgstr "Aceitos os"
-
-#~ msgid "Terms of use"
-#~ msgstr "Termos de utilização"
-
-#~ msgid "of this website."
-#~ msgstr "deste website."
-
-#~ msgid "privacy policy"
-#~ msgstr "política de privacidade"
-
-#~ msgid "terms of use"
-#~ msgstr "termos de utilização"

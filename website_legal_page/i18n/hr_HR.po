@@ -255,24 +255,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
-
-#~ msgid ", and the"
-#~ msgstr ", i "
-
-#~ msgid ", the"
-#~ msgstr ", "
-
-#~ msgid "I accept the"
-#~ msgstr "Prihvaćam"
-
-#~ msgid "Terms of use"
-#~ msgstr "Uvijeti korištenja"
-
-#~ msgid "of this website."
-#~ msgstr "ovih webstranica."
-
-#~ msgid "privacy policy"
-#~ msgstr "izjava privatnosti"
-
-#~ msgid "terms of use"
-#~ msgstr "uvijeti korištenja"
