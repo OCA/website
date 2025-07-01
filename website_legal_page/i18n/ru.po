@@ -254,10 +254,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
-
-#, fuzzy
-#~ msgid "Privacy Policy"
-#~ msgstr "политика конфиденциальности"
-
-#~ msgid "privacy policy"
-#~ msgstr "политика конфиденциальности"

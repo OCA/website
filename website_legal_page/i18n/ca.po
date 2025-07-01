@@ -256,16 +256,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
-
-#~ msgid ""
-#~ "A cookie is a small text file that a website stores on your computer or "
-#~ "mobile device when you visit the site."
-#~ msgstr ""
-#~ "Una cookie (galeta) és un petit fitxer de text que un lloc web "
-#~ "emmagatzema al vostre ordinador o dispositiu mòbil quan visiteu el lloc."
-
-#~ msgid "Terms of use"
-#~ msgstr "Condicions d'ús"
-
-#~ msgid "privacy policy"
-#~ msgstr "Política privacitat"
