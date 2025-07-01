@@ -253,21 +253,3 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
-
-#~ msgid ", and the"
-#~ msgstr ", og"
-
-#~ msgid "I accept the"
-#~ msgstr "Jeg aksepterer"
-
-#~ msgid "Terms of use"
-#~ msgstr "Bruksvilkår"
-
-#~ msgid "of this website."
-#~ msgstr "til denne nettsiden."
-
-#~ msgid "privacy policy"
-#~ msgstr "privatlivspolicy"
-
-#~ msgid "terms of use"
-#~ msgstr "bruksvilkår"
