@@ -4,11 +4,16 @@
     "name": "Google Analytics 4",
     "summary": "Google Analytics 4 integration",
     "category": "Website",
-    "version": "14.0.1.1.0",
+    "version": "16.0.1.0.0",
     "author": "Studio73, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
     "depends": ["website_sale"],
-    "data": ["views/assets.xml", "views/website_templates.xml"],
+    "data": ["views/website_templates.xml"],
+    "assets": {
+        "web.assets_frontend": [
+            "website_google_analytics_4/static/src/js/website_sale_tracking.js",
+        ],
+    },
     "installable": True,
 }
