@@ -3,28 +3,29 @@
 
 import logging
 
-from odoo import http
 from odoo.exceptions import UserError
 from odoo.http import request, route
+
+from odoo.addons.website_sale.controllers.main import WebsiteSale
 
 logger = logging.getLogger(__name__)
 
 
-class ProductDocumentDownloadCounterController(http.Controller):
+class ProductDocumentDownloadCounterController(WebsiteSale):
     """
     Independent controller for document downloads with counter.
     Does not inherit from WebsiteSale to avoid readonly/read-write conflicts.
     """
 
     @route(
-        '/shop/<model("product.template"):product_template>/document/<int:document_id>/count',
+        '/shop/<model("product.template"):product_template>/document/<int:document_id>',
         type="http",
         auth="public",
         website=True,
         sitemap=False,
         readonly=False,
     )
-    def product_document_with_counter(self, product_template, document_id):
+    def product_document(self, product_template, document_id):
         """
         Document download with download counter.
 
@@ -47,7 +48,10 @@ class ProductDocumentDownloadCounterController(http.Controller):
 
         # 2. Increment counter (our specific functionality)
         try:
+            response = super().product_document(product_template, document_id)
             document.increment_download_count()
+
+            return response
         except UserError as e:
             logger.warning(
                 "Unable to increase downloads counter for document %s: %s",
@@ -60,12 +64,3 @@ class ProductDocumentDownloadCounterController(http.Controller):
                 document_id,
                 "Internal server error",
             )
-
-        # 3. Serve file (original method logic)
-        return (
-            request.env["ir.binary"]
-            ._get_stream_from(
-                document.ir_attachment_id,
-            )
-            .get_response(as_attachment=True)
-        )

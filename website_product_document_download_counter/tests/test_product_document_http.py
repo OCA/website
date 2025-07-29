@@ -50,9 +50,7 @@ class TestProductDocumentDownloadCounterHttp(
                 "download_count_enabled": True,
             }
         )
-        self.url = (
-            f"/shop/{self.product_template.id}/document/" f"{self.document.id}/count"
-        )
+        self.url = f"/shop/{self.product_template.id}/document/{self.document.id}"
 
     def test_http_download_inactive_document(self):
         """
