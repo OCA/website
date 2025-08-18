@@ -22,6 +22,7 @@ setuptools.setup(
         'odoo-addon-website_recaptcha_v2>=16.0dev,<16.1dev',
         'odoo-addon-website_require_login>=16.0dev,<16.1dev',
         'odoo-addon-website_snippet_country_dropdown>=16.0dev,<16.1dev',
+        'odoo-addon-website_snippet_country_phone_code_dropdown>=16.0dev,<16.1dev',
         'odoo-addon-website_whatsapp>=16.0dev,<16.1dev',
     ],
     classifiers=[
