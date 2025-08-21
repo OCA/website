@@ -17,50 +17,56 @@ tour.register(
     },
     [
         {
-            content: "enter edit mode",
+            content: "Enter edit mode",
             trigger: "a[data-action=edit]",
+            extraTrigger: "#wrap",
         },
         wTourUtils.dragNDrop(snippet),
         wTourUtils.clickOnSnippet(snippet),
         wTourUtils.changeOption("ConditionalVisibility", "we-toggler"),
         {
-            content: "Set on conditional visibility",
+            content: "Set conditional visibility",
             trigger: '[data-name="visibility_conditional"]',
-            run: "click",
-        },
-        {
-            content: "Click in User visibility",
-            trigger: '[data-save-attribute="visibilityValueLogged"]',
+            extraTrigger: ".s_text_image",
             run: "click",
         },
         {
             content: "Set visibility to logged in users",
-            trigger: '[data-name="visibility_logged_in"]',
+            trigger: '[data-save-attribute="visibilityValueLogged"]',
+            extraTrigger: ".s_text_image",
             run: "click",
         },
         {
-            content: "Click in group visibility",
+            content: "Set visibility to internal users only",
             trigger: '[data-save-attribute="visibilityUserGroup"]',
+            extraTrigger: ".s_text_image",
             run: "click",
         },
         {
-            content: "Set visibility to logged internal users only",
+            content: "Select internal user group",
             trigger: '[data-name="user_group_internal"]',
+            extraTrigger: ".s_text_image",
             run: "click",
         },
         ...wTourUtils.clickOnSave(),
         {
             content: "Check if the rule was applied",
-            trigger: "body:not(.editor_enable) #wrap",
+            trigger: "#wrap .s_text_image",
+            extraTrigger: ".s_text_image",
             run: function () {
-                const style = window.getComputedStyle(
-                    this.$anchor[0].getElementsByClassName("s_text_image")[0]
-                );
-                if (style.display === "none") {
-                    console.error(
-                        "Error: this item should be visible for internal users"
-                    );
-                }
+                setTimeout(() => {
+                    const element = this.$anchor[0].querySelector(".s_text_image");
+                    if (!element) {
+                        console.error("Error: Element not found");
+                        return;
+                    }
+                    const style = window.getComputedStyle(element);
+                    if (style.display === "none") {
+                        console.error(
+                            "Error: This item should be visible for internal users"
+                        );
+                    }
+                }, 100);
             },
         },
     ]

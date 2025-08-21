@@ -14,9 +14,8 @@ tour.register(
             content: "The content should be hidden for portal users",
             trigger: "#wrap",
             run: function () {
-                const style = window.getComputedStyle(
-                    this.$anchor[0].getElementsByClassName("s_text_image")[0]
-                );
+                const element = this.$anchor[0];
+                const style = window.getComputedStyle(element);
                 if (style.display !== "none") {
                     console.error(
                         "Error: This item should be invisible for portal users"
