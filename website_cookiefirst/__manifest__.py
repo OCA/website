@@ -4,7 +4,7 @@
     "name": "Website Cookiefirst",
     "summary": "Cookiefirst integration",
     "category": "Website",
-    "version": "16.0.1.0.0",
+    "version": "16.0.2.0.0",
     "author": "Studio73, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
