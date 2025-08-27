@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="global_product_search_box"
+        inherit_id="website.website_search_box_input"
+    >
+        <xpath expr="//form//button" position="attributes">
+            <attribute name="t-attf-class" add="d-none" separator=" " />
+        </xpath>
+    </template>
+
+    <template id="global_product_search_box_input" name="Global Products search box">
+        <t t-call="website_search_header.global_product_search_box">
+            <t t-set="_form_classes" t-valuef="float-end d-block o_search_header" />
+            <t t-set="search_type" t-valuef="all" />
+            <t t-set="action" t-valuef="/website/search" />
+        </t>
+    </template>
+
+    <template id="header_search_link" name="Header Search Link">
+        <div id="div_search_header" t-attf-class="#{_item_class} ms-md-2">
+            <a t-attf-class="d-none #{_link_class}" />
+            <t t-call="website_search_header.global_product_search_box_input" />
+        </div>
+        <div id="div_search_button" t-attf-class="#{_item_class}">
+            <a t-attf-class="d-none #{_link_class}" />
+            <button
+                id="search_btn_toggle_search"
+                aria-label="Search"
+                t-attf-class="btn oe_search_button btn-primary"
+                title="Search"
+                t-attf-onclick="searchHeader()"
+            >
+                <i class="oi oi-close" />
+            </button>
+        </div>
+
+        <t t-call-assets="website_search_header.assets_frontend" t-js="true" />
+    </template>
+
+    <template
+        id="template_header_default"
+        inherit_id="website.template_header_hamburger"
+    >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template>
+    <template
+        id="template_header_hamburger"
+        inherit_id="website.template_header_hamburger"
+    >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="template_header_vertical"
+        inherit_id="website.template_header_vertical"
+    >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="template_header_sidebar" inherit_id="website.template_header_sidebar">
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-valuef="nav-item" />
+                <t t-set="_link_class" t-valuef="nav-link" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="template_header_slogan" inherit_id="website.template_header_sidebar">
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template>
+
+    <!-- <template id="template_header_contact" inherit_id="website.template_header_contact">
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template> -->
+
+    <template id="template_header_boxed" inherit_id="website.template_header_boxed">
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="template_header_centered_logo"
+        inherit_id="website.template_header_hamburger"
+    >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template>
+
+    <template id="template_header_image" inherit_id="website.template_header_hamburger">
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="template_header_hamburger_full"
+        inherit_id="website.template_header_hamburger"
+    >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template>
+
+    <!-- <template
+        id="template_header_magazine"
+        inherit_id="website.template_header_magazine"
+    >
+        <xpath expr="//t[@t-call='website.navbar_toggler']" position="after">
+            <t t-call="website_search_header.header_search_link">
+                <t t-set="_item_class" t-value="'nav-item'" />
+                <t t-set="_link_class" t-value="'nav-link'" />
+            </t>
+        </xpath>
+    </template> -->
+</odoo>
