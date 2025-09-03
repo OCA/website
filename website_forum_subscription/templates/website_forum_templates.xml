@@ -24,12 +24,14 @@
             >
                 <button class="btn text-reset js_unfollow_btn">
                     <div class="d-flex align-items-center">
-                        <small>Unsubscribe</small><i class="fa fa-fw ms-1" />
+                        <small>Unsubscribe</small>
+                        <i class="fa fa-fw ms-1" />
                     </div>
                 </button>
                 <button class="btn text-reset js_follow_btn">
                     <div class="d-flex align-items-center">
-                        <small>Subscribe</small><i class="fa fa-fw ms-1" />
+                        <small>Subscribe</small>
+                        <i class="fa fa-fw ms-1" />
                     </div>
                 </button>
             </div>
