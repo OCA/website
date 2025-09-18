@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2025 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+
+    <!-- add general newsletter tag-->
+    <record id="general_newsletter_tag" model="blog.tag">
+        <field name="name">General Newsletter</field>
+    </record>
+
+</odoo>

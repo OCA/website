@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2025 Onestein
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_mail_mass_mailing_form" model="ir.ui.view">
+        <field name="model">mailing.mailing</field>
+        <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="before">
+                <button
+                    name="%(website_mailing_to_blogpost.wizard_newsletter_to_blogpost_action)d"
+                    type="action"
+                    class="btn-secondary"
+                    string="Convert to Blogpost"
+                    context="{'default_mailing_id': active_id}"
+                    attrs="{'invisible': [('blog_post_id', '!=', False)]}"
+                />
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="blog_post_id" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
