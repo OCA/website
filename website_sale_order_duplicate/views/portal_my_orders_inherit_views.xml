@@ -5,9 +5,6 @@
         name="Portal My Orders Inherit Duplicate"
         inherit_id="sale.portal_my_orders"
     >
-                <xpath expr="//th[@class='text-right']" position="after">
-            <th />
-        </xpath>
         <xpath
             expr="//span[@t-field='order.amount_total']/ancestor::td"
             position="after"
