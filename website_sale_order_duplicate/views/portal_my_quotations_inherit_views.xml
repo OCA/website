@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="portal_my_quotations_inherit_duplicate"
+        name="Portal My Quotations Inherit Duplicate"
+        inherit_id="sale.portal_my_quotations"
+    >
+        <xpath expr="//th[@class='text-right']" position="after">
+            <th />
+        </xpath>
+        <xpath
+            expr="//span[@t-field='quotation.amount_total']/ancestor::td"
+            position="after"
+        >
+            <td>
+                <a
+                    t-attf-href="/my/order/duplicate/#{quotation.id}"
+                    class="btn btn-primary btn-sm"
+                >
+                    Duplicate
+                </a>
+            </td>
+        </xpath>
+    </template>
+</odoo>
