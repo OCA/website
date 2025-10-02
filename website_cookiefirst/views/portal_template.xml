@@ -19,8 +19,7 @@
         <xpath expr="//script[last()]" position="after">
             <t t-if="website.cookiefirst_identifier">
                 <script
-                    src="https://consent.cookiefirst.com/banner.js"
-                    t-att-data-cookiefirst-key="website.cookiefirst_identifier"
+                    t-attf-src="https://consent.cookiefirst.com/sites/{{ (website.get_base_url() or '').replace('https://', '').replace('http://', '').replace('www.', '') }}-{{ website.cookiefirst_identifier }}/consent.js"
                 />
             </t>
         </xpath>
