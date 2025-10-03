@@ -20,7 +20,7 @@ options.registry.WebsiteFormEditor.include({
         if (legalTermsEl) {
             legalTermsEl.remove();
         } else {
-            // eslint-disable-next-line no-undef
+
             const template = document.createElement("template");
             const labelWidth = this.$target[0].querySelector(".s_website_form_label")
                 .style.width;
