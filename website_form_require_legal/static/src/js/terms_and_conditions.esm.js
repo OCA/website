@@ -1,28 +1,30 @@
-/** @odoo-module **/
+import {Interaction} from "@web/public/interaction";
+import {registry} from "@web/core/registry";
 
-import {Component} from "@odoo/owl";
-import publicWidget from "@web/legacy/js/public/public_widget";
-
-publicWidget.registry.TermsAndConditionsCheckbox = publicWidget.Widget.extend({
-    selector: 'div[name="website_form_terms_and_conditions"]',
-    events: {
-        "change #website_form_terms_and_conditions_input": "_onClickCheckbox",
-    },
+export class TermsAndConditionsCheckbox extends Interaction {
+    static selector = 'div[id="website_form_terms_and_conditions_div"]';
+    dynamicContent = {
+        "#website_form_terms_and_conditions_input": {
+            "t-on-change": this._onClickCheckbox,
+        },
+    };
 
     async start() {
         this.checkbox = this.el.querySelector(
             "#website_form_terms_and_conditions_input"
         );
-        Component.env.bus.trigger("enableSubmitButton");
-        return this._super(...arguments);
-    },
+        this.env.bus.trigger("enableSubmitButton");
+    }
+
     _onClickCheckbox() {
         if (this.checkbox.checked) {
-            Component.env.bus.trigger("enableSubmitButton");
+            this.env.bus.trigger("enableSubmitButton");
         } else {
-            Component.env.bus.trigger("disableSubmitButton");
+            this.env.bus.trigger("disableSubmitButton");
         }
-    },
-});
+    }
+}
 
-export default publicWidget.registry.TermsAndConditionsCheckbox;
+registry
+    .category("public.interactions")
+    .add("website_form_require_legal.terms_and_conditions", TermsAndConditionsCheckbox);

@@ -1,12 +1,10 @@
-/* global document */
-import publicWidget from "@web/legacy/js/public/public_widget";
-import {Component} from "@odoo/owl";
+import {Interaction} from "@web/public/interaction";
+import {registry} from "@web/core/registry";
 
-publicWidget.registry.SubmitButton = publicWidget.Widget.extend({
-    selector: ".s_website_form_send", // Updated selector
+export class SubmitButton extends Interaction {
+    static selector = ".s_website_form_send";
 
     async start() {
-        await this._super(...arguments);
         this.SubmitButton = this.el;
         const legalDiv = document.querySelector(".s_website_form_legal");
         if (legalDiv) {
@@ -14,22 +12,19 @@ publicWidget.registry.SubmitButton = publicWidget.Widget.extend({
         } else {
             this._enable();
         }
-        Component.env.bus.addEventListener(
-            "enableSubmitButton",
-            this._enable.bind(this)
-        );
-        Component.env.bus.addEventListener(
-            "disableSubmitButton",
-            this._disable.bind(this)
-        );
-    },
+        this.env.bus.addEventListener("enableSubmitButton", this._enable.bind(this));
+        this.env.bus.addEventListener("disableSubmitButton", this._disable.bind(this));
+    }
 
     _enable() {
         this.SubmitButton.classList.remove("disabled");
-    },
+    }
 
     _disable() {
         this.SubmitButton.classList.add("disabled");
-    },
-});
-export default publicWidget.registry.PaymentButton;
+    }
+}
+
+registry
+    .category("public.interactions")
+    .add("website_form_require_legal.submit_button", SubmitButton);

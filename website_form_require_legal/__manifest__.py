@@ -3,24 +3,22 @@
 {
     "name": "Website Form Require Legal",
     "summary": "Add possibility to require confirm legal terms.",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Website",
     "license": "LGPL-3",
     "website": "https://github.com/OCA/website",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "application": False,
     "installable": True,
-    "depends": ["web_editor", "website"],
-    "data": ["views/snippets.xml"],
+    "depends": ["html_editor", "website"],
     "assets": {
-        "website.assets_wysiwyg": [
-            "website_form_require_legal/static/src/js/options.esm.js",
-            "website_form_require_legal/static/src/xml/website_form_editor.xml",
-        ],
         "web.assets_frontend": [
             "website_form_require_legal/static/src/scss/website_form_legal.scss",
             "website_form_require_legal/static/src/js/terms_and_conditions.esm.js",
             "website_form_require_legal/static/src/js/submit_button.esm.js",
+        ],
+        "website.website_builder_assets": [
+            "website_form_require_legal/static/src/builder/**/*",
         ],
     },
 }
