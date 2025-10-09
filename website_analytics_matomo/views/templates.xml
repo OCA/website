@@ -20,7 +20,7 @@
                             t-out="website.matomo_heartbeat_timer"
                         />]);
                     </t>
-                    (function() {
+                    function allConsentsGrantedMatomo() {
                       var u="<t t-out="website.matomo_analytics_host_url" />/";
                       _paq.push(['setTrackerUrl', u+'matomo.php']);
                       _paq.push(['setSiteId', '<t
@@ -28,10 +28,21 @@
                     />']);
                       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
                       g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-                    })();
+                    };
+                    <t t-if="website._allConsentsGranted()">
+                        allConsentsGrantedMatomo();
+                    </t>
+                    <t t-else="">
+                        document.addEventListener(
+                            "optionalCookiesAccepted",
+                            allConsentsGrantedMatomo,
+                            {once: true}
+                        );
+                    </t>
+
                 </script>
                 <noscript><p><img
-                            t-attf-src="#{website.matomo_analytics_host_url}/matomo.php?idsite='#{website.matomo_analytics_id}'"
+                            t-attf-src="#{website.matomo_analytics_host_url}/matomo.php?idsite=#{website.matomo_analytics_id}"
                             style="border:0;"
                             alt=""
                         /></p></noscript>
