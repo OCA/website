@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-oca-website"
+version = "19.0.20251013.0"
+dependencies = [
+    "odoo-addon-website_form_require_legal==19.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 19.0",
+]
