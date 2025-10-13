@@ -4,7 +4,7 @@
         id="footer_copyright_company_name"
         inherit_id="website.footer_copyright_company_name"
     >
-        <xpath expr="//span[hasclass('o_footer_copyright_name')]" position="after">
+        <xpath expr="//span[hasclass('o_footer_copyright_name')]" position="inside">
             <span>-
                 <a href="/legal/cookies-policy">Cookies Policy</a>
             </span>
