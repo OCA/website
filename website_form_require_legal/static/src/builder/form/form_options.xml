@@ -1,0 +1,40 @@
+<templates xml:space="preserve">
+<t
+        t-name="website_form_require_legal.s_website_form_form_option"
+        t-inherit="website.s_website_form_form_option"
+        t-inherit-mode="extension"
+    >
+        <xpath expr="//BuilderRow[@label.translate=&quot;URL&quot;]" position="after">
+            <BuilderRow label.translate="Legal terms acceptance">
+                <BuilderCheckbox action="'formToggleLegalTerms'" preview="false" />
+            </BuilderRow>
+        </xpath>
+    </t>
+<t t-name="website_form_require_legal.s_website_form_legal">
+        <div
+            class="col-12 s_website_form_legal form-group s_website_form_required s_website_form_custom"
+        >
+            <div class="row s_col_no_resize s_col_no_bgcolor">
+                <div
+                    t-attf-style="width: #{labelWidth or '200px'}"
+                    class="s_website_form_label"
+                />
+                <div class="col-sm">
+                    <div id="website_form_terms_and_conditions_div" class="form-check">
+                        <input
+                            id="website_form_terms_and_conditions_input"
+                            type="checkbox"
+                            required="1"
+                            class="s_website_form_input form-check-input"
+                            name="legal_terms"
+                            data-field="website_form_terms_and_conditions"
+                        />
+                        <span class="form-check-label">
+                        Agree to <a href="#">terms and conditions</a>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
