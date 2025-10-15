@@ -10,10 +10,7 @@
     "data": [
         "views/website_legal_main_page.xml",
     ],
-    "author": "Tecnativa, "
-    "LasLabs, "
-    "Nicolas JEUDY, "
-    "Odoo Community Association (OCA)",
+    "author": "Tecnativa, LasLabs, Nicolas JEUDY, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
 }
