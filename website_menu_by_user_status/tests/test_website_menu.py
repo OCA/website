@@ -1,10 +1,10 @@
 # Copyright 2018 David Dufresne
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo.tests import TransactionCase
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestWebsiteMenu(TransactionCase):
+class TestWebsiteMenu(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
