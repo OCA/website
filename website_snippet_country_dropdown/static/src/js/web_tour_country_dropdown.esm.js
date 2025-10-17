@@ -8,7 +8,7 @@ registry
         url: "/",
         steps: () => [
             {
-                trigger: 'a[href="/website_snippet_country_dropdown.demo_page"]',
+                trigger: 'a:contains("Country dropdown demo"):not(:visible)',
                 run: "click",
             },
             {
