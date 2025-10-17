@@ -1,12 +1,13 @@
 [project]
 name = "odoo-addons-oca-website"
-version = "18.0.20251017.0"
+version = "18.0.20251017.1"
 dependencies = [
     "odoo-addon-website_cookiefirst==18.0.*",
     "odoo-addon-website_form_require_legal==18.0.*",
     "odoo-addon-website_forum_subscription==18.0.*",
     "odoo-addon-website_google_tag_manager==18.0.*",
     "odoo-addon-website_legal_page==18.0.*",
+    "odoo-addon-website_menu_by_user_status==18.0.*",
     "odoo-addon-website_odoo_debranding==18.0.*",
     "odoo-addon-website_product_document_download_counter==18.0.*",
     "odoo-addon-website_require_login==18.0.*",
