@@ -31,6 +31,7 @@ addon | version | maintainers | summary
 [website_google_tag_manager](website_google_tag_manager/) | 17.0.1.0.1 |  | Add support for Google Tag Manager
 [website_legal_page](website_legal_page/) | 17.0.1.0.0 |  | Website Legal Page
 [website_local_font](website_local_font/) | 17.0.1.0.0 |  | Allows to add local fonts on Odoo website
+[website_menu_by_user_status](website_menu_by_user_status/) | 17.0.1.0.0 |  | Allow to manage the display of website.menus
 [website_odoo_debranding](website_odoo_debranding/) | 17.0.1.0.0 |  | Remove Odoo Branding from Website
 [website_require_login](website_require_login/) | 17.0.1.0.0 |  | Website Login Required
 [website_snippet_big_button](website_snippet_big_button/) | 17.0.1.0.0 |  | A snippet that adds two big buttons
