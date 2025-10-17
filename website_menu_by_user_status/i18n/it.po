@@ -1,0 +1,65 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_menu_by_user_status
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2022-12-27 17:45+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
+
+#. module: website_menu_by_user_status
+#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: website_menu_by_user_status
+#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_menu_by_user_status
+#: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu__user_logged
+msgid ""
+"If checked, the menu will be displayed when the user is logged and give "
+"access."
+msgstr ""
+"Se selezionato, il menu verrà visualizzato quando l'utente è registrato e "
+"concede l'accesso."
+
+#. module: website_menu_by_user_status
+#: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu__user_not_logged
+msgid ""
+"If checked, the menu will be displayed when the user is not logged and give "
+"access."
+msgstr ""
+"Se selezionato, il menu verrà visualizzato quando l'utente non è registrato "
+"e concede l'accesso."
+
+#. module: website_menu_by_user_status
+#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: website_menu_by_user_status
+#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__user_logged
+msgid "Visible for logged Users"
+msgstr "Visibile per gli utenti registrati"
+
+#. module: website_menu_by_user_status
+#: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__user_not_logged
+msgid "Visible for public Users"
+msgstr "Visibile agli utenti pubblici"
+
+#. module: website_menu_by_user_status
+#: model:ir.model,name:website_menu_by_user_status.model_website_menu
+msgid "Website Menu"
+msgstr "Menu sito web"
