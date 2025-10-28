@@ -22,6 +22,7 @@ setuptools.setup(
         'odoo14-addon-website_plausible',
         'odoo14-addon-website_require_login',
         'odoo14-addon-website_snippet_country_dropdown',
+        'odoo14-addon-website_user_login_redirect_custom',
     ],
     classifiers=[
         'Programming Language :: Python',
