@@ -4,7 +4,7 @@
 {
     "name": "Website User Login Redirect Custom",
     "summary": "Redirect website/portal user to custom URL after login or signup",
-    "version": "14.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Website",
     "author": "Cetmix OÜ, Odoo Community Association (OCA)",
     "license": "AGPL-3",

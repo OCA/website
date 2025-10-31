@@ -6,7 +6,7 @@ from odoo.tests import common, tagged
 
 
 @tagged("post_install", "-at_install")
-class TestWebsiteLoginRedirect(common.SavepointCase):
+class TestWebsiteLoginRedirect(common.TransactionCase):
     """Test website login redirect functionality"""
 
     @classmethod
@@ -116,3 +116,28 @@ class TestWebsiteLoginRedirect(common.SavepointCase):
 
         # Test empty string
         self.assertFalse(settings.is_valid_redirect_url(""))
+
+    def test_check_url_format_skips_empty(self):
+        """_check_url_format should skip empty URLs"""
+        settings = self.env["res.config.settings"].create({})
+        settings._check_url_format()  # Should not raise
+
+    def test_is_valid_redirect_url_rejects_external(self):
+        """Reject external URLs with scheme or domain"""
+        settings = self.env["res.config.settings"].create({})
+        self.assertFalse(settings.is_valid_redirect_url("http://evil.com"))
+
+    def test_check_url_format_raises_validation_error(self):
+        """Invalid URL triggers ValidationError during create"""
+        with self.assertRaises(ValidationError):
+            self.env["res.config.settings"].create(
+                {"website_login_redirect_url": "javascript:alert(1)"}
+            )
+
+    def test_onchange_strips_url_whitespace(self):
+        """Onchange removes leading/trailing spaces in URL"""
+        settings = self.env["res.config.settings"].create(
+            {"website_login_redirect_url": "   /clean-me   "}
+        )
+        settings._onchange_website_login_redirect_url()
+        self.assertEqual(settings.website_login_redirect_url, "/clean-me")

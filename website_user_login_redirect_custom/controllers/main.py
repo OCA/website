@@ -2,9 +2,9 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo.http import request
-from odoo.tools import misc
+from odoo.tools import str2bool
 
-from odoo.addons.web.controllers.main import Home
+from odoo.addons.web.controllers.home import Home
 
 
 class WebsiteRedirectCustom(Home):
@@ -27,7 +27,7 @@ class WebsiteRedirectCustom(Home):
             .sudo()
             .get_param("website_user_login_redirect_custom.enabled", "False")
         )
-        return misc.str2bool(enabled)
+        return str2bool(enabled)
 
     def _get_custom_redirect_url(self):
         """Get custom redirect URL or False if not set/valid"""
