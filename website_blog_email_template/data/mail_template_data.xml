@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Marcel Savegnago - Escodoo <https://escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
+<odoo noupdate="1">
+    <record id="blog_post_template_custom" model="mail.template">
+            <field name="name">Blog: New Post Published (Custom Template)</field>
+            <field name="model_id" ref="website_blog.model_blog_blog" />
+            <field name="subject">New post published on {{ object.name }}</field>
+            <field
+            name="description"
+        >Email template for notifying followers when a new blog post is published. This template can be configured in the blog settings.</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-size: 13px;">
+                    <p style="margin: 0px; padding: 0px;">
+                        Hello,<br /><br />
+                        A new post has been published on the <strong
+                        t-out="object.name or ''"
+                    >Blog</strong> blog you are following:<br /><br />
+                        <center>
+                            <strong
+                            style="font-size: 16px;"
+                            t-out="ctx.get('blog_post').name or ''"
+                        >New Post Title</strong>
+                        </center>
+                        <t t-if="ctx.get('blog_post').subtitle">
+                            <p
+                            style="margin: 16px 0px; font-style: italic; color: #666;"
+                        >
+                                <t t-out="ctx.get('blog_post').subtitle or ''" />
+                            </p>
+                        </t>
+                        <t t-if="ctx.get('blog_post').author_name">
+                            <p style="margin: 8px 0px; font-size: 12px; color: #999;">
+                                By <t t-out="ctx.get('blog_post').author_name or ''" />
+                            </p>
+                        </t>
+                        <div
+                        style="margin: 24px 0px; padding: 16px 8px; text-align: center;"
+                    >
+                            <a
+                            t-att-href="ctx.get('blog_post').website_url or ''"
+                            style="background-color: #875A7B; padding: 10px 20px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 14px; font-weight: 500; display: inline-block;"
+                        >
+                                Read the full post
+                            </a>
+                        </div>
+                        <p style="margin: 16px 0px 0px 0px;">
+                            Thank you for following our blog!<br />
+                            <t t-if="object.subtitle">
+                                <t t-out="object.subtitle or ''" /><br />
+                            </t>
+                            <strong t-out="object.name or ''">Blog Team</strong>
+                        </p>
+                    </p>
+                </div>
+            </field>
+        </record>
+</odoo>
