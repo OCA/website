@@ -22,7 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [website_cookiefirst](website_cookiefirst/) | 19.0.1.0.0 |  | Cookiefirst integration
-[website_form_require_legal](website_form_require_legal/) | 19.0.1.0.0 |  | Add possibility to require confirm legal terms.
+[website_form_require_legal](website_form_require_legal/) | 19.0.1.0.1 |  | Add possibility to require confirm legal terms.
 
 [//]: # (end addons)
 
