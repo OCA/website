@@ -1,8 +1,7 @@
 import {BuilderAction} from "@html_builder/core/builder_action";
-import {Plugin} from "@html_editor/plugin";
+import {Editor} from "@html_editor/editor";
 import {patch} from "@web/core/utils/patch";
 import {renderToElement} from "@web/core/utils/render";
-
 export class FormToggleLegalTermsAction extends BuilderAction {
     static id = "formToggleLegalTerms";
     apply({editingElement: el}) {
@@ -38,7 +37,7 @@ export class FormToggleLegalTermsAction extends BuilderAction {
     }
 }
 
-patch(Plugin.prototype, {
+patch(Editor.prototype, {
     getResource(resourceId) {
         const resources = super.getResource(resourceId);
         if (resourceId && resourceId === "builder_actions") {
