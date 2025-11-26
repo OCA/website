@@ -27,7 +27,7 @@ class IrHttp(models.AbstractModel):
         # raised and the cursor is currently closed
         try:
             user = website.user_id
-        except (OperationalError, Exception) as e:
+        except Exception as e:
             _logger.error("Error accessing user_id: %s (type: %s)", e, type(e).__name__)
             return res
         if request.uid == user.id:
