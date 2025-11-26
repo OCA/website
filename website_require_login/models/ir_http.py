@@ -1,11 +1,14 @@
 # Copyright 2020 Advitus MB
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+import logging
 from pathlib import Path
 
 from psycopg2 import OperationalError
 
 from odoo import models
 from odoo.http import request
+
+_logger = logging.getLogger(__name__)
 
 
 class IrHttp(models.AbstractModel):
@@ -24,7 +27,8 @@ class IrHttp(models.AbstractModel):
         # raised and the cursor is currently closed
         try:
             user = website.user_id
-        except OperationalError:
+        except (OperationalError, Exception) as e:
+            _logger.error("Error accessing user_id: %s (type: %s)", e, type(e).__name__)
             return res
         if request.uid == user.id:
             auth_paths = (
