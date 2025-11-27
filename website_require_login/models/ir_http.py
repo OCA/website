@@ -1,8 +1,9 @@
 # Copyright 2020 Advitus MB
+# Copyright 2025 Simone Rubino - PyTech
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
 from pathlib import Path
 
-from psycopg2 import OperationalError
+from psycopg2 import InternalError
 
 from odoo import models
 from odoo.http import request
@@ -24,7 +25,9 @@ class IrHttp(models.AbstractModel):
         # raised and the cursor is currently closed
         try:
             user = website.user_id
-        except OperationalError:
+        except InternalError:
+            # The real exception is InFailedSqlTransaction
+            # it will be available in psycopg2>=2.8.*
             return res
         if request.uid == user.id:
             auth_paths = (
