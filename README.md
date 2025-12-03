@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [website_legal_page](website_legal_page/) | 18.0.1.0.0 |  | Website Legal Page
 [website_menu_by_user_status](website_menu_by_user_status/) | 18.0.1.0.0 |  | Allow to manage the display of website.menus
 [website_odoo_debranding](website_odoo_debranding/) | 18.0.1.0.0 |  | Remove Odoo Branding from Website
+[website_partner_form](website_partner_form/) | 18.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Allow to edit partner website fields on partner form view, in the back office
 [website_product_document_download_counter](website_product_document_download_counter/) | 18.0.1.0.0 |  | Counts the product document downloads from the website.
 [website_require_login](website_require_login/) | 18.0.1.0.0 |  | Website Login Required
 [website_search_header](website_search_header/) | 18.0.1.0.0 |  | Website Search in Header
