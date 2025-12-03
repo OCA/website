@@ -6,11 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-07 10:39+0000\n"
-"PO-Revision-Date: 2025-11-07 10:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -19,14 +16,14 @@ msgstr ""
 #. module: website_partner_form
 #: model_terms:ir.ui.view,arch_db:website_partner_form.view_res_partner_form
 msgid "Full Description"
-msgstr "Description complète"
+msgstr ""
 
 #. module: website_partner_form
 #: model_terms:ir.ui.view,arch_db:website_partner_form.view_res_partner_form
 msgid "Short Description"
-msgstr "Description courte"
+msgstr ""
 
 #. module: website_partner_form
 #: model_terms:ir.ui.view,arch_db:website_partner_form.view_res_partner_form
 msgid "Website"
-msgstr "Site web"
+msgstr ""
