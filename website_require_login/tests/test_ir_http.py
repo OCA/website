@@ -1,4 +1,10 @@
+# Copyright 2025 Simone Rubino - PyTech
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0).
+
+import json
+
 from odoo.tests import HttpCase
+from odoo.tools import mute_logger
 
 
 class TestIrHttp(HttpCase):
@@ -35,3 +41,32 @@ class TestIrHttp(HttpCase):
             200,
             "Expected the response status code to be 200 which means no redirection",
         )
+
+    def test_dispatch_failed_transaction(self):
+        """If a transaction is failed, the exception is handled as usual."""
+        cron = self.env["ir.cron"].create(
+            {
+                "name": "Test failed transaction",
+                "code": "env.cr.execute('SELECT not_a_field FROM res_users')",
+                "model_id": self.env.ref("base.model_res_partner").id,
+            }
+        )
+        self.authenticate(user="admin", password="admin")
+        with mute_logger("odoo.sql_db", "odoo.http"):
+            response = self.url_open(
+                "/web/dataset/call_button",
+                headers={
+                    "Content-Type": "application/json",
+                },
+                data=json.dumps(
+                    {
+                        "params": {
+                            "model": cron._name,
+                            "method": "method_direct_trigger",
+                            "args": [cron.ids],
+                            "kwargs": {},
+                        },
+                    }
+                ),
+            )
+        self.assertEqual(response.status_code, 200)
