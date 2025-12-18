@@ -5,7 +5,7 @@
 {
     "name": "Website Legal Page",
     "category": "Website",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "depends": ["website"],
     "data": [
         "views/website_legal_main_page.xml",
@@ -13,4 +13,9 @@
     "author": "Tecnativa, LasLabs, Nicolas JEUDY, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "AGPL-3",
+    "assets": {
+        "web.assets_frontend": [
+            "website_legal_page/static/src/css/website_legal_page.scss",
+        ],
+    },
 }
