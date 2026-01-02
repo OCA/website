@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_website_login_redirect_settings" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.website.redirect</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='website_settings']" position="inside">
+                <setting
+                    id="website_login_redirect_setting"
+                    string="Redirect on Login/Signup"
+                    help="Redirect users to a custom page after they log in or sign up."
+                >
+                    <field name="website_login_redirect_enabled" />
+
+                    <toggle field="website_login_redirect_enabled">
+                        <div class="row mt8">
+                            <label
+                                class="col-lg-3 o_light_label"
+                                string="Custom URL"
+                                for="website_login_redirect_url"
+                            />
+                            <div class="col-lg-9">
+                                <field
+                                    name="website_login_redirect_url"
+                                    class="w-100"
+                                />
+                                <div class="text-muted mt-1">
+                                    Relative path, e.g. <code>/shop</code> or <code
+                                >/welcome</code>.
+                                </div>
+                            </div>
+                        </div>
+                    </toggle>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

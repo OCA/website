@@ -1,0 +1,4 @@
+- Go to Website → Configuration → Settings
+- Scroll to the Privacy section
+- Enable the checkbox “Redirect on Login/Signup”
+- Enter your relative URL (e.g., /, /shop, /thank-you-for-joining-us)
