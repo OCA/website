@@ -29,7 +29,7 @@ class IrHttp(models.AbstractModel):
         website = request.env["website"].sudo().get_current_website()
         if not website:
             return None
-        if request.uid and (request.uid != website.user_id.id):
+        if request.env.uid and (request.env.uid != website.user_id.id):
             return None
         auth_paths = (
             request.env["website.auth.url"]
