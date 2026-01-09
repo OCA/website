@@ -1,0 +1,1 @@
+This add-on adds Cloudflare Turnstile validation to the login form.
