@@ -1,0 +1,11 @@
+<odoo>
+    <template id="noindex_nofollow" inherit_id="website.layout">
+        <xpath expr="//meta[@name='viewport']" position="before">
+            <meta
+                t-if="website and website.no_index"
+                name="robots"
+                content="noindex, nofollow"
+            />
+        </xpath>
+    </template>
+</odoo>
