@@ -21,10 +21,7 @@ class WebsiteAuthURL(models.Model):
         ),
     )
 
-    _sql_constraints = [
-        (
-            "path_unique",
-            "unique (website_id, path)",
-            "The path must be unique per website!",
-        )
-    ]
+    _path_uniq = models.Constraint(
+        "unique (website_id, path)",
+        "The path must be unique per website.",
+    )
