@@ -32,12 +32,6 @@
         "views/website_layout.xml",
         "views/website_navbar.xml",
     ],
-    "assets": {
-        "website.assets_editor": [
-            "website_noindex/static/src/css/styles.css",
-            "website_noindex/static/src/js/website_editor.js",
-        ],
-    },
     "installable": True,
     "application": False,
 }

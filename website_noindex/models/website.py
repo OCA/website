@@ -5,7 +5,8 @@ class Website(models.Model):
     _inherit = "website"
 
     no_index = fields.Boolean(
-        string="Disallow the site to appear in search engines like Google and Bing."
+        string="Do not index website",
+        help="Disallow the site to appear in search engines like Google and Bing.",
     )
 
 
@@ -15,5 +16,6 @@ class WebsiteConfigSettings(models.TransientModel):
     no_index = fields.Boolean(
         related="website_id.no_index",
         readonly=False,
-        string="Disallow the site to appear in search engines like Google and Bing.",
+        string="Do not index website",
+        help="Disallow the site to appear in search engines like Google and Bing.",
     )
