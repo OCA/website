@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <!-- Inherit Blog Post Form View -->
+    <record id="view_blog_post_form_usability" model="ir.ui.view">
+        <field name="name">blog.post.form.usability</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_form" />
+        <field name="arch" type="xml">
+            <!-- Add statistics section after publishing details -->
+            <group name="publishing_details" position="after">
+                <group name="statistics" string="Statistics">
+                    <field name="visits" widget="integer" />
+                    <field name="create_date" readonly="1" />
+                    <field name="write_date" readonly="1" />
+                </group>
+            </group>
+
+            <!-- Add content editing section with HTML/code toggle in notebook -->
+            <notebook position="inside">
+                <page name="content" string="Content">
+                    <group>
+                        <field
+                            name="content"
+                            widget="html"
+                            options="{'style-inline': true, 'codeview': true, 'dynamic_placeholder': true}"
+                            placeholder="Blog post content"
+                        />
+                    </group>
+                </page>
+            </notebook>
+
+            <!-- Enhance visits field visibility -->
+            <field name="visits" position="attributes">
+                <attribute name="widget">integer</attribute>
+                <attribute name="readonly">0</attribute>
+            </field>
+        </field>
+    </record>
+
+    <!-- Inherit Blog Post Tree View -->
+    <record id="view_blog_post_list_usability" model="ir.ui.view">
+        <field name="name">blog.post.list.usability</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_list" />
+        <field name="arch" type="xml">
+            <!-- Add visits column -->
+            <field name="author_id" position="after">
+                <field name="visits" optional="show" />
+            </field>
+
+            <!-- Add post_date column -->
+            <field name="blog_id" position="after">
+                <field name="post_date" optional="show" />
+            </field>
+
+            <!-- Add backend form button -->
+            <field name="website_id" position="after">
+                <button
+                    name="action_open_backend_form"
+                    type="object"
+                    icon="fa-bug"
+                    title="Open in Backend"
+                    class="oe_link"
+                />
+            </field>
+        </field>
+    </record>
+
+    <!-- Inherit Blog Post Search View -->
+    <record id="view_blog_post_search_usability" model="ir.ui.view">
+        <field name="name">blog.post.search.usability</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_search" />
+        <field name="arch" type="xml">
+            <!-- Add visit filters -->
+            <filter name="inactive" position="after">
+                <filter
+                    string="No Visits"
+                    name="no_visits"
+                    domain="[('visits', '=', 0)]"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <!-- Inherit Blog Post Kanban View -->
+    <record id="blog_post_view_kanban_usability" model="ir.ui.view">
+        <field name="name">blog.post.kanban.usability</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.blog_post_view_kanban" />
+        <field name="arch" type="xml">
+            <!-- Add visits field -->
+            <field name="post_date" position="after">
+                <field name="visits" />
+            </field>
+
+            <!-- Display visits in kanban card -->
+            <div class="col-8" position="after">
+                <div class="col-4 text-end">
+                    <i
+                        class="fa fa-eye me-1"
+                        role="img"
+                        aria-label="Visits"
+                        title="Visits"
+                    />
+                    <span t-esc="record.visits.value" />
+                </div>
+            </div>
+
+            <!-- Add backend form button in kanban card -->
+            <div class="d-flex border-top mt-2 pt-2" position="inside">
+                <button
+                    name="action_open_backend_form"
+                    type="object"
+                    icon="fa-bug"
+                    title="Open in Backend"
+                    class="btn btn-sm btn-link float-end"
+                />
+            </div>
+        </field>
+    </record>
+</odoo>
