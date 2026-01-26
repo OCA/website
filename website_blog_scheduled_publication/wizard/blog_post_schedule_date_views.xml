@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="blog_post_schedule_date_view_form" model="ir.ui.view">
+        <field name="name">blog.post.schedule.date.view.form</field>
+        <field name="model">blog.post.schedule.date</field>
+        <field name="arch" type="xml">
+            <form string="Schedule Publication">
+                <group>
+                    <group>
+                        <field
+                            name="schedule_date"
+                            string="Publish on"
+                            required="1"
+                            widget="datetime"
+                        />
+                    </group>
+                </group>
+                <footer>
+                    <button
+                        string="Schedule"
+                        name="action_schedule_date"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Discard" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="blog_post_schedule_date_action" model="ir.actions.act_window">
+        <field name="name">When do you want to publish this blog post?</field>
+        <field name="res_model">blog.post.schedule.date</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
