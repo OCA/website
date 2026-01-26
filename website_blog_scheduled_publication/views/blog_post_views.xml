@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_blog_post_form_scheduled" model="ir.ui.view">
+        <field name="name">blog.post.form.scheduled</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_form" />
+        <field name="arch" type="xml">
+            <form position="inside">
+                <field name="website_published" invisible="1" />
+                <field name="scheduled_publication_date" invisible="1" />
+                <field name="is_scheduled" invisible="1" />
+            </form>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    name="action_publish_now"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-globe"
+                    attrs="{'invisible': [('website_published', '=', True)]}"
+                    confirm="This will publish the blog post immediately. Do you still want to proceed ?"
+                >
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">Publish</span>
+                    </div>
+                </button>
+                <button
+                    name="action_schedule"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-calendar"
+                    attrs="{'invisible': [('website_published', '=', True)]}"
+                >
+                    <div class="o_stat_info">
+                        <span class="o_stat_text">Schedule</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//sheet" position="before">
+                <div
+                    class="alert alert-info text-center"
+                    role="alert"
+                    attrs="{'invisible': ['|', ('is_scheduled', '=', False), ('scheduled_publication_date', '=', False)]}"
+                >
+                    <div class="o_blog_post_scheduled">
+                        <strong>
+                            <span>This post is scheduled for </span>
+                            <field
+                                name="scheduled_publication_date"
+                                class="oe_inline"
+                                widget="datetime"
+                            />.
+                        </strong>
+                    </div>
+                </div>
+            </xpath>
+            <field name="post_date" position="after">
+                <field
+                    name="scheduled_publication_date"
+                    attrs="{'readonly': [('website_published', '=', True)]}"
+                    widget="datetime"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_blog_post_search_scheduled" model="ir.ui.view">
+        <field name="name">blog.post.search.scheduled</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_search" />
+        <field name="arch" type="xml">
+            <filter name="inactive" position="after">
+                <filter
+                    string="Published"
+                    name="published"
+                    domain="[('website_published', '=', True)]"
+                />
+                <filter
+                    string="Not Published"
+                    name="not_published"
+                    domain="[('website_published', '=', False)]"
+                />
+                <filter
+                    string="Scheduled"
+                    name="scheduled"
+                    domain="[('scheduled_publication_date', '!=', False)]"
+                />
+            </filter>
+            <filter name="last_contributor" position="after">
+                <filter
+                    string="Publication Date"
+                    name="group_by_publication_date"
+                    domain="[]"
+                    context="{'group_by': 'post_date:day'}"
+                />
+                <filter
+                    string="Scheduled Publication Date"
+                    name="group_by_scheduled_publication_date"
+                    domain="[]"
+                    context="{'group_by': 'scheduled_publication_date:day'}"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <record id="view_blog_post_calendar_scheduled" model="ir.ui.view">
+        <field name="name">blog.post.calendar.scheduled</field>
+        <field name="model">blog.post</field>
+        <field name="arch" type="xml">
+            <calendar
+                string="Scheduled Blog Posts"
+                date_start="scheduled_publication_date"
+                color="blog_id"
+                mode="month"
+            >
+                <field name="name" />
+                <field name="scheduled_publication_date" />
+                <field name="blog_id" />
+                <field name="website_published" />
+            </calendar>
+        </field>
+    </record>
+
+    <record id="action_blog_post_calendar_scheduled" model="ir.actions.act_window">
+        <field name="name">Scheduled Blog Posts</field>
+        <field name="res_model">blog.post</field>
+        <field name="view_mode">calendar,tree,form</field>
+        <field name="view_id" ref="view_blog_post_calendar_scheduled" />
+        <field name="domain">[('scheduled_publication_date', '!=', False)]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No scheduled posts found
+            </p>
+            <p>
+                Schedule blog posts to see them in the calendar view.
+            </p>
+        </field>
+    </record>
+</odoo>

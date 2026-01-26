@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_blog_post_scheduled_publication,blog.post.scheduled.publication,website_blog.model_blog_post,,1,1,1,1
+access_blog_post_schedule_date,blog.post.schedule.date,website_blog_scheduled_publication.model_blog_post_schedule_date,,1,1,1,1
