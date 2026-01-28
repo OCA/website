@@ -6,6 +6,8 @@ import json
 from odoo.tests import HttpCase
 from odoo.tools import mute_logger
 
+from odoo.addons.bus.controllers.main import BusController
+
 
 class TestIrHttp(HttpCase):
     def setUp(self):
@@ -69,4 +71,38 @@ class TestIrHttp(HttpCase):
                     }
                 ),
             )
+        self.assertEqual(response.status_code, 200)
+
+    def test_dispatch_no_website(self):
+        """If the request is not `website`, do not interfere."""
+        # Arrange
+        path = "/longpolling/poll"
+        routing = BusController().poll.routing
+        self.auth_url = self.env["website.auth.url"].create(
+            {
+                "website_id": self.website.id,
+                "path": path,
+            }
+        )
+        # pre-condition
+        self.assertFalse(routing.get("website"))
+        self.assertIn(path, routing.get("routes", dict()))
+
+        # Act
+        response = self.url_open(
+            path,
+            headers={
+                "Content-Type": "application/json",
+            },
+            data=json.dumps(
+                {
+                    "params": {
+                        "channels": ["Test channel"],
+                        "last": 0,
+                    },
+                }
+            ),
+        )
+
+        # Assert
         self.assertEqual(response.status_code, 200)

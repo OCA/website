@@ -8,6 +8,8 @@ from psycopg2 import InternalError
 from odoo import models
 from odoo.http import request
 
+from odoo.addons.website.models import ir_http
+
 
 class IrHttp(models.AbstractModel):
     _inherit = "ir.http"
@@ -16,6 +18,9 @@ class IrHttp(models.AbstractModel):
     def _dispatch(cls):
         res = super(IrHttp, cls)._dispatch()
         # if not website request - skip
+        if not ir_http.get_request_website():
+            return res
+
         website = request.env["website"].sudo().get_current_website()
         if not website:
             return res
