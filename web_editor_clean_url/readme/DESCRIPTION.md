@@ -1,0 +1,1 @@
+This module allows administrators to configure cleanup rules for links inserted by their users, as inexperienced people tend to just copy&paste whatever they find in their address bar, which might contain data you do not want to see published on your website, be it tracking tokens or session identifiers.

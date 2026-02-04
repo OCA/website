@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Hunki Enterprises BV
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<data>
+    <menuitem
+        sequence="200"
+        id="menu_config_root"
+        name="Clean URLs"
+        parent="website.menu_website_global_configuration"
+    />
+    <menuitem
+        id="menu_web_editor_clean_url_configuration"
+        action="action_web_editor_clean_url_configuration"
+        parent="menu_config_root"
+    />
+</data>

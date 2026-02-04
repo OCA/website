@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Hunki Enterprises BV
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<data>
+    <record id="config_fbclid" model="web.editor.clean.url.configuration">
+        <field name="remove_query_parameter">fbclid</field>
+    </record>
+</data>

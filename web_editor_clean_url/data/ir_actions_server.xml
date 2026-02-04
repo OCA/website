@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Hunki Enterprises BV
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<data>
+    <record id="action_apply" model="ir.actions.server">
+        <field name="name">Apply to all views</field>
+        <field name="model_id" ref="model_web_editor_clean_url_configuration" />
+        <field name="state">code</field>
+        <field name="code">records.apply_all()</field>
+        <field name="binding_model_id" ref="model_web_editor_clean_url_configuration" />
+        <field name="binding_type">action</field>
+    </record>
+</data>
