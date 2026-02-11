@@ -6,51 +6,57 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-02-11 07:52+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_user_login_redirect_custom
 #: model:ir.model,name:website_user_login_redirect_custom.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Impostazioni configurazione"
 
 #. module: website_user_login_redirect_custom
 #: model:ir.model.fields,field_description:website_user_login_redirect_custom.field_res_config_settings__website_login_redirect_url
 #: model_terms:ir.ui.view,arch_db:website_user_login_redirect_custom.view_website_login_redirect_settings
 msgid "Custom URL"
-msgstr ""
+msgstr "URL personalizzato"
 
 #. module: website_user_login_redirect_custom
 #. odoo-python
 #: code:addons/website_user_login_redirect_custom/models/res_config_settings.py:0
 msgid "Custom URL must be a valid relative path starting with '/'."
 msgstr ""
+"L'URL personalizzato deve essere un percorso relativo valido che inizia con'/"
+"'."
 
 #. module: website_user_login_redirect_custom
 #: model:ir.model.fields,help:website_user_login_redirect_custom.field_res_config_settings__website_login_redirect_enabled
 msgid ""
 "If checked, users will be redirected to a custom URL after login/signup."
 msgstr ""
+"Se selezionata, gli utenti verranno inoltrati ad un URL personalizzato dopo "
+"l'accesso."
 
 #. module: website_user_login_redirect_custom
 #: model:ir.model.fields,field_description:website_user_login_redirect_custom.field_res_config_settings__website_login_redirect_enabled
 msgid "On Login/Signup Redirect"
-msgstr ""
+msgstr "Inoltra all'accesso"
 
 #. module: website_user_login_redirect_custom
 #: model_terms:ir.ui.view,arch_db:website_user_login_redirect_custom.view_website_login_redirect_settings
 msgid "Redirect on Login/Signup"
-msgstr ""
+msgstr "Inoltro all'accesso"
 
 #. module: website_user_login_redirect_custom
 #: model_terms:ir.ui.view,arch_db:website_user_login_redirect_custom.view_website_login_redirect_settings
 msgid "Redirect users to a custom page after they log in or sign up."
-msgstr ""
+msgstr "Inoltra gli utenti su una pagina personalizzata dopo l'accesso."
 
 #. module: website_user_login_redirect_custom
 #: model:ir.model.fields,help:website_user_login_redirect_custom.field_res_config_settings__website_login_redirect_url
@@ -58,8 +64,10 @@ msgid ""
 "Relative URL path where users will be redirected after login/signup. "
 "Example: '/', '/shop', '/thank-you-for-joining-us'."
 msgstr ""
+"Percorso URL relativo dove verranno inoltrati gli utenti dopo l'accesso. "
+"Esempio: '/', '/negozio', '/grazie-per-esserti-unito'."
 
 #. module: website_user_login_redirect_custom
 #: model_terms:ir.ui.view,arch_db:website_user_login_redirect_custom.view_website_login_redirect_settings
 msgid "Relative path, e.g. <code>/shop</code> or <code>/welcome</code>."
-msgstr ""
+msgstr "Percorso relativo, es. <code>/negozio</code> o <code>/benvenuto</code>."
