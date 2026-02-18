@@ -1,0 +1,2 @@
+- Christopher Ormaza \<chris.ormaza@gmail.com\>
+- [OCA](https://odoo-community.org)

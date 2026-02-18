@@ -1,0 +1,10 @@
+[build-system]
+requires = ["whool"]
+build-backend = "whool.buildapi"
+
+[tool.whool]
+default-readme-rst-path = "README.rst"
+
+[project]
+name = "odoo-addon-website_whatsapp_dynamic_message"
+version = "17.0.1.0.0"

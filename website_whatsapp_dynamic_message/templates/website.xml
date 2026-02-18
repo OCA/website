@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Christopher Ormaza <chris.ormaza@gmail.com> -->
+<!-- License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template id="layout" inherit_id="website_whatsapp.layout" priority="100">
+        <!-- Replace the message generation logic to support product context -->
+        <xpath expr="//t[@t-set='extra_info']" position="replace">
+            <!-- Detect product context: check if product variable exists -->
+            <t t-set="current_product" t-value="product if product else None" />
+            <t t-set="extra_info" t-value="''" />
+        </xpath>
+
+        <!-- Replace the default message logic to pass product context -->
+        <xpath expr="//t[@t-if='website.whatsapp_text']" position="replace">
+            <t
+                t-if="website.whatsapp_text and not website.whatsapp_track_url"
+                t-set="extra_info"
+                t-value="website._get_dynamic_whatsapp_message(current_product)"
+            />
+        </xpath>
+
+        <!-- Replace the track URL logic to pass product context -->
+        <xpath expr="//t[@t-if='website.whatsapp_track_url']" position="replace">
+            <t
+                t-if="website.whatsapp_track_url"
+                t-set="extra_info"
+                t-value="website._get_track_url_message(request.httprequest.full_path, current_product)"
+            />
+        </xpath>
+    </template>
+</odoo>
