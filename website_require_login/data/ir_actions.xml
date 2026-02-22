@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
+    <!-- GHazallll
     <record id="action_website_auth_url" model="ir.actions.act_window">
         <field name="name">Authorization required URLs</field>
         <field name="res_model">website.auth.url</field>
