@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- ================================================================== -->
+    <!-- Portal + Checkout: replace name with firstname/lastname            -->
+    <!-- Inheriting portal.address_form_fields propagates to the            -->
+    <!-- website_sale.address_form_fields primary copy automatically.       -->
+    <!-- ================================================================== -->
+
+    <template
+        id="address_form_fields"
+        inherit_id="portal.address_form_fields"
+        name="First/Last Name in Address Form"
+        priority="110"
+    >
+        <div id="div_name" position="replace">
+            <div id="div_firstname" class="col-lg-6 mb-2">
+                <label class="col-form-label" for="o_firstname">First name</label>
+                <input
+                    id="o_firstname"
+                    type="text"
+                    name="firstname"
+                    t-att-value="partner_sudo.firstname"
+                    class="form-control"
+                />
+            </div>
+            <div id="div_lastname" class="col-lg-6 mb-2">
+                <label class="col-form-label" for="o_lastname">Last name</label>
+                <input
+                    id="o_lastname"
+                    type="text"
+                    name="lastname"
+                    t-att-value="partner_sudo.lastname"
+                    class="form-control"
+                />
+            </div>
+        </div>
+
+        <input name="required_fields" position="attributes">
+            <attribute name="t-att-value">'firstname,lastname,email'</attribute>
+        </input>
+    </template>
+</odoo>
