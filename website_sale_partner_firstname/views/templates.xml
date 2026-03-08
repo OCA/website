@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ================================================================== -->
+    <!-- Checkout: /shop/address                                            -->
+    <!-- ================================================================== -->
+
+    <template id="address"
+              inherit_id="website_sale.address"
+              name="First/Last Name at Checkout"
+              priority="110">
+
+        <!-- Replace is necessary: splitting one 'name' field into two separate fields -->
+        <div id="div_name" position="replace">
+            <div id="div_firstname" class="col-lg-6 mb-2">
+                <label class="col-form-label" for="o_firstname">First name</label>
+                <input id="o_firstname" type="text" name="firstname"
+                       t-att-value="partner_sudo.firstname" class="form-control"
+                       required="required"/>
+            </div>
+            <div id="div_lastname" class="col-lg-6 mb-2">
+                <label class="col-form-label" for="o_lastname">Last name</label>
+                <input id="o_lastname" type="text" name="lastname"
+                       t-att-value="partner_sudo.lastname" class="form-control"
+                       required="required"/>
+            </div>
+        </div>
+
+        <!-- Update hidden required_fields for JS required-styling -->
+        <input name="required_fields" position="attributes">
+            <attribute name="t-att-value">'firstname,lastname,country_id'</attribute>
+        </input>
+
+    </template>
+
+    <!-- ================================================================== -->
+    <!-- Portal: /my/account                                                -->
+    <!-- ================================================================== -->
+
+    <template id="portal_my_details_fields"
+              inherit_id="portal.portal_my_details_fields"
+              name="First/Last Name in Portal Details"
+              priority="110">
+
+        <!-- Replace is necessary: splitting one 'name' field into two separate fields -->
+        <xpath expr="//input[@name='name']/.." position="replace">
+            <div t-attf-class="mb-3 #{error.get('firstname') and 'o_has_error' or ''} col-xl-6">
+                <label class="col-form-label" for="firstname">First name</label>
+                <input type="text" name="firstname"
+                       t-attf-class="form-control #{error.get('firstname') and 'is-invalid' or ''}"
+                       t-att-value="firstname or partner.firstname"/>
+            </div>
+            <div t-attf-class="mb-3 #{error.get('lastname') and 'o_has_error' or ''} col-xl-6">
+                <label class="col-form-label" for="lastname">Last name</label>
+                <input type="text" name="lastname"
+                       t-attf-class="form-control #{error.get('lastname') and 'is-invalid' or ''}"
+                       t-att-value="lastname or partner.lastname"/>
+            </div>
+        </xpath>
+
+    </template>
+</odoo>
