@@ -5,6 +5,7 @@
     'author': "Aaron Ngu",
     'category': 'Website/Website',
     'version': '18.0.1.0.0',
+    'website': 'https://github.com/OCA/website',
     'license': 'AGPL-3',
     'images': [],
     'depends': ['website_sale', 'partner_firstname'],
