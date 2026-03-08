@@ -186,8 +186,10 @@ class TestShopCountryInfo(WebsiteSaleCommon):
                     "billing",
                 )
         self.assertEqual(
-            result["required_fields"].count("firstname"), 1,
+            result["required_fields"].count("firstname"),
+            1,
         )
         self.assertEqual(
-            result["required_fields"].count("lastname"), 1,
+            result["required_fields"].count("lastname"),
+            1,
         )
