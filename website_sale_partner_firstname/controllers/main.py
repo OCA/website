@@ -1,3 +1,5 @@
+from odoo.http import route
+
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 
 
@@ -47,6 +49,7 @@ class WebsiteSaleFirstLastName(WebsiteSale):
         mandatory_fields |= {"firstname", "lastname"}
         return mandatory_fields
 
+    @route()
     def shop_country_info(self, country, address_type, **kw):
         """Update the JS required-fields list for firstname/lastname."""
         result = super().shop_country_info(country, address_type, **kw)
