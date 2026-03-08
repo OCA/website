@@ -5,7 +5,7 @@
     "category": "Website/Website",
     "version": "19.0.1.0.0",
     "website": "https://github.com/OCA/website",
-    "license": "LGPL-3",
+    "license": "AGPL-3",
     "images": [],
     "depends": ["website_sale", "partner_firstname"],
     "data": [
