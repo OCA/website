@@ -1,3 +1,5 @@
+from unittest.mock import patch
+
 from odoo.tests import tagged
 
 from odoo.addons.website.tools import MockRequest
@@ -81,6 +83,16 @@ class TestDetailsFormValidate(WebsiteSaleCommon):
             error, error_message = self.controller.details_form_validate(data)
         self.assertEqual(error.get("lastname"), "missing")
 
+    def test_missing_name_fields_no_error(self):
+        """When firstname/lastname are absent from data, no strip occurs."""
+        data = self._base_data()
+        del data["firstname"]
+        del data["lastname"]
+        data["name"] = "John Doe"
+        with MockRequest(self.env, website=self.website):
+            error, error_message = self.controller.details_form_validate(data)
+        self.assertNotIn("firstname", data)
+
     def test_valid_names_pass_validation(self):
         """Normal firstname/lastname values should not produce errors."""
         data = self._base_data()
@@ -143,3 +155,39 @@ class TestShopCountryInfo(WebsiteSaleCommon):
             )
         self.assertIn("firstname", result["required_fields"])
         self.assertIn("lastname", result["required_fields"])
+
+    def test_no_required_fields_key(self):
+        """When parent returns no required_fields, no error occurs."""
+        with MockRequest(self.env, website=self.website):
+            parent_method = (
+                "odoo.addons.website_sale.controllers.main"
+                ".WebsiteSale.shop_country_info"
+            )
+            with patch(parent_method, return_value={"states": []}):
+                result = self.controller.shop_country_info(
+                    self.country_us,
+                    "billing",
+                )
+        self.assertNotIn("required_fields", result)
+
+    def test_fields_not_duplicated_when_already_present(self):
+        """When parent already includes firstname/lastname, skip append."""
+        parent_result = {
+            "required_fields": ["firstname", "lastname", "country_id"],
+        }
+        with MockRequest(self.env, website=self.website):
+            parent_method = (
+                "odoo.addons.website_sale.controllers.main"
+                ".WebsiteSale.shop_country_info"
+            )
+            with patch(parent_method, return_value=parent_result):
+                result = self.controller.shop_country_info(
+                    self.country_us,
+                    "billing",
+                )
+        self.assertEqual(
+            result["required_fields"].count("firstname"), 1,
+        )
+        self.assertEqual(
+            result["required_fields"].count("lastname"), 1,
+        )
