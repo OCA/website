@@ -369,12 +369,13 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:af3a26574c6f70e54f7e2131a4c5c429db1d6619b81eb4724517a212f0e0a7af
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/lgpl-3.0-standalone.html"><img alt="License: LGPL-3" src="https://img.shields.io/badge/licence-LGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/website/tree/16.0/website_snippet_country_phone_code_dropdown"><img alt="OCA/website" src="https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/website-16-0/website-16-0-website_snippet_country_phone_code_dropdown"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/website&amp;target_branch=16.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
-<p>This module enhances the features of the <cite>website_snippet_country_dropdown</cite>
-module, and its implementation and functionality are very similar. It offers a
-snippet with a dropdown for selecting a country as well as an input text field
-that auto-populates with the corresponding phone code. This module is intended
-to serve as a base for other modules to inherit and integrate into HTML forms.</p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/lgpl-3.0-standalone.html"><img alt="License: LGPL-3" src="https://img.shields.io/badge/licence-LGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/website/tree/18.0/website_snippet_country_phone_code_dropdown"><img alt="OCA/website" src="https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/website-18-0/website-18-0-website_snippet_country_phone_code_dropdown"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/website&amp;target_branch=18.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
+<p>This module enhances the features of the
+website_snippet_country_dropdown module, and its implementation and
+functionality are very similar. It offers a snippet with a dropdown for
+selecting a country as well as an input text field that auto-populates
+with the corresponding phone code. This module is intended to serve as a
+base for other modules to inherit and integrate into HTML forms.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -393,27 +394,29 @@ to serve as a base for other modules to inherit and integrate into HTML forms.</
 </div>
 <div class="section" id="usage">
 <h1><a class="toc-backref" href="#toc-entry-1">Usage</a></h1>
-<p>To extend this template, you should inherit the <cite>country_dropdown</cite> template and
-add your custom code. This template includes three input text fields, which are
-the following:</p>
+<p>To extend this template, you should inherit the country_dropdown
+template and add your custom code. This template includes three input
+text fields, which are the following:</p>
 <ol class="arabic simple">
 <li><tt class="docutils literal">no_country_field</tt>: Field without code country.</li>
-<li><tt class="docutils literal">country_phone_code_field</tt>: Field with only country code (read only)</li>
+<li><tt class="docutils literal">country_phone_code_field</tt>: Field with only country code (read
+only)</li>
 <li><tt class="docutils literal">complete_field</tt>: Field with the previous two joined (hidden)</li>
 </ol>
-<p>The name of the complete field is customizable when user insert the snippet
-into a form element with the website editor.</p>
+<p>The name of the complete field is customizable when user insert the
+snippet into a form element with the website editor.</p>
 <div class="section" id="development">
 <h2><a class="toc-backref" href="#toc-entry-2">Development</a></h2>
 <p>In order to use this element, you can call the reusable Qweb template
-<cite>website_snippet_country_phone_code_dropdown.country_dropdown</cite> in your views or
-forms to add a sensible country-combined field, which could be a useful element
-for the registration of international phone numbers.</p>
+website_snippet_country_phone_code_dropdown.country_dropdown in your
+views or forms to add a sensible country-combined field, which could be
+a useful element for the registration of international phone numbers.</p>
 <p><strong>Default Country Selection</strong></p>
 <p>The default country will be determined by the first match among:</p>
 <ol class="arabic simple">
-<li>Extracted from the <cite>default_country</cite> variable.</li>
-<li>Extracted from the <cite>default_value_prefix</cite> variable, searching by phone code.</li>
+<li>Extracted from the default_country variable.</li>
+<li>Extracted from the default_value_prefix variable, searching by phone
+code.</li>
 <li>The current user’s country.</li>
 <li>The current website’s company’s country.</li>
 <li>The first country in the list.</li>
@@ -421,15 +424,18 @@ for the registration of international phone numbers.</p>
 <p><strong>Variables</strong></p>
 <p>All variables you can use to modify its behavior:</p>
 <ol class="arabic simple">
-<li><tt class="docutils literal">complete_field</tt>: To give the form information a name. Habitually it will
-match the field name.</li>
-<li><tt class="docutils literal">default_value_prefix</tt>: The phone prefix to be used in the complete_field.</li>
-<li><tt class="docutils literal">default_value_number</tt>: The phone number to be used in the complete_field.</li>
-<li><tt class="docutils literal">countries</tt>: A recordset of res.country containing all the available
-countries.</li>
-<li><tt class="docutils literal">default_country</tt>: A res.country record representing the default country.</li>
-<li><tt class="docutils literal">no_country_placeholder</tt>: A placeholder text for the phone number input
-field.</li>
+<li><tt class="docutils literal">complete_field</tt>: To give the form information a name. Habitually
+it will match the field name.</li>
+<li><tt class="docutils literal">default_value_prefix</tt>: The phone prefix to be used in the
+complete_field.</li>
+<li><tt class="docutils literal">default_value_number</tt>: The phone number to be used in the
+complete_field.</li>
+<li><tt class="docutils literal">countries</tt>: A recordset of res.country containing all the
+available countries.</li>
+<li><tt class="docutils literal">default_country</tt>: A res.country record representing the default
+country.</li>
+<li><tt class="docutils literal">no_country_placeholder</tt>: A placeholder text for the phone number
+input field.</li>
 </ol>
 </div>
 </div>
@@ -438,7 +444,7 @@ field.</li>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/website/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/OCA/website/issues/new?body=module:%20website_snippet_country_phone_code_dropdown%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/OCA/website/issues/new?body=module:%20website_snippet_country_phone_code_dropdown%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -464,7 +470,7 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <p>OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.</p>
-<p>This module is part of the <a class="reference external" href="https://github.com/OCA/website/tree/16.0/website_snippet_country_phone_code_dropdown">OCA/website</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/OCA/website/tree/18.0/website_snippet_country_phone_code_dropdown">OCA/website</a> project on GitHub.</p>
 <p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
 </div>
 </div>

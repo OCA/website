@@ -17,22 +17,23 @@ Website Snippet Country Phone Code Dropdown
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github
-    :target: https://github.com/OCA/website/tree/16.0/website_snippet_country_phone_code_dropdown
+    :target: https://github.com/OCA/website/tree/18.0/website_snippet_country_phone_code_dropdown
     :alt: OCA/website
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/website-16-0/website-16-0-website_snippet_country_phone_code_dropdown
+    :target: https://translation.odoo-community.org/projects/website-18-0/website-18-0-website_snippet_country_phone_code_dropdown
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=18.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module enhances the features of the `website_snippet_country_dropdown`
-module, and its implementation and functionality are very similar. It offers a
-snippet with a dropdown for selecting a country as well as an input text field
-that auto-populates with the corresponding phone code. This module is intended
-to serve as a base for other modules to inherit and integrate into HTML forms.
+This module enhances the features of the
+website_snippet_country_dropdown module, and its implementation and
+functionality are very similar. It offers a snippet with a dropdown for
+selecting a country as well as an input text field that auto-populates
+with the corresponding phone code. This module is intended to serve as a
+base for other modules to inherit and integrate into HTML forms.
 
 **Table of contents**
 
@@ -42,48 +43,53 @@ to serve as a base for other modules to inherit and integrate into HTML forms.
 Usage
 =====
 
-To extend this template, you should inherit the `country_dropdown` template and
-add your custom code. This template includes three input text fields, which are
-the following:
+To extend this template, you should inherit the country_dropdown
+template and add your custom code. This template includes three input
+text fields, which are the following:
 
-#. ``no_country_field``: Field without code country.
-#. ``country_phone_code_field``: Field with only country code (read only)
-#. ``complete_field``: Field with the previous two joined (hidden)
+1. ``no_country_field``: Field without code country.
+2. ``country_phone_code_field``: Field with only country code (read
+   only)
+3. ``complete_field``: Field with the previous two joined (hidden)
 
-The name of the complete field is customizable when user insert the snippet
-into a form element with the website editor.
+The name of the complete field is customizable when user insert the
+snippet into a form element with the website editor.
 
 Development
-~~~~~~~~~~~
+-----------
 
 In order to use this element, you can call the reusable Qweb template
-`website_snippet_country_phone_code_dropdown.country_dropdown` in your views or
-forms to add a sensible country-combined field, which could be a useful element
-for the registration of international phone numbers.
+website_snippet_country_phone_code_dropdown.country_dropdown in your
+views or forms to add a sensible country-combined field, which could be
+a useful element for the registration of international phone numbers.
 
 **Default Country Selection**
 
 The default country will be determined by the first match among:
 
-#. Extracted from the `default_country` variable.
-#. Extracted from the `default_value_prefix` variable, searching by phone code.
-#. The current user's country.
-#. The current website's company's country.
-#. The first country in the list.
+1. Extracted from the default_country variable.
+2. Extracted from the default_value_prefix variable, searching by phone
+   code.
+3. The current user's country.
+4. The current website's company's country.
+5. The first country in the list.
 
 **Variables**
 
 All variables you can use to modify its behavior:
 
-#. ``complete_field``: To give the form information a name. Habitually it will
-   match the field name.
-#. ``default_value_prefix``: The phone prefix to be used in the complete_field.
-#. ``default_value_number``: The phone number to be used in the complete_field.
-#. ``countries``: A recordset of res.country containing all the available
-   countries.
-#. ``default_country``: A res.country record representing the default country.
-#. ``no_country_placeholder``: A placeholder text for the phone number input
-   field.
+1. ``complete_field``: To give the form information a name. Habitually
+   it will match the field name.
+2. ``default_value_prefix``: The phone prefix to be used in the
+   complete_field.
+3. ``default_value_number``: The phone number to be used in the
+   complete_field.
+4. ``countries``: A recordset of res.country containing all the
+   available countries.
+5. ``default_country``: A res.country record representing the default
+   country.
+6. ``no_country_placeholder``: A placeholder text for the phone number
+   input field.
 
 Bug Tracker
 ===========
@@ -91,7 +97,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/website/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_snippet_country_phone_code_dropdown%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_snippet_country_phone_code_dropdown%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -99,17 +105,17 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * ForgeFlow
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Laura Cazorla <laura.cazorla@forgeflow.com>
+-  Laura Cazorla <laura.cazorla@forgeflow.com>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -121,6 +127,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/website <https://github.com/OCA/website/tree/16.0/website_snippet_country_phone_code_dropdown>`_ project on GitHub.
+This module is part of the `OCA/website <https://github.com/OCA/website/tree/18.0/website_snippet_country_phone_code_dropdown>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
