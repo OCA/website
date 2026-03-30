@@ -17,15 +17,6 @@ msgstr ""
 "X-Generator: Weblate 5.10.4\n"
 
 #. module: website_whatsapp
-#: model_terms:ir.ui.view,arch_db:website_whatsapp.res_config_settings_view_form
-msgid ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
-msgstr ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
-
-#. module: website_whatsapp
 #: model:ir.model,name:website_whatsapp.model_res_config_settings
 msgid "Config Settings"
 msgstr "Ajustes de Config"
@@ -62,6 +53,11 @@ msgid "Use Whatsapp"
 msgstr "Utilizar Whatsapp"
 
 #. module: website_whatsapp
+#: model_terms:ir.ui.view,arch_db:website_whatsapp.res_config_settings_view_form
+msgid "Values set here are website-specific."
+msgstr ""
+
+#. module: website_whatsapp
 #: model:ir.model,name:website_whatsapp.model_website
 msgid "Website"
 msgstr "Sitio Web"
@@ -81,3 +77,10 @@ msgstr "Número de WhatsApp"
 #: model_terms:ir.ui.view,arch_db:website_whatsapp.res_config_settings_view_form
 msgid "You must add the mobile number with the country prefix"
 msgstr "Debes añadir el número de móvil con el prefijo del país"
+
+#~ msgid ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+#~ "specific.\" groups=\"website.group_multi_website\"/>"
+#~ msgstr ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+#~ "specific.\" groups=\"website.group_multi_website\"/>"
