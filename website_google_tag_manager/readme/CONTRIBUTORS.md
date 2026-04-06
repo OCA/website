@@ -1,0 +1,6 @@
+- [Sebastien Alix](sebastien.alix@osiell.com)
+- [Tecnativa](https://www.tecnativa.com):
+  - Cristina Martin R.
+- Bjorn Billen \<<bjorn.billen@dynapps.be>\>
+- Foram Shah \<<foram.shah@initos.com>\>
+- Tangaraj Archunan \<<tangaraj.art@gmail.com>\>
