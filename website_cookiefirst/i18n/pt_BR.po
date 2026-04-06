@@ -16,11 +16,6 @@ msgstr ""
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
-msgid "00000000-0000-0000-0000-000000000000"
-msgstr ""
-
-#. module: website_cookiefirst
-#: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
 msgid "Add Cookiefirst functionality"
 msgstr ""
 
