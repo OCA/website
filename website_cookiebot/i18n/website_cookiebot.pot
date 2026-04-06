@@ -15,11 +15,6 @@ msgstr ""
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
-msgid "00000000-0000-0000-0000-000000000000"
-msgstr ""
-
-#. module: website_cookiebot
-#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid ""
 "<i class=\"o_button_icon oi oi-fw oi-arrow-right me-1\"/>\n"
 "                                How to configure Cookiebot"
