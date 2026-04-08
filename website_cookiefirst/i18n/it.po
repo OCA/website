@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-12-27 17:44+0000\n"
+"PO-Revision-Date: 2026-04-08 13:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
@@ -46,13 +46,13 @@ msgstr "Politica dei cookie"
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:website_cookiefirst.field_website__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__id
 #: model:ir.model.fields,field_description:website_cookiefirst.field_website__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,help:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
