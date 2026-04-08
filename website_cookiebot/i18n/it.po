@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-11-14 15:36+0000\n"
+"PO-Revision-Date: 2026-04-08 12:45+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
@@ -22,6 +22,8 @@ msgid ""
 "<i class=\"o_button_icon oi oi-fw oi-arrow-right me-1\"/>\n"
 "                                How to configure Cookiebot"
 msgstr ""
+"<i class=\"o_button_icon oi oi-fw oi-arrow-right me-1\"/>\n"
+"                                Come configurare Cookiebot"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
@@ -51,7 +53,7 @@ msgstr "ID gruppo dominio cookiebot"
 #. module: website_cookiebot
 #: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_enabled
 msgid "Cookiebot Enabled"
-msgstr ""
+msgstr "Cookiebot abilitato"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.layout_footer_copyright
@@ -73,6 +75,7 @@ msgstr "Ricavare questo codice dal cookiebot per abilitarlo nel sito web."
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid "Instead of step 3, paste your Domain Group ID below:"
 msgstr ""
+"Invece del passo 3, incollate qui sotto il vostro ID del gruppo dominio:"
 
 #. module: website_cookiebot
 #: model:ir.model,name:website_cookiebot.model_website
