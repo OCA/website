@@ -1,12 +1,3 @@
-[ This file is not always required; it should explain **how to configure the module
-before using it**; it is aimed at users with administration privileges.
+This module allows to use a Captcha System completly handled by Odoo.
 
-Please be detailed on the path to configuration (eg: do you need to activate developer
-mode?), describe step by step configurations and the use of screenshots is strongly
-recommended.]
-
-To configure this module, you need to:
-
-- Go to _App_ > Menu > Menu item
-- Activate boolean… > save
-- …
+It relies on Altcha (https://altcha.org), an OpenSource captcha alternative.

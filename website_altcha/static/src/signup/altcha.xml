@@ -8,10 +8,7 @@
                     style="width: 200px;"
                 />
                 <div class="col-sm">
-                    <altcha-widget
-                        class="pb-2 o_altcha_widget"
-                        challengeurl="/altcha"
-                    />
+                    <altcha-widget class="pb-2 o_altcha_widget" challenge="/altcha" />
                 </div>
             </div>
         </div>

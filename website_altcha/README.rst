@@ -1,5 +1,5 @@
 ========================
-Website Friendly Captcha
+Privacy Friendly Captcha
 ========================
 
 .. 
@@ -28,24 +28,60 @@ Website Friendly Captcha
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-[ This file is not always required; it should explain **how to configure
-the module before using it**; it is aimed at users with administration
-privileges.
+This module allows to use a Captcha System completly handled by Odoo.
 
-Please be detailed on the path to configuration (eg: do you need to
-activate developer mode?), describe step by step configurations and the
-use of screenshots is strongly recommended.]
-
-To configure this module, you need to:
-
-- Go to *App* > Menu > Menu item
-- Activate boolean… > save
-- …
+It relies on Altcha (https://altcha.org), an OpenSource captcha
+alternative.
 
 **Table of contents**
 
 .. contents::
    :local:
+
+Use Cases / Context
+===================
+
+Currently, Odoo provides 2 options:
+
+- Google Recaptcha relies on tracking of the user. It implies cookies
+- Cloudfare Turnstile relies on signals of the browser so it is less
+  GDPR problematic. However, it relies on a third party infrastructure.
+  The decision is made from a probabilistic perspective (likely a human)
+
+With this new module, everything relies on our own system with no
+cookies, no tracking and no network calls.
+
+The way to solve it is to add a deterministic puzzle to solve. Bots need
+to spend more CPU, making it costly at scale.
+
+Configuration
+=============
+
+Go to Configuration/Website, check "Enable Altcha" under "Privacy". Some
+extra parameters will appear with all the ALTCHA information. This
+parameters are website dependent.
+
+- ``altcha_key``: This key is made to create the challenge and review it
+  later
+
+Also, the system adds the option to use some extra parameters:
+
+- ``altcha_secret_key``: Key used to use deterministic mode. Using it
+  will make it faster from a server perspective.
+- ``altcha_algorithm``: Algorithm used, by default ``PBKDF2/SHA-512``,
+  however, we can use:
+
+  - Fast ones only for testing purposes: ``SHA-256``, ``SHA-384``,
+    ``SHA-512``
+  - Good by default: ``PBKDF2/SHA-256``, ``PBKDF2/SHA-384``,
+    ``PBKDF2/SHA-512``
+  - Memory Hard: ``SCRYPT``. To be implemented
+  - Memory Hard (it required argon2-cffi): ``ARGON2ID``. To be
+    implemented
+
+- ``altcha_timeout``: Number of minutes that we will trust the key, by
+  default 5
+- ``altcha_cost``: Cost of the challenge. By default, 5000
 
 Bug Tracker
 ===========
@@ -64,6 +100,14 @@ Authors
 -------
 
 * Dixmit
+
+Contributors
+------------
+
+- `Dixmit <https://www.dixmit.com>`__
+
+  - Enric Tobella
+  - Luís David Rodríguez
 
 Maintainers
 -----------
