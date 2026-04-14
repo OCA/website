@@ -14,12 +14,10 @@ export const AltchaFunctionality = {
         return this._super(...arguments);
     },
     start: function () {
-        if (this._altcha._publicKey && !this.$el.find(".altcha-widget").length) {
+        if (this._altcha._publicKey && !this.$el.find(".o_altcha_widget").length) {
             this.$el
                 .find("div.oe_login_buttons")
-                .prepend(
-                    '<altcha-widget class="pb-2 o_altcha_widget" challengeurl="/altcha"></altcha-widget>'
-                );
+                .prepend(renderToString("website_altcha.AltchaWidget", {}));
         }
         return this._super(...arguments);
     },
@@ -28,13 +26,11 @@ export const AltchaFunctionality = {
 publicWidget.registry.SignupAltcha = publicWidget.Widget.extend({
     ...AltchaFunctionality,
     selector: ".oe_signup_form",
-    tokenName: "signup",
 });
 
 publicWidget.registry.ResetPasswordAltcha = publicWidget.Widget.extend({
     ...AltchaFunctionality,
     selector: ".oe_reset_password_form",
-    tokenName: "password_reset",
 });
 
 publicWidget.registry.s_website_form.include({
@@ -60,6 +56,17 @@ publicWidget.registry.s_website_form.include({
             this.$el
                 .find(".s_website_form_submit")
                 .before(renderToString("website_altcha.AltchaWidget", {}));
+        }
+        return res;
+    },
+});
+publicWidget.registry.EditModeWebsiteForm.include({
+    start: function () {
+        const res = this._super(...arguments);
+        if (this.editableMode) {
+            // We should delete the altcha widget in edit mode
+            this.$el.find(".o_altcha_widget").remove();
+            this.$el.find(".o_altcha_widget_container").remove();
         }
         return res;
     },
