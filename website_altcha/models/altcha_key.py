@@ -6,7 +6,7 @@ from odoo import api, fields, models
 
 class AltchaKey(models.Model):
     _name = "altcha.key"
-    _description = "Altcha Key"  # TODO
+    _description = "Altcha Key"
 
     key = fields.Char(required=True)
     expires_at = fields.Datetime(required=True)
