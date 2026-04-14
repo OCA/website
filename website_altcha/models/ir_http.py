@@ -7,7 +7,7 @@ import hmac
 import json
 import logging
 
-import altcha.v1 as altcha
+import altcha.v2 as altcha
 
 from odoo import _, api, models
 from odoo.exceptions import UserError
@@ -19,10 +19,6 @@ _logger = logging.getLogger(__name__)
 class IrHttp(models.AbstractModel):
     _inherit = "ir.http"
 
-    def session_info(self):
-        session_info = super().session_info()
-        return self._add_altcha_public_key_to_session_info(session_info)
-
     @api.model
     def get_frontend_session_info(self):
         frontend_session_info = super().get_frontend_session_info()
@@ -31,9 +27,7 @@ class IrHttp(models.AbstractModel):
     @api.model
     def _add_altcha_public_key_to_session_info(self, session_info):
         """Add the Altcha public key to the given session_info object"""
-        session_info["altcha_public_key"] = bool(
-            self.env["ir.config_parameter"].sudo().get_param("altcha.key")
-        )
+        session_info["altcha_public_key"] = bool(request.website.sudo().altcha_key)
         return session_info
 
     @api.model
@@ -49,20 +43,35 @@ class IrHttp(models.AbstractModel):
         result = super()._verify_request_recaptcha_token(action)
         if not result:
             return result
+        if not request.website.sudo().altcha_key:
+            return result
         altcha_signature = request.params.get("altcha")
         if not altcha_signature:
             _logger.warning("Altcha token missing in request")
             raise UserError(_("Suspicious activity detected by Altcha"))
-        altcha_request = json.loads(base64.b64decode(altcha_signature))
-        is_valid, error = altcha.verify_solution(
-            altcha_request,
-            self.env["ir.config_parameter"].sudo().get_param("altcha.key"),
-            True,
+        result = altcha.verify_solution(
+            altcha_signature,
+            hmac_secret=request.website.sudo().altcha_key,
+            hmac_key_secret=request.website.sudo().altcha_private_key,
         )
+        is_valid = result.verified
         if not is_valid:
-            _logger.warning("Altcha verification failed: %s", error)
+            error = []
+            if result.invalid_signature:
+                error.append("Invalid Signature")
+            if result.invalid_solution:
+                error.append("Invalid Solution")
+            if result.expired:
+                error.append("Expired")
+            if result.error:
+                error.append(result.error)
+            _logger.warning(
+                """Altcha verification failed: %s""",
+                ", ".join(error),
+            )
             raise UserError(_("Suspicious activity detected by Altcha"))
-        unique_id = self._get_altcha_key(altcha_request["signature"])
+        altcha_request = json.loads(base64.b64decode(altcha_signature))
+        unique_id = self._get_altcha_key(altcha_request["challenge"]["signature"])
         record = (
             self.env["altcha.key"]
             .sudo()
