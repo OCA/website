@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">website.exclude.sitemap.res.config.settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='robots_setting']" position="after">
+                <setting
+                    id="website_sitemap_exclusions_setting"
+                    string="Sitemap Exclusions"
+                    help="Exclude specific URLs or wildcard patterns from sitemap.xml."
+                >
+                    <div class="content-group">
+                        <div class="text-muted">
+                            Separate paths with line breaks, commas, or semicolons.
+                            Use * for wildcard matches.
+                        </div>
+                        <div class="mt16">
+                            <field name="sitemap_excluded_paths" widget="text" />
+                        </div>
+                        <div class="mt16">
+                            <button
+                                name="action_reload_sitemap"
+                                type="object"
+                                string="Reload Sitemap"
+                                class="btn-secondary"
+                            />
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
