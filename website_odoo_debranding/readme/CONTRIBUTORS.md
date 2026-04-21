@@ -7,3 +7,5 @@
 - [Tecnativa](https://www.tecnativa.com):
   - Alexandre Diaz
 - Nils Coenen \<<nils.coenen@nico-solutions.de>\>
+- [OERP Canada](https://oerp.ca):
+  - Foram Darji \<<fd@oerp.ca>\>
