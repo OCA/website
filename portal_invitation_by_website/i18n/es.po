@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* portal_invitation_by_website
+#
+# Translators:
+# Cristina Hidalgo <cristina.hidalgo@tecnativa.com>, 2026
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-12 15:01+0000\n"
+"PO-Revision-Date: 2026-05-12 15:01+0000\n"
+"Last-Translator: Cristina Hidalgo <cristina.hidalgo@tecnativa.com>\n"
+"Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: portal_invitation_by_website
+#: model_terms:ir.ui.view,arch_db:portal_invitation_by_website.portal_wizard_view_website
+msgid "Apply Website"
+msgstr "Aplicar sitio web"
+
+#. module: portal_invitation_by_website
+#: model:ir.model.fields,help:portal_invitation_by_website.field_portal_wizard__website_id
+msgid ""
+"Apply this website to all contacts below. The invitation email URL will "
+"match this website's domain. Leave empty to keep each contact's current "
+"website."
+msgstr ""
+"Aplica este sitio web a todos los contactos de abajo. La URL del correo de "
+"invitación usará el dominio de este sitio web. Déjalo vacío para mantener "
+"el sitio web actual de cada contacto."
+
+#. module: portal_invitation_by_website
+#: model:ir.model,name:portal_invitation_by_website.model_portal_wizard
+msgid "Grant Portal Access"
+msgstr "Conceder acceso al portal"
+
+#. module: portal_invitation_by_website
+#: model:ir.model,name:portal_invitation_by_website.model_portal_wizard_user
+msgid "Portal User Config"
+msgstr "Configuración de usuario del portal"
+
+#. module: portal_invitation_by_website
+#: model:ir.model.fields,field_description:portal_invitation_by_website.field_portal_wizard__website_id
+#: model:ir.model.fields,field_description:portal_invitation_by_website.field_portal_wizard_user__website_id
+msgid "Website"
+msgstr "Sitio web"
