@@ -16,6 +16,8 @@
                             id="website_form_terms_and_conditions_input"
                             type="checkbox"
                             required="1"
+                            name="Accept_terms"
+                            value="accepted"
                             class="s_website_form_input form-check-input"
                         />
                         <span class="form-check-label">
