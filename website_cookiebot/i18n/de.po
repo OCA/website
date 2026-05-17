@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: 2023-01-28 17:44+0000\n"
-"Last-Translator: Nils Coenen | NICO SOLUTIONS - ENGINEERING & IT <nils."
-"coenen@nico-solutions.de>\n"
+"Last-Translator: Nils Coenen | NICO SOLUTIONS - ENGINEERING & IT "
+"<nils.coenen@nico-solutions.de>\n"
 "Language-Team: none\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -19,39 +19,19 @@ msgstr ""
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
-msgid "00000000-0000-0000-0000-000000000000"
-msgstr ""
-
-#. module: website_cookiebot
-#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
-"                                    How to configure Cookiebot."
+"                                How to configure Cookiebot."
 msgstr ""
-"<i class=\"fa fa-arrow-right\"/>\n"
-"                                    So konfigurieren Sie Cookiebot."
-
-#. module: website_cookiebot
-#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
-msgid ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
-msgstr ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Die hier eingestellten Werte sind "
-"websitespezifisch.\" groups=\"website.group_multi_website\"/>"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid ""
 "<span class=\"text-muted\">\n"
-"                                    Instead of step 3, paste here your "
-"Domain Group ID.\n"
-"                                </span>"
+"                                Instead of step 3, paste here your Domain "
+"Group ID.\n"
+"                            </span>"
 msgstr ""
-"<span class=\"text-muted\">\n"
-"                                    Anstelle von Schritt 3 fügen Sie hier "
-"Ihre Domänengruppen-ID ein.\n"
-"                                </span>"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
@@ -79,6 +59,11 @@ msgid "Cookiebot Domain Group ID"
 msgstr "Cookiebot Domänengruppen-ID"
 
 #. module: website_cookiebot
+#: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_enabled
+msgid "Cookiebot Enabled"
+msgstr ""
+
+#. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.layout_footer_copyright
 msgid "Cookies Policy"
 msgstr "Cookie-Richtlinie"
@@ -97,6 +82,36 @@ msgstr ""
 "aktivieren."
 
 #. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid "Values set here are website-specific."
+msgstr ""
+
+#. module: website_cookiebot
 #: model:ir.model,name:website_cookiebot.model_website
 msgid "Website"
 msgstr "Webseite"
+
+#~ msgid ""
+#~ "<i class=\"fa fa-arrow-right\"/>\n"
+#~ "                                    How to configure Cookiebot."
+#~ msgstr ""
+#~ "<i class=\"fa fa-arrow-right\"/>\n"
+#~ "                                    So konfigurieren Sie Cookiebot."
+
+#~ msgid ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+#~ "specific.\" groups=\"website.group_multi_website\"/>"
+#~ msgstr ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Die hier eingestellten Werte "
+#~ "sind websitespezifisch.\" groups=\"website.group_multi_website\"/>"
+
+#~ msgid ""
+#~ "<span class=\"text-muted\">\n"
+#~ "                                    Instead of step 3, paste here your "
+#~ "Domain Group ID.\n"
+#~ "                                </span>"
+#~ msgstr ""
+#~ "<span class=\"text-muted\">\n"
+#~ "                                    Anstelle von Schritt 3 fügen Sie hier "
+#~ "Ihre Domänengruppen-ID ein.\n"
+#~ "                                </span>"
