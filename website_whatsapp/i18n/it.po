@@ -17,15 +17,6 @@ msgstr ""
 "X-Generator: Weblate 5.6.2\n"
 
 #. module: website_whatsapp
-#: model_terms:ir.ui.view,arch_db:website_whatsapp.res_config_settings_view_form
-msgid ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
-msgstr ""
-"<span class=\"fa fa-lg fa-globe\" title=\"I valori impostati qui sono "
-"specifici per sito web.\" groups=\"website.group_multi_website\"/>"
-
-#. module: website_whatsapp
 #: model:ir.model,name:website_whatsapp.model_res_config_settings
 msgid "Config Settings"
 msgstr "Impostazioni configurazione"
@@ -51,6 +42,13 @@ msgstr ""
 "Indicare nel messaggio utente l'URL della pagina da cui è stato inviato"
 
 #. module: website_whatsapp
+#. odoo-python
+#: code:addons/website_whatsapp/models/website.py:0
+#, python-format
+msgid "Sent from:"
+msgstr ""
+
+#. module: website_whatsapp
 #: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_track_url
 #: model:ir.model.fields,field_description:website_whatsapp.field_website__whatsapp_track_url
 msgid "Track URL"
@@ -60,6 +58,11 @@ msgstr "Traccia URL"
 #: model:ir.model.fields,field_description:website_whatsapp.field_res_config_settings__whatsapp_enabled
 msgid "Use Whatsapp"
 msgstr "Utilizza Whatsapp"
+
+#. module: website_whatsapp
+#: model_terms:ir.ui.view,arch_db:website_whatsapp.res_config_settings_view_form
+msgid "Values set here are website-specific."
+msgstr ""
 
 #. module: website_whatsapp
 #: model:ir.model,name:website_whatsapp.model_website
@@ -82,3 +85,10 @@ msgstr "Numero Whatsapp"
 msgid "You must add the mobile number with the country prefix"
 msgstr ""
 "È necessario aggiungere il numero del cellulare con il prefisso della nazione"
+
+#~ msgid ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+#~ "specific.\" groups=\"website.group_multi_website\"/>"
+#~ msgstr ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"I valori impostati qui sono "
+#~ "specifici per sito web.\" groups=\"website.group_multi_website\"/>"
