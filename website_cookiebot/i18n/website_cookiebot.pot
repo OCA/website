@@ -15,21 +15,9 @@ msgstr ""
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
-msgid "00000000-0000-0000-0000-000000000000"
-msgstr ""
-
-#. module: website_cookiebot
-#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
 "                                How to configure Cookiebot."
-msgstr ""
-
-#. module: website_cookiebot
-#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
-msgid ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
 msgstr ""
 
 #. module: website_cookiebot
@@ -84,6 +72,11 @@ msgstr ""
 #: model:ir.model.fields,help:website_cookiebot.field_res_config_settings__cookiebot_dgid
 #: model:ir.model.fields,help:website_cookiebot.field_website__cookiebot_dgid
 msgid "Get this code from Cookiebot to enable it on the website."
+msgstr ""
+
+#. module: website_cookiebot
+#: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
+msgid "Values set here are website-specific."
 msgstr ""
 
 #. module: website_cookiebot
