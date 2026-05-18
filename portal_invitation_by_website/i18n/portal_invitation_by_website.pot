@@ -27,6 +27,11 @@ msgid ""
 msgstr ""
 
 #. module: portal_invitation_by_website
+#: model:ir.model,name:portal_invitation_by_website.model_ir_model_data
+msgid "Model Data"
+msgstr ""
+
+#. module: portal_invitation_by_website
 #: model:ir.model,name:portal_invitation_by_website.model_portal_wizard
 msgid "Grant Portal Access"
 msgstr ""
@@ -45,4 +50,9 @@ msgstr ""
 #: model:ir.model.fields,field_description:portal_invitation_by_website.field_portal_wizard__website_id
 #: model:ir.model.fields,field_description:portal_invitation_by_website.field_portal_wizard_user__website_id
 msgid "Website"
+msgstr ""
+
+#. module: portal_invitation_by_website
+#: model:mail.template,name:portal_invitation_by_website.mail_template_portal_welcome_website
+msgid "Portal: User Invite (Website)"
 msgstr ""
