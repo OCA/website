@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="login_page_editable" inherit_id="web.login">
+        <xpath expr="//form[hasclass('oe_login_form')]" position="before">
+            <div id="login_page_top" class="oe_structure" />
+        </xpath>
+        <xpath expr="//form[hasclass('oe_login_form')]" position="after">
+            <div id="login_page_bottom" class="oe_structure" />
+        </xpath>
+    </template>
+</odoo>
