@@ -7,6 +7,9 @@
     "license": "AGPL-3",
     "category": "Website",
     "depends": ["portal", "website"],
-    "data": ["views/portal_wizard_views.xml"],
+    "data": [
+        "data/mail_template_portal_welcome.xml",
+        "views/portal_wizard_views.xml",
+    ],
     "installable": True,
 }
