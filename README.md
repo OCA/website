@@ -21,7 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[portal_invitation_by_website](portal_invitation_by_website/) | 17.0.1.1.0 |  | Restrict portal users to a specific website from the invitation wizard
+[portal_invitation_by_website](portal_invitation_by_website/) | 17.0.1.1.1 |  | Restrict portal users to a specific website from the invitation wizard
 [website_breadcrumb](website_breadcrumb/) | 17.0.1.0.0 |  | Let you have breadcrumbs in website pages
 [website_conditional_visibility_user_group](website_conditional_visibility_user_group/) | 17.0.1.0.0 |  | Only internal users will see the blocks you add this condition to
 [website_cookiebot](website_cookiebot/) | 17.0.1.0.1 |  | Ask for cookies consent connecting with Cookiebot
