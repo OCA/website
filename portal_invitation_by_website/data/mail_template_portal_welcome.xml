@@ -131,11 +131,13 @@
                                                             t-out="object.user_id.company_id.email or ''"
                                                         >info@yourcompany.com</a>
                     </t>
-                    <t t-if="object.user_id.company_id.website">
+                    <t
+                                                        t-if="object.website_id.domain or object.user_id.company_id.website"
+                                                    >
                         | <a
-                                                            t-attf-href="'%s' % {{ object.user_id.company_id.website }}"
+                                                            t-att-href="object.website_id.domain or object.user_id.company_id.website"
                                                             style="text-decoration:none; color: #454748;"
-                                                            t-out="object.user_id.company_id.website or ''"
+                                                            t-out="object.website_id.domain or object.user_id.company_id.website"
                                                         >http://www.example.com</a>
                     </t>
                 </td></tr>
