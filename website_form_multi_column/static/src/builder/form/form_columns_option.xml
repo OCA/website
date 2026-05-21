@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="website_form_multi_column.FormColumnsOption">
+        <BuilderRow label.translate="Columns">
+            <BuilderSelect action="'setColumnCount'">
+                <BuilderSelectItem actionValue="1">1</BuilderSelectItem>
+                <BuilderSelectItem actionValue="2">2</BuilderSelectItem>
+                <BuilderSelectItem actionValue="3">3</BuilderSelectItem>
+                <BuilderSelectItem actionValue="4">4</BuilderSelectItem>
+            </BuilderSelect>
+        </BuilderRow>
+    </t>
+
+</templates>
