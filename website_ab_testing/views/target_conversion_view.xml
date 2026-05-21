@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="ab_testing_target_conversion_tree" model="ir.ui.view">
+        <field name="model">ab.testing.target.conversion</field>
+        <field name="arch" type="xml">
+            <tree create="0" default_order="date desc">
+                <field name="date" />
+                <field name="target_id" />
+                <field name="trigger_id" />
+            </tree>
+        </field>
+    </record>
+    <record id="ab_testing_target_conversion_form" model="ir.ui.view">
+        <field name="model">ab.testing.target.conversion</field>
+        <field name="arch" type="xml">
+            <form edit="0" create="0">
+                <sheet>
+                    <group>
+                        <field name="date" />
+                        <field name="target_id" />
+                        <field name="trigger_id" />
+                    </group>
+                    <notebook>
+                        <page string="Active Variants">
+                            <field name="view_ids" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="ab_testing_target_conversion_graph">
+        <field name="model">ab.testing.target.conversion</field>
+        <field name="arch" type="xml">
+            <graph string="Conversions" type="bar" stacked="False">
+                <field name="target_id" type="col" />
+                <field name="view_names" type="col" />
+            </graph>
+        </field>
+    </record>
+    <record id="ab_testing_target_conversion_search" model="ir.ui.view">
+        <field name="model">ab.testing.target.conversion</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="target_id" />
+                <group expand="0" string="Group By...">
+                    <filter
+                        string="Target"
+                        name="group_by_target_id"
+                        domain="[]"
+                        context="{'group_by': 'target_id'}"
+                    />
+                    <filter
+                        string="Variants"
+                        name="group_by_view_names"
+                        domain="[]"
+                        context="{'group_by': 'view_names'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="ab_testing_target_conversion_action" model="ir.actions.act_window">
+        <field name="name">Conversions</field>
+        <field name="res_model">ab.testing.target.conversion</field>
+        <field name="view_mode">tree,form,graph</field>
+        <field
+            name="context"
+        >{'search_default_group_by_target_id': 1, 'search_default_group_by_view_names': 1}</field>
+    </record>
+</odoo>

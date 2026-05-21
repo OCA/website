@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        id="ab_testing_menu"
+        parent="website.menu_website_configuration"
+        name="A/B Testing"
+    />
+    <menuitem
+        id="ab_testing_target_menu"
+        parent="ab_testing_menu"
+        name="Targets"
+        action="ab_testing_target_action"
+    />
+    <menuitem
+        id="ab_testing_target_conversion_menu"
+        parent="ab_testing_menu"
+        name="Conversions"
+        action="ab_testing_target_conversion_action"
+    />
+</odoo>
