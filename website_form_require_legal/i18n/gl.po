@@ -6,36 +6,38 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-05-23 17:00+0000\n"
+"Last-Translator: Pablo Castelo <pablocv@gmx.es>\n"
 "Language-Team: none\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_form_require_legal
 #. openerp-web
 #: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "Agree to"
-msgstr ""
+msgstr "Aceptar os"
 
 #. module: website_form_require_legal
 #: model_terms:ir.ui.view,arch_db:website_form_require_legal.s_website_form_options
 msgid "Legal terms acceptance"
-msgstr ""
+msgstr "Aceptación dos termos legais"
 
 #. module: website_form_require_legal
 #. openerp-web
 #: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "You must agree before submitting."
-msgstr ""
+msgstr "Debe estar de acordo antes de envialo."
 
 #. module: website_form_require_legal
 #. openerp-web
 #: code:addons/website_form_require_legal/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "terms and conditions"
-msgstr ""
+msgstr "termos e condicións"
