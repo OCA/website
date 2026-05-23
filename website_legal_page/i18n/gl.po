@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-05-23 17:00+0000\n"
+"Last-Translator: Pablo Castelo <pablocv@gmx.es>\n"
 "Language-Team: none\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -22,18 +24,21 @@ msgid ""
 "fit, and by using this Website you are expected to review these Terms on a "
 "regular basis."
 msgstr ""
+"NOME DA COMPAÑÍA ten permitido revisar estes Termos en calquera momento que "
+"o considere oportuno, e ao utilizar este sitio web espérase que vostede "
+"revise estes Termos de forma regular."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "<font style=\"font-size: 42px;\">Table of Content</font>"
-msgstr ""
+msgstr "<font style=\"font-size: 42px;\">Táboa de contido</font>"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Assignment"
-msgstr ""
+msgstr "Asignación"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -45,12 +50,17 @@ msgid ""
 "may have for this Website are confidential and you must maintain "
 "confidentiality as well."
 msgstr ""
+"Certas áreas deste sitio web son de acceso restrinxido para vostede, e NOME "
+"DA EMPRESA pode restrinxir aínda máis o acceso de vostede a calquera área "
+"deste sitio web, en calquera momento, á súa absoluta discreción. Calquera "
+"identificación de usuario e contrasinal que vostede poida ter para este "
+"sitio web son confidenciais e vostede debe manter a confidencialidade tamén."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Governing Law &amp;amp; Jurisdiction"
-msgstr ""
+msgstr "Lexislación aplicable &amp;amp; Xurisdición"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -60,6 +70,9 @@ msgid ""
 "law, such provisions shall be deleted without affecting the remaining "
 "provisions herein."
 msgstr ""
+"Se algunha das disposicións das presentes condicións resultase inválida en "
+"virtude da lexislación aplicable, dita disposición será eliminada sen que "
+"iso afecte as disposicións restantes."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -72,6 +85,14 @@ msgid ""
 "shall not be held liable for any indirect, consequential or special "
 "liability arising out of or in any way related to your use of this Website."
 msgstr ""
+"En ningún caso NOMEE DA EMPRESA, nin ningún dos seus directivos, "
+"administradores e empregados, serán considerados responsables de nada que se "
+"derive ou estea relacionado dalgún modo co uso que vostede faga deste Sitio "
+"web, con independencia de que dita responsabilidade derívese dun contrato. "
+"NOME DA EMPRESA, incluídos os seus directivos, administradores e empregados, "
+"non serán responsables de ningunha responsabilidade indirecta, consecuente "
+"ou especial que se derive ou estea relacionada dalgún modo co uso que "
+"vostede faga deste sitio web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -80,41 +101,51 @@ msgid ""
 "In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant **COMPANY NAME** a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media. <br/>\n"
 "                                        Your Content must be your own and must not be invading any third-party's rights. **COMPANY NAME** reserves the right to remove any of Your Content from this Website at any time without notice."
 msgstr ""
+"Nestes Termos e condicións estándar do sitio web, \"O seu contido\" "
+"significará calquera audio, texto de vídeo, imaxes ou outro material que "
+"elixa mostrar neste sitio web. Ao mostrar O seu Contido, outorga  NOME DA "
+"COMPAÑÍA  unha licenza sublicenciable non exclusiva, mundialmente "
+"irrevogable e sublicenciable para usar, reproducir, adaptar, publicar, "
+"traducir e distribuír en todos e cada un dos medios. <br/>\n"
+"                                        O seu contido debe ser seu e non "
+"debe invadir os dereitos de terceiros.  NOME DA COMPAÑÍA  resérvase o "
+"dereito de eliminar o seu contido deste sitio web en calquera momento sen "
+"aviso previo/previo aviso."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Indemnification"
-msgstr ""
+msgstr "Indemnización"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Intellectual Property Rights"
-msgstr ""
+msgstr "Dereitos de Propiedade Intelectual"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Introduction"
-msgstr ""
+msgstr "Introdución"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page_link
 msgid "Legal Page"
-msgstr ""
+msgstr "Páxina Legal"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Limitation of liability"
-msgstr ""
+msgstr "Limitación de responsabilidade"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "No warranties"
-msgstr ""
+msgstr "Sen garantías"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -123,18 +154,23 @@ msgid ""
 "Other than the content you own, under these Terms, **COMPANY NAME** and/or its licensors own all the intellectual property rights and materials contained in this Website. <br/>\n"
 "                                        You are granted limited license only for purposes of viewing the material contained on this Website."
 msgstr ""
+"Á parte do contido que vostede posúe, baixo estes Termos,  NOME DA COMPAÑÍA  "
+"e / ou as súas licenciantes posúen todos os dereitos de propiedade "
+"intelectual e os materiais contidos neste sitio web. <br/>\n"
+"                                        Concédeselle unha licenza limitada "
+"só co fin de ver o material contido neste sitio web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Restrictions"
-msgstr ""
+msgstr "Restricións"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Severability"
-msgstr ""
+msgstr "Divisibilidade"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -143,6 +179,8 @@ msgid ""
 "THIS IS A SAMPLE PAGE! <br/>Please, edit this page to be valid with your use"
 " case."
 msgstr ""
+"ESTA É UNHA PÁXINA DE EXEMPLO! <br/>Por favor, edite esta páxina para que "
+"sexa válida para o seu caso de uso."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -153,6 +191,10 @@ msgid ""
 "However, you are not allowed to assign, transfer, or subcontract any of your"
 " rights and/or obligations under these Terms."
 msgstr ""
+"O  NOME DA COMPAÑÍA  pode ceder, transferir e subcontratar os seus dereitos "
+"e / ou obrigacións baixo estes Termos sen notificación algunha. Con todo, "
+"non se lle permite ceder, transferir ou subcontratar ningún dos seus "
+"dereitos e / ou obrigacións baixo estes Termos."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -163,6 +205,9 @@ msgid ""
 "jurisdiction of the state and federal courts located in **COUNTRY** for the "
 "resolution of any disputes."
 msgstr ""
+"Estes Termos rexeranse e interpretarán de acordo con as leis do estado de  "
+"PAÍS , e vostede sométese á xurisdición non exclusiva dos tribunais estatais "
+"e federais situados en  PAÍS  para a resolución de calquera disputas."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -172,6 +217,16 @@ msgid ""
 "                                        These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions. <br/>\n"
 "                                        Minors or people below 18 years old are not allowed to use this Website."
 msgstr ""
+"Estes Termos e condicións estándar do sitio web escritos nesta páxina web "
+"administrarán o seu uso do noso sitio web,  NOME DO SITIO WEB  accesible en  "
+"URL DO SITIO WEB . <br/>\n"
+"                                        Estes Termos aplicaranse na súa "
+"totalidade e afectarán o seu uso deste sitio web. Ao utilizar este sitio "
+"web, vostede acordou aceptar todos os termos e condicións escritos aquí. Non "
+"debe utilizar este sitio web se non está de acordo con algún destes Termos e "
+"condicións estándar do sitio web. <br/>\n"
+"                                        Os menores de idade ou persoas "
+"menores de 18 anos non poden utilizar este sitio web."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -182,18 +237,23 @@ msgid ""
 "Website or the materials contained on this Website. Also, nothing contained "
 "on this Website shall be interpreted as advising you."
 msgstr ""
+"Este sitio web proporciónase \"tal cal\", con todas fállalas, e  NOME DA "
+"COMPAÑÍA  non expresa representacións nin garantías de ningún tipo "
+"relacionadas con este sitio web ou os materiais contidos neste sitio web. "
+"Ademais, nada do contido neste sitio web interpretarase como unha "
+"advertencia."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Variation of Terms"
-msgstr ""
+msgstr "Variación dos Termos"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "You are specifically restricted from all of the following:"
-msgstr ""
+msgstr "Vostede está especificamente restrinxido en todo o seguinte:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -204,12 +264,16 @@ msgid ""
 "expenses arising in any way related to your breach of any of the provisions "
 "of these Terms."
 msgstr ""
+"Por medio de, vostede indemniza na maior medida posible a  NOME DA COMPAÑÍA  "
+"de e contra calquera e / ou todas as responsabilidades, custos, demandas, "
+"causas de acción, danos e gastos que xurdan de calquera xeito relacionados "
+"co seu incumprimento de calquera das disposicións destes Termos ."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "Your Content"
-msgstr ""
+msgstr "O teu contido"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -218,18 +282,23 @@ msgid ""
 "engaging in any data mining, data harvesting, data extracting or any other "
 "similar activity in relation to this Website;"
 msgstr ""
+"participar en calquera actividade de extracción de datos, recolección de "
+"datos, extracción de datos ou calquera outra actividade similar en relación "
+"con este sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publicly performing and/or showing any Website material;"
 msgstr ""
+"publicamente executar, reproducir e/ou mostrar calquera material do sitio "
+"web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "publishing any Website material in any other media;"
-msgstr ""
+msgstr "publicar calquera material do sitio web en calquera outro medio;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -237,6 +306,8 @@ msgstr ""
 msgid ""
 "selling, sublicensing and/or otherwise commercializing any Website material;"
 msgstr ""
+"vender, sublicenciar e/ou comercializar de calquera outro modo calquera "
+"material do sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -245,6 +316,9 @@ msgid ""
 "using this Website contrary to applicable laws and regulations, or in any "
 "way may cause harm to the Website, or to any person or business entity;"
 msgstr ""
+"utilizar este sitio web de forma contraria ás leis e normativas aplicables, "
+"ou que de calquera forma poida causar danos ao sitio web, ou a calquera "
+"entidade comercial ou persoa;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -252,6 +326,8 @@ msgstr ""
 msgid ""
 "using this Website in any way that impacts user access to this Website;"
 msgstr ""
+"utilizar este sitio web de calquera forma que afecte o acceso dos usuarios a "
+"este sitio web;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -259,9 +335,13 @@ msgstr ""
 msgid ""
 "using this Website in any way that is or may be damaging to this Website;"
 msgstr ""
+"utilizar este sitio web de calquera forma que sexa ou poida ser prexudicial "
+"para o mesmo;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 #: model_terms:website.page,arch_db:website_legal_page.legal_page_page
 msgid "using this Website to engage in any advertising or marketing."
 msgstr ""
+"usar este sitio web para participar en calquera tipo de publicidade ou "
+"márketing."
