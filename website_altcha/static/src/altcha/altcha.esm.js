@@ -1,5 +1,4 @@
-/* global document */
-
+/** @odoo-module **/
 import {loadBundle} from "@web/core/assets";
 import {session} from "@web/session";
 
@@ -17,7 +16,7 @@ export class Altcha {
      */
     loadLibs() {
         if (this._publicKey) {
-            this._altchaReady = loadBundle(`web.altcha_libs`);
+            this._altchaReady = loadBundle({assetLibs: ["web.altcha_libs"]});
             return this._altchaReady.then(() =>
                 Boolean(document.querySelector(".o_altcha_widget"))
             );

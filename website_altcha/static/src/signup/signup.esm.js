@@ -1,7 +1,8 @@
-import "@website/snippets/s_website_form/000";
+/** @odoo-module **/
+import "website.s_website_form";
 import {Altcha} from "@website_altcha/altcha/altcha.esm";
 import publicWidget from "@web/legacy/js/public/public_widget";
-import {renderToString} from "@web/core/utils/render";
+import {qweb} from "web.core";
 
 export const AltchaFunctionality = {
     init() {
@@ -17,7 +18,7 @@ export const AltchaFunctionality = {
         if (this._altcha._publicKey && !this.$el.find(".o_altcha_widget").length) {
             this.$el
                 .find("div.oe_login_buttons")
-                .prepend(renderToString("website_altcha.AltchaWidget", {}));
+                .prepend(qweb.render("website_altcha.AltchaWidget", {}));
         }
         return this._super(...arguments);
     },
@@ -55,7 +56,7 @@ publicWidget.registry.s_website_form.include({
         if (this._altcha._publicKey) {
             this.$el
                 .find(".s_website_form_submit")
-                .before(renderToString("website_altcha.AltchaWidget", {}));
+                .before(qweb.render("website_altcha.AltchaWidget", {}));
         }
         return res;
     },

@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ========================
 Privacy Friendly Captcha
 ========================
@@ -17,17 +13,17 @@ Privacy Friendly Captcha
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github
-    :target: https://github.com/OCA/website/tree/18.0/website_altcha
+    :target: https://github.com/OCA/website/tree/16.0/website_altcha
     :alt: OCA/website
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/website-18-0/website-18-0-website_altcha
+    :target: https://translation.odoo-community.org/projects/website-16-0/website-16-0-website_altcha
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=18.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=16.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
@@ -47,10 +43,11 @@ Use Cases / Context
 
 Currently, Odoo provides 2 options:
 
-- Google Recaptcha relies on tracking of the user. It implies cookies
-- Cloudfare Turnstile relies on signals of the browser so it is less
-  GDPR problematic. However, it relies on a third party infrastructure.
-  The decision is made from a probabilistic perspective (likely a human)
+-  Google Recaptcha relies on tracking of the user. It implies cookies
+-  Cloudfare Turnstile relies on signals of the browser so it is less
+   GDPR problematic. However, it relies on a third party infrastructure.
+   The decision is made from a probabilistic perspective (likely a
+   human)
 
 With this new module, everything relies on our own system with no
 cookies, no tracking and no network calls.
@@ -65,27 +62,27 @@ Go to Configuration/Website, check "Enable Altcha" under "Privacy". Some
 extra parameters will appear with all the ALTCHA information. This
 parameters are website dependent.
 
-- ``altcha_key``: This key is made to create the challenge and review it
-  later
+-  ``altcha_key``: This key is made to create the challenge and review
+   it later
 
 Also, the system adds the option to use some extra parameters:
 
-- ``altcha_secret_key``: Key used to use deterministic mode. Using it
-  will make it faster from a server perspective.
-- ``altcha_algorithm``: Algorithm used, by default ``PBKDF2/SHA-512``,
-  however, we can use:
+-  ``altcha_secret_key``: Key used to use deterministic mode. Using it
+   will make it faster from a server perspective.
+-  ``altcha_algorithm``: Algorithm used, by default ``PBKDF2/SHA-512``,
+   however, we can use:
 
-  - Fast ones only for testing purposes: ``SHA-256``, ``SHA-384``,
-    ``SHA-512``
-  - Good by default: ``PBKDF2/SHA-256``, ``PBKDF2/SHA-384``,
-    ``PBKDF2/SHA-512``
-  - Memory Hard: ``SCRYPT``. To be implemented
-  - Memory Hard (it required argon2-cffi): ``ARGON2ID``. To be
-    implemented
+   -  Fast ones only for testing purposes: ``SHA-256``, ``SHA-384``,
+      ``SHA-512``
+   -  Good by default: ``PBKDF2/SHA-256``, ``PBKDF2/SHA-384``,
+      ``PBKDF2/SHA-512``
+   -  Memory Hard: ``SCRYPT``. To be implemented
+   -  Memory Hard (it required argon2-cffi): ``ARGON2ID``. To be
+      implemented
 
-- ``altcha_timeout``: Number of minutes that we will trust the key, by
-  default 5
-- ``altcha_cost``: Cost of the challenge. By default, 5000
+-  ``altcha_timeout``: Number of minutes that we will trust the key, by
+   default 5
+-  ``altcha_cost``: Cost of the challenge. By default, 5000
 
 Bug Tracker
 ===========
@@ -93,7 +90,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/website/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_altcha%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_altcha%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -108,10 +105,10 @@ Authors
 Contributors
 ------------
 
-- `Dixmit <https://www.dixmit.com>`__
+-  `Dixmit <https://www.dixmit.com>`__
 
-  - Enric Tobella
-  - Luís David Rodríguez
+   -  Enric Tobella
+   -  Luís David Rodríguez
 
 Maintainers
 -----------
@@ -126,6 +123,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/website <https://github.com/OCA/website/tree/18.0/website_altcha>`_ project on GitHub.
+This module is part of the `OCA/website <https://github.com/OCA/website/tree/16.0/website_altcha>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

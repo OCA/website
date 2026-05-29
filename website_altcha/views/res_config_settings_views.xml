@@ -7,59 +7,71 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="website.res_config_settings_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//setting[@id='website_cookies_bar_setting']" position="after">
-                <setting id="altcha" help="Add Altcha functionality">
+            <div id="website_cookies_bar_setting" position="after">
+                <div class="col-12 col-lg-6 o_setting_box" id="website_altcha">
+                <div class="o_setting_left_pane">
                     <field name="altcha_enabled" />
-                    <div class="mt16" invisible="not altcha_enabled">
-                        <label
-                            class="col-md-3 o_light_label"
-                            string="HMAC secret"
-                            for="altcha_key"
-                        />
-                        <field
-                            name="altcha_key"
-                            required="altcha_enabled"
-                            placeholder="00000000-0000-0000-0000-000000000000"
-                        />
+                </div>
+                <div class="o_setting_right_pane">
+                    <label for="altcha_enabled" />
+                    <div attrs="{'invisible': [('altcha_enabled', '=', False)]}">
+                        <div class="row mt8">
+                            <label
+                                    class="col-lg-3"
+                                    string="HMAC secret"
+                                    for="altcha_key"
+                                />
+                            <field
+                                    name="altcha_key"
+                                    placeholder="00000000-0000-0000-0000-000000000000"
+                                    attrs="{'required': [('altcha_enabled', '=', True)]}"
+                                />
+                        </div>
+                        <div class="row mt8">
+                            <label
+                                    class="col-lg-3"
+                                    string="HMAC key secret"
+                                    for="altcha_private_key"
+                                />
+                            <field
+                                    name="altcha_private_key"
+                                    placeholder="00000000-0000-0000-0000-000000000000"
+                                    attrs="{'required': [('altcha_enabled', '=', True)]}"
+                                />
+                        </div>
+                        <div class="row mt8">
+                            <label
+                                    class="col-lg-3"
+                                    string="Algorithm"
+                                    for="altcha_algorithm"
+                                />
+                            <field
+                                    name="altcha_algorithm"
+                                    attrs="{'required': [('altcha_enabled', '=', True)]}"
+                                />
+                        </div>
+                        <div class="row mt8">
+                            <label
+                                    class="col-lg-3"
+                                    string="Timeout"
+                                    for="altcha_timeout"
+                                />
+                            <field
+                                    name="altcha_timeout"
+                                    attrs="{'required': [('altcha_enabled', '=', True)]}"
+                                />
+                        </div>
+                        <div class="row mt8">
+                            <label class="col-lg-3" string="Cost" for="altcha_cost" />
+                            <field
+                                    name="altcha_cost"
+                                    attrs="{'required': [('altcha_enabled', '=', True)]}"
+                                />
+                        </div>
                     </div>
-                    <div class="mt16" invisible="not altcha_enabled">
-                        <label
-                            class="col-md-3 o_light_label"
-                            string="HMAC key secret"
-                            for="altcha_private_key"
-                        />
-                        <field
-                            name="altcha_private_key"
-                            required="altcha_enabled"
-                            placeholder="00000000-0000-0000-0000-000000000000"
-                        />
-                    </div>
-                    <div class="mt16" invisible="not altcha_enabled">
-                        <label
-                            class="col-md-3 o_light_label"
-                            string="Algorithm"
-                            for="altcha_algorithm"
-                        />
-                        <field name="altcha_algorithm" required="altcha_enabled" />
-                    </div>
-                    <div class="mt16" invisible="not altcha_enabled">
-                        <label
-                            class="col-md-3 o_light_label"
-                            string="Timeout"
-                            for="altcha_timeout"
-                        />
-                        <field name="altcha_timeout" required="altcha_enabled" />
-                    </div>
-                    <div class="mt16" invisible="not altcha_enabled">
-                        <label
-                            class="col-md-3 o_light_label"
-                            string="Cost"
-                            for="altcha_cost"
-                        />
-                        <field name="altcha_cost" required="altcha_enabled" />
-                    </div>
-                </setting>
-            </xpath>
+                </div>
+                </div>
+            </div>
         </field>
     </record>
 </odoo>
