@@ -6,64 +6,66 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-03 09:46+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_altcha
 #: model_terms:ir.ui.view,arch_db:website_altcha.res_config_settings_view_form
 msgid "Add Altcha functionality"
-msgstr ""
+msgstr "Aggiungi funzionalità Altcha"
 
 #. module: website_altcha
 #: model_terms:ir.ui.view,arch_db:website_altcha.res_config_settings_view_form
 msgid "Algorithm"
-msgstr ""
+msgstr "Algoritmo"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_res_config_settings__altcha_algorithm
 #: model:ir.model.fields,field_description:website_altcha.field_website__altcha_algorithm
 msgid "Altcha Algorithm"
-msgstr ""
+msgstr "Algoritmo Altcha"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_res_config_settings__altcha_cost
 #: model:ir.model.fields,field_description:website_altcha.field_website__altcha_cost
 msgid "Altcha Cost"
-msgstr ""
+msgstr "Costo Altcha"
 
 #. module: website_altcha
 #: model:ir.model,name:website_altcha.model_altcha_key
 #: model:ir.model.fields,field_description:website_altcha.field_res_config_settings__altcha_key
 #: model:ir.model.fields,field_description:website_altcha.field_website__altcha_key
 msgid "Altcha Key"
-msgstr ""
+msgstr "Chiave Altcha"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_res_config_settings__altcha_private_key
 #: model:ir.model.fields,field_description:website_altcha.field_website__altcha_private_key
 msgid "Altcha Private Key"
-msgstr ""
+msgstr "Chiave privata Altcha"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_res_config_settings__altcha_timeout
 #: model:ir.model.fields,field_description:website_altcha.field_website__altcha_timeout
 msgid "Altcha Timeout"
-msgstr ""
+msgstr "Timeout Altcha"
 
 #. module: website_altcha
 #: model:ir.model,name:website_altcha.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Impostazioni configurazione"
 
 #. module: website_altcha
 #: model_terms:ir.ui.view,arch_db:website_altcha.res_config_settings_view_form
 msgid "Cost"
-msgstr ""
+msgstr "Costo"
 
 #. module: website_altcha
 #: model:ir.model.fields,help:website_altcha.field_res_config_settings__altcha_cost
@@ -73,100 +75,104 @@ msgid ""
 "        For PBKDF2, this is the number of iterations.\n"
 "        Default is 5000 for PBKDF2/SHA-512."
 msgstr ""
+"Fattore di costo per l'algoritmo di hashing.\n"
+"        Per PBKDF2, questo rappresenta il numero di iterazioni.\n"
+"        Il valore predefinito è 5000 per PBKDF2/SHA-512."
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_altcha_key__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_altcha_key__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_altcha_key__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_res_config_settings__altcha_enabled
 msgid "Enable Altcha"
-msgstr ""
+msgstr "Abilita Altcha"
 
 #. module: website_altcha
 #: model:ir.model.fields,help:website_altcha.field_res_config_settings__altcha_enabled
 msgid "Enable Altcha functionality on the website."
-msgstr ""
+msgstr "Abilita la funzionalità Altcha sul sito web."
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_altcha_key__expires_at
 msgid "Expires At"
-msgstr ""
+msgstr "Scade alle"
 
 #. module: website_altcha
 #: model_terms:ir.ui.view,arch_db:website_altcha.res_config_settings_view_form
 msgid "HMAC key secret"
-msgstr ""
+msgstr "Segreto chiave HMAC"
 
 #. module: website_altcha
 #: model_terms:ir.ui.view,arch_db:website_altcha.res_config_settings_view_form
 msgid "HMAC secret"
-msgstr ""
+msgstr "Segreto HMAC"
 
 #. module: website_altcha
 #: model:ir.model,name:website_altcha.model_ir_http
 msgid "HTTP Routing"
-msgstr ""
+msgstr "Instradamento HTTP"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_altcha_key__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_altcha_key__key
 msgid "Key"
-msgstr ""
+msgstr "Chiave"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_altcha_key__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultimo aggiornamento di"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_altcha_key__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultimo aggiornamento il"
 
 #. module: website_altcha
 #. odoo-python
 #: code:addons/website_altcha/models/ir_http.py:0
 msgid "Suspicious activity detected by Altcha"
-msgstr ""
+msgstr "Attività sospetta rilevata da Altcha"
 
 #. module: website_altcha
 #: model:ir.model.constraint,message:website_altcha.constraint_altcha_key_key_uniq
 msgid "The Altcha key must be unique."
-msgstr ""
+msgstr "La chiave Altcha deve essere univoca."
 
 #. module: website_altcha
 #: model:ir.model.fields,help:website_altcha.field_res_config_settings__altcha_timeout
 #: model:ir.model.fields,help:website_altcha.field_website__altcha_timeout
 msgid "Time in minutes before a captcha expires. Default is 5 minutes."
 msgstr ""
+"Tempo in minuti prima della scadenza di un captcha. Predefinito 5 minuti."
 
 #. module: website_altcha
 #: model_terms:ir.ui.view,arch_db:website_altcha.res_config_settings_view_form
 msgid "Timeout"
-msgstr ""
+msgstr "Timeout"
 
 #. module: website_altcha
 #: model:ir.model.fields,field_description:website_altcha.field_altcha_key__used
 msgid "Used"
-msgstr ""
+msgstr "Usata"
 
 #. module: website_altcha
 #: model:ir.model,name:website_altcha.model_website
 msgid "Website"
-msgstr ""
+msgstr "Sito web"
