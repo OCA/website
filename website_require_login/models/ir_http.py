@@ -44,5 +44,7 @@ class IrHttp(models.AbstractModel):
         path = request.httprequest.path
         for auth_path in auth_paths:
             if auth_path == path or Path(auth_path) in Path(path).parents:
+                if request.httprequest.content_type == "application/json":
+                    return False
                 redirect_path = "/web/login?redirect=%s" % path
                 return request.redirect(redirect_path, code=302)
