@@ -1,0 +1,5 @@
+This module extends the functionality of the e-commerce platform to support country-specific tax identifiers and to allow users to see localized labels for the VAT field during the checkout process.
+
+By default, Odoo uses a generic "VAT" label in the billing and shipping address forms, regardless of the customer's country. This module overrides that behavior by dynamically checking if the selected country has a custom VAT label defined in its backend configuration (such as "RUT", "CPF", "NIF", or "EIN") and displays it directly to the customer on the website.
+
+This enhancement significantly improves the user experience during registration and checkout, reducing confusion for international customers and ensuring higher data accuracy for B2B transactions by matching official local terminology.
