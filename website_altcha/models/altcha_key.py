@@ -13,7 +13,11 @@ class AltchaKey(models.Model):
     used = fields.Boolean(default=False)
 
     _sql_constraints = [
-        ("key_uniq", "unique(key)", "The Altcha key must be unique."),
+        (
+            "key_unique",
+            "unique(key)",
+            "The Altcha key must be unique.",
+        )
     ]
 
     @api.autovacuum

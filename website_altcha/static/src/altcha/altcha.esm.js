@@ -1,4 +1,4 @@
-/* global document */
+/** @odoo-module **/
 
 import {loadBundle} from "@web/core/assets";
 import {session} from "@web/session";

@@ -1,3 +1,4 @@
+/** @odoo-module **/
 import "@website/snippets/s_website_form/000";
 import {Altcha} from "@website_altcha/altcha/altcha.esm";
 import publicWidget from "@web/legacy/js/public/public_widget";
