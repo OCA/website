@@ -8,14 +8,15 @@ from odoo.addons.website_sale.controllers.main import WebsiteSale
 
 class WebsiteSaleVatLabel(WebsiteSale):
     def _prepare_address_form_values(self, *args, **kwargs):
-        # 1. Call the original function to load all the native values
-        res = super()._prepare_address_form_values(*args, **kwargs)
+        """Extend standard address values to support country-specific VAT labels.
 
-        # 2. We obtain the current country from the values ​​already prepared by Odoo
+        This method overrides the generic 'VAT' label by checking if the
+        currently selected country has a custom label configured (e.g., RUT,
+        CPF). If found, it replaces the default label to improve localization.
+        """
+        res = super()._prepare_address_form_values(*args, **kwargs)
         country_sudo = res.get("country")
 
-        # 3. Modify the 'res' dictionary with the country specific
-        # VAT label, if the country exists
         if country_sudo:
             res["vat_label"] = country_sudo.vat_label or request.env._("VAT")
 
