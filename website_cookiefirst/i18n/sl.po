@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-08 05:05+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,50 +15,53 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
 msgid "Add Cookiefirst functionality"
-msgstr ""
+msgstr "Dodaj funkcionalnost Cookiefirst"
 
 #. module: website_cookiefirst
 #: model:ir.model,name:website_cookiefirst.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Nastavitve"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.cookies
 msgid "Cookie Declaration"
-msgstr ""
+msgstr "Izjava o piškotkih"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
 #: model:ir.model.fields,field_description:website_cookiefirst.field_website__cookiefirst_identifier
 msgid "Cookiefirst ID"
-msgstr ""
+msgstr "Cookiefirst ID"
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.footer_copyright_company_name
 msgid "Cookies Policy"
-msgstr ""
+msgstr "Politika o piškotkih"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,help:website_cookiefirst.field_res_config_settings__cookiefirst_identifier
 #: model:ir.model.fields,help:website_cookiefirst.field_website__cookiefirst_identifier
 msgid "This field holds the ID, needed for Cookiefirst functionality."
 msgstr ""
+"To polje vsebuje identifikator, ki je potreben za delovanje funkcije "
+"Cookiefirst."
 
 #. module: website_cookiefirst
 #: model_terms:ir.ui.view,arch_db:website_cookiefirst.res_config_settings_view_form
 msgid "Tracking ID"
-msgstr ""
+msgstr "ID sledenja"
 
 #. module: website_cookiefirst
 #: model:ir.model.fields,field_description:website_cookiefirst.field_res_config_settings__cookiefirst_enabled
 msgid "Use Cookiefirst"
-msgstr ""
+msgstr "Uporabi Cookiefirst"
 
 #. module: website_cookiefirst
 #: model:ir.model,name:website_cookiefirst.model_website
 msgid "Website"
-msgstr ""
+msgstr "Spletna stran"
