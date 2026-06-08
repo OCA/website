@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-08 05:07+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,53 +15,54 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_require_login
 #: model:ir.actions.act_window,name:website_require_login.action_website_auth_url
 #: model:ir.model,name:website_require_login.model_website_auth_url
 #: model:ir.ui.menu,name:website_require_login.menu_website_auth_url
 msgid "Authorization required URLs"
-msgstr ""
+msgstr "URL-ji, za katere je potrebna avtorizacija"
 
 #. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Ustvaril"
 
 #. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Ustvarjeno"
 
 #. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Prikazani naziv"
 
 #. module: website_require_login
 #: model:ir.model,name:website_require_login.model_ir_http
 msgid "HTTP Routing"
-msgstr ""
+msgstr "HTTP usmerjanje"
 
 #. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Zadnji posodobil"
 
 #. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Zadnjič posodobljeno"
 
 #. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__path
 msgid "Path"
-msgstr ""
+msgstr "Pot"
 
 #. module: website_require_login
 #: model:ir.model.fields,help:website_require_login.field_website_auth_url__path
@@ -68,13 +70,15 @@ msgid ""
 "Relative URL path and subpath. Ex.: /shop will restrict /shop, "
 "/shop/product, etc."
 msgstr ""
+"Relativna URL-pot in podpot. Primer: /shop bo omejila dostop do /shop, /shop/"
+"product itd."
 
 #. module: website_require_login
 #: model:ir.model.constraint,message:website_require_login.constraint_website_auth_url_path_unique
 msgid "The path must be unique per website!"
-msgstr ""
+msgstr "Pot mora biti za vsako spletno stran unikatna!"
 
 #. module: website_require_login
 #: model:ir.model.fields,field_description:website_require_login.field_website_auth_url__website_id
 msgid "Website"
-msgstr ""
+msgstr "Spletna stran"
