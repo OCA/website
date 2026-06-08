@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-08 04:59+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_menu_by_user_status
 #: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu__user_logged
@@ -21,6 +23,8 @@ msgid ""
 "If checked, the menu will be displayed when the user is logged and give "
 "access."
 msgstr ""
+"Če je ta možnost izbrana, se bo meni prikazal, ko se uporabnik prijavi, in "
+"mu omogočil dostop."
 
 #. module: website_menu_by_user_status
 #: model:ir.model.fields,help:website_menu_by_user_status.field_website_menu__user_not_logged
@@ -28,18 +32,20 @@ msgid ""
 "If checked, the menu will be displayed when the user is not logged and give "
 "access."
 msgstr ""
+"Če je ta možnost izbrana, se bo meni prikazal, ko uporabnik ni prijavljen, "
+"in mu omogočil dostop."
 
 #. module: website_menu_by_user_status
 #: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__user_logged
 msgid "Visible for logged Users"
-msgstr ""
+msgstr "Vidno za prijavljene uporabnike"
 
 #. module: website_menu_by_user_status
 #: model:ir.model.fields,field_description:website_menu_by_user_status.field_website_menu__user_not_logged
 msgid "Visible for public Users"
-msgstr ""
+msgstr "Vidno za javne uporabnike"
 
 #. module: website_menu_by_user_status
 #: model:ir.model,name:website_menu_by_user_status.model_website_menu
 msgid "Website Menu"
-msgstr ""
+msgstr "Spletni meni"
