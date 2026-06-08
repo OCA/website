@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-08 07:20+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
@@ -21,59 +23,61 @@ msgid ""
 "<i class=\"o_button_icon oi oi-fw oi-arrow-right me-1\"/>\n"
 "                                How to configure Cookiebot"
 msgstr ""
+"<i class=\"o_button_icon oi oi-fw oi-arrow-right me-1\"/>\n"
+"                                Kako nastaviti Cookiebot"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid "Ask for consent on cookies usage"
-msgstr ""
+msgstr "Prosi za soglasje za uporabo piškotkov"
 
 #. module: website_cookiebot
 #: model:ir.model,name:website_cookiebot.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Nastavitve"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.cookies
 msgid "Cookie Declaration"
-msgstr ""
+msgstr "Izjava o piškotkih"
 
 #. module: website_cookiebot
 #: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__cookiebot_enabled
 msgid "Cookiebot"
-msgstr ""
+msgstr "Cookiebot"
 
 #. module: website_cookiebot
 #: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_dgid
 msgid "Cookiebot Domain Group ID"
-msgstr ""
+msgstr "ID skupine domen Cookiebot"
 
 #. module: website_cookiebot
 #: model:ir.model.fields,field_description:website_cookiebot.field_website__cookiebot_enabled
 msgid "Cookiebot Enabled"
-msgstr ""
+msgstr "Cookiebot je omogočen"
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.layout_footer_copyright
 msgid "Cookies Policy"
-msgstr ""
+msgstr "Politika o piškotkih"
 
 #. module: website_cookiebot
 #: model:ir.model.fields,field_description:website_cookiebot.field_res_config_settings__cookiebot_dgid
 msgid "Domain Group ID"
-msgstr ""
+msgstr "ID skupine domen"
 
 #. module: website_cookiebot
 #: model:ir.model.fields,help:website_cookiebot.field_res_config_settings__cookiebot_dgid
 #: model:ir.model.fields,help:website_cookiebot.field_website__cookiebot_dgid
 msgid "Get this code from Cookiebot to enable it on the website."
-msgstr ""
+msgstr "Pridobite to kodo iz Cookiebot, da jo omogočite na spletni strani."
 
 #. module: website_cookiebot
 #: model_terms:ir.ui.view,arch_db:website_cookiebot.res_config_settings_view_form
 msgid "Instead of step 3, paste your Domain Group ID below:"
-msgstr ""
+msgstr "Namesto 3. koraka vpišite spodaj ID svoje domenske skupine:"
 
 #. module: website_cookiebot
 #: model:ir.model,name:website_cookiebot.model_website
 msgid "Website"
-msgstr ""
+msgstr "Spletna stran"
