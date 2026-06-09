@@ -17,6 +17,7 @@ setuptools.setup(
         'odoo-addon-website_forum_subscription>=16.0dev,<16.1dev',
         'odoo-addon-website_google_tag_manager>=16.0dev,<16.1dev',
         'odoo-addon-website_legal_page>=16.0dev,<16.1dev',
+        'odoo-addon-website_llms>=16.0dev,<16.1dev',
         'odoo-addon-website_menu_by_user_status>=16.0dev,<16.1dev',
         'odoo-addon-website_odoo_debranding>=16.0dev,<16.1dev',
         'odoo-addon-website_recaptcha_v2>=16.0dev,<16.1dev',
