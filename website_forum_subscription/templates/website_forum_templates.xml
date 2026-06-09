@@ -14,9 +14,11 @@
                 t-value="request.env.user.has_group('base.group_public')"
             />
             <div t-if="user_public">
-                <a class="btn btn-link" href="/web/login">
-                    <i class="fa fa-bell" /> Subscribe to forum notifications
-                </a>
+                <object>
+                    <a class="btn btn-link" href="/web/login">
+                        <i class="fa fa-bell" /> Subscribe to forum notifications
+                    </a>
+                </object>
             </div>
             <div
                 t-if="icons_design and not user_public"
