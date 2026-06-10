@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (C) 2026 XXP
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <template id="pager" inherit_id="portal.pager">
+        <!-- Placed after the <ul> root so the selector stays visible even
+             when there is a single page (the <ul> hides itself then). -->
+        <xpath expr="//ul" position="after">
+            <select
+                t-if="portal_pager_limit_options"
+                class="o_portal_pager_limit form-select form-select-sm w-auto ms-2"
+                aria-label="Records per page"
+                title="Records per page"
+            >
+                <option
+                    t-foreach="portal_pager_limit_options"
+                    t-as="limit_option"
+                    t-att-value="limit_option"
+                    t-att-selected="'selected' if limit_option == portal_pager_limit else None"
+                    t-out="limit_option"
+                />
+            </select>
+        </xpath>
+    </template>
+</odoo>

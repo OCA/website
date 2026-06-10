@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (C) 2026 XXP
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo noupdate="1">
+    <record id="pager_limit_options" model="ir.config_parameter">
+        <field name="key">website_portal_pager_limit.options</field>
+        <field name="value">10,20,40,80,100</field>
+    </record>
+</odoo>
