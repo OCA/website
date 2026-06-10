@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-06-10 15:46+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_llms
 #: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
@@ -26,11 +28,19 @@ msgid ""
 "## Content\n"
 "- Blog: https://yourdomain.com/blog"
 msgstr ""
+"# Il tuo sito web — Informazioni per i programmi LLM\n"
+"\n"
+"## Azienda\n"
+"- Chi siamo: https://yourdomain.com/aboutus\n"
+"- Contatti: https://yourdomain.com/contactus\n"
+"\n"
+"## Contenuti\n"
+"- Blog: https://yourdomain.com/blog"
 
 #. module: website_llms
 #: model:ir.model,name:website_llms.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Impostazioni configurazione"
 
 #. module: website_llms
 #: model:ir.model.fields,help:website_llms.field_res_config_settings__llms_txt_content
@@ -39,6 +49,9 @@ msgid ""
 "Content to be served at /llms.txt. This file provides information for Large "
 "Language Models (LLMs) about your website."
 msgstr ""
+"Il contenuto verrà servito all'indirizzo /llms.txt. Questo file fornisce "
+"informazioni sui modelli linguistici di grandi dimensioni (LLM) relativi al "
+"tuo sito web."
 
 #. module: website_llms
 #: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
@@ -47,15 +60,21 @@ msgid ""
 "                            information for Large Language Models (LLMs) about your website.\n"
 "                            Leave empty to use default content."
 msgstr ""
+"Il contenuto verrà visualizzato all'indirizzo <code>/llms.txt</code>. Questo "
+"file fornisce\n"
+"                            informazioni sui modelli linguistici di grandi "
+"dimensioni (LLM) relativi al tuo sito web.\n"
+"                            Lasciare vuoto per utilizzare il contenuto "
+"predefinito."
 
 #. module: website_llms
 #: model:ir.model,name:website_llms.model_website
 msgid "Website"
-msgstr ""
+msgstr "Sito web"
 
 #. module: website_llms
 #: model:ir.model.fields,field_description:website_llms.field_res_config_settings__llms_txt_content
 #: model:ir.model.fields,field_description:website_llms.field_website__llms_txt_content
 #: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
 msgid "llms.txt Content"
-msgstr ""
+msgstr "Contenuto llms.txt"
