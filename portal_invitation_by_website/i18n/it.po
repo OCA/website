@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-05-25 21:11+0000\n"
+"PO-Revision-Date: 2026-06-10 15:46+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -308,7 +308,7 @@ msgstr "Utente"
 #: model:ir.model.fields,field_description:portal_invitation_by_website.field_portal_wizard__website_id
 #: model:ir.model.fields,field_description:portal_invitation_by_website.field_portal_wizard_user__website_id
 msgid "Website"
-msgstr "Sito internet"
+msgstr "Sito web"
 
 #. module: portal_invitation_by_website
 #: model:mail.template,subject:portal_invitation_by_website.mail_template_portal_welcome_website
