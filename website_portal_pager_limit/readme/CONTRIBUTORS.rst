@@ -1,1 +1,4 @@
-- Anatol Mikheev <a.mikheev.dev@gmail.com>
+* `XXP <https://xxp-odoo.com>`__:
+
+  * Project Manager: Mikhail Lapin
+  * Developer: Anatol Mikheev
