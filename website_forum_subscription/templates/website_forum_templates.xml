@@ -13,6 +13,7 @@
                 t-set="user_public"
                 t-value="request.env.user.has_group('base.group_public')"
             />
+            <input type="hidden" class="js_follow_email" disabled="disabled" />
             <div t-if="user_public">
                 <object>
                     <a class="btn btn-link" href="/web/login">
