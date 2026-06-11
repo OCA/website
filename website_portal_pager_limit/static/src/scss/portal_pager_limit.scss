@@ -1,0 +1,15 @@
+// Copyright (C) 2026 XXP
+// License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+
+.o_portal_pager {
+    position: relative;
+    min-height: 2.375rem;
+
+    .o_portal_pager_limit {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+    }
+}

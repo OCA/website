@@ -17,6 +17,7 @@
     ],
     "assets": {
         "web.assets_frontend": [
+            "website_portal_pager_limit/static/src/scss/portal_pager_limit.scss",
             "website_portal_pager_limit/static/src/js/portal_pager_limit.esm.js",
         ],
     },

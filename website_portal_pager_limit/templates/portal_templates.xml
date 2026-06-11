@@ -8,7 +8,7 @@
         <xpath expr="//ul" position="after">
             <select
                 t-if="portal_pager_limit_options"
-                class="o_portal_pager_limit form-select form-select-sm w-auto ms-2"
+                class="o_portal_pager_limit form-select form-select-sm w-auto"
                 aria-label="Records per page"
                 title="Records per page"
             >
