@@ -27,11 +27,9 @@ class CustomerPortal(portal.CustomerPortal):
         Misconfigured values (non digits, empty string) are discarded so a
         broken system parameter can never disable the portal pagination.
         """
-        param = (
-            request.env["ir.config_parameter"]
-            .sudo()
-            .get_param(OPTIONS_PARAM, default="10,20,40,80,100")
-        )
+        param = request.env["ir.config_parameter"].sudo().get_param(OPTIONS_PARAM)
+        if not param:
+            return list(DEFAULT_LIMIT_OPTIONS)
         options = [int(x.strip()) for x in param.split(",") if x.strip().isdigit()]
         return options or list(DEFAULT_LIMIT_OPTIONS)
 
