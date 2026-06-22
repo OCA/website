@@ -5,7 +5,7 @@ from odoo.http import request
 
 from odoo.addons.portal.controllers import portal
 
-DEFAULT_LIMIT_OPTIONS = [10, 20, 40, 80, 100]
+DEFAULT_LIMIT_OPTIONS = (10, 20, 40, 80, 100)
 OPTIONS_PARAM = "website_portal_pager_limit.options"
 
 
@@ -15,6 +15,12 @@ class CustomerPortal(portal.CustomerPortal):
     # honors the ``limit`` query parameter without overriding each route.
     @property
     def _items_per_page(self):
+        """Resolve the active page size from the ``limit`` query parameter.
+
+        The requested ``limit`` is honored only when it belongs to the
+        configured whitelist; any invalid or missing value falls back to the
+        standard portal page size, so pagination always stays functional.
+        """
         limit = request.httprequest.args.get("limit", "")
         if limit.isdigit() and int(limit) in self._get_portal_pager_limit_options():
             return int(limit)
@@ -22,10 +28,12 @@ class CustomerPortal(portal.CustomerPortal):
         return portal.CustomerPortal._items_per_page
 
     def _get_portal_pager_limit_options(self):
-        """Return the whitelist of allowed page sizes.
+        """Return the whitelist of allowed page sizes as a fresh ``list``.
 
         Misconfigured values (non digits, empty string) are discarded so a
-        broken system parameter can never disable the portal pagination.
+        broken system parameter can never disable the portal pagination. A new
+        list is always returned (copied from ``DEFAULT_LIMIT_OPTIONS`` on the
+        fallback paths) so callers can never mutate the module-level default.
         """
         param = request.env["ir.config_parameter"].sudo().get_param(OPTIONS_PARAM)
         if not param:
@@ -34,6 +42,12 @@ class CustomerPortal(portal.CustomerPortal):
         return options or list(DEFAULT_LIMIT_OPTIONS)
 
     def _prepare_portal_layout_values(self):
+        """Add the page-size selector data to the portal layout values.
+
+        Inject the whitelist of allowed page sizes and the currently active
+        page size so the pager template can render the selector and keep the
+        user's choice across pagination, sorting, filtering and searching.
+        """
         values = super()._prepare_portal_layout_values()
         values.update(
             portal_pager_limit_options=self._get_portal_pager_limit_options(),

@@ -40,7 +40,7 @@ class TestPagerLimitOptions(TestPortalPagerLimitCommon):
         with self._mock_request():
             self.assertEqual(
                 self.controller._get_portal_pager_limit_options(),
-                DEFAULT_LIMIT_OPTIONS,
+                list(DEFAULT_LIMIT_OPTIONS),
             )
 
     def test_options_missing_param(self):
@@ -51,5 +51,5 @@ class TestPagerLimitOptions(TestPortalPagerLimitCommon):
         with self._mock_request():
             self.assertEqual(
                 self.controller._get_portal_pager_limit_options(),
-                DEFAULT_LIMIT_OPTIONS,
+                list(DEFAULT_LIMIT_OPTIONS),
             )
