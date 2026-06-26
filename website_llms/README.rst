@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ================
 Website llms.txt
 ================
@@ -17,26 +13,27 @@ Website llms.txt
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fwebsite-lightgray.png?logo=github
-    :target: https://github.com/OCA/website/tree/16.0/website_llms
+    :target: https://github.com/OCA/website/tree/18.0/website_llms
     :alt: OCA/website
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/website-16-0/website-16-0-website_llms
+    :target: https://translation.odoo-community.org/projects/website-18-0/website-18-0-website_llms
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/website&target_branch=18.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module adds support for serving a `/llms.txt` file in the website root.
-The content can be configured per website in the website settings.
+This module adds support for serving a /llms.txt file in the website
+root. The content can be configured per website in the website settings.
 
-The `llms.txt` file provides information for Large Language Models (LLMs) about
-your website, including company information, services, and content links.
+The llms.txt file provides information for Large Language Models (LLMs)
+about your website, including company information, services, and content
+links.
 
 **Table of contents**
 
@@ -47,37 +44,39 @@ Usage
 =====
 
 Configuration
-=============
+-------------
 
 1. Go to **Website > Configuration > Settings**
 2. In the **Website Info** section, find the **llms.txt Content** field
-3. Enter the content you want to serve at `/llms.txt`
+3. Enter the content you want to serve at /llms.txt
 4. Save the settings
 
 Usage
-=====
+-----
 
-After configuration, the `/llms.txt` file will be available at your website root:
+After configuration, the /llms.txt file will be available at your
+website root:
 
 - If content is configured: The configured content will be served
-- If content is empty: A default content will be generated based on your website information
+- If content is empty: A default content will be generated based on your
+  website information
 
 Example content format:
 
 ::
 
-    # Your Website — Information for LLMs
+   # Your Website — Information for LLMs
 
-    ## Company
-    - About: https://yourdomain.com/aboutus
-    - Contact: https://yourdomain.com/contactus
+   ## Company
+   - About: https://yourdomain.com/aboutus
+   - Contact: https://yourdomain.com/contactus
 
-    ## Services
-    - Service 1: https://yourdomain.com/service1
-    - Service 2: https://yourdomain.com/service2
+   ## Services
+   - Service 1: https://yourdomain.com/service1
+   - Service 2: https://yourdomain.com/service2
 
-    ## Content
-    - Blog: https://yourdomain.com/blog
+   ## Content
+   - Blog: https://yourdomain.com/blog
 
 Bug Tracker
 ===========
@@ -85,7 +84,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/website/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_llms%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/website/issues/new?body=module:%20website_llms%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -93,19 +92,19 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Escodoo
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Escodoo <https://www.escodoo.com.br>`_:
+- `Escodoo <https://www.escodoo.com.br>`__:
 
-  * Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+  - Marcel Savegnago <marcel.savegnago@escodoo.com.br>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -125,6 +124,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-marcelsavegnago| 
 
-This module is part of the `OCA/website <https://github.com/OCA/website/tree/16.0/website_llms>`_ project on GitHub.
+This module is part of the `OCA/website <https://github.com/OCA/website/tree/18.0/website_llms>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

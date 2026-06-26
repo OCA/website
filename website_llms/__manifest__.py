@@ -1,6 +1,6 @@
 {
     "name": "Website llms.txt",
-    "version": "16.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Website",
     "summary": """
         This module adds support for serving a /llms.txt file in the website root.
