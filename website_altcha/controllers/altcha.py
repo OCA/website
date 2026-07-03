@@ -9,7 +9,7 @@ from odoo.http import request
 
 
 class AltchaController(http.Controller):
-    @http.route("/altcha", type="http", auth="public", website=True)
+    @http.route("/altcha", type="http", auth="public", website=True, sitemap=False)
     def generate_altcha_challenge(self):
         timeout = int(request.website.sudo().altcha_timeout or 5)
         cost = int(request.website.sudo().altcha_cost or 1_000)
