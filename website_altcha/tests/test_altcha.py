@@ -8,13 +8,15 @@ from freezegun import freeze_time
 from requests.exceptions import HTTPError
 
 from odoo.exceptions import UserError
-from odoo.tests import Form, HttpCase
+from odoo.tests import Form
 from odoo.tools import mute_logger
 
 from odoo.addons.website.tools import MockRequest
 
+from .common import Common
 
-class TestAltchaCreation(HttpCase):
+
+class TestAltchaCreation(Common):
     @classmethod
     def setUpClass(cls):
         result = super().setUpClass()
