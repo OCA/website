@@ -14,14 +14,17 @@
     ],
     "assets": {
         "web.assets_frontend": [
-            "website_altcha/static/src/**/*.esm.js",
-            "website_altcha/static/src/**/*.xml",
-            "website_altcha/static/src/**/*.scss",
+            "website_altcha/static/src/*.esm.js",
+            "website_altcha/static/src/*.xml",
+            "website_altcha/static/src/*.scss",
         ],
         "web.altcha_libs": [
             "website_altcha/static/lib/altcha.js",
             "website_altcha/static/lib/altcha-l10n.js",
             "website_altcha/static/lib/altcha.css",
+        ],
+        "web.assets_tests": [
+            "website_altcha/static/tests/tours/*.esm.js",
         ],
     },
     "external_dependencies": {
@@ -30,5 +33,8 @@
     "data": [
         "security/ir.model.access.csv",
         "views/res_config_settings_views.xml",
+    ],
+    "demo": [
+        "demo/website_page.xml",
     ],
 }
