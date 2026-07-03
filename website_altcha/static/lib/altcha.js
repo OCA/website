@@ -1,4 +1,3 @@
-/* @odoo-module */
 const DEV = false;
 var is_array = Array.isArray;
 var index_of = Array.prototype.indexOf;
