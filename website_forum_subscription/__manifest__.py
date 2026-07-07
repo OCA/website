@@ -4,7 +4,7 @@
 {
     "name": "Website Forum Subscription",
     "summary": "Adds a button to allow subscription from the website",
-    "version": "18.0.1.0.2",
+    "version": "19.0.1.0.0",
     "category": "Website",
     "website": "https://github.com/OCA/website",
     "author": ("Tecnativa, Odoo Community Association (OCA)"),
