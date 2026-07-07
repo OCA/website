@@ -7,7 +7,7 @@
     "version": "18.0.1.0.2",
     "category": "Website",
     "website": "https://github.com/OCA/website",
-    "author": ("Tecnativa, " "Odoo Community Association (OCA)"),
+    "author": ("Tecnativa, Odoo Community Association (OCA)"),
     "license": "AGPL-3",
     "application": False,
     "installable": True,
