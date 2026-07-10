@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_llms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: website_llms
+#: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
+msgid ""
+"# Your Website — Information for LLMs\n"
+"\n"
+"## Company\n"
+"- About: https://yourdomain.com/aboutus\n"
+"- Contact: https://yourdomain.com/contactus\n"
+"\n"
+"## Content\n"
+"- Blog: https://yourdomain.com/blog"
+msgstr ""
+
+#. module: website_llms
+#: model:ir.model,name:website_llms.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: website_llms
+#: model:ir.model.fields,help:website_llms.field_res_config_settings__llms_txt_content
+#: model:ir.model.fields,help:website_llms.field_website__llms_txt_content
+msgid ""
+"Content to be served at /llms.txt. This file provides information for Large "
+"Language Models (LLMs) about your website."
+msgstr ""
+
+#. module: website_llms
+#: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
+msgid ""
+"Content to be served at <code>/llms.txt</code>. This file provides\n"
+"                            information for Large Language Models (LLMs) about your website.\n"
+"                            Leave empty to use default content."
+msgstr ""
+
+#. module: website_llms
+#: model:ir.model,name:website_llms.model_website
+msgid "Website"
+msgstr ""
+
+#. module: website_llms
+#: model:ir.model.fields,field_description:website_llms.field_res_config_settings__llms_txt_content
+#: model:ir.model.fields,field_description:website_llms.field_website__llms_txt_content
+#: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
+msgid "llms.txt Content"
+msgstr ""
