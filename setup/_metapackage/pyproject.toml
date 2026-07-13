@@ -1,9 +1,10 @@
 [project]
 name = "odoo-addons-oca-website"
-version = "19.0.20260406.0"
+version = "19.0.20260713.0"
 dependencies = [
     "odoo-addon-website_cookiefirst==19.0.*",
     "odoo-addon-website_form_require_legal==19.0.*",
+    "odoo-addon-website_forum_subscription==19.0.*",
     "odoo-addon-website_google_tag_manager==19.0.*",
 ]
 classifiers=[
