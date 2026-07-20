@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-07-20 11:53+0000\n"
+"Last-Translator: Patricia Lorenzo Bartolomé <lb.patri@gmail.com>\n"
 "Language-Team: none\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_recaptcha_v2
 #: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
@@ -20,6 +22,8 @@ msgid ""
 "<i class=\"fa fa-arrow-right\"/>\n"
 "                                        Get reCAPTCHA v2 keys"
 msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                        reCAPTCHA v2-sleutels ophalen"
 
 #. module: website_recaptcha_v2
 #: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
@@ -27,55 +31,57 @@ msgid ""
 "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
 "specific.\" groups=\"website.group_multi_website\"/>"
 msgstr ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Waarden die hier worden ingesteld "
+"zijn websitespecifiek.\" groups=\"website.group_multi_website\"/>"
 
 #. module: website_recaptcha_v2
 #: model:ir.model,name:website_recaptcha_v2.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Configuratie-instellingen"
 
 #. module: website_recaptcha_v2
 #: model:ir.model.fields,field_description:website_recaptcha_v2.field_res_config_settings__recaptcha_v2_enabled
 #: model:ir.model.fields,field_description:website_recaptcha_v2.field_website__recaptcha_v2_enabled
 msgid "Enable reCAPTCHA v2"
-msgstr ""
+msgstr "reCAPTCHA v2 inschakelen"
 
 #. module: website_recaptcha_v2
 #. odoo-python
 #: code:addons/website_recaptcha_v2/models/website.py:0
 #, python-format
 msgid "No response given."
-msgstr ""
+msgstr "Geen antwoord gegeven."
 
 #. module: website_recaptcha_v2
 #: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
 msgid "Protect your forms using reCAPTCHA v2"
-msgstr ""
+msgstr "Bescherm uw formulieren met reCAPTCHA v2"
 
 #. module: website_recaptcha_v2
 #: model:ir.model.fields,field_description:website_recaptcha_v2.field_res_config_settings__recaptcha_v2_secret_key
 #: model:ir.model.fields,field_description:website_recaptcha_v2.field_website__recaptcha_v2_secret_key
 msgid "Secret Key (v2)"
-msgstr ""
+msgstr "Geheime sleutel (v2)"
 
 #. module: website_recaptcha_v2
 #: model:ir.model.fields,field_description:website_recaptcha_v2.field_res_config_settings__recaptcha_v2_site_key
 #: model:ir.model.fields,field_description:website_recaptcha_v2.field_website__recaptcha_v2_site_key
 msgid "Site Key (v2)"
-msgstr ""
+msgstr "Sitesleutel (v2)"
 
 #. module: website_recaptcha_v2
 #. odoo-python
 #: code:addons/website_recaptcha_v2/models/website.py:0
 #, python-format
 msgid "The challenge was not successfully completed."
-msgstr ""
+msgstr "De uitdaging is niet succesvol voltooid."
 
 #. module: website_recaptcha_v2
 #. odoo-python
 #: code:addons/website_recaptcha_v2/models/website.py:0
 #, python-format
 msgid "The request is invalid or malformed."
-msgstr ""
+msgstr "Het verzoek is ongeldig of onjuist gevormd."
 
 #. module: website_recaptcha_v2
 #. odoo-python
@@ -84,54 +90,54 @@ msgstr ""
 msgid ""
 "The response is no longer valid: either is too old or has been used "
 "previously."
-msgstr ""
+msgstr "Het antwoord is niet meer geldig: het is te oud of is eerder gebruikt."
 
 #. module: website_recaptcha_v2
 #. odoo-python
 #: code:addons/website_recaptcha_v2/models/website.py:0
 #, python-format
 msgid "The response parameter is invalid or malformed."
-msgstr ""
+msgstr "De antwoordparameter is ongeldig of onjuist gevormd."
 
 #. module: website_recaptcha_v2
 #. odoo-python
 #: code:addons/website_recaptcha_v2/models/website.py:0
 #, python-format
 msgid "The response parameter is missing."
-msgstr ""
+msgstr "De antwoordparameter ontbreekt."
 
 #. module: website_recaptcha_v2
 #. odoo-python
 #: code:addons/website_recaptcha_v2/models/website.py:0
 #, python-format
 msgid "The secret parameter is invalid or malformed."
-msgstr ""
+msgstr "De geheime parameter is ongeldig of onjuist gevormd."
 
 #. module: website_recaptcha_v2
 #. odoo-python
 #: code:addons/website_recaptcha_v2/models/website.py:0
 #, python-format
 msgid "The secret parameter is missing."
-msgstr ""
+msgstr "De geheime parameter ontbreekt."
 
 #. module: website_recaptcha_v2
 #. odoo-python
 #: code:addons/website_recaptcha_v2/models/website.py:0
 #, python-format
 msgid "Unknown reCAPTCHA error (error code: {errorcode})."
-msgstr ""
+msgstr "Onbekende reCAPTCHA-fout (foutcode: {errorcode})."
 
 #. module: website_recaptcha_v2
 #: model:ir.model,name:website_recaptcha_v2.model_website
 msgid "Website"
-msgstr ""
+msgstr "Website"
 
 #. module: website_recaptcha_v2
 #: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
 msgid "reCAPTCHA icon"
-msgstr ""
+msgstr "reCAPTCHA-pictogram"
 
 #. module: website_recaptcha_v2
 #: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
 msgid "reCAPTCHA v2"
-msgstr ""
+msgstr "reCAPTCHA v2"
