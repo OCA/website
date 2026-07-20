@@ -8,87 +8,88 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2015-09-25 08:26+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2026-07-20 11:53+0000\n"
+"Last-Translator: Patricia Lorenzo Bartolomé <lb.patri@gmail.com>\n"
 "Language-Team: Swedish (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/sv/)\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_analytics_matomo
 #: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
 msgid "Active Time (seconds)"
-msgstr ""
+msgstr "Aktiv tid (sekunder)"
 
 #. module: website_analytics_matomo
 #: model:ir.model,name:website_analytics_matomo.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Konfigurationsinställningar"
 
 #. module: website_analytics_matomo
 #: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
 msgid "Enable User ID"
-msgstr ""
+msgstr "Aktivera användar-ID"
 
 #. module: website_analytics_matomo
 #: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
 msgid "Enable heartbeat"
-msgstr ""
+msgstr "Aktivera heartbeat"
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings__matomo_heartbeat_timer
 #: model:ir.model.fields,help:website_analytics_matomo.field_website__matomo_heartbeat_timer
 msgid "How many seconds a tab needs to be active to be counted as viewed."
-msgstr ""
+msgstr "Hur många sekunder en flik behöver vara aktiv för att räknas som visad."
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__has_matomo_analytics
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_website__has_matomo_analytics
 msgid "Matomo Analytics"
-msgstr ""
+msgstr "Matomo Analytics"
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_enable_heartbeat
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_enable_heartbeat
 msgid "Matomo Enable Heartbeat"
-msgstr ""
+msgstr "Matomo aktivera heartbeat"
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_enable_userid
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_enable_userid
 msgid "Matomo Enable Userid"
-msgstr ""
+msgstr "Matomo aktivera användar-ID"
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_get_userid
 msgid "Matomo Get Userid"
-msgstr ""
+msgstr "Matomo hämta användar-ID"
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_heartbeat_timer
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_heartbeat_timer
 msgid "Matomo Heartbeat Timer"
-msgstr ""
+msgstr "Matomo heartbeat-timer"
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_analytics_host
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_analytics_host
 msgid "Matomo host"
-msgstr ""
+msgstr "Matomo-värd"
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_analytics_host_url
 msgid "Matomo host URL"
-msgstr ""
+msgstr "Matomo värd-URL"
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_analytics_id
 #: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_analytics_id
 msgid "Matomo website ID"
-msgstr ""
+msgstr "Matomo webbplats-ID"
 
 #. module: website_analytics_matomo
 #: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
@@ -99,24 +100,28 @@ msgid ""
 "page or focuses away from the tab)\n"
 "                                    then a ping request will be sent."
 msgstr ""
+"Ange aktiv tid i sekunder. Endast om sidan visades under minst denna\n"
+"                                    tid (och användaren lämnar sidan eller "
+"byter flik)\n"
+"                                    kommer en ping-förfrågan att skickas."
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings__matomo_analytics_id
 #: model:ir.model.fields,help:website_analytics_matomo.field_website__matomo_analytics_id
 msgid "The ID Matomo uses to identify the website"
-msgstr ""
+msgstr "Det ID Matomo använder för att identifiera webbplatsen"
 
 #. module: website_analytics_matomo
 #: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings__matomo_analytics_host
 #: model:ir.model.fields,help:website_analytics_matomo.field_website__matomo_analytics_host
 msgid ""
 "The host/path your Matomo installation is accessible by on the internet."
-msgstr ""
+msgstr "Värden/sökvägen din Matomo-installation är tillgänglig på via internet."
 
 #. module: website_analytics_matomo
 #: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
 msgid "Track visits in Matomo Analytics"
-msgstr ""
+msgstr "Spåra besök i Matomo Analytics"
 
 #. module: website_analytics_matomo
 #: model:ir.model,name:website_analytics_matomo.model_website
@@ -126,4 +131,4 @@ msgstr "Webbplats"
 #. module: website_analytics_matomo
 #: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
 msgid "https://matomo.host.name/"
-msgstr ""
+msgstr "https://matomo.host.name/"
