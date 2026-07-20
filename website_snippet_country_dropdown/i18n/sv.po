@@ -6,43 +6,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-07-20 11:53+0000\n"
+"Last-Translator: Patricia Lorenzo Bartolomé <lb.patri@gmail.com>\n"
 "Language-Team: none\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "A readonly country dropdown input"
-msgstr ""
+msgstr "En skrivskyddad rullgardinslista för land"
 
 #. module: website_snippet_country_dropdown
 #: model:website.menu,name:website_snippet_country_dropdown.country_dropdown_demo_page_link
 msgid "Country dropdown demo"
-msgstr ""
+msgstr "Demo av landsrullgardinslista"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "Other label"
-msgstr ""
+msgstr "Annan etikett"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "Submit (you will see the GET parameters in the URL)"
-msgstr ""
+msgstr "Skicka (du kommer att se GET-parametrarna i URL:en)"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "Test here the country dropdown snippet behavior"
-msgstr ""
+msgstr "Testa här beteendet hos rullgardinslistesnutten för land"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "This is a form"
-msgstr ""
+msgstr "Detta är ett formulär"
 
 #. module: website_snippet_country_dropdown
 #. odoo-javascript
@@ -50,16 +52,16 @@ msgstr ""
 #, python-format
 msgid ""
 "Write the \"name\" attribute for the input what will be sent with the form."
-msgstr ""
+msgstr "Skriv \"name\"-attributet för inmatningen som skickas med formuläret."
 
 #. module: website_snippet_country_dropdown
 #. odoo-javascript
 #: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:0
 #, python-format
 msgid "You can modify the label directly with the website editor."
-msgstr ""
+msgstr "Du kan ändra etiketten direkt med webbplatsredigeraren."
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
 msgid "Your Label"
-msgstr ""
+msgstr "Din etikett"
