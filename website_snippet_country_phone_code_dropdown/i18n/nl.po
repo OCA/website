@@ -6,45 +6,47 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-07-20 11:53+0000\n"
+"Last-Translator: Patricia Lorenzo Bartolomé <lb.patri@gmail.com>\n"
 "Language-Team: none\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_snippet_country_phone_code_dropdown
 #: model:website.menu,name:website_snippet_country_phone_code_dropdown.country_dropdown_phone_code_demo_page_link
 msgid "Country Phone Code Dropdown Demo"
-msgstr ""
+msgstr "Landtelefoonnummer keuzelijst demo"
 
 #. module: website_snippet_country_phone_code_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
 msgid "Example label"
-msgstr ""
+msgstr "Voorbeeldlabel"
 
 #. module: website_snippet_country_phone_code_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
 msgid "Example label (readonly)"
-msgstr ""
+msgstr "Voorbeeldlabel (alleen-lezen)"
 
 #. module: website_snippet_country_phone_code_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
 msgid "Submit (you will see the GET parameters in the URL)"
-msgstr ""
+msgstr "Verzenden (u ziet de GET-parameters in de URL)"
 
 #. module: website_snippet_country_phone_code_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
 msgid "Test the country phone code dropdown snippet"
-msgstr ""
+msgstr "Test het landtelefoonnummer keuzelijstfragment"
 
 #. module: website_snippet_country_phone_code_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
 msgid "This is a form"
-msgstr ""
+msgstr "Dit is een formulier"
 
 #. module: website_snippet_country_phone_code_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.dropdown_element_form
 msgid "Your Label"
-msgstr ""
+msgstr "Uw label"
