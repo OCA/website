@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-07-20 11:53+0000\n"
+"Last-Translator: Patricia Lorenzo Bartolomé <lb.patri@gmail.com>\n"
 "Language-Team: none\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -21,16 +23,19 @@ msgid ""
 "fit, and by using this Website you are expected to review these Terms on a "
 "regular basis."
 msgstr ""
+"**COMPANY NAME** har rätt att revidera dessa villkor när som helst efter "
+"eget gottfinnande, och genom att använda denna webbplats förväntas du "
+"granska dessa villkor regelbundet."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "<font style=\"font-size: 42px;\">Table of Content</font>"
-msgstr ""
+msgstr "<font style=\"font-size: 42px;\">Innehållsförteckning</font>"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Assignment"
-msgstr ""
+msgstr "Överlåtelse"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -41,11 +46,16 @@ msgid ""
 "may have for this Website are confidential and you must maintain "
 "confidentiality as well."
 msgstr ""
+"Vissa områden på denna webbplats är begränsade från åtkomst av dig och "
+"**COMPANY NAME** kan ytterligare begränsa din åtkomst till vilka områden som "
+"helst på denna webbplats, när som helst, efter eget gottfinnande. Eventuellt "
+"användar-ID och lösenord du har för denna webbplats är konfidentiella och du "
+"måste upprätthålla sekretessen."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Governing Law &amp;amp; Jurisdiction"
-msgstr ""
+msgstr "Tillämplig lag &amp;amp; Jurisdiktion"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -54,6 +64,9 @@ msgid ""
 "law, such provisions shall be deleted without affecting the remaining "
 "provisions herein."
 msgstr ""
+"Om någon bestämmelse i dessa villkor befinns vara ogiltig enligt tillämplig "
+"lag ska sådana bestämmelser strykas utan att påverka de återstående "
+"bestämmelserna häri."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -65,6 +78,13 @@ msgid ""
 "shall not be held liable for any indirect, consequential or special "
 "liability arising out of or in any way related to your use of this Website."
 msgstr ""
+"**COMPANY NAME**, eller någon av dess tjänstemän, styrelseledamöter och "
+"anställda, ska under inga omständigheter hållas ansvariga för något som "
+"uppstår ur eller på något sätt är kopplat till din användning av denna "
+"webbplats, oavsett om sådant ansvar är avtalsenligt. **COMPANY NAME**, "
+"inklusive dess tjänstemän, styrelseledamöter och anställda, ska inte hållas "
+"ansvariga för något indirekt, följdmässigt eller särskilt ansvar som uppstår "
+"ur eller på något sätt är relaterat till din användning av denna webbplats."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -72,36 +92,46 @@ msgid ""
 "In these Website Standard Terms and Conditions, “Your Content” shall mean any audio, video text, images or other material you choose to display on this Website. By displaying Your Content, you grant **COMPANY NAME** a non-exclusive, worldwide irrevocable, sub licensable license to use, reproduce, adapt, publish, translate and distribute it in any and all media. <br/>\n"
 "                                        Your Content must be your own and must not be invading any third-party's rights. **COMPANY NAME** reserves the right to remove any of Your Content from this Website at any time without notice."
 msgstr ""
+"I dessa webbplatsens standardvillkor avser \"Ditt innehåll\" allt ljud, "
+"videotext, bilder eller annat material du väljer att visa på denna "
+"webbplats. Genom att visa ditt innehåll ger du **COMPANY NAME** en icke-"
+"exklusiv, världsomfattande, oåterkallelig, underlicensierbar licens att "
+"använda, reproducera, anpassa, publicera, översätta och distribuera det i "
+"alla medier. <br/>\n"
+"                                        Ditt innehåll måste vara ditt eget "
+"och får inte inkräkta på tredje parts rättigheter. **COMPANY NAME** "
+"förbehåller sig rätten att ta bort allt ditt innehåll från denna webbplats "
+"när som helst utan förvarning."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Indemnification"
-msgstr ""
+msgstr "Skadeslöshet"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Intellectual Property Rights"
-msgstr ""
+msgstr "Immateriella rättigheter"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Introduction"
-msgstr ""
+msgstr "Introduktion"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page_link
 msgid "Legal Page"
-msgstr ""
+msgstr "Juridisk sida"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Limitation of liability"
-msgstr ""
+msgstr "Ansvarsbegränsning"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "No warranties"
-msgstr ""
+msgstr "Inga garantier"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -109,16 +139,21 @@ msgid ""
 "Other than the content you own, under these Terms, **COMPANY NAME** and/or its licensors own all the intellectual property rights and materials contained in this Website. <br/>\n"
 "                                        You are granted limited license only for purposes of viewing the material contained on this Website."
 msgstr ""
+"Utöver det innehåll du äger, äger **COMPANY NAME** och/eller dess "
+"licensgivare alla immateriella rättigheter och material som finns på denna "
+"webbplats enligt dessa villkor. <br/>\n"
+"                                        Du beviljas en begränsad licens "
+"enbart i syfte att visa materialet på denna webbplats."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Restrictions"
-msgstr ""
+msgstr "Begränsningar"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Severability"
-msgstr ""
+msgstr "Avskiljbarhet"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -126,6 +161,8 @@ msgid ""
 "THIS IS A SAMPLE PAGE! <br/>Please, edit this page to be valid with your use"
 " case."
 msgstr ""
+"DETTA ÄR EN EXEMPELSIDA! <br/>Vänligen redigera denna sida så att den passar "
+"ditt användningsfall."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -135,6 +172,10 @@ msgid ""
 "However, you are not allowed to assign, transfer, or subcontract any of your"
 " rights and/or obligations under these Terms."
 msgstr ""
+"**COMPANY NAME** har rätt att överlåta, överföra och underleverantera sina "
+"rättigheter och/eller skyldigheter enligt dessa villkor utan meddelande. Du "
+"har dock inte rätt att överlåta, överföra eller underleverantera några av "
+"dina rättigheter och/eller skyldigheter enligt dessa villkor."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -144,6 +185,9 @@ msgid ""
 "jurisdiction of the state and federal courts located in **COUNTRY** for the "
 "resolution of any disputes."
 msgstr ""
+"Dessa villkor ska styras av och tolkas i enlighet med lagarna i **COUNTRY**, "
+"och du underkastar dig den icke-exklusiva jurisdiktionen hos de statliga och "
+"federala domstolarna i **COUNTRY** för lösning av eventuella tvister."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -152,6 +196,16 @@ msgid ""
 "                                        These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions. <br/>\n"
 "                                        Minors or people below 18 years old are not allowed to use this Website."
 msgstr ""
+"Dessa webbplatsens standardvillkor skrivna på denna webbsida ska reglera din "
+"användning av vår webbplats, **WEBSITE NAME** tillgänglig på **WEBSITE "
+"URL**. <br/>\n"
+"                                        Dessa villkor ska tillämpas fullt ut "
+"och påverka din användning av denna webbplats. Genom att använda denna "
+"webbplats godkände du att acceptera alla villkor skrivna häri. Du får inte "
+"använda denna webbplats om du inte godkänner något av dessa webbplatsens "
+"standardvillkor. <br/>\n"
+"                                        Minderåriga eller personer under 18 "
+"år får inte använda denna webbplats."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -161,16 +215,20 @@ msgid ""
 "Website or the materials contained on this Website. Also, nothing contained "
 "on this Website shall be interpreted as advising you."
 msgstr ""
+"Denna webbplats tillhandahålls “i befintligt skick”, med alla fel, och "
+"**COMPANY NAME** ger inga utfästelser eller garantier av något slag "
+"relaterade till denna webbplats eller materialet på denna webbplats. "
+"Ingenting på denna webbplats ska heller tolkas som rådgivning till dig."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Variation of Terms"
-msgstr ""
+msgstr "Ändring av villkor"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "You are specifically restricted from all of the following:"
-msgstr ""
+msgstr "Du är specifikt begränsad från allt följande:"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -180,11 +238,15 @@ msgid ""
 "expenses arising in any way related to your breach of any of the provisions "
 "of these Terms."
 msgstr ""
+"Du håller härmed **COMPANY NAME** skadeslös i fullaste möjliga utsträckning "
+"från och mot alla skulder, kostnader, krav, grunder för talan, skador och "
+"utgifter som uppstår på något sätt relaterat till ditt brott mot någon av "
+"bestämmelserna i dessa villkor."
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "Your Content"
-msgstr ""
+msgstr "Ditt innehåll"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -192,22 +254,26 @@ msgid ""
 "engaging in any data mining, data harvesting, data extracting or any other "
 "similar activity in relation to this Website;"
 msgstr ""
+"att ägna sig åt datautvinning, datainsamling, dataextraktion eller annan "
+"liknande verksamhet i relation till denna webbplats;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "publicly performing and/or showing any Website material;"
-msgstr ""
+msgstr "att offentligt framföra och/eller visa webbplatsmaterial;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "publishing any Website material in any other media;"
-msgstr ""
+msgstr "att publicera webbplatsmaterial i andra medier;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid ""
 "selling, sublicensing and/or otherwise commercializing any Website material;"
 msgstr ""
+"att sälja, underlicensiera och/eller på annat sätt kommersialisera "
+"webbplatsmaterial;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
@@ -215,20 +281,27 @@ msgid ""
 "using this Website contrary to applicable laws and regulations, or in any "
 "way may cause harm to the Website, or to any person or business entity;"
 msgstr ""
+"att använda denna webbplats i strid med tillämpliga lagar och förordningar, "
+"eller på något sätt som kan orsaka skada på webbplatsen, eller på någon "
+"person eller affärsenhet;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid ""
 "using this Website in any way that impacts user access to this Website;"
 msgstr ""
+"att använda denna webbplats på ett sätt som påverkar användarnas åtkomst "
+"till denna webbplats;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid ""
 "using this Website in any way that is or may be damaging to this Website;"
 msgstr ""
+"att använda denna webbplats på ett sätt som är eller kan vara skadligt för "
+"denna webbplats;"
 
 #. module: website_legal_page
 #: model_terms:ir.ui.view,arch_db:website_legal_page.legal_page
 msgid "using this Website to engage in any advertising or marketing."
-msgstr ""
+msgstr "att använda denna webbplats för reklam eller marknadsföring."
