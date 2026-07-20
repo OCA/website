@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-07-20 11:53+0000\n"
+"Last-Translator: Patricia Lorenzo Bartolomé <lb.patri@gmail.com>\n"
 "Language-Team: none\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_llms
 #: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
@@ -26,11 +28,19 @@ msgid ""
 "## Content\n"
 "- Blog: https://yourdomain.com/blog"
 msgstr ""
+"# Din webbplats — Information för LLM:er\n"
+"\n"
+"## Företag\n"
+"- Om oss: https://yourdomain.com/aboutus\n"
+"- Kontakt: https://yourdomain.com/contactus\n"
+"\n"
+"## Innehåll\n"
+"- Blogg: https://yourdomain.com/blog"
 
 #. module: website_llms
 #: model:ir.model,name:website_llms.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Konfigurationsinställningar"
 
 #. module: website_llms
 #: model:ir.model.fields,help:website_llms.field_res_config_settings__llms_txt_content
@@ -39,6 +49,8 @@ msgid ""
 "Content to be served at /llms.txt. This file provides information for Large "
 "Language Models (LLMs) about your website."
 msgstr ""
+"Innehåll som visas på /llms.txt. Denna fil ger information till stora "
+"språkmodeller (LLM) om din webbplats."
 
 #. module: website_llms
 #: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
@@ -47,15 +59,19 @@ msgid ""
 "                            information for Large Language Models (LLMs) about your website.\n"
 "                            Leave empty to use default content."
 msgstr ""
+"Innehåll som visas på <code>/llms.txt</code>. Denna fil ger\n"
+"                            information till stora språkmodeller (LLM) om "
+"din webbplats.\n"
+"                            Lämna tomt för att använda standardinnehåll."
 
 #. module: website_llms
 #: model:ir.model,name:website_llms.model_website
 msgid "Website"
-msgstr ""
+msgstr "Webbplats"
 
 #. module: website_llms
 #: model:ir.model.fields,field_description:website_llms.field_res_config_settings__llms_txt_content
 #: model:ir.model.fields,field_description:website_llms.field_website__llms_txt_content
 #: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
 msgid "llms.txt Content"
-msgstr ""
+msgstr "Innehåll för llms.txt"
