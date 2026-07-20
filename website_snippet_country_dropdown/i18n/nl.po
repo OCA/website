@@ -6,43 +6,45 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-07-20 11:53+0000\n"
+"Last-Translator: Patricia Lorenzo Bartolomé <lb.patri@gmail.com>\n"
 "Language-Team: none\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "A readonly country dropdown input"
-msgstr ""
+msgstr "Een alleen-lezen land keuzelijst invoer"
 
 #. module: website_snippet_country_dropdown
 #: model:website.menu,name:website_snippet_country_dropdown.country_dropdown_demo_page_link
 msgid "Country dropdown demo"
-msgstr ""
+msgstr "Land keuzelijst demo"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "Other label"
-msgstr ""
+msgstr "Ander label"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "Submit (you will see the GET parameters in the URL)"
-msgstr ""
+msgstr "Verzenden (u ziet de GET-parameters in de URL)"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "Test here the country dropdown snippet behavior"
-msgstr ""
+msgstr "Test hier het gedrag van het land keuzelijstfragment"
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.country_dropdown_demo_view
 msgid "This is a form"
-msgstr ""
+msgstr "Dit is een formulier"
 
 #. module: website_snippet_country_dropdown
 #. odoo-javascript
@@ -51,15 +53,17 @@ msgstr ""
 msgid ""
 "Write the \"name\" attribute for the input what will be sent with the form."
 msgstr ""
+"Schrijf het \"name\"-kenmerk voor de invoer die met het formulier wordt "
+"verzonden."
 
 #. module: website_snippet_country_dropdown
 #. odoo-javascript
 #: code:addons/website_snippet_country_dropdown/static/src/xml/country_dropdown.xml:0
 #, python-format
 msgid "You can modify the label directly with the website editor."
-msgstr ""
+msgstr "U kunt het label rechtstreeks wijzigen met de website-editor."
 
 #. module: website_snippet_country_dropdown
 #: model_terms:ir.ui.view,arch_db:website_snippet_country_dropdown.dropdown_element_form
 msgid "Your Label"
-msgstr ""
+msgstr "Uw label"
