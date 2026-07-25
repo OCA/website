@@ -12,7 +12,8 @@
                 t-if="website.whatsapp_track_url"
                 t-set="extra_info"
                 t-value="website._get_track_url_message(request.httprequest.full_path)"
-            /><!-- %0A newline -->
+            />
+            <!-- %0A newline -->
             <div t-if="website.whatsapp_number" class="whatsapp_icon">
                 <a
                     target="_blank"
@@ -22,7 +23,6 @@
                     <i class="fa fa-whatsapp" />
                 </a>
             </div>
-
         </xpath>
     </template>
 </odoo>

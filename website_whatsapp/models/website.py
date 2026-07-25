@@ -3,7 +3,7 @@
 
 from urllib.parse import urlparse, urlunparse
 
-from odoo import _, fields, models
+from odoo import fields, models
 
 
 class Website(models.Model):
@@ -22,7 +22,7 @@ class Website(models.Model):
     )
 
     def _get_track_url_message(self, httprequest_full_path):
-        sent_from = _("Sent from:")
+        sent_from = self.env._("Sent from:")
         base_url = self.domain or self.env["ir.config_parameter"].sudo().get_param(
             "web.base.url"
         )
