@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <setting id="google_analytics_setting" position="after">
+                <setting
+                    id="matomo_analytics_setting"
+                    help="Track visits in Matomo Analytics"
+                >
+                    <field name="has_matomo_analytics" />
+                    <div class="content-group" invisible="not has_matomo_analytics">
+                        <div class="row mt16">
+                            <label
+                                class="col-md-3 o_light_label"
+                                for="matomo_analytics_id"
+                            />
+                            <field name="matomo_analytics_id" />
+                        </div>
+                        <div class="row mt16">
+                            <label
+                                class="col-md-3 o_light_label"
+                                for="matomo_analytics_host"
+                            />
+                            <field
+                                name="matomo_analytics_host"
+                                placeholder="https://matomo.host.name/"
+                            />
+                        </div>
+                        <div class="row mt16" id="matomo_enable_userid">
+                            <div class="col-12">
+                                <label
+                                    for="matomo_enable_userid"
+                                    string="Enable User ID"
+                                    class="p-0 col-4 o_light_label"
+                                />
+                                <field name="matomo_enable_userid" class=" w-auto" />
+                            </div>
+                        </div>
+                        <div class="row mt16" id="matomo_enable_heartbeat">
+                            <div class="col-12">
+                                <label
+                                    for="matomo_enable_heartbeat"
+                                    string="Enable heartbeat"
+                                    class="p-0 col-4 o_light_label"
+                                />
+                                <field name="matomo_enable_heartbeat" class=" w-auto" />
+                            </div>
+                        </div>
+                        <div
+                            class="content-group"
+                            invisible="not matomo_enable_heartbeat"
+                        >
+                            <div class="text-muted">
+                                Set the Active Time in seconds. Only if the page was viewed for at least this
+                                amount of time (and the user leaves the page or focuses away from the tab)
+                                then a ping request will be sent.
+                            </div>
+                            <div class="row mt16">
+                                <label
+                                    class="col-md-3 o_light_label"
+                                    for="matomo_heartbeat_timer"
+                                    string="Active Time (seconds)"
+                                />
+                                <field name="matomo_heartbeat_timer" />
+                            </div>
+                        </div>
+                    </div>
+                </setting>
+            </setting>
+        </field>
+    </record>
+</odoo>

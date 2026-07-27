@@ -1,0 +1,129 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_analytics_matomo
+#
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: website (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-25 01:52+0000\n"
+"PO-Revision-Date: 2015-09-25 08:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Spanish (Costa Rica) (http://www.transifex.com/oca/OCA-"
+"website-8-0/language/es_CR/)\n"
+"Language: es_CR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: website_analytics_matomo
+#: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
+msgid "Active Time (seconds)"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model,name:website_analytics_matomo.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
+msgid "Enable User ID"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
+msgid "Enable heartbeat"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings__matomo_heartbeat_timer
+#: model:ir.model.fields,help:website_analytics_matomo.field_website__matomo_heartbeat_timer
+msgid "How many seconds a tab needs to be active to be counted as viewed."
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__has_matomo_analytics
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__has_matomo_analytics
+msgid "Matomo Analytics"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_enable_heartbeat
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_enable_heartbeat
+msgid "Matomo Enable Heartbeat"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_enable_userid
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_enable_userid
+msgid "Matomo Enable Userid"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_get_userid
+msgid "Matomo Get Userid"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_heartbeat_timer
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_heartbeat_timer
+msgid "Matomo Heartbeat Timer"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_analytics_host
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_analytics_host
+msgid "Matomo host"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_analytics_host_url
+msgid "Matomo host URL"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_res_config_settings__matomo_analytics_id
+#: model:ir.model.fields,field_description:website_analytics_matomo.field_website__matomo_analytics_id
+msgid "Matomo website ID"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
+msgid ""
+"Set the Active Time in seconds. Only if the page was viewed for at least "
+"this\n"
+"                                    amount of time (and the user leaves the "
+"page or focuses away from the tab)\n"
+"                                    then a ping request will be sent."
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings__matomo_analytics_id
+#: model:ir.model.fields,help:website_analytics_matomo.field_website__matomo_analytics_id
+msgid "The ID Matomo uses to identify the website"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model.fields,help:website_analytics_matomo.field_res_config_settings__matomo_analytics_host
+#: model:ir.model.fields,help:website_analytics_matomo.field_website__matomo_analytics_host
+msgid ""
+"The host/path your Matomo installation is accessible by on the internet."
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
+msgid "Track visits in Matomo Analytics"
+msgstr ""
+
+#. module: website_analytics_matomo
+#: model:ir.model,name:website_analytics_matomo.model_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: website_analytics_matomo
+#: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
+msgid "https://matomo.host.name/"
+msgstr ""
