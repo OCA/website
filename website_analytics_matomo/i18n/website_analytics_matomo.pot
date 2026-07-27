@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -89,8 +89,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_analytics_matomo.res_config_settings_view_form
 msgid ""
 "Set the Active Time in seconds. Only if the page was viewed for at least this\n"
-"                                    amount of time (and the user leaves the page or focuses away from the tab)\n"
-"                                    then a ping request will be sent."
+"                                amount of time (and the user leaves the page or focuses away from the tab)\n"
+"                                then a ping request will be sent."
 msgstr ""
 
 #. module: website_analytics_matomo
