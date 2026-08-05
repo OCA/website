@@ -4,7 +4,7 @@
 {
     "name": "Marginless Gallery Snippet",
     "summary": "Add a snippet to have a marginless image gallery",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Website",
     "license": "LGPL-3",
     "website": "https://github.com/OCA/website",

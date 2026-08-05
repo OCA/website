@@ -5,21 +5,24 @@
  * Copyright 2020 Tecnativa - Alexandre D. Díaz
  * License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html). */
 
-import wTourUtils from "@website/js/tours/tour_utils";
+import {
+    clickOnSave,
+    insertSnippet,
+    registerWebsitePreviewTour,
+} from "@website/js/tours/tour_utils";
 
-wTourUtils.registerWebsitePreviewTour(
+registerWebsitePreviewTour(
     "marginless_gallery",
     {
-        test: true,
         url: "/",
         edition: true,
     },
     () => [
-        wTourUtils.dragNDrop({id: "s_marginless_gallery", name: "Marginless Gallery"}),
-        wTourUtils.clickOnSnippet({
-            id: "marginless-gallery",
+        ...insertSnippet({
+            id: "s_marginless_gallery",
             name: "Marginless Gallery",
+            groupName: "Images",
         }),
-        ...wTourUtils.clickOnSave(),
+        ...clickOnSave(),
     ]
 );
