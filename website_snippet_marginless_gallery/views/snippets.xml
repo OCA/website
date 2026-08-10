@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2015-2017 Tecnativa - Jairo Llopis <jairo.llopis@tecnativa.com>
+     Copyright 2019 Tecnativa - Cristina Martin R.
+     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
+<odoo>
+    <template id="s_marginless_gallery" name="Marginless Gallery">
+        <section class="marginless-gallery pt32 pb32 text-center">
+            <div class="container">
+                <div class="row d-flex align-items-stretch">
+                    <div
+                        class="o_colored_level o_cc o_cc1 col-lg-12 pb32 pt32 text-center"
+                    >
+                        <h2 class="o_default_snippet_text pb16">
+                            <b>Our Gallery</b>
+                        </h2>
+                        <p class="lead o_default_snippet_text pb16">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                        </p>
+                    </div>
+                    <section
+                        class="col-lg-3 pt32 pb32 oe_img_bg o_colored_level o_bg_img_center o_bg_img_origin_border_box"
+                        style="background-image: url('/website/static/src/img/library/library_image_03.webp');"
+                    >
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc4">
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section
+                        class="col-lg-3 pt32 pb32 oe_img_bg o_colored_level o_bg_img_center o_bg_img_origin_border_box"
+                        style="background-image: url('/website/static/src/img/library/library_image_05.webp');"
+                    >
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc3">
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc2">
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc5">
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc1">
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc4">
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc3">
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section
+                        class="col-lg-3 pt32 pb32 oe_img_bg o_colored_level o_bg_img_center o_bg_img_origin_border_box"
+                        style="background-image: url('/website/static/src/img/library/library_image_07.webp');"
+                    >
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="col-lg-3 pt32 pb32 o_colored_level o_cc o_cc2">
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                    <section
+                        class="col-lg-3 pt32 pb32 oe_img_bg o_colored_level o_bg_img_center o_bg_img_origin_border_box"
+                        style="background-image: url('/website/static/src/img/library/library_image_11.webp');"
+                    >
+                        <div>
+                            <h4 class="o_default_snippet_text">Lorem ipsum</h4>
+                            <p class="o_default_snippet_text mb0">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//snippets[@id='snippet_structure']">
+            <t
+                t-snippet="website_snippet_marginless_gallery.s_marginless_gallery"
+                string="Marginless Gallery"
+                group="images"
+            />
+        </xpath>
+    </template>
+</odoo>
