@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_big_button
+#
+# Translators:
+# Armando Vulcano Junior <vulcano@uol.com.br>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-13 00:48+0000\n"
+"PO-Revision-Date: 2019-09-02 21:23+0000\n"
+"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
+"teams/23907/pt_BR/)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: website_snippet_big_button
+#: model_terms:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
+msgid ""
+"<span class=\"h3 d-block\">I want another thing</span>\n"
+"                            <i class=\"fa fa-thumbs-o-down fa-5x mt16 mb16\"/"
+">\n"
+"                            <span class=\"d-block\">Continue searching</span>"
+msgstr ""
+"<span class=\"h3 d-block\">Quero outra coisa</span>\n"
+"                            <i class=\"fa fa-thumbs-o-down fa-5x mt16 mb16\"/"
+">\n"
+"                            <span class=\"d-block\">Continue pesquisando</"
+"span>"
+
+#. module: website_snippet_big_button
+#: model_terms:ir.ui.view,arch_db:website_snippet_big_button.s_big_button
+msgid ""
+"<span class=\"h3 d-block\">I want this</span>\n"
+"                            <i class=\"fa fa-thumbs-o-up fa-5x mt16 mb16\"/"
+">\n"
+"                            <span class=\"d-block\">Request budget</span>"
+msgstr ""
+"<span class=\"h3 d-block\">Quero isto</span>\n"
+"                            <i class=\"fa fa-thumbs-o-up fa-5x mt16 mb16\"/"
+">\n"
+"                            <span class=\"d-block\">Solicitar orçamento</"
+"span>"
+
+#~ msgid "Continue searching"
+#~ msgstr "Continue procurando"
+
+#~ msgid "I want another thing"
+#~ msgstr "Eu quero outra coisa"
+
+#~ msgid "I want this"
+#~ msgstr "Eu quero isso"
+
+#~ msgid "Request budget"
+#~ msgstr "Solicitar orçamento"
