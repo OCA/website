@@ -6,7 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-08-11 07:46+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -14,40 +15,42 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_product_document_download_counter
 #. odoo-python
 #: code:addons/website_product_document_download_counter/models/product_document.py:0
 msgid "Can't download a document not shown on product page"
-msgstr ""
+msgstr "Ne morem prenesti dokumenta, ki ni prikazan na strani proizvoda"
 
 #. module: website_product_document_download_counter
 #. odoo-python
 #: code:addons/website_product_document_download_counter/models/product_document.py:0
 msgid "Can't download an inactive document"
-msgstr ""
+msgstr "Ne morem prenesti neaktivnega dokumenta"
 
 #. module: website_product_document_download_counter
 #: model:ir.model.fields,field_description:website_product_document_download_counter.field_product_document__download_count
 msgid "Download Count"
-msgstr ""
+msgstr "Št. prenosov"
 
 #. module: website_product_document_download_counter
 #: model:ir.model.fields,field_description:website_product_document_download_counter.field_product_document__download_count_enabled
 msgid "Download Count Enabled"
-msgstr ""
+msgstr "Števec prenosov omogočen"
 
 #. module: website_product_document_download_counter
 #: model:ir.model.fields,help:website_product_document_download_counter.field_product_document__download_count_enabled
 msgid "Enable download counting for this document when published on website"
 msgstr ""
+"Omogoči štetje prenosov tega dokumenta kadar je objavljen na spletni strani"
 
 #. module: website_product_document_download_counter
 #: model:ir.model.fields,help:website_product_document_download_counter.field_product_document__download_count
 msgid "Number of times this document has been downloaded"
-msgstr ""
+msgstr "Število prenosov tega dokumenta"
 
 #. module: website_product_document_download_counter
 #: model:ir.model,name:website_product_document_download_counter.model_product_document
 msgid "Product Document"
-msgstr ""
+msgstr "Dokument proizvoda"
