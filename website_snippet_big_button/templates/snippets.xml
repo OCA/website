@@ -6,7 +6,7 @@
     <template id="s_big_button" name="Big Buttons">
         <section class="oe_snippet_body big-buttons">
             <div class="container">
-                <div class="row mt16 mb16">
+                <div class="row row pt32 pb32">
                     <div class="text-center col-sm-6 offset-lg-2 col-lg-4 pb8">
                         <a href="#" class="btn btn-success btn-lg fw-bold">
                             <span class="h3 d-block">I want this</span>
@@ -26,9 +26,11 @@
         </section>
     </template>
     <template id="snippets" inherit_id="website.snippets">
-        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]">
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
             <t
                 t-snippet="website_snippet_big_button.s_big_button"
+                string="Big Buttons"
+                group="content"
                 t-thumbnail="/website_snippet_big_button/static/description/icon.png"
             />
         </xpath>
