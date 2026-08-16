@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_snippet_country_phone_code_dropdown
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-08-25 10:25+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.4\n"
+
+#. module: website_snippet_country_phone_code_dropdown
+#: model:website.menu,name:website_snippet_country_phone_code_dropdown.country_dropdown_phone_code_demo_page_link
+msgid "Country Phone Code Dropdown Demo"
+msgstr "Demo trascinamento codice telefono nazione"
+
+#. module: website_snippet_country_phone_code_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
+msgid "Example label"
+msgstr "Etichetta esempio"
+
+#. module: website_snippet_country_phone_code_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
+msgid "Example label (readonly)"
+msgstr "Etichetta esempio (solo lettura)"
+
+#. module: website_snippet_country_phone_code_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
+msgid "Submit (you will see the GET parameters in the URL)"
+msgstr "Invio (si vedranno i parametri GET nell'URL)"
+
+#. module: website_snippet_country_phone_code_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
+msgid "Test the country phone code dropdown snippet"
+msgstr "Testa il codice esempio di trascinamento codice telefono nazione"
+
+#. module: website_snippet_country_phone_code_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.country_phone_code_dropdown_demo_view
+msgid "This is a form"
+msgstr "Questo è un modulo"
+
+#. module: website_snippet_country_phone_code_dropdown
+#: model_terms:ir.ui.view,arch_db:website_snippet_country_phone_code_dropdown.dropdown_element_form
+msgid "Your Label"
+msgstr "La tua etichetta"
