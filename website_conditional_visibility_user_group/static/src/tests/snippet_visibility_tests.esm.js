@@ -1,58 +1,62 @@
-/** @odoo-module */
 /* Copyright 2024 Tecnativa - David Vidal
+   Copyrigt 2026 Tecnativa - Adasat Torres
  * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
-import wTourUtils from "@website/js/tours/tour_utils";
+import {
+    changeOptionInPopover,
+    clickOnEditAndWaitEditMode,
+    clickOnSave,
+    clickOnSnippet,
+    insertSnippet,
+    registerWebsitePreviewTour,
+} from "@website/js/tours/tour_utils";
 
-wTourUtils.registerWebsitePreviewTour(
+const snippets = [
+    {
+        id: "s_text_image",
+        name: "Text - Image",
+        groupName: "Content",
+    },
+];
+registerWebsitePreviewTour(
     "conditional_visibility_only_internal_user",
     {
-        test: true,
         url: "/",
         edition: true,
     },
     () => [
-        wTourUtils.dragNDrop({id: "s_text_image", name: "Text - Image"}),
-        wTourUtils.clickOnSnippet({
-            id: "s_text_image",
-            name: "Text - Image",
-        }),
-        wTourUtils.changeOption("ConditionalVisibility", "we-toggler"),
-        wTourUtils.changeOption(
-            "ConditionalVisibility",
-            '[data-name="visibility_conditional"]'
-        ),
+        ...insertSnippet(snippets[0]),
+        ...clickOnSnippet(snippets[0]),
+        ...changeOptionInPopover("Text - Image", "Visibility", "Conditionally"),
+        ...changeOptionInPopover("Text - Image", "Users", "Visible for Logged In"),
+        ...changeOptionInPopover("Text - Image", "Groups", "Only portal users"),
+        ...clickOnSave(),
         {
-            content: "Click in User visibility",
-            trigger: '[data-save-attribute="visibilityValueLogged"]',
-            run: "click",
+            trigger: ".o_website_preview",
         },
-        {
-            content: "Set visibility to logged in users",
-            trigger: '[data-name="visibility_logged_in"]',
-            run: "click",
-        },
-        {
-            content: "Click in group visibility",
-            trigger: '[data-save-attribute="visibilityUserGroup"]',
-            run: "click",
-        },
-        {
-            content: "Set visibility to logged internal users only",
-            trigger: '[data-name="user_group_internal"]',
-            run: "click",
-        },
-        ...wTourUtils.clickOnSave(),
         {
             content: "Check if the rule was applied",
-            trigger: "iframe #wrap .s_text_image",
+            trigger: ":iframe #wrap:not(:visible)",
             run: function () {
-                const style = window.getComputedStyle(this.$anchor[0]);
-                if (style.display === "none") {
-                    console.error(
-                        "Error: this item should be visible for internal users"
-                    );
+                const style = window.getComputedStyle(
+                    this.anchor.getElementsByClassName("s_text_image")[0]
+                );
+                if (style.display !== "none") {
+                    console.error("error");
                 }
             },
         },
+        ...clickOnEditAndWaitEditMode(),
+        {
+            content:
+                "Check if the element is visible as it should always be visible in edit view",
+            trigger: ":iframe #wrap .s_text_image",
+            run: function () {
+                const style = window.getComputedStyle(this.anchor);
+                if (style.display === "none") {
+                    console.error("error");
+                }
+            },
+        },
+        ...clickOnSave(),
     ]
 );

@@ -1,34 +1,30 @@
-/** @odoo-module */
 /* Copyright 2024 Tecnativa - David Vidal
+   Copyright 2026 Tecnativa - Adasat Torres
  * License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). */
 
-import wTourUtils from "@website/js/tours/tour_utils";
+import {registerWebsitePreviewTour} from "@website/js/tours/tour_utils";
 
-wTourUtils.registerWebsitePreviewTour(
+registerWebsitePreviewTour(
     "conditional_visibility_portal",
     {
-        test: true,
         url: "/",
     },
     () => [
         {
             content: "Go to '/'",
             trigger: 'header#top a[href="/"]',
+            expectUnloadPage: true,
+            run: "click",
         },
         {
-            content: "The content should be hidden for portal users",
-            trigger: "#wrap",
+            content: "The content previously hidden should now be visible",
+            trigger: "body #wrapwrap",
             run: function () {
-                const elements = this.$anchor[0].getElementsByClassName("s_text_image");
-                if (elements.length === 0) {
-                    console.log("Success: Element is not visible for portal users");
-                } else {
-                    const style = window.getComputedStyle(elements[0]);
-                    if (style.display !== "none") {
-                        console.error(
-                            "Error: This item should be invisible for portal users"
-                        );
-                    }
+                const style = window.getComputedStyle(
+                    this.anchor.getElementsByClassName("s_text_image")[0]
+                );
+                if (style.display === "none") {
+                    console.error("error");
                 }
             },
         },

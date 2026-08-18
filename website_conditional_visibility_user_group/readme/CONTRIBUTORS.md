@@ -1,3 +1,5 @@
 - [Tecnativa](https://tecnativa.com)
   - David Vidal
   - Pilar Vargas
+  - Carlos Roca
+  - Adasat Torres
