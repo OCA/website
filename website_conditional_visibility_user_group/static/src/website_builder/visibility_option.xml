@@ -1,0 +1,37 @@
+<templates>
+    <t
+        t-name="website_conditional_visibility_user_group.VisibilityOption"
+        t-inherit="website.VisibilityOption"
+        t-inherit-mode="extension"
+    >
+        <xpath
+            expr="//BuilderSelectItem[normalize-space(.)='Visible for Logged In']"
+            position="attributes"
+        >
+            <attribute name="id">'visibility_value_logged'</attribute>
+        </xpath>
+        <xpath
+            expr="//BuilderSelect[contains(@dataAttributeAction, 'visibilityValueLogged')]/.."
+            position="after"
+        >
+            <BuilderRow
+                label.translate="Groups"
+                level="2"
+                t-if="isActiveItem('visibility_value_logged')"
+                preview="false"
+            >
+                <BuilderSelect dataAttributeAction="'visibilityUserGroup'">
+                    <BuilderSelectItem
+                        dataAttributeActionValue="''"
+                    >No restriction</BuilderSelectItem>
+                    <BuilderSelectItem
+                        dataAttributeActionValue="'[{&quot;id&quot;:1,&quot;value&quot;:&quot;portal&quot;}]'"
+                    >Only portal users</BuilderSelectItem>
+                    <BuilderSelectItem
+                        dataAttributeActionValue="'[{&quot;id&quot;:2,&quot;value&quot;:&quot;internal&quot;}]'"
+                    >Only internal users</BuilderSelectItem>
+                </BuilderSelect>
+            </BuilderRow>
+        </xpath>
+    </t>
+</templates>
