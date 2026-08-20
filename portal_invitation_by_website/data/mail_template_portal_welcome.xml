@@ -2,16 +2,19 @@
 <odoo>
     <record id="mail_template_portal_welcome_website" model="mail.template">
         <field name="name">Portal: User Invite (Website)</field>
-        <field name="model_id" ref="portal.model_portal_wizard_user" />
-        <field name="email_to">{{ object.user_id.email_formatted }}</field>
+        <field name="model_id" ref="base.model_res_users" />
+        <field
+            name="email_from"
+        >{{ (object.company_id.email_formatted or user.email_formatted) }}</field>
+        <field name="email_to">{{ object.email_formatted }}</field>
         <field
             name="description"
         >Invitation email using website name instead of company name</field>
-        <field name="lang">{{ object.partner_id.lang }}</field>
+        <field name="lang">{{ object.lang }}</field>
         <field name="auto_delete" eval="True" />
         <field
             name="subject"
-        >Your account at {{ object.website_id.name or object.user_id.company_id.name }}</field>
+        >Your account at {{ object.website_id.name or object.company_id.name }}</field>
         <field name="body_html" type="html">
             <table
                 border="0"
@@ -47,18 +50,18 @@
                                                     <br />
                                                     <span
                                                         style="font-size: 20px; font-weight: bold;"
-                                                        t-out="object.user_id.name or ''"
+                                                        t-out="object.name or ''"
                                                     >Marc Demo</span>
                                                 </td>
                                                 <td
                                                     valign="middle"
                                                     align="right"
-                                                    t-if="not object.user_id.company_id.uses_default_logo"
+                                                    t-if="not object.company_id.uses_default_logo"
                                                 >
                                                     <img
-                                                        t-attf-src="/logo.png?company={{ object.user_id.company_id.id }}"
+                                                        t-attf-src="/logo.png?company={{ object.company_id.id }}"
                                                         style="padding: 0px; margin: 0px; height: auto; width: 80px;"
-                                                        t-att-alt="object.user_id.company_id.name"
+                                                        t-att-alt="object.company_id.name"
                                                     />
                                                 </td>
                                             </tr>
@@ -92,27 +95,26 @@
                                                     style="font-size: 13px;"
                                                 >
                                                     <div>
-                        Dear <t t-out="object.user_id.name or ''">Marc Demo</t>,<br
-                                                    /> <br />
+                        Dear <t t-out="object.name or ''">Marc Demo</t>,<br /> <br />
                         Welcome to <t
-                                                        t-out="object.website_id.name or object.user_id.company_id.name or ''"
+                                                        t-out="object.website_id.name or object.company_id.name or ''"
                                                     >YourCompany</t>'s Portal!<br /><br
                                                     />
                         An account has been created for you with the following login: <t
-                                                        t-out="object.user_id.login"
+                                                        t-out="object.login"
                                                     >demo</t><br /><br />
                         Click on the button below to pick a password and activate your account.
                         <div style="margin: 16px 0px 16px 0px; text-align: center;">
                                                         <a
-                                                            t-att-href="object.user_id.signup_url"
-                                                            style="display: inline-block; padding: 10px; text-decoration: none; font-size: 12px; background-color: #875A7B; color: #fff; border-radius: 5px;"
+                                                            t-att-href="object.partner_id._get_signup_url()"
+                                                            t-attf-style="display: inline-block; padding: 10px; text-decoration: none; font-size: 12px; background-color: {{object.company_id.email_secondary_color or '#875A7B'}}; color: {{object.company_id.email_primary_color or '#FFFFFF'}}; border-radius: 5px;"
                                                         >
                                                             <strong
                                                             >Activate Account</strong>
                                                         </a>
                                                     </div>
                         <t
-                                                        t-out="object.wizard_id.welcome_message or ''"
+                                                        t-out="ctx.get('welcome_message') or ''"
                                                     >Welcome to our company's portal.</t>
                     </div>
                                                 </td>
@@ -141,7 +143,7 @@
                                             <tr>
                                                 <td valign="middle" align="left">
                                                     <t
-                                                        t-out="object.website_id.name or object.user_id.company_id.name or ''"
+                                                        t-out="object.website_id.name or object.company_id.name or ''"
                                                     >YourCompany</t>
                                                 </td>
                                             </tr>
@@ -152,24 +154,22 @@
                                                     style="opacity: 0.7;"
                                                 >
                                                     <t
-                                                        t-out="object.user_id.company_id.phone or ''"
+                                                        t-out="object.company_id.phone or ''"
                                                     >+1 650-123-4567</t>
-                                                    <t
-                                                        t-if="object.user_id.company_id.email"
-                                                    >
+                                                    <t t-if="object.company_id.email">
                         | <a
-                                                        t-attf-href="'mailto:%s' % {{ object.user_id.company_id.email }}"
+                                                        t-attf-href="mailto:{{ object.company_id.email }}"
                                                         style="text-decoration:none; color: #454748;"
-                                                        t-out="object.user_id.company_id.email or ''"
+                                                        t-out="object.company_id.email or ''"
                                                     >info@yourcompany.com</a>
                     </t>
                                                     <t
-                                                        t-if="object.website_id.domain or object.user_id.company_id.website"
+                                                        t-if="object.website_id.domain or object.company_id.website"
                                                     >
                         | <a
-                                                        t-att-href="object.website_id.domain or object.user_id.company_id.website"
+                                                        t-att-href="object.website_id.domain or object.company_id.website"
                                                         style="text-decoration:none; color: #454748;"
-                                                        t-out="object.website_id.domain or object.user_id.company_id.website"
+                                                        t-out="object.website_id.domain or object.company_id.website"
                                                     >http://www.example.com</a>
                     </t>
                                                 </td>
@@ -195,8 +195,8 @@
                                 <td style="text-align: center; font-size: 13px;">
         Powered by <a
                                     target="_blank"
-                                    href="https://www.odoo.com?utm_source=db&amp;utm_medium=portalinvite"
-                                    style="color: #875A7B;"
+                                    t-attf-href="https://www.odoo.com?utm_source=db&amp;utm_medium={{ ctx.get('medium', 'auth') }}"
+                                    t-attf-style="color: {{object.company_id.email_secondary_color or '#875A7B'}};"
                                 >Odoo</a>
       </td>
                             </tr>

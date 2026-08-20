@@ -6,7 +6,6 @@ class PortalWizard(models.TransientModel):
 
     website_id = fields.Many2one(
         comodel_name="website",
-        string="Website",
         help="Apply this website to all the contacts below. "
         "The invitation email URL will match this website's domain. "
         "Leave empty to keep each contact's current website.",
@@ -25,7 +24,6 @@ class PortalWizardUser(models.TransientModel):
 
     website_id = fields.Many2one(
         comodel_name="website",
-        string="Website",
         compute="_compute_website_id",
         store=True,
         readonly=False,
@@ -37,6 +35,10 @@ class PortalWizardUser(models.TransientModel):
             user.website_id = user.wizard_id.website_id or user.partner_id.website_id
 
     def action_grant_access(self):
+        # Apply the website before creating the user, so that the signup URL
+        # sent by email is built with the website domain (see
+        # `get_base_url()` override in `website`).
+        self._apply_website_to_partner()
         self = self.with_context(portal_invitation_website_id=self.website_id.id)
         return super().action_grant_access()
 

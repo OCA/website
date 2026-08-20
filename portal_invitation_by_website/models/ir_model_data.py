@@ -1,6 +1,6 @@
 from odoo import api, models
 
-PORTAL_WELCOME_XMLID = "portal.mail_template_data_portal_welcome"
+PORTAL_WELCOME_XMLID = "auth_signup.portal_set_password_email"
 WEBSITE_WELCOME_XMLID = (
     "portal_invitation_by_website.mail_template_portal_welcome_website"
 )

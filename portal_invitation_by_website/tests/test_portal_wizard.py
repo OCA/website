@@ -9,7 +9,7 @@ class TestPortalWizardWebsite(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.website_1 = cls.env["website"].search([("sequence", "=", 1)], limit=1)
+        cls.website_1 = cls.env.ref("website.default_website")
         cls.website_2 = cls.env["website"].create(
             {
                 "name": "Website 2",
