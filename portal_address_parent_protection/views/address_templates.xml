@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 ForgeFlow S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template
+        id="address_form_fields"
+        inherit_id="portal.address_form_fields"
+        name="Address Details: read-only company name for child contacts"
+    >
+        <!-- Core only makes the field read-only on addresses other than the
+             main one. A contact whose commercial entity is its parent company
+             may not rename that company either, and the submitted value is
+             dropped by the controller, so show it as read-only. -->
+        <xpath expr="//input[@name='company_name']" position="attributes">
+            <attribute
+                name="t-att-readonly"
+            >'1' if not is_main_address or current_partner != commercial_partner else None</attribute>
+        </xpath>
+    </template>
+</odoo>
