@@ -5,8 +5,8 @@ from odoo.http import request
 
 from odoo.addons.portal.controllers import portal
 
-DEFAULT_LIMIT_OPTIONS = (10, 20, 40, 80, 100)
-OPTIONS_PARAM = "website_portal_pager_limit.options"
+DEFAULT_SIZE_OPTIONS = (10, 20, 40, 80, 100)
+OPTIONS_PARAM = "portal_pager_size.options"
 
 
 class CustomerPortal(portal.CustomerPortal):
@@ -22,24 +22,24 @@ class CustomerPortal(portal.CustomerPortal):
         standard portal page size, so pagination always stays functional.
         """
         limit = request.httprequest.args.get("limit", "")
-        if limit.isdigit() and int(limit) in self._get_portal_pager_limit_options():
+        if limit.isdigit() and int(limit) in self._get_portal_pager_size_options():
             return int(limit)
         # Invalid or missing value: fall back to the standard portal page size
         return portal.CustomerPortal._items_per_page
 
-    def _get_portal_pager_limit_options(self):
+    def _get_portal_pager_size_options(self):
         """Return the whitelist of allowed page sizes as a fresh ``list``.
 
         Misconfigured values (non digits, empty string) are discarded so a
         broken system parameter can never disable the portal pagination. A new
-        list is always returned (copied from ``DEFAULT_LIMIT_OPTIONS`` on the
+        list is always returned (copied from ``DEFAULT_SIZE_OPTIONS`` on the
         fallback paths) so callers can never mutate the module-level default.
         """
         param = request.env["ir.config_parameter"].sudo().get_param(OPTIONS_PARAM)
         if not param:
-            return list(DEFAULT_LIMIT_OPTIONS)
+            return list(DEFAULT_SIZE_OPTIONS)
         options = [int(x.strip()) for x in param.split(",") if x.strip().isdigit()]
-        return options or list(DEFAULT_LIMIT_OPTIONS)
+        return options or list(DEFAULT_SIZE_OPTIONS)
 
     def _prepare_portal_layout_values(self):
         """Add the page-size selector data to the portal layout values.
@@ -50,7 +50,7 @@ class CustomerPortal(portal.CustomerPortal):
         """
         values = super()._prepare_portal_layout_values()
         values.update(
-            portal_pager_limit_options=self._get_portal_pager_limit_options(),
-            portal_pager_limit=self._items_per_page,
+            portal_pager_size_options=self._get_portal_pager_size_options(),
+            portal_pager_size=self._items_per_page,
         )
         return values

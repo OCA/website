@@ -7,17 +7,17 @@
              when there is a single page (the <ul> hides itself then). -->
         <xpath expr="//ul" position="after">
             <select
-                t-if="portal_pager_limit_options"
-                class="o_portal_pager_limit form-select form-select-sm w-auto"
+                t-if="portal_pager_size_options"
+                class="o_portal_pager_size form-select form-select-sm w-auto"
                 aria-label="Records per page"
                 title="Records per page"
             >
                 <option
-                    t-foreach="portal_pager_limit_options"
-                    t-as="limit_option"
-                    t-att-value="limit_option"
-                    t-att-selected="'selected' if limit_option == portal_pager_limit else None"
-                    t-out="limit_option"
+                    t-foreach="portal_pager_size_options"
+                    t-as="size_option"
+                    t-att-value="size_option"
+                    t-att-selected="'selected' if size_option == portal_pager_size else None"
+                    t-out="size_option"
                 />
             </select>
         </xpath>

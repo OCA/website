@@ -1,7 +1,7 @@
 # Copyright (C) 2026 XXP
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
-    "name": "Website Portal Pager Limit",
+    "name": "Portal Pager Size",
     "summary": "Adds a configurable page size selector to portal pages, "
     "allowing users to control the number of records displayed "
     "per page via the portal pager.",
@@ -17,8 +17,8 @@
     ],
     "assets": {
         "web.assets_frontend": [
-            "website_portal_pager_limit/static/src/scss/portal_pager_limit.scss",
-            "website_portal_pager_limit/static/src/js/portal_pager_limit.esm.js",
+            "portal_pager_size/static/src/scss/portal_pager_size.scss",
+            "portal_pager_size/static/src/js/portal_pager_size.esm.js",
         ],
     },
     "installable": True,

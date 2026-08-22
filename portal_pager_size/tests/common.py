@@ -7,7 +7,7 @@ from types import SimpleNamespace
 from odoo.http import _request_stack
 from odoo.tests.common import TransactionCase
 
-from odoo.addons.website_portal_pager_limit.controllers.portal import (
+from odoo.addons.portal_pager_size.controllers.portal import (
     OPTIONS_PARAM,
     CustomerPortal,
 )
@@ -15,7 +15,7 @@ from odoo.addons.website_portal_pager_limit.controllers.portal import (
 STANDARD_LIMIT = 80
 
 
-class TestPortalPagerLimitCommon(TransactionCase):
+class TestPortalPagerSizeCommon(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()

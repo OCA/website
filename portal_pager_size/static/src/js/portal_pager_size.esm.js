@@ -4,10 +4,10 @@
 
 import publicWidget from "web.public.widget";
 
-publicWidget.registry.PortalPagerLimit = publicWidget.Widget.extend({
-    selector: ".o_portal_pager_limit",
+publicWidget.registry.PortalPagerSize = publicWidget.Widget.extend({
+    selector: ".o_portal_pager_size",
     events: {
-        change: "_onChangeLimit",
+        change: "_onChangeSize",
     },
 
     /**
@@ -44,7 +44,7 @@ publicWidget.registry.PortalPagerLimit = publicWidget.Widget.extend({
      * @private
      * @param {Event} ev
      */
-    _onChangeLimit(ev) {
+    _onChangeSize(ev) {
         const url = new URL(window.location.href);
         url.pathname = url.pathname.replace(/\/page\/\d+/, "");
         url.searchParams.set("limit", ev.currentTarget.value);
@@ -52,4 +52,4 @@ publicWidget.registry.PortalPagerLimit = publicWidget.Widget.extend({
     },
 });
 
-export default publicWidget.registry.PortalPagerLimit;
+export default publicWidget.registry.PortalPagerSize;

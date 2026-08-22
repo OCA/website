@@ -1,10 +1,10 @@
 # Copyright (C) 2026 XXP
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from .common import STANDARD_LIMIT, TestPortalPagerLimitCommon
+from .common import STANDARD_LIMIT, TestPortalPagerSizeCommon
 
 
-class TestItemsPerPage(TestPortalPagerLimitCommon):
+class TestItemsPerPage(TestPortalPagerSizeCommon):
     def test_valid_limit(self):
         self._set_options_param("10,20,40,80,100")
         with self._mock_request(args={"limit": "20"}):
@@ -42,5 +42,5 @@ class TestItemsPerPage(TestPortalPagerLimitCommon):
         portal_env = self.env(user=self.portal_user)
         with self._mock_request(args={"limit": "20"}, env=portal_env):
             values = self.controller._prepare_portal_layout_values()
-        self.assertEqual(values["portal_pager_limit_options"], [10, 20, 40, 80, 100])
-        self.assertEqual(values["portal_pager_limit"], 20)
+        self.assertEqual(values["portal_pager_size_options"], [10, 20, 40, 80, 100])
+        self.assertEqual(values["portal_pager_size"], 20)

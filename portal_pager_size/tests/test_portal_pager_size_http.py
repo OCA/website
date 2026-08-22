@@ -5,7 +5,7 @@ from odoo.tests.common import HttpCase, tagged
 
 
 @tagged("post_install", "-at_install")
-class TestPortalPagerLimitHttp(HttpCase):
+class TestPortalPagerSizeHttp(HttpCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
