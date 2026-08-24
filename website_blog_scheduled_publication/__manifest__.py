@@ -4,7 +4,7 @@
 {
     "name": "Blog Scheduled Publication",
     "summary": "Schedule blog posts publication date",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.1.0",
     "author": "Escodoo, Odoo Community Association (OCA)",
     "maintainers": ["marcelsavegnago", "CristianoMafraJunior"],
     "license": "AGPL-3",
