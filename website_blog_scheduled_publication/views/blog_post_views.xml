@@ -125,7 +125,7 @@
     <record id="action_blog_post_calendar_scheduled" model="ir.actions.act_window">
         <field name="name">Scheduled Blog Posts</field>
         <field name="res_model">blog.post</field>
-        <field name="view_mode">calendar,tree,form</field>
+        <field name="view_mode">calendar,list,form</field>
         <field name="view_id" ref="view_blog_post_calendar_scheduled" />
         <field name="domain">[('scheduled_publication_date', '!=', False)]</field>
         <field name="context">{}</field>
