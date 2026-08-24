@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="portal_wizard_view_website" model="ir.ui.view">
+        <field name="name">portal.wizard.website</field>
+        <field name="model">portal.wizard</field>
+        <field name="inherit_id" ref="portal.wizard_view" />
+        <field name="arch" type="xml">
+            <!-- Website selector at wizard level: applies to all contacts -->
+            <field name="welcome_message" position="before">
+                <group>
+                    <field name="website_id" options="{'no_create': True}" />
+                </group>
+            </field>
+            <!-- Per-contact website column in the tree (optional override) -->
+            <xpath
+                expr="//field[@name='user_ids']//field[@name='email']"
+                position="after"
+            >
+                <field
+                    name="website_id"
+                    optional="show"
+                    options="{'no_create': True}"
+                />
+            </xpath>
+            <!-- Apply website button in footer (batch, no email sent) -->
+            <xpath expr="//footer/button[@special='save']" position="before">
+                <button
+                    string="Apply Website"
+                    name="action_apply_website"
+                    type="object"
+                    class="btn-secondary"
+                    invisible="not website_id"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
