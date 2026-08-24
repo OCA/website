@@ -22,6 +22,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[portal_invitation_by_website](portal_invitation_by_website/) | 19.0.1.0.0 |  | Restrict portal users to a specific website from the invitation wizard
 [website_conditional_visibility_user_group](website_conditional_visibility_user_group/) | 19.0.1.0.0 |  | Only internal users will see the blocks you add this condition to
 [website_cookiefirst](website_cookiefirst/) | 19.0.1.0.0 |  | Cookiefirst integration
 [website_form_require_legal](website_form_require_legal/) | 19.0.1.0.1 |  | Add possibility to require confirm legal terms.
