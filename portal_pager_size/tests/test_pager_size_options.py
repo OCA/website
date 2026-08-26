@@ -1,6 +1,3 @@
-# Copyright (C) 2026 XXP
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-
 from odoo.addons.portal_pager_size.controllers.portal import (
     DEFAULT_SIZE_OPTIONS,
     OPTIONS_PARAM,

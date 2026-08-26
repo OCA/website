@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Copyright (C) 2026 XXP
-     License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). -->
 <odoo noupdate="1">
     <record id="pager_size_options" model="ir.config_parameter">
         <field name="key">portal_pager_size.options</field>

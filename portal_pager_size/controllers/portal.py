@@ -1,6 +1,3 @@
-# Copyright (C) 2026 XXP
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-
 from odoo.http import request
 
 from odoo.addons.portal.controllers import portal
