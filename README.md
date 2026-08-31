@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [website_form_require_legal](website_form_require_legal/) | 19.0.1.0.1 |  | Add possibility to require confirm legal terms.
 [website_forum_subscription](website_forum_subscription/) | 19.0.1.0.0 |  | Adds a button to allow subscription from the website
 [website_google_tag_manager](website_google_tag_manager/) | 19.0.1.0.0 |  | Add support for Google Tag Manager
+[website_require_login](website_require_login/) | 19.0.1.0.0 |  | Website Login Required
 [website_snippet_big_button](website_snippet_big_button/) | 19.0.1.0.0 |  | A snippet that adds two big buttons
 [website_snippet_marginless_gallery](website_snippet_marginless_gallery/) | 19.0.1.0.0 |  | Add a snippet to have a marginless image gallery
 
