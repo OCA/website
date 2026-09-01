@@ -1,0 +1,28 @@
+.s_website_form {
+    // Strip nested col-12 gutter on fields so the wrapper column provides spacing.
+    .o_form_column {
+        min-height: 4rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+
+        > .s_website_form_field {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &[data-multi-column] .o_form_column:empty {
+        outline: 1px dashed var(--bs-border-color);
+        outline-offset: -4px;
+        border-radius: 0.25rem;
+    }
+}
