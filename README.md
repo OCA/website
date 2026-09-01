@@ -34,6 +34,7 @@ addon | version | maintainers | summary
 [website_forum_subscription](website_forum_subscription/) | 18.0.1.0.2 |  | Adds a button to allow subscription from the website
 [website_google_tag_manager](website_google_tag_manager/) | 18.0.1.0.0 |  | Add support for Google Tag Manager
 [website_legal_page](website_legal_page/) | 18.0.1.0.0 |  | Website Legal Page
+[website_llms](website_llms/) | 18.0.1.0.0 | <a href='https://github.com/marcelsavegnago'><img src='https://github.com/marcelsavegnago.png' width='32' height='32' style='border-radius:50%;' alt='marcelsavegnago'/></a> | This module adds support for serving a /llms.txt file in the website root. The content can be configured per website in the website settings.
 [website_menu_by_user_status](website_menu_by_user_status/) | 18.0.1.0.0 |  | Allow to manage the display of website.menus
 [website_odoo_debranding](website_odoo_debranding/) | 18.0.1.0.0 |  | Remove Odoo Branding from Website
 [website_partner_form](website_partner_form/) | 18.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Allow to edit partner website fields on partner form view, in the back office
