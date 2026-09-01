@@ -43,8 +43,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_llms.res_config_settings_view_form_inherit_website_llms
 msgid ""
 "Content to be served at <code>/llms.txt</code>. This file provides\n"
-"                            information for Large Language Models (LLMs) about your website.\n"
-"                            Leave empty to use default content."
+"                                    information for Large Language Models (LLMs) about your website.\n"
+"                                    Leave empty to use default content."
 msgstr ""
 
 #. module: website_llms
