@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="res_config_settings_view_form_inherit_website_llms" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='website_info_settings']" position="inside">
+                <setting class="col-lg-12">
+                    <div class="content-group">
+                        <div class="row mt8">
+                            <label
+                                class="col-lg-3"
+                                string="llms.txt Content"
+                                for="llms_txt_content"
+                            />
+                            <div class="col-lg-9">
+                                <field
+                                    name="llms_txt_content"
+                                    widget="text"
+                                    placeholder="# Your Website — Information for LLMs&#10;&#10;## Company&#10;- About: https://yourdomain.com/aboutus&#10;- Contact: https://yourdomain.com/contactus&#10;&#10;## Content&#10;- Blog: https://yourdomain.com/blog"
+                                    invisible="not website_id"
+                                />
+                                <div class="text-muted mt-2">
+                                    Content to be served at <code
+                                >/llms.txt</code>. This file provides
+                                    information for Large Language Models (LLMs) about your website.
+                                    Leave empty to use default content.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
