@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--
+    Hide the Sign In button for public users. The <li> element remains in the
+    rendered HTML (d-none keeps it in the DOM) so the hiding is reversible by
+    uninstalling this module.
+    -->
+    <template
+        id="user_sign_in_hide"
+        inherit_id="portal.user_sign_in"
+        name="Hide Sign In Button"
+    >
+        <xpath expr="//li[@groups='base.group_public']" position="attributes">
+            <attribute
+                name="t-attf-class"
+            >#{_item_class} o_no_autohide_item d-none</attribute>
+        </xpath>
+    </template>
+</odoo>
