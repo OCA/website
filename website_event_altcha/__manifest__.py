@@ -4,7 +4,7 @@
 {
     "name": "Privacy Friendly Captcha - Event Registration",
     "summary": "Support event registration with ALTCHA",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.1.0",
     "license": "AGPL-3",
     "author": "Hunki Enterprises BV,Odoo Community Association (OCA)",
     "maintainers": ["hbrunn"],
