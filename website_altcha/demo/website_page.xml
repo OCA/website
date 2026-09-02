@@ -1,0 +1,36 @@
+<odoo>
+    <template id="demo_page_view">
+        <t t-call="website.layout">
+            <form class="website_altcha_form">
+                <p>
+                    This is a demo form for website_altcha. Note how it automatically inserts the widget in the container containing the submit button
+                </p>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            <form class="website_altcha_form">
+                <p>
+                    You can however also place the widget yourself and configure it according to the <a
+                    href="https://altcha.org/docs/v2/widget-integration/#attribute-configuration"
+                >documentation</a>. In that case the <em
+                >website_altcha_form</em> class only takes care that the javascript code is loaded and activated.
+                </p>
+                <p>
+                    Note in both cases, you'll have to verify the token you received in your custom controller.
+                </p>
+                <div>
+                    <altcha-widget type="switch" />
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </t>
+    </template>
+    <record id="demo_page" model="website.page">
+        <field name="url">/website_altcha_demo</field>
+        <field name="is_published" eval="True" />
+        <field name="view_id" ref="demo_page_view" />
+    </record>
+</odoo>
