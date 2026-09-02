@@ -5,7 +5,7 @@
     "name": "Privacy Friendly Captcha",
     "summary": """Use self hosted privacy friendly captcha for
     verifying website users are not bots""",
-    "version": "18.0.1.0.1",
+    "version": "18.0.1.1.0",
     "license": "AGPL-3",
     "author": "Dixmit,Odoo Community Association (OCA)",
     "maintainers": ["hbrunn"],
