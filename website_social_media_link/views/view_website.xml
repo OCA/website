@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_website_form" model="ir.ui.view">
+        <field name="model">website</field>
+        <field name="inherit_id" ref="website.view_website_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Social Media" name="page_social_media">
+                    <group>
+                        <field name="social_linkedin" />
+                        <field name="social_twitter" />
+                        <field name="social_facebook" />
+                        <field name="social_github" />
+                        <field name="social_youtube" />
+                        <field name="social_instagram" />
+                        <field name="social_tiktok" />
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
