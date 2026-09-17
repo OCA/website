@@ -31,6 +31,7 @@ addon | version | maintainers | summary
 [website_cookiefirst](website_cookiefirst/) | 18.0.2.0.0 |  | Cookiefirst integration
 [website_crm_quick_answer](website_crm_quick_answer/) | 18.0.1.0.0 |  | Add an automatic answer for contacts asking for info
 [website_event_altcha](website_event_altcha/) | 18.0.1.1.0 | <a href='https://github.com/hbrunn'><img src='https://github.com/hbrunn.png' width='32' height='32' style='border-radius:50%;' alt='hbrunn'/></a> | Support event registration with ALTCHA
+[website_exclude_sitemap](website_exclude_sitemap/) | 18.0.1.0.0 |  | Exclude addresses from the sitemap.xml file according to the values defined in the configuration
 [website_form_require_legal](website_form_require_legal/) | 18.0.1.0.2 |  | Add possibility to require confirm legal terms.
 [website_forum_subscription](website_forum_subscription/) | 18.0.1.0.2 |  | Adds a button to allow subscription from the website
 [website_google_tag_manager](website_google_tag_manager/) | 18.0.1.0.0 |  | Add support for Google Tag Manager
