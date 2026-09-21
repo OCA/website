@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2026-06-03 09:46+0000\n"
+"PO-Revision-Date: 2026-09-21 20:37+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -22,6 +22,8 @@ msgid ""
 ". In that case the <em>website_altcha_form</em> class only takes care that "
 "the javascript code is loaded and activated."
 msgstr ""
+". In tal caso, la classe <em>website_altcha_form</em> si occupa "
+"esclusivamente di far sì che il codice JavaScript venga caricato e attivato."
 
 #. module: website_altcha
 #: model_terms:ir.ui.view,arch_db:website_altcha.res_config_settings_view_form
@@ -157,11 +159,13 @@ msgid ""
 "Note in both cases, you'll have to verify the token you received in your "
 "custom controller."
 msgstr ""
+"Nota: in entrambi i casi, dovrai verificare il token ricevuto nel tuo "
+"controller personalizzato."
 
 #. module: website_altcha
 #: model_terms:ir.ui.view,arch_db:website_altcha.demo_page_view
 msgid "Submit"
-msgstr ""
+msgstr "Invia"
 
 #. module: website_altcha
 #. odoo-python
@@ -180,6 +184,8 @@ msgid ""
 "This is a demo form for website_altcha. Note how it automatically inserts "
 "the widget in the container containing the submit button"
 msgstr ""
+"Questo è un modulo dimostrativo per website_altcha. Notare come inserisca "
+"automaticamente il widget nel contenitore che ospita il pulsante di invio"
 
 #. module: website_altcha
 #: model:ir.model.fields,help:website_altcha.field_res_config_settings__altcha_timeout
@@ -209,8 +215,10 @@ msgid ""
 "You can however also place the widget yourself and configure it according to "
 "the"
 msgstr ""
+"Tuttavia, si può anche posizionare il widget autonomamente e configurarlo "
+"secondo le proprie esigenze"
 
 #. module: website_altcha
 #: model_terms:ir.ui.view,arch_db:website_altcha.demo_page_view
 msgid "documentation"
-msgstr ""
+msgstr "documentazione"
