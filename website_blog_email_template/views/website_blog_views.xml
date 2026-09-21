@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Marcel Savegnago - Escodoo <https://escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+    <record id="view_blog_blog_form_inherit" model="ir.ui.view">
+        <field name="name">blog.blog.form.inherit.email.template</field>
+        <field name="model">blog.blog</field>
+        <field name="inherit_id" ref="website_blog.view_blog_blog_form" />
+        <field name="arch" type="xml">
+            <field name="subtitle" position="after">
+                <field
+                    name="mail_template_id"
+                    options="{'no_create': True}"
+                    placeholder="Use default template"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
