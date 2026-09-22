@@ -45,7 +45,7 @@ class IrHttp(models.AbstractModel):
             return result
         if not request.website.sudo().altcha_key:
             return result
-        altcha_signature = request.params.get("altcha")
+        altcha_signature = request.params.pop("altcha", None)
         if not altcha_signature:
             _logger.warning("Altcha token missing in request")
             raise UserError(_("Suspicious activity detected by Altcha"))
