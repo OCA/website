@@ -1,0 +1,4 @@
+- Dave Lasley <dave@laslabs.com>
+- [Studio73](https://studio73.es)
+  - Alex Garcia
+  - Miguel Gandia

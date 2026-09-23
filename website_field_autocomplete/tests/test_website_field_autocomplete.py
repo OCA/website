@@ -1,27 +1,39 @@
 from odoo.tests.common import TransactionCase
 
-from odoo.addons.website.tools import MockRequest
-from odoo.addons.website_field_autocomplete.controllers.main import (
-    Website,  # Asumiendo que esta es tu clase extendida
-)
+from odoo.addons.http_routing.tests.common import MockRequest
+from odoo.addons.website_field_autocomplete.controllers.main import Website
 
 
-class TestWensiteFieldAutocomplete(TransactionCase):
+class TestWebsiteFieldAutocomplete(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
         cls.current_website = cls.env["website"].get_current_website()
 
     def test_get_field_autocomplete(self):
-        Partner = self.env["res.partner"]
-        Partner.create({"name": "Test Partner"})
+        partner = self.env["res.partner"].create(
+            {
+                "name": "Website Field Autocomplete Test Partner",
+                "parent_id": self.current_website.user_id.partner_id.id,
+            }
+        )
         payload = {
-            "domain": [["name", "ilike", "Test"]],
+            "domain": [["id", "=", partner.id]],
             "fields": ["name"],
             "limit": 5,
         }
         with MockRequest(self.env, website=self.current_website):
             response = Website()._get_field_autocomplete(model="res.partner", **payload)
-            self.assertIsInstance(response, list, "Debe devolver una lista")
-            self.assertTrue(len(response) > 0, "Debe encontrar al menos un registro")
-            self.assertEqual(response[0]["name"], "Test Partner")
+
+        self.assertEqual(len(response), 1)
+        self.assertEqual(response[0]["name"], partner.name)
+
+    def test_get_field_autocomplete_rejects_missing_fields(self):
+        payload = {
+            "domain": [],
+            "fields": [],
+        }
+        with MockRequest(self.env, website=self.current_website):
+            response = Website()._get_field_autocomplete(model="res.partner", **payload)
+
+        self.assertEqual(response, [])
