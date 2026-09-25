@@ -4,6 +4,7 @@ import {session} from "@web/session";
 
 export const AltchaBaseFunctionality = {
     altcha_prepend_to: "div.oe_login_buttons",
+    altcha_append_to: false,
     altcha_enabled: false,
 
     altcha_init() {
@@ -24,9 +25,16 @@ export const AltchaBaseFunctionality = {
     },
     altcha_insert_widget() {
         if (this.altcha_enabled && !this.$el.find("altcha-widget").length) {
-            this.$el
-                .find(this.altcha_prepend_to)
-                .prepend(renderToString("website_altcha.AltchaWidget", {}));
+            if (this.altcha_prepend_to) {
+                this.$el
+                    .find(this.altcha_prepend_to)
+                    .prepend(renderToString("website_altcha.AltchaWidget", {}));
+            }
+            if (this.altcha_append_to) {
+                this.$el
+                    .find(this.altcha_append_to)
+                    .append(renderToString("website_altcha.AltchaWidget", {}));
+            }
         }
     },
 };
