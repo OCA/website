@@ -1,0 +1,1 @@
+The module currently covers the follow widget provided by ``website_mail``.
