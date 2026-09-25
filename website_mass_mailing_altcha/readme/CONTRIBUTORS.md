@@ -1,0 +1,1 @@
+- Nitrokey GmbH (https://www.nitrokey.com)
