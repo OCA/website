@@ -6,23 +6,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-10-05 10:46+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: website_exclude_sitemap
 #: model:ir.model,name:website_exclude_sitemap.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Impostazioni configurazione"
 
 #. module: website_exclude_sitemap
 #: model_terms:ir.ui.view,arch_db:website_exclude_sitemap.res_config_settings_view_form
 msgid "Exclude specific URLs or wildcard patterns from sitemap.xml."
-msgstr ""
+msgstr "Escludere URL specifici o pattern con caratteri jolly da sitemap.xml."
 
 #. module: website_exclude_sitemap
 #: model:ir.model.fields,help:website_exclude_sitemap.field_res_config_settings__sitemap_excluded_paths
@@ -33,16 +35,21 @@ msgid ""
 "everything below it. Examples: /contactus, /solutions*, /blog/*/feed, "
 "/customers/, /jobs/**"
 msgstr ""
+"Un percorso o pattern per riga, separati da virgola o punto e virgola. * "
+"corrisponde all'interno di un singolo segmento del percorso, ** attraverso "
+"più segmenti e una / finale esclude il percorso e tutto ciò che vi è "
+"contenuto. Esempi: /contactus, /solutions*, /blog/*/feed, /customers/, /jobs/"
+"**"
 
 #. module: website_exclude_sitemap
 #: model:ir.model,name:website_exclude_sitemap.model_website_page
 msgid "Page"
-msgstr ""
+msgstr "Pagina"
 
 #. module: website_exclude_sitemap
 #: model_terms:ir.ui.view,arch_db:website_exclude_sitemap.res_config_settings_view_form
 msgid "Reload Sitemap"
-msgstr ""
+msgstr "Ricarica mappa sito"
 
 #. module: website_exclude_sitemap
 #: model_terms:ir.ui.view,arch_db:website_exclude_sitemap.res_config_settings_view_form
@@ -51,27 +58,34 @@ msgid ""
 "                        Use * inside a segment, ** across segments, and a\n"
 "                        trailing / to exclude a path and everything below it."
 msgstr ""
+"Separare i percorsi con interruzioni di riga, virgole o punti e virgola. \n"
+"                        Usare * all'interno di un segmento, ** tra i "
+"segmenti e una\n"
+"                        / finale per escludere un percorso e tutto ciò che "
+"contiene."
 
 #. module: website_exclude_sitemap
 #: model:ir.model.fields,field_description:website_exclude_sitemap.field_res_config_settings__sitemap_excluded_paths
 #: model:ir.model.fields,field_description:website_exclude_sitemap.field_website__sitemap_excluded_paths
 #: model_terms:ir.ui.view,arch_db:website_exclude_sitemap.res_config_settings_view_form
 msgid "Sitemap Exclusions"
-msgstr ""
+msgstr "Esclusioni mappa sito"
 
 #. module: website_exclude_sitemap
 #. odoo-python
 #: code:addons/website_exclude_sitemap/wizards/res_config_settings.py:0
 msgid "Sitemap reloaded"
-msgstr ""
+msgstr "Mappa sito ricaricata"
 
 #. module: website_exclude_sitemap
 #. odoo-python
 #: code:addons/website_exclude_sitemap/wizards/res_config_settings.py:0
 msgid "The cached sitemap has been cleared for the current website."
 msgstr ""
+"La mappa sito memorizzata nella cache è stata cancellata per il sito web "
+"corrente."
 
 #. module: website_exclude_sitemap
 #: model:ir.model,name:website_exclude_sitemap.model_website
 msgid "Website"
-msgstr ""
+msgstr "Sito web"
