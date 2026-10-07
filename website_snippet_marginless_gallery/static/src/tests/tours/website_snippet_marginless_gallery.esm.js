@@ -14,7 +14,6 @@ import {
 registerWebsitePreviewTour(
     "marginless_gallery",
     {
-        url: "/",
         edition: true,
     },
     () => [

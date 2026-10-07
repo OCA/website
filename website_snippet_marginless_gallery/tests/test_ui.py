@@ -10,4 +10,8 @@ from odoo.tests import tagged
 @tagged("post_install", "-at_install")
 class TestUi(odoo.tests.HttpCase):
     def test_admin_tour_marginless_gallery(self):
-        self.start_tour("/", "marginless_gallery", login="admin")
+        self.start_tour(
+            self.env["website"].get_client_action_url("/", True),
+            "marginless_gallery",
+            login="admin",
+        )
