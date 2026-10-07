@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="event_form_no_registration"
+        inherit_id="website_event.registration_template"
+    >
+        <xpath
+            expr="//div[@t-elif='event.event_registrations_sold_out']"
+            position="before"
+        >
+            <div t-elif="not event.registration_allowed" />
+        </xpath>
+    </template>
+
+    <template id="event_list_no_registration" inherit_id="website_event.events_list">
+        <xpath
+            expr="//t[@t-elif='event.event_registrations_sold_out']"
+            position="before"
+        >
+            <t t-elif="not event.registration_allowed" />
+        </xpath>
+        <xpath
+            expr="//span[@t-if='not event.event_registrations_open']/t[@t-elif='event.event_registrations_sold_out']"
+            position="before"
+        >
+            <t t-elif="not event.registration_allowed" />
+        </xpath>
+    </template>
+</odoo>
