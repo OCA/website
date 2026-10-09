@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2010-2014 Elico Corp
+SPDX-FileContributor: Augustin Cisterne-Kaas <augustin.cisterne-kaas@elico-corp.com>
+SPDX-FileCopyrightText: 2015 Tech-Receptives Solutions Pvt. Ltd.
+SPDX-FileCopyrightText: 2018 Simone Orsi - Camptocamp SA
+SPDX-FileCopyrightText: 2019 Tecnativa - Cristina Martin R.
+SPDX-FileCopyrightText: 2019 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">Website settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='website']" position="inside">
+                <block title="reCAPTCHA v2" id="block_website_recaptcha_v2">
+                    <setting
+                        string="reCAPTCHA v2"
+                        id="website_recaptcha_v2"
+                        help="Protect your forms using reCAPTCHA v2"
+                    >
+                        <field name="recaptcha_v2_enabled" />
+                        <div class="content-group">
+                            <div class="mt16">
+                                <label
+                                    class="o_light_label mr8"
+                                    for="recaptcha_v2_site_key"
+                                />
+                                <field name="recaptcha_v2_site_key" class="oe_inline" />
+                            </div>
+                            <div class="mt16">
+                                <label
+                                    class="o_light_label mr8"
+                                    for="recaptcha_v2_secret_key"
+                                />
+                                <field
+                                    name="recaptcha_v2_secret_key"
+                                    class="oe_inline"
+                                />
+                            </div>
+                            <div class="mt16">
+                                <a
+                                    href="https://www.google.com/recaptcha/admin"
+                                    class="oe_link"
+                                    target="_blank"
+                                >
+                                    <i class="fa fa-arrow-right" />
+                                    Get reCAPTCHA v2 keys
+                                </a>
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
