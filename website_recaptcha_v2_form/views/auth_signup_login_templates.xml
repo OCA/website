@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="binhex_signup" inherit_id="auth_signup.signup">
+       <xpath expr="//p[hasclass('alert-danger')]" position="before">
+            <t t-call="website_recaptcha_v2.recaptcha_widget" />
+        </xpath>
+    </template>
+
+    <template id="binhex_reset_password" inherit_id="auth_signup.reset_password">
+        <xpath expr="//p[hasclass('alert-danger')]" position="before">
+            <t t-call="website_recaptcha_v2.recaptcha_widget" />
+        </xpath>
+    </template>
+</odoo>
