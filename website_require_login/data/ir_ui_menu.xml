@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <menuitem
-        name="Authorization required URLs"
         id="menu_website_auth_url"
+        name="Authorization required URLs"
         action="action_website_auth_url"
         parent="website.menu_website_global_configuration"
         sequence="60"
