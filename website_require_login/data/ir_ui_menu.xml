@@ -5,6 +5,6 @@
         name="Authorization required URLs"
         action="action_website_auth_url"
         parent="website.menu_website_global_configuration"
-        sequence="60"
+        sequence="31"
     />
 </odoo>

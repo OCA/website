@@ -1,0 +1,2 @@
+id,name,model_id,group_id/id,operation,domain
+access_website_auth_url,access_website_auth_url,website.auth.url,website.group_website_designer,crud,

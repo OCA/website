@@ -4,7 +4,7 @@
 {
     "name": "Website Login Required",
     "category": "Website",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "author": "Advitus MB, Ooops, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
     "license": "LGPL-3",
@@ -12,7 +12,7 @@
         "website",
     ],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/website_auth_url.xml",
         "data/ir_actions.xml",
         "data/ir_ui_menu.xml",

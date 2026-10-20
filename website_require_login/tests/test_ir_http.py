@@ -5,7 +5,7 @@ class TestIrHttp(HttpCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.website = cls.env["website"].sudo().get_current_website()
+        cls.website = cls.env.ref("base.default_website")
         cls.auth_url = cls.env["website.auth.url"].create(
             {"website_id": cls.website.id, "path": "/contactus"}
         )
