@@ -26,7 +26,8 @@ class IrHttp(models.AbstractModel):
     @classmethod
     def _check_require_auth(cls):
         # if not website request - skip
-        website = request.env["website"].sudo().get_current_website()
+        website_id = request.env.website.id or request.env.context.get("host_id")
+        website = request.env["website"].sudo().browse(website_id).exists()
         if not website:
             return None
         if request.env.uid and (request.env.uid != website.user_id.id):
