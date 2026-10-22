@@ -9,7 +9,7 @@ import logging
 
 import altcha.v2 as altcha
 
-from odoo import _, api, models
+from odoo import api, models
 from odoo.exceptions import UserError
 from odoo.http import request
 
@@ -48,7 +48,7 @@ class IrHttp(models.AbstractModel):
         altcha_signature = request.params.pop("altcha", None)
         if not altcha_signature:
             _logger.warning("Altcha token missing in request")
-            raise UserError(_("Suspicious activity detected by Altcha"))
+            raise UserError(self.env._("Suspicious activity detected by Altcha"))
         result = altcha.verify_solution(
             altcha_signature,
             hmac_secret=request.website.sudo().altcha_key,
@@ -69,7 +69,7 @@ class IrHttp(models.AbstractModel):
                 """Altcha verification failed: %s""",
                 ", ".join(error),
             )
-            raise UserError(_("Suspicious activity detected by Altcha"))
+            raise UserError(self.env._("Suspicious activity detected by Altcha"))
         altcha_request = json.loads(base64.b64decode(altcha_signature))
         unique_id = self._get_altcha_key(altcha_request["challenge"]["signature"])
         record = (
@@ -85,6 +85,6 @@ class IrHttp(models.AbstractModel):
         )
         if not record:
             _logger.warning(f"Altcha key not found or already used: {unique_id}")
-            raise UserError(_("Suspicious activity detected by Altcha"))
+            raise UserError(self.env._("Suspicious activity detected by Altcha"))
         record.used = True
         return result
