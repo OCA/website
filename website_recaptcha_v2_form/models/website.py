@@ -32,12 +32,9 @@ class Website(models.Model):
                 if len(site_key_old) > 1:
                     site_key_old = site_key_old[1].split('"')[0]
                     if site_key_old:
-                        div_start = '<div class="g-recaptcha" data-sitekey='
-                        div_end = 'data-callback="callback_success_recaptcha"'
-                        div_end += ' data-expired-callback="callback_expired_recaptcha"'
                         updated_arch = view.arch_db.replace(
-                            f'{div_start}"{site_key_old}" {div_end}/>',
-                            f'{div_start} "{self.recaptcha_v2_site_key}" {div_end}/>',
+                            f'data-sitekey="{site_key_old}"',
+                            f'data-sitekey="{self.recaptcha_v2_site_key}"',
                         )
                         view.sudo().write({"arch": updated_arch})
 

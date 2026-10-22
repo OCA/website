@@ -97,3 +97,33 @@ class TestModule(common.TransactionCase):
         self.website.update_recaptcha_v2_site_key()
         self.assertIn("test-site", view.arch_db)
         self.assertNotIn("OLD_KEY_ABC", view.arch_db)
+
+    def test_update_recaptcha_v2_site_key_on_write(self):
+        view = self._create_website_view(
+            '<div class="g-recaptcha" data-sitekey="stale-site"/>'
+        )
+        self.website.write({"recaptcha_v2_secret_key": "new-secret"})
+        self.assertIn('data-sitekey="stale-site"', view.arch_db)
+        self.website.write({"recaptcha_v2_site_key": "new-site"})
+        self.assertIn('data-sitekey="new-site"', view.arch_db)
+
+    def test_update_recaptcha_v2_site_key_without_site_key(self):
+        view_without_key = self._create_website_view('<div class="g-recaptcha"/>')
+        view_empty_key = self._create_website_view(
+            '<div class="g-recaptcha" data-sitekey=""/>'
+        )
+        arch_without_key = view_without_key.arch_db
+        arch_empty_key = view_empty_key.arch_db
+        self.website.update_recaptcha_v2_site_key()
+        self.assertEqual(view_without_key.arch_db, arch_without_key)
+        self.assertEqual(view_empty_key.arch_db, arch_empty_key)
+
+    def _create_website_view(self, arch):
+        return self.env["ir.ui.view"].create(
+            {
+                "name": "Website Recaptcha View",
+                "type": "qweb",
+                "arch": arch,
+                "website_id": self.website.id,
+            }
+        )

@@ -5,7 +5,7 @@ from odoo.exceptions import AccessDenied
 from odoo.http import request
 
 from odoo.addons.auth_signup.controllers.main import AuthSignupHome
-from odoo.addons.web.controllers.home import SIGN_UP_REQUEST_PARAMS, Home
+from odoo.addons.web.controllers.home import SIGN_UP_REQUEST_PARAMS, Home, ensure_db
 
 logger = logging.getLogger(__name__)
 
@@ -40,8 +40,9 @@ class RecaptchaHome(Home):
             else:
                 return message_error
 
-    @http.route("/web/login", type="http", auth="none")
+    @http.route()
     def web_login(self, redirect=None, **kw):
+        ensure_db()
         if request.httprequest.method == "POST":
             values = {
                 k: v for k, v in request.params.items() if k in SIGN_UP_REQUEST_PARAMS
