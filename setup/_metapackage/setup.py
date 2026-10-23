@@ -21,6 +21,7 @@ setuptools.setup(
         'odoo-addon-website_menu_by_user_status>=16.0dev,<16.1dev',
         'odoo-addon-website_odoo_debranding>=16.0dev,<16.1dev',
         'odoo-addon-website_recaptcha_v2>=16.0dev,<16.1dev',
+        'odoo-addon-website_recaptcha_v2_form>=16.0dev,<16.1dev',
         'odoo-addon-website_require_login>=16.0dev,<16.1dev',
         'odoo-addon-website_snippet_country_dropdown>=16.0dev,<16.1dev',
         'odoo-addon-website_snippet_country_phone_code_dropdown>=16.0dev,<16.1dev',

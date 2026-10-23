@@ -35,6 +35,7 @@ addon | version | maintainers | summary
 [website_menu_by_user_status](website_menu_by_user_status/) | 16.0.1.0.0 |  | Allow to manage the display of website.menus
 [website_odoo_debranding](website_odoo_debranding/) | 16.0.1.0.0 |  | Remove Odoo Branding from Website
 [website_recaptcha_v2](website_recaptcha_v2/) | 16.0.1.0.0 |  | Helper module to add reCAPTCHA v2 to website forms
+[website_recaptcha_v2_form](website_recaptcha_v2_form/) | 16.0.1.0.0 |  | Module that allows you to use recaptcha v2 for login, password reset, signup and snippet form on the website.
 [website_require_login](website_require_login/) | 16.0.1.1.0 |  | Website Login Required
 [website_snippet_country_dropdown](website_snippet_country_dropdown/) | 16.0.1.0.0 |  | Allow to select country in a dropdown
 [website_snippet_country_phone_code_dropdown](website_snippet_country_phone_code_dropdown/) | 16.0.1.0.0 |  | Allow to select country in a dropdown, and fill with phone code
