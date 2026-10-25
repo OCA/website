@@ -14,7 +14,10 @@
             <div t-if="user_public">
                 <object>
                     <a class="btn btn-link" href="/web/login">
-                        <i class="fa fa-bell" /> Subscribe to forum notifications
+                        <i
+                        class="oi oi-fw"
+                        data-icon="notifications"
+                    /> Subscribe to forum notifications
                     </a>
                 </object>
             </div>
@@ -25,22 +28,28 @@
                 <button class="btn text-reset js_unfollow_btn">
                     <div class="d-flex align-items-center">
                         <small>Unsubscribe</small>
-                        <i class="fa fa-fw ms-1" />
+                        <i class="oi oi-fw ms-1" />
                     </div>
                 </button>
                 <button class="btn text-reset js_follow_btn">
                     <div class="d-flex align-items-center">
                         <small>Subscribe</small>
-                        <i class="fa fa-fw ms-1" />
+                        <i class="oi oi-fw ms-1" />
                     </div>
                 </button>
             </div>
             <div t-elif="not user_public">
                 <button href="#" t-attf-class="btn btn-link js_unfollow_btn">
-                    <i class="fa fa-bell-slash" /> Unsubscribe from forum notifications
+                    <i
+                    class="oi oi-fw"
+                    data-icon="notifications_off"
+                /> Unsubscribe from forum notifications
                 </button>
                 <button href="#" t-attf-class="btn btn-link js_follow_btn">
-                    <i class="fa fa-bell" /> Subscribe to forum notifications
+                    <i
+                    class="oi oi-fw"
+                    data-icon="notifications"
+                /> Subscribe to forum notifications
                 </button>
             </div>
         </div>
@@ -51,9 +60,7 @@
         inherit_id="website_forum.forum_index"
     >
         <xpath expr="//table[hasclass('o_wforum_table')]" position="before">
-            <t t-call="website_forum_subscription.follow">
-                <t t-set="object" t-value="forum" />
-            </t>
+            <t t-call="website_forum_subscription.follow" object="forum" />
         </xpath>
     </template>
     <template
@@ -62,9 +69,7 @@
         inherit_id="website_forum.forum_all_all_entries"
     >
         <xpath expr="//div[hasclass('text-truncate')]" position="after">
-            <t t-call="website_forum_subscription.follow">
-                <t t-set="object" t-value="forum" />
-            </t>
+            <t t-call="website_forum_subscription.follow" object="forum" />
         </xpath>
     </template>
 </odoo>
