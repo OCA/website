@@ -51,9 +51,7 @@
         inherit_id="website_forum.forum_index"
     >
         <xpath expr="//table[hasclass('o_wforum_table')]" position="before">
-            <t t-call="website_forum_subscription.follow">
-                <t t-set="object" t-value="forum" />
-            </t>
+            <t t-call="website_forum_subscription.follow" object="forum" />
         </xpath>
     </template>
     <template
@@ -62,9 +60,7 @@
         inherit_id="website_forum.forum_all_all_entries"
     >
         <xpath expr="//div[hasclass('text-truncate')]" position="after">
-            <t t-call="website_forum_subscription.follow">
-                <t t-set="object" t-value="forum" />
-            </t>
+            <t t-call="website_forum_subscription.follow" object="forum" />
         </xpath>
     </template>
 </odoo>
