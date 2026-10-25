@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_recaptcha_v2
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2024-12-04 12:06+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
+
+#. module: website_recaptcha_v2
+#: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                        Get reCAPTCHA v2 keys"
+msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                        Ottieni chiavi reCAPTCHA v2"
+
+#. module: website_recaptcha_v2
+#: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-globe\" title=\"I valori impostati qui sono "
+"specifici per sito web.\" groups=\"website.group_multi_website\"/>"
+
+#. module: website_recaptcha_v2
+#: model:ir.model,name:website_recaptcha_v2.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni configurazione"
+
+#. module: website_recaptcha_v2
+#: model:ir.model.fields,field_description:website_recaptcha_v2.field_res_config_settings__recaptcha_v2_enabled
+#: model:ir.model.fields,field_description:website_recaptcha_v2.field_website__recaptcha_v2_enabled
+msgid "Enable reCAPTCHA v2"
+msgstr "Abilita reCAPTCHA v2"
+
+#. module: website_recaptcha_v2
+#. odoo-python
+#: code:addons/website_recaptcha_v2/models/website.py:0
+#, python-format
+msgid "No response given."
+msgstr "Nessuna risposta data."
+
+#. module: website_recaptcha_v2
+#: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
+msgid "Protect your forms using reCAPTCHA v2"
+msgstr "Proteggere i propri moduli usando reCAPTCHA v2"
+
+#. module: website_recaptcha_v2
+#: model:ir.model.fields,field_description:website_recaptcha_v2.field_res_config_settings__recaptcha_v2_secret_key
+#: model:ir.model.fields,field_description:website_recaptcha_v2.field_website__recaptcha_v2_secret_key
+msgid "Secret Key (v2)"
+msgstr "Chiave segreta (v2)"
+
+#. module: website_recaptcha_v2
+#: model:ir.model.fields,field_description:website_recaptcha_v2.field_res_config_settings__recaptcha_v2_site_key
+#: model:ir.model.fields,field_description:website_recaptcha_v2.field_website__recaptcha_v2_site_key
+msgid "Site Key (v2)"
+msgstr "Chiave sito (v2)"
+
+#. module: website_recaptcha_v2
+#. odoo-python
+#: code:addons/website_recaptcha_v2/models/website.py:0
+#, python-format
+msgid "The challenge was not successfully completed."
+msgstr "La verifica non è stata completata con successo."
+
+#. module: website_recaptcha_v2
+#. odoo-python
+#: code:addons/website_recaptcha_v2/models/website.py:0
+#, python-format
+msgid "The request is invalid or malformed."
+msgstr "La richiesta non è valida o malformato."
+
+#. module: website_recaptcha_v2
+#. odoo-python
+#: code:addons/website_recaptcha_v2/models/website.py:0
+#, python-format
+msgid ""
+"The response is no longer valid: either is too old or has been used "
+"previously."
+msgstr ""
+"La risposta non è più valida: è troppo vecchia o è già stata utilizzata."
+
+#. module: website_recaptcha_v2
+#. odoo-python
+#: code:addons/website_recaptcha_v2/models/website.py:0
+#, python-format
+msgid "The response parameter is invalid or malformed."
+msgstr "Il parametro della risposta non è valido o malformato."
+
+#. module: website_recaptcha_v2
+#. odoo-python
+#: code:addons/website_recaptcha_v2/models/website.py:0
+#, python-format
+msgid "The response parameter is missing."
+msgstr "Manca il parametro della risposta."
+
+#. module: website_recaptcha_v2
+#. odoo-python
+#: code:addons/website_recaptcha_v2/models/website.py:0
+#, python-format
+msgid "The secret parameter is invalid or malformed."
+msgstr "Il parametro segreto non è valido o malformato."
+
+#. module: website_recaptcha_v2
+#. odoo-python
+#: code:addons/website_recaptcha_v2/models/website.py:0
+#, python-format
+msgid "The secret parameter is missing."
+msgstr "Manca il parametro segreto."
+
+#. module: website_recaptcha_v2
+#. odoo-python
+#: code:addons/website_recaptcha_v2/models/website.py:0
+#, python-format
+msgid "Unknown reCAPTCHA error (error code: {errorcode})."
+msgstr "Errore reCAPTCHA sconosciuto (codice errore: {errorcode})."
+
+#. module: website_recaptcha_v2
+#: model:ir.model,name:website_recaptcha_v2.model_website
+msgid "Website"
+msgstr "Sito web"
+
+#. module: website_recaptcha_v2
+#: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
+msgid "reCAPTCHA icon"
+msgstr "Icona reCAPTCHA"
+
+#. module: website_recaptcha_v2
+#: model_terms:ir.ui.view,arch_db:website_recaptcha_v2.res_config_settings_view_form
+msgid "reCAPTCHA v2"
+msgstr "reCAPTCHA v2"

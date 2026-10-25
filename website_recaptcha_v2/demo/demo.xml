@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+SPDX-FileCopyrightText: 2022 Coop IT Easy SC
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<odoo>
+
+    <record id="website.default_website" model="website">
+        <field name="recaptcha_v2_enabled">True</field>
+        <!--
+            reCAPTCHA test keys from https://developers.google.com/recaptcha/docs/faq
+        -->
+        <field
+            name="recaptcha_v2_site_key"
+        >6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI</field>
+        <field
+            name="recaptcha_v2_secret_key"
+        >6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe</field>
+    </record>
+
+</odoo>
