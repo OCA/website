@@ -35,6 +35,7 @@ addon | version | maintainers | summary
 [website_login_page_editable](website_login_page_editable/) | 17.0.1.0.0 | <a href='https://github.com/pilarvargas-tecnativa'><img src='https://github.com/pilarvargas-tecnativa.png' width='32' height='32' style='border-radius:50%;' alt='pilarvargas-tecnativa'/></a> | Add an editable area to the website login page
 [website_menu_by_user_status](website_menu_by_user_status/) | 17.0.1.0.0 |  | Allow to manage the display of website.menus
 [website_odoo_debranding](website_odoo_debranding/) | 17.0.1.0.0 |  | Remove Odoo Branding from Website
+[website_recaptcha_v2](website_recaptcha_v2/) | 17.0.1.0.0 |  | Helper module to add reCAPTCHA v2 to website forms
 [website_require_login](website_require_login/) | 17.0.1.0.0 |  | Website Login Required
 [website_snippet_big_button](website_snippet_big_button/) | 17.0.1.0.0 |  | A snippet that adds two big buttons
 [website_snippet_marginless_gallery](website_snippet_marginless_gallery/) | 17.0.1.0.0 |  | Add a snippet to have a marginless image gallery
