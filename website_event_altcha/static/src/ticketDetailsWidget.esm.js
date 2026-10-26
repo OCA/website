@@ -1,20 +1,29 @@
 /* Copyright 2026 Hunki Enterprises BV */
-import ticketDetailsWidget from "@website_event/js/website_event_ticket_details";
+import {ModalRegistration} from "@website_event/js/interactions/modal_registration";
+import {altchaInteractionFunctionality} from "@website_altcha/altcha.esm";
+import {patch} from "@web/core/utils/patch";
 
-ticketDetailsWidget.include({
+patch(
+    ModalRegistration.prototype,
+    altchaInteractionFunctionality({
+        altcha_prepend_to: "form div.modal-footer",
+    })
+);
+
+patch(ModalRegistration.prototype, {
     start() {
-        this.disableSubmitIfUnverified();
-        return this._super(...arguments);
-    },
-    _onTicketQuantityChange() {
-        this._super(...arguments);
-        this.disableSubmitIfUnverified();
-    },
-    disableSubmitIfUnverified() {
-        const altcha_widget = this.el.querySelector("altcha-widget");
-        if (altcha_widget) {
-            const button = this.el.querySelector("button.btn-primary");
-            button.disabled = altcha_widget.getState() !== "verified";
+        super.start();
+        const altchaWidget = this.el.querySelector("altcha-widget");
+        const button = this.el.querySelector("form button[type='submit']");
+        if (!altchaWidget || !button) {
+            return;
         }
+        const updateButton = (state) => {
+            button.disabled = state !== "verified";
+        };
+        updateButton(altchaWidget.getState?.());
+        this.addListener(altchaWidget, "statechange", (ev) =>
+            updateButton(ev.detail.state)
+        );
     },
 });

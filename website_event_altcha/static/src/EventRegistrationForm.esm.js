@@ -1,32 +1,45 @@
 /* Copyright 2026 Hunki Enterprises BV */
-import {AltchaLegacyClassFunctionality} from "@website_altcha/altcha.esm";
-import EventRegistrationForm from "@website_event/js/website_event";
+import {ModalRegistration} from "@website_event/interactions/modal_registration";
+import {loadBundle} from "@web/core/assets";
+import {patch} from "@web/core/utils/patch";
+import {session} from "@web/session";
 
-EventRegistrationForm.include({
-    ...AltchaLegacyClassFunctionality,
-});
-
-EventRegistrationForm.include({
-    altcha_prepend_to: "div.modal-footer",
-    start() {
-        const result = this._super(...arguments);
-        const altcha_widget = this.el.querySelector("altcha-widget");
-        if (altcha_widget) {
-            const button = this.el.querySelector("button.btn-primary");
-            altcha_widget.addEventListener("statechange", (ev) => {
-                button.disabled = ev.detail.state !== "verified";
-            });
-            altcha_widget.addEventListener("load", () => {
-                button.disabled = altcha_widget.getState() !== "verified";
-            });
-        }
-        return result;
+patch(ModalRegistration.prototype, {
+    setup() {
+        super.setup();
+        this.altchaEnabled = Boolean(session.altcha_public_key);
     },
-    _addTurnstile(form) {
-        const altcha_widget = this.el.querySelector("altcha-widget");
-        if (altcha_widget) {
-            form.querySelector("div.modal-footer").prepend(altcha_widget);
+
+    async willStart() {
+        await super.willStart(...arguments);
+        if (this.altchaEnabled) {
+            await loadBundle("web.altcha_libs");
         }
-        this._super(...arguments);
+    },
+
+    start() {
+        super.start();
+        if (!this.altchaEnabled) {
+            return;
+        }
+        const footer = this.el.querySelector("form div.modal-footer");
+        const button = this.el.querySelector("form button[type='submit']");
+        if (!footer || !button) {
+            return;
+        }
+        if (!this.el.querySelector("altcha-widget")) {
+            this.renderAt("website_altcha.AltchaWidget", {}, footer, "afterbegin");
+        }
+        const altchaWidget = this.el.querySelector("altcha-widget");
+        const updateButton = (state) => {
+            button.disabled = state !== "verified";
+        };
+        updateButton(altchaWidget.getState?.());
+        this.addListener(altchaWidget, "statechange", (ev) =>
+            updateButton(ev.detail.state)
+        );
+        this.addListener(altchaWidget, "load", () =>
+            updateButton(altchaWidget.getState?.())
+        );
     },
 });
