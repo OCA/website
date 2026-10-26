@@ -16,6 +16,11 @@ registry.category("web_tour.tours").add("website_altcha_generic", {
             content: "Click Submit",
             trigger: "button[type='submit']",
             run: "click",
+            expectUnloadPage: true,
+        },
+        {
+            content: "Page reloaded with a fresh altcha widget",
+            trigger: ".website_altcha_form altcha-widget input[type='checkbox']",
         },
     ],
 });

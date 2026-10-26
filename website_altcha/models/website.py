@@ -32,9 +32,9 @@ class Website(models.Model):
 
     def _get_available_algorithms(self):
         return [
-            ("SHA256", "SHA-256 (fast, testing only)"),
-            ("SHA384", "SHA-384 (fast, testing only)"),
-            ("SHA512", "SHA-512 (fast, testing only)"),
+            ("SHA-256", "SHA-256 (fast, testing only)"),
+            ("SHA-384", "SHA-384 (fast, testing only)"),
+            ("SHA-512", "SHA-512 (fast, testing only)"),
             ("PBKDF2/SHA-256", "PBKDF2/SHA-256"),
             ("PBKDF2/SHA-384", "PBKDF2/SHA-384"),
             ("PBKDF2/SHA-512", "PBKDF2/SHA-512 (default, good)"),

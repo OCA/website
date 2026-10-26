@@ -21,6 +21,11 @@ registry.category("web_tour.tours").add("website_altcha_signup", {
             content: "Click Submit",
             trigger: "button[type='submit']",
             run: "click",
+            expectUnloadPage: true,
+        },
+        {
+            content: "Reset password instructions sent",
+            trigger: ".oe_login_form .alert-success",
         },
     ],
 });

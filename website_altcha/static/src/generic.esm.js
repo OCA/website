@@ -1,9 +1,18 @@
-import {AltchaLegacyClassFunctionality} from "@website_altcha/altcha.esm";
-import publicWidget from "@web/legacy/js/public/public_widget";
+import {Interaction} from "@web/public/interaction";
+import {altchaInteractionFunctionality} from "@website_altcha/altcha.esm";
+import {patch} from "@web/core/utils/patch";
+import {registry} from "@web/core/registry";
 
-publicWidget.registry.GenericAltcha = publicWidget.Widget.extend({
-    ...AltchaLegacyClassFunctionality,
-    selector: "form.website_altcha_form, form.js_website_submit_form",
-    altcha_prepend_to:
-        "*:has( > input[type='submit']), *:has( > button[type='submit'])",
-});
+export class GenericAltcha extends Interaction {
+    static selector = "form.website_altcha_form, form.js_website_submit_form";
+}
+
+patch(
+    GenericAltcha.prototype,
+    altchaInteractionFunctionality({
+        altcha_prepend_to:
+            "*:has(> input[type='submit']), *:has(> button[type='submit'])",
+    })
+);
+
+registry.category("public.interactions").add("website_altcha.generic", GenericAltcha);

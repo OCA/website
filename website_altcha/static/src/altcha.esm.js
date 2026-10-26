@@ -2,6 +2,13 @@ import {loadBundle} from "@web/core/assets";
 import {renderToString} from "@web/core/utils/render";
 import {session} from "@web/session";
 
+const ALTCHA_POSITIONS = [
+    ["altcha_before", "beforebegin"],
+    ["altcha_after", "afterend"],
+    ["altcha_append_to", "beforeend"],
+    ["altcha_prepend_to", "afterbegin"],
+];
+
 export const AltchaBaseFunctionality = {
     altcha_prepend_to: "div.oe_login_buttons",
     altcha_append_to: false,
@@ -25,24 +32,32 @@ export const AltchaBaseFunctionality = {
         }
         return false;
     },
+    /**
+     * Hook to skip the insertion on specific elements.
+     *
+     * @returns {Boolean}
+     */
+    altcha_should_insert() {
+        return true;
+    },
+
     altcha_insert_widget() {
-        if (this.altcha_enabled && !this.$el.find("altcha-widget").length) {
-            if (this.altcha_before) {
-                this.$el
-                    .find(this.altcha_before)
-                    .before(renderToString("website_altcha.AltchaWidget", {}));
-            } else if (this.altcha_after) {
-                this.$el
-                    .find(this.altcha_after)
-                    .after(renderToString("website_altcha.AltchaWidget", {}));
-            } else if (this.altcha_append_to) {
-                this.$el
-                    .find(this.altcha_append_to)
-                    .append(renderToString("website_altcha.AltchaWidget", {}));
-            } else if (this.altcha_prepend_to) {
-                this.$el
-                    .find(this.altcha_prepend_to)
-                    .prepend(renderToString("website_altcha.AltchaWidget", {}));
+        if (
+            !this.altcha_enabled ||
+            !this.altcha_should_insert() ||
+            this.el.querySelector("altcha-widget")
+        ) {
+            return;
+        }
+        for (const [prop, position] of ALTCHA_POSITIONS) {
+            if (this[prop]) {
+                this.el
+                    .querySelector(this[prop])
+                    ?.insertAdjacentHTML(
+                        position,
+                        renderToString("website_altcha.AltchaWidget", {})
+                    );
+                return;
             }
         }
     },
@@ -64,3 +79,33 @@ export const AltchaLegacyClassFunctionality = {
         return this._super(...arguments);
     },
 };
+
+/**
+ * Patch for Interactions. Returns a new object on every call because
+ * patch() cannot reuse the same object on several prototypes (it would
+ * break `super`).
+ *
+ * @param {Object} [config] altcha_* properties or method overrides
+ * @returns {Object}
+ */
+export function altchaInteractionFunctionality(config = {}) {
+    return {
+        ...AltchaBaseFunctionality,
+        ...config,
+        setup() {
+            super.setup();
+            this.altcha_init();
+        },
+        async willStart() {
+            await super.willStart(...arguments);
+            await this.altcha_load_libs();
+        },
+        start() {
+            super.start();
+            this.altcha_insert_widget();
+            this.registerCleanup(() =>
+                this.el.querySelector("altcha-widget")?.remove()
+            );
+        },
+    };
+}
