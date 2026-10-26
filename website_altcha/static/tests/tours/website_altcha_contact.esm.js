@@ -36,6 +36,11 @@ registry.category("web_tour.tours").add("website_altcha_contact", {
             content: "Click Submit",
             trigger: "div.s_website_form_submit a",
             run: "click",
+            expectUnloadPage: true,
+        },
+        {
+            content: "Form send successfully",
+            trigger: "i.fa-paper-plane",
         },
     ],
 });

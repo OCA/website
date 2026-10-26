@@ -12,9 +12,10 @@ class AltchaKey(models.Model):
     expires_at = fields.Datetime(required=True)
     used = fields.Boolean(default=False)
 
-    _sql_constraints = [
-        ("key_uniq", "unique(key)", "The Altcha key must be unique."),
-    ]
+    _key_uniq = models.Constraint(
+        "unique(key)",
+        "The Altcha key must be unique.",
+    )
 
     @api.autovacuum
     def _autovacuum_expired_keys(self):

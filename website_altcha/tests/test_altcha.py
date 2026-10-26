@@ -11,7 +11,10 @@ from odoo.exceptions import UserError
 from odoo.tests import Form
 from odoo.tools import mute_logger
 
-from odoo.addons.website.tools import MockRequest
+try:
+    from odoo.addons.http_routing.tests.common import MockRequest
+except ImportError:
+    MockRequest = None
 
 from .common import Common
 

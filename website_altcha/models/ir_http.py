@@ -40,19 +40,18 @@ class IrHttp(models.AbstractModel):
 
     @api.model
     def _verify_request_recaptcha_token(self, action):
-        result = super()._verify_request_recaptcha_token(action)
-        if not result:
-            return result
-        if not request.website.sudo().altcha_key:
-            return result
+        super()._verify_request_recaptcha_token(action)
+        website = request.website.sudo()
+        if not website.altcha_key:
+            return
         altcha_signature = request.params.pop("altcha", None)
         if not altcha_signature:
             _logger.warning("Altcha token missing in request")
             raise UserError(self.env._("Suspicious activity detected by Altcha"))
         result = altcha.verify_solution(
             altcha_signature,
-            hmac_secret=request.website.sudo().altcha_key,
-            hmac_key_secret=request.website.sudo().altcha_private_key,
+            hmac_secret=website.altcha_key,
+            hmac_key_secret=website.altcha_private_key,
         )
         is_valid = result.verified
         if not is_valid:
