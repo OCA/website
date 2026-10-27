@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- ============================================================
+         1. The bar (toggle per website + editable zone)
+         Each button is a <div> (not a link). The link is an empty,
+         invisible <a> stretched over the whole button, so the text
+         is never "a link" in the editor and the whole button is
+         clickable on the website.
+         ============================================================ -->
+    <template
+        id="mobile_bottom_bar"
+        inherit_id="website.layout"
+        name="Mobile Bottom Bar"
+        active="False"
+        customize_show="True"
+    >
+        <xpath expr="//div[@id='wrapwrap']" position="inside">
+            <div
+                id="oe_structure_mobile_bottom_bar"
+                class="o_mobile_bottom_bar oe_structure d-lg-none"
+            >
+                <div class="o_mobile_bar_row">
+                    <div class="s_mobile_bar_item o_mobile_bottom_bar_item">
+                        <i class="fa fa-home fa-lg" />
+                        <span class="o_mobile_bar_label">Home</span>
+                        <a
+                            href="/"
+                            class="o_mobile_bar_link stretched-link"
+                            contenteditable="false"
+                            aria-label="Home"
+                        />
+                    </div>
+
+                    <div class="s_mobile_bar_item o_mobile_bottom_bar_item">
+                        <i class="fa fa-th-large fa-lg" />
+                        <span class="o_mobile_bar_label">Shop</span>
+                        <a
+                            href="/shop"
+                            class="o_mobile_bar_link stretched-link"
+                            contenteditable="false"
+                            aria-label="Shop"
+                        />
+                    </div>
+
+                    <div class="s_mobile_bar_item o_mobile_bottom_bar_item">
+                        <i class="fa fa-shopping-cart fa-lg" />
+                        <span class="o_mobile_bar_label">Cart</span>
+                        <a
+                            href="/shop/cart"
+                            class="o_mobile_bar_link stretched-link"
+                            contenteditable="false"
+                            aria-label="Cart"
+                        />
+                    </div>
+
+                    <div class="s_mobile_bar_item o_mobile_bottom_bar_item">
+                        <i class="fa fa-user fa-lg" />
+                        <span class="o_mobile_bar_label">Account</span>
+                        <a
+                            href="/my"
+                            class="o_mobile_bar_link stretched-link"
+                            contenteditable="false"
+                            aria-label="Account"
+                        />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- ============================================================
+         2. Snippet: one button (what users drag into the bar)
+         ============================================================ -->
+    <template id="s_mobile_bar_item" name="Bottom Bar Button">
+        <div class="s_mobile_bar_item o_mobile_bottom_bar_item">
+            <i class="fa fa-star fa-lg" />
+            <span class="o_mobile_bar_label">Label</span>
+            <a href="#" class="o_mobile_bar_link stretched-link" aria-label="Button" />
+        </div>
+    </template>
+
+    <!-- ============================================================
+         3. Register the snippet in the editor panel
+         ============================================================ -->
+    <template
+        id="snippets"
+        inherit_id="website.snippets"
+        name="Mobile Bottom Bar Snippets"
+    >
+        <xpath expr="//snippets[@id='snippet_content']" position="inside">
+            <t
+                t-snippet="website_snippet_bottom_mobile_button.s_mobile_bar_item"
+                string="Bottom Bar Button"
+            />
+        </xpath>
+    </template>
+</odoo>

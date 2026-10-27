@@ -1,0 +1,100 @@
+.o_mobile_bottom_bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    background: var(--bs-body-bg, #fff);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    // Links inside the bar never look like links (no underline, inherit color)
+    a,
+    a:hover,
+    a:focus {
+        text-decoration: none !important;
+        color: inherit;
+    }
+
+    .o_mobile_bar_row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    // The button is the whole clickable area (the <a> is stretched over it)
+    .o_mobile_bottom_bar_item {
+        position: relative; // needed by .stretched-link
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.15rem;
+        padding: 0.5rem 0;
+        font-size: 0.7rem;
+        text-align: center;
+
+        // Logo as image instead of icon
+        img {
+            height: 1.5rem;
+            width: auto;
+        }
+    }
+}
+
+// Separators between buttons (default: full-height line)
+.o_mobile_bottom_bar .o_mobile_bottom_bar_item + .o_mobile_bottom_bar_item {
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+// Short centered line
+.o_mobile_bottom_bar.o_mobile_bar_sep_short
+    .o_mobile_bottom_bar_item
+    + .o_mobile_bottom_bar_item {
+    border-left: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 25%;
+        bottom: 25%;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+// No separator
+.o_mobile_bottom_bar.o_mobile_bar_sep_none
+    .o_mobile_bottom_bar_item
+    + .o_mobile_bottom_bar_item {
+    border-left: 0;
+}
+
+@include media-breakpoint-down(lg) {
+    // Reserve space for the bar only on the last block of the page (the footer,
+    // or <main> when there is no footer), so no white band appears in between.
+    #wrapwrap > footer,
+    #wrapwrap > main:has(+ .o_mobile_bottom_bar) {
+        padding-bottom: 4rem;
+    }
+}
+
+// Editor: show the bar on every view. `.o_editable` is set by
+// setup_editor_plugin before the droppable snippets are computed
+// (`.editor_enable` is added later, on mount).
+.o_mobile_bottom_bar.o_editable {
+    display: block !important;
+}
+
+.editor_enable {
+    .o_mobile_bar_link,
+    .o_mobile_bar_link::after {
+        display: none;
+    }
+}
+
+.o_snippet.o_draggable_dragging:has(
+        .o_snippet_thumbnail[data-snippet="s_mobile_bar_item"]
+    ) {
+    opacity: 0.35;
+}
