@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="website_snippet_bottom_mobile_button.MobileBarItemOption">
+        <BuilderRow label.translate="Link (URL)">
+            <BuilderTextInput
+                attributeAction="'href'"
+                applyTo="'.o_mobile_bar_link'"
+                placeholder="'/shop'"
+                preview="false"
+            />
+        </BuilderRow>
+        <BuilderRow label.translate="Open in new tab">
+            <BuilderCheckbox
+                attributeAction="'target'"
+                attributeActionValue="'_blank'"
+                applyTo="'.o_mobile_bar_link'"
+            />
+        </BuilderRow>
+        <BuilderRow label.translate="Background">
+            <BuilderColorPicker styleAction="'background-color'" />
+        </BuilderRow>
+        <BuilderRow label.translate="Text / icon color">
+            <BuilderColorPicker styleAction="'color'" />
+        </BuilderRow>
+        <BuilderRow label.translate="Label">
+            <BuilderButtonGroup applyTo="'.o_mobile_bar_label'">
+                <BuilderButton classAction="''">Show</BuilderButton>
+                <BuilderButton classAction="'d-none'">Hide</BuilderButton>
+            </BuilderButtonGroup>
+        </BuilderRow>
+        <BuilderRow label.translate="Icon size">
+            <BuilderSelect applyTo="'i'">
+                <BuilderSelectItem classAction="'fa-1x'">Normal</BuilderSelectItem>
+                <BuilderSelectItem classAction="'fa-lg'">Large</BuilderSelectItem>
+                <BuilderSelectItem classAction="'fa-2x'">Extra large</BuilderSelectItem>
+            </BuilderSelect>
+        </BuilderRow>
+    </t>
+
+    <t t-name="website_snippet_bottom_mobile_button.MobileBarOption">
+        <BuilderRow label.translate="Background">
+            <BuilderColorPicker styleAction="'background-color'" />
+        </BuilderRow>
+        <BuilderRow label.translate="Shadow">
+            <BuilderSelect>
+                <BuilderSelectItem classAction="''">None</BuilderSelectItem>
+                <BuilderSelectItem classAction="'shadow-sm'">Small</BuilderSelectItem>
+                <BuilderSelectItem classAction="'shadow'">Medium</BuilderSelectItem>
+            </BuilderSelect>
+        </BuilderRow>
+        <BuilderRow label.translate="Separators">
+            <BuilderSelect>
+                <BuilderSelectItem classAction="''">Line</BuilderSelectItem>
+                <BuilderSelectItem
+                    classAction="'o_mobile_bar_sep_short'"
+                >Short line</BuilderSelectItem>
+                <BuilderSelectItem
+                    classAction="'o_mobile_bar_sep_none'"
+                >None</BuilderSelectItem>
+            </BuilderSelect>
+        </BuilderRow>
+    </t>
+
+</templates>

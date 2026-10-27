@@ -1,7 +1,7 @@
 To enable the bottom bar on a website:
 
 1. Go to the website you want to configure and click **Edit**.
-2. Open the **Customize** tab.
+2. Open the **Theme** tab.
 3. Enable the **Mobile Bottom Bar** option.
 
 The bar is hidden on large screens, but it is always displayed while

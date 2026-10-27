@@ -4,7 +4,7 @@
 {
     "name": "Website Mobile Button",
     "summary": """Add a mobile button box for easier configuration""",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "license": "AGPL-3",
     "author": "Dixmit,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/website",
@@ -12,7 +12,10 @@
     "data": ["views/templates.xml"],
     "assets": {
         "web.assets_frontend": [
-            "website_mobile_button/static/src/scss/*.scss",
+            "website_snippet_bottom_mobile_button/static/src/scss/*.scss",
+        ],
+        "website.website_builder_assets": [
+            "website_snippet_bottom_mobile_button/static/src/builder/**/*",
         ],
     },
     "demo": [],

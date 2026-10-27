@@ -79,14 +79,22 @@
     }
 }
 
-// Editor: show the bar on desktop, and let clicks reach the icon/text/button
-// (instead of the invisible stretched link on top of them)
+// Editor: show the bar on every view. `.o_editable` is set by
+// setup_editor_plugin before the droppable snippets are computed
+// (`.editor_enable` is added later, on mount).
+.o_mobile_bottom_bar.o_editable {
+    display: block !important;
+}
+
 .editor_enable {
-    .o_mobile_bottom_bar {
-        display: block !important;
-    }
     .o_mobile_bar_link,
     .o_mobile_bar_link::after {
-        pointer-events: none;
+        display: none;
     }
+}
+
+.o_snippet.o_draggable_dragging:has(
+        .o_snippet_thumbnail[data-snippet="s_mobile_bar_item"]
+    ) {
+    opacity: 0.35;
 }

@@ -26,6 +26,7 @@
                         <a
                             href="/"
                             class="o_mobile_bar_link stretched-link"
+                            contenteditable="false"
                             aria-label="Home"
                         />
                     </div>
@@ -36,6 +37,7 @@
                         <a
                             href="/shop"
                             class="o_mobile_bar_link stretched-link"
+                            contenteditable="false"
                             aria-label="Shop"
                         />
                     </div>
@@ -46,6 +48,7 @@
                         <a
                             href="/shop/cart"
                             class="o_mobile_bar_link stretched-link"
+                            contenteditable="false"
                             aria-label="Cart"
                         />
                     </div>
@@ -56,6 +59,7 @@
                         <a
                             href="/my"
                             class="o_mobile_bar_link stretched-link"
+                            contenteditable="false"
                             aria-label="Account"
                         />
                     </div>
@@ -85,106 +89,9 @@
     >
         <xpath expr="//snippets[@id='snippet_content']" position="inside">
             <t
-                t-snippet="website_mobile_button.s_mobile_bar_item"
+                t-snippet="website_snippet_bottom_mobile_button.s_mobile_bar_item"
                 string="Bottom Bar Button"
             />
-        </xpath>
-    </template>
-
-    <!-- ============================================================
-         4. Options panels
-         ============================================================ -->
-    <template
-        id="snippet_options"
-        inherit_id="website.snippet_options"
-        name="Mobile Bottom Bar Options"
-    >
-        <xpath expr="." position="inside">
-            <!-- Options for each button (select the button's padding area) -->
-            <div
-                data-selector=".s_mobile_bar_item"
-                data-drop-near=".s_mobile_bar_item"
-                data-drop-in=".o_mobile_bar_row"
-            >
-                <we-input
-                    string="Link (URL)"
-                    data-select-attribute=""
-                    data-attribute-name="href"
-                    data-apply-to=".o_mobile_bar_link"
-                    data-no-preview="true"
-                    placeholder="/shop"
-                />
-
-                <we-checkbox
-                    string="Open in new tab"
-                    data-select-attribute="_blank"
-                    data-attribute-name="target"
-                    data-apply-to=".o_mobile_bar_link"
-                />
-
-                <we-colorpicker
-                    string="Background"
-                    data-select-style="true"
-                    data-css-property="background-color"
-                />
-
-                <we-colorpicker
-                    string="Text / icon color"
-                    data-select-style="true"
-                    data-css-property="color"
-                />
-
-                <we-button-group string="Label">
-                    <we-button
-                        data-select-class=""
-                        data-apply-to=".o_mobile_bar_label"
-                    >Show</we-button>
-                    <we-button
-                        data-select-class="d-none"
-                        data-apply-to=".o_mobile_bar_label"
-                    >Hide</we-button>
-                </we-button-group>
-
-                <we-select string="Icon size">
-                    <we-button
-                        data-select-class="fa-1x"
-                        data-apply-to="i"
-                    >Normal</we-button>
-                    <we-button
-                        data-select-class="fa-lg"
-                        data-apply-to="i"
-                    >Large</we-button>
-                    <we-button
-                        data-select-class="fa-2x"
-                        data-apply-to="i"
-                    >Extra large</we-button>
-                </we-select>
-            </div>
-
-            <!-- Options for the whole bar -->
-            <div data-selector=".o_mobile_bottom_bar" data-no-check="true">
-                <we-colorpicker
-                    string="Background"
-                    data-select-style="true"
-                    data-css-property="background-color"
-                />
-
-                <we-select string="Shadow">
-                    <we-button data-select-class="">None</we-button>
-                    <we-button data-select-class="shadow-sm">Small</we-button>
-                    <we-button data-select-class="shadow">Medium</we-button>
-                </we-select>
-
-                <we-select string="Separators">
-                    <we-button data-select-class="">Line</we-button>
-                    <we-button
-                        data-select-class="o_mobile_bar_sep_short"
-                    >Short line</we-button>
-                    <we-button
-                        data-select-class="o_mobile_bar_sep_none"
-                    >None</we-button>
-                </we-select>
-            </div>
         </xpath>
     </template>
 </odoo>
