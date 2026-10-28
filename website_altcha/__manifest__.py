@@ -20,8 +20,7 @@
             "website_altcha/static/src/*.scss",
         ],
         "web.altcha_libs": [
-            "website_altcha/static/lib/altcha.js",
-            "website_altcha/static/lib/altcha-l10n.js",
+            "website_altcha/static/lib/altcha.i18n.js",
             "website_altcha/static/lib/altcha.css",
         ],
         "web.assets_tests": [
