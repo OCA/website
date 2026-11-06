@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026-TODAY NICO SOLUTIONS - ENGINEERING & IT (<https://www.nico-solutions.de>)
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template
+        id="reseller_index_page_headear"
+        name="Reseller page header"
+        inherit_id="website_crm_partner_assign.index"
+    >
+        <xpath
+            expr="//section[hasclass('o_wcrm_filters_top')]/h1"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath
+            expr="//section[hasclass('o_wcrm_filters_top')]/t[@t-set='all_categories_label']"
+            position="before"
+        >
+            <h1 class="me-auto mb-0 h4 h2-fs">
+                <t t-out="website.reseller_page_header or 'Find a reseller'" />
+                <t t-foreach="countries" t-as="country">
+                    <span
+                        t-if="country['active'] and country['country_id'][0] != 0 and country['country_id']"
+                    >
+                        in <t t-out="country['country_id'][1]" />
+                    </span>
+                </t>
+            </h1>
+        </xpath>
+    </template>
+</odoo>

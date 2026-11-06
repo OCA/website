@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_reseller_page_header
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-06 11:53+0000\n"
+"PO-Revision-Date: 2026-11-06 11:53+0000\n"
+"Last-Translator: Nils Coenen <nils.coenen@nico-solutions.de>\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_reseller_page_header
+#: model:ir.model,name:website_reseller_page_header.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationseinstellungen"
+
+#. module: website_reseller_page_header
+#: model:ir.model.fields,field_description:website_reseller_page_header.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:website_reseller_page_header.field_website__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: website_reseller_page_header
+#: model_terms:ir.ui.view,arch_db:website_reseller_page_header.res_config_settings_view_form_inherit_reseller_page_header
+msgid "Find a reseller"
+msgstr "Einen Vertriebspartner finden"
+
+#. module: website_reseller_page_header
+#: model_terms:ir.ui.view,arch_db:website_reseller_page_header.res_config_settings_view_form_inherit_reseller_page_header
+msgid "Heading displayed on the Find Resellers page."
+msgstr "Überschrift, die auf der Seite -Einen Vertriebspartner finden- angezeigt wird."
+
+#. module: website_reseller_page_header
+#: model:ir.model.fields,field_description:website_reseller_page_header.field_res_config_settings__id
+#: model:ir.model.fields,field_description:website_reseller_page_header.field_website__id
+msgid "ID"
+msgstr ""
+
+#. module: website_reseller_page_header
+#: model:ir.model.fields,field_description:website_reseller_page_header.field_res_config_settings__reseller_page_header
+#: model:ir.model.fields,field_description:website_reseller_page_header.field_website__reseller_page_header
+#: model_terms:ir.ui.view,arch_db:website_reseller_page_header.res_config_settings_view_form_inherit_reseller_page_header
+msgid "Reseller Page Header"
+msgstr "Header für Vertriebspartner Seite"
+
+#. module: website_reseller_page_header
+#: model:ir.model,name:website_reseller_page_header.model_website
+msgid "Website"
+msgstr "Webseite"
+
+#. module: website_reseller_page_header
+#: model_terms:ir.ui.view,arch_db:website_reseller_page_header.reseller_index_page_headear
+msgid "in"
+msgstr ""
