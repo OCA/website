@@ -1,0 +1,6 @@
+- [Tecnativa](https://www.tecnativa.com):
+  - David Vidal
+  - Stefan Ungureanu
+  - Carolina Fernandez
+  - Pilar Vargas
+- Andrii Chychkan \<mywork1728@gmail.com\>
