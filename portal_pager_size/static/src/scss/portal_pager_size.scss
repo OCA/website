@@ -1,0 +1,12 @@
+.o_portal_pager {
+    position: relative;
+    min-height: 2.375rem;
+
+    .o_portal_pager_size {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+    }
+}
