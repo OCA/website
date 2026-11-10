@@ -12,16 +12,63 @@
     </template>
 
     <template id="layout" inherit_id="website.layout">
-        <xpath expr="//script[@id='tracking_code']" position="attributes">
-            <attribute name="type">text/plain</attribute>
-            <attribute name="data-cookiefirst-category">performance</attribute>
-        </xpath>
-        <xpath expr="//div[@id='wrapwrap']" position="after">
+        <xpath
+            expr="//t[@t-if='website.google_analytics_key and not editable']"
+            position="before"
+        >
             <t t-if="website.cookiefirst_identifier and website.domain">
                 <script
+                    id="cookiefirst_consent"
                     t-attf-src="https://consent.cookiefirst.com/sites/{{ (website.domain or '').replace('http://', '').replace('https://', '').replace('www.', '') }}-{{ website.cookiefirst_identifier }}/consent.js"
                 />
             </t>
+        </xpath>
+        <xpath expr="//script[@id='tracking_code_config']" position="before">
+            <t t-if="website.cookiefirst_identifier and website.domain">
+                <!-- CookieFirst owns Consent Mode defaults and updates. -->
+                <script id="cookiefirst_tracking_code_config">
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                </script>
+            </t>
+        </xpath>
+        <xpath expr="//script[@id='tracking_code_config']" position="attributes">
+            <attribute
+                name="t-if"
+            >not (website.cookiefirst_identifier and website.domain)</attribute>
+        </xpath>
+        <xpath
+            expr="//t[@t-if='is_google_analytics']/script[@id='tracking_code']"
+            position="attributes"
+        >
+            <attribute
+                name="t-att-type"
+            >'text/plain' if website.cookiefirst_identifier and website.domain else None</attribute>
+            <attribute
+                name="t-att-data-cookiefirst-category"
+            >'performance' if website.cookiefirst_identifier and website.domain else None</attribute>
+        </xpath>
+        <xpath
+            expr="//t[@t-if='is_google_analytics']/script[@id='tracking_code']/following-sibling::script[1]"
+            position="attributes"
+        >
+            <attribute
+                name="t-att-type"
+            >'text/plain' if website.cookiefirst_identifier and website.domain else None</attribute>
+            <attribute
+                name="t-att-data-cookiefirst-category"
+            >'performance' if website.cookiefirst_identifier and website.domain else None</attribute>
+        </xpath>
+        <xpath
+            expr="//t[@t-elif='is_google_tag_manager']/script[@id='tracking_code']"
+            position="attributes"
+        >
+            <attribute
+                name="t-att-type"
+            >'text/plain' if website.cookiefirst_identifier and website.domain else None</attribute>
+            <attribute
+                name="t-att-data-cookiefirst-category"
+            >'performance' if website.cookiefirst_identifier and website.domain else None</attribute>
         </xpath>
     </template>
 </odoo>

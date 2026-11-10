@@ -25,3 +25,28 @@ class TestResConfigSettings(TransactionCase):
         self.assertTrue(res_config_settings.cookiefirst_enabled)
         res_config_settings.cookiefirst_enabled = False
         self.assertFalse(website.cookiefirst_identifier)
+
+    def test_cookiefirst_settings_are_website_specific(self):
+        websites = self.env["website"].create(
+            [
+                {
+                    "name": "First CookieFirst Website",
+                    "domain": "https://first.example.com",
+                    "cookiefirst_identifier": "first-identifier",
+                },
+                {
+                    "name": "Second CookieFirst Website",
+                    "domain": "https://second.example.com",
+                    "cookiefirst_identifier": "second-identifier",
+                },
+            ]
+        )
+        first_settings = self.res_config_settings.create({"website_id": websites[0].id})
+        second_settings = self.res_config_settings.create(
+            {"website_id": websites[1].id}
+        )
+        self.assertEqual(first_settings.cookiefirst_identifier, "first-identifier")
+        self.assertEqual(second_settings.cookiefirst_identifier, "second-identifier")
+        first_settings.cookiefirst_enabled = False
+        self.assertFalse(websites[0].cookiefirst_identifier)
+        self.assertEqual(websites[1].cookiefirst_identifier, "second-identifier")

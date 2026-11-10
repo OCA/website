@@ -1,4 +1,5 @@
 - [Studio73](https://www.studio73.es):
   - Ioan Galan \<<ioan@studio73.es>\>
+  - Carlos Reyes \<<carlos@studio73.es>\>
 - [NICO SOLUTIONS - ENGINEERING & IT](https://www.nico-solutions.de):
   - Nils Coenen <nils.coenen@nico-solutions.de>
