@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_snippet_marginless_gallery
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-13 00:49+0000\n"
+"PO-Revision-Date: 2023-11-14 15:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: website_snippet_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+msgid "<b>Our Gallery</b>"
+msgstr "<b>La nostra galleria</b>"
+
+#. module: website_snippet_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+msgid "Lorem ipsum"
+msgstr "Lorem ipsum"
+
+#. module: website_snippet_marginless_gallery
+#: model_terms:ir.ui.view,arch_db:website_snippet_marginless_gallery.s_marginless_gallery
+msgid "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do."
+
+#, python-format
+#~ msgid "<b>Click Edit</b> to start designing your homepage."
+#~ msgstr "<b>Fare clic su Modifica</b> per iniziare a disegnare la homepage."
+
+#, python-format
+#~ msgid "Drag <i>Marginless Gallery</i> and drop it on the page."
+#~ msgstr "Trascina <i>Galleria senza margini</i> e rilascia nella pagina."
+
+#~ msgid "Change Images Height"
+#~ msgstr "Cambia l'altezza delle immagini"
+
+#~ msgid "Do not trim images"
+#~ msgstr "Non tagliare le immagini"
+
+#~ msgid "Height for all images in gallery"
+#~ msgstr "Altezza per tutte le immagini della galleria"
+
+#~ msgid "Image height in pixels"
+#~ msgstr "Altezza delle immagini in pixels"
