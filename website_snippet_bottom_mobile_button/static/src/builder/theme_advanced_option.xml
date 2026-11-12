@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="website.ThemeAdvancedOption" t-inherit-mode="extension">
+        <xpath
+            expr="//BuilderCheckbox[contains(@actionParam, 'option_layout_hide_header')]/.."
+            position="after"
+        >
+            <BuilderRow
+                label.translate="Mobile Bottom Bar"
+                tooltip.translate="Show/Hide the bottom navigation bar on mobile"
+            >
+                <BuilderCheckbox
+                    action="'websiteConfig'"
+                    actionParam="{ views: ['website_snippet_bottom_mobile_button.mobile_bottom_bar'] }"
+                />
+            </BuilderRow>
+        </xpath>
+    </t>
+</templates>
