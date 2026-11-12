@@ -1,0 +1,1 @@
+odoo-addon-website_altcha @ git+https://github.com/OCA/website.git@refs/pull/1237/head#subdirectory=website_altcha
