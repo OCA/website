@@ -53,12 +53,19 @@ class TestWebsiteAnalyticsMatomo(common.HttpCase):
         self.assertEqual(self.website.matomo_analytics_host_url, "")
 
         self.website.matomo_analytics_host = "matomo.example.host"
-        self.assertIn("https://", self.website.matomo_analytics_host_url)
-        self.assertIn("matomo.example.host", self.website.matomo_analytics_host_url)
+        self.assertEqual(
+            self.website.matomo_analytics_host_url, "https://matomo.example.host"
+        )
+
+        self.website.matomo_analytics_host = "matomo.example.host/"
+        self.assertEqual(
+            self.website.matomo_analytics_host_url, "https://matomo.example.host"
+        )
 
         self.website.matomo_analytics_host = "http://matomo.example.host"
-        self.assertIn("http://", self.website.matomo_analytics_host_url)
-        self.assertIn("matomo.example.host", self.website.matomo_analytics_host_url)
+        self.assertEqual(
+            self.website.matomo_analytics_host_url, "http://matomo.example.host"
+        )
 
         self.website.matomo_analytics_host = ""
         self.assertEqual(self.website.matomo_analytics_host_url, "")

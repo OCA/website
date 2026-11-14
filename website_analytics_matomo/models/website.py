@@ -40,7 +40,12 @@ class Website(models.Model):
         for website in self.filtered(lambda w: not w.matomo_analytics_host):
             website.matomo_analytics_host_url = ""
         for website in self.filtered(lambda w: w.matomo_analytics_host):
-            parsed_url = urlparse(website.matomo_analytics_host)
+            host = website.matomo_analytics_host.strip()
+            if "://" not in host:
+                # Without a scheme, urlparse() puts the host in the path and
+                # geturl() gives "https:host" or "https:///host"
+                host = f"https://{host}"
+            parsed_url = urlparse(host)
             if parsed_url.scheme not in ("http", "https"):
                 parsed_url = parsed_url._replace(scheme="https")
             host_url = parsed_url.geturl()
