@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: website (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-25 01:52+0000\n"
-"PO-Revision-Date: 2026-10-09 14:46+0000\n"
+"PO-Revision-Date: 2026-11-15 14:46+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-website-8-0/"
 "language/it/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #. module: website_slides
 #: model:email.template,body_html:website_slides.slide_template_shared
@@ -153,17 +153,17 @@ msgstr ""
 #. module: website_slides
 #: field:slide.embed,count_views:0
 msgid "# Views"
-msgstr "# Viste"
+msgstr "N° viste"
 
 #. module: website_slides
 #: field:slide.slide,embed_views:0
 msgid "# of Embedded Views"
-msgstr "# di Viste incorporate"
+msgstr "N° di Viste incorporate"
 
 #. module: website_slides
 #: field:slide.slide,slide_views:0
 msgid "# of Website Views"
-msgstr "# di Viste del sito"
+msgstr "N° di viste del sito"
 
 #. module: website_slides
 #: model:email.template,subject:website_slides.slide_template_shared
