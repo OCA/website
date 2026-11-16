@@ -1,0 +1,31 @@
+$whatsapp-green: #01e675;
+$icon-size: 56px;
+
+.whatsapp_icon {
+    z-index: 5;
+    position: fixed;
+    inset: auto 30px 110px auto; // Right 30px, bottom 90px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $icon-size;
+    height: $icon-size;
+    background: $whatsapp-green;
+    border-radius: 50%;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+
+    i {
+        color: #fff;
+        font-size: 30px;
+    }
+
+    &:hover {
+        filter: brightness(90%);
+    }
+}

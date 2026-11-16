@@ -1,0 +1,4 @@
+- [Studio73](https://www.studio73.es):  
+  - Ioan Galan \<<ioan@studio73.es>\>
+- [Jarsa](https://www.jarsa.com):  
+  - Alan Ramos \<<alan.ramos@jarsa.com>\>
