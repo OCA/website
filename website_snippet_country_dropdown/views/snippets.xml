@@ -17,7 +17,7 @@
             t-ignore="true"
         >
             <label t-att-class="label_class" t-att-for="complete_field">
-                <span t-if="label_country_dropdown" t-esc="label_country_dropdown" />
+                <span t-if="label_country_dropdown" t-out="label_country_dropdown" />
                 <span t-if="not label_country_dropdown">Your Label</span>
             </label>
             <div t-att-class="input_container_class">
@@ -78,7 +78,7 @@
                                 width="30"
                                 height="20"
                             />
-                            <span t-esc="country.name" />
+                            <span t-out="country.name" />
                         </a>
                     </t>
                 </div>
