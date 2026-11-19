@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="html_editor.VideoSelector" t-inherit-mode="extension">
+        <xpath expr="//VideoIframe" position="attributes">
+            <attribute
+                name="t-if"
+            >this.state.src and !this.state.errorMessage and this.state.platform !== 'html5'</attribute>
+        </xpath>
+        <xpath expr="//VideoIframe" position="after">
+            <video
+                t-if="this.state.src and !this.state.errorMessage and this.state.platform === 'html5'"
+                t-att-src="html5PreviewSrc"
+                class="o_video_dialog_iframe o_video_html5 mw-100 mh-100 shadow"
+                controls="controls"
+                preload="metadata"
+                playsinline="playsinline"
+            />
+        </xpath>
+        <xpath expr="//small[hasclass('text-muted')]" position="inside">
+            <br />
+            and video files (.mp4, .webm, ...)
+        </xpath>
+    </t>
+</templates>

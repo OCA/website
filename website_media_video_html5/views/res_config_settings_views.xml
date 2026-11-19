@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Bosd
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.html5.video</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='website_info_settings']" position="inside">
+                <setting
+                    id="website_html5_video_setting"
+                    string="Self-hosted videos"
+                    help="Video files ending in .mp4, .webm, .ogv or .m4v can always be embedded. List here the hosts serving videos from URLs without a file extension."
+                >
+                    <field
+                        name="html5_video_allowed_hosts"
+                        placeholder="res.cloudinary.com, cdn.example.com"
+                    />
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
