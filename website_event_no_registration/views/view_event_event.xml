@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_event_event_form" model="ir.ui.view">
+        <field name="model">event.event</field>
+        <field name="inherit_id" ref="event.view_event_form" />
+        <field name="arch" type="xml">
+            <field name="address_id" position="after">
+                <field name="registration_allowed" />
+            </field>
+            <xpath expr="//label[@for='seats_limited']" position="attributes">
+                <attribute name="invisible">not registration_allowed</attribute>
+            </xpath>
+            <xpath expr="//field[@name='seats_limited']/.." position="attributes">
+                <attribute name="invisible">not registration_allowed</attribute>
+            </xpath>
+            <field name="badge_format" position="attributes">
+                <attribute name="invisible">not registration_allowed</attribute>
+            </field>
+            <field name="badge_image" position="attributes">
+                <attribute name="invisible">not registration_allowed</attribute>
+            </field>
+            <page name="tickets" position="attributes">
+                <attribute name="invisible">not registration_allowed</attribute>
+            </page>
+            <page name="event_communication" position="attributes">
+                <attribute name="invisible">not registration_allowed</attribute>
+            </page>
+            <page name="questions" position="attributes">
+                <attribute name="invisible">not registration_allowed</attribute>
+            </page>
+
+            <field name="ticket_instructions" position="attributes">
+                <attribute name="invisible">not registration_allowed</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
