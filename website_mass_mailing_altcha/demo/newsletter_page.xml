@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="demo_mailing_list" model="mailing.list">
+        <field name="name">ALTCHA Demo Newsletter</field>
+    </record>
+    <template id="demo_page_view">
+        <t t-call="website.layout">
+            <t
+                t-set="demo_list"
+                t-value="env.ref('website_mass_mailing_altcha.demo_mailing_list', raise_if_not_found=False)"
+            />
+            <p>
+                This is a demo page for website_mass_mailing_altcha. Note how the
+                widget is inserted into the newsletter snippet, and how the
+                challenge is solved when you press Subscribe.
+            </p>
+            <div
+                class="s_newsletter_subscribe_form s_newsletter_list js_subscribe"
+                t-att-data-list-id="demo_list.id if demo_list else 0"
+            >
+                <div class="js_subscribed_wrap d-none">
+                    <p
+                        class="h4-fs text-center text-success"
+                    >Thanks for registering!</p>
+                </div>
+                <div class="js_subscribe_wrap">
+                    <div class="input-group">
+                        <input
+                            type="email"
+                            name="email"
+                            class="js_subscribe_value form-control"
+                            placeholder="johnsmith@example.com"
+                        />
+                        <a
+                            role="button"
+                            href="#"
+                            class="btn btn-primary js_subscribe_btn o_submit"
+                        >Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+    <record id="demo_page" model="website.page">
+        <field name="url">/website_mass_mailing_altcha_demo</field>
+        <field name="is_published" eval="True" />
+        <field name="view_id" ref="demo_page_view" />
+    </record>
+</odoo>
