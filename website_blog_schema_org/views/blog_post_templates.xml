@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="blog_post_jsonld"
+        name="blog.post.complete.inherit.website.blog.schema.org"
+        inherit_id="website_blog.blog_post_complete"
+    >
+        <xpath expr="//section[@id='o_wblog_post_top']" position="before">
+            <script
+                type="application/ld+json"
+                t-out="main_object._get_article_jsonld()"
+            />
+        </xpath>
+    </template>
+</odoo>
