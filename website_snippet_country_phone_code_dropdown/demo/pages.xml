@@ -16,58 +16,60 @@
                                     Test the country phone code dropdown snippet
                                 </h4>
                                 <form action="" class="form-horizontal mt-4">
-                                    <div
-                                        class="js_enabled"
-                                        t-call="website_snippet_country_phone_code_dropdown.dropdown_element_form"
-                                    >
+                                    <div class="js_enabled">
                                         <t
-                                            t-set="label_class"
-                                            t-value="'col-sm-5 col-form-label'"
-                                        />
-                                        <t
-                                            t-set="input_container_class"
-                                            t-value="'col-sm-7'"
-                                        />
-                                        <t
-                                            t-set="label_country_dropdown"
-                                        >Example label</t>
+                                            t-call="website_snippet_country_phone_code_dropdown.dropdown_element_form"
+                                        >
+                                            <t
+                                                t-set="label_class"
+                                                t-value="'col-sm-5 col-form-label'"
+                                            />
+                                            <t
+                                                t-set="input_container_class"
+                                                t-value="'col-sm-7'"
+                                            />
+                                            <t
+                                                t-set="label_country_dropdown"
+                                            >Example label</t>
+                                        </t>
                                     </div>
-                                    <div
-                                        class="js_disabled mt-2"
-                                        t-call="website_snippet_country_phone_code_dropdown.dropdown_element_form"
-                                    >
+                                    <div class="js_disabled mt-2">
                                         <t
-                                            t-set="label_class"
-                                            t-value="'col-sm-5 col-form-label'"
-                                        />
-                                        <t
-                                            t-set="input_container_class"
-                                            t-value="'col-sm-7'"
-                                        />
-                                        <t
-                                            t-set="complete_field"
-                                            t-value="'disabled_complete_field'"
-                                        />
-                                        <t
-                                            t-set="country_phone_code_field"
-                                            t-value="'disabled_country_phone_code_field'"
-                                        />
-                                        <t
-                                            t-set="no_country_field"
-                                            t-value="'disabled_no_country_field'"
-                                        />
-                                        <t t-set="readonly" t-value="True" />
-                                        <t
-                                            t-set="default_value_prefix"
-                                            t-value="'33'"
-                                        />
-                                        <t
-                                            t-set="default_value_number"
-                                            t-value="'6 00 11 22 33'"
-                                        />
-                                        <t
-                                            t-set="label_country_dropdown"
-                                        >Example label (readonly)</t>
+                                            t-call="website_snippet_country_phone_code_dropdown.dropdown_element_form"
+                                        >
+                                            <t
+                                                t-set="label_class"
+                                                t-value="'col-sm-5 col-form-label'"
+                                            />
+                                            <t
+                                                t-set="input_container_class"
+                                                t-value="'col-sm-7'"
+                                            />
+                                            <t
+                                                t-set="complete_field"
+                                                t-value="'disabled_complete_field'"
+                                            />
+                                            <t
+                                                t-set="country_phone_code_field"
+                                                t-value="'disabled_country_phone_code_field'"
+                                            />
+                                            <t
+                                                t-set="no_country_field"
+                                                t-value="'disabled_no_country_field'"
+                                            />
+                                            <t t-set="readonly" t-value="True" />
+                                            <t
+                                                t-set="default_value_prefix"
+                                                t-value="'33'"
+                                            />
+                                            <t
+                                                t-set="default_value_number"
+                                                t-value="'6 00 11 22 33'"
+                                            />
+                                            <t
+                                                t-set="label_country_dropdown"
+                                            >Example label (readonly)</t>
+                                        </t>
                                     </div>
                                     <div
                                         class="col-12 d-flex justify-content-center mt-2"

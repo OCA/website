@@ -1,15 +1,14 @@
-/* global window URLSearchParams console */
 import {registry} from "@web/core/registry";
 
 registry
     .category("web_tour.tours")
     .add("website_snippet_country_phone_code_dropdown_tour_demo_page", {
-        test: true,
         url: "/",
         steps: () => [
             {
                 trigger: 'a:contains("Country Phone Code Dropdown Demo"):not(:visible)',
                 run: "click",
+                expectUnloadPage: true,
             },
             {
                 content: "Click Button",
@@ -34,6 +33,7 @@ registry
             {
                 trigger: ".btn[type=submit]",
                 run: "click",
+                expectUnloadPage: true,
             },
             {
                 trigger:
