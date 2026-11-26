@@ -1,0 +1,1 @@
+odoo-addon-website_snippet_country_dropdown @ git+https://github.com/OCA/website.git@refs/pull/1249/head#subdirectory=website_snippet_country_dropdown
