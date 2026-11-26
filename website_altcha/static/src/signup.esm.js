@@ -4,7 +4,7 @@ import {patch} from "@web/core/utils/patch";
 import {registry} from "@web/core/registry";
 
 export class SignupAltcha extends Interaction {
-    static selector = ".oe_signup_form, .oe_reset_password_form";
+    static selector = ".oe_login_form, .oe_signup_form, .oe_reset_password_form";
 }
 
 patch(SignupAltcha.prototype, altchaInteractionFunctionality());

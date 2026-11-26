@@ -41,6 +41,13 @@ class TestWebsiteAltchaTours(Common):
         """
         self.start_tour("/web/reset_password", "website_altcha_signup")
 
+    def test_login_tour(self):
+        """
+        Run the login test tour. Redirect to the portal to avoid loading the backend,
+        which can exceed the tour's 20s unload timeout on slow CI
+        """
+        self.start_tour("/web/login?redirect=/my", "website_altcha_login")
+
     def test_generic_tour(self):
         """
         Run the generic test tour
